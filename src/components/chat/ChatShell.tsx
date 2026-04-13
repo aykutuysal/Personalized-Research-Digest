@@ -1,9 +1,12 @@
 'use client'
 
+import { useChat } from '@ai-sdk/react'
+import { DefaultChatTransport } from 'ai'
 import { LayoutGroup, motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Composer } from './Composer'
+import { MessageList } from './MessageList'
 
 export interface ChatShellProps {
   initialMode: 'hero' | 'docked'
@@ -12,15 +15,41 @@ export interface ChatShellProps {
 export function ChatShell({ initialMode }: ChatShellProps) {
   const router = useRouter()
   const [input, setInput] = useState('')
+  const { messages, sendMessage, status } = useChat({
+    transport: new DefaultChatTransport({ api: '/api/onboarding-chat' }),
+  })
 
-  const onSubmit = () => {
-    // Store the first message for the onboarding page to pick up.
+  const isThinking = status === 'submitted' || status === 'streaming'
+
+  // When mounted in docked mode, pick up any pending first message from /.
+  useEffect(() => {
+    if (initialMode !== 'docked') return
     try {
-      sessionStorage.setItem('rd:pending-first-message', input.trim())
+      const pending = sessionStorage.getItem('rd:pending-first-message')
+      if (pending && pending.length > 0) {
+        sessionStorage.removeItem('rd:pending-first-message')
+        sendMessage({ text: pending })
+      }
     } catch {
       /* ignore */
     }
-    router.push('/onboarding')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialMode])
+
+  const onSubmit = () => {
+    if (input.trim().length === 0) return
+    if (initialMode === 'hero') {
+      try {
+        sessionStorage.setItem('rd:pending-first-message', input.trim())
+      } catch {
+        /* ignore */
+      }
+      router.push('/onboarding')
+    } else {
+      const text = input.trim()
+      setInput('')
+      sendMessage({ text })
+    }
   }
 
   if (initialMode === 'hero') {
@@ -53,10 +82,27 @@ export function ChatShell({ initialMode }: ChatShellProps) {
     )
   }
 
-  // Docked mode is wired in Task 28.
-  return <DockedPlaceholder />
-}
-
-function DockedPlaceholder() {
-  return <div className="p-6 text-ink-soft">Docked chat wired in Task 28.</div>
+  return (
+    <LayoutGroup>
+      <div className="min-h-dvh flex flex-col">
+        <div className="flex-1 overflow-y-auto">
+          <MessageList messages={messages} isThinking={isThinking} />
+        </div>
+        <div
+          className="sticky bottom-0 w-full pb-[var(--safe-bottom)] pt-4 bg-gradient-to-t from-bg via-bg to-transparent"
+          style={{ minHeight: 'var(--composer-h)' }}
+        >
+          <div className="px-6">
+            <Composer
+              value={input}
+              onChange={setInput}
+              onSubmit={onSubmit}
+              size="docked"
+              disabled={isThinking}
+            />
+          </div>
+        </div>
+      </div>
+    </LayoutGroup>
+  )
 }
