@@ -4,11 +4,36 @@ import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport } from 'ai'
 import { LayoutGroup, motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ConfigSummary } from '@/components/config/ConfigSummary'
+import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import type { DigestConfig } from '@/lib/config-schema'
+import {
+  clearOnboardingState,
+  loadOnboardingState,
+  newOnboardingState,
+  saveOnboardingState,
+} from '@/lib/storage/local'
 import { Composer } from './Composer'
 import { MessageList } from './MessageList'
+
+const PENDING_KEY = 'rd:pending-first-message'
+
+function readInitialMessages(mode: 'hero' | 'docked'): ResearchChatMessage[] {
+  if (mode !== 'docked' || typeof window === 'undefined') return []
+  try {
+    // When arriving from the hero with a pending first message, start a clean
+    // session — any previously saved conversation belongs to a different turn.
+    const pending = window.sessionStorage.getItem(PENDING_KEY)
+    if (pending && pending.length > 0) {
+      clearOnboardingState()
+      return []
+    }
+    return loadOnboardingState()?.messages ?? []
+  } catch {
+    return []
+  }
+}
 
 export interface ChatShellProps {
   initialMode: 'hero' | 'docked'
@@ -17,35 +42,46 @@ export interface ChatShellProps {
 export function ChatShell({ initialMode }: ChatShellProps) {
   const router = useRouter()
   const [input, setInput] = useState('')
-  const { messages, sendMessage, status } = useChat({
+  const [initialMessages] = useState<ResearchChatMessage[]>(() =>
+    readInitialMessages(initialMode),
+  )
+  const { messages, sendMessage, status } = useChat<ResearchChatMessage>({
+    messages: initialMessages,
     transport: new DefaultChatTransport({ api: '/api/onboarding-chat' }),
   })
 
   const isThinking = status === 'submitted' || status === 'streaming'
 
-  const finalConfig: DigestConfig | null = (() => {
+  // Persist messages to localStorage after each settled turn so the
+  // conversation survives page refresh.
+  useEffect(() => {
+    if (initialMode !== 'docked') return
+    if (status !== 'ready') return
+    if (messages.length === 0) return
+    try {
+      const existing = loadOnboardingState() ?? newOnboardingState('')
+      saveOnboardingState({ ...existing, messages })
+    } catch {
+      /* ignore */
+    }
+  }, [initialMode, messages, status])
+
+  const finalConfig = useMemo<DigestConfig | null>(() => {
     for (let i = messages.length - 1; i >= 0; i--) {
-      const m = messages[i]
-      if (!m.parts) continue
-      for (const p of m.parts) {
-        const tp = p as unknown as { type: string; state?: string; output?: { ok?: boolean; config?: DigestConfig } }
-        if (
-          tp.type === 'tool-generateConfig' &&
-          tp.state === 'output-available' &&
-          tp.output?.ok === true &&
-          tp.output.config
-        ) {
-          return tp.output.config
+      for (const p of messages[i].parts ?? []) {
+        if (p.type === 'tool-generateConfig' && p.state === 'output-available') {
+          const out = p.output
+          if (out.ok) return out.config
         }
       }
     }
     return null
-  })()
+  }, [messages])
 
   const onReset = () => {
     try {
-      localStorage.removeItem('rd:onboarding:v1')
-      sessionStorage.removeItem('rd:pending-first-message')
+      clearOnboardingState()
+      sessionStorage.removeItem(PENDING_KEY)
     } catch {
       /* ignore */
     }
@@ -56,9 +92,9 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   useEffect(() => {
     if (initialMode !== 'docked') return
     try {
-      const pending = sessionStorage.getItem('rd:pending-first-message')
+      const pending = sessionStorage.getItem(PENDING_KEY)
       if (pending && pending.length > 0) {
-        sessionStorage.removeItem('rd:pending-first-message')
+        sessionStorage.removeItem(PENDING_KEY)
         sendMessage({ text: pending })
       }
     } catch {
@@ -71,7 +107,7 @@ export function ChatShell({ initialMode }: ChatShellProps) {
     if (input.trim().length === 0) return
     if (initialMode === 'hero') {
       try {
-        sessionStorage.setItem('rd:pending-first-message', input.trim())
+        sessionStorage.setItem(PENDING_KEY, input.trim())
       } catch {
         /* ignore */
       }
