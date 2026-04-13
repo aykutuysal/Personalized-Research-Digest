@@ -2,8 +2,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { onboardingTools } from '@/lib/ai/onboarding-tools'
 import * as openalex from '@/lib/openalex/client'
-
-const ctx = { toolCallId: 'c-1', messages: [] as unknown[] }
+import { runTool, toolCtx } from './helpers'
 
 beforeEach(() => {
   process.env.OPENALEX_MAILTO = 'test@example.com'
@@ -19,14 +18,11 @@ describe('corpusSanityCheck tool', () => {
       meta: { count: 120 },
       results: [],
     })
-    const r = await onboardingTools.corpusSanityCheck.execute(
-      {
-        subject: 'AF',
-        cadenceDays: 7,
-        angles: [{ text: 'ablation' }, { text: 'anticoagulation' }],
-      },
-      ctx,
-    )
+    const r = await runTool(onboardingTools.corpusSanityCheck, {
+      subject: 'AF',
+      cadenceDays: 7,
+      angles: [{ text: 'ablation' }, { text: 'anticoagulation' }],
+    }, toolCtx('c-1'))
     expect(r.results).toHaveLength(2)
     for (const item of r.results) {
       expect(item.verdict).toBe('healthy')
@@ -39,10 +35,11 @@ describe('corpusSanityCheck tool', () => {
       meta: { count: 3 },
       results: [{ id: 'W1', title: 'Rare technique study' } as never],
     })
-    const r = await onboardingTools.corpusSanityCheck.execute(
-      { subject: 'x', cadenceDays: 7, angles: [{ text: 'rare technique' }] },
-      ctx,
-    )
+    const r = await runTool(onboardingTools.corpusSanityCheck, {
+      subject: 'x',
+      cadenceDays: 7,
+      angles: [{ text: 'rare technique' }],
+    }, toolCtx('c-2'))
     expect(r.results[0].verdict).toBe('sparse')
     expect(r.results[0].papersPerRun).toBeCloseTo((3 / 30) * 7, 5)
   })
@@ -52,20 +49,22 @@ describe('corpusSanityCheck tool', () => {
       meta: { count: 0 },
       results: [],
     })
-    const r = await onboardingTools.corpusSanityCheck.execute(
-      { subject: 'x', cadenceDays: 7, angles: [{ text: 'empty angle' }] },
-      ctx,
-    )
+    const r = await runTool(onboardingTools.corpusSanityCheck, {
+      subject: 'x',
+      cadenceDays: 7,
+      angles: [{ text: 'empty angle' }],
+    }, toolCtx('c-3'))
     expect(r.results[0].verdict).toBe('empty')
     expect(r.results[0].papersPerRun).toBe(0)
   })
 
   it('maps fetch failure to error verdict', async () => {
     vi.spyOn(openalex, 'searchByKeyword').mockRejectedValue(new Error('network'))
-    const r = await onboardingTools.corpusSanityCheck.execute(
-      { subject: 'x', cadenceDays: 7, angles: [{ text: 'boom' }] },
-      ctx,
-    )
+    const r = await runTool(onboardingTools.corpusSanityCheck, {
+      subject: 'x',
+      cadenceDays: 7,
+      angles: [{ text: 'boom' }],
+    }, toolCtx('c-4'))
     expect(r.results[0].verdict).toBe('error')
   })
 
@@ -80,10 +79,11 @@ describe('corpusSanityCheck tool', () => {
       return { meta: { count: 50 }, results: [] }
     })
     const angles = Array.from({ length: 12 }, (_, i) => ({ text: `angle-${i}` }))
-    await onboardingTools.corpusSanityCheck.execute(
-      { subject: 'x', cadenceDays: 7, angles },
-      ctx,
-    )
+    await runTool(onboardingTools.corpusSanityCheck, {
+      subject: 'x',
+      cadenceDays: 7,
+      angles,
+    }, toolCtx('c-5'))
     expect(peak).toBeLessThanOrEqual(5)
   })
 })

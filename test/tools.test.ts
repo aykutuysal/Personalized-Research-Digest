@@ -2,6 +2,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { onboardingTools } from '@/lib/ai/onboarding-tools'
 import * as proposeAnglesModule from '@/lib/ai/propose-angles'
+import { runTool, toolCtx } from './helpers'
 
 describe('normalizeSchedule tool', () => {
   it('exposes a tool named normalizeSchedule', () => {
@@ -9,13 +10,10 @@ describe('normalizeSchedule tool', () => {
   })
 
   it('round-trips "every Monday at 9 AM" with Istanbul', async () => {
-    const r = await onboardingTools.normalizeSchedule.execute(
-      {
-        naturalLanguage: 'every Monday at 9 AM',
-        city: 'Istanbul',
-      },
-      { toolCallId: 'test-1', messages: [] },
-    )
+    const r = await runTool(onboardingTools.normalizeSchedule, {
+      naturalLanguage: 'every Monday at 9 AM',
+      city: 'Istanbul',
+    }, toolCtx('test-1'))
     expect(r.ok).toBe(true)
     if (r.ok) {
       expect(r.cron).toBe('0 9 * * 1')
@@ -25,10 +23,9 @@ describe('normalizeSchedule tool', () => {
   })
 
   it('returns needsTimezone when city is missing', async () => {
-    const r = await onboardingTools.normalizeSchedule.execute(
-      { naturalLanguage: 'daily at 8am' },
-      { toolCallId: 'test-2', messages: [] },
-    )
+    const r = await runTool(onboardingTools.normalizeSchedule, {
+      naturalLanguage: 'daily at 8am',
+    }, toolCtx('test-2'))
     expect(r.ok).toBe(false)
     if (!r.ok) expect(r.error).toBe('needsTimezone')
   })
@@ -52,10 +49,7 @@ describe('generateConfig tool', () => {
   }
 
   it('returns ok with a stamped config on valid input', async () => {
-    const r = await onboardingTools.generateConfig.execute(
-      { config: validConfig },
-      { toolCallId: 'g-1', messages: [] },
-    )
+    const r = await runTool(onboardingTools.generateConfig, { config: validConfig }, toolCtx('g-1'))
     expect(r.ok).toBe(true)
     if (r.ok) {
       expect(r.config.version).toBe(1)
@@ -67,10 +61,7 @@ describe('generateConfig tool', () => {
 
   it('returns ok:false with errors on missing required field', async () => {
     const bad = { ...validConfig, profile: '' }
-    const r = await onboardingTools.generateConfig.execute(
-      { config: bad },
-      { toolCallId: 'g-2', messages: [] },
-    )
+    const r = await runTool(onboardingTools.generateConfig, { config: bad }, toolCtx('g-2'))
     expect(r.ok).toBe(false)
     if (!r.ok) expect(r.errors.length).toBeGreaterThan(0)
   })
@@ -89,13 +80,10 @@ describe('proposeAngles tool', () => {
       ],
     })
 
-    const r = await onboardingTools.proposeAngles.execute(
-      {
-        subject: 'Atrial fibrillation',
-        profileSummary: 'Clinical cardiologist, no basic science.',
-      },
-      { toolCallId: 'a-1', messages: [] },
-    )
+    const r = await runTool(onboardingTools.proposeAngles, {
+      subject: 'Atrial fibrillation',
+      profileSummary: 'Clinical cardiologist, no basic science.',
+    }, toolCtx('a-1'))
     expect(r.angles.length).toBeGreaterThanOrEqual(6)
     expect(r.angles.length).toBeLessThanOrEqual(12)
     expect(r.angles[0]).toHaveProperty('text')
