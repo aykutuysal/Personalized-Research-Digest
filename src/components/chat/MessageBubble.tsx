@@ -12,6 +12,11 @@ export interface MessageBubbleProps {
   message: UIMessage
 }
 
+type TextPart = {
+  type: 'text'
+  text: string
+}
+
 type ToolPart = {
   type: string
   toolCallId?: string
@@ -64,7 +69,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
       {isUser ? (
         <div className="max-w-[80%] rounded-xl bg-accent-soft text-ink px-4 py-2 text-[16px] leading-[1.65]">
           {message.parts?.map((part, idx) =>
-            part.type === 'text' ? <span key={idx}>{(part as any).text}</span> : null,
+            part.type === 'text' ? <span key={idx}>{(part as TextPart).text}</span> : null,
           )}
         </div>
       ) : (
@@ -75,7 +80,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
                 key={idx}
                 className="max-w-[85%] text-ink text-[16px] leading-[1.65] whitespace-pre-wrap"
               >
-                {(part as any).text}
+                {(part as TextPart).text}
               </div>
             )
           }

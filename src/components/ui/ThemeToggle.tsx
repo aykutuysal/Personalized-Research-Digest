@@ -1,16 +1,12 @@
 // src/components/ui/ThemeToggle.tsx
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { getTheme, toggleTheme, type Theme } from '@/lib/theme'
 
 export function ThemeToggle() {
-  const [theme, setLocalTheme] = useState<Theme>('light')
-
-  useEffect(() => {
-    setLocalTheme(getTheme())
-  }, [])
+  const [theme, setLocalTheme] = useState<Theme>(() => getTheme())
 
   const onClick = () => {
     setLocalTheme(toggleTheme())
