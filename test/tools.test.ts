@@ -1,6 +1,7 @@
 // test/tools.test.ts
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { onboardingTools } from '@/lib/ai/onboarding-tools'
+import * as proposeAnglesModule from '@/lib/ai/propose-angles'
 
 describe('normalizeSchedule tool', () => {
   it('exposes a tool named normalizeSchedule', () => {
@@ -72,5 +73,32 @@ describe('generateConfig tool', () => {
     )
     expect(r.ok).toBe(false)
     if (!r.ok) expect(r.errors.length).toBeGreaterThan(0)
+  })
+})
+
+describe('proposeAngles tool', () => {
+  it('returns 6–12 angles for a subject/profile', async () => {
+    vi.spyOn(proposeAnglesModule, 'proposeAngles').mockResolvedValueOnce({
+      angles: [
+        { text: 'Catheter ablation techniques', rationale: 'High publication volume; named techniques.' },
+        { text: 'Anticoagulation choices', rationale: 'DOAC trials publish regularly.' },
+        { text: 'Rate vs rhythm control', rationale: 'Active debate with landmark trials.' },
+        { text: 'Stroke prevention', rationale: 'LAAC devices are a productive sub-area.' },
+        { text: 'Guideline updates', rationale: 'ESC/ACC updates produce trackable news.' },
+        { text: 'Wearable monitoring', rationale: 'Consumer-device trials are growing.' },
+      ],
+    })
+
+    const r = await onboardingTools.proposeAngles.execute(
+      {
+        subject: 'Atrial fibrillation',
+        profileSummary: 'Clinical cardiologist, no basic science.',
+      },
+      { toolCallId: 'a-1', messages: [] },
+    )
+    expect(r.angles.length).toBeGreaterThanOrEqual(6)
+    expect(r.angles.length).toBeLessThanOrEqual(12)
+    expect(r.angles[0]).toHaveProperty('text')
+    expect(r.angles[0]).toHaveProperty('rationale')
   })
 })

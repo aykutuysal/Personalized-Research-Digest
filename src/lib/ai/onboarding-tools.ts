@@ -3,6 +3,7 @@ import { tool } from 'ai'
 import { z } from 'zod'
 import { normalizeSchedule as normalizeScheduleImpl } from '@/lib/schedule/cron'
 import { digestConfigSchema } from '@/lib/config-schema'
+import { proposeAngles as proposeAnglesImpl } from '@/lib/ai/propose-angles'
 
 const normalizeScheduleInput = z.object({
   naturalLanguage: z
@@ -64,7 +65,25 @@ const generateConfigTool = tool({
   },
 })
 
+const proposeAnglesInput = z.object({
+  subject: z.string().describe('The subject the user wants a digest about.'),
+  profileSummary: z
+    .string()
+    .describe('A short profile of the reader: role, intent, anti-interests.'),
+  hints: z.string().optional().describe('Optional hints from the conversation so far.'),
+})
+
+const proposeAnglesTool = tool({
+  description:
+    'Generate 6–12 specific research angles for a subject given a reader profile. Call this once subject, role, and intent are clear. Narrate the result to the user in natural language — do not dump the raw list.',
+  inputSchema: proposeAnglesInput,
+  execute: async (args) => {
+    return proposeAnglesImpl(args)
+  },
+})
+
 export const onboardingTools = {
   normalizeSchedule: normalizeScheduleTool,
   generateConfig: generateConfigTool,
+  proposeAngles: proposeAnglesTool,
 }
