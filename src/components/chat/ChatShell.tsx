@@ -5,6 +5,8 @@ import { DefaultChatTransport } from 'ai'
 import { LayoutGroup, motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { ConfigSummary } from '@/components/config/ConfigSummary'
+import type { DigestConfig } from '@/lib/config-schema'
 import { Composer } from './Composer'
 import { MessageList } from './MessageList'
 
@@ -20,6 +22,35 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   })
 
   const isThinking = status === 'submitted' || status === 'streaming'
+
+  const finalConfig: DigestConfig | null = (() => {
+    for (let i = messages.length - 1; i >= 0; i--) {
+      const m = messages[i]
+      if (!m.parts) continue
+      for (const p of m.parts) {
+        const tp = p as unknown as { type: string; state?: string; output?: { ok?: boolean; config?: DigestConfig } }
+        if (
+          tp.type === 'tool-generateConfig' &&
+          tp.state === 'output-available' &&
+          tp.output?.ok === true &&
+          tp.output.config
+        ) {
+          return tp.output.config
+        }
+      }
+    }
+    return null
+  })()
+
+  const onReset = () => {
+    try {
+      localStorage.removeItem('rd:onboarding:v1')
+      sessionStorage.removeItem('rd:pending-first-message')
+    } catch {
+      /* ignore */
+    }
+    router.push('/')
+  }
 
   // When mounted in docked mode, pick up any pending first message from /.
   useEffect(() => {
@@ -80,6 +111,10 @@ export function ChatShell({ initialMode }: ChatShellProps) {
         </div>
       </LayoutGroup>
     )
+  }
+
+  if (finalConfig) {
+    return <ConfigSummary config={finalConfig} onReset={onReset} />
   }
 
   return (
