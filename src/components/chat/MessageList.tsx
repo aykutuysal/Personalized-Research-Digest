@@ -1,12 +1,12 @@
 'use client'
 
-import type { UIMessage } from 'ai'
 import { useLayoutEffect, useRef } from 'react'
+import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import { MessageBubble } from './MessageBubble'
 import { ThinkingIndicator } from './ThinkingIndicator'
 
 export interface MessageListProps {
-  messages: UIMessage[]
+  messages: ResearchChatMessage[]
   isThinking: boolean
 }
 
@@ -15,7 +15,7 @@ export function MessageList({ messages, isThinking }: MessageListProps) {
 
   // Group consecutive messages into "turns": each user message starts a new turn
   // and collects the immediately following assistant responses.
-  const turns: Array<{ key: string; items: UIMessage[] }> = []
+  const turns: Array<{ key: string; items: ResearchChatMessage[] }> = []
   for (const m of messages) {
     if (m.role === 'user' || turns.length === 0) {
       turns.push({ key: m.id, items: [m] })

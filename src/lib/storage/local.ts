@@ -1,5 +1,5 @@
 // src/lib/storage/local.ts
-import type { UIMessage } from 'ai'
+import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import type { DigestConfig } from '@/lib/config-schema'
 
 const KEY = 'rd:onboarding:v1'
@@ -8,7 +8,7 @@ const SCHEMA_VERSION = 1 as const
 export interface OnboardingLocalState {
   schemaVersion: typeof SCHEMA_VERSION
   sessionId: string
-  messages: UIMessage[]
+  messages: ResearchChatMessage[]
   configDraft: Partial<DigestConfig>
   finalConfig?: DigestConfig
   lastUpdated: string
