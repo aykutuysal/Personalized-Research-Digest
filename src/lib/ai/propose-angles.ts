@@ -1,4 +1,5 @@
 // src/lib/ai/propose-angles.ts
+import 'server-only'
 import { generateObject } from 'ai'
 import { z } from 'zod'
 import { readFileSync } from 'node:fs'

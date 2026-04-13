@@ -1,4 +1,5 @@
 // src/lib/ai/onboarding-tools.ts
+import 'server-only'
 import { tool } from 'ai'
 import { z } from 'zod'
 import { normalizeSchedule as normalizeScheduleImpl } from '@/lib/schedule/cron'

@@ -1,4 +1,5 @@
 // src/lib/ai/openrouter.ts
+import 'server-only'
 import { createOpenRouter } from '@openrouter/ai-sdk-provider'
 
 export const MODEL_ID = 'deepseek/deepseek-v3.2'
