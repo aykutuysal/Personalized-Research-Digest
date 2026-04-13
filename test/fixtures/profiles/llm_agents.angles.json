@@ -1,0 +1,17 @@
+{
+  "subject": "LLM agents",
+  "queries_per_angle": 2,
+  "query_budget": 16,
+  "min_per_angle": 1,
+  "max_per_angle": 4,
+  "angles": [
+    "new agent architectures or frameworks",
+    "planning, reasoning, or chain-of-thought techniques",
+    "tool use and function calling",
+    "memory systems and retrieval (RAG / long-term memory)",
+    "multi-agent systems and orchestration",
+    "evaluation, benchmarks, or agent capability tests",
+    "production engineering patterns (deployment, observability, cost)",
+    "safety, alignment, or guardrails for agents"
+  ]
+}
