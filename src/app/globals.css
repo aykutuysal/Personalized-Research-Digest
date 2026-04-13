@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
+/* =========================================================
+   Design tokens — single source of truth.
+   Polish iterations edit these only, never component markup.
+   ========================================================= */
+
+:root,
+[data-theme="light"] {
+  /* Surfaces — warm off-white, layered lightly */
+  --bg:         oklch(0.985 0.008 85);
+  --bg-elev-1:  oklch(0.965 0.010 85);
+  --bg-elev-2:  oklch(0.935 0.012 85);
+  --bg-overlay: oklch(0.98 0.008 85 / 0.80);
+
+  /* Ink — warm near-black */
+  --ink:        oklch(0.185 0.012 85);
+  --ink-soft:   oklch(0.34 0.010 85);
+  --ink-dim:    oklch(0.50 0.008 85);
+  --ink-faint:  oklch(0.66 0.006 85);
+
+  /* Accent — dark emerald */
+  --accent:        oklch(0.38 0.13 155);
+  --accent-hover:  oklch(0.44 0.14 155);
+  --accent-ink:    oklch(0.985 0.012 155);
+  --accent-soft:   oklch(0.38 0.13 155 / 0.10);
+  --accent-ring:   oklch(0.52 0.15 155 / 0.40);
+
+  /* Feedback */
+  --warn:       oklch(0.66 0.15 72);
+  --warn-soft:  oklch(0.66 0.15 72 / 0.14);
+  --danger:     oklch(0.56 0.18 27);
+
+  /* Borders */
+  --line:         oklch(0.88 0.010 85);
+  --line-strong:  oklch(0.80 0.012 85);
+}
+
+[data-theme="dark"] {
+  --bg:         oklch(0.14 0.012 150);
+  --bg-elev-1:  oklch(0.18 0.014 150);
+  --bg-elev-2:  oklch(0.22 0.015 150);
+  --bg-overlay: oklch(0.10 0.010 150 / 0.72);
+
+  --ink:        oklch(0.96 0.015 85);
+  --ink-soft:   oklch(0.84 0.012 85);
+  --ink-dim:    oklch(0.62 0.010 85);
+  --ink-faint:  oklch(0.42 0.008 85);
+
+  --accent:        oklch(0.56 0.15 155);
+  --accent-hover:  oklch(0.64 0.16 155);
+  --accent-ink:    oklch(0.10 0.010 150);
+  --accent-soft:   oklch(0.56 0.15 155 / 0.18);
+  --accent-ring:   oklch(0.72 0.16 155 / 0.45);
+
+  --warn:       oklch(0.74 0.13 75);
+  --warn-soft:  oklch(0.74 0.13 75 / 0.15);
+  --danger:     oklch(0.62 0.18 27);
+
+  --line:         oklch(0.24 0.013 150);
+  --line-strong:  oklch(0.32 0.014 150);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Motion (theme-independent) */
+  --ease-out:   cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-morph: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-xs: 120ms;
+  --dur-sm: 180ms;
+  --dur-md: 280ms;
+  --dur-lg: 450ms;
+
+  /* Layout */
+  --reading-width: 64ch;
+  --header-h: 56px;
+  --composer-h: 88px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-bg:           var(--bg);
+  --color-bg-elev-1:    var(--bg-elev-1);
+  --color-bg-elev-2:    var(--bg-elev-2);
+  --color-bg-overlay:   var(--bg-overlay);
+  --color-ink:          var(--ink);
+  --color-ink-soft:     var(--ink-soft);
+  --color-ink-dim:      var(--ink-dim);
+  --color-ink-faint:    var(--ink-faint);
+  --color-accent:       var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink:   var(--accent-ink);
+  --color-accent-soft:  var(--accent-soft);
+  --color-accent-ring:  var(--accent-ring);
+  --color-warn:         var(--warn);
+  --color-warn-soft:    var(--warn-soft);
+  --color-danger:       var(--danger);
+  --color-line:         var(--line);
+  --color-line-strong:  var(--line-strong);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base resets */
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Reading-cursor thinking animation — consumed by ThinkingIndicator */
+@keyframes rd-reading-cursor {
+  0%   { transform: translateX(-4%); opacity: 0.7; }
+  50%  { opacity: 1; }
+  100% { transform: translateX(104%); opacity: 0.7; }
 }
