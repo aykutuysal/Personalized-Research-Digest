@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { buildSearchUrl, searchByKeyword } from '@/lib/openalex/client'
+import { reconstructAbstract } from '@/lib/openalex/abstract'
 
 const MAILTO = 'test@example.com'
 
@@ -94,5 +95,22 @@ describe('searchByKeyword', () => {
     await expect(
       searchByKeyword({ query: 'x', fromDate: '2026-01-01', toDate: '2026-01-31' }),
     ).rejects.toThrow(/OPENALEX_MAILTO/)
+  })
+})
+
+describe('reconstructAbstract', () => {
+  it('rebuilds a simple abstract from an inverted index', () => {
+    // "hello world hello"
+    const idx = { hello: [0, 2], world: [1] }
+    expect(reconstructAbstract(idx)).toBe('hello world hello')
+  })
+
+  it('returns null for null input', () => {
+    expect(reconstructAbstract(null)).toBeNull()
+  })
+
+  it('handles out-of-order tokens correctly', () => {
+    const idx = { 'fibrillation,': [3], Atrial: [0], is: [2], fibrillation: [1] }
+    expect(reconstructAbstract(idx)).toBe('Atrial fibrillation is fibrillation,')
   })
 })
