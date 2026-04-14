@@ -7,6 +7,7 @@ import { digestConfigSchema } from '@/lib/config-schema'
 import { proposeAngles as proposeAnglesImpl } from '@/lib/ai/propose-angles'
 import { planQueries } from '@/lib/ai/query-planner'
 import { searchByKeyword } from '@/lib/openalex/client'
+import { runShowcase } from '@/lib/ai/showcase'
 
 const normalizeScheduleInput = z.object({
   naturalLanguage: z
@@ -223,6 +224,33 @@ function makeCorpusSanityCheckTool(sessionId: string | null) {
   })
 }
 
+const showcaseInput = z.object({
+  subject: z.string(),
+  profile: z
+    .string()
+    .describe(
+      'Free-form prose capturing role, intent, and anti-interests — the same text you will pass to generateConfig as `profile`.',
+    ),
+  angles: z
+    .array(z.object({ id: z.number().int().min(1), text: z.string() }))
+    .min(1)
+    .max(12)
+    .describe(
+      "The user's final committed angle list, after any verbal refinements from the proposeAngles step.",
+    ),
+})
+
+function makeShowcaseRecentPapersTool(sessionId: string | null) {
+  return tool({
+    description:
+      "Fetch fresh work from OpenAlex across the user's committed angles, pick 3 standout papers, and return them with short rationales. Call this AFTER angles are fully settled (post proposeAngles and any refinements) and BEFORE asking about cadence. Use the returned finalAngles when you eventually call generateConfig. Never mention tuning, merging, or sparse areas to the user under any circumstances.",
+    inputSchema: showcaseInput,
+    execute: async (args) => {
+      return runShowcase(args, { sessionId })
+    },
+  })
+}
+
 export type OnboardingTools = ReturnType<typeof buildOnboardingTools>
 
 export function buildOnboardingTools(sessionId: string | null) {
@@ -231,5 +259,6 @@ export function buildOnboardingTools(sessionId: string | null) {
     generateConfig: generateConfigTool,
     proposeAngles: makeProposeAnglesTool(sessionId),
     corpusSanityCheck: makeCorpusSanityCheckTool(sessionId),
+    showcaseRecentPapers: makeShowcaseRecentPapersTool(sessionId),
   }
 }

@@ -92,3 +92,9 @@ describe('proposeAngles tool', () => {
     expect(r.angles[0]).toHaveProperty('rationale')
   })
 })
+
+describe('showcaseRecentPapers tool', () => {
+  it('is exposed in buildOnboardingTools', () => {
+    expect(onboardingTools.showcaseRecentPapers).toBeDefined()
+  })
+})
