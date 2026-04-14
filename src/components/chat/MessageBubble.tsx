@@ -6,6 +6,7 @@ import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import { AngleProposalCard } from './AngleProposalCard'
 import { ScheduleCard } from './ScheduleCard'
 import { SanityCheckCard } from './SanityCheckCard'
+import { MarkdownText } from './MarkdownText'
 import type { ToolCallState } from './ToolCallCard'
 
 export interface MessageBubbleProps {
@@ -51,12 +52,13 @@ export function MessageBubble({ message }: MessageBubbleProps) {
       ) : (
         parts.map((part, idx) => {
           if (part.type === 'text') {
+            if (part.text.trim().length === 0) return null
             return (
               <div
                 key={idx}
-                className="max-w-[85%] text-ink text-[16px] leading-[1.65] whitespace-pre-wrap"
+                className="max-w-[85%] text-ink text-[16px] leading-[1.65]"
               >
-                {part.text}
+                <MarkdownText text={part.text} />
               </div>
             )
           }

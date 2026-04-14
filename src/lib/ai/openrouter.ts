@@ -16,7 +16,16 @@ function getOpenRouter() {
  * Returns the configured DeepSeek v3.2 language model via OpenRouter.
  * Lazily initialized so tests can mock the provider without tripping the
  * env-var guard on import.
+ *
+ * `sessionId` is forwarded to OpenRouter via `extraBody.session_id` at model
+ * construction time (the provider spreads `settings.extraBody` into the
+ * request body). Passing it through `providerOptions` does not flatten
+ * correctly and the field never reaches OpenRouter.
  */
-export function deepseek() {
-  return getOpenRouter()(MODEL_ID)
+export function deepseek(opts: { sessionId?: string | null } = {}) {
+  const extraBody = opts.sessionId ? { session_id: opts.sessionId } : undefined
+  return getOpenRouter()(MODEL_ID, {
+    usage: { include: true },
+    ...(extraBody ? { extraBody } : {}),
+  })
 }

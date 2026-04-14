@@ -45,9 +45,20 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   const [initialMessages] = useState<ResearchChatMessage[]>(() =>
     readInitialMessages(initialMode),
   )
+  const [conversationId] = useState<string>(() => {
+    if (typeof window === 'undefined') return ''
+    const existing = loadOnboardingState()
+    if (existing) return existing.sessionId
+    const fresh = newOnboardingState()
+    saveOnboardingState(fresh)
+    return fresh.sessionId
+  })
   const { messages, sendMessage, status } = useChat<ResearchChatMessage>({
     messages: initialMessages,
-    transport: new DefaultChatTransport({ api: '/api/onboarding-chat' }),
+    transport: new DefaultChatTransport({
+      api: '/api/onboarding-chat',
+      body: { conversationId },
+    }),
   })
 
   const isThinking = status === 'submitted' || status === 'streaming'
@@ -59,7 +70,7 @@ export function ChatShell({ initialMode }: ChatShellProps) {
     if (status !== 'ready') return
     if (messages.length === 0) return
     try {
-      const existing = loadOnboardingState() ?? newOnboardingState('')
+      const existing = loadOnboardingState() ?? newOnboardingState()
       saveOnboardingState({ ...existing, messages })
     } catch {
       /* ignore */
@@ -155,23 +166,19 @@ export function ChatShell({ initialMode }: ChatShellProps) {
 
   return (
     <LayoutGroup>
-      <div className="min-h-dvh flex flex-col">
-        <div className="flex-1 overflow-y-auto">
-          <MessageList messages={messages} isThinking={isThinking} />
-        </div>
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col">
+        <MessageList messages={messages} isThinking={isThinking} />
         <div
-          className="sticky bottom-0 w-full pb-[var(--safe-bottom)] pt-4 bg-gradient-to-t from-bg via-bg to-transparent"
-          style={{ minHeight: 'var(--composer-h)' }}
+          className="shrink-0 w-full px-6 pt-8 bg-gradient-to-t from-bg via-bg/95 to-transparent"
+          style={{ paddingBottom: 'max(1.5rem, var(--safe-bottom))' }}
         >
-          <div className="px-6">
-            <Composer
-              value={input}
-              onChange={setInput}
-              onSubmit={onSubmit}
-              size="docked"
-              disabled={isThinking}
-            />
-          </div>
+          <Composer
+            value={input}
+            onChange={setInput}
+            onSubmit={onSubmit}
+            size="docked"
+            disabled={isThinking}
+          />
         </div>
       </div>
     </LayoutGroup>

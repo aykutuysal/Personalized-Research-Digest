@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
-import { Chip } from '@/components/ui/Chip'
 import type { DigestConfig } from '@/lib/config-schema'
 
 export interface ConfigSummaryProps {
@@ -24,13 +23,14 @@ export function ConfigSummary({ config, onReset }: ConfigSummaryProps) {
   }
 
   return (
-    <main
-      className="mx-auto flex flex-col gap-6 px-6 py-10"
-      style={{ maxWidth: 'var(--reading-width)' }}
-    >
-      <h1 className="font-display text-[42px] leading-[1.15] text-ink">
-        Your digest is ready to go.
-      </h1>
+    <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+      <div
+        className="mx-auto flex flex-col gap-6 px-6 py-10"
+        style={{ maxWidth: 'var(--reading-width)' }}
+      >
+        <h1 className="font-display text-[42px] leading-[1.15] text-ink">
+          Your digest is ready to go.
+        </h1>
 
       <Card>
         <h2 className="font-display text-[20px] text-ink">Subject</h2>
@@ -49,9 +49,8 @@ export function ConfigSummary({ config, onReset }: ConfigSummaryProps) {
         <h2 className="font-display text-[20px] text-ink">Areas I&apos;ll track</h2>
         <ul className="mt-3 flex flex-col gap-2">
           {config.core_angles.map((a) => (
-            <li key={a.id} className="flex items-start gap-2 text-[15px] text-ink">
-              <Chip>{a.priority}</Chip>
-              <span>{a.text}</span>
+            <li key={a.id} className="text-[15px] text-ink">
+              {a.text}
             </li>
           ))}
         </ul>
@@ -80,9 +79,10 @@ export function ConfigSummary({ config, onReset }: ConfigSummaryProps) {
         </Button>
       </div>
 
-      <p className="text-[13px] text-ink-faint">
-        Saved in this browser for now. We&apos;ll hook it to your account in the next phase.
-      </p>
-    </main>
+        <p className="text-[13px] text-ink-faint">
+          Saved in this browser for now. We&apos;ll hook it to your account in the next phase.
+        </p>
+      </div>
+    </div>
   )
 }

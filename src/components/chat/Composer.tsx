@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { SendHorizontal } from 'lucide-react'
-import { forwardRef, useRef, type KeyboardEvent, type ChangeEvent } from 'react'
+import { forwardRef, useEffect, useRef, type KeyboardEvent, type ChangeEvent } from 'react'
 
 export interface ComposerProps {
   value: string
@@ -46,18 +46,26 @@ export const Composer = forwardRef<HTMLTextAreaElement, ComposerProps>(
       resize()
     }
 
+    // Keep focus on the composer. Fires on mount (so the hero and the
+    // docked page open ready to type) and whenever `disabled` flips back
+    // to false — which is what restores focus after a streamed response
+    // finishes, since setting disabled=true on a focused textarea blurs it.
+    useEffect(() => {
+      if (!disabled) innerRef.current?.focus()
+    }, [disabled])
+
     const sizeCls =
       size === 'hero'
-        ? 'max-w-[640px] text-[18px] p-5'
-        : 'max-w-[var(--reading-width)] text-[16px] p-4'
+        ? 'max-w-[720px] text-[18px] px-6 py-4'
+        : 'max-w-[var(--reading-width)] text-[16px] px-5 py-3.5'
 
     return (
       <motion.div
         layoutId="rd-composer"
-        className={`mx-auto w-full ${sizeCls} rounded-2xl bg-bg-elev-1 border border-line focus-within:border-accent/60 focus-within:ring-4 focus-within:ring-accent-ring transition-[border-color,box-shadow] duration-[var(--dur-sm)]`}
+        className={`mx-auto w-full ${sizeCls} rounded-2xl bg-bg-elev-1 border border-line-strong shadow-[0_1px_2px_oklch(0_0_0_/_0.04),_0_8px_24px_-12px_oklch(0_0_0_/_0.10)] focus-within:border-ink-soft/50 focus-within:shadow-[0_0_0_1px_var(--line-strong)_inset,_0_8px_24px_-12px_oklch(0_0_0_/_0.14)] transition-[border-color,box-shadow] duration-[var(--dur-sm)]`}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="flex items-end gap-3">
+        <div className="flex items-center gap-3">
           <textarea
             ref={setRef}
             value={value}

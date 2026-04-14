@@ -51,10 +51,10 @@ export function clearOnboardingState(): void {
   }
 }
 
-export function newOnboardingState(sessionId: string): OnboardingLocalState {
+export function newOnboardingState(): OnboardingLocalState {
   return {
     schemaVersion: SCHEMA_VERSION,
-    sessionId,
+    sessionId: crypto.randomUUID(),
     messages: [],
     configDraft: {},
     lastUpdated: new Date().toISOString(),

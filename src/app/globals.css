@@ -71,7 +71,7 @@
   --dur-lg: 450ms;
 
   /* Layout */
-  --reading-width: 64ch;
+  --reading-width: 80ch;
   --header-h: 56px;
   --composer-h: 88px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -114,11 +114,12 @@ html, body {
   }
 }
 
-/* Reading-cursor thinking animation — consumed by ThinkingIndicator */
+/* Reading-cursor sweep — consumed by ToolCallCard progress bar.
+   Uses `left` (not transform %) so the bar actually traverses its parent. */
 @keyframes rd-reading-cursor {
-  0%   { transform: translateX(-4%); opacity: 0.7; }
+  0%   { left: -34%; opacity: 0.6; }
   50%  { opacity: 1; }
-  100% { transform: translateX(104%); opacity: 0.7; }
+  100% { left: 100%;  opacity: 0.6; }
 }
 
 @theme {

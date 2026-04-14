@@ -1,23 +1,42 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
+// A small vocabulary that narrates the reader's mind at work. The word
+// swaps every ~1.4s, which is the motion — driven by React state so the
+// global prefers-reduced-motion rule in globals.css can't freeze it.
+const PHRASES = ['Reading', 'Pondering', 'Weighing', 'Drafting'] as const
+
 export function ThinkingIndicator() {
+  const [i, setI] = useState(0)
+
+  useEffect(() => {
+    const id = window.setInterval(
+      () => setI((n) => (n + 1) % PHRASES.length),
+      1400,
+    )
+    return () => window.clearInterval(id)
+  }, [])
+
   return (
     <div
       role="status"
       aria-busy="true"
       aria-label="Thinking"
-      className="relative inline-flex items-center text-ink-dim text-[16px] leading-[1.65]"
+      className="inline-flex items-baseline text-[16px] text-ink-dim"
     >
-      <span className="relative inline-block overflow-hidden pr-0.5">
-        Thinking
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 w-[2px] bg-accent rounded-full"
-          style={{
-            boxShadow: '0 0 6px 1px var(--accent)',
-            animation: 'rd-reading-cursor 1.6s var(--ease-out) infinite',
-          }}
-        />
+      <span
+        aria-hidden
+        className="font-display italic tracking-[-0.005em] inline-block"
+        style={{ minWidth: '10ch' }}
+      >
+        {PHRASES[i]}
+      </span>
+      <span
+        aria-hidden
+        className="font-display italic text-accent ml-0.5"
+      >
+        |
       </span>
       <span className="sr-only">Thinking</span>
     </div>

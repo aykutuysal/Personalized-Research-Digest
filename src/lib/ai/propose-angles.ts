@@ -31,13 +31,20 @@ function getSystemPrompt(): string {
   return cachedPrompt
 }
 
-export async function proposeAngles(input: {
-  subject: string
-  profileSummary: string
-  hints?: string
-}): Promise<ProposeAnglesOutput> {
-  const { object } = await generateObject({
-    model: deepseek(),
+export async function proposeAngles(
+  input: {
+    subject: string
+    profileSummary: string
+    hints?: string
+  },
+  opts: { sessionId?: string | null } = {},
+): Promise<ProposeAnglesOutput> {
+  const tag = `[proposeAngles ${opts.sessionId?.slice(0, 8) ?? 'no-session'}]`
+  const startedAt = Date.now()
+  console.log(`${tag} start subject="${input.subject}"`)
+
+  const { object, usage, providerMetadata } = await generateObject({
+    model: deepseek({ sessionId: opts.sessionId }),
     schema: proposeAnglesOutputSchema,
     system: getSystemPrompt(),
     prompt: [
@@ -50,5 +57,10 @@ export async function proposeAngles(input: {
       .join('\n'),
     temperature: 0.7,
   })
+
+  const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
+  console.log(
+    `${tag} done angles=${object.angles.length} tokens=${usage.totalTokens ?? '?'} cost=${cost != null ? `$${cost.toFixed(6)}` : '—'} ms=${Date.now() - startedAt}`,
+  )
   return object
 }

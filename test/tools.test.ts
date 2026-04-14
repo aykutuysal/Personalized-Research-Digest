@@ -1,6 +1,8 @@
 // test/tools.test.ts
 import { describe, it, expect, vi } from 'vitest'
-import { onboardingTools } from '@/lib/ai/onboarding-tools'
+import { buildOnboardingTools } from '@/lib/ai/onboarding-tools'
+
+const onboardingTools = buildOnboardingTools(null)
 import * as proposeAnglesModule from '@/lib/ai/propose-angles'
 import { runTool, toolCtx } from './helpers'
 

@@ -27,7 +27,6 @@ export function ToolCallCard({
 
   return (
     <motion.section
-      layout
       initial={{ opacity: 0, y: 6 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.18, ease: [0.2, 0.7, 0.2, 1] }}
@@ -40,11 +39,12 @@ export function ToolCallCard({
       }
     >
       {!isDone ? (
-        <span
-          aria-hidden
-          className="absolute top-0 left-0 h-[2px] w-1/3 bg-accent rounded-full"
-          style={{ animation: 'rd-reading-cursor 1.2s var(--ease-out) infinite' }}
-        />
+        <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[2px] overflow-hidden rounded-t-xl">
+          <span
+            className="absolute top-0 h-full w-1/3 bg-accent rounded-full"
+            style={{ animation: 'rd-reading-cursor 1.4s var(--ease-out) infinite' }}
+          />
+        </span>
       ) : null}
 
       <button
@@ -81,14 +81,16 @@ export function ToolCallCard({
         {open && detail ? (
           <motion.div
             key="detail"
-            layout
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2, ease: [0.2, 0.7, 0.2, 1] }}
-            className="mt-3 overflow-hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{
+              height: { duration: 0.24, ease: [0.2, 0.7, 0.2, 1] },
+              opacity: { duration: 0.18, ease: 'easeOut' },
+            }}
+            style={{ overflow: 'hidden' }}
           >
-            {detail}
+            <div className="pt-3">{detail}</div>
           </motion.div>
         ) : null}
       </AnimatePresence>
