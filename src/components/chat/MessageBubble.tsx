@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import { AngleProposalCard } from './AngleProposalCard'
 import { ScheduleCard } from './ScheduleCard'
-import { SanityCheckCard } from './SanityCheckCard'
 import { MarkdownText } from './MarkdownText'
 import type { ToolCallState } from './ToolCallCard'
 
@@ -75,15 +74,6 @@ export function MessageBubble({ message }: MessageBubbleProps) {
           if (part.type === 'tool-normalizeSchedule') {
             return (
               <ScheduleCard
-                key={idx}
-                state={mapState(part.state)}
-                result={part.state === 'output-available' ? part.output : undefined}
-              />
-            )
-          }
-          if (part.type === 'tool-corpusSanityCheck') {
-            return (
-              <SanityCheckCard
                 key={idx}
                 state={mapState(part.state)}
                 result={part.state === 'output-available' ? part.output : undefined}
