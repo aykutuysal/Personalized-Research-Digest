@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import { AngleProposalCard } from './AngleProposalCard'
 import { ScheduleCard } from './ScheduleCard'
+import { ShowcaseCard } from './showcase/ShowcaseCard'
 import { MarkdownText } from './MarkdownText'
 import type { ToolCallState } from './ToolCallCard'
 
@@ -70,6 +71,9 @@ export function MessageBubble({ message }: MessageBubbleProps) {
                 result={part.state === 'output-available' ? part.output : undefined}
               />
             )
+          }
+          if (part.type === 'tool-showcaseRecentPapers') {
+            return <ShowcaseCard key={idx} part={part} />
           }
           if (part.type === 'tool-normalizeSchedule') {
             return (
