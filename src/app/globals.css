@@ -122,6 +122,13 @@ html, body {
   100% { left: 100%;  opacity: 0.6; }
 }
 
+@keyframes rd-chip-pulse {
+  0%   { background: var(--bg);          border-color: var(--line);      color: var(--ink-soft); transform: translateY(0); }
+  18%  { background: var(--accent-soft); border-color: var(--accent);    color: var(--accent);   transform: translateY(-1px); }
+  42%  { background: var(--bg);          border-color: var(--line);      color: var(--ink-soft); transform: translateY(0); }
+  100% { background: var(--bg);          border-color: var(--line);      color: var(--ink-soft); transform: translateY(0); }
+}
+
 @theme {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-display), ui-serif, Georgia, serif;
