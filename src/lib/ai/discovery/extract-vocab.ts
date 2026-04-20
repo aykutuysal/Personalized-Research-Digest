@@ -1,5 +1,4 @@
 // src/lib/ai/discovery/extract-vocab.ts
-import type { OpenAlexWork } from '@/lib/openalex/client'
 import type { SeedFetchResult } from './fetch-seeds'
 
 const GENERIC_KEYWORDS = new Set(['study', 'research', 'analysis', 'method', 'result'])

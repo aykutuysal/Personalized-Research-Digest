@@ -66,7 +66,7 @@ export async function curatePreview(
   const tag = `[preview-curator ${opts.sessionId?.slice(0, 8) ?? 'no-session'}]`
   const started = Date.now()
 
-  const poolLines = pool.map((p, i) => {
+  const poolLines = pool.map((p) => {
     const abstract = reconstructAbstract(p.abstract_inverted_index).slice(0, 500)
     return [
       `[id=${p.id}] (${p.publication_date ?? '?'}, venue=${extractVenue(p) || '—'})`,
