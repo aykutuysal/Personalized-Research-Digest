@@ -1,4 +1,4 @@
-// src/lib/ai/propose-angles.ts
+// src/lib/ai/propose-research-areas.ts
 import 'server-only'
 import { generateObject } from 'ai'
 import { z } from 'zod'
@@ -14,7 +14,7 @@ import { deepseek } from '@/lib/ai/openrouter'
 // Official Anthropic SDKs auto-strip these and validate client-side, but the
 // Vercel AI SDK + OpenRouter route passes the Zod-derived schema verbatim, so
 // we strip manually here. Soft-cap targets are enforced via the system prompt
-// and post-call truncation in `proposeAngles`.
+// and post-call truncation in `proposeResearchAreas`.
 //
 // EXTRA GOTCHA — `z.number().int()`: Zod v4 serializes `.int()` as
 // `{type: "integer", minimum: -9007199254740991, maximum: 9007199254740991}`
@@ -25,7 +25,7 @@ import { deepseek } from '@/lib/ai/openrouter'
 // Refs:
 //   https://docs.claude.com/en/docs/build-with-claude/structured-outputs
 //   https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api/structured-outputs
-export const proposeAnglesOutputSchema = z.object({
+export const proposeResearchAreasOutputSchema = z.object({
   angles: z
     .array(
       z.object({
@@ -36,37 +36,37 @@ export const proposeAnglesOutputSchema = z.object({
     .min(1),
 })
 
-const PROPOSE_ANGLES_HARD_CAP = 12
+const PROPOSE_RESEARCH_AREAS_HARD_CAP = 12
 
-export type ProposeAnglesOutput = z.infer<typeof proposeAnglesOutputSchema>
+export type ProposeResearchAreasOutput = z.infer<typeof proposeResearchAreasOutputSchema>
 
 let cachedPrompt: string | null = null
 
 function getSystemPrompt(): string {
   if (cachedPrompt) return cachedPrompt
   cachedPrompt = readFileSync(
-    resolve(process.cwd(), 'prompts/propose-angles-system.md'),
+    resolve(process.cwd(), 'prompts/propose-research-areas-system.md'),
     'utf8',
   )
   return cachedPrompt
 }
 
-export async function proposeAngles(
+export async function proposeResearchAreas(
   input: {
     subject: string
     profileSummary: string
     hints?: string
   },
   opts: { sessionId?: string | null } = {},
-): Promise<ProposeAnglesOutput> {
-  const tag = `[proposeAngles ${opts.sessionId?.slice(0, 8) ?? 'no-session'}]`
+): Promise<ProposeResearchAreasOutput> {
+  const tag = `[proposeResearchAreas ${opts.sessionId?.slice(0, 8) ?? 'no-session'}]`
   const startedAt = Date.now()
   console.log(`${tag} start subject="${input.subject}"`)
 
   try {
     const { object, usage, providerMetadata } = await generateObject({
       model: deepseek({ sessionId: opts.sessionId }),
-      schema: proposeAnglesOutputSchema,
+      schema: proposeResearchAreasOutputSchema,
       system: getSystemPrompt(),
       prompt: [
         `SUBJECT: ${input.subject}`,
@@ -80,7 +80,7 @@ export async function proposeAngles(
     })
 
     const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
-    const trimmed = object.angles.slice(0, PROPOSE_ANGLES_HARD_CAP)
+    const trimmed = object.angles.slice(0, PROPOSE_RESEARCH_AREAS_HARD_CAP)
     if (trimmed.length < object.angles.length) {
       console.warn(`${tag} truncated angles ${object.angles.length} → ${trimmed.length}`)
     }
