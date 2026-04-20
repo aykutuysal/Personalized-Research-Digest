@@ -44,3 +44,6 @@ next-env.d.ts
 # legacy work
 iter/
 .superpowers/
+
+# worktrees
+.worktrees/
