@@ -91,10 +91,10 @@ export function PreviewReadyState({
           </div>
           <ul className="mt-2 space-y-3 text-[14px] leading-[1.6] text-ink">
             <li>
-              <strong className="font-display">Picks more papers.</strong> Your sections fill in properly — not just one or two papers per section, but the real field's output for the cycle.
+              <strong className="font-display">Picks more papers.</strong> Your sections fill in properly — not just one or two papers per section, but the real field&apos;s output for the cycle.
             </li>
             <li>
-              <strong className="font-display">Reads more carefully.</strong> Goes beyond abstracts, looks at who's citing whom, and notices threads that don't show up in a single pass.
+              <strong className="font-display">Reads more carefully.</strong> Goes beyond abstracts, looks at who&apos;s citing whom, and notices threads that don&apos;t show up in a single pass.
             </li>
             <li>
               <strong className="font-display">Matches your voice better.</strong> The more digests you read, the more your curator writes the way you actually read.
