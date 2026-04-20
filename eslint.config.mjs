@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Nested worktrees keep their own .next build output. They're
+    // gitignored but eslint doesn't honor gitignore automatically.
+    ".worktrees/**",
   ]),
 ]);
 
