@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import type { ToolCallState } from './ToolCallCard'
 
-export interface AngleProposalCardProps {
+export interface ResearchAreaProposalCardProps {
   state: ToolCallState
   result?: { angles: Array<{ text: string; rationale: string }> }
 }
@@ -30,7 +30,7 @@ function countWord(n: number): string {
   return COUNT_WORDS[n] ?? String(n)
 }
 
-export function AngleProposalCard({ state, result }: AngleProposalCardProps) {
+export function ResearchAreaProposalCard({ state, result }: ResearchAreaProposalCardProps) {
   const [open, setOpen] = useState(true)
   const reduceMotion = useReducedMotion()
   const isDone = state === 'completed'
