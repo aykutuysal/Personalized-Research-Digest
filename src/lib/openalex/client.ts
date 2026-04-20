@@ -2,12 +2,16 @@
 const OPENALEX_BASE = 'https://api.openalex.org/works'
 const TYPE_FILTER = 'article|review|book-chapter|preprint|dissertation|report|peer-review'
 
+export type FilterMode = 'search' | 'title_and_abstract.search'
+
 export interface SearchOptions {
   query: string
-  fromDate: string // YYYY-MM-DD
-  toDate: string // YYYY-MM-DD
+  fromDate: string        // YYYY-MM-DD
+  toDate: string          // YYYY-MM-DD
   perPage?: number
   page?: number
+  filterMode?: FilterMode
+  selectFields?: string[]
 }
 
 export interface OpenAlexWork {
@@ -16,6 +20,16 @@ export interface OpenAlexWork {
   title?: string | null
   publication_date?: string | null
   abstract_inverted_index?: Record<string, number[]> | null
+  primary_topic?: {
+    display_name?: string
+    subfield?: { display_name?: string }
+    field?: { display_name?: string }
+  } | null
+  keywords?: Array<{ display_name?: string }>
+  primary_location?: {
+    source?: { display_name?: string }
+  } | null
+  authorships?: Array<{ author?: { display_name?: string } }>
   [k: string]: unknown
 }
 
@@ -29,13 +43,27 @@ export function buildSearchUrl(opts: SearchOptions): string {
   const apiKey = process.env.OPENALEX_API_KEY
 
   const params = new URLSearchParams()
-  params.set('search', opts.query)
-  params.set(
-    'filter',
-    `from_publication_date:${opts.fromDate},to_publication_date:${opts.toDate},type:${TYPE_FILTER}`,
-  )
+  const filterMode: FilterMode = opts.filterMode ?? 'search'
+
+  if (filterMode === 'search') {
+    params.set('search', opts.query)
+    params.set(
+      'filter',
+      `from_publication_date:${opts.fromDate},to_publication_date:${opts.toDate},type:${TYPE_FILTER}`,
+    )
+  } else {
+    // title_and_abstract.search goes inside the filter clause.
+    params.set(
+      'filter',
+      `title_and_abstract.search:${opts.query},from_publication_date:${opts.fromDate},to_publication_date:${opts.toDate},type:${TYPE_FILTER}`,
+    )
+  }
+
   params.set('per_page', String(opts.perPage ?? 25))
   params.set('page', String(opts.page ?? 1))
+  if (opts.selectFields && opts.selectFields.length > 0) {
+    params.set('select', opts.selectFields.join(','))
+  }
   if (mailto) params.set('mailto', mailto)
   if (apiKey) params.set('api_key', apiKey)
 
