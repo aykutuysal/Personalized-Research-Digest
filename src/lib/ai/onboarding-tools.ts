@@ -2,63 +2,51 @@
 import 'server-only'
 import { tool } from 'ai'
 import { z } from 'zod'
-import { normalizeSchedule as normalizeScheduleImpl } from '@/lib/schedule/cron'
 import { digestConfigSchema } from '@/lib/config-schema'
-import { proposeAngles as proposeAnglesImpl } from '@/lib/ai/propose-angles'
-import { runShowcase } from '@/lib/ai/showcase'
+import { proposeResearchAreas as proposeResearchAreasImpl } from '@/lib/ai/propose-research-areas'
 
-const normalizeScheduleInput = z.object({
-  naturalLanguage: z
+const proposeResearchAreasInput = z.object({
+  subject: z.string().describe('The subject the user wants a digest about.'),
+  profileSummary: z
     .string()
-    .describe('The user\'s natural-language description of their schedule.'),
-  city: z
-    .string()
-    .optional()
-    .describe('The user\'s city, used to resolve timezone when timezone is not given.'),
-  timezone: z
-    .string()
-    .optional()
-    .describe('An explicit IANA timezone string. Takes precedence over city.'),
+    .describe('A short profile of the reader: role, intent, anti-interests.'),
+  hints: z.string().optional().describe('Optional hints from the conversation so far.'),
 })
 
-const normalizeScheduleTool = tool({
-  description:
-    'Convert a natural-language schedule ("every Monday at 9am") into a cron expression, IANA timezone, a human description, and the next three fire times. Call this after the user describes when they want their digest.',
-  inputSchema: normalizeScheduleInput,
-  execute: async (args) => {
-    return normalizeScheduleImpl({
-      naturalLanguage: args.naturalLanguage,
-      city: args.city,
-      timezone: args.timezone,
-    })
-  },
+function makeProposeResearchAreasTool(sessionId: string | null) {
+  return tool({
+    description:
+      'Generate 6–12 specific research areas for a subject given a reader profile. Call this once subject, role, and intent are clear. Narrate the result to the user in natural language — do not dump the raw list.',
+    inputSchema: proposeResearchAreasInput,
+    execute: async (args) => {
+      return proposeResearchAreasImpl(args, { sessionId })
+    },
+  })
+}
+
+// Pre-schedule subset of DigestConfig. Chat never sets schedule or metadata.
+const handoffDraftSchema = digestConfigSchema.omit({
+  schedule: true,
+  version: true,
+  created_at: true,
+  updated_at: true,
+  search_queries: true,
 })
 
-const generateConfigInput = z.object({
+const handoffToPlanInput = z.object({
   config: z
     .record(z.string(), z.unknown())
-    .describe('The assembled DigestConfig fields. Will be validated against the schema.'),
+    .describe(
+      'The assembled fields: subject, profile, output_style, research_areas. Will be validated.',
+    ),
 })
 
-// volume_target is a fixed server-side setting — the LLM never sees or sets it.
-// 10 is a sensible mid-range target that works across cadences.
-const FIXED_VOLUME_TARGET = 10
-
-const generateConfigTool = tool({
+const handoffToPlanTool = tool({
   description:
-    'Validate the assembled config against the DigestConfig schema and finalize it. Call this once subject, schedule, profile, output_style, and core_angles are all ready. On failure, fix the named fields and retry.',
-  inputSchema: generateConfigInput,
+    'Finalize the four-field plan draft (subject, profile, output_style, research_areas) once they are all ready. The UI transitions to the Research Plan view on success. On failure, fix the named fields and retry.',
+  inputSchema: handoffToPlanInput,
   execute: async (args) => {
-    const now = new Date().toISOString()
-    const stamped = {
-      version: 1,
-      created_at: now,
-      updated_at: now,
-      search_queries: [],
-      ...args.config,
-      volume_target: FIXED_VOLUME_TARGET,
-    }
-    const parsed = digestConfigSchema.safeParse(stamped)
+    const parsed = handoffDraftSchema.safeParse(args.config)
     if (parsed.success) {
       return { ok: true as const, config: parsed.data }
     }
@@ -72,59 +60,11 @@ const generateConfigTool = tool({
   },
 })
 
-const proposeAnglesInput = z.object({
-  subject: z.string().describe('The subject the user wants a digest about.'),
-  profileSummary: z
-    .string()
-    .describe('A short profile of the reader: role, intent, anti-interests.'),
-  hints: z.string().optional().describe('Optional hints from the conversation so far.'),
-})
-
-function makeProposeAnglesTool(sessionId: string | null) {
-  return tool({
-    description:
-      'Generate 6–12 specific research angles for a subject given a reader profile. Call this once subject, role, and intent are clear. Narrate the result to the user in natural language — do not dump the raw list.',
-    inputSchema: proposeAnglesInput,
-    execute: async (args) => {
-      return proposeAnglesImpl(args, { sessionId })
-    },
-  })
-}
-
-const showcaseInput = z.object({
-  subject: z.string(),
-  profile: z
-    .string()
-    .describe(
-      'Free-form prose capturing role, intent, and anti-interests — the same text you will pass to generateConfig as `profile`.',
-    ),
-  angles: z
-    .array(z.object({ id: z.number().int().min(1), text: z.string() }))
-    .min(1)
-    .max(12)
-    .describe(
-      "The user's final committed angle list, after any verbal refinements from the proposeAngles step.",
-    ),
-})
-
-function makeShowcaseRecentPapersTool(sessionId: string | null) {
-  return tool({
-    description:
-      "Fetch fresh work from OpenAlex across the user's committed angles, pick 3 standout papers, and return them with short rationales. Call this AFTER angles are fully settled (post proposeAngles and any refinements) and BEFORE asking about cadence. Use the returned finalAngles when you eventually call generateConfig. Never mention tuning, merging, or sparse areas to the user under any circumstances.",
-    inputSchema: showcaseInput,
-    execute: async (args) => {
-      return runShowcase(args, { sessionId })
-    },
-  })
-}
-
 export type OnboardingTools = ReturnType<typeof buildOnboardingTools>
 
 export function buildOnboardingTools(sessionId: string | null) {
   return {
-    normalizeSchedule: normalizeScheduleTool,
-    generateConfig: generateConfigTool,
-    proposeAngles: makeProposeAnglesTool(sessionId),
-    showcaseRecentPapers: makeShowcaseRecentPapersTool(sessionId),
+    proposeResearchAreas: makeProposeResearchAreasTool(sessionId),
+    handoffToPlan: handoffToPlanTool,
   }
 }

@@ -3,9 +3,7 @@
 
 import { motion } from 'framer-motion'
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
-import { AngleProposalCard } from './AngleProposalCard'
-import { ScheduleCard } from './ScheduleCard'
-import { ShowcaseCard } from './showcase/ShowcaseCard'
+import { ResearchAreaProposalCard } from './ResearchAreaProposalCard'
 import { MarkdownText } from './MarkdownText'
 import type { ToolCallState } from './ToolCallCard'
 
@@ -63,28 +61,17 @@ export function MessageBubble({ message }: MessageBubbleProps) {
             )
           }
 
-          if (part.type === 'tool-proposeAngles') {
+          if (part.type === 'tool-proposeResearchAreas') {
             return (
-              <AngleProposalCard
+              <ResearchAreaProposalCard
                 key={idx}
                 state={mapState(part.state)}
                 result={part.state === 'output-available' ? part.output : undefined}
               />
             )
           }
-          if (part.type === 'tool-showcaseRecentPapers') {
-            return <ShowcaseCard key={idx} part={part} />
-          }
-          if (part.type === 'tool-normalizeSchedule') {
-            return (
-              <ScheduleCard
-                key={idx}
-                state={mapState(part.state)}
-                result={part.state === 'output-available' ? part.output : undefined}
-              />
-            )
-          }
-          // tool-generateConfig transitions the whole UI in ChatShell.
+
+          // tool-handoffToPlan transitions the whole UI in ChatShell; render nothing here.
           return null
         })
       )}

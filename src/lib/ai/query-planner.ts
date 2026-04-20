@@ -4,7 +4,7 @@ import { generateObject } from 'ai'
 import { z } from 'zod'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { deepseek } from '@/lib/ai/openrouter'
+import { queryPlannerModel } from '@/lib/ai/openrouter'
 
 export const queryPlanSchema = z.object({
   subject: z.string(),
@@ -84,7 +84,7 @@ export async function planQueries(
   )
 
   const { object, usage, providerMetadata } = await generateObject({
-    model: deepseek({ sessionId: opts.sessionId }),
+    model: queryPlannerModel({ sessionId: opts.sessionId }),
     schema: queryPlanSchema,
     system: getSystemPrompt(),
     prompt: buildUserPrompt(input),

@@ -28,21 +28,24 @@ This is the clean rewrite of a research-digest pipeline. Context: `docs/2026-04-
 
 **Config is the contract.** `src/lib/config-schema.ts` defines `DigestConfig` — 7 user-facing fields plus version metadata. Key invariants from the brief:
 - `profile` is the *only* input to the downstream filter; `output_style` is the *only* input to the curator. No cross-contamination.
-- `core_angles` is the retrieval contract. Every angle must produce ≥1 query per run — no silent drops.
+- `research_areas` is the retrieval contract. Every area must produce ≥1 query per run — no silent drops.
 - Configs are never mutated in place — every change creates a new version row (when persistence lands).
 
-**Onboarding chat flow** (`src/app/api/onboarding-chat/route.ts` + `src/components/chat/ChatShell.tsx`):
-1. Route handler calls `streamText` with `deepseek()` model, the `prompts/onboarding-system.md` system prompt, and the four tools from `buildOnboardingTools(sessionId)`.
-2. Tools: `normalizeSchedule` (deterministic cron/tz resolver), `proposeAngles` (LLM `generateObject` call to DeepSeek), `corpusSanityCheck` (parallel OpenAlex searches, verdicts `healthy`/`sparse`/`empty`/`error`), `generateConfig` (Zod-validates and finalizes the config).
-3. Client uses `useChat` with a `DefaultChatTransport`, persists `messages` to localStorage (`src/lib/storage/local.ts`), and scans `messages[].parts` for the `tool-generateConfig` success case to render the final summary.
+**Onboarding flow** (`src/app/api/onboarding-chat/route.ts` + `src/components/chat/ChatShell.tsx` + `src/components/plan/ResearchPlanView.tsx`):
+
+1. Chat collects four fields (subject, profile, output_style, research_areas) via `proposeResearchAreas` + `handoffToPlan`. No cadence, no showcase.
+2. `handoffToPlan` validates against `digestConfigSchema.omit({ schedule, version, created_at, updated_at, search_queries })`. On success, the UI transitions to `ResearchPlanView`.
+3. Research Plan view is fully editable. Clicking "Preview your digest" opens an SSE connection to `/api/preview-digest`, which runs the v9.2 pipeline (seed→vocab→compact library→per-week retrieval→editorial curator).
+4. After the preview lands, a cadence picker (`CadenceSection`) computes a `Schedule` client-side via `src/lib/schedule/build-cron.ts` — no LLM call.
+5. `SubscribeSection` validates the whole config against `subscribableConfigSchema` and shows a placeholder toast (no persistence yet).
 
 **Type sharing without server leakage.** `src/lib/ai/chat-types.ts` defines `ResearchChatMessage = UIMessage<never, never, OnboardingUITools>` and is imported by both server and client. It uses `import type` from `onboarding-tools.ts` — the runtime module has `import 'server-only'` at the top, but the type import is erased so no server code ships to the client. Don't turn this into a runtime import.
 
-**`server-only` and Vitest.** Server-gated modules (`onboarding-tools.ts`, `propose-angles.ts`, `openrouter.ts`) import `'server-only'`, which throws under Vitest's default condition. `vitest.config.ts` aliases `server-only` to the package's `empty.js` stub so tests can import these modules directly. Don't add `'server-only'` to files that must run in the browser.
+**`server-only` and Vitest.** Server-gated modules (`onboarding-tools.ts`, `propose-research-areas.ts`, `openrouter.ts`, and the preview/discovery modules) import `'server-only'`, which throws under Vitest's default condition. `vitest.config.ts` aliases `server-only` to the package's `empty.js` stub so tests can import these modules directly. Don't add `'server-only'` to files that must run in the browser.
 
 **OpenAlex client** (`src/lib/openalex/client.ts`) enforces the polite pool (requires `OPENALEX_MAILTO`), has retry with exponential backoff on 429/5xx, and applies a fixed `type:` filter. All corpus lookups go through `searchByKeyword`.
 
-**Schedule normalization** (`src/lib/schedule/cron.ts` + `timezone.ts`) is fully deterministic — it handles "every Monday at 9am", "weekdays", "first of each month", etc., resolves IANA timezone from a known city list, validates by round-tripping through `cron-parser`, and returns the next three fire times via `cronstrue`. It is *not* an LLM call — if you add new phrasings, extend the regex ladder and add a test.
+**Schedule building** (`src/lib/schedule/build-cron.ts`) is a pure deterministic cadence→`Schedule` mapper driven by the `CadenceSection` UI (daily / weekdays / weekly / monthly + time + timezone). No LLM, no natural-language parsing.
 
 ## Directory map (non-obvious parts)
 

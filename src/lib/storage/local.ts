@@ -2,15 +2,15 @@
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import type { DigestConfig } from '@/lib/config-schema'
 
-const KEY = 'rd:onboarding:v1'
-const SCHEMA_VERSION = 1 as const
+const KEY = 'rd:onboarding:v2'
+const SCHEMA_VERSION = 2 as const
 
 export interface OnboardingLocalState {
   schemaVersion: typeof SCHEMA_VERSION
   sessionId: string
   messages: ResearchChatMessage[]
-  configDraft: Partial<DigestConfig>
-  finalConfig?: DigestConfig
+  /** Populated once handoffToPlan fires; undefined during chat. */
+  config?: DigestConfig
   lastUpdated: string
 }
 
@@ -52,8 +52,6 @@ export function clearOnboardingState(): void {
 }
 
 function uuid(): string {
-  // crypto.randomUUID is only available in secure contexts (HTTPS/localhost).
-  // getRandomValues is available in insecure LAN dev — fall back to it.
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
     return crypto.randomUUID()
   }
@@ -70,7 +68,6 @@ export function newOnboardingState(): OnboardingLocalState {
     schemaVersion: SCHEMA_VERSION,
     sessionId: uuid(),
     messages: [],
-    configDraft: {},
     lastUpdated: new Date().toISOString(),
   }
 }
