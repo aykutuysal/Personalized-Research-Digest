@@ -4,8 +4,8 @@ import 'server-only'
 // ---------- Thresholds ----------
 export const SHOWCASE_PROBED_ANGLES = 4
 export const SHOWCASE_PER_QUERY_PAGE_SIZE = 15
-export const SHOWCASE_PRIMARY_WINDOW_DAYS = 14
-export const SHOWCASE_WIDENED_WINDOW_DAYS = 60
+export const SHOWCASE_PRIMARY_WINDOW_DAYS = 7
+export const SHOWCASE_WIDENED_WINDOW_DAYS = 30
 export const SHOWCASE_POOL_MIN_FOR_RANKER = 6
 export const SHOWCASE_QUIET_ANGLE_HIT_CEILING = 2
 export const SHOWCASE_MAX_PATCHES = 2
@@ -32,7 +32,7 @@ export interface ShowcasePick {
   chipLabel: string
   title: string
   authors: string
-  year: number
+  date: string
   venue: string
   url: string
   whyForYou: string
@@ -119,8 +119,16 @@ function extractAuthors(work: OpenAlexWork): string {
 }
 
 function extractVenue(work: OpenAlexWork): string {
-  const loc = (work as { primary_location?: { source?: { display_name?: string } } }).primary_location
-  return loc?.source?.display_name ?? 'Unknown venue'
+  const primary = (work as { primary_location?: { source?: { display_name?: string } } }).primary_location
+  if (primary?.source?.display_name) return primary.source.display_name
+  const locations = (work as { locations?: Array<{ source?: { display_name?: string } } | null> }).locations
+  if (locations) {
+    for (const loc of locations) {
+      const name = loc?.source?.display_name
+      if (name) return name
+    }
+  }
+  return ''
 }
 
 function extractYear(work: OpenAlexWork): number {
@@ -193,6 +201,10 @@ function dedupePool(probes: Probe[]): RankerCandidate[] {
   return out
 }
 
+function sortByDateDesc(pool: RankerCandidate[]): RankerCandidate[] {
+  return [...pool].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+}
+
 function computeHitCounts(probes: Probe[]): Record<number, number> {
   const counts: Record<number, number> = {}
   for (const p of probes) counts[p.angleId] = p.count
@@ -226,7 +238,7 @@ export async function runShowcase(
     return { ok: false, reason: 'ranker-failed' }  // planner dying early is rare; surfaced as ranker-failed for symmetry
   }
 
-  // 2. Fetch (14-day window)
+  // 2. Fetch (7-day window)
   let probes: Probe[]
   try {
     probes = await fetchProbeWave(plan.queries, SHOWCASE_PRIMARY_WINDOW_DAYS)
@@ -235,7 +247,7 @@ export async function runShowcase(
     return { ok: false, reason: 'openalex-failed' }
   }
 
-  let pool = dedupePool(probes)
+  let pool = sortByDateDesc(dedupePool(probes))
   for (const p of probes) {
     console.log(`${tag} probe angle=${p.angleId} hits=${p.count}`)
   }
@@ -249,7 +261,7 @@ export async function runShowcase(
       console.error(`${tag} openalex widen failed`, err)
       return { ok: false, reason: 'openalex-failed' }
     }
-    pool = dedupePool(probes)
+    pool = sortByDateDesc(dedupePool(probes))
   }
 
   // 4. Silent skip if still empty
@@ -258,7 +270,8 @@ export async function runShowcase(
     return { ok: false, reason: 'no-candidates' }
   }
 
-  // 5. Rank
+  // 5. Rank — cap pool so the ranker prompt stays small enough to return in <60s
+  const rankerPool = pool.slice(0, 24)
   let ranked
   try {
     ranked = await rankShowcasePicks(
@@ -267,7 +280,7 @@ export async function runShowcase(
         angles: input.angles,
         selectedAngleIds: plan.selectedAngleIds,
         hitCounts: computeHitCounts(probes),
-        pool,
+        pool: rankerPool,
       },
       { sessionId: opts.sessionId },
     )
@@ -294,7 +307,7 @@ export async function runShowcase(
         chipLabel: p.chipLabel,
         title: cand.title,
         authors: cand.authors,
-        year: cand.year,
+        date: cand.date,
         venue: cand.venue,
         url: cand.url,
         whyForYou: p.whyForYou,

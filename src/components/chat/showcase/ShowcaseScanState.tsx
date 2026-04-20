@@ -68,7 +68,7 @@ export function ShowcaseScanState({ angles, litAngleIds, liveTitles }: ShowcaseS
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -6, opacity: 0 }}
             transition={{ duration: 0.24, ease: [0.2, 0.7, 0.2, 1] }}
-            className="font-display text-[22px] leading-[1.35] tracking-[-0.005em] text-ink"
+            className="font-display text-[22px] leading-[1.35] text-ink"
           >
             {STATUS_LINES[lineIdx]}
           </motion.div>

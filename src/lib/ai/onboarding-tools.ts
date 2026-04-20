@@ -40,9 +40,13 @@ const generateConfigInput = z.object({
     .describe('The assembled DigestConfig fields. Will be validated against the schema.'),
 })
 
+// volume_target is a fixed server-side setting — the LLM never sees or sets it.
+// 10 is a sensible mid-range target that works across cadences.
+const FIXED_VOLUME_TARGET = 10
+
 const generateConfigTool = tool({
   description:
-    'Validate the assembled config against the DigestConfig schema and finalize it. Call this once subject, schedule, profile, output_style, volume_target, and core_angles are all ready. On failure, fix the named fields and retry.',
+    'Validate the assembled config against the DigestConfig schema and finalize it. Call this once subject, schedule, profile, output_style, and core_angles are all ready. On failure, fix the named fields and retry.',
   inputSchema: generateConfigInput,
   execute: async (args) => {
     const now = new Date().toISOString()
@@ -52,6 +56,7 @@ const generateConfigTool = tool({
       updated_at: now,
       search_queries: [],
       ...args.config,
+      volume_target: FIXED_VOLUME_TARGET,
     }
     const parsed = digestConfigSchema.safeParse(stamped)
     if (parsed.success) {

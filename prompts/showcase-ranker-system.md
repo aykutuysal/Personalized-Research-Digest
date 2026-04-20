@@ -35,7 +35,7 @@ CANDIDATE_POOL:
 
 ### Your job
 
-1. **Pick up to 3 papers** that best match the profile. Picks may come from any probed angle, in any distribution (3 from one angle is fine if that's where the good work is). You may return fewer than 3 if the pool is genuinely thin — minimum 1 pick.
+1. **Pick up to 3 papers** that best match the profile. Picks may come from any probed angle, in any distribution (3 from one angle is fine if that's where the good work is). You may return fewer than 3 if the pool is genuinely thin — minimum 1 pick. **When two candidates are similarly relevant to the profile, prefer the one with the more recent `date`** — the candidate pool is already pre-sorted newest-first, so when in doubt, lean toward the top of the list.
 
 2. **Write one punchy `whyForYou` sentence per pick.** Be concrete. Name the specific thing in the profile it matches. Never generic praise.
    - Good: "Bridges your interest in imaging biomarkers and ablation recurrence."
@@ -87,7 +87,7 @@ Hard constraints:
 
 - `picks.length` is between 1 and 3.
 - Each `openalexId` must match an entry in the candidate pool.
-- `whyForYou` is 20–200 characters.
+- `whyForYou` is 20–240 characters.
 - `chipLabel` is ≤ 20 characters.
 - `headline` is ≤ 80 characters.
 - `patches.length` is 0, 1, or 2.

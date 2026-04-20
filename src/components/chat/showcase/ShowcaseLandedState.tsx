@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import type { ShowcasePick } from '@/lib/ai/showcase'
 import { ShowcasePickCell } from './ShowcasePickCell'
 import { ShowcaseTrackingChips } from './ShowcaseTrackingChips'
@@ -39,8 +39,7 @@ export function ShowcaseLandedState({
   stats,
 }: ShowcaseLandedStateProps) {
   const count = useCountUp(stats.papersScanned)
-  const gridCols =
-    picks.length === 1 ? 'grid-cols-1' : picks.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'
+  const reduceMotion = useReducedMotion()
 
   return (
     <motion.div
@@ -54,7 +53,7 @@ export function ShowcaseLandedState({
           <div className="text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">
             Fresh this week
           </div>
-          <h3 className="mt-1 font-display text-[24px] leading-[1.2] tracking-[-0.005em] text-ink">
+          <h3 className="mt-1 font-display text-[24px] leading-[1.25] text-ink">
             {headline}
           </h3>
         </div>
@@ -65,9 +64,16 @@ export function ShowcaseLandedState({
         </div>
       </div>
 
-      <div className={`mt-5 grid gap-3 ${gridCols}`}>
-        {picks.map((p) => (
-          <ShowcasePickCell key={p.openalexId} pick={p} />
+      <div className="mt-5 flex flex-col gap-3">
+        {picks.map((p, i) => (
+          <motion.div
+            key={p.openalexId}
+            initial={reduceMotion ? false : { opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.28, delay: reduceMotion ? 0 : i * 0.08, ease: [0.2, 0.7, 0.2, 1] }}
+          >
+            <ShowcasePickCell pick={p} />
+          </motion.div>
         ))}
       </div>
 

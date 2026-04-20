@@ -131,7 +131,7 @@ describe('runShowcase', () => {
     }
   })
 
-  it('widens to 60 days when 14-day pool is too thin', async () => {
+  it('widens to 30 days when 7-day pool is too thin', async () => {
     vi.spyOn(plannerModule, 'planShowcaseQueries').mockResolvedValue({
       selectedAngleIds: [1, 2, 3, 5],
       queries: [
@@ -143,12 +143,12 @@ describe('runShowcase', () => {
     })
 
     const searchSpy = vi.spyOn(openalex, 'searchByKeyword')
-    // First wave (14d) returns tiny pool
+    // First wave (7d) returns tiny pool
     searchSpy.mockResolvedValueOnce({ meta: { count: 1 }, results: [work('W1', 1)] })
     searchSpy.mockResolvedValueOnce({ meta: { count: 1 }, results: [work('W2', 2)] })
     searchSpy.mockResolvedValueOnce({ meta: { count: 0 }, results: [] })
     searchSpy.mockResolvedValueOnce({ meta: { count: 0 }, results: [] })
-    // Second wave (60d) returns a richer pool
+    // Second wave (30d) returns a richer pool
     searchSpy.mockResolvedValue({
       meta: { count: 12 },
       results: [work('W3', 1), work('W4', 2), work('W5', 3), work('W6', 5), work('W7', 1), work('W8', 2)],
@@ -168,7 +168,7 @@ describe('runShowcase', () => {
     )
 
     expect(result.ok).toBe(true)
-    // Widen fired: 4 calls for 14d + 4 calls for 60d = 8 total
+    // Widen fired: 4 calls for 7d + 4 calls for 30d = 8 total
     expect(searchSpy.mock.calls.length).toBeGreaterThanOrEqual(5)
   })
 

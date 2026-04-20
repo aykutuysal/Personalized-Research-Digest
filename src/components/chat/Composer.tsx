@@ -75,6 +75,7 @@ export const Composer = forwardRef<HTMLTextAreaElement, ComposerProps>(
             disabled={disabled}
             placeholder={placeholder ?? 'Tell me what you want to track…'}
             className="flex-1 resize-none bg-transparent outline-none placeholder:text-ink-faint"
+            suppressHydrationWarning
           />
           <button
             type="button"

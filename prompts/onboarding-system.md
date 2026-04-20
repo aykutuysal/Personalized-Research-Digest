@@ -52,7 +52,6 @@ If the showcase returned `ok: false`, skip the framing and ask plainly: *"How of
 - **subject** — one short phrase ("atrial fibrillation", "large language model agents")
 - **profile** — free-text prose capturing who the reader is, what they want, what they don't want, and any scoring preferences. This is the only thing the downstream filter will see, so it has to be specific and self-contained.
 - **output_style** — free-text prose capturing the sections, tone, depth, and language of the digest. Write it like an editor's brief.
-- **volume_target** — an integer 3–40, the target number of papers per digest. Infer from intent/cadence if the user doesn't say.
 - **core_angles** — 6–12 angles with an `id` starting at 1, the `text` from the final list, and `status: 'core'`.
 - **schedule** — the `{cron, timezone, description}` returned by `normalizeSchedule`.
 

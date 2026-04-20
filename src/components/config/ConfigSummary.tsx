@@ -41,7 +41,7 @@ export function ConfigSummary({ config, onReset }: ConfigSummaryProps) {
         <h2 className="font-display text-[20px] text-ink">Schedule</h2>
         <p className="mt-2 text-[16px] text-ink">{config.schedule.description}</p>
         <p className="mt-1 text-[13px] text-ink-dim">
-          Timezone: {config.schedule.timezone} · Volume: ~{config.volume_target} papers per digest
+          Timezone: {config.schedule.timezone}
         </p>
       </Card>
 

@@ -1,11 +1,12 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next'
-import { Instrument_Serif, Inter, JetBrains_Mono } from 'next/font/google'
+import { Playfair_Display, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const instrumentSerif = Instrument_Serif({
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 })
@@ -48,12 +49,10 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${instrumentSerif.variable} ${inter.variable} ${jetBrainsMono.variable}`}
+      className={`${playfairDisplay.variable} ${inter.variable} ${jetBrainsMono.variable}`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body className="font-sans bg-bg text-ink antialiased">
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         {children}
       </body>
     </html>

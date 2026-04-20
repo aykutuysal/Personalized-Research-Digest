@@ -8,23 +8,28 @@ import { deepseek } from '@/lib/ai/openrouter'
 import type { ShowcaseAngleInput } from '@/lib/ai/showcase'
 import { SHOWCASE_PROBED_ANGLES } from '@/lib/ai/showcase'
 
-// NOTE: the `.max()` below uses a literal 4 instead of SHOWCASE_PROBED_ANGLES
-// because this schema is evaluated at module-top, and `showcase.ts` will later
-// import this file (for `runShowcase`) which creates a circular dependency.
-// Inside function bodies the imported constant is safe — see `planShowcaseQueries`.
-// If you change SHOWCASE_PROBED_ANGLES in showcase.ts, change the literal here too.
+// NOTE: Anthropic's structured-output API rejects these JSON-schema constraint
+// keywords (other providers accept them):
+//   - integer/number: `minimum`, `maximum`
+//   - string: `minLength`, `maxLength`
+//   - array: `maxItems`; `minItems` only allows 0 or 1
+// CRITICAL: Do not use `z.number().int()` in any schema sent through this path —
+// Zod v4 serializes `.int()` as `{type: "integer", minimum: -9007199254740991,
+// maximum: 9007199254740991}` to enforce JS safe-integer bounds, which trips
+// Anthropic's `minimum`/`maximum` rejection even though you never wrote those
+// constraints by hand. Use plain `z.number()` instead.
+// See propose-angles.ts for the full explanation and source links.
 export const showcasePlanSchema = z.object({
-  selectedAngleIds: z.array(z.number().int().min(1)).min(1).max(4),
+  selectedAngleIds: z.array(z.number()).min(1),
   queries: z
     .array(
       z.object({
-        angle_id: z.number().int().min(1),
-        query: z.string().min(1),
+        angle_id: z.number(),
+        query: z.string(),
         rationale: z.string(),
       }),
     )
-    .min(1)
-    .max(4),
+    .min(1),
 })
 
 export type ShowcasePlan = z.infer<typeof showcasePlanSchema>
@@ -79,11 +84,22 @@ export async function planShowcaseQueries(
     system: getSystemPrompt(),
     prompt: buildUserPrompt(input, probedCount),
     temperature: 0.3,
+    abortSignal: AbortSignal.timeout(45_000),
   })
 
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
+  const cappedSelected = object.selectedAngleIds.slice(0, SHOWCASE_PROBED_ANGLES)
+  const cappedQueries = object.queries.slice(0, SHOWCASE_PROBED_ANGLES)
+  if (
+    cappedSelected.length < object.selectedAngleIds.length ||
+    cappedQueries.length < object.queries.length
+  ) {
+    console.warn(
+      `${tag} truncated selected ${object.selectedAngleIds.length}→${cappedSelected.length} queries ${object.queries.length}→${cappedQueries.length}`,
+    )
+  }
   console.log(
-    `${tag} done selected=${object.selectedAngleIds.length} queries=${object.queries.length} tokens=${usage.totalTokens ?? '?'} cost=${cost != null ? `$${cost.toFixed(6)}` : '—'} ms=${Date.now() - startedAt}`,
+    `${tag} done selected=${cappedSelected.length} queries=${cappedQueries.length} tokens=${usage.totalTokens ?? '?'} cost=${cost != null ? `$${cost.toFixed(6)}` : '—'} ms=${Date.now() - startedAt}`,
   )
-  return object
+  return { selectedAngleIds: cappedSelected, queries: cappedQueries }
 }

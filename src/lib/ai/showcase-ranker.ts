@@ -7,34 +7,42 @@ import { resolve } from 'node:path'
 import { deepseek } from '@/lib/ai/openrouter'
 import type { ShowcaseAngleInput } from '@/lib/ai/showcase'
 
-// NOTE: the `.max(2)` below is literal for the same reason as in
-// showcase-planner.ts — `showcase.ts` will import this file for the orchestrator,
-// creating a circular dependency that would leave SHOWCASE_MAX_PATCHES
-// uninitialized at module-top evaluation. If you change that constant in
-// showcase.ts, change the literal here too.
+// NOTE: Anthropic's structured-output API rejects these JSON-schema constraint
+// keywords (other providers accept them):
+//   - integer/number: `minimum`, `maximum`
+//   - string: `minLength`, `maxLength`
+//   - array: `maxItems`; `minItems` only allows 0 or 1
+// We strip them all from the schema and enforce caps post-call in
+// `rankShowcasePicks`. See propose-angles.ts for the full explanation
+// and source links.
+const RANKER_MAX_PICKS = 3
+const RANKER_MAX_PATCHES = 2
+const RANKER_HEADLINE_MAX = 80
+const RANKER_WHY_FOR_YOU_MAX = 240
+
+// CRITICAL: Use `z.number()` not `z.number().int()` — see showcase-planner.ts
+// header for the explanation. Zod v4 serializes `.int()` with safe-integer
+// bounds that Anthropic's structured-output API rejects.
 export const showcaseRankerSchema = z.object({
-  headline: z.string().min(1).max(80),
+  headline: z.string(),
   picks: z
     .array(
       z.object({
-        openalexId: z.string().min(1),
-        angleId: z.number().int().min(1),
-        chipLabel: z.string().min(1).max(20),
-        whyForYou: z.string().min(20).max(200),
+        openalexId: z.string(),
+        angleId: z.number(),
+        chipLabel: z.string(),
+        whyForYou: z.string(),
       }),
     )
-    .min(1)
-    .max(3),
-  patches: z
-    .array(
-      z.object({
-        absorbedAngleId: z.number().int().min(1),
-        intoAngleId: z.number().int().min(1),
-        newText: z.string().min(5).max(120),
-        reason: z.string().max(100),
-      }),
-    )
-    .max(2),
+    .min(1),
+  patches: z.array(
+    z.object({
+      absorbedAngleId: z.number(),
+      intoAngleId: z.number(),
+      newText: z.string(),
+      reason: z.string(),
+    }),
+  ),
 })
 
 export type ShowcaseRankerOutput = z.infer<typeof showcaseRankerSchema>
@@ -113,11 +121,26 @@ export async function rankShowcasePicks(
     system: getSystemPrompt(),
     prompt: buildUserPrompt(input),
     temperature: 0.4,
+    abortSignal: AbortSignal.timeout(60_000),
   })
 
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
+  const cappedHeadline = object.headline.slice(0, RANKER_HEADLINE_MAX)
+  const cappedPicks = object.picks.slice(0, RANKER_MAX_PICKS).map((p) => ({
+    ...p,
+    whyForYou: p.whyForYou.slice(0, RANKER_WHY_FOR_YOU_MAX),
+  }))
+  const cappedPatches = object.patches.slice(0, RANKER_MAX_PATCHES)
+  if (
+    cappedPicks.length < object.picks.length ||
+    cappedPatches.length < object.patches.length
+  ) {
+    console.warn(
+      `${tag} truncated picks ${object.picks.length}→${cappedPicks.length} patches ${object.patches.length}→${cappedPatches.length}`,
+    )
+  }
   console.log(
-    `${tag} done picks=${object.picks.length} patches=${object.patches.length} tokens=${usage.totalTokens ?? '?'} cost=${cost != null ? `$${cost.toFixed(6)}` : '—'} ms=${Date.now() - startedAt}`,
+    `${tag} done picks=${cappedPicks.length} patches=${cappedPatches.length} tokens=${usage.totalTokens ?? '?'} cost=${cost != null ? `$${cost.toFixed(6)}` : '—'} ms=${Date.now() - startedAt}`,
   )
-  return object
+  return { headline: cappedHeadline, picks: cappedPicks, patches: cappedPatches }
 }

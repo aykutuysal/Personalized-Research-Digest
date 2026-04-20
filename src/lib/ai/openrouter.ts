@@ -2,7 +2,7 @@
 import 'server-only'
 import { createOpenRouter } from '@openrouter/ai-sdk-provider'
 
-export const MODEL_ID = 'deepseek/deepseek-v3.2'
+export const MODEL_ID = process.env.OPENROUTER_MODEL_ID ?? 'deepseek/deepseek-v3.2'
 
 function getOpenRouter() {
   const apiKey = process.env.OPENROUTER_API_KEY
