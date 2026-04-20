@@ -1,7 +1,12 @@
 // src/components/plan/ResearchPlanView.tsx
 'use client'
 
-import type { DigestConfig } from '@/lib/config-schema'
+import { useState, useCallback } from 'react'
+import type { DigestConfig, ResearchArea } from '@/lib/config-schema'
+import { MastheadEditor } from './MastheadEditor'
+import { ProfileEditor } from './ProfileEditor'
+import { ResearchAreaChips } from './ResearchAreaChips'
+import { PreviewSection } from './PreviewSection'
 
 export interface ResearchPlanViewProps {
   initialConfig: DigestConfig
@@ -9,18 +14,66 @@ export interface ResearchPlanViewProps {
 }
 
 export function ResearchPlanView({ initialConfig, onReset }: ResearchPlanViewProps) {
+  const [config, setConfig] = useState<DigestConfig>(initialConfig)
+  const [previewStale, setPreviewStale] = useState(false)
+
+  const patch = useCallback(
+    (partial: Partial<DigestConfig>) => {
+      setConfig((c) => ({
+        ...c,
+        ...partial,
+        search_queries: [],
+        schedule: undefined,
+        updated_at: new Date().toISOString(),
+      }))
+      setPreviewStale(true)
+    },
+    [],
+  )
+
+  const setResearchAreas = useCallback(
+    (areas: ResearchArea[]) => patch({ research_areas: areas }),
+    [patch],
+  )
+
   return (
-    <div className="p-8">
-      <h2 className="font-display text-[32px] text-ink">Your Research Plan (stub)</h2>
-      <pre className="mt-4 text-[12px] text-ink-faint overflow-auto max-h-[60vh]">
-        {JSON.stringify(initialConfig, null, 2)}
-      </pre>
-      <button
-        onClick={onReset}
-        className="mt-6 rounded-lg border border-line bg-bg-elev-1 px-4 py-2 text-[14px] text-ink hover:border-line-strong"
-      >
-        Start over
-      </button>
+    <div className="mx-auto flex max-w-[820px] flex-col gap-10 px-6 py-10">
+      <MastheadEditor subject={config.subject} onChange={(subject) => patch({ subject })} />
+
+      <ProfileEditor
+        label="Who this is for"
+        value={config.profile}
+        onChange={(profile) => patch({ profile })}
+      />
+
+      <ResearchAreaChips areas={config.research_areas} onChange={setResearchAreas} />
+
+      <ProfileEditor
+        label="Voice & format"
+        value={config.output_style}
+        onChange={(output_style) => patch({ output_style })}
+        italic
+      />
+
+      <PreviewSection
+        config={config}
+        stale={previewStale}
+        onPreviewSettled={() => setPreviewStale(false)}
+        onScheduleSet={(schedule) => setConfig((c) => ({ ...c, schedule }))}
+        onSubscribe={() => {
+          // SubscribeSection owns validation + toast; this prop is a future
+          // hook for auth/persistence. Leave as a no-op for MVP.
+        }}
+      />
+
+      <div className="pt-6">
+        <button
+          onClick={onReset}
+          className="text-[12px] uppercase tracking-[0.16em] text-ink-faint hover:text-ink"
+        >
+          Start over
+        </button>
+      </div>
     </div>
   )
 }
