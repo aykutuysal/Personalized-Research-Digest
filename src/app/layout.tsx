@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next'
 import { Playfair_Display, Geist, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const playfairDisplay = Playfair_Display({
@@ -52,7 +53,9 @@ export default function RootLayout({
       className={`${playfairDisplay.variable} ${geist.variable} ${jetBrainsMono.variable}`}
     >
       <body className="font-sans bg-bg text-ink antialiased">
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         {children}
       </body>
     </html>

@@ -4,7 +4,7 @@ import { generateObject } from 'ai'
 import { z } from 'zod'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { deepseek } from '@/lib/ai/openrouter'
+import { proposalModel } from '@/lib/ai/openrouter'
 
 // NOTE: Anthropic's structured-output API rejects these JSON-schema constraint
 // keywords entirely (other providers accept them):
@@ -65,7 +65,7 @@ export async function proposeResearchAreas(
 
   try {
     const { object, usage, providerMetadata } = await generateObject({
-      model: deepseek({ sessionId: opts.sessionId }),
+      model: proposalModel({ sessionId: opts.sessionId }),
       schema: proposeResearchAreasOutputSchema,
       system: getSystemPrompt(),
       prompt: [

@@ -37,42 +37,47 @@ export function ResearchPlanView({ initialConfig, onReset }: ResearchPlanViewPro
   )
 
   return (
-    <div className="mx-auto flex max-w-[820px] flex-col gap-10 px-6 py-10">
-      <MastheadEditor subject={config.subject} onChange={(subject) => patch({ subject })} />
+    <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+      <div
+        className="mx-auto flex flex-col gap-10 px-6 py-10"
+        style={{ maxWidth: '820px' }}
+      >
+        <MastheadEditor subject={config.subject} onChange={(subject) => patch({ subject })} />
 
-      <ProfileEditor
-        label="Who this is for"
-        value={config.profile}
-        onChange={(profile) => patch({ profile })}
-      />
+        <ProfileEditor
+          label="Who this is for"
+          value={config.profile}
+          onChange={(profile) => patch({ profile })}
+        />
 
-      <ResearchAreaChips areas={config.research_areas} onChange={setResearchAreas} />
+        <ResearchAreaChips areas={config.research_areas} onChange={setResearchAreas} />
 
-      <ProfileEditor
-        label="Voice & format"
-        value={config.output_style}
-        onChange={(output_style) => patch({ output_style })}
-        italic
-      />
+        <ProfileEditor
+          label="Voice & format"
+          value={config.output_style}
+          onChange={(output_style) => patch({ output_style })}
+          italic
+        />
 
-      <PreviewSection
-        config={config}
-        stale={previewStale}
-        onPreviewSettled={() => setPreviewStale(false)}
-        onScheduleSet={(schedule) => setConfig((c) => ({ ...c, schedule }))}
-        onSubscribe={() => {
-          // SubscribeSection owns validation + toast; this prop is a future
-          // hook for auth/persistence. Leave as a no-op for MVP.
-        }}
-      />
+        <PreviewSection
+          config={config}
+          stale={previewStale}
+          onPreviewSettled={() => setPreviewStale(false)}
+          onScheduleSet={(schedule) => setConfig((c) => ({ ...c, schedule }))}
+          onSubscribe={() => {
+            // SubscribeSection owns validation + toast; this prop is a future
+            // hook for auth/persistence. Leave as a no-op for MVP.
+          }}
+        />
 
-      <div className="pt-6">
-        <button
-          onClick={onReset}
-          className="text-[12px] uppercase tracking-[0.16em] text-ink-faint hover:text-ink"
-        >
-          Start over
-        </button>
+        <div className="pt-6">
+          <button
+            onClick={onReset}
+            className="text-[12px] uppercase tracking-[0.16em] text-ink-faint hover:text-ink"
+          >
+            Start over
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -16,6 +16,8 @@ export type ProgressEvent =
   | { kind: 'vocab'; topics: number; keywords: number; fields: string[] }
   | { kind: 'library'; queries: Array<{ query: string; research_area_id: number }> }
   | { kind: 'area-hit'; research_area_id: number; hits: number; sampleTitle: string | null }
+  | { kind: 'filtering' }
+  | { kind: 'filter-done'; kept: number; dropped: number }
   | { kind: 'curating' }
   | { kind: 'done'; body: string; references: ReferencePaper[]; queries: SearchQuery[] }
   | { kind: 'error'; stage: string; message: string }

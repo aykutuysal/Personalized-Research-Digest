@@ -57,6 +57,10 @@ export async function POST(req: Request) {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache, no-transform',
       Connection: 'keep-alive',
+      // Disable proxy buffering (nginx / Vercel / dev middleware) so SSE
+      // frames reach the browser as they're emitted, not at stream close.
+      'X-Accel-Buffering': 'no',
+      'Content-Encoding': 'identity',
     },
   })
 }

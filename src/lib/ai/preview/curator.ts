@@ -4,7 +4,7 @@ import { generateObject } from 'ai'
 import { z } from 'zod'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { deepseek } from '@/lib/ai/openrouter'
+import { curatorModel } from '@/lib/ai/openrouter'
 import type { DigestConfig } from '@/lib/config-schema'
 import type { OpenAlexWork } from '@/lib/openalex/client'
 import { reconstructAbstract } from '@/lib/ai/discovery/extract-vocab'
@@ -35,6 +35,13 @@ function firstAuthor(paper: OpenAlexWork): string {
 
 function extractVenue(paper: OpenAlexWork): string {
   return paper.primary_location?.source?.display_name ?? ''
+}
+
+// OpenAlex returns `id` as a full URL (https://openalex.org/W123...); the
+// LLM tends to return just the short form `W123...`. Normalize both ends
+// before map lookup so the join doesn't silently miss everything.
+function shortId(id: string): string {
+  return id.replace(/^https?:\/\/openalex\.org\//i, '')
 }
 
 function urlFor(paper: OpenAlexWork): string {
@@ -69,7 +76,7 @@ export async function curatePreview(
   const poolLines = pool.map((p) => {
     const abstract = reconstructAbstract(p.abstract_inverted_index).slice(0, 500)
     return [
-      `[id=${p.id}] (${p.publication_date ?? '?'}, venue=${extractVenue(p) || '—'})`,
+      `[id=${shortId(p.id)}] (${p.publication_date ?? '?'}, venue=${extractVenue(p) || '—'})`,
       `  title: ${p.title ?? '(no title)'}`,
       `  abstract: ${abstract || '(no abstract)'}`,
     ].join('\n')
@@ -93,7 +100,7 @@ export async function curatePreview(
   ].join('\n')
 
   const { object, usage, providerMetadata } = await generateObject({
-    model: deepseek({ sessionId: opts.sessionId ?? null }),
+    model: curatorModel({ sessionId: opts.sessionId ?? null }),
     schema: curatorSchema,
     system: getCuratorSystemPrompt(),
     prompt: userPrompt,
@@ -103,10 +110,10 @@ export async function curatePreview(
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
 
   // Join metadata server-side — hallucination containment.
-  const byId = new Map(pool.map((p) => [p.id, p]))
+  const byId = new Map(pool.map((p) => [shortId(p.id), p]))
   const references: ReferencePaper[] = []
   for (const id of object.referenceIds) {
-    const paper = byId.get(id)
+    const paper = byId.get(shortId(id))
     if (!paper) continue
     references.push({
       id: paper.id,

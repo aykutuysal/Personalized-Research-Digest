@@ -1,7 +1,7 @@
 // src/components/plan/PreviewRunningState.tsx
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { DigestConfig } from '@/lib/config-schema'
 import type { ProgressEvent, ReferencePaper } from '@/lib/ai/preview/progress-events'
 import type { SearchQuery } from '@/lib/config-schema'
@@ -23,6 +23,7 @@ const STATUS_LINES = [
   'Reading what the field actually publishes…',
   'Building your search library…',
   'Checking each research area for this week…',
+  'Filtering for what actually matches you…',
   'Writing your editorial…',
 ]
 
@@ -30,7 +31,6 @@ export function PreviewRunningState({ config, onDone, onError }: PreviewRunningS
   const [statusIdx, setStatusIdx] = useState(0)
   const [papersScanned, setPapersScanned] = useState(0)
   const [areasDone, setAreasDone] = useState<number>(0)
-  const startedRef = useRef(false)
 
   // Cycle status lines every ~2s until we receive 'done' or 'error'.
   useEffect(() => {
@@ -38,11 +38,11 @@ export function PreviewRunningState({ config, onDone, onError }: PreviewRunningS
     return () => clearInterval(i)
   }, [])
 
-  // Open the SSE connection once per mount.
+  // Open the SSE connection on mount. React 19 strict mode double-invokes
+  // this effect in dev; the first invocation's fetch is aborted by the
+  // cleanup and swallowed in the catch below, so the second run is the one
+  // that actually streams. In production there's only one mount, one fetch.
   useEffect(() => {
-    if (startedRef.current) return
-    startedRef.current = true
-
     const abort = new AbortController()
     ;(async () => {
       // Local counter — closure-stable, unlike `papersScanned` state.
@@ -102,6 +102,9 @@ export function PreviewRunningState({ config, onDone, onError }: PreviewRunningS
           }
         }
       } catch (err) {
+        // Swallow aborts — they come from unmount (incl. React strict-mode
+        // double-invoke in dev), not from the server or the network.
+        if (abort.signal.aborted) return
         onError((err as Error).message ?? 'Network error')
       }
     })()

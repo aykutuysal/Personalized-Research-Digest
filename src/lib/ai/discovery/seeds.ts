@@ -4,7 +4,7 @@ import { generateObject } from 'ai'
 import { z } from 'zod'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { deepseek } from '@/lib/ai/openrouter'
+import { seedsModel } from '@/lib/ai/openrouter'
 import type { DigestConfig, ResearchArea } from '@/lib/config-schema'
 
 // Connective / stopword tokens we never lead a seed with.
@@ -70,7 +70,7 @@ export async function generateSeeds(
   ].join('\n')
 
   const { object, usage, providerMetadata } = await generateObject({
-    model: deepseek({ sessionId: opts.sessionId ?? null }),
+    model: seedsModel({ sessionId: opts.sessionId ?? null }),
     schema: seedOutputSchema,
     system: getSeedSystemPrompt(),
     prompt: userPrompt,

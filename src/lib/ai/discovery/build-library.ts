@@ -4,7 +4,7 @@ import { generateObject } from 'ai'
 import { z } from 'zod'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { deepseek } from '@/lib/ai/openrouter'
+import { libraryModel } from '@/lib/ai/openrouter'
 import type { DigestConfig, ResearchArea, SearchQuery } from '@/lib/config-schema'
 import type { Vocabulary } from './extract-vocab'
 
@@ -100,7 +100,7 @@ export async function buildCompactLibrary(
   ].join('\n')
 
   const { object, usage, providerMetadata } = await generateObject({
-    model: deepseek({ sessionId: opts.sessionId ?? null }),
+    model: libraryModel({ sessionId: opts.sessionId ?? null }),
     schema: librarySchema,
     system: getLibrarySystemPrompt(),
     prompt: userPrompt,

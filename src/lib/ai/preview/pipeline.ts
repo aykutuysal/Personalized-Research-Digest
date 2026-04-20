@@ -6,9 +6,15 @@ import { extractVocabulary } from '@/lib/ai/discovery/extract-vocab'
 import { buildCompactLibrary } from '@/lib/ai/discovery/build-library'
 import { runLibrary } from '@/lib/ai/discovery/run-library'
 import { curatePreview } from './curator'
+import { filterCandidates } from './filter'
 import type { ProgressEvent } from './progress-events'
 import type { DigestConfig, SearchQuery } from '@/lib/config-schema'
 import type { OpenAlexWork } from '@/lib/openalex/client'
+
+// Poolmember that remembers which research area first surfaced it — used
+// by the relevance filter to match candidates against the reader's stated
+// areas. Stripped before reaching the curator (it doesn't need this hint).
+type PoolMember = OpenAlexWork & { __areaId?: number }
 
 export interface PipelineOptions {
   emit: (e: ProgressEvent) => void
@@ -108,27 +114,82 @@ export async function runPreviewPipeline(
       })
     },
   })
-  const poolById = new Map<string, OpenAlexWork>()
+  const poolById = new Map<string, PoolMember>()
   for (const rr of runResults) {
     for (const h of rr.hits) {
-      if (!poolById.has(h.id)) poolById.set(h.id, h)
+      if (!poolById.has(h.id)) {
+        const annotated: PoolMember = { ...h, __areaId: rr.query.research_area_id }
+        poolById.set(h.id, annotated)
+      }
     }
   }
-  const pool = [...poolById.values()]
+  // Second-level dedup by normalized title — Zenodo/arXiv often surface
+  // multiple versions of the same paper under different OpenAlex IDs.
+  const seenTitleKeys = new Set<string>()
+  const pool: PoolMember[] = []
+  for (const w of poolById.values()) {
+    const key = (w.title ?? '').trim().toLowerCase().replace(/\s+/g, ' ')
+    if (key.length === 0) {
+      pool.push(w)
+      continue
+    }
+    if (seenTitleKeys.has(key)) continue
+    seenTitleKeys.add(key)
+    pool.push(w)
+  }
 
-  // ---- Step 6: curator ----
+  // ---- Step 6: relevance filter ----
+  // Single DeepSeek call scores the pool against the reader's profile +
+  // research areas and drops off-topic hits before the curator sees them.
+  // On failure, fall through with the unfiltered pool — the curator still
+  // has to pick 5, and a noisy pool is better than a dead run.
+  let curatorPool: PoolMember[] = pool
+  if (pool.length > 0) {
+    emit({ kind: 'filtering' })
+    try {
+      const filterRes = await filterCandidates(config, pool, { sessionId })
+      if (filterRes.survivors.length >= 3) {
+        curatorPool = filterRes.survivors as PoolMember[]
+        emit({
+          kind: 'filter-done',
+          kept: filterRes.survivors.length,
+          dropped: filterRes.dropped,
+        })
+      } else {
+        console.warn(
+          `${tag} filter kept only ${filterRes.survivors.length}/${pool.length} — using unfiltered pool`,
+        )
+        emit({ kind: 'filter-done', kept: pool.length, dropped: 0 })
+      }
+    } catch (err) {
+      console.warn(`${tag} filter failed, using unfiltered pool:`, (err as Error).message)
+      emit({ kind: 'filter-done', kept: pool.length, dropped: 0 })
+    }
+  }
+
+  // ---- Step 7: curator ----
   emit({ kind: 'curating' })
   try {
-    const { body, references } = await withRetry(() => curatePreview(config, pool, { sessionId }))
+    const { body, references } = await withRetry(() => curatePreview(config, curatorPool, { sessionId }))
     if (references.length < 3) {
       throw new Error(`Curator returned only ${references.length} references.`)
     }
     emit({ kind: 'done', body, references, queries: library })
     console.log(`${tag} done total_ms=${Date.now() - t0}`)
   } catch (err) {
-    // Fallback: render top 5 by date, no editorial.
-    const fallback = pool
+    // Fallback: render top 5 by date, no editorial. Dedup by normalized
+    // title — Zenodo and similar repos register each version as a separate
+    // OpenAlex work, so ID-dedup alone leaves visible duplicates.
+    const seenTitles = new Set<string>()
+    const fallback = curatorPool
       .sort((a, b) => (b.publication_date ?? '').localeCompare(a.publication_date ?? ''))
+      .filter((p) => {
+        const key = (p.title ?? '').trim().toLowerCase().replace(/\s+/g, ' ')
+        if (key.length === 0) return true
+        if (seenTitles.has(key)) return false
+        seenTitles.add(key)
+        return true
+      })
       .slice(0, 5)
     if (fallback.length === 0) {
       emit({ kind: 'error', stage: 'curator', message: (err as Error).message })

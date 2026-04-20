@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { streamText, convertToModelMessages, stepCountIs } from 'ai'
-import { deepseek } from '@/lib/ai/openrouter'
+import { onboardingModel } from '@/lib/ai/openrouter'
 import { buildOnboardingTools } from '@/lib/ai/onboarding-tools'
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   console.log(`${tag} POST turns=${body.messages.length}`)
 
   const result = streamText({
-    model: deepseek({ sessionId }),
+    model: onboardingModel({ sessionId }),
     system: getSystemPrompt(),
     messages: await convertToModelMessages<ResearchChatMessage>(body.messages),
     tools: buildOnboardingTools(sessionId),
