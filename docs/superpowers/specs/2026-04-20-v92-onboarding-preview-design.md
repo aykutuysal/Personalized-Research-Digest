@@ -32,7 +32,7 @@ In scope:
 - New editorial curator prompt + component.
 - Cadence picker UI.
 - Subscribe button is a placeholder (toast only) — no auth, no persistence, no payment.
-- Schema split: `DigestDraft` (chat output) vs `DigestConfig` (subscribe output).
+- Single `DigestConfig` schema with optional `schedule`; a derived `subscribableConfigSchema` enforces `schedule` at subscribe time.
 - Full delete of showcase code, `ConfigSummary`, and the existing test suite.
 
 Explicitly **out of scope** (future work):
@@ -54,17 +54,17 @@ Renaming `core_angles` → `research_areas` everywhere (schema, prompts, tool na
 
 1. Collect `subject`, `profile` (role + intent + anti-interests), and `output_style` (language + tone + sections — free-form prose the user owns) across 2–3 exchanges. System prompt alone — no dedicated tool.
 2. Call `proposeResearchAreas` tool → `ResearchAreaProposalCard` renders an editable chip list. User refines verbally.
-3. Call `handoffToPlan` tool with `{ subject, profile, research_areas, output_style }`. Tool validates against `digestDraftSchema`. On success, the UI transitions to the Research Plan view.
+3. Call `handoffToPlan` tool with `{ subject, profile, research_areas, output_style }`. Tool validates against `digestConfigSchema.omit({ schedule: true })`. On success, the UI transitions to the Research Plan view with the partial config.
 
 No cadence question. No in-chat preview. No `generateConfig` from chat.
 
 **Research Plan phase (UI, no LLM while idle):**
 
-4. Research Plan view renders. All four draft fields are editable inline (see §8).
-5. User clicks **Preview your digest** → `POST /api/preview-digest` with the draft.
+4. Research Plan view renders. All four text fields are editable inline (see §8).
+5. User clicks **Preview your digest** → `POST /api/preview-digest` with the current config.
 6. SSE stream drives a progress UI (§10).
 7. When `done` lands, the preview renders below the plan: user's template populated with 5 papers + a numbered references list + a two-column "this first read / what your real digest does differently" block (§11).
-8. Any edit to the draft invalidates `schedule` and transitions the preview to `stale`.
+8. Any edit to one of the four text fields invalidates `schedule` and transitions the preview to `stale`.
 
 **Cadence + Subscribe phase (UI, no LLM):**
 
@@ -88,45 +88,47 @@ export const searchQuerySchema = z.object({
   rationale: z.string().default(''),
 })
 
-export const digestDraftSchema = z.object({
-  subject: z.string().min(1),
-  profile: z.string().min(1),
-  output_style: z.string().min(1),
-  research_areas: z.array(researchAreaSchema).min(1),
-  search_queries: z.array(searchQuerySchema).default([]),
-})
-
 export const scheduleSchema = z.object({   // unchanged from today
   cron: z.string().min(1),
   timezone: z.string().min(1),
   description: z.string().min(1),
 })
 
-export const digestConfigSchema = digestDraftSchema.extend({
-  schedule: scheduleSchema,
-  volume_target: z.number().int().min(3).max(40),
-  version: z.number().int().min(1),
+// Single source of truth. `schedule` is optional so the same object
+// covers the post-chat state (no schedule yet) and the subscribe-ready
+// state (schedule set).
+export const digestConfigSchema = z.object({
+  subject: z.string().min(1),
+  profile: z.string().min(1),
+  output_style: z.string().min(1),
+  research_areas: z.array(researchAreaSchema).min(1),
+  search_queries: z.array(searchQuerySchema).default([]),
+  schedule: scheduleSchema.optional(),
+  version: z.number().int().min(1).default(1),
   created_at: z.string().min(1),
   updated_at: z.string().min(1),
 })
 
+// Derived schema used by Subscribe — requires a schedule.
+export const subscribableConfigSchema = digestConfigSchema.required({ schedule: true })
+
 export type ResearchArea = z.infer<typeof researchAreaSchema>
 export type SearchQuery = z.infer<typeof searchQuerySchema>
-export type DigestDraft = z.infer<typeof digestDraftSchema>
 export type Schedule = z.infer<typeof scheduleSchema>
 export type DigestConfig = z.infer<typeof digestConfigSchema>
+export type SubscribableConfig = z.infer<typeof subscribableConfigSchema>
 ```
 
-Removed: `angleSchema`, the old `status`/`priority` fields. `search_queries` is upgraded from `string[]` to structured `SearchQuery[]` with provenance tracking.
+Removed: `angleSchema`, the old `status`/`priority` fields, `volume_target`. The old draft/config split is collapsed into a single `DigestConfig` with optional `schedule`. `search_queries` is upgraded from `string[]` to structured `SearchQuery[]` with provenance tracking. `volume_target` is no longer a schema field — the curator picks its own paper count per prompt rules (5 for preview, ~10–15 for future scheduled runs; see §12 and §13).
 
-Invariant: any edit to `research_areas`, `subject`, `profile`, or `output_style` clears `search_queries` (re-generated on next preview). Enforced in the `setDraft` action (§8).
+Invariant: any edit to `research_areas`, `subject`, `profile`, or `output_style` clears `search_queries` (re-generated on next preview) and clears `schedule` (so the subscribe gate re-opens). Enforced in the `setConfigField` action (§8).
 
 ## 7. Chat contract
 
 Tools:
 
 - `proposeResearchAreas` — renamed from `proposeAngles`. Same session-scoped factory pattern. Output schema still `{ text, rationale }[]`; orchestrator assigns 1-based `id`s. Hard cap 12. Model: DeepSeek v3.2 at temperature 0.7. Drives `ResearchAreaProposalCard`.
-- `handoffToPlan` — zero-side-effect tool. Input is `digestDraftSchema`. On success, returns `{ ok: true, draft }` and the chat route's response downstream dispatches a `handoff` UI event. On validation failure, returns `{ ok: false, errors }` the way `generateConfig` does today.
+- `handoffToPlan` — zero-side-effect tool. Input is `digestConfigSchema.omit({ schedule: true })` (accepts everything except the schedule, which is added later via the cadence picker). On success, returns `{ ok: true, config }` and the chat route's response downstream dispatches a `handoff` UI event. On validation failure, returns `{ ok: false, errors }` the way `generateConfig` did.
 
 Removed tools: `normalizeSchedule`, `showcaseRecentPapers`, `generateConfig`. Their prompt-level instructions disappear from `onboarding-system.md`.
 
@@ -165,21 +167,20 @@ type PreviewState =
   | { kind: 'error'; stage: string; message: string }
 
 type PlanState = {
-  draft: DigestDraft
+  config: DigestConfig              // schedule stays undefined until cadence is set
   preview: PreviewState
-  schedule?: Schedule
 }
 
 // Actions:
-//   setDraftField(key, value)         — mutates draft, clears search_queries, transitions ready → stale, clears schedule
+//   setConfigField(key, value)        — mutates config, clears search_queries + schedule, transitions ready → stale
 //   setResearchAreas(areas)           — same, plus re-ids areas 1..N
 //   startPreview()                    — transitions to running, opens SSE
 //   receivePreviewEvent(e)            — appends to events or transitions to ready/error
-//   setSchedule(s)                    — only valid when preview is ready
+//   setSchedule(s)                    — only valid when preview is ready; mutates config.schedule
 //   reset()                           — for dev
 ```
 
-State is persisted to `localStorage` under `research-plan-draft` so a reload mid-preview doesn't lose the user's work. Mirrors the existing chat persistence pattern in `src/lib/storage/local.ts`.
+State is persisted to `localStorage` under `research-plan-config` so a reload mid-preview doesn't lose the user's work. Mirrors the existing chat persistence pattern in `src/lib/storage/local.ts`.
 
 ## 9. Preview state transitions
 
@@ -187,7 +188,7 @@ State is persisted to `localStorage` under `research-plan-draft` so a reload mid
 idle          → user clicks Preview                            → running
 running       → SSE 'done' event                               → ready
 running       → SSE 'error' event OR stream abort              → error
-ready         → user edits any draft field                     → stale
+ready         → user edits any config field                    → stale
 stale         → user clicks Preview again                      → running
 error         → user clicks Preview again                      → running
 any           → user clicks "regenerate"                       → running
@@ -199,7 +200,7 @@ Only `ready` reveals the cadence picker and Subscribe. `stale` shows the previou
 
 Runtime: `export const runtime = 'nodejs'`, `export const maxDuration = 60`. Not Edge — we need parallel fetches + LLM calls summing to ~20–40s wall clock, and Edge's 50ms CPU cap doesn't cover us.
 
-Request body: JSON matching `digestDraftSchema`.
+Request body: JSON matching `digestConfigSchema` (the pipeline ignores `schedule` if present).
 
 Response: `text/event-stream` with `data: <ProgressEvent JSON>\n\n` frames.
 
@@ -229,10 +230,10 @@ export type ProgressEvent =
 **Pipeline (`src/lib/ai/preview/pipeline.ts`):**
 
 ```
-runPreviewPipeline(draft, { emit }):
+runPreviewPipeline(config, { emit }):
   // Step 1: seeds
-  angleSeeds = angles_to_seeds(draft.research_areas)
-  llmSeeds   = await generateSeeds(draft)           // LLM call 1 of 3
+  angleSeeds = angles_to_seeds(config.research_areas)
+  llmSeeds   = await generateSeeds(config)          // LLM call 1 of 3
   seeds      = unique(llmSeeds ∪ angleSeeds)
   emit({ kind: 'seeds', seeds })
 
@@ -246,7 +247,7 @@ runPreviewPipeline(draft, { emit }):
 
   // Step 4: build compact library
   //   MIN_PER_ANGLE=1, MAX_PER_ANGLE=1, QUERY_BUDGET=research_areas.length, no intersections/adjacents
-  library = await buildLibrary(draft, vocab)        // LLM call 2 of 3
+  library = await buildLibrary(config, vocab)       // LLM call 2 of 3
   emit({ kind: 'library', queries: library })
 
   // Step 5: run library (7d window, per_page=15, parallel)
@@ -257,7 +258,7 @@ runPreviewPipeline(draft, { emit }):
 
   // Step 6: editorial curator
   emit({ kind: 'curating' })
-  { body, referenceIds } = await curate(draft, pool)  // LLM call 3 of 3
+  { body, referenceIds } = await curate(config, pool)  // LLM call 3 of 3
   references = joinMetadata(referenceIds, pool)
   emit({ kind: 'done', body, references, queries: library })
 ```
@@ -328,7 +329,7 @@ Layout (top to bottom):
    Arrives on your cadence. In your inbox, when you asked for it.
    ```
 
-5. **"Regenerate preview"** ghost button, top-right of the card (subtle). When the draft is stale, this button becomes prominent and the eyebrow banner states the plan changed.
+5. **"Regenerate preview"** ghost button, top-right of the card (subtle). When the preview is stale, this button becomes prominent and the eyebrow banner states the plan changed.
 
 Copy rules (enforced in code via constants, linted by eye):
 
@@ -357,7 +358,7 @@ const curatorOutputSchema = z.object({
 System prompt hits these points (exact wording to be drafted during implementation):
 
 - Role: editor writing in the reader's requested template for this specific reader.
-- Job: pick 5 papers (or 3–4 if 5 aren't defensible), tie them together through 1–3 threads, write in the user's voice and format.
+- Job: pick exactly 5 papers (or 3–4 if 5 aren't defensible), tie them together through 1–3 threads, write in the user's voice and format. Paper count is fixed in the prompt — the schema has no `volume_target` field.
 - Render `output_style` faithfully: if it implies sections, use those sections; if it implies bullets, use bullets; if it implies prose, write prose.
 - Use `[n]` citations (1-indexed, matching `referenceIds` order). Every referenceId appears at least once.
 - Anti-patterns: no generic praise ("this paper is highly relevant"), no scaffolding phrases ("in conclusion", "in summary"), no Introduction/Conclusion headers unless the user asked for them, no per-paper paragraphs (unless the user's template explicitly asks for that).
@@ -399,7 +400,7 @@ Direct TypeScript port of `iter/keyword_discovery.py`:
 
 - `src/lib/ai/discovery/seeds.ts`:
   - `angles_to_seeds(areas: ResearchArea[]): string[]` — pure port of the Python helper. Strip parens, drop leading stopwords (`and / or / vs / the / for / of / with / to / on / in / by / as / at`), collapse adjacent dups, first 2 tokens.
-  - `generateSeeds(draft: DigestDraft): Promise<string[]>` — LLM call against `preview-library-system.md` counterpart seed prompt. 3–5 literal seeds.
+  - `generateSeeds(config: DigestConfig): Promise<string[]>` — LLM call against `preview-library-system.md` counterpart seed prompt. 3–5 literal seeds.
 - `src/lib/ai/discovery/fetch-seeds.ts` — parallel OpenAlex fetches via extended `searchByKeyword` (see §15). 6-month window, per_page=50, select fields for vocabulary mining.
 - `src/lib/ai/discovery/extract-vocab.ts` — pure-code port of the Python `extract_vocabulary` function. Returns `{ topics, subfields, fields, keywords, journals, sample_titles }` counters.
 - `src/lib/ai/discovery/build-library.ts` — LLM call, prompt at `prompts/preview-library-system.md`, schema above.
@@ -449,10 +450,10 @@ export function buildSchedule(input: {
 
 ## 17. Subscribe (`SubscribeSection`)
 
-Button disabled until preview is `ready` and `schedule` is set. On click:
+Button disabled until preview is `ready` and `config.schedule` is set. On click:
 
-1. Compose `DigestConfig` from draft + schedule + fixed `volume_target: 10` + `version: 1` + current ISO timestamps.
-2. Validate against `digestConfigSchema`. On failure: inline error banner listing field paths; no submission.
+1. Stamp `updated_at` on the current `config` (and `created_at` + `version: 1` if not already set).
+2. Validate against `subscribableConfigSchema` (ensures `schedule` is present and all other fields meet the shared `digestConfigSchema` constraints). On failure: inline error banner listing field paths; no submission.
 3. On success: show a toast *"Subscription coming soon — your plan is saved for this session."*, no persistence, no auth.
 
 Intentionally minimal. Auth + payment + persistence land in a later spec.
@@ -503,7 +504,7 @@ Intentionally minimal. Auth + payment + persistence land in a later spec.
 2. Should the chat ribbon remain expanded by default on small screens, or collapsed?
 3. Where to put the "Preview your digest" CTA visually — below the output_style block inline, or in a sticky action bar at the bottom of the Research Plan card?
 4. Rate limiting `/api/preview-digest` — for MVP we ship without; worth mentioning in the plan as a known gap.
-5. `search_queries` in the draft: do we strip them from the Research Plan URL/localStorage snapshot to keep the persisted draft small, or keep them for the "re-preview reproducibility" value? Default: keep.
+5. `search_queries` in the config: do we strip them from the `localStorage` snapshot to keep the persisted config small, or keep them for the "re-preview reproducibility" value? Default: keep.
 
 ## 21. Supersedes / housekeeping
 
