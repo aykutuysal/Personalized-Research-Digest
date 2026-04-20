@@ -5,7 +5,7 @@ import { DefaultChatTransport } from 'ai'
 import { LayoutGroup, motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
-import { ConfigSummary } from '@/components/config/ConfigSummary'
+import { ResearchPlanView } from '@/components/plan/ResearchPlanView'
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import type { DigestConfig } from '@/lib/config-schema'
 import {
@@ -80,14 +80,37 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   const finalConfig = useMemo<DigestConfig | null>(() => {
     for (let i = messages.length - 1; i >= 0; i--) {
       for (const p of messages[i].parts ?? []) {
-        if (p.type === 'tool-generateConfig' && p.state === 'output-available') {
+        if (p.type === 'tool-handoffToPlan' && p.state === 'output-available') {
           const out = p.output
-          if (out.ok) return out.config
+          if (out.ok) {
+            // handoffToPlan returns the pre-schedule subset; stamp metadata for
+            // the DigestConfig shape ResearchPlanView expects.
+            const now = new Date().toISOString()
+            return {
+              ...out.config,
+              search_queries: [],
+              version: 1,
+              created_at: now,
+              updated_at: now,
+            } as DigestConfig
+          }
         }
       }
     }
     return null
   }, [messages])
+
+  // Persist finalConfig to localStorage once handoffToPlan fires.
+  useEffect(() => {
+    if (initialMode !== 'docked') return
+    if (!finalConfig) return
+    try {
+      const existing = loadOnboardingState() ?? newOnboardingState()
+      saveOnboardingState({ ...existing, config: finalConfig })
+    } catch {
+      /* ignore */
+    }
+  }, [initialMode, finalConfig])
 
   const onReset = () => {
     try {
@@ -161,7 +184,7 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   }
 
   if (finalConfig) {
-    return <ConfigSummary config={finalConfig} onReset={onReset} />
+    return <ResearchPlanView initialConfig={finalConfig} onReset={onReset} />
   }
 
   return (
