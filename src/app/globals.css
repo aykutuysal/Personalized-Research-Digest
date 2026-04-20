@@ -130,7 +130,7 @@ html, body {
 }
 
 @theme {
-  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: var(--font-display), ui-serif, Georgia, serif;
   --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }

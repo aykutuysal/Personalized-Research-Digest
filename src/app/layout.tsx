@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter, JetBrains_Mono } from 'next/font/google'
+import { Playfair_Display, Geist, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
 const playfairDisplay = Playfair_Display({
@@ -11,7 +11,7 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',
 })
 
-const inter = Inter({
+const geist = Geist({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -49,7 +49,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${playfairDisplay.variable} ${inter.variable} ${jetBrainsMono.variable}`}
+      className={`${playfairDisplay.variable} ${geist.variable} ${jetBrainsMono.variable}`}
     >
       <body className="font-sans bg-bg text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
