@@ -73,6 +73,7 @@
   /* Layout */
   --reading-width: 80ch;
   --header-h: 56px;
+  --breadcrumb-h: 48px;
   --composer-h: 88px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 }

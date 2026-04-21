@@ -27,7 +27,7 @@ export function PreviewSidebar({
   ctaHelper,
 }: PreviewSidebarProps) {
   return (
-    <aside className="sticky top-0 flex h-screen max-h-screen flex-col gap-5 overflow-y-auto border-r border-line bg-bg-elev-1 p-7 pb-6 max-[900px]:static max-[900px]:h-auto">
+    <aside className="sticky top-0 flex h-[calc(100dvh-var(--header-h)-var(--breadcrumb-h))] flex-col gap-5 overflow-y-auto border-r border-line bg-bg-elev-1 p-7 pb-6 max-[900px]:static max-[900px]:h-auto">
       <Block label="This is a preview">
         <p className="text-[12px] leading-[1.55] text-ink-soft">
           A short sample so you can feel the voice and paper-picking. Your real digest does much more.

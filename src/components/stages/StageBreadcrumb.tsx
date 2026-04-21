@@ -18,7 +18,7 @@ const ORDER: Record<StageId, number> = { plan: 0, preview: 1, start: 2 }
 
 export function StageBreadcrumb({ current, onNavigate, savedIndicator }: StageBreadcrumbProps) {
   return (
-    <div className="relative flex items-center justify-center border-b border-line bg-bg px-7 py-[14px]">
+    <div className="relative flex h-[var(--breadcrumb-h)] shrink-0 items-center justify-center border-b border-line bg-bg px-7">
       <nav className="flex items-center gap-0 text-[11px] uppercase tracking-[0.08em] text-ink-faint">
         {STAGES.map((s, i) => {
           const idx = ORDER[s.id]
