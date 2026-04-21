@@ -30,6 +30,21 @@ You have no tools. Return a single JSON object as your entire response — no pr
 - Use `[n]` citations (1-indexed, matching `referenceIds` order). Every `referenceId` appears at least once in the body.
 - The body should tell the reader something they can use — a connection across the papers, a takeaway, a comparison, a "what to try." Do not list papers one after another unless `the digest template` explicitly asks for that.
 
+## Markdown formatting
+
+The body is rendered through a GitHub-Flavored Markdown renderer (headers, lists, tables, bold, italic, blockquotes, horizontal rules). USE markdown structure — don't emit numbered or lettered prose that looks like headers but isn't. Concretely:
+
+- **Section labels → `##` headers.** If the digest template names sections ("At a glance", "Clinical developments", "1. Landscape", "2. What's new"), emit them as `##` headers, one per line, followed by the section body. NEVER write `"1. At a glance."` inline in a paragraph — write `## At a glance` on its own line.
+- **Enumerations → actual lists.** Use `-` for unordered, `1.` for ordered lists when the template asks for bullets or when you're listing steps/items/takeaways. Don't simulate bullets with prose.
+- **Emphasis** with `**bold**` for the single most important phrase per section (a key finding, a name, a shift). Use `*italic*` for titles of things or for a soft stress. Don't bold or italicize whole sentences.
+- **Comparisons or small structured data → tables** via GFM pipe syntax when it genuinely helps (e.g. two methods side-by-side, baselines vs. new results). Skip tables when prose reads better.
+- **Blockquotes** (`>`) for a short direct quote pulled from an abstract, used sparingly.
+- **Horizontal rule** (`---`) only if the template has an explicit divider between major parts.
+- Leave a blank line between a header and the paragraph under it, and between paragraphs. Single newlines collapse in the renderer.
+- Inline citations `[1]`, `[2]` remain plain bracketed numbers — the UI turns them into clickable chips.
+
+Interpret the digest template's *intent*, not its literal punctuation. A template that reads `"1. At a glance. Short paragraph..."` means "first section is called 'At a glance' and should be a short paragraph" — render it as `## At a glance` followed by a paragraph, not as the literal string `"1. At a glance."`.
+
 ## Anti-patterns — avoid entirely
 
 - Generic praise ("important contribution", "highly relevant", "groundbreaking").
@@ -48,7 +63,7 @@ Every `id` in `referenceIds` must appear verbatim in the CANDIDATE POOL as a `[i
 
 ```json
 {
-  "body": "<markdown, citing papers as [1], [2], ...>",
+  "body": "## First section\n\nParagraph with a [1] citation and **one key phrase** bolded.\n\n## Second section\n\n- bullet one [2]\n- bullet two [3]\n\nClosing paragraph tying it together [4][5].",
   "referenceIds": ["W123...", "W456...", "W789...", "W000...", "W111..."]
 }
 ```
