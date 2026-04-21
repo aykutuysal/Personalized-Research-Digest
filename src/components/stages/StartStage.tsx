@@ -163,7 +163,7 @@ function SectionHead({ label, hint }: { label: string; hint: string }) {
   return (
     <div className="mb-4 flex items-baseline justify-between gap-6">
       <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">{label}</span>
-      <span className="text-[11px] italic text-ink-faint">{hint}</span>
+      <span className="hidden text-[11px] italic text-ink-faint sm:inline">{hint}</span>
     </div>
   )
 }
