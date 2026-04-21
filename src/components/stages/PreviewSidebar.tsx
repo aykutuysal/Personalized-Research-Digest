@@ -27,7 +27,7 @@ export function PreviewSidebar({
   ctaHelper,
 }: PreviewSidebarProps) {
   return (
-    <aside className="sticky top-0 flex h-[calc(100dvh-var(--header-h)-var(--breadcrumb-h))] flex-col gap-5 overflow-y-auto border-r border-line bg-bg-elev-1 p-7 pb-6 max-[900px]:static max-[900px]:h-auto">
+    <aside className="sticky top-0 flex h-[calc(100dvh-var(--header-h)-var(--breadcrumb-h))] flex-col gap-4 border-r border-line bg-bg-elev-1 p-6 pb-5 max-[900px]:static max-[900px]:h-auto">
       <Block label="This is a preview">
         <p className="text-[12px] leading-[1.55] text-ink-soft">
           A short sample so you can feel the voice and paper-picking. Your real digest does much more.
@@ -43,7 +43,7 @@ export function PreviewSidebar({
       <Block label="Your real digest does more">
         <ul className="m-0 list-none space-y-[10px] p-0">
           {SELL_BULLETS.map((b) => (
-            <li key={b.lead} className="border-t border-line-strong pt-[10px] text-[12px] leading-[1.5] text-ink-soft first:border-t-0 first:pt-0">
+            <li key={b.lead} className="border-t border-line-strong pt-[8px] text-[12px] leading-[1.5] text-ink-soft first:border-t-0 first:pt-0">
               <strong className="mb-[3px] block font-display text-[14.5px] font-medium tracking-[-0.005em] text-ink">
                 {b.lead}
               </strong>
@@ -69,7 +69,7 @@ export function PreviewSidebar({
 function Block({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div>
-      <div className="mb-[10px] text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">{label}</div>
+      <div className="mb-[8px] text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">{label}</div>
       {children}
     </div>
   )
@@ -77,8 +77,8 @@ function Block({ label, children }: { label: string; children: ReactNode }) {
 
 function StatRow({ n, k }: { n: number | string; k: string }) {
   return (
-    <div className="border-t border-line-strong py-[10px] first:border-t-0 first:pt-0">
-      <div className="font-display text-[26px] font-medium leading-none tabular-nums text-ink">{n}</div>
+    <div className="border-t border-line-strong py-[8px] first:border-t-0 first:pt-0">
+      <div className="font-display text-[24px] font-medium leading-none tabular-nums text-ink">{n}</div>
       <div className="mt-[4px] text-[10px] font-semibold uppercase tracking-[0.14em] text-ink-faint">{k}</div>
     </div>
   )
