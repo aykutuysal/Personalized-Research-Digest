@@ -24,40 +24,60 @@ export interface Vocabulary {
   sampleTitles: string[]
 }
 
+function normalizeTitleKey(title?: string | null): string {
+  return (title ?? '').trim().toLowerCase().replace(/\s+/g, ' ')
+}
+
 /**
  * Mine the returned papers' metadata to discover real vocabulary that
  * indexes papers in the user's area.
+ *
+ * Papers are deduplicated across seed queries before aggregation. The same
+ * paper returned under multiple seeds used to inflate keyword/topic counts
+ * and produce duplicate entries in `sampleTitles`. Dedup prefers OpenAlex
+ * ID; falls back to normalized title for the rare case of repository papers
+ * registered under multiple IDs (e.g. Zenodo preprint versions).
  */
 export function extractVocabulary(seedResults: SeedFetchResult[]): Vocabulary {
+  const seenIds = new Set<string>()
+  const seenTitleKeys = new Set<string>()
+  const uniquePapers: SeedFetchResult['results'] = []
+  for (const sr of seedResults) {
+    for (const paper of sr.results) {
+      if (paper.id && seenIds.has(paper.id)) continue
+      const key = normalizeTitleKey(paper.title)
+      if (key.length > 0 && seenTitleKeys.has(key)) continue
+      if (paper.id) seenIds.add(paper.id)
+      if (key.length > 0) seenTitleKeys.add(key)
+      uniquePapers.push(paper)
+    }
+  }
+
   const topics = new Map<string, number>()
   const subfields = new Map<string, number>()
   const fields = new Map<string, number>()
   const keywords = new Map<string, number>()
   const journals = new Map<string, number>()
   const sampleTitles: string[] = []
-  let totalPapers = 0
 
-  for (const sr of seedResults) {
-    for (const paper of sr.results) {
-      totalPapers++
-      if (paper.title && sampleTitles.length < 15) sampleTitles.push(paper.title)
-      const topic = paper.primary_topic ?? null
-      if (topic?.display_name) topics.set(topic.display_name, (topics.get(topic.display_name) ?? 0) + 1)
-      const sub = topic?.subfield?.display_name
-      if (sub) subfields.set(sub, (subfields.get(sub) ?? 0) + 1)
-      const fld = topic?.field?.display_name
-      if (fld) fields.set(fld, (fields.get(fld) ?? 0) + 1)
-      for (const kw of paper.keywords ?? []) {
-        const name = kw.display_name ?? ''
-        if (isValidKeyword(name)) keywords.set(name, (keywords.get(name) ?? 0) + 1)
-      }
-      const src = paper.primary_location?.source?.display_name
-      if (src) journals.set(src, (journals.get(src) ?? 0) + 1)
+  for (const paper of uniquePapers) {
+    if (paper.title && sampleTitles.length < 15) sampleTitles.push(paper.title)
+    const topic = paper.primary_topic ?? null
+    if (topic?.display_name) topics.set(topic.display_name, (topics.get(topic.display_name) ?? 0) + 1)
+    const sub = topic?.subfield?.display_name
+    if (sub) subfields.set(sub, (subfields.get(sub) ?? 0) + 1)
+    const fld = topic?.field?.display_name
+    if (fld) fields.set(fld, (fields.get(fld) ?? 0) + 1)
+    for (const kw of paper.keywords ?? []) {
+      const name = kw.display_name ?? ''
+      if (isValidKeyword(name)) keywords.set(name, (keywords.get(name) ?? 0) + 1)
     }
+    const src = paper.primary_location?.source?.display_name
+    if (src) journals.set(src, (journals.get(src) ?? 0) + 1)
   }
 
   return {
-    totalPapers,
+    totalPapers: uniquePapers.length,
     topics: topN(topics, 15),
     subfields: topN(subfields, 10),
     fields: topN(fields, 5),
