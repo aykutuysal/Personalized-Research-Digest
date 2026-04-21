@@ -255,6 +255,64 @@ All values should route through the existing `oklch` tokens in `globals.css` whe
 
 No em dashes anywhere in user-facing copy. Use commas, colons, or periods.
 
+## Responsive behavior
+
+Three breakpoints drive layout decisions, shared across all stages:
+
+- `≥ 900px` desktop
+- `600–899px` tablet
+- `< 600px` mobile
+
+### Per-stage responsive rules
+
+**Plan.**
+- `≥ 900px`: max-width 820px, 48px side padding, subject title Playfair 46px.
+- `600–899px`: max-width 820px, 32px side padding, subject title 38px.
+- `< 600px`: page padding 20px, subject title 30px, deck 14px, section vertical padding 20px. Chips wrap naturally. Contenteditable stays readable at 15px. Section-head hint moves under the label when the row wraps.
+
+**Preview loading.**
+- `≥ 900px`: as designed (720px article, 38px masthead h1).
+- `600–899px`: max-width 620px, 40px side padding, h1 32px, deck 14px. Stats stay side-by-side but numerals shrink to 28px.
+- `< 600px`: 20px side padding, h1 26px on two lines if needed, deck 13px. Stats remain side-by-side with numerals at 24px (never stack vertically; the pair is the hero). Timeline row labels drop to 14px.
+
+**Preview issue.**
+- `≥ 900px`: 280px sticky sidebar + 680px article, as specified in Stage 2b.
+- `600–899px`: 200px sidebar, article padding 32px, sidebar typography tightens (stat numerals 22px, sell-list lead-lines 13.5px, body 11.5px). Bullets shorten where specified.
+- `< 600px`: **sidebar collapses entirely.** Structure becomes:
+  1. Sticky top pill with `● Preview · 5 of 812`.
+  2. Hero block with masthead + big stats horizontal row.
+  3. Article body.
+  4. "Your real digest does more" sell block at the bottom of the article.
+  5. Sticky footer CTA bar (see below).
+  6. Tapping the top pill opens a bottom sheet with the full sidebar content.
+
+**Start.**
+- `≥ 900px`: max-width 720px, two-column plan cards (1fr 1fr).
+- `600–899px`: 32px side padding, plan cards still two-column.
+- `< 600px`: 20px side padding, **plan cards stack (grid-template-columns: 1fr)**, plan-card price 28px. Cadence chips wrap to multiple rows. Day-of-week pills wrap to two rows if needed. Sub-pickers (Time, Timezone) stack. Summary card font-size 15px.
+
+### Sticky footers — mobile contract
+
+Every stage uses a sticky footer CTA. Mobile behavior is identical across stages and **must** honor these rules:
+
+- **Fixed to the viewport bottom** on mobile, not just document bottom. Use `position: fixed` (or `sticky` within a flex layout that guarantees viewport edge).
+- **Respects the iOS/Android safe area.** Bottom padding is `calc(16px + env(safe-area-inset-bottom))`. The existing `--safe-bottom` token in `globals.css` does this; use it.
+- **Button is full-width** on mobile (`width: 100%`, caps the max-width to container), maintains the same uppercase Geist 14px, 0.14em tracking, 18px vertical padding, 3px border-radius treatment as desktop, but stretches.
+- **Minimum tap height 48px** on the button itself.
+- **Top border** (`1px solid #D4C9AE`) + soft top shadow (`0 -6px 16px -8px rgba(31,42,34,0.1)`) so the bar separates cleanly from scrolled content above.
+- **No competing inline CTA.** On mobile the inline end-of-article CTA (Preview page) still exists because it's part of the article; but the sticky bar is always there and always wins the forward action.
+- **Keyboard safe.** When a text input on the page is focused on mobile (email field on Start, voice textarea on Plan), the browser's viewport resize must not cause the footer to overlap the focused input. Implementation detail: the page's main scroll container must use `scroll-padding-bottom` equal to the footer height + keyboard estimate so focused inputs scroll into view above the bar. Verify on iOS Safari, Android Chrome, at minimum.
+- **Reassurance line below the button** stays on mobile but shrinks to 12px if needed. Wraps gracefully.
+
+### Readability
+
+- **Minimum body text 14px** on mobile. Hints/metas may be smaller (11px) but never below that for primary prose.
+- **Line-height floors:** body text 1.55, headings 1.15, labels 1.3. Do not tighten beyond these.
+- **Tap targets 44×44 minimum** on all interactive controls. Day-of-week circles at 36px are too small; enlarge the hit area via `::before` pseudo-padding or bump the visual to 40px on mobile. Cadence chips already exceed this.
+- **Color contrast:** body ink `#1F2A22` on bg `#F7F2E8` meets AA. Muted states (`#9A9383` italic hints) must be used only for non-essential context, never for anything the user needs to act on.
+- **Truncation:** never truncate sell-list lead-lines or stat labels. Let them wrap. Chip labels may wrap to two lines if needed rather than truncate; the dashed "+ Add area" chip stays on a single line.
+- **Focus states** on all interactive elements use a visible outline (the 1px green `#2D5A3D` + cream fill pattern used in inputs). Never suppress `:focus-visible`.
+
 ## Out of scope
 
 - Email verification / magic link flow. Assumed resolved through whatever auth the user came in with.
