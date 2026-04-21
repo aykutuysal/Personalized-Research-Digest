@@ -1,6 +1,6 @@
 // src/components/stages/PreviewStage.tsx
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { DigestConfig, SearchQuery } from '@/lib/config-schema'
 import type { ProgressEvent, ReferencePaper } from '@/lib/ai/preview/progress-events'
 import { mapProgressToStage, type ProgressState } from '@/lib/ai/preview/map-progress-to-stage'
@@ -27,12 +27,13 @@ export function PreviewStage({ config, sessionId, onBack, onStart }: PreviewStag
   const [ready, setReady] = useState<ReadyPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
   const state: ProgressState = mapProgressToStage(events, config.research_areas.length)
-  const startedRef = useRef(false)
 
   useEffect(() => {
-    if (startedRef.current) return
-    startedRef.current = true
     const abort = new AbortController()
+    // Reset stream state on (re)mount so Strict-Mode double-invoke restarts cleanly.
+    setEvents([])
+    setReady(null)
+    setError(null)
     ;(async () => {
       try {
         const res = await fetch('/api/preview-digest', {
