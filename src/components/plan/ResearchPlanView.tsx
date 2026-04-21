@@ -54,9 +54,16 @@ export function ResearchPlanView({ initialConfig, sessionId, onReset }: Research
         <ResearchAreaChips areas={config.research_areas} onChange={setResearchAreas} />
 
         <ProfileEditor
-          label="Voice & format"
-          value={config.output_style}
-          onChange={(output_style) => patch({ output_style })}
+          label="Format &amp; structure"
+          value={config.format_structure}
+          onChange={(format_structure) => patch({ format_structure })}
+          italic
+        />
+
+        <ProfileEditor
+          label="Voice &amp; language"
+          value={config.voice_language}
+          onChange={(voice_language) => patch({ voice_language })}
           italic
         />
 
