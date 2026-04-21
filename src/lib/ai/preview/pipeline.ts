@@ -40,21 +40,30 @@ export async function runPreviewPipeline(
   const { emit, sessionId } = opts
   const tag = `[preview ${sessionId?.slice(0, 8) ?? 'no-session'}]`
   const t0 = Date.now()
+  const stamp = (stage: string) => `${tag} [${((Date.now() - t0) / 1000).toFixed(2)}s] ${stage}`
+  console.log(`${tag} START subject=${JSON.stringify(config.subject)} areas=${config.research_areas.length}`)
+  console.log(`${tag} config.profile=${JSON.stringify(config.profile.slice(0, 200))}`)
+  console.log(`${tag} research_areas=${JSON.stringify(config.research_areas.map((a) => a.text))}`)
 
   // ---- Step 1: seeds ----
+  console.log(stamp('seeds: calling generateSeeds'))
   let llmSeeds: string[] = []
   try {
     const res = await withRetry(() => generateSeeds(config, { sessionId }))
     llmSeeds = res.seeds
   } catch (err) {
+    console.error(stamp('seeds: FAIL'), err)
     emit({ kind: 'error', stage: 'seeds', message: (err as Error).message })
     return
   }
   const angleSeeds = researchAreasToSeeds(config.research_areas)
   const seeds = combineSeeds(llmSeeds, angleSeeds)
+  console.log(stamp(`seeds: llm=${llmSeeds.length} angle=${angleSeeds.length} combined=${seeds.length}`))
+  console.log(`${tag} seeds.list=${JSON.stringify(seeds)}`)
   emit({ kind: 'seeds', seeds })
 
   // ---- Step 2: seed fetch ----
+  console.log(stamp(`seed-fetch: fetching ${seeds.length} seeds from OpenAlex`))
   let seedResults = await fetchSeedPapers(seeds)
   const anyPapers = seedResults.some((s) => s.results.length > 0)
   if (!anyPapers) {
@@ -68,6 +77,10 @@ export async function runPreviewPipeline(
     }
   }
   const papersScanned = seedResults.reduce((s, r) => s + r.results.length, 0)
+  console.log(stamp(`seed-fetch: done papersScanned=${papersScanned}`))
+  for (const r of seedResults) {
+    console.log(`${tag}   seed=${JSON.stringify(r.seed)} count=${r.count}`)
+  }
   emit({
     kind: 'seed-fetch-done',
     papersScanned,
@@ -76,6 +89,7 @@ export async function runPreviewPipeline(
 
   // ---- Step 3: vocabulary ----
   const vocab = extractVocabulary(seedResults)
+  console.log(stamp(`vocab: topics=${vocab.topics.length} keywords=${vocab.keywords.length} fields=[${vocab.fields.map(([n]) => n).join(', ')}]`))
   emit({
     kind: 'vocab',
     topics: vocab.topics.length,
@@ -84,6 +98,7 @@ export async function runPreviewPipeline(
   })
 
   // ---- Step 4: library ----
+  console.log(stamp('library: calling buildCompactLibrary'))
   let library: SearchQuery[] = []
   try {
     const seedsWithCounts = seedResults.map((r) => ({ seed: r.seed, count: r.count }))
@@ -95,8 +110,13 @@ export async function runPreviewPipeline(
     }
     library = res.queries
   } catch (err) {
+    console.error(stamp('library: FAIL'), err)
     emit({ kind: 'error', stage: 'library', message: (err as Error).message })
     return
+  }
+  console.log(stamp(`library: produced ${library.length} queries`))
+  for (const q of library) {
+    console.log(`${tag}   area=${q.research_area_id} query=${JSON.stringify(q.query)} rationale=${JSON.stringify(q.rationale)}`)
   }
   emit({
     kind: 'library',
@@ -104,8 +124,10 @@ export async function runPreviewPipeline(
   })
 
   // ---- Step 5: run library ----
+  console.log(stamp(`run-library: executing ${library.length} queries against OpenAlex`))
   const runResults = await runLibrary(library, {
     onResult: (r) => {
+      console.log(`${tag}   area=${r.query.research_area_id} query=${JSON.stringify(r.query.query)} hits=${r.hits.length} sample=${JSON.stringify(r.hits[0]?.title ?? null)}`)
       emit({
         kind: 'area-hit',
         research_area_id: r.query.research_area_id,
@@ -138,6 +160,8 @@ export async function runPreviewPipeline(
     pool.push(w)
   }
 
+  console.log(stamp(`pool: dedupedById=${poolById.size} dedupedByTitle=${pool.length}`))
+
   // ---- Step 6: relevance filter ----
   // Single DeepSeek call scores the pool against the reader's profile +
   // research areas and drops off-topic hits before the curator sees them.
@@ -145,9 +169,11 @@ export async function runPreviewPipeline(
   // has to pick 5, and a noisy pool is better than a dead run.
   let curatorPool: PoolMember[] = pool
   if (pool.length > 0) {
+    console.log(stamp(`filter: scoring ${pool.length} candidates`))
     emit({ kind: 'filtering' })
     try {
       const filterRes = await filterCandidates(config, pool, { sessionId })
+      console.log(stamp(`filter: survivors=${filterRes.survivors.length} dropped=${filterRes.dropped}`))
       if (filterRes.survivors.length >= 3) {
         curatorPool = filterRes.survivors as PoolMember[]
         emit({
@@ -166,17 +192,27 @@ export async function runPreviewPipeline(
       emit({ kind: 'filter-done', kept: pool.length, dropped: 0 })
     }
   }
+  console.log(stamp(`curator-pool: ${curatorPool.length} candidates`))
+  for (const p of curatorPool.slice(0, 20)) {
+    console.log(`${tag}   id=${p.id} date=${p.publication_date ?? ''} title=${JSON.stringify(p.title ?? '')}`)
+  }
 
   // ---- Step 7: curator ----
+  console.log(stamp('curator: calling curatePreview'))
   emit({ kind: 'curating' })
   try {
     const { body, references } = await withRetry(() => curatePreview(config, curatorPool, { sessionId }))
     if (references.length < 3) {
       throw new Error(`Curator returned only ${references.length} references.`)
     }
+    console.log(stamp(`curator: done body_chars=${body.length} references=${references.length}`))
+    for (const r of references) {
+      console.log(`${tag}   ref id=${r.id} title=${JSON.stringify(r.title)} venue=${JSON.stringify(r.venue)}`)
+    }
     emit({ kind: 'done', body, references, queries: library })
     console.log(`${tag} done total_ms=${Date.now() - t0}`)
   } catch (err) {
+    console.warn(stamp('curator: primary path failed, attempting fallback'), (err as Error).message)
     // Fallback: render top 5 by date, no editorial. Dedup by normalized
     // title — Zenodo and similar repos register each version as a separate
     // OpenAlex work, so ID-dedup alone leaves visible duplicates.

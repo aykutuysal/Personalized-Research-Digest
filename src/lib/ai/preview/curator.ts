@@ -101,6 +101,7 @@ export async function curatePreview(
     poolLines,
   ].join('\n')
 
+  console.log(`${tag} prompt chars=${userPrompt.length} ---\n${userPrompt}\n---`)
   const { object, usage, providerMetadata } = await generateObject({
     model: curatorModel({ sessionId: opts.sessionId ?? null }),
     schema: curatorSchema,
@@ -108,6 +109,7 @@ export async function curatePreview(
     prompt: userPrompt,
     temperature: 0.5,
   })
+  console.log(`${tag} response ${JSON.stringify(object)}`)
 
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
 

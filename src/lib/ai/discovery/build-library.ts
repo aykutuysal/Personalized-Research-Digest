@@ -99,6 +99,7 @@ export async function buildCompactLibrary(
     vocab.sampleTitles.map((t) => `  - ${t}`).join('\n'),
   ].join('\n')
 
+  console.log(`${tag} prompt ---\n${userPrompt}\n---`)
   const { object, usage, providerMetadata } = await generateObject({
     model: libraryModel({ sessionId: opts.sessionId ?? null }),
     schema: librarySchema,
@@ -106,6 +107,7 @@ export async function buildCompactLibrary(
     prompt: userPrompt,
     temperature: 0.3,
   })
+  console.log(`${tag} response ${JSON.stringify(object)}`)
 
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
   const areaCount = config.research_areas.length

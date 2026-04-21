@@ -13,6 +13,7 @@ export interface PreviewStageProps {
   sessionId?: string | null
   onBack: () => void
   onStart: () => void
+  onQueries?: (queries: SearchQuery[]) => void
 }
 
 interface ReadyPayload {
@@ -22,7 +23,7 @@ interface ReadyPayload {
   papersScanned: number
 }
 
-export function PreviewStage({ config, sessionId, onBack, onStart }: PreviewStageProps) {
+export function PreviewStage({ config, sessionId, onBack, onStart, onQueries }: PreviewStageProps) {
   const [events, setEvents] = useState<ProgressEvent[]>([])
   const [ready, setReady] = useState<ReadyPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -76,6 +77,7 @@ export function PreviewStage({ config, sessionId, onBack, onStart }: PreviewStag
                 queries: evt.queries,
                 papersScanned: finalState.papersScanned,
               })
+              onQueries?.(evt.queries)
             }
             if (evt.kind === 'error') {
               setError(evt.message)

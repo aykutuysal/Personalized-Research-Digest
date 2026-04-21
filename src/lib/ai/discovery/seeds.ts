@@ -69,6 +69,7 @@ export async function generateSeeds(
     `Generate 3-5 seed queries.`,
   ].join('\n')
 
+  console.log(`${tag} prompt ---\n${userPrompt}\n---`)
   const { object, usage, providerMetadata } = await generateObject({
     model: seedsModel({ sessionId: opts.sessionId ?? null }),
     schema: seedOutputSchema,
@@ -80,6 +81,7 @@ export async function generateSeeds(
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
   const seeds = object.seeds.map((s) => s.trim()).filter((s) => s.length > 0)
 
+  console.log(`${tag} response ${JSON.stringify(object)}`)
   console.log(
     `${tag} done seeds=${seeds.length} tokens=${usage.totalTokens ?? '?'} cost=${cost != null ? `$${cost.toFixed(6)}` : '—'} ms=${Date.now() - started}`,
   )

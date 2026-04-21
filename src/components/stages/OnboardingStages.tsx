@@ -1,6 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { DigestConfig } from '@/lib/config-schema'
+import { loadOnboardingState, newOnboardingState, saveOnboardingState } from '@/lib/storage/local'
 import { StageBreadcrumb, type StageId } from './StageBreadcrumb'
 import { PlanStage } from './PlanStage'
 import { PreviewStage } from './PreviewStage'
@@ -22,6 +23,16 @@ export function OnboardingStages({ initialConfig, sessionId }: OnboardingStagesP
     queueMicrotask(() => setSaved(true)) // real save debounce is in storage layer
   }
 
+  // Persist config changes (including search_queries after preview) to localStorage.
+  useEffect(() => {
+    try {
+      const existing = loadOnboardingState() ?? newOnboardingState()
+      saveOnboardingState({ ...existing, config })
+    } catch {
+      /* ignore */
+    }
+  }, [config])
+
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <StageBreadcrumb current={stage} onNavigate={setStage} savedIndicator={stage === 'plan' && saved} />
@@ -34,6 +45,7 @@ export function OnboardingStages({ initialConfig, sessionId }: OnboardingStagesP
           sessionId={sessionId}
           onBack={() => setStage('plan')}
           onStart={() => setStage('start')}
+          onQueries={(search_queries) => patch({ search_queries })}
         />
       )}
       {stage === 'start' && (

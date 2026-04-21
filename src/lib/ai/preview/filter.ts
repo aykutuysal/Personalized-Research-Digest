@@ -100,6 +100,7 @@ export async function filterCandidates(
     poolLines,
   ].join('\n')
 
+  console.log(`${tag} prompt chars=${userPrompt.length} ---\n${userPrompt}\n---`)
   const { object, usage, providerMetadata } = await generateObject({
     model: filterModel({ sessionId: opts.sessionId ?? null }),
     schema: filterSchema,
@@ -107,6 +108,7 @@ export async function filterCandidates(
     prompt: userPrompt,
     temperature: 0.2,
   })
+  console.log(`${tag} response ${JSON.stringify(object)}`)
 
   const cost = (providerMetadata?.openrouter as { usage?: { cost?: number } } | undefined)?.usage?.cost
 
