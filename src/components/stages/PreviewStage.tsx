@@ -91,42 +91,52 @@ export function PreviewStage({ config, sessionId, onBack, onStart }: PreviewStag
 
   if (error && !ready) {
     return (
-      <div className="mx-auto flex max-w-[680px] flex-col gap-4 px-12 py-20">
-        <div className="text-[12px] uppercase tracking-[0.16em] text-accent">Couldn&apos;t finish</div>
-        <p className="font-display text-[15px] text-ink-soft">{error}</p>
-        <button
-          onClick={onBack}
-          className="self-start rounded border border-line-strong px-4 py-2 text-[12px] uppercase tracking-[0.1em] text-ink-soft hover:border-accent hover:text-accent"
-        >
-          ← Edit plan
-        </button>
+      <div className="flex min-h-0 flex-1 flex-col">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden">
+          <div className="mx-auto flex max-w-[680px] flex-col gap-4 px-12 py-20">
+            <div className="text-[12px] uppercase tracking-[0.16em] text-accent">Couldn&apos;t finish</div>
+            <p className="font-display text-[15px] text-ink-soft">{error}</p>
+            <button
+              onClick={onBack}
+              className="self-start rounded border border-line-strong px-4 py-2 text-[12px] uppercase tracking-[0.1em] text-ink-soft hover:border-accent hover:text-accent"
+            >
+              ← Edit plan
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
 
   if (!ready) {
     return (
-      <PreviewLoadingView
-        subject={config.subject}
-        totalAreas={config.research_areas.length}
-        state={state}
-      />
+      <div className="flex min-h-0 flex-1 flex-col">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden">
+          <PreviewLoadingView
+            subject={config.subject}
+            totalAreas={config.research_areas.length}
+            state={state}
+          />
+        </div>
+      </div>
     )
   }
 
   return (
-    <>
-      <PreviewIssueView
-        config={config}
-        body={ready.body}
-        references={ready.references}
-        papersScanned={ready.papersScanned}
-        onStart={onStart}
-      />
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        <PreviewIssueView
+          config={config}
+          body={ready.body}
+          references={ready.references}
+          papersScanned={ready.papersScanned}
+          onStart={onStart}
+        />
+      </div>
       {/* Sticky footer CTA for mobile — desktop has sidebar CTA + end-of-article CTA */}
       <div className="hidden max-[900px]:block">
         <StickyFooterCta label="Start my digest" onClick={onStart} />
       </div>
-    </>
+    </div>
   )
 }

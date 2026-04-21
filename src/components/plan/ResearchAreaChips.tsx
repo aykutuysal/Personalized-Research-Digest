@@ -54,10 +54,7 @@ export function ResearchAreaChips({ areas, onChange }: ResearchAreaChipsProps) {
 
   return (
     <div>
-      <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-        Research areas
-      </div>
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2">
         {areas.map((a) =>
           editingId === a.id ? (
             <input
