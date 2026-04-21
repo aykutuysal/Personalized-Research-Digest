@@ -184,7 +184,7 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   }
 
   if (finalConfig) {
-    return <ResearchPlanView initialConfig={finalConfig} onReset={onReset} />
+    return <ResearchPlanView initialConfig={finalConfig} sessionId={conversationId} onReset={onReset} />
   }
 
   return (

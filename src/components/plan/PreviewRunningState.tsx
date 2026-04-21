@@ -8,6 +8,7 @@ import type { SearchQuery } from '@/lib/config-schema'
 
 export interface PreviewRunningStateProps {
   config: DigestConfig
+  sessionId?: string | null
   onDone: (payload: {
     body: string
     references: ReferencePaper[]
@@ -27,7 +28,7 @@ const STATUS_LINES = [
   'Writing your editorial…',
 ]
 
-export function PreviewRunningState({ config, onDone, onError }: PreviewRunningStateProps) {
+export function PreviewRunningState({ config, sessionId, onDone, onError }: PreviewRunningStateProps) {
   const [statusIdx, setStatusIdx] = useState(0)
   const [papersScanned, setPapersScanned] = useState(0)
   const [areasDone, setAreasDone] = useState<number>(0)
@@ -50,7 +51,10 @@ export function PreviewRunningState({ config, onDone, onError }: PreviewRunningS
       try {
         const res = await fetch('/api/preview-digest', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            ...(sessionId ? { 'x-session-id': sessionId } : {}),
+          },
           body: JSON.stringify(config),
           signal: abort.signal,
         })

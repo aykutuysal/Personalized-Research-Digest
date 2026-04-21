@@ -205,7 +205,7 @@ export async function runPreviewPipeline(
     }))
     emit({
       kind: 'done',
-      body: `_Your editor couldn't finish this first read. You'll see the full write-up after you subscribe._\n\nMost recent across your research areas:\n\n${references.map((r, i) => `${i + 1}. ${r.title}`).join('\n')}`,
+      body: `_Your editor couldn't finish this preview. You'll see the full write-up after you subscribe._\n\nMost recent across your research areas:\n\n${references.map((r, i) => `${i + 1}. ${r.title}`).join('\n')}`,
       references,
       queries: library,
     })

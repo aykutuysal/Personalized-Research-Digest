@@ -63,7 +63,7 @@ No cadence question. No in-chat preview. No `generateConfig` from chat.
 4. Research Plan view renders. All four text fields are editable inline (see §8).
 5. User clicks **Preview your digest** → `POST /api/preview-digest` with the current config.
 6. SSE stream drives a progress UI (§10).
-7. When `done` lands, the preview renders below the plan: user's template populated with 5 papers + a numbered references list + a two-column "this first read / what your real digest does differently" block (§11).
+7. When `done` lands, the preview renders below the plan: user's template populated with 5 papers + a numbered references list + a two-column "this preview / what your real digest does differently" block (§11).
 8. Any edit to one of the four text fields invalidates `schedule` and transitions the preview to `stale`.
 
 **Cadence + Subscribe phase (UI, no LLM):**
@@ -283,7 +283,7 @@ Error handling per stage:
 | seed fetch | all 0 results | fallback: single wildcard on raw `profile` text; if still 0: `error` |
 | library LLM | parse error or fewer queries than areas | retry once; on 2nd: `error` |
 | library fetch | one query 429/5xx | retry in client; continue with partial pool as long as ≥50% resolve |
-| curator LLM | parse error or <3 referenceIds | retry once; on 2nd: fallback — render top 5 papers by recency with no editorial body, plus banner *"Your editor couldn't finish this first read. You'll see the full write-up after you subscribe."* |
+| curator LLM | parse error or <3 referenceIds | retry once; on 2nd: fallback — render top 5 papers by recency with no editorial body, plus banner *"Your editor couldn't finish this preview. You'll see the full write-up after you subscribe."* |
 
 Observability: one structured log per stage, prefixed `[preview <sessionSlice>]`, matching the existing `[showcase ...]` format. Includes per-stage cost + timing.
 
@@ -294,7 +294,7 @@ Client consumption: `PreviewRunningState` uses `fetch()` + `response.body.getRea
 Layout (top to bottom):
 
 1. **Eyebrow:**
-   `YOUR DIGEST · FIRST READ` (emerald uppercase 10px).
+   `YOUR DIGEST · PREVIEW` (emerald uppercase 10px).
    Subcopy: *Rendered in the format you asked for. Five papers this time — your real digest pulls from many more.*
 
 2. **The rendered digest body.** Markdown, rendered with `react-markdown` + `remark-gfm`, no raw HTML. Styled to match the Research Plan's typography: `font-display` headings, reading-width (`max-w-prose`), serif body. This is the hero. Whatever shape the user's `output_style` implied — sections, bullets, prose — gets honored here.
@@ -305,7 +305,7 @@ Layout (top to bottom):
 
    **Left (factual):**
    ```
-   This first read.
+   This preview.
    76 papers scanned · 8 research areas covered · 5 chosen for this sample
 
    Your curator worked across abstracts, venues, and publication dates
@@ -334,7 +334,7 @@ Layout (top to bottom):
 Copy rules (enforced in code via constants, linted by eye):
 
 - Avoid: *limited, partial, reduced, trial, demo, sample version, basic, weekly* (cadence-specific words).
-- Use: *first read, opening pass, quick survey, cycle, your cadence, per digest*.
+- Use: *preview, opening pass, quick survey, cycle, your cadence, per digest*.
 
 ## 12. Curator (`prompts/preview-curator-system.md`)
 

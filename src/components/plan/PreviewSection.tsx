@@ -19,6 +19,7 @@ interface ReadyPayload {
 
 export interface PreviewSectionProps {
   config: DigestConfig
+  sessionId?: string | null                    // onboarding conversation id — forwarded to preview SSE as x-session-id so OpenRouter groups calls under the same session
   stale: boolean                               // parent toggles this when any field edits
   onPreviewSettled: () => void                 // parent clears stale flag when preview arrives
   onScheduleSet: (s: Schedule) => void
@@ -27,6 +28,7 @@ export interface PreviewSectionProps {
 
 export function PreviewSection({
   config,
+  sessionId,
   stale,
   onPreviewSettled,
   onScheduleSet,
@@ -83,6 +85,7 @@ export function PreviewSection({
       {running && (
         <PreviewRunningState
           config={config}
+          sessionId={sessionId}
           onDone={handleDone}
           onError={handleError}
         />

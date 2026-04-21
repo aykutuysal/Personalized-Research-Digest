@@ -10,10 +10,11 @@ import { PreviewSection } from './PreviewSection'
 
 export interface ResearchPlanViewProps {
   initialConfig: DigestConfig
+  sessionId?: string | null
   onReset: () => void
 }
 
-export function ResearchPlanView({ initialConfig, onReset }: ResearchPlanViewProps) {
+export function ResearchPlanView({ initialConfig, sessionId, onReset }: ResearchPlanViewProps) {
   const [config, setConfig] = useState<DigestConfig>(initialConfig)
   const [previewStale, setPreviewStale] = useState(false)
 
@@ -61,6 +62,7 @@ export function ResearchPlanView({ initialConfig, onReset }: ResearchPlanViewPro
 
         <PreviewSection
           config={config}
+          sessionId={sessionId}
           stale={previewStale}
           onPreviewSettled={() => setPreviewStale(false)}
           onScheduleSet={(schedule) => setConfig((c) => ({ ...c, schedule }))}

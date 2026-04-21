@@ -38,7 +38,7 @@ export function PreviewReadyState({
       <div className="flex items-start justify-between gap-6">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-            Your digest · First read
+            Your digest · Preview
           </div>
           <p className="mt-1 max-w-prose font-display text-[14px] italic text-ink-soft">
             Rendered in the format you asked for. Five papers this time — your real digest pulls from many more.
@@ -76,7 +76,7 @@ export function PreviewReadyState({
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-            This first read
+            This preview
           </div>
           <p className="mt-2 font-display text-[14px] leading-[1.6] text-ink">
             {papersScanned.toLocaleString()} papers scanned · {config.research_areas.length} research areas covered · {references.length} chosen for this sample

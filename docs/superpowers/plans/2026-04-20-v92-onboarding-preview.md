@@ -1194,7 +1194,7 @@ ANTI-PATTERNS — avoid entirely:
 - No scaffolding phrases ("in conclusion", "in summary", "this brief").
 - No Introduction/Conclusion headers unless the reader's template explicitly asks for them.
 - No per-paper paragraphs unless the reader's template explicitly asks for that structure.
-- Do not mention that this is a preview or first read — the surrounding UI handles that framing.
+- Do not mention that this is a preview — the surrounding UI handles that framing.
 - Do not reference yourself ("I read", "in my view"). The editorial speaks about the field.
 
 Respond with ONLY a JSON object:
@@ -1507,7 +1507,7 @@ export async function runPreviewPipeline(
     }))
     emit({
       kind: 'done',
-      body: `_Your editor couldn't finish this first read. You'll see the full write-up after you subscribe._\n\nMost recent across your research areas:\n\n${references.map((r, i) => `${i + 1}. ${r.title}`).join('\n')}`,
+      body: `_Your editor couldn't finish this preview. You'll see the full write-up after you subscribe._\n\nMost recent across your research areas:\n\n${references.map((r, i) => `${i + 1}. ${r.title}`).join('\n')}`,
       references,
       queries: library,
     })
@@ -2978,7 +2978,7 @@ export function PreviewReadyState({
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-            This first read
+            This preview
           </div>
           <p className="mt-2 font-display text-[14px] leading-[1.6] text-ink">
             {papersScanned.toLocaleString()} papers scanned · {config.research_areas.length} research areas covered · {references.length} chosen for this sample
