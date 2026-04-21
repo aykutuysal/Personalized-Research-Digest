@@ -3,7 +3,7 @@ import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import type { DigestConfig } from '@/lib/config-schema'
 
 const KEY = 'rd:onboarding:v2'
-const SCHEMA_VERSION = 2 as const
+const SCHEMA_VERSION = 3 as const
 
 export interface OnboardingLocalState {
   schemaVersion: typeof SCHEMA_VERSION
@@ -14,17 +14,43 @@ export interface OnboardingLocalState {
   lastUpdated: string
 }
 
+/**
+ * Migrates a v2 stored payload that may still carry the old `output_style`
+ * field (before the format_structure / voice_language schema split in Task 1).
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function migrateFromV2(raw: any): any {
+  if (!raw || typeof raw !== 'object') return raw
+  const cfg = raw.config
+  if (cfg && typeof cfg.output_style === 'string' && !cfg.format_structure) {
+    cfg.format_structure = cfg.output_style
+    cfg.voice_language = ''
+    delete cfg.output_style
+  }
+  raw.schemaVersion = SCHEMA_VERSION
+  return raw
+}
+
 export function loadOnboardingState(): OnboardingLocalState | null {
   if (typeof window === 'undefined') return null
   try {
     const raw = window.localStorage.getItem(KEY)
     if (!raw) return null
-    const parsed = JSON.parse(raw) as OnboardingLocalState
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const parsed = JSON.parse(raw) as any
+
+    if (parsed.schemaVersion === 2) {
+      const migrated = migrateFromV2(parsed) as OnboardingLocalState
+      // Persist the migrated state immediately so next load is clean.
+      window.localStorage.setItem(KEY, JSON.stringify(migrated))
+      return migrated
+    }
+
     if (parsed.schemaVersion !== SCHEMA_VERSION) {
       window.localStorage.removeItem(KEY)
       return null
     }
-    return parsed
+    return parsed as OnboardingLocalState
   } catch {
     return null
   }
