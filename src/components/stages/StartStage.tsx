@@ -53,7 +53,7 @@ export function StartStage({ config, onChange, onCommit }: StartStageProps) {
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <div className="flex-1 overflow-y-auto overflow-x-hidden">
-        <div className="mx-auto max-w-[720px] px-12 py-16 pb-12">
+        <div className="mx-auto max-w-[var(--reading-width)] px-12 py-16 pb-12">
       <div className="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Final step</div>
       <div className="my-[10px] font-display text-[46px] font-medium leading-[1.1] tracking-[-0.015em] text-ink">Start your digest.</div>
       <p className="mb-10 max-w-[540px] font-display text-[16px] italic leading-[1.55] text-ink-dim">

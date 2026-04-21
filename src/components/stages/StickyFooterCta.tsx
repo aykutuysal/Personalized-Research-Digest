@@ -11,7 +11,7 @@ export interface StickyFooterCtaProps {
 export function StickyFooterCta({ label, onClick, helper, disabled }: StickyFooterCtaProps) {
   return (
     <div className="rd-sticky-footer">
-      <div className="mx-auto flex max-w-[820px] flex-col items-center gap-2">
+      <div className="mx-auto flex max-w-[var(--reading-width)] flex-col items-center gap-2">
         <button
           type="button"
           onClick={onClick}

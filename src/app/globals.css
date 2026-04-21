@@ -158,10 +158,10 @@ textarea.rd-scroll,
 .rd-sticky-footer {
   position: sticky;
   bottom: 0;
-  background: var(--bg-elev-1);
+  background: var(--bg-overlay);
+  backdrop-filter: blur(8px);
   border-top: 1px solid var(--line);
-  box-shadow: 0 -6px 16px -8px rgba(31, 42, 34, 0.1);
-  padding: 14px 24px calc(14px + var(--safe-bottom)) 24px;
+  padding: 24px 24px calc(24px + var(--safe-bottom)) 24px;
   z-index: 30;
 }
 @media (max-width: 600px) {

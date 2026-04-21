@@ -15,7 +15,7 @@ export function PlanStage({ config, onChange, onContinue }: PlanStageProps) {
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <div className="flex-1 overflow-y-auto overflow-x-hidden">
-        <div className="mx-auto max-w-[820px] px-12 py-16 pb-12">
+        <div className="mx-auto max-w-[var(--reading-width)] px-12 py-16 pb-12">
       <div className="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">
         Your research plan
       </div>
