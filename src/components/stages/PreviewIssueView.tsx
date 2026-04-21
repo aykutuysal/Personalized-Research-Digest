@@ -31,7 +31,7 @@ export function PreviewIssueView({
   }, [])
 
   return (
-    <div className="grid grid-cols-[280px_1fr] max-[900px]:grid-cols-1">
+    <div className="mx-auto grid max-w-[1040px] grid-cols-[280px_1fr] max-[900px]:max-w-none max-[900px]:grid-cols-1">
       <PreviewSidebar
         papersScanned={papersScanned}
         totalAreas={config.research_areas.length}
