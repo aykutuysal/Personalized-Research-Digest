@@ -1,5 +1,5 @@
 'use client'
-import { useCallback } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { PreviewSidebar } from './PreviewSidebar'
 import { SourceCard } from './SourceCard'
 import { MarkdownText } from '@/components/chat/MarkdownText'
@@ -91,8 +91,42 @@ export function PreviewIssueView({
 }
 
 function MarkdownWithCitations({ body, onCite }: { body: string; onCite: (n: number) => void }) {
-  // Citation chip wiring is handled in Task 14.
-  // For now, render plain markdown.
-  void onCite
-  return <MarkdownText text={body} />
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const root = ref.current
+    if (!root) return
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT)
+    const nodes: Text[] = []
+    while (walker.nextNode()) nodes.push(walker.currentNode as Text)
+    const RE = /\[(\d+)\]/g
+    for (const node of nodes) {
+      const text = node.nodeValue ?? ''
+      if (!RE.test(text)) continue
+      RE.lastIndex = 0
+      const frag = document.createDocumentFragment()
+      let lastIdx = 0
+      let m: RegExpExecArray | null
+      while ((m = RE.exec(text)) !== null) {
+        if (m.index > lastIdx) frag.appendChild(document.createTextNode(text.slice(lastIdx, m.index)))
+        const btn = document.createElement('button')
+        btn.type = 'button'
+        btn.textContent = `[${m[1]}]`
+        btn.className =
+          'mx-[2px] inline-block rounded-[3px] bg-accent-soft px-[5px] py-[1px] align-baseline text-[10px] font-semibold text-accent hover:bg-accent-soft/70'
+        btn.setAttribute('aria-label', `Go to source ${m[1]}`)
+        const n = parseInt(m[1], 10)
+        btn.addEventListener('click', () => onCite(n))
+        frag.appendChild(btn)
+        lastIdx = m.index + m[0].length
+      }
+      if (lastIdx < text.length) frag.appendChild(document.createTextNode(text.slice(lastIdx)))
+      node.replaceWith(frag)
+    }
+  }, [body, onCite])
+
+  return (
+    <div ref={ref}>
+      <MarkdownText text={body} />
+    </div>
+  )
 }
