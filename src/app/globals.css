@@ -167,3 +167,16 @@ textarea.rd-scroll,
 @media (max-width: 600px) {
   .rd-sticky-footer { padding-left: 16px; padding-right: 16px; }
 }
+
+.rd-mdlist > li { counter-increment: sec; position: relative; margin-bottom: 10px; }
+.rd-mdlist > li::before {
+  content: counter(sec) '.';
+  position: absolute; left: -22px; top: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--accent);
+  width: 18px; text-align: right;
+}
+.rd-mdlist > li strong {
+  font-style: italic; font-weight: 500;
+}
