@@ -180,3 +180,9 @@ textarea.rd-scroll,
 .rd-mdlist > li strong {
   font-style: italic; font-weight: 500;
 }
+
+@keyframes rd-blink { 50% { opacity: 0; } }
+@keyframes rd-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}
