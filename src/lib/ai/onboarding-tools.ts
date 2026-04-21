@@ -37,13 +37,13 @@ const handoffToPlanInput = z.object({
   config: z
     .record(z.string(), z.unknown())
     .describe(
-      'The assembled fields: subject, profile, output_style, research_areas. Will be validated.',
+      'The assembled fields: subject, profile, format_structure, voice_language, research_areas. Will be validated.',
     ),
 })
 
 const handoffToPlanTool = tool({
   description:
-    'Finalize the four-field plan draft (subject, profile, output_style, research_areas) once they are all ready. The UI transitions to the Research Plan view on success. On failure, fix the named fields and retry.',
+    'Finalize the five-field plan draft (subject, profile, format_structure, voice_language, research_areas) once they are all ready. The UI transitions to the Research Plan view on success. On failure, fix the named fields and retry.',
   inputSchema: handoffToPlanInput,
   execute: async (args) => {
     const parsed = handoffDraftSchema.safeParse(args.config)

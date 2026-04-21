@@ -19,25 +19,32 @@ export const scheduleSchema = z.object({
   description: z.string().min(1),
 })
 
-// Single source of truth. `schedule` is optional so the same object covers
-// the post-chat state (no schedule yet) and the subscribe-ready state.
+export const planSchema = z.enum(['monthly', 'yearly'])
+
 export const digestConfigSchema = z.object({
   subject: z.string().min(1),
   profile: z.string().min(1),
-  output_style: z.string().min(1),
+  // Split from the old `output_style`. Rendered separately in the UI.
+  format_structure: z.string().min(1),
+  voice_language: z.string().min(1),
   research_areas: z.array(researchAreaSchema).min(1),
   search_queries: z.array(searchQuerySchema).default([]),
+  plan: planSchema.default('yearly'),
+  email: z.string().email().optional(),
   schedule: scheduleSchema.optional(),
   version: z.number().int().min(1).default(1),
   created_at: z.string().min(1),
   updated_at: z.string().min(1),
 })
 
-// Used by Subscribe — enforces schedule is set.
-export const subscribableConfigSchema = digestConfigSchema.required({ schedule: true })
+export const subscribableConfigSchema = digestConfigSchema.required({
+  schedule: true,
+  email: true,
+})
 
 export type ResearchArea = z.infer<typeof researchAreaSchema>
 export type SearchQuery = z.infer<typeof searchQuerySchema>
 export type Schedule = z.infer<typeof scheduleSchema>
+export type Plan = z.infer<typeof planSchema>
 export type DigestConfig = z.infer<typeof digestConfigSchema>
 export type SubscribableConfig = z.infer<typeof subscribableConfigSchema>

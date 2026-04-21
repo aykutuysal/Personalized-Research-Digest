@@ -3,6 +3,7 @@
 
 import { useState } from 'react'
 import type { ResearchArea } from '@/lib/config-schema'
+import { sentenceCase } from '@/lib/ui/sentence-case'
 
 export interface ResearchAreaChipsProps {
   areas: ResearchArea[]
@@ -80,7 +81,7 @@ export function ResearchAreaChips({ areas, onChange }: ResearchAreaChipsProps) {
               className="inline-flex items-center gap-1 rounded-full border border-line bg-bg-elev-1 px-3 py-1 text-[13px] text-ink hover:border-line-strong"
             >
               <button onClick={() => startEdit(a)} className="text-left">
-                {a.text}
+                {sentenceCase(a.text)}
               </button>
               <button
                 onClick={() => remove(a.id)}

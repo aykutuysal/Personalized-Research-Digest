@@ -66,7 +66,7 @@ export interface CuratorResult {
  * references. Paper count is fixed (5) per prompt; schema has no volume_target.
  */
 export async function curatePreview(
-  config: Pick<DigestConfig, 'subject' | 'profile' | 'output_style' | 'research_areas'>,
+  config: Pick<DigestConfig, 'subject' | 'profile' | 'format_structure' | 'voice_language' | 'research_areas'>,
   pool: OpenAlexWork[],
   opts: { sessionId?: string | null } = {},
 ): Promise<CuratorResult> {
@@ -84,6 +84,8 @@ export async function curatePreview(
 
   const areasText = config.research_areas.map((a, i) => `  ${i + 1}. ${a.text}`).join('\n')
 
+  const outputStyle = `${config.format_structure}\n\n${config.voice_language}`.trim()
+
   const userPrompt = [
     `READER PROFILE:\n${config.profile}`,
     ``,
@@ -92,8 +94,8 @@ export async function curatePreview(
     `RESEARCH AREAS:`,
     areasText,
     ``,
-    `THE READER'S DIGEST TEMPLATE (output_style — render exactly):`,
-    config.output_style,
+    `THE READER'S DIGEST TEMPLATE (render exactly):`,
+    outputStyle,
     ``,
     `CANDIDATE POOL (${pool.length} papers, deduped across queries):`,
     poolLines,
