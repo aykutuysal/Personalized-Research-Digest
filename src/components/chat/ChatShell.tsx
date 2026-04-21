@@ -5,7 +5,7 @@ import { DefaultChatTransport } from 'ai'
 import { LayoutGroup, motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
-import { ResearchPlanView } from '@/components/plan/ResearchPlanView'
+import { OnboardingStages } from '@/components/stages/OnboardingStages'
 import type { ResearchChatMessage } from '@/lib/ai/chat-types'
 import type { DigestConfig } from '@/lib/config-schema'
 import {
@@ -84,7 +84,7 @@ export function ChatShell({ initialMode }: ChatShellProps) {
           const out = p.output
           if (out.ok) {
             // handoffToPlan returns the pre-schedule subset; stamp metadata for
-            // the DigestConfig shape ResearchPlanView expects.
+            // the full DigestConfig shape OnboardingStages expects.
             const now = new Date().toISOString()
             return {
               ...out.config,
@@ -111,16 +111,6 @@ export function ChatShell({ initialMode }: ChatShellProps) {
       /* ignore */
     }
   }, [initialMode, finalConfig])
-
-  const onReset = () => {
-    try {
-      clearOnboardingState()
-      sessionStorage.removeItem(PENDING_KEY)
-    } catch {
-      /* ignore */
-    }
-    router.push('/')
-  }
 
   // When mounted in docked mode, pick up any pending first message from /.
   useEffect(() => {
@@ -184,7 +174,7 @@ export function ChatShell({ initialMode }: ChatShellProps) {
   }
 
   if (finalConfig) {
-    return <ResearchPlanView initialConfig={finalConfig} sessionId={conversationId} onReset={onReset} />
+    return <OnboardingStages initialConfig={finalConfig} sessionId={conversationId} />
   }
 
   return (
