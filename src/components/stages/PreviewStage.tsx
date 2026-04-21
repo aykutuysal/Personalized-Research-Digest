@@ -1,6 +1,6 @@
 // src/components/stages/PreviewStage.tsx
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { DigestConfig, SearchQuery } from '@/lib/config-schema'
 import type { ProgressEvent, ReferencePaper } from '@/lib/ai/preview/progress-events'
 import { mapProgressToStage, type ProgressState } from '@/lib/ai/preview/map-progress-to-stage'
@@ -29,12 +29,21 @@ export function PreviewStage({ config, sessionId, onBack, onStart, onQueries }: 
   const [error, setError] = useState<string | null>(null)
   const state: ProgressState = mapProgressToStage(events, config.research_areas.length)
 
+  // Snapshot the config/callbacks so the fetch effect's deps stay stable — we
+  // want exactly one pipeline run per mount, regardless of parent re-renders
+  // (e.g. when we call onQueries at the end and the parent patches config).
+  const configRef = useRef(config)
+  const onQueriesRef = useRef(onQueries)
+  configRef.current = config
+  onQueriesRef.current = onQueries
+
   useEffect(() => {
     const abort = new AbortController()
     // Reset stream state on (re)mount so Strict-Mode double-invoke restarts cleanly.
     setEvents([])
     setReady(null)
     setError(null)
+    const cfg = configRef.current
     ;(async () => {
       try {
         const res = await fetch('/api/preview-digest', {
@@ -43,7 +52,7 @@ export function PreviewStage({ config, sessionId, onBack, onStart, onQueries }: 
             'Content-Type': 'application/json',
             ...(sessionId ? { 'x-session-id': sessionId } : {}),
           },
-          body: JSON.stringify(config),
+          body: JSON.stringify(cfg),
           signal: abort.signal,
         })
         if (!res.ok || !res.body) {
@@ -70,14 +79,14 @@ export function PreviewStage({ config, sessionId, onBack, onStart, onQueries }: 
             accumulated.push(evt)
             setEvents((prev) => prev.concat(evt))
             if (evt.kind === 'done') {
-              const finalState = mapProgressToStage(accumulated, config.research_areas.length)
+              const finalState = mapProgressToStage(accumulated, cfg.research_areas.length)
               setReady({
                 body: evt.body,
                 references: evt.references,
                 queries: evt.queries,
                 papersScanned: finalState.papersScanned,
               })
-              onQueries?.(evt.queries)
+              onQueriesRef.current?.(evt.queries)
             }
             if (evt.kind === 'error') {
               setError(evt.message)
@@ -90,7 +99,10 @@ export function PreviewStage({ config, sessionId, onBack, onStart, onQueries }: 
       }
     })()
     return () => abort.abort()
-  }, [config, sessionId])
+    // Intentional: run exactly once per mount. Re-running on config change
+    // would loop when `done` triggers onQueries → parent patches config.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sessionId])
 
   if (error && !ready) {
     return (
