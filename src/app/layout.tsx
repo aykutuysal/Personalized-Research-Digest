@@ -53,9 +53,11 @@ export default function RootLayout({
       className={`${playfairDisplay.variable} ${geist.variable} ${jetBrainsMono.variable}`}
     >
       <body className="font-sans bg-bg text-ink antialiased">
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeInitScript}
-        </Script>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         {children}
       </body>
     </html>

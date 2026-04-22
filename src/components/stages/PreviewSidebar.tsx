@@ -5,9 +5,6 @@ export interface PreviewSidebarProps {
   papersScanned: number
   totalAreas: number
   papersSelected: number
-  ctaLabel: string
-  onCta: () => void
-  ctaHelper?: ReactNode
 }
 
 const SELL_BULLETS: Array<{ lead: string; body: string }> = [
@@ -22,12 +19,9 @@ export function PreviewSidebar({
   papersScanned,
   totalAreas,
   papersSelected,
-  ctaLabel,
-  onCta,
-  ctaHelper,
 }: PreviewSidebarProps) {
   return (
-    <aside className="sticky top-0 flex h-[calc(100dvh-var(--header-h)-var(--breadcrumb-h))] flex-col gap-4 border-r border-line bg-bg-elev-1 p-6 pb-5 max-[900px]:static max-[900px]:h-auto">
+    <aside className="flex flex-col gap-4 border-r border-line bg-bg-elev-1 p-6 pb-5 max-[900px]:border-r-0 max-[900px]:border-b">
       <Block label="This is a preview">
         <p className="text-[12px] leading-[1.55] text-ink-soft">
           A short sample so you can feel the voice and paper-picking. Your real digest does much more.
@@ -52,16 +46,6 @@ export function PreviewSidebar({
           ))}
         </ul>
       </Block>
-
-      <div className="mt-auto border-t border-line-strong pt-4">
-        <button
-          onClick={onCta}
-          className="w-full rounded-[3px] bg-accent px-[14px] py-[13px] text-[12px] font-semibold uppercase tracking-[0.08em] text-accent-ink hover:bg-accent-hover"
-        >
-          {ctaLabel}
-        </button>
-        {ctaHelper && <div className="mt-2 text-center text-[11px] italic text-ink-faint">{ctaHelper}</div>}
-      </div>
     </aside>
   )
 }

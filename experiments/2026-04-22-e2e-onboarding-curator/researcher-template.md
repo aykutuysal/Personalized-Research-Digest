@@ -1,0 +1,13 @@
+# researcher — generated template
+
+## format_structure
+
+1. **Editor's read.** Open with a short, reader-anchored essay that starts from the mechanism-level question on the table for this issue: what these papers change about how AI agents actually work, what they reveal about planning, tool use, memory, coordination, or adaptation, and which claims look more structurally justified after reading them. This is not a field summary. It should feel like a pointed take for a researcher deciding which ideas are real, which are superficial, and where the underlying algorithmic story has sharpened or cracked.
+2. **What seems to be doing the work.** Synthesize the papers around the core mechanism or formal idea they test. Name the proposed source of improvement plainly, compare how different papers isolate it, and separate genuine causal insight from performance that could be explained by confounds, scaffolding, or evaluation design. The reader should come away with a clearer model of why a result holds, not just that it does.
+3. **Methods worth reading closely.** Highlight the 1 to 2 papers that most reward serious attention to setup, ablations, or theoretical framing, with a sentence on what makes each one unusually informative. This section helps the reader decide where to spend real reading time.
+4. **Open questions.** Pull out the unresolved conceptual or mathematical questions these picks leave behind: assumptions that still look shaky, mechanisms that remain underidentified, settings where the claimed explanation may not travel, and places where current evaluations still fail to distinguish competing accounts. The point is to show where the literature is still thin or overconfident.
+5. **The papers.** Give a compact numbered list of the five picks, each with 2 to 3 sentences placing the paper in conversation with the others: the mechanism it isolates, the real contribution, the main caveat, and who should read it closely. Skip generic abstract-style summaries and framework chatter. Keep the emphasis on algorithmic content, evidence, and explanatory value.
+
+## voice_language
+
+Write like a researcher briefing another researcher: precise, concept-forward, and easy to read, with no startup tone and no product language. Prioritize mechanisms, theoretical structure, ablation logic, and algorithmic insight over applications, tooling, or implementation fashion. Use plain technical language rather than jargon for its own sake, but do not oversimplify when the formal idea matters. The digest should read as an editorial synthesis first and a paper list second, with selective detail on setup or numbers only when they change the interpretation. Target roughly 600 to 800 words.

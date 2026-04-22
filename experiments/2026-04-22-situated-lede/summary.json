@@ -1,0 +1,115 @@
+{
+  "ranAt": "2026-04-22T02:20:59.841Z",
+  "model": "openai/gpt-5.4",
+  "n": 3,
+  "results": [
+    {
+      "ok": true,
+      "label": "builder-situated",
+      "run": 1,
+      "ms": 28176,
+      "cost": 0.054709,
+      "totalTokens": 16597,
+      "inputTokens": 15148,
+      "outputTokens": 1449,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154789938",
+        "W7154537784",
+        "W7154971597"
+      ],
+      "bodyChars": 6770
+    },
+    {
+      "ok": true,
+      "label": "builder-situated",
+      "run": 2,
+      "ms": 26451,
+      "cost": 0.053539,
+      "totalTokens": 16519,
+      "inputTokens": 15148,
+      "outputTokens": 1371,
+      "referenceIds": [
+        "W7154789938",
+        "W7154716487",
+        "W7154458881",
+        "W7154537784",
+        "W7154971597"
+      ],
+      "bodyChars": 6309
+    },
+    {
+      "ok": true,
+      "label": "builder-situated",
+      "run": 3,
+      "ms": 26143,
+      "cost": 0.051859,
+      "totalTokens": 16407,
+      "inputTokens": 15148,
+      "outputTokens": 1259,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154789938",
+        "W7154537784",
+        "W7155011363"
+      ],
+      "bodyChars": 5984
+    },
+    {
+      "ok": true,
+      "label": "researcher-situated",
+      "run": 1,
+      "ms": 27995,
+      "cost": 0.024449,
+      "totalTokens": 16528,
+      "inputTokens": 15182,
+      "outputTokens": 1346,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154971597",
+        "W7154738737",
+        "W7155008820"
+      ],
+      "bodyChars": 6450
+    },
+    {
+      "ok": true,
+      "label": "researcher-situated",
+      "run": 2,
+      "ms": 28490,
+      "cost": 0.025199,
+      "totalTokens": 16578,
+      "inputTokens": 15182,
+      "outputTokens": 1396,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154971597",
+        "W7155011363",
+        "W7155019889"
+      ],
+      "bodyChars": 6575
+    },
+    {
+      "ok": true,
+      "label": "researcher-situated",
+      "run": 3,
+      "ms": 28014,
+      "cost": 0.054464,
+      "totalTokens": 16609,
+      "inputTokens": 15182,
+      "outputTokens": 1427,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7155019889",
+        "W7154971597",
+        "W7155008820"
+      ],
+      "bodyChars": 6766
+    }
+  ]
+}

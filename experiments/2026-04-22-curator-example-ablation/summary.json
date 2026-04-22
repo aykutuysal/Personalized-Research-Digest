@@ -1,0 +1,169 @@
+{
+  "ranAt": "2026-04-22T01:29:40.942Z",
+  "model": "openai/gpt-5.4",
+  "n": 3,
+  "results": [
+    {
+      "ok": true,
+      "label": "v2",
+      "run": 1,
+      "ms": 26750,
+      "cost": 0.024519,
+      "totalTokens": 16466,
+      "inputTokens": 15102,
+      "outputTokens": 1364,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154789938",
+        "W7154537784",
+        "W7155011363"
+      ],
+      "bodyChars": 6420
+    },
+    {
+      "ok": true,
+      "label": "v2",
+      "run": 2,
+      "ms": 27601,
+      "cost": 0.025254,
+      "totalTokens": 16515,
+      "inputTokens": 15102,
+      "outputTokens": 1413,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154537784",
+        "W7155011363",
+        "W7154789938"
+      ],
+      "bodyChars": 6743
+    },
+    {
+      "ok": true,
+      "label": "v2",
+      "run": 3,
+      "ms": 27150,
+      "cost": 0.024999,
+      "totalTokens": 16498,
+      "inputTokens": 15102,
+      "outputTokens": 1396,
+      "referenceIds": [
+        "W7154458881",
+        "W7154716487",
+        "W7154537784",
+        "W7154789938",
+        "W7155019889"
+      ],
+      "bodyChars": 6771
+    },
+    {
+      "ok": true,
+      "label": "v2b",
+      "run": 1,
+      "ms": 26231,
+      "cost": 0.0251195,
+      "totalTokens": 16386,
+      "inputTokens": 14981,
+      "outputTokens": 1405,
+      "referenceIds": [
+        "W7154716487",
+        "W7154971597",
+        "W7154789938",
+        "W7154458881",
+        "W7154537784"
+      ],
+      "bodyChars": 6832
+    },
+    {
+      "ok": true,
+      "label": "v2b",
+      "run": 2,
+      "ms": 25888,
+      "cost": 0.0534155,
+      "totalTokens": 16314,
+      "inputTokens": 14981,
+      "outputTokens": 1333,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154479191",
+        "W7154971597",
+        "W7154537784"
+      ],
+      "bodyChars": 6302
+    },
+    {
+      "ok": true,
+      "label": "v2b",
+      "run": 3,
+      "ms": 23744,
+      "cost": 0.0566375,
+      "totalTokens": 16260,
+      "inputTokens": 14981,
+      "outputTokens": 1279,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154537784",
+        "W7154789938",
+        "W7154971597"
+      ],
+      "bodyChars": 6149
+    },
+    {
+      "ok": true,
+      "label": "v2c",
+      "run": 1,
+      "ms": 29274,
+      "cost": 0.040291,
+      "totalTokens": 16580,
+      "inputTokens": 15106,
+      "outputTokens": 1474,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154971597",
+        "W7154537784",
+        "W7154789938"
+      ],
+      "bodyChars": 7117
+    },
+    {
+      "ok": true,
+      "label": "v2c",
+      "run": 2,
+      "ms": 23033,
+      "cost": 0.057415,
+      "totalTokens": 16416,
+      "inputTokens": 15106,
+      "outputTokens": 1310,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154971597",
+        "W7154537784",
+        "W7155011363"
+      ],
+      "bodyChars": 6268
+    },
+    {
+      "ok": true,
+      "label": "v2c",
+      "run": 3,
+      "ms": 27532,
+      "cost": 0.054958,
+      "totalTokens": 16521,
+      "inputTokens": 15106,
+      "outputTokens": 1415,
+      "referenceIds": [
+        "W7154716487",
+        "W7154971597",
+        "W7154458881",
+        "W7155011363",
+        "W7154789938"
+      ],
+      "bodyChars": 6812
+    }
+  ]
+}

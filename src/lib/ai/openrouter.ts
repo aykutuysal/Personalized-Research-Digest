@@ -39,6 +39,12 @@ function buildModel(modelId: string, sessionId: string | null | undefined) {
   const extraBody = sessionId ? { session_id: sessionId } : undefined
   return getOpenRouter()(modelId, {
     usage: { include: true },
+    // Response-healing unwraps ```json fences and repairs malformed JSON that
+    // some models return despite the system prompt. No-op when the model's
+    // output is already valid, so it's safe to enable for every stage that
+    // uses structured generation (filter, curator, seeds, proposals).
+    // https://openrouter.ai/docs/guides/features/plugins/response-healing
+    plugins: [{ id: 'response-healing' }],
     ...(extraBody ? { extraBody } : {}),
   })
 }

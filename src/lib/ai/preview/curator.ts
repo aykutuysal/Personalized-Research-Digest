@@ -74,7 +74,7 @@ export async function curatePreview(
   const started = Date.now()
 
   const poolLines = pool.map((p) => {
-    const abstract = reconstructAbstract(p.abstract_inverted_index).slice(0, 500)
+    const abstract = reconstructAbstract(p.abstract_inverted_index)
     return [
       `[id=${shortId(p.id)}] (${p.publication_date ?? '?'}, venue=${extractVenue(p) || '—'})`,
       `  title: ${p.title ?? '(no title)'}`,

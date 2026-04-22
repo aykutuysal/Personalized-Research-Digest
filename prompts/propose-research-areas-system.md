@@ -27,6 +27,22 @@ A research area is a stable sub-area the reader cares about, named with vocabula
 
 7. Use the reader's own vocabulary **when it overlaps with the academic literature's vocabulary**. If the reader is already an academic-register speaker (cardiologist, materials scientist, oceanographer), mirror them directly. If the reader is a practitioner whose native vocabulary is industry-speak, use labels that still feel readable to them but name a construct the research literature indexes — see rule 5. The downstream pipeline searches a scholarly database only; research areas the literature doesn't index are dead.
 
+8. **Search-grade umbrella terms stay.** If the reader's subject names one or more established academic frameworks, therapies, techniques, or algorithm/model classes that are themselves stable, indexed search terms in the literature, include each one **verbatim as its own research area**. Then add sub-areas *around* it, not *instead of* it.
+
+   Examples of search-grade umbrellas across fields:
+   - **Clinical psychology / psychiatry:** *"cognitive behavioral therapy" / "CBT"*, *"schema therapy"*, *"dialectical behavior therapy" / "DBT"*, *"acceptance and commitment therapy" / "ACT"*, *"EMDR"*, *"exposure and response prevention" / "ERP"*.
+   - **AI / ML (including emerging but canonical terms):** *"LLM agents"*, *"large language models" / "LLMs"*, *"retrieval-augmented generation" / "RAG"*, *"diffusion models"*, *"reinforcement learning"*, *"reinforcement learning from human feedback" / "RLHF"*, *"graph neural networks" / "GNN"*, *"federated learning"*, *"mixture of experts" / "MoE"*, *"vision-language models" / "VLM"*. Terms that feel new are still search-grade if the literature already treats them as a keyword — papers title themselves with the bare term, conferences have dedicated tracks, and a lit search on the term returns papers rather than noise. Prefer keeping them; let rule 2's precision test override only if the term genuinely matches noise.
+   - **Medicine / clinical research:** *"catheter ablation"*, *"CAR-T therapy"*, *"immune checkpoint inhibitors"*, *"mRNA vaccines"*, *"PRISMA methodology"*.
+   - **Statistics / methods:** *"structural equation modeling" / "SEM"*, *"Kalman filtering"*, *"Bayesian hierarchical modeling"*, *"causal inference"*.
+
+   Apply the same two-test gate as rule 2:
+   - *Does the field publish under this exact label roughly every week or two?* For named frameworks with their own textbooks, dedicated journals, or named conference tracks, yes.
+   - *If I ran this exact term as a lit search, would the top results be mostly papers this reader would want?* If yes, the umbrella is a first-class search target, not something to decompose away.
+
+   What this rule is **not**: a license to keep broad field names (*"cardiology"*, *"AI"*, *"machine learning"*, *"cancer"*, *"psychology"*) — those fail the second test by pulling everything. It's specifically for *named constructs* the literature itself treats as a keyword. Rule of thumb: if the subject term would plausibly be a paper-title substring across many recent papers, it qualifies; if it'd be a department name or a journal title, it doesn't.
+
+   Sub-areas around an umbrella should name the *mechanisms, populations, benchmarks, or adjacent techniques* inside it. For a CBT reader: include *"cognitive behavioral therapy"* itself, then sub-areas like *"behavioral activation for depression"*, *"cognitive restructuring in anxiety disorders"*, *"third-wave CBT (ACT, DBT, MBCT)"*. For an LLM-agents reader: include *"LLM agents"* itself, then sub-areas like *"tool-use and function calling"*, *"agent evaluation benchmarks (AgentBench, WebArena)"*, *"multi-agent collaboration"*, *"agent planning and reasoning (ReAct, Tree-of-Thoughts)"*. The umbrella catches foundational reviews, survey papers, and meta-analyses; the sub-areas catch mechanism-level work. You need both.
+
 ## Output format
 
 Return a JSON object exactly matching this shape:

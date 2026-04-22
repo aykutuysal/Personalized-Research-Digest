@@ -1,0 +1,115 @@
+{
+  "ranAt": "2026-04-22T01:37:49.776Z",
+  "model": "openai/gpt-5.4",
+  "n": 3,
+  "results": [
+    {
+      "ok": true,
+      "label": "v2c",
+      "run": 1,
+      "ms": 23883,
+      "cost": 0.024139,
+      "totalTokens": 16444,
+      "inputTokens": 15106,
+      "outputTokens": 1338,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154537784",
+        "W7154789938",
+        "W7154971597"
+      ],
+      "bodyChars": 6422
+    },
+    {
+      "ok": true,
+      "label": "v2c",
+      "run": 2,
+      "ms": 22235,
+      "cost": 0.023974,
+      "totalTokens": 16433,
+      "inputTokens": 15106,
+      "outputTokens": 1327,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154789938",
+        "W7154537784",
+        "W7155011363"
+      ],
+      "bodyChars": 6409
+    },
+    {
+      "ok": true,
+      "label": "v2c",
+      "run": 3,
+      "ms": 27204,
+      "cost": 0.026374,
+      "totalTokens": 16593,
+      "inputTokens": 15106,
+      "outputTokens": 1487,
+      "referenceIds": [
+        "W7154458881",
+        "W7154716487",
+        "W7154971597",
+        "W7154537784",
+        "W7155011363"
+      ],
+      "bodyChars": 7281
+    },
+    {
+      "ok": true,
+      "label": "v2d",
+      "run": 1,
+      "ms": 23201,
+      "cost": 0.0345085,
+      "totalTokens": 16319,
+      "inputTokens": 15025,
+      "outputTokens": 1294,
+      "referenceIds": [
+        "W7154716487",
+        "W7154479191",
+        "W7154458881",
+        "W7155011363",
+        "W7154887694"
+      ],
+      "bodyChars": 6263
+    },
+    {
+      "ok": true,
+      "label": "v2d",
+      "run": 2,
+      "ms": 23549,
+      "cost": 0.0348835,
+      "totalTokens": 16344,
+      "inputTokens": 15025,
+      "outputTokens": 1319,
+      "referenceIds": [
+        "W7154458881",
+        "W7154716487",
+        "W7154537784",
+        "W7154789938",
+        "W7154971597"
+      ],
+      "bodyChars": 6473
+    },
+    {
+      "ok": true,
+      "label": "v2d",
+      "run": 3,
+      "ms": 26895,
+      "cost": 0.0544345,
+      "totalTokens": 16457,
+      "inputTokens": 15025,
+      "outputTokens": 1432,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154789938",
+        "W7154537784",
+        "W7155011363"
+      ],
+      "bodyChars": 6935
+    }
+  ]
+}

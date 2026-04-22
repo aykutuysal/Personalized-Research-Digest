@@ -8,7 +8,9 @@ export const researchAreaSchema = z.object({
 
 export const searchQuerySchema = z.object({
   query: z.string().min(1),
-  research_area_id: z.number().int().min(1),
+  // 1..N points at a specific research area; 0 is reserved for umbrella queries
+  // derived from the subject (not tied to any single area).
+  research_area_id: z.number().int().min(0),
   source: z.enum(['preview', 'full', 'manual']),
   rationale: z.string().default(''),
 })

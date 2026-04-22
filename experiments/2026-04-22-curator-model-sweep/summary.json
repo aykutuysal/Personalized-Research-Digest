@@ -1,0 +1,274 @@
+{
+  "ranAt": "2026-04-22T00:29:46.768Z",
+  "results": [
+    {
+      "ok": true,
+      "model": "deepseek/deepseek-v3.2-speciale",
+      "ms": 391721,
+      "cost": 0.0254652,
+      "totalTokens": 30913,
+      "inputTokens": 14538,
+      "outputTokens": 16375,
+      "referenceIds": [
+        "W7154789938",
+        "W7154887694",
+        "W7154716487",
+        "W7154747159",
+        "W7154537784"
+      ],
+      "bodyChars": 3787
+    },
+    {
+      "ok": true,
+      "model": "deepseek/deepseek-v3.2",
+      "ms": 26157,
+      "cost": 0.004134977,
+      "totalTokens": 15374,
+      "inputTokens": 14423,
+      "outputTokens": 951,
+      "referenceIds": [
+        "W7154939277",
+        "W7154716487",
+        "W7155019002",
+        "W7154618638",
+        "W7155019889"
+      ],
+      "bodyChars": 4497
+    },
+    {
+      "ok": true,
+      "model": "openai/gpt-5.4-mini",
+      "ms": 13066,
+      "cost": 0.01786275,
+      "totalTokens": 16052,
+      "inputTokens": 14499,
+      "outputTokens": 1553,
+      "referenceIds": [
+        "W7154789938",
+        "W7154693164",
+        "W7154716487",
+        "W7154479191",
+        "W7154458881",
+        "W7154618638",
+        "W7154572266",
+        "W7154458881",
+        "W7155011363",
+        "W7155019889",
+        "W7154537784",
+        "W7154865761",
+        "W7154656065",
+        "W7154971597",
+        "W7155019877"
+      ],
+      "bodyChars": 7037
+    },
+    {
+      "ok": true,
+      "model": "openai/gpt-5.4",
+      "ms": 25275,
+      "cost": 0.0557625,
+      "totalTokens": 15800,
+      "inputTokens": 14499,
+      "outputTokens": 1301,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154789938",
+        "W7154971597",
+        "W7154537784"
+      ],
+      "bodyChars": 6303
+    },
+    {
+      "ok": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "ms": 15340,
+      "cost": 0.055656,
+      "totalTokens": 17080,
+      "inputTokens": 16712,
+      "outputTokens": 368,
+      "referenceIds": [],
+      "bodyChars": 1596
+    },
+    {
+      "ok": true,
+      "model": "anthropic/claude-haiku-4.5",
+      "ms": 22996,
+      "cost": 0.024796,
+      "totalTokens": 18328,
+      "inputTokens": 16711,
+      "outputTokens": 1617,
+      "referenceIds": [
+        "W7155011363",
+        "W7154458881",
+        "W7154618638",
+        "W7154939277",
+        "W7154591662",
+        "W7154738737",
+        "W7154717912",
+        "W7154979361"
+      ],
+      "bodyChars": 6640
+    },
+    {
+      "ok": true,
+      "model": "qwen/qwen3.6-plus",
+      "ms": 104051,
+      "cost": 0.015883725,
+      "totalTokens": 20808,
+      "inputTokens": 15195,
+      "outputTokens": 5613,
+      "referenceIds": [
+        "W7154887694",
+        "W7154789938",
+        "W7154716487",
+        "W7154693164",
+        "W7154458881"
+      ],
+      "bodyChars": 5320
+    },
+    {
+      "ok": true,
+      "model": "moonshotai/kimi-k2.6",
+      "ms": 146904,
+      "cost": 0.05510913,
+      "totalTokens": 24796,
+      "inputTokens": 14450,
+      "outputTokens": 10346,
+      "referenceIds": [
+        "W7154789938",
+        "W7154458881",
+        "W7154716487",
+        "W7154971597",
+        "W7154939277"
+      ],
+      "bodyChars": 6214
+    },
+    {
+      "ok": true,
+      "model": "google/gemma-4-31b-it",
+      "ms": 39693,
+      "cost": 0.00246494,
+      "totalTokens": 16069,
+      "inputTokens": 15241,
+      "outputTokens": 828,
+      "referenceIds": [
+        "W7154716487",
+        "W7154693837",
+        "W7154458881",
+        "W7154591662",
+        "W7154693164",
+        "W7154888128"
+      ],
+      "bodyChars": 3321
+    },
+    {
+      "ok": true,
+      "model": "z-ai/glm-5.1",
+      "ms": 119417,
+      "cost": 0.0341845,
+      "totalTokens": 20050,
+      "inputTokens": 14690,
+      "outputTokens": 5360,
+      "referenceIds": [
+        "W7154716487",
+        "W7154458881",
+        "W7154971597",
+        "W7154939277",
+        "W7154887694"
+      ],
+      "bodyChars": 6209
+    },
+    {
+      "ok": true,
+      "model": "x-ai/grok-4.20",
+      "ms": 11662,
+      "cost": 0.0364148,
+      "totalTokens": 15525,
+      "inputTokens": 14155,
+      "outputTokens": 1370,
+      "referenceIds": [
+        "W7154458881",
+        "W7155019002",
+        "W7154716487",
+        "W7155019889",
+        "W7154587936"
+      ],
+      "bodyChars": 6428
+    },
+    {
+      "ok": true,
+      "model": "xiaomi/mimo-v2-pro",
+      "ms": 21826,
+      "cost": 0.018715,
+      "totalTokens": 16301,
+      "inputTokens": 15094,
+      "outputTokens": 1207,
+      "referenceIds": [
+        "W7154458881",
+        "W7154618638",
+        "W7155019002",
+        "W7154716487",
+        "W7154939277"
+      ],
+      "bodyChars": 5488
+    },
+    {
+      "ok": false,
+      "model": "minimax/minimax-m2.7",
+      "ms": 208209,
+      "error": "No object generated: the model did not return a response."
+    },
+    {
+      "ok": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "ms": 56789,
+      "cost": 0.11345,
+      "totalTokens": 22085,
+      "inputTokens": 15157,
+      "outputTokens": 6928,
+      "referenceIds": [
+        "W7154887694",
+        "W7154716487",
+        "W7155019889",
+        "W7154939277",
+        "W7155019877"
+      ],
+      "bodyChars": 4698
+    },
+    {
+      "ok": true,
+      "model": "google/gemini-3.1-flash-lite-preview",
+      "ms": 5079,
+      "cost": 0.00507925,
+      "totalTokens": 16087,
+      "inputTokens": 15241,
+      "outputTokens": 846,
+      "referenceIds": [
+        "W7154716487",
+        "W7155019889",
+        "W7154693164",
+        "W7154789938",
+        "W7154747159"
+      ],
+      "bodyChars": 3482
+    },
+    {
+      "ok": true,
+      "model": "google/gemini-3-flash-preview",
+      "ms": 7631,
+      "cost": 0.0049052,
+      "totalTokens": 16086,
+      "inputTokens": 15157,
+      "outputTokens": 929,
+      "referenceIds": [
+        "W7154591662",
+        "W7154458881",
+        "W7154716487",
+        "W7155019877",
+        "W7154618638"
+      ],
+      "bodyChars": 4070
+    }
+  ]
+}

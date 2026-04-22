@@ -148,10 +148,11 @@ export function PreviewStage({ config, sessionId, onBack, onStart, onQueries }: 
           onStart={onStart}
         />
       </div>
-      {/* Sticky footer CTA for mobile — desktop has sidebar CTA + end-of-article CTA */}
-      <div className="hidden max-[900px]:block">
-        <StickyFooterCta label="Start my digest" onClick={onStart} />
-      </div>
+      <StickyFooterCta
+        label="Start my digest"
+        onClick={onStart}
+        helper={<span>Set your schedule next. Change anything, anytime.</span>}
+      />
     </div>
   )
 }

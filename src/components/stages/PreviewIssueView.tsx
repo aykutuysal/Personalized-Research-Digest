@@ -36,9 +36,6 @@ export function PreviewIssueView({
         papersScanned={papersScanned}
         totalAreas={config.research_areas.length}
         papersSelected={references.length}
-        ctaLabel="Start my digest →"
-        onCta={onStart}
-        ctaHelper={<span>Set your schedule next. Change anything, anytime.</span>}
       />
 
       <article className="mx-auto max-w-[680px] px-12 py-11">

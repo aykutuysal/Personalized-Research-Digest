@@ -5,6 +5,7 @@ import { fetchSeedPapers } from '@/lib/ai/discovery/fetch-seeds'
 import { extractVocabulary } from '@/lib/ai/discovery/extract-vocab'
 import { buildCompactLibrary } from '@/lib/ai/discovery/build-library'
 import { runLibrary } from '@/lib/ai/discovery/run-library'
+import { buildUmbrellaQueries } from '@/lib/ai/discovery/umbrella'
 import { curatePreview } from './curator'
 import { filterCandidates } from './filter'
 import type { ProgressEvent } from './progress-events'
@@ -114,7 +115,16 @@ export async function runPreviewPipeline(
     emit({ kind: 'error', stage: 'library', message: (err as Error).message })
     return
   }
-  console.log(stamp(`library: produced ${library.length} queries`))
+  // Append umbrella queries derived from the subject. They carry
+  // research_area_id: 0 and run alongside the per-area queries. See
+  // experiments/2026-04-21-umbrella-queries.md for validation.
+  const umbrellaQueries = buildUmbrellaQueries(config.subject)
+  if (umbrellaQueries.length > 0) {
+    library = [...library, ...umbrellaQueries]
+    console.log(stamp(`umbrella: added ${umbrellaQueries.length} queries [${umbrellaQueries.map((q) => JSON.stringify(q.query)).join(', ')}]`))
+  }
+
+  console.log(stamp(`library: produced ${library.length} queries (${library.length - umbrellaQueries.length} per-area + ${umbrellaQueries.length} umbrella)`))
   for (const q of library) {
     console.log(`${tag}   area=${q.research_area_id} query=${JSON.stringify(q.query)} rationale=${JSON.stringify(q.rationale)}`)
   }
@@ -128,19 +138,27 @@ export async function runPreviewPipeline(
   const runResults = await runLibrary(library, {
     onResult: (r) => {
       console.log(`${tag}   area=${r.query.research_area_id} query=${JSON.stringify(r.query.query)} hits=${r.hits.length} sample=${JSON.stringify(r.hits[0]?.title ?? null)}`)
-      emit({
-        kind: 'area-hit',
-        research_area_id: r.query.research_area_id,
-        hits: r.hits.length,
-        sampleTitle: r.hits[0]?.title ?? null,
-      })
+      // Skip the UI progress event for umbrella queries — they're not in the
+      // areas list and would mis-count the "areas covered" stage tracker.
+      if (r.query.research_area_id > 0) {
+        emit({
+          kind: 'area-hit',
+          research_area_id: r.query.research_area_id,
+          hits: r.hits.length,
+          sampleTitle: r.hits[0]?.title ?? null,
+        })
+      }
     },
   })
   const poolById = new Map<string, PoolMember>()
   for (const rr of runResults) {
     for (const h of rr.hits) {
       if (!poolById.has(h.id)) {
-        const annotated: PoolMember = { ...h, __areaId: rr.query.research_area_id }
+        // Umbrella hits (research_area_id=0) leave __areaId undefined so the
+        // relevance filter treats them generically rather than tying them to
+        // a specific area.
+        const areaId = rr.query.research_area_id
+        const annotated: PoolMember = areaId > 0 ? { ...h, __areaId: areaId } : { ...h }
         poolById.set(h.id, annotated)
       }
     }
