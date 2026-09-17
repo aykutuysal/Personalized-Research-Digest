@@ -1,0 +1,125 @@
+{
+  "subject": "Marketing science",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "scarcity urgency conversion",
+      "rationale": "Addresses scarcity cues affecting checkout. 'Conversion' is implied in user's angles, and 'urgency' is a related behavioral concept from extracted vocabulary."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "pricing promotions consumer behavior",
+      "rationale": "Combines pricing and promotions (user's key angles) with 'Consumer behaviour' (53x), the most frequent keyword in extracted data."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "social proof online advertising",
+      "rationale": "Intersects social proof cues (user angle) with 'Online advertising' (14x) from keywords. Targets digital context relevant to e-commerce/DTC."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "brand loyalty repeat purchase",
+      "rationale": "Connects 'Brand loyalty' (5x) from keywords with repeat purchase behavior (user angle). Addresses retention, which is crucial for growth marketers."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "personalization conversion optimization",
+      "rationale": "Combines 'Personalization' (7x) from keywords with conversion optimization (user angle). Relevant for e-commerce targeting and ad creative."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "influencer marketing purchasing",
+      "rationale": "Adjacent to ad creative, using 'Influencer marketing' (6x) from keywords. Influencers are a modern ad channel with measurable effects on purchasing (32x)."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "consumer packaging perceptions",
+      "rationale": "Adjacent to product naming/branding. 'Consumer Packaging Perceptions' appears as a topic (3x) in extracted data, relevant for DTC physical products."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "digital marketing revenue",
+      "rationale": "Adjacent field connecting 'Digital marketing' (24x) and 'Revenue' (6x) from keywords. Provides bottom-line focus aligned with user's growth marketing role."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "sustainability consumer behaviour",
+      "rationale": "Unexpected but present in data: 'Sustainability' (8x) and 'Environmental Sustainability in Business' (5x). May yield insights on modern consumer values affecting purchasing."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "AI personalization marketing",
+      "rationale": "Serendipitous from 'AI in Service Interactions' (5x) and 'Artificial Intelligence' (6x) subfields. Could reveal cutting-edge ad creative or pricing tools."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "core",
+      "query": "price endings consumer behavior",
+      "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "core",
+      "query": "discounts brand perception consumer behavior",
+      "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "core",
+      "query": "click-through rate online advertising",
+      "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "core",
+      "query": "product naming consumer behavior",
+      "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses."
+    },
+    {
+      "id": 15,
+      "angle_id": 15,
+      "slot": 1,
+      "angle": "core",
+      "query": "landing page optimization A/B testing digital marketing",
+      "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area."
+    }
+  ]
+}

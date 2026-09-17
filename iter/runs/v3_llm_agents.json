@@ -1,0 +1,774 @@
+{
+  "timestamp": "2026-04-12T23:27:19.274253+00:00",
+  "prompt_file": "iter/prompts/v3_specificity_carrier.md",
+  "profile_file": "iter/profiles/llm_agents.md",
+  "plan_model": "openai/gpt-5.4",
+  "plan_cost_usd": null,
+  "plan_elapsed_s": 21.2,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 15,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 1.0,
+  "frac_healthy_or_safety": 1.0,
+  "mean_precision": 0.76,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": 0.76,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": true,
+  "plan": {
+    "subject": "LLM agents",
+    "queries": [
+      {
+        "id": 1,
+        "query": "(\"LLM agent\" OR \"language model agent\" OR \"large language model agent\" OR \"autonomous language agent\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+        "angle": "core agent framing",
+        "rationale": "Catches papers that explicitly position themselves as LLM-agent work regardless of slight naming differences."
+      },
+      {
+        "id": 2,
+        "query": "(\"agentic workflow\" OR \"agent workflow\" OR \"agentic system\" OR \"agentic AI\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+        "angle": "agentic systems",
+        "rationale": "Targets the newer engineering vocabulary around agentic systems and workflows that may not use the classic LLM-agent label."
+      },
+      {
+        "id": 3,
+        "query": "(\"tool use\" OR \"function calling\" OR \"API calling\" OR \"tool augmentation\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+        "angle": "tool use",
+        "rationale": "Finds practical work on how agents invoke external tools and APIs, a core capability for real-world systems."
+      },
+      {
+        "id": 4,
+        "query": "(\"web agent\" OR \"browser agent\" OR \"GUI agent\" OR \"computer use agent\") AND (\"LLM\" OR \"large language model\" OR \"language model agent\")",
+        "angle": "web and interface agents",
+        "rationale": "Captures agents that act in browsers and software interfaces, a fast-moving applied area with strong engineering relevance."
+      },
+      {
+        "id": 5,
+        "query": "(\"multi-agent\" OR \"multi-agent collaboration\" OR \"agent society\" OR \"agent coordination\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+        "angle": "multi-agent systems",
+        "rationale": "Covers architectures where multiple language-model agents coordinate, debate, or divide work."
+      },
+      {
+        "id": 6,
+        "query": "(\"planning\" OR \"task decomposition\" OR \"hierarchical planning\" OR \"self-planning\") AND (\"LLM agent\" OR \"language model agent\" OR \"autonomous agent\")",
+        "angle": "planning and decomposition",
+        "rationale": "Targets how agents break down tasks and plan actions, a central architectural dimension beyond prompting."
+      },
+      {
+        "id": 7,
+        "query": "(\"ReAct\" OR \"reasoning and acting\" OR \"plan-and-execute\" OR \"reflexion\") AND (\"LLM\" OR \"large language model\" OR \"language model agent\")",
+        "angle": "named agent paradigms",
+        "rationale": "Finds papers built around influential agent patterns and descendants that often drive practical implementation changes."
+      },
+      {
+        "id": 8,
+        "query": "(\"memory-augmented\" OR \"agent memory\" OR \"episodic memory\" OR \"long-term memory\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+        "angle": "memory architectures",
+        "rationale": "Catches work on persistent and working-memory mechanisms that materially change agent behavior over longer tasks."
+      },
+      {
+        "id": 9,
+        "query": "(\"retrieval-augmented generation\" OR RAG OR \"retrieval-augmented agent\" OR \"knowledge retrieval\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+        "angle": "retrieval and knowledge access",
+        "rationale": "Surfaces agent papers that integrate retrieval or external knowledge, which is highly relevant for practical system design."
+      },
+      {
+        "id": 10,
+        "query": "(\"code agent\" OR \"software engineering agent\" OR \"coding agent\" OR \"programming agent\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+        "angle": "software engineering agents",
+        "rationale": "Focuses on engineering-heavy agent work in coding and software tasks, likely especially useful for this reader."
+      },
+      {
+        "id": 11,
+        "query": "(\"benchmark\" OR evaluation OR \"AgentBench\" OR \"SWE-bench\") AND (\"LLM agent\" OR \"language model agent\" OR \"agentic system\")",
+        "angle": "evaluation and benchmarks",
+        "rationale": "Targets how agent systems are evaluated, including benchmark-driven work that often reveals practical strengths and weaknesses."
+      },
+      {
+        "id": 12,
+        "query": "(\"hallucination\" OR reliability OR robustness OR safety) AND (\"LLM agent\" OR \"language model agent\" OR \"agentic system\")",
+        "angle": "reliability and safety",
+        "rationale": "Finds papers on failure modes and trustworthiness issues that matter when deploying agents in practice."
+      },
+      {
+        "id": 13,
+        "query": "(\"self-reflection\" OR \"self-critique\" OR \"iterative refinement\" OR \"error correction\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+        "angle": "self-improvement loops",
+        "rationale": "Covers mechanisms where agents critique or refine their own outputs, a common practical design pattern."
+      },
+      {
+        "id": 14,
+        "query": "(\"workflow automation\" OR \"task automation\" OR orchestration OR \"autonomous workflow\") AND (\"LLM agent\" OR \"language model agent\" OR \"agentic AI\")",
+        "angle": "orchestration and automation",
+        "rationale": "Captures applied work on orchestrating agent steps and automating workflows rather than only single-turn reasoning."
+      },
+      {
+        "id": 15,
+        "query": "(\"embodied agent\" OR \"robotic agent\" OR \"physical agent\" OR \"vision-language-action\") AND (\"LLM\" OR \"large language model\" OR \"language model agent\")",
+        "angle": "embodied and robotic agents",
+        "rationale": "Adds the adjacent but important embodied-agent frontier where language models are used for action in physical or visual environments."
+      }
+    ],
+    "coverage_notes": "This plan covers the core LLM-agent literature plus distinct practical axes: tool use, planning, memory, retrieval, multi-agent systems, evaluation, reliability, and software-engineering applications. It also includes newer vocabulary like agentic systems and workflows so the search does not miss papers that avoid the exact phrase LLM agent. I skipped overly product-specific framework queries and very abstract theory-only terms, reflecting the reader's preference for engineering-grounded work that changes how agents are built in practice."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "(\"LLM agent\" OR \"language model agent\" OR \"large language model agent\" OR \"autonomous language agent\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+      "angle": "core agent framing",
+      "rationale": "Catches papers that explicitly position themselves as LLM-agent work regardless of slight naming differences.",
+      "openalex_count": 286,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Agent Harness for Large Language Model Agents: A Survey",
+          "relevance_score": 40.983627,
+          "id": "https://openalex.org/W7152129790"
+        },
+        {
+          "title": "Agent Harness for Large Language Model Agents: A Survey",
+          "relevance_score": 40.883747,
+          "id": "https://openalex.org/W7153158786"
+        },
+        {
+          "title": "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation",
+          "relevance_score": 37.84951,
+          "id": "https://openalex.org/W7150828341"
+        },
+        {
+          "title": "Debating Truth: Debate-driven Claim Verification with Multiple Large Language Model Agents",
+          "relevance_score": 34.191345,
+          "id": "https://openalex.org/W4417263557"
+        },
+        {
+          "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
+          "relevance_score": 30.093826,
+          "id": "https://openalex.org/W7152933613"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 2,
+      "query": "(\"agentic workflow\" OR \"agent workflow\" OR \"agentic system\" OR \"agentic AI\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+      "angle": "agentic systems",
+      "rationale": "Targets the newer engineering vocabulary around agentic systems and workflows that may not use the classic LLM-agent label.",
+      "openalex_count": 319,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 41.74024,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Agentic AI with Large Language Models for Precision Farming: Advancing Sustainable Resource Optimization in Smart Agritech",
+          "relevance_score": 23.938868,
+          "id": "https://openalex.org/W7151587206"
+        },
+        {
+          "title": "An LLM-Enabled Multimodal Agentic AI Framework for the Medical Internet of Things (MIoT)",
+          "relevance_score": 17.4614,
+          "id": "https://openalex.org/W7151346950"
+        },
+        {
+          "title": "A Comprehensive Review of Large Language Models and Agentic AI Systems for Chemistry and Materials Science",
+          "relevance_score": 17.349361,
+          "id": "https://openalex.org/W7151014948"
+        },
+        {
+          "title": "Building a Marketing Campaign with LLM-based Multi-Agent System and Design Thinking",
+          "relevance_score": 17.284824,
+          "id": "https://openalex.org/W7153196520"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 3,
+      "query": "(\"tool use\" OR \"function calling\" OR \"API calling\" OR \"tool augmentation\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+      "angle": "tool use",
+      "rationale": "Finds practical work on how agents invoke external tools and APIs, a core capability for real-world systems.",
+      "openalex_count": 135,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Data-Driven Function Calling Improvements in Large Language Model for Online Financial QA",
+          "relevance_score": 19.17186,
+          "id": "https://openalex.org/W7152934028"
+        },
+        {
+          "title": "Data-Driven Function Calling Improvements in Large Language Model for Online Financial QA",
+          "relevance_score": 18.672512,
+          "id": "https://openalex.org/W7152578024"
+        },
+        {
+          "title": "Your LLM Agent Can Leak Your Data: Data Exfiltration via Backdoored Tool Use",
+          "relevance_score": 18.537624,
+          "id": "https://openalex.org/W7152934316"
+        },
+        {
+          "title": "Data-Driven Function Calling Improvements in Large Language Model for Online Financial QA",
+          "relevance_score": 18.360138,
+          "id": "https://openalex.org/W7151846027"
+        },
+        {
+          "title": "Your LLM Agent Can Leak Your Data: Data Exfiltration via Backdoored Tool Use",
+          "relevance_score": 18.054754,
+          "id": "https://openalex.org/W7151811117"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 4,
+      "query": "(\"web agent\" OR \"browser agent\" OR \"GUI agent\" OR \"computer use agent\") AND (\"LLM\" OR \"large language model\" OR \"language model agent\")",
+      "angle": "web and interface agents",
+      "rationale": "Captures agents that act in browsers and software interfaces, a fast-moving applied area with strong engineering relevance.",
+      "openalex_count": 35,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "BARouter: A Budget-adaptive Online Large Language Model Router Framework",
+          "relevance_score": 7.2347155,
+          "id": "https://openalex.org/W7152672525"
+        },
+        {
+          "title": "Same Outcomes, Different Journeys: A Trace-Level Framework for Comparing Human and GUI-Agent Behavior in Production Search Systems",
+          "relevance_score": 6.841245,
+          "id": "https://openalex.org/W7153669995"
+        },
+        {
+          "title": "Same Outcomes, Different Journeys: A Trace-Level Framework for Comparing Human and GUI-Agent Behavior in Production Search Systems",
+          "relevance_score": 6.8077526,
+          "id": "https://openalex.org/W7153049750"
+        },
+        {
+          "title": "EmeraldMind: A Knowledge Graph\u2013Augmented Framework for Greenwashing Detection",
+          "relevance_score": 5.9612865,
+          "id": "https://openalex.org/W7152463792"
+        },
+        {
+          "title": "Agentic Compilation: Mitigating the LLM Rerun Crisis for Minimized Inference Cost Web Automation",
+          "relevance_score": 5.770533,
+          "id": "https://openalex.org/W7141663619"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 5,
+      "query": "(\"multi-agent\" OR \"multi-agent collaboration\" OR \"agent society\" OR \"agent coordination\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+      "angle": "multi-agent systems",
+      "rationale": "Covers architectures where multiple language-model agents coordinate, debate, or divide work.",
+      "openalex_count": 389,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 44.960587,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "When collaboration fails: persuasion driven adversarial influence in multi agent large language model debate",
+          "relevance_score": 23.792885,
+          "id": "https://openalex.org/W7151910642"
+        },
+        {
+          "title": "A Hierarchical Multi-Agent Reinforcement Learning Framework with High-Level Guidance from Large Language Models",
+          "relevance_score": 23.043945,
+          "id": "https://openalex.org/W7152048477"
+        },
+        {
+          "title": "Neurosymbolic Multi-Agent Artificial Intelligence versus General-Purpose Large Language Models for Clinical Decision Support in Ileus and Volvulus",
+          "relevance_score": 22.550611,
+          "id": "https://openalex.org/W7153114909"
+        },
+        {
+          "title": "From non-agentic large language models to multi-agent systems in emergency medicine: a scoping review",
+          "relevance_score": 21.856333,
+          "id": "https://openalex.org/W7152677819"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 6,
+      "query": "(\"planning\" OR \"task decomposition\" OR \"hierarchical planning\" OR \"self-planning\") AND (\"LLM agent\" OR \"language model agent\" OR \"autonomous agent\")",
+      "angle": "planning and decomposition",
+      "rationale": "Targets how agents break down tasks and plan actions, a central architectural dimension beyond prompting.",
+      "openalex_count": 138,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Multi-Agent Collaborative Filtering: Orchestrating Users and Items for Agentic Recommendations",
+          "relevance_score": 6.7085695,
+          "id": "https://openalex.org/W7152489995"
+        },
+        {
+          "title": "Uncertainty-Guided Latent Diagnostic Trajectory Learning for Sequential Clinical Diagnosis",
+          "relevance_score": 5.57281,
+          "id": "https://openalex.org/W7152933739"
+        },
+        {
+          "title": "Uncertainty-Guided Latent Diagnostic Trajectory Learning for Sequential Clinical Diagnosis",
+          "relevance_score": 5.5670013,
+          "id": "https://openalex.org/W7151815480"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "relevance_score": 4.6074133,
+          "id": "https://openalex.org/W7153208616"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "relevance_score": 4.605574,
+          "id": "https://openalex.org/W7153480434"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 7,
+      "query": "(\"ReAct\" OR \"reasoning and acting\" OR \"plan-and-execute\" OR \"reflexion\") AND (\"LLM\" OR \"large language model\" OR \"language model agent\")",
+      "angle": "named agent paradigms",
+      "rationale": "Finds papers built around influential agent patterns and descendants that often drive practical implementation changes.",
+      "openalex_count": 166,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Dawn of Self-Improving AI: Reflexion and Evolution in LLMs",
+          "relevance_score": 16.827599,
+          "id": "https://openalex.org/W7150746783"
+        },
+        {
+          "title": "The Dawn of Self-Improving AI: Reflexion and Evolution in LLMs",
+          "relevance_score": 16.760258,
+          "id": "https://openalex.org/W7150830081"
+        },
+        {
+          "title": "Enhancing the capabilities of large language models for API calls through knowledge graphs",
+          "relevance_score": 7.0059695,
+          "id": "https://openalex.org/W4414942798"
+        },
+        {
+          "title": "M-ArtAgent: Evidence-Based Multimodal Agent for Implicit Art Influence Discovery",
+          "relevance_score": 6.8262234,
+          "id": "https://openalex.org/W7153671445"
+        },
+        {
+          "title": "M-ArtAgent: Evidence-Based Multimodal Agent for Implicit Art Influence Discovery",
+          "relevance_score": 6.8219676,
+          "id": "https://openalex.org/W7153215979"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 8,
+      "query": "(\"memory-augmented\" OR \"agent memory\" OR \"episodic memory\" OR \"long-term memory\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+      "angle": "memory architectures",
+      "rationale": "Catches work on persistent and working-memory mechanisms that materially change agent behavior over longer tasks.",
+      "openalex_count": 72,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Lightweight LLM Agent Memory with Small Language Models",
+          "relevance_score": 21.448538,
+          "id": "https://openalex.org/W7153671864"
+        },
+        {
+          "title": "Lightweight LLM Agent Memory with Small Language Models",
+          "relevance_score": 21.342907,
+          "id": "https://openalex.org/W7153066783"
+        },
+        {
+          "title": "MemoTime: Memory-Augmented Temporal Knowledge Graph Enhanced Large Language Model Reasoning",
+          "relevance_score": 18.316109,
+          "id": "https://openalex.org/W4415276837"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain \u2014 Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "relevance_score": 10.1499,
+          "id": "https://openalex.org/W7151068250"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "relevance_score": 10.112195,
+          "id": "https://openalex.org/W7151519476"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 9,
+      "query": "(\"retrieval-augmented generation\" OR RAG OR \"retrieval-augmented agent\" OR \"knowledge retrieval\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+      "angle": "retrieval and knowledge access",
+      "rationale": "Surfaces agent papers that integrate retrieval or external knowledge, which is highly relevant for practical system design.",
+      "openalex_count": 324,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Retrieval-Augmented Generation (RAG) for Large Language Models: A Comprehensive Survey",
+          "relevance_score": 33.79156,
+          "id": "https://openalex.org/W7152600598"
+        },
+        {
+          "title": "Title: Enhancing Diagnostic Accuracy and Explainability of Large Language Model Agents in Production Incident Triage through Retrieval-Augmented Generation",
+          "relevance_score": 32.15521,
+          "id": "https://openalex.org/W7153452482"
+        },
+        {
+          "title": "Title: Enhancing Diagnostic Accuracy and Explainability of Large Language Model Agents in Production Incident Triage through Retrieval-Augmented Generation",
+          "relevance_score": 32.058113,
+          "id": "https://openalex.org/W7153514070"
+        },
+        {
+          "title": "OpenDecoder: Open Large Language Model Decoding to Incorporate Document Quality in RAG",
+          "relevance_score": 20.604242,
+          "id": "https://openalex.org/W7152512634"
+        },
+        {
+          "title": "F-GeoRAG: Few-Shot Retrieval-Augmented Generation with Large Language Models for Enhancing Geospatial Question Answering",
+          "relevance_score": 19.595259,
+          "id": "https://openalex.org/W7150875577"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 10,
+      "query": "(\"code agent\" OR \"software engineering agent\" OR \"coding agent\" OR \"programming agent\") AND (\"LLM\" OR \"large language model\" OR \"language model\")",
+      "angle": "software engineering agents",
+      "rationale": "Focuses on engineering-heavy agent work in coding and software tasks, likely especially useful for this reader.",
+      "openalex_count": 52,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Don't Say Never: How Prohibition-Framed Security Rules Backfire in LLM Coding Agents",
+          "relevance_score": 14.879221,
+          "id": "https://openalex.org/W7153468387"
+        },
+        {
+          "title": "Don't Say Never: How Prohibition-Framed Security Rules Backfire in LLM Coding Agents",
+          "relevance_score": 14.744392,
+          "id": "https://openalex.org/W7153435795"
+        },
+        {
+          "title": "ST-LEGO: Large Language Models as Modular Architects for Traffic Prediction",
+          "relevance_score": 9.483591,
+          "id": "https://openalex.org/W7152608437"
+        },
+        {
+          "title": "CODESTRUCT: Code Agents over Structured Action Spaces",
+          "relevance_score": 8.739077,
+          "id": "https://openalex.org/W7152933690"
+        },
+        {
+          "title": "Scaling Coding Agents via Atomic Skills",
+          "relevance_score": 8.66702,
+          "id": "https://openalex.org/W7152933957"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 11,
+      "query": "(\"benchmark\" OR evaluation OR \"AgentBench\" OR \"SWE-bench\") AND (\"LLM agent\" OR \"language model agent\" OR \"agentic system\")",
+      "angle": "evaluation and benchmarks",
+      "rationale": "Targets how agent systems are evaluated, including benchmark-driven work that often reveals practical strengths and weaknesses.",
+      "openalex_count": 386,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 53.73218,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Applicability-First Evaluation Module 01: Vendor Claim Admissibility for AI Security and Agentic Systems: Comparative Utility, Coverage Integrity, and Action Admissibility in High-Consequence and Decision-Bearing Systems",
+          "relevance_score": 31.364084,
+          "id": "https://openalex.org/W7152588662"
+        },
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 9.857952,
+          "id": "https://openalex.org/W7151830523"
+        },
+        {
+          "title": "DataGov-Factory: An Empirical Evaluation of Managed vs. Custom LLM Agent Architectures for Financial Data Governance",
+          "relevance_score": 8.285251,
+          "id": "https://openalex.org/W7153460721"
+        },
+        {
+          "title": "DataGov-Factory: An Empirical Evaluation of Managed vs. Custom LLM Agent Architectures for Financial Data Governance",
+          "relevance_score": 8.236692,
+          "id": "https://openalex.org/W7153548641"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 12,
+      "query": "(\"hallucination\" OR reliability OR robustness OR safety) AND (\"LLM agent\" OR \"language model agent\" OR \"agentic system\")",
+      "angle": "reliability and safety",
+      "rationale": "Finds papers on failure modes and trustworthiness issues that matter when deploying agents in practice.",
+      "openalex_count": 311,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Collaborative Altruistic Safety in Coupled Multi-Agent Systems",
+          "relevance_score": 13.927381,
+          "id": "https://openalex.org/W7152330904"
+        },
+        {
+          "title": "Collaborative Altruistic Safety in Coupled Multi-Agent Systems",
+          "relevance_score": 13.844786,
+          "id": "https://openalex.org/W7151336559"
+        },
+        {
+          "title": "Springdrift: An Auditable Persistent Runtime for LLM Agents with Case-Based Memory, Normative Safety, and Ambient Self-Perception",
+          "relevance_score": 11.51522,
+          "id": "https://openalex.org/W7152331426"
+        },
+        {
+          "title": "Springdrift: An Auditable Persistent Runtime for LLM Agents with Case-Based Memory, Normative Safety, and Ambient Self-Perception",
+          "relevance_score": 11.466513,
+          "id": "https://openalex.org/W7151445429"
+        },
+        {
+          "title": "Fuzzy Logic-based Robust Consensus Control of Distributed Multi-agent Systems",
+          "relevance_score": 11.386648,
+          "id": "https://openalex.org/W7152497481"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 13,
+      "query": "(\"self-reflection\" OR \"self-critique\" OR \"iterative refinement\" OR \"error correction\") AND (\"LLM agent\" OR \"language model agent\" OR \"large language model\")",
+      "angle": "self-improvement loops",
+      "rationale": "Covers mechanisms where agents critique or refine their own outputs, a common practical design pattern.",
+      "openalex_count": 131,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Deep Researcher Agent: An Autonomous Framework for 24/7 Deep Learning Experimentation with Zero-Cost Monitoring",
+          "relevance_score": 6.497754,
+          "id": "https://openalex.org/W7151905466"
+        },
+        {
+          "title": "Deep Researcher Agent: An Autonomous Framework for 24/7 Deep Learning Experimentation with Zero-Cost Monitoring",
+          "relevance_score": 6.4853897,
+          "id": "https://openalex.org/W7152933784"
+        },
+        {
+          "title": "Vision-Guided Iterative Refinement for Frontend Code Generation",
+          "relevance_score": 6.1847663,
+          "id": "https://openalex.org/W7152933651"
+        },
+        {
+          "title": "Vision-Guided Iterative Refinement for Frontend Code Generation",
+          "relevance_score": 5.8071623,
+          "id": "https://openalex.org/W7152060758"
+        },
+        {
+          "title": "A Human\u2013AI Collaborative Framework for Generating Reading Test Banks Using Claude.ai",
+          "relevance_score": 5.255606,
+          "id": "https://openalex.org/W7151846683"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 14,
+      "query": "(\"workflow automation\" OR \"task automation\" OR orchestration OR \"autonomous workflow\") AND (\"LLM agent\" OR \"language model agent\" OR \"agentic AI\")",
+      "angle": "orchestration and automation",
+      "rationale": "Captures applied work on orchestrating agent steps and automating workflows rather than only single-turn reasoning.",
+      "openalex_count": 94,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "NexusMind: Agentic AI Orchestration Model",
+          "relevance_score": 17.404272,
+          "id": "https://openalex.org/W7151864937"
+        },
+        {
+          "title": "Agentic AI in Private Equity: Multi-Agent Orchestration for End-to-End Deal Workflows",
+          "relevance_score": 14.208628,
+          "id": "https://openalex.org/W7151356796"
+        },
+        {
+          "title": "Agentic AI in Private Equity: Multi-Agent Orchestration for End-to-End Deal Workflows",
+          "relevance_score": 14.1548815,
+          "id": "https://openalex.org/W7151611186"
+        },
+        {
+          "title": "Trust-as-a-Service: Task-Specific Orchestration for Effective Task Completion via Model Context Protocol-Aided Agentic AI",
+          "relevance_score": 8.891418,
+          "id": "https://openalex.org/W7152879106"
+        },
+        {
+          "title": "Trust-as-a-Service: Task-Specific Orchestration for Effective Task Completion via Model Context Protocol-Aided Agentic AI",
+          "relevance_score": 8.789064,
+          "id": "https://openalex.org/W7153670185"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 15,
+      "query": "(\"embodied agent\" OR \"robotic agent\" OR \"physical agent\" OR \"vision-language-action\") AND (\"LLM\" OR \"large language model\" OR \"language model agent\")",
+      "angle": "embodied and robotic agents",
+      "rationale": "Adds the adjacent but important embodied-agent frontier where language models are used for action in physical or visual environments.",
+      "openalex_count": 46,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Interpreting safety : a LLM and STPA approach",
+          "relevance_score": 7.825702,
+          "id": "https://openalex.org/W7120832058"
+        },
+        {
+          "title": "Orion-Lite: Distilling LLM Reasoning into Efficient Vision-Only Driving Models",
+          "relevance_score": 7.6629205,
+          "id": "https://openalex.org/W7153090685"
+        },
+        {
+          "title": "Orion-Lite: Distilling LLM Reasoning into Efficient Vision-Only Driving Models",
+          "relevance_score": 7.645674,
+          "id": "https://openalex.org/W7153671608"
+        },
+        {
+          "title": "ROSClaw: A Hierarchical Semantic-Physical Framework for Heterogeneous Multi-Agent Collaboration",
+          "relevance_score": 7.3901787,
+          "id": "https://openalex.org/W7152331227"
+        },
+        {
+          "title": "ROSClaw: A Hierarchical Semantic-Physical Framework for Heterogeneous Multi-Agent Collaboration",
+          "relevance_score": 7.370715,
+          "id": "https://openalex.org/W7151542887"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    }
+  ]
+}

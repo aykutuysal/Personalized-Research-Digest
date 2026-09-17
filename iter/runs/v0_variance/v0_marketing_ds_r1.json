@@ -1,0 +1,588 @@
+{
+  "timestamp": "2026-04-13T10:01:31.293846+00:00",
+  "prompt_file": "iter/prompts/v0_original.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.00120609,
+  "plan_elapsed_s": 63.3,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 3,
+    "low": 12,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0.41,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.41,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"charm pricing\" OR \"psychological pricing\" OR \"odd pricing\" OR \"price ending\"",
+        "angle": "Core subject - pricing effects",
+        "rationale": "Targets the direct evidence on whether price endings like $9.99 still influence consumer perception and conversion."
+      },
+      {
+        "id": 2,
+        "query": "\"discount\" AND (\"brand equity\" OR \"perceived quality\" OR \"brand image\") AND (ecommerce OR \"direct-to-consumer\")",
+        "angle": "Applied/real-world concerns - discount strategy",
+        "rationale": "Finds empirical research on when and how price promotions damage brand value in online retail contexts."
+      },
+      {
+        "id": 3,
+        "query": "\"ad creative\" AND (conversion OR \"click-through rate\" OR \"purchase intent\") AND (testing OR experiment OR A/B)",
+        "angle": "Evaluation/evidence standards - creative testing",
+        "rationale": "Catches studies that measure the impact of specific visual or copy elements in ads using experimental data."
+      },
+      {
+        "id": 4,
+        "query": "\"product naming\" OR \"brand name\" AND (choice OR preference OR \"consumer judgment\")",
+        "angle": "Methods/techniques - product naming",
+        "rationale": "Focuses on research testing how different naming conventions (descriptive, abstract, phonetic) affect consumer evaluation."
+      },
+      {
+        "id": 5,
+        "query": "\"scarcity\" AND (purchase OR conversion OR \"checkout\") AND (\"limited quantity\" OR \"limited time\")",
+        "angle": "Methods/techniques - scarcity cues",
+        "rationale": "Targets evidence on the effectiveness and boundaries of using scarcity messages to drive e-commerce transactions."
+      },
+      {
+        "id": 6,
+        "query": "\"nudge\" AND (conversion OR \"checkout abandonment\" OR \"cart abandonment\")",
+        "angle": "Methods/techniques - behavioral nudges",
+        "rationale": "Finds applied behavioral science interventions tested specifically in the online shopping funnel."
+      },
+      {
+        "id": 7,
+        "query": "\"landing page\" AND (optimization OR \"conversion rate\" OR testing) AND (headline OR \"call-to-action\" OR image)",
+        "angle": "Applied/real-world concerns - landing page optimization",
+        "rationale": "Searches for experimental findings on which specific page elements (copy, layout, visuals) most improve performance."
+      },
+      {
+        "id": 8,
+        "query": "\"price testing\" OR \"pricing experiment\" AND (ecommerce OR \"online retail\")",
+        "angle": "Evaluation/evidence standards - pricing experiments",
+        "rationale": "Captures methodologies and results from field experiments on pricing in digital direct-to-consumer settings."
+      },
+      {
+        "id": 9,
+        "query": "\"social proof\" AND (conversion OR sales) AND (\"customer review\" OR testimonial OR \"user-generated content\")",
+        "angle": "Methods/techniques - social proof",
+        "rationale": "Targets quantified evidence on how different types of social validation (reviews, ratings, testimonials) impact sales."
+      },
+      {
+        "id": 10,
+        "query": "\"free shipping\" OR \"shipping cost\" AND (conversion OR \"purchase decision\" OR \"order value\")",
+        "angle": "Applied/real-world concerns - fulfillment pricing",
+        "rationale": "Finds research on the sales impact of shipping fee structures and thresholds, a key DTC lever."
+      },
+      {
+        "id": 11,
+        "query": "\"visual attention\" AND (advertisement OR \"product page\") AND (\"eye tracking\" OR heatmap)",
+        "angle": "Tools/artifacts/instruments - attention measurement",
+        "rationale": "Catches studies using eye-tracking or other methods to show what visually captures consumer focus in marketing materials."
+      },
+      {
+        "id": 12,
+        "query": "\"price framing\" OR \"partitioned pricing\" AND (perception OR willingness-to-pay)",
+        "angle": "Core subject - price presentation",
+        "rationale": "Targets evidence on how breaking down total cost (e.g., product price + fee) versus bundling affects consumer response."
+      },
+      {
+        "id": 13,
+        "query": "\"message framing\" AND (promotion OR advertisement) AND (\"gain frame\" OR \"loss frame\")",
+        "angle": "Methods/techniques - message framing",
+        "rationale": "Finds comparative tests on whether emphasizing benefits (gain) or avoiding losses (loss) is more effective in marketing communications."
+      },
+      {
+        "id": 14,
+        "query": "\"urgency\" AND (\"call-to-action\" OR messaging) AND (ecommerce OR \"online purchase\")",
+        "angle": "Methods/techniques - urgency cues",
+        "rationale": "Searches for applied research on the effectiveness of time-pressure language (\"act now\", \"today only\") in digital contexts."
+      },
+      {
+        "id": 15,
+        "query": "\"default option\" OR \"choice architecture\" AND (subscription OR \"checkout flow\")",
+        "angle": "Methods/techniques - choice architecture",
+        "rationale": "Targets evidence on how pre-selected options or layout design in checkout/subscription flows influence final decisions."
+      }
+    ],
+    "coverage_notes": "Plan focuses on angles with direct, testable levers for a DTC growth marketer: pricing tactics, promotional effects, on-page elements, and behavioral nudges. Skips theoretical marketing models, brand equity theory, advertising history, and media/channel planning. Assumes the reader values quantified outcomes (conversion, CTR, sales lift) over qualitative or ethnographic insights."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"charm pricing\" OR \"psychological pricing\" OR \"odd pricing\" OR \"price ending\"",
+      "angle": "Core subject - pricing effects",
+      "rationale": "Targets the direct evidence on whether price endings like $9.99 still influence consumer perception and conversion.",
+      "openalex_count": 5,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+          "relevance_score": 14.233028,
+          "id": "https://openalex.org/W7152936304"
+        },
+        {
+          "title": "\u041f\u0420\u041e\u0424\u0415\u0421\u0406\u0419\u041d\u0418\u0419 \u0421\u0422\u0420\u0415\u0421 \u042f\u041a \u0427\u0418\u041d\u041d\u0418\u041a \u0415\u041c\u041e\u0426\u0406\u0419\u041d\u041e\u0413\u041e \u0412\u0418\u0413\u041e\u0420\u0410\u041d\u041d\u042f \u041e\u0421\u041e\u0411\u0418\u0421\u0422\u041e\u0421\u0422\u0406",
+          "relevance_score": 0.21103075,
+          "id": "https://openalex.org/W7151533858"
+        },
+        {
+          "title": "How firms set their prices: survey evidence along the stages of price setting",
+          "relevance_score": 0.13035709,
+          "id": "https://openalex.org/W7153061139"
+        },
+        {
+          "title": "Electronic Word-of-Mouth and Consumer Spending: Evidence from Facebook-Based Online Clothing Retail",
+          "relevance_score": 0.1256315,
+          "id": "https://openalex.org/W7151293837"
+        },
+        {
+          "title": "Factors influencing customers to switch mobile brands",
+          "relevance_score": 0.07415077,
+          "id": "https://openalex.org/W7153674567"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 2,
+      "query": "\"discount\" AND (\"brand equity\" OR \"perceived quality\" OR \"brand image\") AND (ecommerce OR \"direct-to-consumer\")",
+      "angle": "Applied/real-world concerns - discount strategy",
+      "rationale": "Finds empirical research on when and how price promotions damage brand value in online retail contexts.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Effect of Digital Marketing Strategy, Brand Awareness, and Customer Satisfaction on Shopee Customer Loyalty in Batam with Customer Engagement as a Mediator",
+          "relevance_score": 0.5912766,
+          "id": "https://openalex.org/W7153135492"
+        },
+        {
+          "title": "Satisfaction as an Experience Engine in Promotion-Intensive Marketplaces: The Roles of Platform-Mediated Relationship Infrastructure and Price Fairness in Repurchase Intention (Shopee, Indonesia)",
+          "relevance_score": 0.57701665,
+          "id": "https://openalex.org/W7152101615"
+        },
+        {
+          "title": "Marketing Strategy Analysis in the Digital Age in Facing Business Competition at Virgin Cake &amp;amp; Bakery Semarang",
+          "relevance_score": 0.4602524,
+          "id": "https://openalex.org/W7153526953"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.33
+    },
+    {
+      "id": 3,
+      "query": "\"ad creative\" AND (conversion OR \"click-through rate\" OR \"purchase intent\") AND (testing OR experiment OR A/B)",
+      "angle": "Evaluation/evidence standards - creative testing",
+      "rationale": "Catches studies that measure the impact of specific visual or copy elements in ads using experimental data.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 0.516695,
+          "id": "https://openalex.org/W7153528954"
+        },
+        {
+          "title": "Generating Clicks: Display Advertising Within Social Media",
+          "relevance_score": 0.39996082,
+          "id": "https://openalex.org/W7152940265"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 4,
+      "query": "\"product naming\" OR \"brand name\" AND (choice OR preference OR \"consumer judgment\")",
+      "angle": "Methods/techniques - product naming",
+      "rationale": "Focuses on research testing how different naming conventions (descriptive, abstract, phonetic) affect consumer evaluation.",
+      "openalex_count": 25,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The power of naming: shorter and simpler species names draw more attention",
+          "relevance_score": 0.4172604,
+          "id": "https://openalex.org/W7151806245"
+        },
+        {
+          "title": "Navigation bar design effects on consumer visual processing",
+          "relevance_score": 0.40790993,
+          "id": "https://openalex.org/W7153426875"
+        },
+        {
+          "title": "Profiling of Consumer Perception and Acceptance of Indigenous Jamu Beverages",
+          "relevance_score": 0.34035122,
+          "id": "https://openalex.org/W7152108270"
+        },
+        {
+          "title": "BrandSense: Machine Learning Framework for Context-Aware Brand Name Analysis and Prediction",
+          "relevance_score": 0.33857667,
+          "id": "https://openalex.org/W7153098710"
+        },
+        {
+          "title": "Estratificaci\u00f3n social de los cremat\u00f3nimos en el PL urbano gallego",
+          "relevance_score": 0.31476665,
+          "id": "https://openalex.org/W7151896662"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 5,
+      "query": "\"scarcity\" AND (purchase OR conversion OR \"checkout\") AND (\"limited quantity\" OR \"limited time\")",
+      "angle": "Methods/techniques - scarcity cues",
+      "rationale": "Targets evidence on the effectiveness and boundaries of using scarcity messages to drive e-commerce transactions.",
+      "openalex_count": 6,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A Study on the Impact of Fear of Missing Out (FOMO) on Impulsive Buying Behaviour of Consumers During the Festive Season (August\u2013November) in the Indian Retail and E-Commerce Industry",
+          "relevance_score": 4.8766413,
+          "id": "https://openalex.org/W7153251664"
+        },
+        {
+          "title": "Digital Promotion Strategy for Bastoh Brand New Product in Increasing Sales During the Ramadan Period",
+          "relevance_score": 0.54796517,
+          "id": "https://openalex.org/W7153304055"
+        },
+        {
+          "title": "Web engineering for the evaluation of large complex web systems: methodologies in web metrics",
+          "relevance_score": 0.36919594,
+          "id": "https://openalex.org/W2767728468"
+        },
+        {
+          "title": "How Time Pressure Amplifies Framing Effects in Risky Decision-Making: The Role of Attentional Allocation and Information Presentation",
+          "relevance_score": 0.32567468,
+          "id": "https://openalex.org/W7151253342"
+        },
+        {
+          "title": "Study on the Public Perception Characteristics of Intangible Cultural Heritage in China from the Perspective of Social Media",
+          "relevance_score": 0.2429997,
+          "id": "https://openalex.org/W7152027521"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 6,
+      "query": "\"nudge\" AND (conversion OR \"checkout abandonment\" OR \"cart abandonment\")",
+      "angle": "Methods/techniques - behavioral nudges",
+      "rationale": "Finds applied behavioral science interventions tested specifically in the online shopping funnel.",
+      "openalex_count": 23,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Adsorption of Trifluoromethanesulfonic Acid and Trimethyl Ammonium on Hydrated Titania Surfaces: A DFT Study",
+          "relevance_score": 2.3583896,
+          "id": "https://openalex.org/W7152709030"
+        },
+        {
+          "title": "The Psychology of Spending in Cashless Societies",
+          "relevance_score": 0.3553509,
+          "id": "https://openalex.org/W7153454291"
+        },
+        {
+          "title": "A Federated Digital Twin Framework for Consumer Wellbeing Systems",
+          "relevance_score": 0.31683195,
+          "id": "https://openalex.org/W7152628853"
+        },
+        {
+          "title": "Tandem bulk oxygen diffusion and surface reactions in reducible metal oxides control redox cycle dynamics",
+          "relevance_score": 0.31622154,
+          "id": "https://openalex.org/W7153352221"
+        },
+        {
+          "title": "Let Me Introduce You: Stimulating Taste-Broadening Serendipity Through Song Introductions",
+          "relevance_score": 0.31441668,
+          "id": "https://openalex.org/W7153494059"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 7,
+      "query": "\"landing page\" AND (optimization OR \"conversion rate\" OR testing) AND (headline OR \"call-to-action\" OR image)",
+      "angle": "Applied/real-world concerns - landing page optimization",
+      "rationale": "Searches for experimental findings on which specific page elements (copy, layout, visuals) most improve performance.",
+      "openalex_count": 15,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "\u0406\u041d\u0422\u0415\u041b\u0415\u041a\u0422\u0423\u0410\u041b\u042c\u041d\u0410 \u0410\u0412\u0422\u041e\u041c\u0410\u0422\u0418\u0417\u0410\u0426\u0406\u042f \u0412\u0415\u0411\u0420\u041e\u0417\u0420\u041e\u0411\u041a\u0418: \u0421\u0422\u0412\u041e\u0420\u0415\u041d\u041d\u042f \u041b\u0415\u041d\u0414\u0418\u041d\u0413 \u0421\u0422\u041e\u0420\u0406\u041d\u041e\u041a \u0406\u0417 \u0412\u0418\u041a\u041e\u0420\u0418\u0421\u0422\u0410\u041d\u041d\u042f\u041c \u0413\u0415\u041d\u0415\u0420\u0410\u0422\u0418\u0412\u041d\u041e\u0407 \u041c\u041e\u0412\u041d\u041e\u0407 \u041c\u041e\u0414\u0415\u041b\u0406 CHATGPT",
+          "relevance_score": 0.6691458,
+          "id": "https://openalex.org/W7151235741"
+        },
+        {
+          "title": "RaiseTogether: A Smart Web-Based Event Management and Fundraising Platform for College",
+          "relevance_score": 0.5407953,
+          "id": "https://openalex.org/W7152588875"
+        },
+        {
+          "title": "Travel Ease - An AI Agent for Smart Gate Travel Planning",
+          "relevance_score": 0.5124252,
+          "id": "https://openalex.org/W7151825316"
+        },
+        {
+          "title": "Implementation of VisualizeIT: An Interactive Simulation Platform for Engineering Education",
+          "relevance_score": 0.42170334,
+          "id": "https://openalex.org/W7153301339"
+        },
+        {
+          "title": "ResolGate: An AI-Assisted Approval-Based Knowledge Repository for Education and Rural Learning",
+          "relevance_score": 0.37775815,
+          "id": "https://openalex.org/W7152547383"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.1
+    },
+    {
+      "id": 8,
+      "query": "\"price testing\" OR \"pricing experiment\" AND (ecommerce OR \"online retail\")",
+      "angle": "Evaluation/evidence standards - pricing experiments",
+      "rationale": "Captures methodologies and results from field experiments on pricing in digital direct-to-consumer settings.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "\"social proof\" AND (conversion OR sales) AND (\"customer review\" OR testimonial OR \"user-generated content\")",
+      "angle": "Methods/techniques - social proof",
+      "rationale": "Targets quantified evidence on how different types of social validation (reviews, ratings, testimonials) impact sales.",
+      "openalex_count": 6,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "&lt;b&gt;Examining the Influence of Content Marketing on The Purchase Intentions of Domestic Tourism Among Graduate Business Students at The University of Zambia&lt;/b&gt;",
+          "relevance_score": 0.5990444,
+          "id": "https://openalex.org/W7153081453"
+        },
+        {
+          "title": "Affinity of Gen Z and Gen Y towards DTC brands: Role of online review and ratings and recommendation",
+          "relevance_score": 0.43451226,
+          "id": "https://openalex.org/W7152584363"
+        },
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 0.43415472,
+          "id": "https://openalex.org/W7153528954"
+        },
+        {
+          "title": "The influence of Electronic Word-of-Mouth (eWOM) on museum visit intention: an application of the IAM and IACM models",
+          "relevance_score": 0.4240519,
+          "id": "https://openalex.org/W7152399344"
+        },
+        {
+          "title": "Immersive Commerce: Implementasi Augmented Reality untuk Meningkatkan Kepercayaan Konsumen dalam Transaksi E-Commerce",
+          "relevance_score": 0.33863428,
+          "id": "https://openalex.org/W7153228855"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 10,
+      "query": "\"free shipping\" OR \"shipping cost\" AND (conversion OR \"purchase decision\" OR \"order value\")",
+      "angle": "Applied/real-world concerns - fulfillment pricing",
+      "rationale": "Finds research on the sales impact of shipping fee structures and thresholds, a key DTC lever.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 11,
+      "query": "\"visual attention\" AND (advertisement OR \"product page\") AND (\"eye tracking\" OR heatmap)",
+      "angle": "Tools/artifacts/instruments - attention measurement",
+      "rationale": "Catches studies using eye-tracking or other methods to show what visually captures consumer focus in marketing materials.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Tracking Listener Attention: Gaze-Guided Audio-Visual Speech Enhancement Framework",
+          "relevance_score": 0.45931402,
+          "id": "https://openalex.org/W7153669911"
+        }
+      ],
+      "hit_labels": [
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 12,
+      "query": "\"price framing\" OR \"partitioned pricing\" AND (perception OR willingness-to-pay)",
+      "angle": "Core subject - price presentation",
+      "rationale": "Targets evidence on how breaking down total cost (e.g., product price + fee) versus bundling affects consumer response.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "\"message framing\" AND (promotion OR advertisement) AND (\"gain frame\" OR \"loss frame\")",
+      "angle": "Methods/techniques - message framing",
+      "rationale": "Finds comparative tests on whether emphasizing benefits (gain) or avoiding losses (loss) is more effective in marketing communications.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Political vs. expert: the impact of influencer type on vaccination willingness",
+          "relevance_score": 8.259278,
+          "id": "https://openalex.org/W7153205670"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 14,
+      "query": "\"urgency\" AND (\"call-to-action\" OR messaging) AND (ecommerce OR \"online purchase\")",
+      "angle": "Methods/techniques - urgency cues",
+      "rationale": "Searches for applied research on the effectiveness of time-pressure language (\"act now\", \"today only\") in digital contexts.",
+      "openalex_count": 5,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Effect of Influencer Authenticity on Purchase Intention Mediated by Trust Transfer in Increasing Ventela Brand Consumers",
+          "relevance_score": 0.386526,
+          "id": "https://openalex.org/W7151545237"
+        },
+        {
+          "title": "Hedonic Consumption and Niche Marketing in Luxury Floriculture: An Empirical Analysis of Affluent Consumer Behavior and Sustainability Preferences",
+          "relevance_score": 0.2866187,
+          "id": "https://openalex.org/W7152742454"
+        },
+        {
+          "title": "Comment les choix de design d'interface m\u00e8ne \u00e0 des effets environnementaux indirects par l'intensification des usages: Une \u00e9valuation environnementale empirique des applications de messagerie",
+          "relevance_score": 0.26057833,
+          "id": "https://openalex.org/W7132817340"
+        },
+        {
+          "title": "Satisfaction as an Experience Engine in Promotion-Intensive Marketplaces: The Roles of Platform-Mediated Relationship Infrastructure and Price Fairness in Repurchase Intention (Shopee, Indonesia)",
+          "relevance_score": 0.24920538,
+          "id": "https://openalex.org/W7152101615"
+        },
+        {
+          "title": "Appropriate use of Doxy-PEP and inappropriate antibiotic self-medication for STI management: insights from a LGBTQIA+ survey in Italy",
+          "relevance_score": 0.21423027,
+          "id": "https://openalex.org/W7151051495"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 15,
+      "query": "\"default option\" OR \"choice architecture\" AND (subscription OR \"checkout flow\")",
+      "angle": "Methods/techniques - choice architecture",
+      "rationale": "Targets evidence on how pre-selected options or layout design in checkout/subscription flows influence final decisions.",
+      "openalex_count": 4,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Psychology of Spending in Cashless Societies",
+          "relevance_score": 0.35592464,
+          "id": "https://openalex.org/W7153454291"
+        },
+        {
+          "title": "The Vectorial Mechanics of Political Polarization: A Dual-Axis Framework for Mapping Epistemic Defensiveness and Information Architecture",
+          "relevance_score": 0.2517965,
+          "id": "https://openalex.org/W7150793123"
+        },
+        {
+          "title": "Promises, Perils, and (Timely) Heuristics for Mining Coding Agent Activity",
+          "relevance_score": 0.17595746,
+          "id": "https://openalex.org/W7127338189"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.33
+    }
+  ]
+}

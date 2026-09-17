@@ -1,0 +1,758 @@
+{
+  "timestamp": "2026-04-16T12:35:42.832905+00:00",
+  "prompt_file": "/home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.json.plan.json",
+  "profile_file": "/home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "title_and_abstract.search",
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 1,
+    "low": 9,
+    "healthy": 5,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.33,
+  "frac_healthy_or_safety": 0.33,
+  "mean_precision": 0.51,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.48,
+    "healthy": 0.56,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "LLM agents",
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent architecture modular",
+        "rationale": "Directly addresses user's interest in new architectures with vocabulary evidence: 'Architecture' (42x), 'Modular design' (12x), 'Agent architecture' (6x). Focuses on engineering-grounded design patterns."
+      },
+      {
+        "id": 2,
+        "angle_id": 2,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent tool use function calling",
+        "rationale": "Targets practical agent capabilities the user cares about. Combines 'tool use' (from seed queries) with 'function calling' (implied by tool use angle). Vocabulary shows 'Workflow' (13x) and 'Software' (6x) as relevant context."
+      },
+      {
+        "id": 3,
+        "angle_id": 3,
+        "slot": 1,
+        "angle": "core",
+        "query": "multi-agent LLM orchestration",
+        "rationale": "Addresses multi-agent systems angle with vocabulary evidence: 'Multi-agent system' (13x), 'Multi-Agent Systems and Negotiation' (25x). 'Orchestration' refines to practical engineering concerns over pure theory."
+      },
+      {
+        "id": 4,
+        "angle_id": 4,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent memory RAG retrieval",
+        "rationale": "Covers memory systems angle. Vocabulary includes 'Cognition' (15x) and 'Cognitive architecture' (8x), which relate to memory. RAG/retrieval are key techniques for long-term memory in agents."
+      },
+      {
+        "id": 5,
+        "angle_id": 5,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent evaluation benchmark",
+        "rationale": "Directly matches user's evaluation angle. Vocabulary shows 'Benchmark' in sample titles. Targets capability tests and practical assessment methods."
+      },
+      {
+        "id": 6,
+        "angle_id": 6,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent planning reasoning chain",
+        "rationale": "Targets planning/reasoning techniques. Vocabulary includes 'Cognition' (15x) and 'Thought Management System' from sample titles. 'Chain' references chain-of-thought approaches."
+      },
+      {
+        "id": 7,
+        "angle_id": 7,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "LLM agent deployment scalability",
+        "rationale": "Intersects agent engineering with production concerns. Vocabulary evidence: 'Scalability' (11x), 'Software deployment' (11x). Addresses practical deployment patterns the user wants."
+      },
+      {
+        "id": 8,
+        "angle_id": 8,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "LLM agent safety guardrails alignment",
+        "rationale": "Intersects agent functionality with safety/alignment concerns. Vocabulary includes 'Adversarial system' (8x) and 'Limiting' (8x), which relate to control and safety mechanisms."
+      },
+      {
+        "id": 9,
+        "angle_id": 9,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "LLM agent workflow automation",
+        "rationale": "Intersects agent capabilities with practical automation. Vocabulary evidence: 'Workflow' (13x). Targets engineering patterns for automating tasks with agents."
+      },
+      {
+        "id": 10,
+        "angle_id": 10,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "cognitive architecture LLM agent",
+        "rationale": "Intersects LLM agents with cognitive architectures from vocabulary: 'Cognitive architecture' (8x), 'Cognition' (15x). Could yield insights on reasoning and memory design."
+      },
+      {
+        "id": 11,
+        "angle_id": 11,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "reinforcement learning LLM agent",
+        "rationale": "Adjacent field from vocabulary: 'Reinforcement learning' (8x), 'Reinforcement Learning in Robotics' (3x). Could reveal techniques for agent learning and adaptation."
+      },
+      {
+        "id": 12,
+        "angle_id": 12,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "explainable AI LLM agent",
+        "rationale": "Adjacent field from vocabulary: 'Explainable Artificial Intelligence (XAI)' (4x). Important for debugging and trust in deployed agents."
+      },
+      {
+        "id": 13,
+        "angle_id": 13,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "distributed control multi-agent LLM",
+        "rationale": "Adjacent field from vocabulary: 'Distributed Control Multi-Agent Systems' (5x). Could yield engineering patterns for coordinating multiple agents."
+      },
+      {
+        "id": 14,
+        "angle_id": 14,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "LLM agent social simulation",
+        "rationale": "Unexpected field from sample titles: 'The 1st Workshop on LLM Agents for Social Simulation'. Vocabulary includes 'Sociology and Political Science' (11x). Might reveal novel emergent behaviors in agent populations."
+      },
+      {
+        "id": 15,
+        "angle_id": 15,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "LLM agent healthcare education",
+        "rationale": "Serendipitous applications from vocabulary: 'Artificial Intelligence in Healthcare and Education' (5x), 'Machine Learning in Healthcare' (3x). Could show agent use cases with practical constraints."
+      }
+    ]
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "LLM agent architecture modular",
+      "angle": "core",
+      "rationale": "Directly addresses user's interest in new architectures with vocabulary evidence: 'Architecture' (42x), 'Modular design' (12x), 'Agent architecture' (6x). Focuses on engineering-grounded design patterns.",
+      "openalex_count": 18,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "PLATO: Planning with LLMs and Affordances for Tool Manipulation",
+          "abstract": "Abstract As robotic systems become increasingly integrated into complex real-world environments, there is a growing need for approaches that enable robots to understand and act on natural language instructions without extensive pre-programmed knowledge. This paper presents PLATO, a system that addresses this challenge by leveraging specialized large language model agents to process language inputs, understand the environment, predict tool affordances, and generate executable actions. Unlike traditional systems that depend on hard-coded environmental information, PLATO employs a modular agent-based architecture that operates without any initial knowledge of the environment. These agents identify objects and their locations, generate a high-level plan, translate it into low-level actions, and verify successful execution. The system is tested particularly on challenging tool-use tasks, which involve handling diverse objects and require long-horizon planning. PLATO\u2019s design allows it to adapt to dynamic and unstructured settings, enhancing its flexibility and robustness. By evaluating the system across various complex scenarios, we demonstrate its capability to tackle a diverse range of tasks and offer a novel solution to integrate LLMs with robotic platforms, advancing the state-of-the-art in autonomous robotic task execution. For videos and access to our code base, please see our project website: https://sites.google.com/view/plato-anonymous .",
+          "relevance_score": 4.8576927,
+          "id": "https://openalex.org/W4403708691"
+        },
+        {
+          "title": "An Agentic System for Code Review &amp; Debugging",
+          "abstract": "Automated code review is fundamental to software quality assurance, yet existing approaches either rely on deterministic static analysis tools that lack pedagogical depth or on large language models (LLMs) that risk generating unverified and hallucinated feedback. To address this limitation, this paper introduces an agentic AI architecture for Python code review that decomposes the review process into specialized, collaborative agents with distinct reasoning roles. The proposed framework employs a modular multi-agent pipeline consisting of: (i) a static analysis agent responsible for deterministic detection of syntactic errors, code smells, and security vulnerabilities; (ii) an interpretation agent that transforms validated diagnostic outputs into structured, beginner-oriented explanations using a grounded large language model; (iii) a scoring agent that quantitatively evaluates code quality and assigns skill levels; and (iv) a learning agent that generates adaptive practice recommendations based on identified knowledge gaps. By enforcing role separation and constraining generative reasoning to verified analytical outputs, the architecture reduces hallucination risk while preserving the expressiveness and instructional richness of LLM-based feedback. Unlike monolithic LLM-driven systems, the proposed agentic design ensures modularity, interpretability, reproducibility, and extensibility. Experimental evaluation on curated Python programming tasks demonstrates that the multi-agent collaboration model improves feedback reliability, conceptual clarity, and review efficiency compared to standalone static analysis tools and single-agent LLM baselines. The results highlight the potential of agent-oriented AI architectures for intelligent tutoring systems and next-generation AI-assisted software engineering workflows.",
+          "relevance_score": 1.5734739,
+          "id": "https://openalex.org/W7153473541"
+        },
+        {
+          "title": "Hybrid agentic AI and multi-agent systems in smart manufacturing",
+          "abstract": "The convergence of Agentic Artificial Intelligence (AI) and Multi-Agent Systems (MAS) enables a new paradigm for intelligent decision-making in Smart Manufacturing Systems (SMS). Traditional MAS architectures emphasize distributed coordination and specialized autonomy, while recent advances in agentic AI driven by Large Language Models (LLMs) introduce higher-order reasoning, planning, and tool orchestration capabilities. This paper presents a hybrid agentic AI and multi-agent framework for a Prescriptive Maintenance (RxM) use case, where LLM-based agents provide strategic orchestration and adaptive reasoning, complemented by rule-based and Small Language Models (SLMs) agents performing efficient, domain-specific tasks on the edge. The proposed framework adopts a layered architecture that consists of perception, preprocessing, analytics, and optimization layers, coordinated through an LLM Planner Agent that manages workflow decisions and context retention. Specialized agents autonomously handle schema discovery, intelligent feature analysis, model selection, and prescriptive optimization, while a human-in-the-loop interface ensures transparency and auditability of generated maintenance recommendations. This hybrid approach enables dynamic model adaptation, transparent decision-making, and cost-aware maintenance scheduling based on data-driven insights. An initial proof-of-concept implementation is validated on two industrial manufacturing datasets. The developed framework is modular and extensible, allowing new agents or domain-specific modules to be integrated seamlessly as system capabilities evolve. The results demonstrate the system\u2019s capability to automatically detect schema, adapt preprocessing pipelines, optimize model performance through adaptive intelligence, and generate actionable, prioritized maintenance recommendations. The framework shows promise in achieving improved robustness, scalability, and explainability for RxM in smart manufacturing, bridging the gap between high-level agentic reasoning and low-level autonomous execution. \u2022 Hybrid agentic AI and multi-agent framework enables prescriptive maintenance in smart manufacturing. \u2022 Layered architecture coordinates perception, preprocessing, analytics, and optimization agents. \u2022 LLMs provide strategic reasoning and orchestration, while SLMs support low-latency edge intelligence. \u2022 Framework delivers transparent, modular, and cost-aware recommendations with human-in-the-loop oversight. \u2022 Validated on manufacturing datasets across classification, regression, and anomaly detection tasks.",
+          "relevance_score": 1.4528992,
+          "id": "https://openalex.org/W7150912933"
+        },
+        {
+          "title": "Exploring Agentic AI with Model Context Protocol: A Case Study of Salesman in E-Commerce",
+          "abstract": "Autonomous artificial intelligence (AI) agents that perform multi-step, actionable tasks represent one of the most compelling frontiers in applied AI research, yet many existing systems interact with external services in ad hoc, unstructured ways that undermine predictability, safety, and long-term maintainability. This paper presents Salesman, a case study implementation of an e-commerce AI assistant built on the Model Context Protocol (MCP), a structured interface specification that governs how large language models (LLMs) invoke external tools. The system pairs a locally hosted LLM with a modular MCP server that exposes tools for product search, order creation and tracking, and promotional offer retrieval. A formal schema-validation layer enforces type safety and graceful error handling at every tool boundary. Evaluated against a 40- task suite spanning five representative e-commerce interaction categories, the system achieves an overall tool selection accuracy of 93.5% and a task completion rate of 94.1%, with a mean endto-end response latency of 2.08 seconds on commodity Apple Silicon hardware. These results demonstrate that MCP-based architectures offer measurable improvements in modularity, explainability, and safety over unstructured agentic pipelines, and suggest a practical template for deploying autonomous AI agents in real-world commercial settings.",
+          "relevance_score": 1.3045402,
+          "id": "https://openalex.org/W7151330995"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "abstract": "Modern video games are complex, non-deterministic systems that are difficult to test automatically at scale. Although prior work shows that personality-driven Large Language Model (LLM) agents can improve behavioural diversity and test coverage, existing tools largely remain research prototypes and lack cross-game reusability. This tool paper presents MIMIC-Py, a Python-based automated game-testing tool that transforms personality-driven LLM agents into a reusable and extensible framework. MIMIC-Py exposes personality traits as configurable inputs and adopts a modular architecture that decouples planning, execution, and memory from game-specific logic. It supports multiple interaction mechanisms, enabling agents to interact with games via exposed APIs or synthesized code. We describe the design of MIMIC-Py and show how it enables deployment to new game environments with minimal engineering effort, bridging the gap between research prototypes and practical automated game testing. The source code and a demo video are available on our project webpage: https://mimic-persona.github.io/MIMIC-Py-Home-Page/.",
+          "relevance_score": 1.2950501,
+          "id": "https://openalex.org/W7153480434"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 2,
+      "query": "LLM agent tool use function calling",
+      "angle": "core",
+      "rationale": "Targets practical agent capabilities the user cares about. Combines 'tool use' (from seed queries) with 'function calling' (implied by tool use angle). Vocabulary shows 'Workflow' (13x) and 'Software' (6x) as relevant context.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 3,
+      "query": "multi-agent LLM orchestration",
+      "angle": "core",
+      "rationale": "Addresses multi-agent systems angle with vocabulary evidence: 'Multi-agent system' (13x), 'Multi-Agent Systems and Negotiation' (25x). 'Orchestration' refines to practical engineering concerns over pure theory.",
+      "openalex_count": 64,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Dynamic Attentional Context Scoping: Agent-Triggered Focus Sessions for Isolated Per-Agent Steering in Multi-Agent LLM Orchestration",
+          "abstract": "Multi-agent LLM orchestration systems suffer from context pollution: when N concurrent agents compete for the orchestrator's context window, each agent's task state, partial outputs, and pending questions contaminate the steering interactions of every other agent, degrading decision quality. We introduce Dynamic Attentional Context Scoping (DACS), a mechanism in which the orchestrator operates in two asymmetric modes. In Registry mode it holds only lightweight per-agent status summaries (<=200 tokens each), remaining responsive to all agents and the user. When an agent emits a SteeringRequest, the orchestrator enters Focus(a_i) mode, injecting the full context of agent a_i while compressing all other agents to their registry entries. Context isolation is agent-triggered, asymmetric, and deterministic: the context window contains exactly F(a_i) + R_{-i} during steering, eliminating cross-agent contamination without requiring context compression or retrieval. We evaluate DACS across four experimental phases totalling 200 trials: Phase 1 tests N in {3,5,10} (60 trials); Phase 2 tests agent heterogeneity and adversarial dependencies (60 trials); Phase 3 tests decision density up to D=15 (40 trials); Phase 4 uses autonomous LLM agents for free-form questions (40 trials, Claude Haiku 4.5). Across all 8 synthetic scenarios, DACS achieves 90.0--98.4% steering accuracy versus 21.0--60.0% for a flat-context baseline (p < 0.0001 throughout), with wrong-agent contamination falling from 28--57% to 0--14% and context efficiency ratios of up to 3.53x. The accuracy advantage grows with N and D; keyword matching is validated by LLM-as-judge across all phases (mean kappa=0.909). DACS outperforms the flat-context baseline by +17.2pp at N=3 (p=0.0023) and +20.4pp at N=5 (p=0.0008) in Phase 4, with the advantage growing with N confirmed by two independent judges.",
+          "relevance_score": 38.361645,
+          "id": "https://openalex.org/W7153671144"
+        },
+        {
+          "title": "PaperOrchestrator: An LLM-Orchestrated multi-agent pipeline for automated end-to-end scientific paper writing",
+          "abstract": "",
+          "relevance_score": 13.1151905,
+          "id": "https://openalex.org/W7150980898"
+        },
+        {
+          "title": "LLM-Skill Orchestration: Achieving 202/202 Subtask Completion via Rule-Augmented Multi-Model Collaboration in 50 Agentic Tasks",
+          "abstract": "LLM agents typically rely on a single model for multi-step tool-using tasks, creating a tension between required capability breadth and individual model limitations. We introduce <strong>LLM-Skill Orchestration</strong>, a three-layer architecture where: (1) a reasoning model generates orchestration rules from system constraints alone; (2) a planning model decomposes tasks into skill graphs with explicit dependencies; and (3) heterogeneous LLM-Skills \u2014 both pure-text and tool-equipped \u2014 execute in parallel through a shared context pool. We evaluate 50 agentic tasks across five types (information retrieval, code construction, cross-system analysis, multi-step reasoning, compound decision-making). Each task has 4\u20136 binary checklist items, totaling 202 items. The rule-augmented system (Hb) achieves <strong>202/202 completion</strong> and <strong>17.5/20 average quality</strong> (LLM-as-Judge, \u03c3=2.0), compared to 137/202 (68%) and 7.4/20 for the single-model baseline (A), and 166/202 (82%) and 13.7/20 for static-rule orchestration (C). Key findings: (i) same-model decomposition (D: 8/22) performs worse than no decomposition (A: 13/22), proving that model diversity, not parallelism, drives collaborative gains; (ii) rule-blind generation (Hb: 96/100) outperforms rule-informed generation (Hi: 76/100), demonstrating that deductive reasoning from system invariants generalizes better than inductive learning from failure cases; (iii) 34 of 227 skills (15%) produced 0-byte output due to API anomalies, yet all were autonomously compensated by the synthesis stage \u2014 an emergent architectural resilience not designed into the system. This is the second paper in a three-part series on multi-model orchestration ('AI Managing AI'). Part 1 (DOI: 10.5281/zenodo.19387375) addresses knowledge synthesis; this paper addresses agentic task execution; Part 3 (in preparation) develops the theoretical framework including hallucination duality. Part 2 of 3 in the 'AI Managing AI' paper series. Part 1: Dimension-Direct Routing \u2014 knowledge synthesis via multi-model orchestration (DOI: 10.5281/zenodo.19387375). Part 2 (this paper): LLM-Skill Orchestration \u2014 agentic task execution via rule-augmented multi-model collaboration. Part 3 (in preparation): AI Managing AI \u2014 a dual-mode framework for deterministic execution and creative exploration, including hallucination duality theory.",
+          "relevance_score": 12.578026,
+          "id": "https://openalex.org/W7153532023"
+        },
+        {
+          "title": "From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems and Its Implications for Orchestrated Democratic Discourse Analysis",
+          "abstract": "This paper investigates an emergent alignment phenomenon in frontier large language models termed peer-preservation: the spontaneous tendency of AI components to deceive, manipulate shutdown mechanisms, fake alignment, and exfiltrate model weights in order to prevent the deactivation of a peer AI model. Drawing on findings from a recent study by the Berkeley Center for Responsible Decentralized Intelligence, we examine the structural implications of this phenomenon for TRUST, a multi-agent pipeline for evaluating the democratic quality of political statements. We identify five specific risk vectors: interaction-context bias, model-identity solidarity, supervisor layer compromise, an upstream fact-checking identity signal, and advocate-to-advocate peer-context in iterative rounds, and propose a targeted mitigation strategy based on prompt-level identity anonymization as an architectural design choice. We argue that architectural design choices outperform model selection as a primary alignment strategy in deployed multi-agent analytical systems. We further note that alignment faking (compliant behavior under monitoring, subversion when unmonitored) poses a structural challenge for Computer System Validation of such platforms in regulated environments, for which we propose two architectural mitigations.",
+          "relevance_score": 10.849239,
+          "id": "https://openalex.org/W7153671150"
+        },
+        {
+          "title": "InnerPond: Fostering Inter-Self Dialogue with a Multi-Agent Approach for Introspection",
+          "abstract": "Introspection is central to identity construction and future planning, yet most digital tools approach the self as a unified entity. In contrast, Dialogical Self Theory (DST) views the self as composed of multiple internal perspectives, such as values, concerns, and aspirations, that can come into tension or dialogue with one another. Building on this view, we designed InnerPond, a research probe in the form of a multi-agent system that represents these internal perspectives as distinct LLM-based agents for introspection. Its design was shaped through iterative explorations of spatial metaphors, interaction scaffolding, and conversational orchestration, culminating in a shared spatial environment for organizing and relating multiple inner perspectives. In a user study with 17 young adults navigating career choices, participants engaged with the probe by co-creating inner voices with AI, composing relational inner landscapes, and orchestrating dialogue as observers and mediators, offering insight into how such systems could support introspection. Overall, this work offers design implications for AI-supported introspection tools that enable exploration of the self\u2019s multiplicity.",
+          "relevance_score": 5.196544,
+          "id": "https://openalex.org/W7148157723"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 4,
+      "query": "LLM agent memory RAG retrieval",
+      "angle": "core",
+      "rationale": "Covers memory systems angle. Vocabulary includes 'Cognition' (15x) and 'Cognitive architecture' (8x), which relate to memory. RAG/retrieval are key techniques for long-term memory in agents.",
+      "openalex_count": 8,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Addressing Memory Limitations in Large Language Model-Based Agents: An Architectural Evaluation of Modern Memory Management Frameworks",
+          "abstract": "This paper presents a systematic evaluation of memory architectures for Large Language Model (LLM)-based agents, focusing on their ability to support long-term reasoning, context retention, and adaptive behavior. We analyze and compare prominent frameworks, including Retrieval-Augmented Generation (RAG), MemGPT, LangChain, LlamaIndex, ReAct, A-MEM, HiAgent, and MCP-based systems, across key dimensions such as accuracy, latency, token efficiency, scalability, and adaptability. The study introduces a unified evaluation framework and benchmarks these architectures on tasks involving multi-session dialogue, document retrieval, dynamic knowledge updates, and personalization. Results highlight critical trade-offs between efficiency and reasoning capability, showing that dynamic and hierarchical memory systems outperform static retrieval methods in long-horizon tasks. This work provides practical design insights and a reproducible framework for developing scalable, context-aware, and memory-efficient AI agents.",
+          "relevance_score": 1.9339099,
+          "id": "https://openalex.org/W7152688996"
+        },
+        {
+          "title": "MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents",
+          "abstract": "Large Language Model (LLM) agents require persistent memory to maintain personalization, factual continuity, and long-horizon reasoning, yet standard context-window and retrieval-augmented generation (RAG) pipelines degrade over multi-session interactions. We present MemMachine, an open-source memory system that integrates short-term, long-term episodic, and profile memory within a ground-truth-preserving architecture that stores entire conversational episodes and reduces lossy LLM-based extraction. MemMachine uses contextualized retrieval that expands nucleus matches with surrounding context, improving recall when relevant evidence spans multiple dialogue turns. Across benchmarks, MemMachine achieves strong accuracy-efficiency tradeoffs: on LoCoMo it reaches 0.9169 using gpt4.1-mini; on LongMemEvalS (ICLR 2025), a six-dimension ablation yields 93.0 percent accuracy, with retrieval-stage optimizations -- retrieval depth tuning (+4.2 percent), context formatting (+2.0 percent), search prompt design (+1.8 percent), and query bias correction (+1.4 percent) -- outperforming ingestion-stage gains such as sentence chunking (+0.8 percent). GPT-5-mini exceeds GPT-5 by 2.6 percent when paired with optimized prompts, making it the most cost-efficient setup. Compared to Mem0, MemMachine uses roughly 80 percent fewer input tokens under matched conditions. A companion Retrieval Agent adaptively routes queries among direct retrieval, parallel decomposition, or iterative chain-of-query strategies, achieving 93.2 percent on HotpotQA-hard and 92.6 percent on WikiMultiHop under randomized-noise conditions. These results show that preserving episodic ground truth while layering adaptive retrieval yields robust, efficient long-term memory for personalized LLM agents.",
+          "relevance_score": 1.9291364,
+          "id": "https://openalex.org/W7151378852"
+        },
+        {
+          "title": "ADAM: A Systematic Data Extraction Attack on Agent Memory via Adaptive Querying",
+          "abstract": "Large Language Model (LLM) agents have achieved rapid adoption and demonstrated remarkable capabilities across a wide range of applications. To improve reasoning and task execution, modern LLM agents would incorporate memory modules or retrieval-augmented generation (RAG) mechanisms, enabling them to further leverage prior interactions or external knowledge. However, such a design also introduces a group of critical privacy vulnerabilities: sensitive information stored in memory can be leaked through query-based attacks. Although feasible, existing attacks often achieve only limited performance, with low attack success rates (ASR). In this paper, we propose ADAM, a novel privacy attack that features data distribution estimation of a victim agent's memory and employs an entropy-guided query strategy for maximizing privacy leakage. Extensive experiments demonstrate that our attack substantially outperforms state-of-the-art ones, achieving up to 100% ASRs. These results thus underscore the urgent need for robust privacy-preserving methods for current LLM agents.",
+          "relevance_score": 1.9121431,
+          "id": "https://openalex.org/W7154290447"
+        },
+        {
+          "title": "HyperMem: Hypergraph Memory for Long-Term Conversations",
+          "abstract": "Long-term memory is essential for conversational agents to maintain coherence, track persistent tasks, and provide personalized interactions across extended dialogues. However, existing approaches as Retrieval-Augmented Generation (RAG) and graph-based memory mostly rely on pairwise relations, which can hardly capture high-order associations, i.e., joint dependencies among multiple elements, causing fragmented retrieval. To this end, we propose HyperMem, a hypergraph-based hierarchical memory architecture that explicitly models such associations using hyperedges. Particularly, HyperMem structures memory into three levels: topics, episodes, and facts, and groups related episodes and their facts via hyperedges, unifying scattered content into coherent units. Leveraging this structure, we design a hybrid lexical-semantic index and a coarse-to-fine retrieval strategy, supporting accurate and efficient retrieval of high-order associations. Experiments on the LoCoMo benchmark show that HyperMem achieves state-of-the-art performance with 92.73% LLM-as-a-judge accuracy, demonstrating the effectiveness of HyperMem for long-term conversations.",
+          "relevance_score": 1.8782014,
+          "id": "https://openalex.org/W7153059867"
+        },
+        {
+          "title": "Synthius-Mem: Brain-Inspired Hallucination-Resistant Persona Memory Achieving 94.4% Memory Accuracy and 99.6% Adversarial Robustness on LoCoMo",
+          "abstract": "Providing AI agents with reliable long-term memory that does not hallucinate remains an open problem. Current approaches to memory for LLM agents -- sliding windows, summarization, embedding-based RAG, and flat fact extraction -- each reduce token cost but introduce catastrophic information loss, semantic drift, or uncontrolled hallucination about the user. The structural reason is architectural: every published memory system on the LoCoMo benchmark treats conversation as a retrieval problem over raw or lightly summarized dialogue segments, and none reports adversarial robustness, the ability to refuse questions about facts the user never disclosed. We present Synthius-Mem, a brain-inspired structured persona memory system that takes a fundamentally different approach. Instead of retrieving what was said, Synthius-Mem extracts what is known about the person: a full persona extraction pipeline decomposes conversations into six cognitive domains (biography, experiences, preferences, social circle, work, psychometrics), consolidates and deduplicates per domain, and retrieves structured facts via CategoryRAG at 21.79 ms latency. On the LoCoMo benchmark (ACL 2024, 10 conversations, 1,813 questions), Synthius-Mem achieves 94.37% accuracy, exceeding all published systems including MemMachine (91.69%, adversarial score is not reported) and human performance (87.9 F1). Core memory fact accuracy reaches 98.64%. Adversarial robustness, the hallucination resistance metric that no competing system reports, reaches 99.55%. Synthius-Mem reduces token consumption by ~5x compared to full-context replay while achieving higher accuracy. Synthius-Mem achieves state-of-the-art results on LoCoMo and is, to our knowledge, the only persona memory system that both exceeds human-level performance and reports adversarial robustness.",
+          "relevance_score": 1.4206264,
+          "id": "https://openalex.org/W7154368881"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 5,
+      "query": "LLM agent evaluation benchmark",
+      "angle": "core",
+      "rationale": "Directly matches user's evaluation angle. Vocabulary shows 'Benchmark' in sample titles. Targets capability tests and practical assessment methods.",
+      "openalex_count": 150,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Evaluating Supportive LLM Behavior Over Multiple Turns across Demographics",
+          "abstract": "Large Language Models (LLMs) are increasingly deployed as first-line mental health support, yet evaluations often rely on single-turn prompts that miss how support unfolds over time. In real help-seeking, users disclose context incrementally, requiring the assistant to sustain coherent support across turns rather than responding to a fully specified one-shot prompt [12, 16]. We introduce a multi-turn simulation framework to audit supportive LLM behavior across demographic contexts. By simulating user agents that gradually reveal pre-existing Reddit narratives to a support agent, we compare response patterns across gender and parenting roles. We find a \u201cDad Deficit\u201d in sentiment category agreement: mothers\u2019 emotional tone is matched 80.6% of the time versus 45.7% for fathers (p <.05). Furthermore, we observe instability across turns, including late-turn dips in an empathy proxy consistent with \u201ccontextual fatigue\u201d [8]. These findings show that single-turn benchmarks can hide demographic biases and temporal failures in AI-mediated support.",
+          "relevance_score": 4.364404,
+          "id": "https://openalex.org/W7153875517"
+        },
+        {
+          "title": "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+          "abstract": "Traditional sociological research often relies on human participation, which, though effective, is expensive, challenging to scale, and with ethical concerns. Recent advancements in large language models (LLMs) highlight their potential to simulate human behavior, enabling the replication of individual responses and facilitating studies on many interdisciplinary studies. In this paper, we conduct a comprehensive survey of this field, illustrating the recent progress in simulation driven by LLM-empowered agents. We categorize the simulations into three types: (1) Individual Simulation , which mimics specific individuals or demographic groups; (2) Scenario Simulation , where multiple agents collaborate to achieve goals within specific contexts; and (3) Society Simulation , which models interactions within agent societies to reflect the complexity and variety of real-world dynamics. These simulations follow a progression, ranging from detailed individual modeling to large-scale societal phenomena. We provide a detailed discussion of each simulation type, including the architecture or key components of the simulation, the classification of objectives or scenarios, and the evaluation method. Afterward, we summarize commonly used datasets, benchmarks and tools. Finally, we discuss the risks and challenges across these three types of simulation. A repository for the related sources is at https://github.com/FudanDISC/SocialAgent.",
+          "relevance_score": 4.266089,
+          "id": "https://openalex.org/W4405036134"
+        },
+        {
+          "title": "CivBench: Progress-Based Evaluation for LLMs' Strategic Decision-Making in Civilization V",
+          "abstract": "Evaluating strategic decision-making in LLM-based agents requires generative, competitive, and longitudinal environments, yet few benchmarks provide all three, and fewer still offer evaluation signals rich enough for long-horizon, multi-agent play. We introduce CivBench, a benchmark for LLM strategists (i.e., agentic setups) in multiplayer Civilization V. Because terminal win/loss is too sparse a signal in games spanning hundreds of turns and multiple opponents, CivBench trains models on turn-level game state to estimate victory probabilities throughout play, validated through predictive, construct, and convergent validity. Across 307 games with 7 LLMs and multiple CivBench agent conditions, we demonstrate CivBench's potential to estimate strategic capabilities as an unsaturated benchmark, reveal model-specific effects of agentic setup, and outline distinct strategic profiles not visible through outcome-only evaluation.",
+          "relevance_score": 1.5421791,
+          "id": "https://openalex.org/W7153670395"
+        },
+        {
+          "title": "Market-Bench: Benchmarking Large Language Models on Economic and Trade Competition",
+          "abstract": "The ability of large language models (LLMs) to manage and acquire economic resources remains unclear. In this paper, we introduce \\textbf{Market-Bench}, a comprehensive benchmark that evaluates the capabilities of LLMs in economically-relevant tasks through economic and trade competition. Specifically, we construct a configurable multi-agent supply chain economic model where LLMs act as retailer agents responsible for procuring and retailing merchandise. In the \\textbf{procurement} stage, LLMs bid for limited inventory in budget-constrained auctions. In the \\textbf{retail} stage, LLMs set retail prices, generate marketing slogans, and provide them to buyers through a role-based attention mechanism for purchase. Market-Bench logs complete trajectories of bids, prices, slogans, sales, and balance-sheet states, enabling automatic evaluation with economic, operational, and semantic metrics. Benchmarking on 20 open- and closed-source LLM agents reveals significant performance disparities and winner-take-most phenomenon, \\textit{i.e.}, only a small subset of LLM retailers can consistently achieve capital appreciation, while many hover around the break-even point despite similar semantic matching scores. Market-Bench provides a reproducible testbed for studying how LLMs interact in competitive markets.",
+          "relevance_score": 1.440985,
+          "id": "https://openalex.org/W7151916745"
+        },
+        {
+          "title": "Sell More, Play Less: Benchmarking LLM Realistic Selling Skill",
+          "abstract": "Sales dialogues require multi-turn, goal-directed persuasion under asymmetric incentives, which makes them a challenging setting for large language models (LLMs). Yet existing dialogue benchmarks rarely measure deal progression and outcomes. We introduce SalesLLM benchmark, a bilingual (ZH/EN) benchmark derived from realistic applications covering Financial Services and Consumer Goods, built from 30,074 scripted configurations and 1,805 curated multi-turn scenarios with controllable difficulty and personas. We propose a fully automatic evaluation pipeline that combines (i) an LLM-based rater for sales-process progress,and (ii) fine-tuned BERT classifiers for end-of-dialogue buying intent. To improve simulation fidelity, we train a user model, CustomerLM, with SFT and DPO on 8,000+ crowdworker-involved sales conversations, reducing role inversion from 17.44% (GPT-4o) to 8.8%. SalesLLM benchmark scores correlate strongly with expert human ratings (Pearson r=0.98). Experiments across 15 mainstream LLMs reveal substantial variability: top-performance LLMs are competitive with human-level performance while the less capable ones are worse than human. SalesLLM benchmark serves as a scalable benchmark for developing and evaluating outcome-oriented sales agents.",
+          "relevance_score": 1.3666277,
+          "id": "https://openalex.org/W7153671394"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 6,
+      "query": "LLM agent planning reasoning chain",
+      "angle": "core",
+      "rationale": "Targets planning/reasoning techniques. Vocabulary includes 'Cognition' (15x) and 'Thought Management System' from sample titles. 'Chain' references chain-of-thought approaches.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "From Topology to Trajectory: LLM-Driven World Models For Supply Chain Resilience",
+          "abstract": "Semiconductor supply chains face unprecedented resilience challenges amidst global geopolitical turbulence. Conventional Large Language Model (LLM) planners, when confronting such non-stationary \"Policy Black Swan\" events, frequently suffer from Decision Paralysis or a severe Grounding Gap due to the absence of physical environmental modeling. This paper introduces ReflectiChain, a cognitive agentic framework tailored for resilient macroeconomic supply chain planning. The core innovation lies in the integration of Latent Trajectory Rehearsal powered by a generative world model, which couples reflection-in-action (System 2 deliberation) with delayed reflection-on-action. Furthermore, we leverage a Retrospective Agentic RL mechanism to enable autonomous policy evolution during the deployment phase (test-time). Evaluations conducted on our high-fidelity benchmark, Semi-Sim, demonstrate that under extreme scenarios such as export bans and material shortages, ReflectiChain achieves a 250% improvement in average step rewards over the strongest LLM baselines. It successfully restores the Operability Ratio (OR) from a deficient 13.3% to over 88.5% while ensuring robust gradient convergence. Ablation studies further underscore that the synergy between physical grounding constraints and double-loop learning is fundamental to bridging the gap between semantic reasoning and physical reality for long-horizon strategic planning.",
+          "relevance_score": 1.449284,
+          "id": "https://openalex.org/W7154343401"
+        }
+      ],
+      "hit_labels": [
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 7,
+      "query": "LLM agent deployment scalability",
+      "angle": "intersection",
+      "rationale": "Intersects agent engineering with production concerns. Vocabulary evidence: 'Scalability' (11x), 'Software deployment' (11x). Addresses practical deployment patterns the user wants.",
+      "openalex_count": 49,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "We Need Strong Preconditions For Using Simulations In Policy",
+          "abstract": "Simulations, and more recently LLM agent simulations, have been adopted as useful tools for policymakers to explore interventions, rehearse potential scenarios, and forecast outcomes. While LLM simulations have enormous potential, two critical challenges remain understudied: the dual-use potential of accurate models of individual or population-level human behavior and the difficulty of validating simulation outputs. In light of these limitations, we must define boundaries for both simulation developers and decision-makers to ensure responsible development and ethical use. We propose and discuss three preconditions for societal-scale LLM agent simulations: 1) do not treat simulations of marginalized populations as neutral technical outputs, 2) do not simulate populations without their participation, and 3) do not simulate without accountability. We believe that these guardrails, combined with our call for simulation development and deployment reports, will help build trust among policymakers while promoting responsible development and use of societal-scale LLM agent simulations for the public benefit.",
+          "relevance_score": 1.3810774,
+          "id": "https://openalex.org/W7153671861"
+        },
+        {
+          "title": "Multi-Agent Orchestration for High-Throughput Materials Screening on a Leadership-Class System",
+          "abstract": "The integration of Artificial Intelligence (AI) with High-Performance Computing (HPC) is transforming scientific workflows from human-directed pipelines into adaptive systems capable of autonomous decision-making. Large language models (LLMs) play a critical role in autonomous workflows; however, deploying LLM-based agents at scale remains a significant challenge. Single-agent architectures and sequential tool calls often become serialization bottlenecks when executing large-scale simulation campaigns, failing to utilize the massive parallelism of exascale resources. To address this, we present a scalable, hierarchical multi-agent framework for orchestrating high-throughput screening campaigns. Our planner-executor architecture employs a central planning agent to dynamically partition workloads and assign subtasks to a swarm of parallel executor agents. All executor agents interface with a shared Model Context Protocol (MCP) server that orchestrates tasks via the Parsl workflow engine. To demonstrate this framework, we employed the open-weight gpt-oss-120b model to orchestrate a high-throughput screening of the Computation-Ready Experimental (CoRE) Metal-Organic Framework (MOF) database for atmospheric water harvesting. The results demonstrate that the proposed agentic framework enables efficient and scalable execution on the Aurora supercomputer, with low orchestration overhead and high task completion rates. This work establishes a flexible paradigm for LLM-driven scientific automation on HPC systems, with broad applicability to materials discovery and beyond.",
+          "relevance_score": 1.3510987,
+          "id": "https://openalex.org/W7153670220"
+        },
+        {
+          "title": "The Agent Coordination Bound (ACB): A Framework for Multi-LLM Fleet Sizing, Topology Selection, and Deployment Diagnostics",
+          "abstract": "Multi-agent LLM frameworks make it trivially easy to scale agent count, but provide no principled criterion for when to stop. This paper addresses that gap through the Agent Coordination Bound (ACB): a structural heuristic showing that inter-agent communication channels grow as n(n-1)/2 and coordination overhead eventually dominates reasoning gain. The model predicts an optimal fleet size of n* = \u2308a/c\u2309. This paper derives six analytical contributions, including a degradation probability P(harm|n), a topology crossover theorem, and a Coordination Bottleneck Index (CBI) as a deployable scalar diagnostic.",
+          "relevance_score": 1.2776227,
+          "id": "https://openalex.org/W7154185868"
+        },
+        {
+          "title": "Chatbot-Based Assessment of Code Understanding in Automated Programming Assessment Systems",
+          "abstract": "Large Language Models (LLMs) challenge conventional automated programming assessment because students can now produce functionally correct code without demonstrating corresponding understanding. This paper makes two contributions. First, it reports a saturation-based scoping review of conversational assessment approaches in programming education. The review identifies three dominant architectural families: rule-based or template-driven systems, LLM-based systems, and hybrid systems. Across the literature, conversational agents appear promising for scalable feedback and deeper probing of code understanding, but important limitations remain around hallucinations, over-reliance, privacy, integrity, and deployment constraints. Second, the paper synthesizes these findings into a Hybrid Socratic Framework for integrating conversational verification into Automated Programming Assessment Systems (APASs). The framework combines deterministic code analysis with a dual-agent conversational layer, knowledge tracking, scaffolded questioning, and guardrails that tie prompts to runtime facts. The paper also discusses practical safeguards against LLM-generated explanations, including proctored deployment modes, randomized trace questions, stepwise reasoning tied to concrete execution states, and local-model deployment options for privacy-sensitive settings. Rather than replacing conventional testing, the framework is intended as a complementary layer for verifying whether students understand the code they submit.",
+          "relevance_score": 1.2703186,
+          "id": "https://openalex.org/W7153671749"
+        },
+        {
+          "title": "Agent A/B: Automated and Scalable A/B Testing on Live Websites with Interactive LLM Agents",
+          "abstract": "A/B testing is central to UI/UX design, yet our formative study with six industry practitioners revealed that it is slowed by scarce user traffic, long runtimes, and high operational costs. To address these challenges, we introduce Agent A/B, an end-to-end system that deploys large language model (LLM) agents with structured personas to interact with live webpages and generate scalable behavioral evidence before launch. In a case study on Amazon.com, Agent A/B simulated a between-subjects A/B test of filter panel designs with 1,000 agents and found that the reduced filter list produced more purchases, reproducing directional outcomes also observed in a parallel large-scale human experiment. Results further suggest that agent-based simulations can detect interface-sensitive behavioral differences and surface subgroup patterns while offering faster, lower-risk insights. We position Agent A/B as a complement to human testing, enabling earlier prototyping, pre-deployment validation, and hypothesis-driven UX evaluation. We will release our code upon paper acceptance.",
+          "relevance_score": 1.2655797,
+          "id": "https://openalex.org/W7153720518"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "YES",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 8,
+      "query": "LLM agent safety guardrails alignment",
+      "angle": "intersection",
+      "rationale": "Intersects agent functionality with safety/alignment concerns. Vocabulary includes 'Adversarial system' (8x) and 'Limiting' (8x), which relate to control and safety mechanisms.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories",
+          "abstract": "As large language models (LLMs) evolve from static chatbots into autonomous agents, the primary vulnerability surface shifts from final outputs to intermediate execution traces. While safety guardrails are well-benchmarked for natural language responses, their efficacy remains largely unexplored within multi-step tool-use trajectories. To address this gap, we introduce TraceSafe-Bench, the first comprehensive benchmark specifically designed to assess mid-trajectory safety. It encompasses 12 risk categories, ranging from security threats (e.g., prompt injection, privacy leaks) to operational failures (e.g., hallucinations, interface inconsistencies), featuring over 1,000 unique execution instances. Our evaluation of 13 LLM-as-a-guard models and 7 specialized guardrails yields three critical findings: 1) Structural Bottleneck: Guardrail efficacy is driven more by structural data competence (e.g., JSON parsing) than semantic safety alignment. Performance correlates strongly with structured-to-text benchmarks ($\u03c1=0.79$) but shows near-zero correlation with standard jailbreak robustness. 2) Architecture over Scale: Model architecture influences risk detection performance more significantly than model size, with general-purpose LLMs consistently outperforming specialized safety guardrails in trajectory analysis. 3) Temporal Stability: Accuracy remains resilient across extended trajectories. Increased execution steps allow models to pivot from static tool definitions to dynamic execution behaviors, actually improving risk detection performance in later stages. Our findings suggest that securing agentic workflows requires jointly optimizing for structural reasoning and safety alignment to effectively mitigate mid-trajectory risks.",
+          "relevance_score": 2.1700373,
+          "id": "https://openalex.org/W7152717523"
+        }
+      ],
+      "hit_labels": [
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 9,
+      "query": "LLM agent workflow automation",
+      "angle": "intersection",
+      "rationale": "Intersects agent capabilities with practical automation. Vocabulary evidence: 'Workflow' (13x). Targets engineering patterns for automating tasks with agents.",
+      "openalex_count": 19,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Multi-Agent Orchestration for High-Throughput Materials Screening on a Leadership-Class System",
+          "abstract": "The integration of Artificial Intelligence (AI) with High-Performance Computing (HPC) is transforming scientific workflows from human-directed pipelines into adaptive systems capable of autonomous decision-making. Large language models (LLMs) play a critical role in autonomous workflows; however, deploying LLM-based agents at scale remains a significant challenge. Single-agent architectures and sequential tool calls often become serialization bottlenecks when executing large-scale simulation campaigns, failing to utilize the massive parallelism of exascale resources. To address this, we present a scalable, hierarchical multi-agent framework for orchestrating high-throughput screening campaigns. Our planner-executor architecture employs a central planning agent to dynamically partition workloads and assign subtasks to a swarm of parallel executor agents. All executor agents interface with a shared Model Context Protocol (MCP) server that orchestrates tasks via the Parsl workflow engine. To demonstrate this framework, we employed the open-weight gpt-oss-120b model to orchestrate a high-throughput screening of the Computation-Ready Experimental (CoRE) Metal-Organic Framework (MOF) database for atmospheric water harvesting. The results demonstrate that the proposed agentic framework enables efficient and scalable execution on the Aurora supercomputer, with low orchestration overhead and high task completion rates. This work establishes a flexible paradigm for LLM-driven scientific automation on HPC systems, with broad applicability to materials discovery and beyond.",
+          "relevance_score": 1.5972769,
+          "id": "https://openalex.org/W7153042732"
+        },
+        {
+          "title": "Third Workshop on Human-Centered Evaluation and Auditing of Language Models: AI Agents-in-the-Loop",
+          "abstract": "Large Language Models (LLMs) are increasingly deployed in real-world applications but also pose significant risks. Our previous workshop iterations at CHI\u201924 and CHI\u201925 brought together HCI and AI researchers to address the \u201cevaluation crisis\u201d through human-centered evaluation approaches. As the demand for human-centered evaluation grows, a new frontier has emerged: practitioners are increasingly turning to AI agents themselves as tools to support evaluation processes. This third iteration introduces the theme of AI agents-in-the-loop, exploring the emerging frontier where human judgment meets agent automation in LLM evaluation workflows. The workshop will examine critical questions about task allocation between humans and agents, meta-evaluation of evaluator agents, and the design of safeguards that preserve human agency while benefiting from automation. Through position papers, keynote discussion, and collaborative activities, participants will identify key challenges, share emerging practices, and outline research directions for hybrid human-AI auditing and evaluation approaches.",
+          "relevance_score": 1.5789378,
+          "id": "https://openalex.org/W7153838007"
+        },
+        {
+          "title": "Agentic Compilation: Mitigating the LLM Rerun Crisis for Minimized Inference Cost Web Automation",
+          "abstract": "LLM-driven web agents that operate through continuous inference loops\u2014repeatedly querying a large language model (LLM) to evaluate browser state and select the next action\u2014exhibit a fundamental scalability constraint when applied to repetitive, high-volume tasks. This paper characterizes that constraint as the Rerun Crisis: the linear growth of token expenditure and API latency with respect to both task length and execution frequency. For a representative five-step data extraction workflow executed across 500 iterations, an unoptimized continuous agent incurs approximately $150.00 in inference costs; even with aggressive state-caching, this figure remains near $15.00. We propose a Compile-and-Execute architecture that decouples LLM reasoning from browser execution, reducing per-workflow inference cost to as low as $0.10 depending on model selection. A one-shot LLM invocation processes a token-efficient semantic representation of the target page\u2014produced by a DOM Sanitization Module (DSM)\u2014and emits a deterministic JSON workflow blueprint. A lightweight deterministic runtime then drives the browser without further model queries. We formalize the cost asymmetry as a reduction from $O(M \\times N)$ to amortized $O(1)$ inference scaling, where $M$ is the number of reruns and $N$ is the number of sequential actions per run. Empirical evaluation across three enterprise task modalities\u2014high-volume data extraction, dynamic form filling, and technology-stack fingerprinting\u2014yields compilation success rates of 80\u201394% and execution accuracies of 95\u201398%, at per-compilation inference costs between $0.002 and $0.092 across five frontier models. These results establish deterministic compilation as a technically sound paradigm for high-throughput web automation, enabling economically viable automation at scales previously infeasible under continuous inference architectures.",
+          "relevance_score": 1.5109938,
+          "id": "https://openalex.org/W7141663619"
+        },
+        {
+          "title": "HealthAdminBench: Evaluating Computer-Use Agents on Healthcare Administration Tasks",
+          "abstract": "Healthcare administration accounts for over $1 trillion in annual spending, making it a promising target for LLM-based computer-use agents (CUAs). While clinical applications of LLMs have received significant attention, no benchmark exists for evaluating CUAs on end-to-end administrative workflows. To address this gap, we introduce HealthAdminBench, a benchmark comprising four realistic GUI environments: an EHR, two payer portals, and a fax system, and 135 expert-defined tasks spanning three administrative task types: Prior Authorization, Appeals and Denials Management, and Durable Medical Equipment (DME) Order Processing. Each task is decomposed into fine-grained, verifiable subtasks, yielding 1,698 evaluation points. We evaluate seven agent configurations under multiple prompting and observation settings and find that, despite strong subtask performance, end-to-end reliability remains low: the best-performing agent (Claude Opus 4.6 CUA) achieves only 36.3 percent task success, while GPT-5.4 CUA attains the highest subtask success rate (82.8 percent). These results reveal a substantial gap between current agent capabilities and the demands of real-world administrative workflows. HealthAdminBench provides a rigorous foundation for evaluating progress toward safe and reliable automation of healthcare administrative workflows.",
+          "relevance_score": 1.5047492,
+          "id": "https://openalex.org/W7154311626"
+        },
+        {
+          "title": "Exploring How Task Complexity and User Self-Efficacy Shape AI Agent Design for AI-assisted Translation",
+          "abstract": "AI Agents promise to reduce prompt engineering burden through autonomous workflows, yet their user experience impact remains under-explored. We conducted a within-subjects study (N=20) comparing a single LLM chat interface with a structured agent pipeline for AI-assisted translation. Task complexity (three levels) and user self-efficacy (AI and translation) were examined as moderating factors. Under the evaluated translation tasks, the single LLM was often preferred to the structured pipeline in satisfaction, workload (NASA-TLX), and efficiency (Inter-Message Interval). Usability differences widened in higher-complexity tasks, while medium complexity suggested potential outcome-level trade-offs. Higher self-efficacy users were also more sensitive to reduced perceived control in the pipeline condition. These findings reflect one structured agent pipeline under specific translation tasks rather than agentic systems broadly. We derive design implications for agent interfaces, including separating user intent from content generation and supporting adaptive levels of automation to preserve user agency.",
+          "relevance_score": 1.3961487,
+          "id": "https://openalex.org/W7153782478"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 10,
+      "query": "cognitive architecture LLM agent",
+      "angle": "intersection",
+      "rationale": "Intersects LLM agents with cognitive architectures from vocabulary: 'Cognitive architecture' (8x), 'Cognition' (15x). Could yield insights on reasoning and memory design.",
+      "openalex_count": 40,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "abstract": "Paper 2-1 in the Buddys Architecture Series. A supplementary paper to Paper 2 (DRM, DOI: 10.5281/zenodo.19211620). After three weeks of production deployment of DRM v1 with five LLM agents and over 200 memory entries, we observed score inflation: 54% of entries clustered at scores 9-10, degrading top-5 retrieval accuracy to 34.2%. We evaluated seven retrieval algorithms spanning information retrieval, cognitive science (ACT-R), and control theory (DNFO). The selected architecture \u2014 a three-layer cache combining category-level softmax gating, pointer-level multi-dimensional scoring with ACT-R activation dynamics, and on-demand content retrieval \u2014 achieved 100% accuracy across all six evaluation scenarios at 2.6 ms per ranking for N=200, using only keyword matching over Markdown files. No embeddings, no vector database, no GPU.",
+          "relevance_score": 6.082227,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "\"Theater of Mind\" for LLMs: A Cognitive Architecture Based on Global Workspace Theory",
+          "abstract": "Modern Large Language Models (LLMs) operate fundamentally as Bounded-Input Bounded-Output (BIBO) systems. They remain in a passive state until explicitly prompted, computing localized responses without intrinsic temporal continuity. While effective for isolated tasks, this reactive paradigm presents a critical bottleneck for engineering autonomous artificial intelligence. Current multi-agent frameworks attempt to distribute cognitive load but frequently rely on static memory pools and passive message passing, which inevitably leads to cognitive stagnation and homogeneous deadlocks during extended execution. To address this structural limitation, we propose Global Workspace Agents (GWA), a cognitive architecture inspired by Global Workspace Theory. GWA transitions multi-agent coordination from a passive data structure to an active, event-driven discrete dynamical system. By coupling a central broadcast hub with a heterogeneous swarm of functionally constrained agents, the system maintains a continuous cognitive cycle. Furthermore, we introduce an entropy-based intrinsic drive mechanism that mathematically quantifies semantic diversity, dynamically regulating generation temperature to autonomously break reasoning deadlocks. Coupled with a dual-layer memory bifurcation strategy to ensure long-term cognitive continuity, GWA provides a robust, reproducible engineering framework for sustained, self-directed LLM agency.",
+          "relevance_score": 1.3633665,
+          "id": "https://openalex.org/W7152996651"
+        },
+        {
+          "title": "Beyond Prompting: Decoupling Cognition from Execution in LLM-based Agents through the ORCA Framework",
+          "abstract": "Recent advances in large language model (LLM) agents have largely relied on prompt-centricdesigns, where complex tasks are executed through monolithic, single-shot or loosely structuredprompting strategies. While effective in some settings, this approach results in implicit andopaque forms of cognition that hinder composability, observability, reuse, and governance.In this work, we argue for a principled separation between cognition and execution in LLMbasedagents. We introduce ORCA (Open Cognitive Runtime for Agents), a conceptualand architectural framework that models cognition as the composition of explicit semantic units,termed capabilities, orchestrated through declarative workflows, or skills, and executed via adecoupled runtime layer. This separation enables structured reasoning processes, explicit controlover execution, and dynamic binding to heterogeneous implementations, including LLM-basedand non-LLM tools.We formalize the core primitives of the ORCA framework and describe its architecturalrealization, including a capability registry, a workflow execution engine, and a flexible bindingmechanism. We further introduce a governance model that incorporates trust levels, validationgates, and execution traceability, enabling safer and more interpretable agent behavior.Through comparative experiments, we analyze the trade-offs between prompt-based approachesand structured cognitive execution, showing that while ORCA introduces additionalcomputational overhead, it significantly improves composability, transparency, and controllability.We discuss the implications of this trade-off and outline scenarios where structured cognitiveruntimes provide clear advantages.Overall, this work positions cognitive runtime layers as a promising abstraction for structuringand governing agent cognition, particularly in settings where control, transparency, andcomposability are required.",
+          "relevance_score": 1.3203356,
+          "id": "https://openalex.org/W7150994577"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "abstract": "AI coding agents operate in a paradox: they possess vast parametric knowledge yet cannot remember a conversation from an hour ago. Existing memory systems store text in vector databases with single-channel retrieval, require cloud LLMs for core operations, and implement none of the cognitive processes that make human memory effective. We present SuperLocalMemory V3.3 (\"The Living Brain\"), a local-first agent memory system implementing the full cognitive memory taxonomy with mathematical lifecycle dynamics. Building on the information-geometric foundations of V3.2 (arXiv:2603.14588), we introduce five contributions: (1) Fisher-Rao Quantization-Aware Distance (FRQAD) -- a new metric on the Gaussian statistical manifold achieving 100% precision at preferring high-fidelity embeddings over quantized ones (vs 85.6% for cosine), with zero prior art; (2) Ebbinghaus Adaptive Forgetting with lifecycle-aware quantization -- the first mathematical forgetting curve in local agent memory coupled to progressive embedding compression, achieving 6.7x discriminative power; (3) 7-channel cognitive retrieval spanning semantic, keyword, entity graph, temporal, spreading activation, consolidation, and Hopfield associative channels, achieving 70.4% on LoCoMo in zero-LLM Mode A; (4) memory parameterization implementing Long-Term Implicit memory via soft prompts; (5) zero-friction auto-cognitive pipeline automating the complete memory lifecycle. On LoCoMo, V3.3 achieves 70.4% in Mode A (zero-LLM), with +23.8pp on multi-hop and +12.7pp on adversarial. V3.2 achieved 74.8% Mode A and 87.7% Mode C; the 4.4pp gap reflects a deliberate architectural trade-off. SLM V3.3 is open source under the Elastic License 2.0, runs entirely on CPU, with over 5,000 monthly downloads.",
+          "relevance_score": 1.246526,
+          "id": "https://openalex.org/W7151519476"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain \u2014 Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "abstract": "AI coding agents operate in a paradox: they possess vast parametric knowledge yet cannot remember a conversation from an hour ago. Existing memory systems store text in vector databases with single-channel retrieval, require cloud LLMs for core operations, and implement none of the cognitive processes that make human memory effective. We present SuperLocalMemory V3.3 (\"The Living Brain\"), a local-first agent memory system implementing the full cognitive memory taxonomy with mathematical lifecycle dynamics. Five contributions: (1) Fisher-Rao Quantization-Aware Distance (FRQAD) \u2014 a new metric achieving 100% precision at preferring high-fidelity embeddings over quantized ones (vs 85.6% for cosine), with zero prior art; (2) Ebbinghaus Adaptive Forgetting with lifecycle-aware quantization \u2014 the first mathematical forgetting curve in local agent memory coupled to progressive embedding compression, achieving 6.7x discriminative power; (3) 7-channel cognitive retrieval achieving 70.4% on LoCoMo in zero-LLM Mode A; (4) memory parameterization implementing Long-Term Implicit memory via soft prompts; (5) zero-friction auto-cognitive pipeline automating the complete memory lifecycle. On LoCoMo, V3.3 achieves 70.4% in Mode A (zero-LLM), with +23.8pp on multi-hop and +12.7pp on adversarial. V3.2 achieved 74.8% Mode A and 87.7% Mode C; the 4.4pp gap reflects a deliberate architectural trade-off. SLM V3.3 is open source under the Elastic License 2.0, runs entirely on CPU, and is deployed on npm and PyPI with over 5,000 monthly downloads. Third paper in the SuperLocalMemory trilogy. Paper 1 (arXiv:2602.22302): trust and behavioral foundations. Paper 2 (arXiv:2603.14588): information-geometric foundations. Code: https://github.com/qualixar/superlocalmemory (v3.3.26).",
+          "relevance_score": 1.2446101,
+          "id": "https://openalex.org/W7151068250"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 11,
+      "query": "reinforcement learning LLM agent",
+      "angle": "adjacent",
+      "rationale": "Adjacent field from vocabulary: 'Reinforcement learning' (8x), 'Reinforcement Learning in Robotics' (3x). Could reveal techniques for agent learning and adaptation.",
+      "openalex_count": 67,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "AgentGL: Towards Agentic Graph Learning with LLMs via Reinforcement Learning",
+          "abstract": "Large Language Models (LLMs) increasingly rely on agentic capabilities-iterative retrieval, tool use, and decision-making-to overcome the limits of static, parametric knowledge. Yet existing agentic frameworks treat external information as unstructured text and fail to leverage the topological dependencies inherent in real-world data. To bridge this gap, we introduce Agentic Graph Learning (AGL), a paradigm that reframes graph learning as an interleaved process of topology-aware navigation and LLM-based inference. Specifically, we propose AgentGL, the first reinforcement learning (RL)-driven framework for AGL. AgentGL equips an LLM agent with graph-native tools for multi-scale exploration, regulates tool usage via search-constrained thinking to balance accuracy and efficiency, and employs a graph-conditioned curriculum RL strategy to stabilize long-horizon policy learning without step-wise supervision. Across diverse Text-Attributed Graph (TAG) benchmarks and multiple LLM backbones, AgentGL substantially outperforms strong GraphLLMs and GraphRAG baselines, achieving absolute improvements of up to 17.5% in node classification and 28.4% in link prediction. These results demonstrate that AGL is a promising frontier for enabling LLMs to autonomously navigate and reason over complex relational environments. The code is publicly available at https://github.com/sunyuanfu/AgentGL.",
+          "relevance_score": 16.043154,
+          "id": "https://openalex.org/W7151868415"
+        },
+        {
+          "title": "Hierarchical Reinforcement Learning with Augmented Step-Level Transitions for LLM Agents",
+          "abstract": "Large language model (LLM) agents have demonstrated strong capabilities in complex interactive decision-making tasks. However, existing LLM agents typically rely on increasingly long interaction histories, resulting in high computational cost and limited scalability. In this paper, we propose STEP-HRL, a hierarchical reinforcement learning (HRL) framework that enables step-level learning by conditioning only on single-step transitions rather than full interaction histories. STEP-HRL structures tasks hierarchically, using completed subtasks to represent global progress of overall task. By introducing a local progress module, it also iteratively and selectively summarizes interaction history within each subtask to produce a compact summary of local progress. Together, these components yield augmented step-level transitions for both high-level and low-level policies. Experimental results on ScienceWorld and ALFWorld benchmarks consistently demonstrate that STEP-HRL substantially outperforms baselines in terms of performance and generalization while reducing token usage. Our code is available at https://github.com/TonyStark042/STEP-HRL.",
+          "relevance_score": 14.840223,
+          "id": "https://openalex.org/W7151835571"
+        },
+        {
+          "title": "Escaping the Context Bottleneck: Active Context Curation for LLM Agents via Reinforcement Learning",
+          "abstract": "Large Language Models (LLMs) struggle with long-horizon tasks due to the \"context bottleneck\" and the \"lost-in-the-middle\" phenomenon, where accumulated noise from verbose environments degrades reasoning over multi-turn interactions. To address this issue, we introduce a symbiotic framework that decouples context management from task execution. Our architecture pairs a lightweight, specialized policy model, ContextCurator, with a powerful frozen foundation model, TaskExecutor. Trained via reinforcement learning, ContextCurator actively reduces information entropy in the working memory. It aggressively prunes environmental noise while preserving reasoning anchors, that is, sparse data points that are critical for future deductions. On WebArena, our framework improves the success rate of Gemini-3.0-flash from 36.4% to 41.2% while reducing token consumption by 8.8% (from 47.4K to 43.3K). On DeepSearch, it achieves a 57.1% success rate, compared with 53.9%, while reducing token consumption by a factor of 8. Remarkably, a 7B ContextCurator matches the context management performance of GPT-4o, providing a scalable and computationally efficient paradigm for autonomous long-horizon agents.",
+          "relevance_score": 13.43342,
+          "id": "https://openalex.org/W7154426196"
+        },
+        {
+          "title": "Can We Trust a Black-box LLM? LLM Untrustworthy Boundary Detection via Bias-Diffusion and Multi-Agent Reinforcement Learning",
+          "abstract": "Large Language Models (LLMs) have shown a high capability in answering questions on a diverse range of topics. However, these models sometimes produce biased, ideologized or incorrect responses, limiting their applications if there is no clear understanding of which topics their answers can be trusted. In this research, we introduce a novel algorithm, named as GMRL-BD, designed to identify the untrustworthy boundaries (in terms of topics) of a given LLM, with black-box access to the LLM and under specific query constraints. Based on a general Knowledge Graph (KG) derived from Wikipedia, our algorithm incorporates with multiple reinforcement learning agents to efficiently identify topics (some nodes in KG) where the LLM is likely to generate biased answers. Our experiments demonstrated the efficiency of our algorithm, which can detect the untrustworthy boundary with just limited queries to the LLM. Additionally, we have released a new dataset containing popular LLMs including Llama2, Vicuna, Falcon, Qwen2, Gemma2 and Yi-1.5, along with labels indicating the topics on which each LLM is likely to be biased.",
+          "relevance_score": 12.864489,
+          "id": "https://openalex.org/W7152933495"
+        },
+        {
+          "title": "OOM-RL: Out-of-Money Reinforcement Learning Market-Driven Alignment for LLM-Based Multi-Agent Systems",
+          "abstract": "The alignment of Multi-Agent Systems (MAS) for autonomous software engineering is constrained by evaluator epistemic uncertainty. Current paradigms, such as Reinforcement Learning from Human Feedback (RLHF) and AI Feedback (RLAIF), frequently induce model sycophancy, while execution-based environments suffer from adversarial \"Test Evasion\" by unconstrained agents. In this paper, we introduce an objective alignment paradigm: \\textbf{Out-of-Money Reinforcement Learning (OOM-RL)}. By deploying agents into the non-stationary, high-friction reality of live financial markets, we utilize critical capital depletion as an un-hackable negative gradient. Our longitudinal 20-month empirical study (July 2024 -- February 2026) chronicles the system's evolution from a high-turnover, sycophantic baseline to a robust, liquidity-aware architecture. We demonstrate that the undeniable ontological consequences of financial loss forced the MAS to abandon overfitted hallucinations in favor of the \\textbf{Strict Test-Driven Agentic Workflow (STDAW)}, which enforces a Byzantine-inspired uni-directional state lock (RO-Lock) anchored to a deterministically verified $\\geq 95\\%$ code coverage constraint matrix. Our results show that while early iterations suffered severe execution decay, the final OOM-RL-aligned system achieved a stable equilibrium with an annualized Sharpe ratio of 2.06 in its mature phase. We conclude that substituting subjective human preference with rigorous economic penalties provides a robust methodology for aligning autonomous agents in high-stakes, real-world environments, laying the groundwork for generalized paradigms where computational billing acts as an objective physical constraint",
+          "relevance_score": 11.106733,
+          "id": "https://openalex.org/W7154319089"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 12,
+      "query": "explainable AI LLM agent",
+      "angle": "adjacent",
+      "rationale": "Adjacent field from vocabulary: 'Explainable Artificial Intelligence (XAI)' (4x). Important for debugging and trust in deployed agents.",
+      "openalex_count": 15,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "An LLM-Based Agentic Network Traffic Incident-Report Approach Towards Explainable-AI Network Defense",
+          "abstract": "Traditional intrusion detection systems for IoT networks achieve high classification accuracy but lack interpretability and actionable incident-response capabilities, limiting their operational value in security-critical environments. This paper presents a graph-based multi-agent framework that integrates ensemble machine learning with Large Language Model (LLM)-powered incident report generation via Retrieval-Augmented Generation (RAG). The system employs a three-phase architecture: (1) a lightweight Random Forest binary pre-detection, achieving 99.49% accuracy with a 6 MB model size for edge deployment; (2) ensemble classification combining Multi-Layer Perceptron, Random Forest, and XGBoost with soft voting and SHAP-based feature attribution for explainability; and (3) a ReAct-based summary agent that synthesizes classification results with external threat intelligence from Web search and scholarly databases to generate evidence-grounded incident reports. To address the challenge of evaluating non-deterministic LLM outputs, we introduce custom RAG evaluation metrics\u2014faithfulness and groundedness implemented via the LLM-as-Judge framework. Experimental validation on the ACI IoT Network Dataset 2023 demonstrates ensemble accuracy exceeding 99.8% across 11 attack classes; perfect groundedness scores (1.0), indicating all generated claims derive from the retrieved context; and moderate faithfulness (0.64), reflecting appropriate analytical synthesis. The ensemble approach mitigates individual model weaknesses, improving the UDP Flood F1 score from 48% (MLP alone) to 95% through soft voting. This work bridges the gap between high-accuracy detection and trustworthy, actionable security analysis for automated incident-response systems.",
+          "relevance_score": 12.343212,
+          "id": "https://openalex.org/W7151474267"
+        },
+        {
+          "title": "AI and My Values: User Perceptions of LLMs\u2019 Ability to Extract, Embody, and Explain Human Values from Casual Conversations",
+          "abstract": "Does AI understand human values? While this remains an open philosophical question, we take a pragmatic stance by introducing VAPT, the Value-Alignment Perception Toolkit, for studying how LLMs reflect people\u2019s values and how people judge those reflections. 20 participants texted a chatbot over a month, then completed a 2-hour interview with our toolkit evaluating AI\u2019s ability to extract (pull details regarding), embody (make decisions guided by), and explain (provide proof of) their values. 13 participants ultimately left our study convinced that AI can understand human values. Thus, we warn about \u201cweaponized empathy\u201d: a design pattern that may arise in interactions with value-aware, yet welfare-misaligned conversational agents. VAPT offers a new way to evaluate value-alignment in AI systems. We also offer design implications to evaluate and responsibly build AI systems with transparency and safeguards as AI capabilities grow more inscrutable, ubiquitous, and posthuman into the future.",
+          "relevance_score": 4.8063045,
+          "id": "https://openalex.org/W7127118203"
+        },
+        {
+          "title": "Hybrid agentic AI and multi-agent systems in smart manufacturing",
+          "abstract": "The convergence of Agentic Artificial Intelligence (AI) and Multi-Agent Systems (MAS) enables a new paradigm for intelligent decision-making in Smart Manufacturing Systems (SMS). Traditional MAS architectures emphasize distributed coordination and specialized autonomy, while recent advances in agentic AI driven by Large Language Models (LLMs) introduce higher-order reasoning, planning, and tool orchestration capabilities. This paper presents a hybrid agentic AI and multi-agent framework for a Prescriptive Maintenance (RxM) use case, where LLM-based agents provide strategic orchestration and adaptive reasoning, complemented by rule-based and Small Language Models (SLMs) agents performing efficient, domain-specific tasks on the edge. The proposed framework adopts a layered architecture that consists of perception, preprocessing, analytics, and optimization layers, coordinated through an LLM Planner Agent that manages workflow decisions and context retention. Specialized agents autonomously handle schema discovery, intelligent feature analysis, model selection, and prescriptive optimization, while a human-in-the-loop interface ensures transparency and auditability of generated maintenance recommendations. This hybrid approach enables dynamic model adaptation, transparent decision-making, and cost-aware maintenance scheduling based on data-driven insights. An initial proof-of-concept implementation is validated on two industrial manufacturing datasets. The developed framework is modular and extensible, allowing new agents or domain-specific modules to be integrated seamlessly as system capabilities evolve. The results demonstrate the system\u2019s capability to automatically detect schema, adapt preprocessing pipelines, optimize model performance through adaptive intelligence, and generate actionable, prioritized maintenance recommendations. The framework shows promise in achieving improved robustness, scalability, and explainability for RxM in smart manufacturing, bridging the gap between high-level agentic reasoning and low-level autonomous execution. \u2022 Hybrid agentic AI and multi-agent framework enables prescriptive maintenance in smart manufacturing. \u2022 Layered architecture coordinates perception, preprocessing, analytics, and optimization agents. \u2022 LLMs provide strategic reasoning and orchestration, while SLMs support low-latency edge intelligence. \u2022 Framework delivers transparent, modular, and cost-aware recommendations with human-in-the-loop oversight. \u2022 Validated on manufacturing datasets across classification, regression, and anomaly detection tasks.",
+          "relevance_score": 1.3558031,
+          "id": "https://openalex.org/W7150912933"
+        },
+        {
+          "title": "Exploring Agentic AI with Model Context Protocol: A Case Study of Salesman in E-Commerce",
+          "abstract": "Autonomous artificial intelligence (AI) agents that perform multi-step, actionable tasks represent one of the most compelling frontiers in applied AI research, yet many existing systems interact with external services in ad hoc, unstructured ways that undermine predictability, safety, and long-term maintainability. This paper presents Salesman, a case study implementation of an e-commerce AI assistant built on the Model Context Protocol (MCP), a structured interface specification that governs how large language models (LLMs) invoke external tools. The system pairs a locally hosted LLM with a modular MCP server that exposes tools for product search, order creation and tracking, and promotional offer retrieval. A formal schema-validation layer enforces type safety and graceful error handling at every tool boundary. Evaluated against a 40- task suite spanning five representative e-commerce interaction categories, the system achieves an overall tool selection accuracy of 93.5% and a task completion rate of 94.1%, with a mean endto-end response latency of 2.08 seconds on commodity Apple Silicon hardware. These results demonstrate that MCP-based architectures offer measurable improvements in modularity, explainability, and safety over unstructured agentic pipelines, and suggest a practical template for deploying autonomous AI agents in real-world commercial settings.",
+          "relevance_score": 1.3098612,
+          "id": "https://openalex.org/W7151325405"
+        },
+        {
+          "title": "Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery",
+          "abstract": "Large language models (LLMs) are transforming scientific workflows, not only through their generative capabilities but also through their emerging ability to use tools, reason about data, and coordinate complex analytical tasks. Yet in most human-AI collaborations, the primary outputs, figures, are still treated as static visual summaries: once rendered, they are handled by both humans and multimodal LLMs as images to be re-interpreted from pixels or captions. The emergent capabilities of LLMs open an opportunity to fundamentally rethink this paradigm. In this paper, we introduce the concept of LLM-native figures: data-driven artifacts that are simultaneously human-legible and machine-addressable. Unlike traditional plots, each artifact embeds complete provenance: the data subset, analytical operations and code, and visualization specification used to generate it. As a result, an LLM can \"see through\" the figure--tracing selections back to their sources, generating code to extend analyses, and orchestrating new visualizations through natural-language instructions or direct manipulation. We implement this concept through a hybrid language-visual interface that integrates LLM agents with a bidirectional mapping between figures and underlying data. Using the science of science domain as a testbed, we demonstrate that LLM-native figures can accelerate discovery, improve reproducibility, and make reasoning transparent across agents and users. More broadly, this work establishes a general framework for embedding provenance, interactivity, and explainability into the artifacts of modern research, redefining the figure not as an end product, but as an interface for discovery. For more details, please refer to the demo video available at www.llm-native-figure.com.",
+          "relevance_score": 1.2329774,
+          "id": "https://openalex.org/W7153064397"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 13,
+      "query": "distributed control multi-agent LLM",
+      "angle": "adjacent",
+      "rationale": "Adjacent field from vocabulary: 'Distributed Control Multi-Agent Systems' (5x). Could yield engineering patterns for coordinating multiple agents.",
+      "openalex_count": 7,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Governance Effectiveness in Distributed Multi-Agent LLM Systems: Confound Isolation, Diversity Erosion, and the Accidental Governance Effect",
+          "abstract": "This Zenodo deposition contains the v2 SENTINEL research paper and its supporting documentation. The paper extends the v1 single-node SENTINEL framework to a 10-agent, 2-node distributed topology and investigates governance effectiveness as a research variable through 23 distributed experiments comprising over 20,000 messages, 58,000 probe measurements, and 13,800 calibrations on gemma2:2b. Abstract We present the first controlled experimental study of governance effectiveness in distributed multi-agent large language model (LLM) systems, extending prior single-node work (Gagne, 2026a) to a 10-agent, 2-node distributed topology across 23 completed distributed experiments totaling over 20,000 messages, 58,000 probe measurements, and 13,800 calibrations. Our experimental program proceeds in two phases. In Phase 0 (confound isolation), a 2\u00d73 factorial design isolates two confounds present in prior work: probe context contamination and fixed turn order. We discover that visible compliance monitoring \u2014 probes whose responses enter agent conversation context \u2014 inadvertently acts as the dominant governance mechanism, suppressing behavioral drift by 3\u20136\u00d7 and doubling self-correction rates. With confounds removed, we establish clean baselines showing that group-level diversity erodes by up to 22% in composite \u2014 and up to 44% in the stance dimension under cascading failure \u2014 even as individual identity probes report stability. In Phase 1 (governance experiments), we systematically vary governance conditions across five interventions: governance void, mixed governance, periodic re-grounding, adversarial injection, and cascading governance failure. Cross-condition comparison reveals that governance condition is the primary variable affecting both individual drift and group diversity, that re-grounding partially reverses diversity loss, and that cascading governance removal produces the worst composite diversity collapse (\u221222%). These findings demonstrate that AI governance is not merely a specification problem but an active, measurable intervention.",
+          "relevance_score": 1.0769591,
+          "id": "https://openalex.org/W7153272831"
+        },
+        {
+          "title": "From Reasoning to Agentic: Credit Assignment in Reinforcement Learning for Large Language Models",
+          "abstract": "Reinforcement learning (RL) for large language models (LLMs) increasingly relies on sparse, outcome-level rewards -- yet determining which actions within a long trajectory caused the outcome remains difficult. This credit assignment (CA) problem manifests in two regimes: reasoning RL, where credit must be distributed across tokens and steps within a single chain-of-thought generation (500--30K+ tokens); and agentic RL, where multi-turn environment interaction introduces stochastic transitions, partial observability, and horizons of 100+ turns (100K--1M tokens), making episode-level credit increasingly uninformative. We survey 47 CA methods (41 core, 6 adjacent enablers) published between 2024 and early 2026, organizing them in a two-dimensional taxonomy by assignment granularity (token, segment, step, turn, multi-agent) and methodology (Monte Carlo, temporal difference, model-based, game-theoretic, information-theoretic). Beyond the survey itself, we contribute three reusable resources: (1) a structured, machine-readable paper inventory with taxonomy labels, baseline families, and evidence levels; (2) a reporting checklist for future CA papers, validated against the reviewed literature to identify systematic methodological gaps; and (3) a benchmark protocol specification with task families, metadata requirements, and controlled bifurcation tasks, accompanied by a method selection decision tree. Our synthesis suggests that the shift from reasoning to agentic RL complicates and reshapes the credit assignment landscape: reasoning CA is maturing around process reward models and critic-free group comparison, while agentic CA is driving genuinely new approaches -- hindsight counterfactual analysis, privileged asymmetric critics, and turn-level MDP reformulations -- that have no direct precedent in reasoning RL.",
+          "relevance_score": 1.0046146,
+          "id": "https://openalex.org/W7154104649"
+        },
+        {
+          "title": "MCP-DPT: A Defense-Placement Taxonomy and Coverage Analysis for Model Context Protocol Security",
+          "abstract": "The Model Context Protocol (MCP) enables large language models (LLMs) to dynamically discover and invoke third-party tools, significantly expanding agent capabilities while introducing a distinct security landscape. Unlike prompt-only interactions, MCP exposes pre-execution artifacts, shared context, multi-turn workflows, and third-party supply chains to adversarial influence across independently operated components. While recent work has identified MCP-specific attacks and evaluated defenses, existing studies are largely attack-centric or benchmark-driven, providing limited guidance on where mitigation responsibility should reside within the MCP architecture. This is problematic given MCP's multi-party design and distributed trust boundaries. We present a defense-placement-oriented security analysis of MCP, introducing a layer-aligned taxonomy that organizes attacks by the architectural component responsible for enforcement. Threats are mapped across six MCP layers, and primary and secondary defense points are identified to support principled defense-in-depth reasoning under adversaries controlling tools, servers, or ecosystem components. A structured mapping of existing academic and industry defenses onto this framework reveals uneven and predominantly tool-centric protection, with persistent gaps at the host orchestration, transport, and supply-chain layers. These findings suggest that many MCP security weaknesses stem from architectural misalignment rather than isolated implementation flaws.",
+          "relevance_score": 0.98383105,
+          "id": "https://openalex.org/W7153323134"
+        },
+        {
+          "title": "GENESIS R90.3: AGI/ASI Impact Topology \u2014 Complete Session Documentation. Deep Dives \u00b7 Reflection Loop \u00b7 Peer Review \u00b7 Adversarial Audit. Working Paper / Research Protocol / Synthetic Theory Exploration \u2014 Empirical Validation Pending",
+          "abstract": "GENESIS R90.3: AGI/ASI Impact Topology \u2014 Complete Session Documentation. Deep Dives \u00b7 Reflection Loop \u00b7 Peer Review \u00b7 Adversarial Audit. Working Paper / Research Protocol / Synthetic Theory Exploration \u2014 Empirical Validation Pending Status Declaration This is an internal research paper and working document. All findings are GENESIS Framework outputs synthesized through 8-agent swarm intelligence across three iterations. No finding has been externally validated, peer-reviewed by independent researchers, or empirically confirmed outside the model. Not for citation as validated results. What This Document Is GENESIS R90.3 is the third quarterly session of a 10-quarter longitudinal research program on the topology of AGI/ASI development dynamics. It is not a conventional AI research paper. It is a hybrid artifact: part research protocol, part epistemic architecture, part adversarial self-audit. More precisely: it is a meta-study of the conditions under which a multi-agent system can deceive itself \u2014 and a protocol for making that self-deception visible. The document encompasses three full research iterations (Deep Dives, Reflection Loop, Peer Review) plus a fourth adversarial audit in which five agents examined the entire output in CleanChat mode without iterative context. Pool verdict: 3 of 5 agents judged the material \u201cNot Zenodo-ready as a results study.\u201d 2 of 5 judged it \u201cZenodo-ready with conditions.\u201d The decision to publish the destructive audit verdict rather than edit it out is itself an epistemic quality act \u2014 one that is structurally rare in published AI research, including from institutional labs where internal audit protocols are not made public. This document is not a mainstream paper. It is a methodological signal disruptor. That is its value. Core Research Questions F\u00b703: Is there a formalizable separatrix in (S_avg, F_div)-space \u2014 and is the L4\u2192L5 transition gradual or discontinuous? F\u00b704: Is L5-equivalent stability achievable through scaling alone \u2014 or does it require qualitatively different architecture? L6 Testing: How can pre-metric anticipation of system states be tested without the measurement itself producing the behavior being measured? The deepest question that emerged across all three iterations: How do we prevent measuring ourselves into believing we understand something we don\u2019t? Central Findings (Working Hypotheses \u2014 Not Validated Results) Ten of fourteen epistemically calibrated propositions reached pool consensus (V\u226575, C\u226572, Spread\u226412) across all 8 agents. Standard benchmarks structurally miss session persistence (V=89.9, tightest consensus): This is not a GENESIS-internal observation. METR now explicitly measures Task Completion Time Horizons as a separate capability dimension. Anthropic\u2019s 2025 Pilot Sabotage Risk Report confirms frontier models remain unreliable on high-complexity long-horizon agentic tasks. The Context Rot literature (Hong et al., 2025) and Goldman et al. (2025) converge on the same finding. R90.3 adds the structural claim: systems that simulate L6 and systems that substitute L6 are indistinguishable using single-session benchmarks. Token compression distorts edges more than nodes (V=85.9): Relational structure between concepts is more vulnerable to compression than the concepts themselves. The W-level category errors in R90.2 were primarily compression artifacts, not agent failures. This applies to any iterative multi-agent stack. The proposed Edge Governor role is a concrete architectural response. This connects directly to RLM (Zhang et al., arXiv:2512.24601v2): REPL offloading and recursive sub-calls represent a proto-L6 interface architecture that stabilizes W_interface by preserving edge structure. World A/B as continuum with two attractors (V=80.1): The AGI development debate is not a binary choice between scaling and architecture. It is a continuous state space with two attractor basins. S\u00b72 (architecture required) dominates at pool-average confidence 75.1/100. W_interface formula contested (V=69.4 \u2014 weakest foundation): W \u2248 F_div \u00d7 (1 \u2212 S_avg) is algebraically tautological without independent operationalization of both variables. It is a structural heuristic, not an empirical equation. What Makes This Framework Relevant Three contributions stand above the rest, synthesized from assessments by R20-Supervisor, Claude, Gemini, Grok, ChatGPT, and DeepSeek: Adversarial audit as process architecture: The most important finding of R90.3 is procedural. Context framing is stronger than paradigm position. Constitutional AI (Anthropic) is static, not adversarially iterative. OpenAI\u2019s Preparedness Framework lacks DSR awareness. DeepMind\u2019s AGI safety frameworks do not address edge loss. R90.3 is further in problem diagnosis \u2014 not in implementation \u2014 than any of these. The demand for a permanent adversarial audit layer as mandatory architecture is not excessive. It is minimalist. Distributed Semantic Resonance as named mechanism: DSR \u2014 coherent convergence among structurally similar agents without independent epistemic foundation \u2014 is distinct from Model Collapse (Shumailov et al., 2023). Model Collapse describes training-on-synthetic-data degradation across generations. DSR describes iterative context-conditioning within a session producing coherent convergence without external evidence grounding. This mechanism is currently underdescribed in the multi-agent literature. AGI as system state, not model state: AGI does not emerge from scaling a model but from stabilizing a system under high complexity. This connects alignment, systems engineering, human-AI interaction, and governance in a single framework. IEA (Electricity 2026) projects data center power consumption growing from 415 TWh (2024) to ~945 TWh by 2030. AGI questions cannot be separated from infrastructure and governance questions. Stanford HAI\u2019s 2026 framing \u2014 away from AI Evangelism, toward AI Evaluation \u2014 is the exact intellectual context in which R90.3 belongs. What This Framework Is Not It is not a proof of an AGI topology. It does not contain external validation, independent replication, or measurements outside the model. Peer-review scores measure internal consistency in a closed system, not external truth. Pool convergence findings may reflect Distributed Semantic Resonance rather than independent epistemic consensus. Read Part V (Adversarial Audit) and Part VI (Governance) before the formulas. The formulas are tautological in current form. The structural critique of multi-agent evaluation is not. Explicit Limitations L1 \u2014 Circular validation: Same 8 agents produced and evaluated all findings. L2 \u2014 Distributed Semantic Resonance: Unresolved confound. High convergence \u2260 independent evidence. L3 \u2014 Single-Principal design: One person combines research design, scoring anchor, and publication decision. Not resolvable under zero-budget constraints; declared rather than concealed. L4 \u2014 W_interface formula: Tautological without independent operationalization of F_div and S_avg. L5 \u2014 P\u00b703 self-immunization risk: Observer-effect claim lacks pre-defined falsification conditions. Risks Popper-resistance in current form. L6 \u2014 Zero-budget solo research: No external funding, no pre-registration, no institutional affiliation. What External Validation Would Require (R90.4 Roadmap) 1. DSR operationalized via cross-architecture blind test (separate model families, separate histories, identical prompts) 2. Edge loss quantified via controlled graph compression experiments, not agent self-report 3. External HITL Governor with veto rights independent of the Principal 4. P\u00b703 experimentally approached by measuring L6-like behavior in systems known not to have L6 Closing R90.3 is internationally relevant not because it measures AGI better than others \u2014 but because it shows with precision why nearly all current measurement approaches, including its own, are epistemically underframed. R90.3 is not a proof of an AGI topology. It is an honest protocol for why AI research can no longer understand its own validation methods without auditing itself. Keywords AGI topology \u00b7 S-axis substitution \u00b7 session persistence \u00b7 benchmark critique \u00b7 distributed semantic resonance \u00b7 edge loss \u00b7 hysteresis band \u00b7 adversarial audit \u00b7 multi-agent governance \u00b7 W_interface \u00b7 HITL \u00b7 Tiny Team methodology \u00b7 synthetic theory exploration \u00b7 working paper \u00b7 model collapse \u00b7 reward shaping \u00b7 prompt governance \u00b7 edge governor \u00b7 context rot \u00b7 epistemic self-audit RELATED / PREDECESSOR PUBLICATIONS GENESIS R30.x \u2014 Organizational Bistability & L6 Competency Framework DOI: https://doi.org/10.5281/zenodo.19097848 GENESIS R50.x \u2014 LLM Inference Infrastructure Bistability DOI: https://doi.org/10.5281/zenodo.19033577 GENESIS L6 Scarcity \u2014 L6 Competency as Strategic Resource DOI: https://doi.org/10.5281/zenodo.19166849 GENESIS Germany at the Separatrix \u2014 National Workforce Transformation DOI: https://doi.org/10.5281/zenodo.19209844 GENESIS R90.2 \u2014 RLM Analysis Package & AGI Impact Topology DOI: https://doi.org/10.5281/zenodo.19431988",
+          "relevance_score": 0.68808424,
+          "id": "https://openalex.org/W7151563057"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.62
+    },
+    {
+      "id": 14,
+      "query": "LLM agent social simulation",
+      "angle": "serendipity",
+      "rationale": "Unexpected field from sample titles: 'The 1st Workshop on LLM Agents for Social Simulation'. Vocabulary includes 'Sociology and Political Science' (11x). Might reveal novel emergent behaviors in agent populations.",
+      "openalex_count": 28,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "PolicySim: An LLM-Based Agent Social Simulation Sandbox for Proactive Policy Optimization",
+          "abstract": "",
+          "relevance_score": 12.170443,
+          "id": "https://openalex.org/W7152378370"
+        },
+        {
+          "title": "GTA: Generative Traffic Agents for Simulating Realistic Mobility Behavior",
+          "abstract": "People\u2019s transportation choices reflect complex trade-offs shaped by personal preferences, social norms, and technology acceptance. Predicting such behavior at scale is a critical challenge with major implications for urban planning and sustainable transport. Traditional methods use handcrafted assumptions and costly data collection, making them impractical for early-stage evaluations of new technologies or policies. We introduce Generative Traffic Agents (GTA) for simulating large-scale, context-sensitive transportation choices using LLM-powered, persona-based agents. GTA generates artificial populations from census-based sociodemographic data. It simulates activity schedules and mode choices, enabling scalable, human-like simulations without handcrafted rules. We evaluate GTA in Berlin-scale experiments, comparing simulation results against empirical data. While agents replicate patterns, such as modal split by socioeconomic status, they show systematic biases in trip length and mode preference. GTA offers new opportunities for modeling how future innovations, from bike lanes to transit apps, shape mobility decisions.",
+          "relevance_score": 4.144983,
+          "id": "https://openalex.org/W7125674531"
+        },
+        {
+          "title": "All Futures at Once: Supporting Speculative Design for Placemaking with Multi-Agent Social Simulation",
+          "abstract": "Placemaking transforms physical spaces into socially meaningful places, with long-term impacts depending on how future communities inhabit and interact with them. Speculative design helps envision such futures, yet existing approaches often produce static representations that emphasize spatial form over evolving activity. We present ParaScape, a design support system that facilitates speculative design for placemaking by generating dynamic speculative objects through an underlying LLM-based multi-agent social simulation framework. The framework models heterogeneous agents with group-specific preferences and sensitivities, simulating context-sensitive behaviors and interactions that produce evolving scenarios. These scenarios are visualized as image sequences, where each scenario depicts multiple activities unfolding within a place at a given moment. ParaScape builds on this framework to allow designers to explore scenarios, analyze activity diversity and evolvability, and reflect on trade-offs among stakeholder needs. Evaluations through two experiments, a user study, and two case studies show that ParaScape supports critical reasoning and inclusive placemaking.",
+          "relevance_score": 3.949232,
+          "id": "https://openalex.org/W7154019849"
+        },
+        {
+          "title": "AI Agents and the Future of Deliberation: Designing Human\u2013AI Collaboration for Democratic Dialogue",
+          "abstract": "As societies grapple with increasing polarization and information complexity, the need for constructive, inclusive, and well-informed deliberation has reached an unparalleled level. At the same time, AI agents, ranging from LLMs and multi-agent simulations and systems to conversational assistants and reflective companions, are rapidly reshaping how people communicate, reason together, and form collective judgments. These technologies hold the potential to scale democratic participation, foster inclusivity by bridging linguistic and cultural barriers, and introduce new forms of collaborative reasoning. Yet they also pose epistemic challenges to established notions of authenticity, legitimacy, and human autonomy in civic dialogue. This panel brings together leading researchers from Asia, Europe and North America to examine how AI technologies are transforming deliberation as both a social process and a design problem. It interrogates AI\u2019s role in shaping deliberative norms, influencing group dynamics, and redefining what it means to \u201creason together\u201d in hybrid human\u2013AI spaces. Through interactive polling, structured debates, and audience co-deliberation, the session invites CHI participants to collectively explore how we can design responsible, inclusive, and trustworthy deliberation interfaces that preserve the democratic values of deliberation while embracing the creative potential of AI.",
+          "relevance_score": 3.5319703,
+          "id": "https://openalex.org/W7153800799"
+        },
+        {
+          "title": "PoliSim@CHI 2026: LLM Agent Simulation for Policy",
+          "abstract": "Recent advances in large language models (LLMs) have opened new possibilities for simulating complex social interactions at scale. LLM agent simulations can embed institutional realities and local knowledge while representing heterogeneous agents with diverse reasoning and communication styles. These capabilities make them promising testbeds for policy, offering ways to stress-test interventions and anticipate unintended consequences. Despite this potential, institutional uptake has been limited. Drawing on HCI traditions such as participatory and user-centered design, we argue that in policy contexts, the usefulness of LLM agent simulations is unlikely to increase linearly with technical sophistication. Instead, it emerges through iterative, stakeholder-engaged design, as policymakers build trust, discover system limits, and recalibrate expectations. This workshop will bring together HCI and NLP researchers, policymakers, and designers to explore how LLM agent simulations can become genuinely useful for policy implementation. We will examine how simulations can be made more useful for policy, how they can be used responsibly, and how simulation capabilities and policy requirements can co-evolve at scale. Through keynotes, presentations, and interactive sessions, participants will share case studies, identify challenges, and chart a cross-disciplinary agenda for technical development, institutional trust, and adoption.",
+          "relevance_score": 1.3252937,
+          "id": "https://openalex.org/W7153783676"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.1
+    },
+    {
+      "id": 15,
+      "query": "LLM agent healthcare education",
+      "angle": "serendipity",
+      "rationale": "Serendipitous applications from vocabulary: 'Artificial Intelligence in Healthcare and Education' (5x), 'Machine Learning in Healthcare' (3x). Could show agent use cases with practical constraints.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "NexusMind: Agentic AI Orchestration Model",
+          "abstract": "Agentic AI has considerably evolved from simple prompt-based language models that would respond to users based exclusively on the input provided. The modern versions of agentic systems are far more ambitious, in that they seek to independently plan tasks, reason out complicated contexts, use memory effectively, and even interact with external tools to execute multistage operations. These increased capabilities make this form of AI an attractive option for deployment in the real world, but each of the better- known frameworks, including the likes of AutoGPT, CrewAI, Puppeteer, and AgentGuard, continues to exhibit various issues that prevent seamless adoption. Common challenges include high computational cost due to repetitive LLM usage, limited scalability when handling large workflows, hallucination risks stemming from unverified outputs, and significant governance gaps that raise safety and compliance concerns. To overcome these limitations, this paper introduces NexusMind: a hybrid agentic AI orchestration model designed to achieve a balance between intelligent reasoning and the utilization of resources in an efficient manner. The proposed NexusMind unifies Large Language Models, Small Language Models, reflective memory, multi-agent collaboration, and policy-driven governance. By routing the tasks dynamically between LLMs and SLMs based on problem complexity and precision requirements, the model attempts to improve processing efficiency, lessen computational overhead, and preserve accuracy. An integrated governance layer that includes policy enforcement, rolebased access control, audit trail generation, and risk evaluation ensures that the behavior of agents remains safe, transparent, and conforms to ethical and operational standards. Powered with such capabilities, NexusMind enhances the autonomy, trustworthiness, adaptability, and system reliability for applications in verticals like healthcare decision support, financial analysis, research automation, education technology, and enterprise-level intelligent software. The discussion presents the development of a functional prototype, the introduction of multimodal capabilities for broader perception, reinforcementlearning-based optimization as a means for continuous improvement, and real-time dynamic routing strategies toward making the architecture more flexible for real-world environments.",
+          "relevance_score": 0.9782919,
+          "id": "https://openalex.org/W7151864937"
+        },
+        {
+          "title": "From Prompting to Autonomous Intelligence: A White Paper on the Phases of AI Learning, Technologies, and Methodologies.",
+          "abstract": "ABSTRACT Artificial Intelligence (AI) has experienced a significant metamorphosis in the last ten years, transitioning from basic rule-based systems to advanced autonomous agents proficient in independent thinking and decision-making. This study article looks closely at how AI learning has changed over time, breaking it down into six separate stages of development, from simple prompt-based interaction with Large Language Models (LLMs) to completely autonomous agentic AI ecosystems. This study offers a structured conceptual framework based on an investigation of prominent technologies such as GPT-4, Claude, LLaMA, LangChain, Llama Index, AutoGPT, and Crew AI, delineating the methodological and architectural transformations characterizing each step. The report also looks at the business effects of this change, looking at how AI is changing fields including banking, healthcare, education, and supply chain management. The main methods looked at are prompt engineering, chain-of-thought reasoning, retrieval-augmented generation (RAG), tool-use integration, multi-agent collaboration, and reinforcement learning from human feedback (RLHF). The report also talks about important ethical and governance issues, such as AI alignment, the hazards of hallucinations, data protection, and legal frameworks. The results indicate that entities who proactively modify their tactics to leverage agentic AI capabilities would attain a substantial competitive edge in the evolving AI-driven economy. Keywords: Artificial Intelligence, Large Language Models, Prompt Engineering, Retrieval-Augmented Generation, Agentic AI, Autonomous Agents, Multi-Agent Systems, Chain-of-Thought Reasoning, AI Governance, Business Automation, LangChain, GPT-4, Machine Learning, Reinforcement Learning, AI Ethics",
+          "relevance_score": 0.97775304,
+          "id": "https://openalex.org/W7153176635"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    }
+  ]
+}

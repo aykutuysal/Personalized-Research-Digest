@@ -1,0 +1,21 @@
+{
+  "subject": "Adolescent depression",
+  "queries_per_angle": 2,
+  "query_budget": 24,
+  "min_per_angle": 1,
+  "max_per_angle": 4,
+  "angles": [
+    "CBT and CBT variants for adolescent depression",
+    "interpersonal psychotherapy (IPT-A)",
+    "behavioral activation",
+    "mindfulness and acceptance-based therapies",
+    "family-based or attachment-based treatments",
+    "digital, app-based, telehealth interventions",
+    "psychopharmacology (SSRIs, combination therapy, safety)",
+    "assessment tools and screening instruments",
+    "suicide risk screening and prevention",
+    "social media and adolescent mental health",
+    "school-based prevention or intervention",
+    "comorbid anxiety with depression"
+  ]
+}

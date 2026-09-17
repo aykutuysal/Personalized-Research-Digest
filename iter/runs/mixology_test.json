@@ -1,0 +1,398 @@
+{
+  "timestamp": "2026-04-14T16:37:38.718709+00:00",
+  "prompt_file": "iter/prompts/v7_slotfilled.md",
+  "profile_file": "iter/profiles/mixology.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.00111594,
+  "plan_elapsed_s": 70.3,
+  "num_queries": 16,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 13,
+    "low": 3,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0.25,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.25,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "mixology",
+    "queries_per_angle": 2,
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "angle": "spirit-specific cocktail innovation",
+        "slot": 1,
+        "query": "\"cocktail innovation\" AND (rum OR gin OR whiskey OR tequila OR mezcal OR vodka OR brandy)",
+        "rationale": "Catches papers that specifically frame new drink creation around a named base spirit, using the canonical phrase 'cocktail innovation'."
+      },
+      {
+        "id": 2,
+        "angle_id": 1,
+        "angle": "spirit-specific cocktail innovation",
+        "slot": 2,
+        "query": "(\"new cocktail\" OR \"modern cocktail\" OR \"contemporary cocktail\") AND (rum OR gin OR whiskey OR tequila OR mezcal) AND (recipe OR creation)",
+        "rationale": "Catches papers discussing novel drinks for a specific spirit using more common, less formal terminology than 'innovation'."
+      },
+      {
+        "id": 3,
+        "angle_id": 2,
+        "angle": "low-ABV and non-alcoholic cocktails",
+        "slot": 1,
+        "query": "\"non-alcoholic cocktail\" OR \"zero-proof cocktail\" OR \"mocktail\"",
+        "rationale": "Catches papers centered on the formal terminology for drinks designed without alcohol."
+      },
+      {
+        "id": 4,
+        "angle_id": 2,
+        "angle": "low-ABV and non-alcoholic cocktails",
+        "slot": 2,
+        "query": "(\"low-ABV\" OR \"low alcohol\" OR \"session cocktail\") AND (drink OR cocktail)",
+        "rationale": "Catches papers focused on the specific category of reduced-alcohol beverages, which is distinct from fully non-alcoholic drinks."
+      },
+      {
+        "id": 5,
+        "angle_id": 3,
+        "angle": "historical cocktail revival and technique",
+        "slot": 1,
+        "query": "\"historical cocktail\" AND (revival OR rediscovery OR reconstruction)",
+        "rationale": "Catches papers explicitly about the act of bringing old recipes or styles back into practice."
+      },
+      {
+        "id": 6,
+        "angle_id": 3,
+        "angle": "historical cocktail revival and technique",
+        "slot": 2,
+        "query": "(\"forgotten cocktail\" OR \"classic cocktail\" OR \"vintage cocktail\") AND (technique OR method OR \"how to\")",
+        "rationale": "Catches papers that focus on the methods and preparation of historical drinks, using broader descriptive terms."
+      },
+      {
+        "id": 7,
+        "angle_id": 4,
+        "angle": "ingredient science and substitution",
+        "slot": 1,
+        "query": "\"ingredient substitution\" AND (cocktail OR drink OR mixology)",
+        "rationale": "Catches papers that directly address the science or practice of replacing one component with another in a drink context."
+      },
+      {
+        "id": 8,
+        "angle_id": 4,
+        "angle": "ingredient science and substitution",
+        "slot": 2,
+        "query": "(\"cocktail science\" OR \"drink science\") AND (ingredient OR flavor OR chemistry)",
+        "rationale": "Catches papers on the fundamental scientific properties of drink ingredients, which underpins substitution logic."
+      },
+      {
+        "id": 9,
+        "angle_id": 5,
+        "angle": "bar sustainability and waste reduction",
+        "slot": 1,
+        "query": "\"bar waste\" AND (reduction OR reuse OR recycling OR sustainable)",
+        "rationale": "Catches papers focused squarely on the problem of waste generated in a drink-making context."
+      },
+      {
+        "id": 10,
+        "angle_id": 5,
+        "angle": "bar sustainability and waste reduction",
+        "slot": 2,
+        "query": "(\"sustainable bar\" OR \"zero waste bar\") AND (practice OR initiative OR cocktail)",
+        "rationale": "Catches papers discussing holistic approaches or specific programs aimed at environmental sustainability in bars."
+      },
+      {
+        "id": 11,
+        "angle_id": 6,
+        "angle": "cocktail culture and global trends",
+        "slot": 1,
+        "query": "\"cocktail culture\" AND (global OR regional OR \"local tradition\")",
+        "rationale": "Catches papers that analyze the social and cultural dimensions of drink-making across different parts of the world."
+      },
+      {
+        "id": 12,
+        "angle_id": 6,
+        "angle": "cocktail culture and global trends",
+        "slot": 2,
+        "query": "(\"cocktail trend\" OR \"drink trend\") AND (international OR worldwide OR emerging)",
+        "rationale": "Catches papers focused on identifying and describing fashionable movements or styles in the global drinks scene."
+      },
+      {
+        "id": 13,
+        "angle_id": 7,
+        "angle": "home bartending and accessible equipment",
+        "slot": 1,
+        "query": "\"home bartending\" AND (equipment OR tool OR gadget)",
+        "rationale": "Catches papers specifically about the practice and tools of making cocktails in a domestic setting."
+      },
+      {
+        "id": 14,
+        "angle_id": 7,
+        "angle": "home bartending and accessible equipment",
+        "slot": 2,
+        "query": "(\"DIY bar\" OR \"home bar\") AND (accessible OR affordable OR \"no specialist equipment\")",
+        "rationale": "Catches papers emphasizing the accessibility and simplicity of setting up a drink-making space at home."
+      },
+      {
+        "id": 15,
+        "angle_id": 8,
+        "angle": "flavor pairing and sensory evaluation",
+        "slot": 1,
+        "query": "\"flavor pairing\" AND (cocktail OR drink OR beverage)",
+        "rationale": "Catches papers that apply the formal concept of complementary flavor combinations specifically to drinks."
+      },
+      {
+        "id": 16,
+        "angle_id": 8,
+        "angle": "flavor pairing and sensory evaluation",
+        "slot": 2,
+        "query": "(\"sensory evaluation\" OR \"taste testing\") AND (cocktail OR mixology)",
+        "rationale": "Catches papers focused on the methodology of systematically assessing the taste, aroma, and mouthfeel of drinks."
+      }
+    ],
+    "coverage_notes": "Plan uses Slot 1 for precise, formal terminology and Slot 2 for broader, more descriptive phrasing for each angle. The angle 'bar sustainability and waste reduction' was tricky to phrase without drifting into general hospitality management; queries are tightly scoped to 'bar' and 'cocktail' contexts."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"cocktail innovation\" AND (rum OR gin OR whiskey OR tequila OR mezcal OR vodka OR brandy)",
+      "angle": "spirit-specific cocktail innovation",
+      "rationale": "Catches papers that specifically frame new drink creation around a named base spirit, using the canonical phrase 'cocktail innovation'.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 2,
+      "query": "(\"new cocktail\" OR \"modern cocktail\" OR \"contemporary cocktail\") AND (rum OR gin OR whiskey OR tequila OR mezcal) AND (recipe OR creation)",
+      "angle": "spirit-specific cocktail innovation",
+      "rationale": "Catches papers discussing novel drinks for a specific spirit using more common, less formal terminology than 'innovation'.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 3,
+      "query": "\"non-alcoholic cocktail\" OR \"zero-proof cocktail\" OR \"mocktail\"",
+      "angle": "low-ABV and non-alcoholic cocktails",
+      "rationale": "Catches papers centered on the formal terminology for drinks designed without alcohol.",
+      "openalex_count": 4,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Implementasi Edge Computing pada Mekanisme Antrian Pemesanan Mocktail Menggunakan Protokol HTTP",
+          "relevance_score": 12.675198,
+          "id": "https://openalex.org/W7152543712"
+        },
+        {
+          "title": "&lt;b&gt;Literatura de cordel e seus encantos&lt;/b&gt;",
+          "relevance_score": 0.30793837,
+          "id": "https://openalex.org/W7151894891"
+        },
+        {
+          "title": "Business cases in business education and teaching paradigm change: local experience of Ukrainian higher school",
+          "relevance_score": 0.21819657,
+          "id": "https://openalex.org/W7152051230"
+        },
+        {
+          "title": "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models",
+          "relevance_score": 0.1756267,
+          "id": "https://openalex.org/W7153670801"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 4,
+      "query": "(\"low-ABV\" OR \"low alcohol\" OR \"session cocktail\") AND (drink OR cocktail)",
+      "angle": "low-ABV and non-alcoholic cocktails",
+      "rationale": "Catches papers focused on the specific category of reduced-alcohol beverages, which is distinct from fully non-alcoholic drinks.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Abstracts of the 1st International Online Conference on Fermentation",
+          "relevance_score": 0.20462039,
+          "id": "https://openalex.org/W7152455595"
+        },
+        {
+          "title": "Production of bottle fermented sparkling wine using nano and micro filters",
+          "relevance_score": 0.15086022,
+          "id": "https://openalex.org/W7151387765"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 5,
+      "query": "\"historical cocktail\" AND (revival OR rediscovery OR reconstruction)",
+      "angle": "historical cocktail revival and technique",
+      "rationale": "Catches papers explicitly about the act of bringing old recipes or styles back into practice.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 6,
+      "query": "(\"forgotten cocktail\" OR \"classic cocktail\" OR \"vintage cocktail\") AND (technique OR method OR \"how to\")",
+      "angle": "historical cocktail revival and technique",
+      "rationale": "Catches papers that focus on the methods and preparation of historical drinks, using broader descriptive terms.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 7,
+      "query": "\"ingredient substitution\" AND (cocktail OR drink OR mixology)",
+      "angle": "ingredient science and substitution",
+      "rationale": "Catches papers that directly address the science or practice of replacing one component with another in a drink context.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 8,
+      "query": "(\"cocktail science\" OR \"drink science\") AND (ingredient OR flavor OR chemistry)",
+      "angle": "ingredient science and substitution",
+      "rationale": "Catches papers on the fundamental scientific properties of drink ingredients, which underpins substitution logic.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "\"bar waste\" AND (reduction OR reuse OR recycling OR sustainable)",
+      "angle": "bar sustainability and waste reduction",
+      "rationale": "Catches papers focused squarely on the problem of waste generated in a drink-making context.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 10,
+      "query": "(\"sustainable bar\" OR \"zero waste bar\") AND (practice OR initiative OR cocktail)",
+      "angle": "bar sustainability and waste reduction",
+      "rationale": "Catches papers discussing holistic approaches or specific programs aimed at environmental sustainability in bars.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 11,
+      "query": "\"cocktail culture\" AND (global OR regional OR \"local tradition\")",
+      "angle": "cocktail culture and global trends",
+      "rationale": "Catches papers that analyze the social and cultural dimensions of drink-making across different parts of the world.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "(\"cocktail trend\" OR \"drink trend\") AND (international OR worldwide OR emerging)",
+      "angle": "cocktail culture and global trends",
+      "rationale": "Catches papers focused on identifying and describing fashionable movements or styles in the global drinks scene.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "\"home bartending\" AND (equipment OR tool OR gadget)",
+      "angle": "home bartending and accessible equipment",
+      "rationale": "Catches papers specifically about the practice and tools of making cocktails in a domestic setting.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 14,
+      "query": "(\"DIY bar\" OR \"home bar\") AND (accessible OR affordable OR \"no specialist equipment\")",
+      "angle": "home bartending and accessible equipment",
+      "rationale": "Catches papers emphasizing the accessibility and simplicity of setting up a drink-making space at home.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 15,
+      "query": "\"flavor pairing\" AND (cocktail OR drink OR beverage)",
+      "angle": "flavor pairing and sensory evaluation",
+      "rationale": "Catches papers that apply the formal concept of complementary flavor combinations specifically to drinks.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 16,
+      "query": "(\"sensory evaluation\" OR \"taste testing\") AND (cocktail OR mixology)",
+      "angle": "flavor pairing and sensory evaluation",
+      "rationale": "Catches papers focused on the methodology of systematically assessing the taste, aroma, and mouthfeel of drinks.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Physicochemical, Microbiological and Hedonic Characterization of a Smoked Meat-based Food (Toutou) of the Mboum People in the Adamaoua Region of Cameroon",
+          "relevance_score": 0.29365143,
+          "id": "https://openalex.org/W7152534480"
+        },
+        {
+          "title": "Abstracts of the 1st International Online Conference on Fermentation",
+          "relevance_score": 0.20245436,
+          "id": "https://openalex.org/W7152455595"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.25
+    }
+  ]
+}

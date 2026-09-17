@@ -1,0 +1,613 @@
+{
+  "subject": "Marketing science",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "google/gemini-3.1-pro-preview",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "charm pricing",
+      "discounts brand perception",
+      "ad creative conversion",
+      "product naming effectiveness",
+      "scarcity cues checkout"
+    ],
+    "raw_results": [
+      {
+        "seed": "charm pricing",
+        "count": 14
+      },
+      {
+        "seed": "discounts brand perception",
+        "count": 42
+      },
+      {
+        "seed": "ad creative conversion",
+        "count": 14
+      },
+      {
+        "seed": "product naming effectiveness",
+        "count": 119
+      },
+      {
+        "seed": "scarcity cues checkout",
+        "count": 3
+      }
+    ],
+    "cost": 0.00014153,
+    "latency_s": 4.5
+  },
+  "vocabulary": {
+    "total_papers": 123,
+    "topics": [
+      [
+        "Innovations and Analysis in Business and Education",
+        10
+      ],
+      [
+        "Consumer Retail Behavior Studies",
+        9
+      ],
+      [
+        "Consumer Behavior in Brand Consumption and Identification",
+        8
+      ],
+      [
+        "Digital Marketing and Social Media",
+        5
+      ],
+      [
+        "Technology Adoption and User Behaviour",
+        5
+      ],
+      [
+        "Consumer Market Behavior and Pricing",
+        4
+      ],
+      [
+        "Service and Product Innovation",
+        4
+      ],
+      [
+        "Mathematics Education and Pedagogy",
+        4
+      ],
+      [
+        "Environmental Sustainability in Business",
+        2
+      ],
+      [
+        "Crafts, Textile, and Design",
+        2
+      ],
+      [
+        "Medieval Literature and History",
+        2
+      ],
+      [
+        "Environmental Engineering and Cultural Studies",
+        2
+      ],
+      [
+        "Health, Technology, Consumer Behavior",
+        2
+      ],
+      [
+        "Diverse Scientific Research Studies",
+        2
+      ],
+      [
+        "Tea Polyphenols and Effects",
+        2
+      ]
+    ],
+    "subfields": [
+      [
+        "Marketing",
+        30
+      ],
+      [
+        "Management Science and Operations Research",
+        12
+      ],
+      [
+        "Sociology and Political Science",
+        8
+      ],
+      [
+        "Artificial Intelligence",
+        7
+      ],
+      [
+        "Information Systems and Management",
+        5
+      ],
+      [
+        "Computer Vision and Pattern Recognition",
+        5
+      ],
+      [
+        "Information Systems",
+        4
+      ],
+      [
+        "Plant Science",
+        4
+      ],
+      [
+        "Strategy and Management",
+        4
+      ],
+      [
+        "Applied Mathematics",
+        4
+      ]
+    ],
+    "fields": [
+      [
+        "Business, Management and Accounting",
+        38
+      ],
+      [
+        "Decision Sciences",
+        18
+      ],
+      [
+        "Computer Science",
+        17
+      ],
+      [
+        "Social Sciences",
+        10
+      ],
+      [
+        "Arts and Humanities",
+        6
+      ]
+    ],
+    "keywords": [
+      [
+        "Consumer behaviour",
+        23
+      ],
+      [
+        "Perception",
+        23
+      ],
+      [
+        "Purchasing",
+        20
+      ],
+      [
+        "Social media",
+        15
+      ],
+      [
+        "Digital marketing",
+        12
+      ],
+      [
+        "Payment",
+        8
+      ],
+      [
+        "Descriptive statistics",
+        8
+      ],
+      [
+        "Competitive advantage",
+        8
+      ],
+      [
+        "Marketing strategy",
+        8
+      ],
+      [
+        "Sustainability",
+        7
+      ],
+      [
+        "Brand management",
+        6
+      ],
+      [
+        "Data collection",
+        6
+      ],
+      [
+        "Sales promotion",
+        6
+      ],
+      [
+        "Descriptive research",
+        6
+      ],
+      [
+        "Brand awareness",
+        5
+      ],
+      [
+        "Influencer marketing",
+        5
+      ],
+      [
+        "Computer-assisted web interviewing",
+        5
+      ],
+      [
+        "Online advertising",
+        5
+      ],
+      [
+        "Digital media",
+        5
+      ],
+      [
+        "ADDIE Model",
+        5
+      ],
+      [
+        "Tourism",
+        4
+      ],
+      [
+        "Marketing mix",
+        4
+      ],
+      [
+        "Brand loyalty",
+        4
+      ],
+      [
+        "Loyalty",
+        4
+      ],
+      [
+        "Qualitative research",
+        4
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        29
+      ],
+      [
+        "Open MIND",
+        5
+      ],
+      [
+        "The Journal of English and Germanic Philology",
+        3
+      ],
+      [
+        "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+        2
+      ],
+      [
+        "Digital Repository (National Repository of Grey Literature)",
+        2
+      ],
+      [
+        "Psychology and Marketing",
+        2
+      ],
+      [
+        "Journal of theoretical and applied electronic commerce research",
+        2
+      ],
+      [
+        "DigitalCommons - Kennesaw State University (Kennesaw State University)",
+        1
+      ],
+      [
+        "Business Strategy and the Environment",
+        1
+      ],
+      [
+        "Nutrition Journal",
+        1
+      ]
+    ],
+    "sample_titles": [
+      "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+      "Pricing Strategies and Consumer Price Sensitivity in E-Commerce: Evidence From U.S. Online Retailers, 2022-2025",
+      "Determinants of Customer Eco\u2010Friendly Goods Consumption in the Hospitality and Tourism Industry",
+      "Evaluating function availability and user satisfaction with nutrition apps: user-generated content analysis and text mining study",
+      "Overview of Handicrafts Home Christmas Collection",
+      "Overview of Handicrafts Home Christmas Collection",
+      "Health and the Body in Early Medieval England",
+      "Smart Guide to KL Sentral Premium Social Guide Services",
+      "Smart Guide to KL Sentral Premium Social Guide Services",
+      "Two Charlotte Perkins Gilman Essays New to Scholarship",
+      "How to Optimize Your Experience with Food Delivery Apps",
+      "How to Optimize Your Experience with Food Delivery Apps",
+      "Revitalization project Briedeler Nonnengarten: Scientific background, context in the face of vineyard decline at the Mosel and specific soil vitalization",
+      "The Crime of <i>Wulf and Eadwacer</i>",
+      "Perception of the Brand Personalityof a Supermarket Brand: The Case of B\u0130M Discount Supermarket"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "pricing strategies consumer price sensitivity",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Directly targets the user's need for pricing tests and elasticity data, using exact phrasing from a retrieved e-commerce paper title."
+      },
+      {
+        "query": "online advertising consumer behaviour",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Targets ad creative effectiveness and persuasion by pairing the extracted keywords 'online advertising' and 'consumer behaviour'."
+      },
+      {
+        "query": "brand loyalty repeat purchasing",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Focuses on the user's goal of retention and repeat purchase behavior, utilizing the extracted keywords 'brand loyalty' and 'purchasing'."
+      },
+      {
+        "query": "influencer marketing purchasing behaviour",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Combines social proof trends with actual purchasing outcomes, fitting the user's desire for hard conversion data over fluffy marketing theory."
+      },
+      {
+        "query": "digital marketing sales promotion",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Looks at how digital channels specifically handle promos and discounts, using high-frequency extracted keywords to find tactical, data-backed studies."
+      },
+      {
+        "query": "technology adoption user behaviour",
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "rationale": "Uses the extracted OpenAlex topic 'Technology Adoption and User Behaviour' to find UX and behavioral nudges that apply to landing page optimization."
+      },
+      {
+        "query": "artificial intelligence marketing strategy",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Leverages the 'Artificial Intelligence' subfield and 'marketing strategy' keyword to find emerging, quantitative approaches to personalization and conversion."
+      },
+      {
+        "query": "eco-friendly consumption purchasing perception",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Adapts the sustainability titles found in the data to see how green messaging acts as a conversion nudge or affects perceived value for DTC brands."
+      },
+      {
+        "query": "sales promotion consumer behaviour perception",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'brand perception' with 'consumer behaviour perception' using high-frequency vocabulary terms (consumer behaviour 23x, perception 23x) to broaden from 2 results while maintaining relevance."
+      },
+      {
+        "query": "pricing consumer perception marketing",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'charm pricing' with broader 'pricing' and added 'marketing' from subfields to create viable query after zero results."
+      },
+      {
+        "query": "e-commerce pricing strategies consumer behaviour payment",
+        "dimension": "intersection",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer behaviour' (23x) as qualifier to 'e-commerce pricing strategies payment' to make more specific while maintaining payment relevance."
+      },
+      {
+        "query": "brand personality consumer perception marketing",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'discount perception' with 'consumer perception' and added 'marketing' from high-frequency subfield after zero results."
+      },
+      {
+        "query": "computer vision digital marketing online advertising",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Added 'digital marketing' (12x keyword, 5x topic) as bridge between computer vision and online advertising after zero results."
+      }
+    ],
+    "cost": 0.038476,
+    "latency_s": 36.8
+  },
+  "validation": [
+    {
+      "query": "pricing strategies consumer price sensitivity",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "online advertising consumer behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "brand loyalty repeat purchasing",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "influencer marketing purchasing behaviour",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 28,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "digital marketing sales promotion",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 15,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "technology adoption user behaviour",
+      "dimension": "adjacent",
+      "priority": "rotate_biweekly",
+      "last_run_count": 13,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "artificial intelligence marketing strategy",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 22,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "eco-friendly consumption purchasing perception",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "sales promotion consumer behaviour perception",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "pricing consumer perception marketing",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "e-commerce pricing strategies consumer behaviour payment",
+      "dimension": "intersection",
+      "priority": "every_cycle",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "brand personality consumer perception marketing",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "computer vision digital marketing online advertising",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "sales promotion brand perception",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 2,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "charm pricing consumer perception",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "e-commerce pricing strategies payment",
+        "dimension": "intersection",
+        "priority": "every_cycle",
+        "last_run_count": 2,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "brand personality discount perception",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "computer vision online advertising",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "sales promotion consumer behaviour perception",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'brand perception' with 'consumer behaviour perception' using high-frequency vocabulary terms (consumer behaviour 23x, perception 23x) to broaden from 2 results while maintaining relevance."
+      },
+      {
+        "query": "pricing consumer perception marketing",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'charm pricing' with broader 'pricing' and added 'marketing' from subfields to create viable query after zero results."
+      },
+      {
+        "query": "e-commerce pricing strategies consumer behaviour payment",
+        "dimension": "intersection",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer behaviour' (23x) as qualifier to 'e-commerce pricing strategies payment' to make more specific while maintaining payment relevance."
+      },
+      {
+        "query": "brand personality consumer perception marketing",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'discount perception' with 'consumer perception' and added 'marketing' from high-frequency subfield after zero results."
+      },
+      {
+        "query": "computer vision digital marketing online advertising",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Added 'digital marketing' (12x keyword, 5x topic) as bridge between computer vision and online advertising after zero results."
+      }
+    ],
+    "cost": 0.000335,
+    "latency_s": 37.1
+  },
+  "costs": {
+    "seed_usd": 0.00014153,
+    "library_usd": 0.038476,
+    "reformulate_usd": 0.000335,
+    "total_usd": 0.038953
+  },
+  "total_latency_s": 150.1
+}

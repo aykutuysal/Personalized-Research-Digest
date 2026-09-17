@@ -1,0 +1,531 @@
+{
+  "timestamp": "2026-04-16T12:20:10.954325+00:00",
+  "prompt_file": "runs/v9_keyword_discovery/adolescent_depression.json.plan.json",
+  "profile_file": "profiles/adolescent_depression.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "title_and_abstract.search",
+  "num_queries": 16,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 6,
+    "low": 10,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0.68,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.68,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Adolescent depression",
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "slot": 1,
+        "angle": "core",
+        "query": "social media adolescent mental health",
+        "rationale": "Addresses user's interest in social-media-and-mental-health links. 'Social media' appears frequently (41x) in vocabulary, and seed query yielded 237 results, suggesting active research area."
+      },
+      {
+        "id": 2,
+        "angle_id": 2,
+        "slot": 1,
+        "angle": "core",
+        "query": "school-based adolescent depression intervention",
+        "rationale": "Targets user's interest in school-based prevention/intervention. Vocabulary includes 'Student Stress and Coping' topic and 'Education' subfield evidence."
+      },
+      {
+        "id": 3,
+        "angle_id": 3,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "adolescent depression anxiety comorbidity treatment",
+        "rationale": "Combines user's focus on comorbid anxiety with depression treatment. 'Anxiety' appears frequently (45x) in vocabulary, and user treats teens with both conditions."
+      },
+      {
+        "id": 4,
+        "angle_id": 4,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "digital adolescent depression intervention",
+        "rationale": "Combines digital interventions with adolescent depression focus. 'Digital Mental Health Interventions' appears as topic (13x) in vocabulary, matching user's interest in app-based approaches."
+      },
+      {
+        "id": 5,
+        "angle_id": 5,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "family-based adolescent depression therapy",
+        "rationale": "Addresses user's interest in family-based treatments for adolescent depression. Vocabulary includes 'Child and Adolescent Psychosocial and Emotional Development' topic (15x)."
+      },
+      {
+        "id": 6,
+        "angle_id": 6,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "adolescent depression assessment tools",
+        "rationale": "Targets user's interest in assessment tools. Vocabulary includes 'Clinical Psychology' subfield (67x) and 'Psychological intervention' keyword (47x), suggesting assessment research exists."
+      },
+      {
+        "id": 7,
+        "angle_id": 7,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "adolescent sleep depression review",
+        "rationale": "Adjacent to user's interests; 'Sleep and related disorders' appears as topic (4x) in vocabulary, and sample titles show sleep-depression connections in adolescents."
+      },
+      {
+        "id": 8,
+        "angle_id": 8,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "adolescent trauma depression intervention",
+        "rationale": "Adjacent field; 'Posttraumatic Stress Disorder Research' appears as topic (2x) and sample titles include trauma-focused interventions for adolescents."
+      },
+      {
+        "id": 9,
+        "angle_id": 9,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "adolescent ADHD depression treatment",
+        "rationale": "Unexpected connection from vocabulary: 'Attention Deficit Hyperactivity Disorder' appears as topic (5x). Could yield insights on comorbid conditions user encounters."
+      },
+      {
+        "id": 10,
+        "angle_id": 10,
+        "slot": 1,
+        "angle": "core",
+        "query": "cognitive behavioral therapy adolescent depression randomized controlled trial",
+        "rationale": "Replaced 'CBT' with full term 'cognitive behavioral therapy' from keywords, kept other terms to maintain specificity for evidence-based interventions."
+      },
+      {
+        "id": 11,
+        "angle_id": 11,
+        "slot": 1,
+        "angle": "core",
+        "query": "interpersonal psychotherapy adolescent depression",
+        "rationale": "Replaced 'IPT-A' with broader 'interpersonal psychotherapy' to match OpenAlex vocabulary while maintaining focus on adolescent depression treatment."
+      },
+      {
+        "id": 12,
+        "angle_id": 12,
+        "slot": 1,
+        "angle": "core",
+        "query": "SSRIs adolescent depression safety pharmacology",
+        "rationale": "Added 'pharmacology' from subfields to qualify the safety focus and provide context for medication-related research."
+      },
+      {
+        "id": 13,
+        "angle_id": 13,
+        "slot": 1,
+        "angle": "core",
+        "query": "suicide prevention adolescent mental health screening",
+        "rationale": "Replaced 'adolescent suicide' with broader 'adolescent mental health' and kept 'suicide prevention' from keywords to capture screening studies."
+      },
+      {
+        "id": 14,
+        "angle_id": 14,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "mindfulness adolescent mental health randomized controlled trial",
+        "rationale": "Replaced 'depression' with broader 'mental health' from keywords while maintaining 'randomized controlled trial' for methodological rigor."
+      },
+      {
+        "id": 15,
+        "angle_id": 15,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "behavioral activation depression adolescent",
+        "rationale": "Simplified to core terms without additional qualifiers, using 'depression' and 'adolescent' which appear in extracted vocabulary."
+      },
+      {
+        "id": 16,
+        "angle_id": 16,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "writing mental health adolescent",
+        "rationale": "Replaced 'writing adolescent mental health' with natural phrase order using 'mental health' from keywords and 'adolescent' from context."
+      }
+    ]
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "social media adolescent mental health",
+      "angle": "core",
+      "rationale": "Addresses user's interest in social-media-and-mental-health links. 'Social media' appears frequently (41x) in vocabulary, and seed query yielded 237 results, suggesting active research area.",
+      "openalex_count": 17,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Impact of Social Media Use on Adolescent Mental Health",
+          "relevance_score": 17.500975,
+          "id": "https://openalex.org/W7153718357"
+        },
+        {
+          "title": "The Role of Social Comparison in the Relationship Between Social Media Use and Adolescent Mental Health",
+          "relevance_score": 15.597538,
+          "id": "https://openalex.org/W7151398278"
+        },
+        {
+          "title": "Why Three Studies by Vuorre and Przybylski Should Not Be Used to Assess the Impact of Social Media on Adolescent Mental Health",
+          "relevance_score": 13.296208,
+          "id": "https://openalex.org/W7153635271"
+        },
+        {
+          "title": "Support System Networks: How Support Systems Shape Problematic Social Media Use, Mental Health, and Substance Use in Czech Adolescents",
+          "relevance_score": 11.833889,
+          "id": "https://openalex.org/W7151570736"
+        },
+        {
+          "title": "The Cross\u2010Sectional and Longitudinal Associations Between Social Media and Mental Health Among a Large Sample of Adolescents, Inclusive of Transgender/Gender\u2010Diverse Adolescents",
+          "relevance_score": 11.254113,
+          "id": "https://openalex.org/W7151777486"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 2,
+      "query": "school-based adolescent depression intervention",
+      "angle": "core",
+      "rationale": "Targets user's interest in school-based prevention/intervention. Vocabulary includes 'Student Stress and Coping' topic and 'Education' subfield evidence.",
+      "openalex_count": 7,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Mental health and help-seeking behaviour among secondary school adolescents in Nsukka, Nigeria: a cross-sectional survey",
+          "relevance_score": 1.4280912,
+          "id": "https://openalex.org/W7151280074"
+        },
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "relevance_score": 1.258342,
+          "id": "https://openalex.org/W7153462697"
+        },
+        {
+          "title": "The Application of Human-Computer Interaction in Alleviating Appearance Anxiety Among Adolescents",
+          "relevance_score": 1.2338927,
+          "id": "https://openalex.org/W7151482393"
+        },
+        {
+          "title": "Adolescence and Sexuality: The involvement of cognitive and emotional processes in the development of Gender Identity and Gender Dysphoria",
+          "relevance_score": 0.71669054,
+          "id": "https://openalex.org/W7154338923"
+        },
+        {
+          "title": "Editorial",
+          "relevance_score": 0.46485353,
+          "id": "https://openalex.org/W7151377538"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 3,
+      "query": "adolescent depression anxiety comorbidity treatment",
+      "angle": "intersection",
+      "rationale": "Combines user's focus on comorbid anxiety with depression treatment. 'Anxiety' appears frequently (45x) in vocabulary, and user treats teens with both conditions.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Advancing Equitable Inpatient Psychiatric Access for Children With Autism Spectrum Disorder",
+          "relevance_score": 0.40470225,
+          "id": "https://openalex.org/W7151574246"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 4,
+      "query": "digital adolescent depression intervention",
+      "angle": "intersection",
+      "rationale": "Combines digital interventions with adolescent depression focus. 'Digital Mental Health Interventions' appears as topic (13x) in vocabulary, matching user's interest in app-based approaches.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Application of Human-Computer Interaction in Alleviating Appearance Anxiety Among Adolescents",
+          "relevance_score": 1.2125436,
+          "id": "https://openalex.org/W7151482393"
+        },
+        {
+          "title": "Losing Sleep over Likes:\u00a0The Role of Bedtime Procrastination and Self-control in the Link Between Problematic Social Media Use with Depression, and Anxiety",
+          "relevance_score": 0.9296019,
+          "id": "https://openalex.org/W7154079403"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.75
+    },
+    {
+      "id": 5,
+      "query": "family-based adolescent depression therapy",
+      "angle": "intersection",
+      "rationale": "Addresses user's interest in family-based treatments for adolescent depression. Vocabulary includes 'Child and Adolescent Psychosocial and Emotional Development' topic (15x).",
+      "openalex_count": 5,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "relevance_score": 1.1679344,
+          "id": "https://openalex.org/W7153462697"
+        },
+        {
+          "title": "Adolescence and Sexuality: The involvement of cognitive and emotional processes in the development of Gender Identity and Gender Dysphoria",
+          "relevance_score": 0.5723943,
+          "id": "https://openalex.org/W7154338923"
+        },
+        {
+          "title": "Advancing Equitable Inpatient Psychiatric Access for Children With Autism Spectrum Disorder",
+          "relevance_score": 0.53583384,
+          "id": "https://openalex.org/W7151574246"
+        },
+        {
+          "title": "Editorial",
+          "relevance_score": 0.38727224,
+          "id": "https://openalex.org/W7151377538"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 6,
+      "query": "adolescent depression assessment tools",
+      "angle": "adjacent",
+      "rationale": "Targets user's interest in assessment tools. Vocabulary includes 'Clinical Psychology' subfield (67x) and 'Psychological intervention' keyword (47x), suggesting assessment research exists.",
+      "openalex_count": 4,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "relevance_score": 1.0588181,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "Screening Emotions in Adolescents Receiving Care at the Hospital for mild Traumatic Brain Injury (SEARCH-mTBI): protocol for a multicenter observational study",
+          "relevance_score": 0.7866724,
+          "id": "https://openalex.org/W7151064401"
+        },
+        {
+          "title": "Association between climate change, extreme weather event and mental health among school aged children: a systematic scoping review protocol",
+          "relevance_score": 0.3523097,
+          "id": "https://openalex.org/W7154114863"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.67
+    },
+    {
+      "id": 7,
+      "query": "adolescent sleep depression review",
+      "angle": "adjacent",
+      "rationale": "Adjacent to user's interests; 'Sleep and related disorders' appears as topic (4x) in vocabulary, and sample titles show sleep-depression connections in adolescents.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Prevalence and risk factors of sleep disturbances among adolescents with non-suicidal self-injury: a systematic review and meta-analysis",
+          "relevance_score": 1.4171698,
+          "id": "https://openalex.org/W7151032589"
+        },
+        {
+          "title": "Editorial",
+          "relevance_score": 0.39393032,
+          "id": "https://openalex.org/W7151377538"
+        },
+        {
+          "title": "Advancing Equitable Inpatient Psychiatric Access for Children With Autism Spectrum Disorder",
+          "relevance_score": 0.3144803,
+          "id": "https://openalex.org/W7151574246"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 8,
+      "query": "adolescent trauma depression intervention",
+      "angle": "adjacent",
+      "rationale": "Adjacent field; 'Posttraumatic Stress Disorder Research' appears as topic (2x) and sample titles include trauma-focused interventions for adolescents.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Identifying Risk Profiles in War-Affected Children and Adolescents: Implications for Trauma-Informed Care",
+          "relevance_score": 1.5364506,
+          "id": "https://openalex.org/W7151432666"
+        },
+        {
+          "title": "Coping Strategies, ACEs, and Mental Health Among Adolescents with Child Welfare Involvement",
+          "relevance_score": 1.1068046,
+          "id": "https://openalex.org/W7154080417"
+        },
+        {
+          "title": "Editorial",
+          "relevance_score": 0.4245701,
+          "id": "https://openalex.org/W7151377538"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.33
+    },
+    {
+      "id": 9,
+      "query": "adolescent ADHD depression treatment",
+      "angle": "serendipity",
+      "rationale": "Unexpected connection from vocabulary: 'Attention Deficit Hyperactivity Disorder' appears as topic (5x). Could yield insights on comorbid conditions user encounters.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Psychiatric predictors of first-onset suicidal thoughts and behaviors throughout preadolescence: longitudinal associations in a US population-based study",
+          "relevance_score": 0.97895455,
+          "id": "https://openalex.org/W7151024233"
+        }
+      ],
+      "hit_labels": [
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 10,
+      "query": "cognitive behavioral therapy adolescent depression randomized controlled trial",
+      "angle": "core",
+      "rationale": "Replaced 'CBT' with full term 'cognitive behavioral therapy' from keywords, kept other terms to maintain specificity for evidence-based interventions.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "relevance_score": 1.9639457,
+          "id": "https://openalex.org/W7153462697"
+        }
+      ],
+      "hit_labels": [
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 11,
+      "query": "interpersonal psychotherapy adolescent depression",
+      "angle": "core",
+      "rationale": "Replaced 'IPT-A' with broader 'interpersonal psychotherapy' to match OpenAlex vocabulary while maintaining focus on adolescent depression treatment.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "SSRIs adolescent depression safety pharmacology",
+      "angle": "core",
+      "rationale": "Added 'pharmacology' from subfields to qualify the safety focus and provide context for medication-related research.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "suicide prevention adolescent mental health screening",
+      "angle": "core",
+      "rationale": "Replaced 'adolescent suicide' with broader 'adolescent mental health' and kept 'suicide prevention' from keywords to capture screening studies.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 14,
+      "query": "mindfulness adolescent mental health randomized controlled trial",
+      "angle": "intersection",
+      "rationale": "Replaced 'depression' with broader 'mental health' from keywords while maintaining 'randomized controlled trial' for methodological rigor.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 15,
+      "query": "behavioral activation depression adolescent",
+      "angle": "intersection",
+      "rationale": "Simplified to core terms without additional qualifiers, using 'depression' and 'adolescent' which appear in extracted vocabulary.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 16,
+      "query": "writing mental health adolescent",
+      "angle": "serendipity",
+      "rationale": "Replaced 'writing adolescent mental health' with natural phrase order using 'mental health' from keywords and 'adolescent' from context.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    }
+  ]
+}

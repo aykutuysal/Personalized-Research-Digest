@@ -1,0 +1,17 @@
+{
+  "subject": "Marketing science",
+  "queries_per_angle": 2,
+  "query_budget": 16,
+  "min_per_angle": 1,
+  "max_per_angle": 4,
+  "angles": [
+    "pricing strategy (charm pricing, price endings, perceived value)",
+    "discounts and promotions and their effect on brand",
+    "ad creative effectiveness and persuasion",
+    "product naming, branding, packaging",
+    "scarcity, urgency, social proof cues",
+    "landing page or checkout conversion optimization",
+    "consumer psychology / behavioral findings on purchasing",
+    "loyalty, retention, repeat purchase behavior"
+  ]
+}

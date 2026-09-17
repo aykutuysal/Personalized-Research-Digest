@@ -1,0 +1,133 @@
+{
+  "subject": "AI agents",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "tool use function calling agents",
+      "rationale": "Core angle confirmed by user. 'Tool use' appears in seed queries and vocabulary shows 'executable' and 'workflow' terms. Focuses on practical implementation patterns for agent tool integration."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "multi agent collaboration orchestration",
+      "rationale": "User cares about multi-agent systems. Vocabulary shows 'orchestration' (17x) and 'multi-agent systems' (16x). Targets practical coordination patterns and implementation architectures."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "core",
+      "query": "agent reasoning planning architectures",
+      "rationale": "User specifically mentioned reasoning architectures. Vocabulary shows 'architecture' (45x), 'cognition' (26x), and 'cognitive architecture' (16x). Focuses on practical implementations like ReAct, Tree-of-Thoughts."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "core",
+      "query": "agent benchmarking evaluation testbed",
+      "rationale": "User wants agent benchmarking. Vocabulary shows 'testbed' (7x) and 'evaluation' contexts. Focuses on practical evaluation frameworks and metrics for agent systems."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "agent monitoring anomaly detection",
+      "rationale": "Intersects monitoring (user priority) with anomaly detection (8x in vocabulary). Practical focus on identifying agent failures and performance issues in production systems."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "multi agent workflow orchestration",
+      "rationale": "Combines multi-agent systems with workflow (22x in vocabulary). Targets practical coordination patterns and task sequencing in agent teams."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "agent cost latency optimization",
+      "rationale": "Intersects cost optimization (confirmed angle) with latency concerns. Vocabulary shows 'scalability' (17x) and 'inference' (11x). Practical focus on production efficiency."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "human loop agent delegation",
+      "rationale": "Combines human-in-the-loop (confirmed angle) with delegation patterns. Vocabulary shows 'decision support system' (9x). Practical focus on hybrid human-agent workflows."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "agent modular design architecture",
+      "rationale": "Intersects architecture design with modularity (10x in vocabulary). Practical focus on building maintainable, composable agent systems."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "cognitive architecture agents",
+      "rationale": "Adjacent field from vocabulary showing 'cognitive architecture' (16x) and 'cognition' (26x). Could yield insights from cognitive science applied to practical agent design."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "agent security access control",
+      "rationale": "Adjacent security focus from vocabulary showing 'access control' (6x) and 'security token' (9x). Practical implications for secure agent deployment and tool access."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "distributed control multi agent",
+      "rationale": "Adjacent field from vocabulary showing 'distributed control multi-agent systems' (5x). Could yield practical coordination algorithms from control theory."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "agent corporate governance",
+      "rationale": "Unexpected connection from vocabulary showing 'corporate governance' (21x) frequently. Might yield surprising papers on organizational structures for agent teams or ethical oversight frameworks."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "core",
+      "query": "monitoring observability multi-agent systems",
+      "rationale": "Replaced 'agent monitoring observability' with broader terms from vocabulary: 'monitoring observability' combined with 'Multi-Agent Systems' topic to maintain relevance while expanding scope."
+    },
+    {
+      "id": 15,
+      "angle_id": 15,
+      "slot": 1,
+      "angle": "core",
+      "query": "memory management retrieval augmented generation agents",
+      "rationale": "Replaced 'RAG agents memory management' with expanded phrasing using 'retrieval augmented generation' (RAG) and 'agents' from vocabulary, focusing on memory management aspect."
+    },
+    {
+      "id": 16,
+      "angle_id": 16,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "verifiable secret sharing blockchain security",
+      "rationale": "Replaced 'agent verifiable secret sharing' by removing 'agent' and connecting 'verifiable secret sharing' (from keywords) with 'Blockchain Technology Applications and Security' topic for broader context."
+    }
+  ]
+}

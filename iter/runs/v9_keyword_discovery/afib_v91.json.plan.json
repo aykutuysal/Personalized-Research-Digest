@@ -1,0 +1,113 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "catheter ablation techniques and outcomes",
+      "query": "catheter ablation outcomes",
+      "rationale": "Directly addresses angle 2 (catheter ablation techniques and outcomes) using high-frequency vocabulary ('catheter ablation' 53x, 'ablation' 55x). Focuses on clinical outcomes relevant to practicing electrophysiologist.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "anticoagulation choices (DOACs, warfarin, bleeding risk)",
+      "query": "DOAC anticoagulation bleeding",
+      "rationale": "Directly addresses angle 3 (anticoagulation choices and bleeding risk) using extracted terms ('DOAC' implied via Rivaroxaban 15x, 'major bleeding' 11x). Matches user's interest in DOAC choices and bleeding risk.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "rate vs rhythm control comparisons",
+      "query": "rate rhythm control trials",
+      "rationale": "Combines angles 4 (rate vs rhythm control comparisons) and 7 (randomized trials) using vocabulary ('rhythm' 14x, 'randomized controlled trial' 43x). Provides evidence-based comparisons user wants.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 4,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "stroke prevention strategies",
+      "query": "stroke prevention atrial fibrillation",
+      "rationale": "Directly addresses angle 6 (stroke prevention strategies) using core vocabulary ('atrial fibrillation' 164x). Broad capture of stroke prevention approaches for AFib patients.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "randomized clinical trials and guideline updates",
+      "query": "randomized trial guideline",
+      "rationale": "Directly addresses angle 7 (randomized clinical trials and guideline updates) using high-frequency vocabulary ('randomized controlled trial' 43x). Targets user's preference for trial results and guideline updates.",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "catheter ablation techniques and outcomes",
+      "query": "pulmonary vein ablation",
+      "rationale": "Refines angle 2 (catheter ablation) with specific technique vocabulary ('pulmonary vein' 12x). Targets core ablation technique details user wants.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "anticoagulation choices (DOACs, warfarin, bleeding risk)",
+      "query": "warfarin atrial fibrillation",
+      "rationale": "Addresses angle 3 (anticoagulation choices) using extracted vocabulary ('warfarin' 19x). Covers traditional anticoagulant still relevant in clinical practice.",
+      "dimension": "core"
+    },
+    {
+      "id": 8,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "rhythm control and antiarrhythmic drugs",
+      "query": "heart failure rhythm control",
+      "rationale": "Combines angle 1 (rhythm control) with common comorbidity ('heart failure' 15x). Addresses specific patient population cardiologist encounters.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 9,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "randomized clinical trials and guideline updates",
+      "query": "clinical trial sinus rhythm",
+      "rationale": "Combines angles 7 (trials) and 1 (rhythm control) using vocabulary ('clinical trial' 14x, 'sinus rhythm' 14x). Targets trial evidence for rhythm control outcomes.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 10,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "rhythm control and antiarrhythmic drugs",
+      "query": "rhythm control atrial fibrillation antiarrhythmic drugs",
+      "rationale": "Replaced 'rhythm control' with broader 'atrial fibrillation' from vocabulary while keeping antiarrhythmic drugs focus to increase results from near-zero",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "left atrial appendage closure / occlusion",
+      "query": "left atrial appendage occlusion atrial fibrillation",
+      "rationale": "Added 'atrial fibrillation' from vocabulary to provide context and increase results from near-zero while maintaining LAAO focus",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "AFib screening, detection, monitoring (wearables, ECG)",
+      "query": "mobile health atrial fibrillation monitoring",
+      "rationale": "Replaced 'wearables' with 'mobile health' from topics and 'AFib screening' with 'atrial fibrillation monitoring' from vocabulary to get results from zero",
+      "dimension": "adjacent"
+    }
+  ]
+}

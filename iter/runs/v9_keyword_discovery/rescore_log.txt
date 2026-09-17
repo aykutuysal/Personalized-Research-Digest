@@ -1,0 +1,430 @@
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/llm_agents.plan.json (prebuilt, 14 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [Core subject — tool integration         ] count=  113 healthy
+  Q 2 [Core subject — planning and reasoning   ] count=   42 healthy
+  Q 3 [Core subject — memory systems           ] count=  122 healthy
+  Q 4 [Evaluation standards                    ] count= 1268 recall_safety
+  Q 5 [Subspecialty — multi-agent systems      ] count=  171 healthy
+  Q 6 [Named methods / techniques              ] count=  881 recall_safety
+  Q 7 [Applied / engineering context           ] count=   49 healthy
+  Q 8 [Critiques / failure modes               ] count= 2559 too_broad
+  Q 9 [Applied / real-world concerns           ] count=  275 healthy
+  Q10 [Subspecialty — embodied agents          ] count=   69 healthy
+  Q11 [Tools / artifacts                       ] count=  345 healthy
+  Q12 [Tools / artifacts                       ] count= 5069 too_broad
+  Q13 [Methods / techniques                    ] count=   83 healthy
+  Q14 [Core subject — instruction adherence    ] count=  932 recall_safety
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/llm_agents.rescored.json
+======================================================================
+  queries:          14
+  bands:            zero=0 low=0 healthy=9 recall_safety=3 too_broad=2
+  frac healthy:     64%
+  mean precision:   51%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.56, 'recall_safety': 0.37, 'too_broad': 0.55, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.json.plan.json (prebuilt, 15 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=  198 healthy
+  Q 2 [core                                    ] count=   94 healthy
+  Q 3 [core                                    ] count=  247 healthy
+  Q 4 [core                                    ] count=  112 healthy
+  Q 5 [core                                    ] count=  739 recall_safety
+  Q 6 [core                                    ] count=  253 healthy
+  Q 7 [intersection                            ] count=  582 recall_safety
+  Q 8 [intersection                            ] count=   50 healthy
+  Q 9 [intersection                            ] count=  200 healthy
+  Q10 [intersection                            ] count=  318 healthy
+  Q11 [adjacent                                ] count=  446 healthy
+  Q12 [adjacent                                ] count=  505 recall_safety
+  Q13 [adjacent                                ] count=  303 healthy
+  Q14 [serendipity                             ] count=  191 healthy
+  Q15 [serendipity                             ] count=  116 healthy
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.rescored.json
+======================================================================
+  queries:          15
+  bands:            zero=0 low=0 healthy=12 recall_safety=3 too_broad=0
+  frac healthy:     80%
+  mean precision:   57%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.59, 'recall_safety': 0.5, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.json.plan.json (prebuilt, 15 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md
+filter:  title_and_abstract.search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=   18 low
+  Q 2 [core                                    ] count=    0 zero
+  Q 3 [core                                    ] count=   64 healthy
+  Q 4 [core                                    ] count=    8 low
+  Q 5 [core                                    ] count=  150 healthy
+  Q 6 [core                                    ] count=    1 low
+  Q 7 [intersection                            ] count=   49 healthy
+  Q 8 [intersection                            ] count=    2 low
+  Q 9 [intersection                            ] count=   19 low
+  Q10 [intersection                            ] count=   40 healthy
+  Q11 [adjacent                                ] count=   67 healthy
+  Q12 [adjacent                                ] count=   15 low
+  Q13 [adjacent                                ] count=    7 low
+  Q14 [serendipity                             ] count=   28 low
+  Q15 [serendipity                             ] count=    3 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.rescored.tiab.json
+======================================================================
+  queries:          15
+  bands:            zero=1 low=9 healthy=5 recall_safety=0 too_broad=0
+  frac healthy:     33%
+  mean precision:   51%
+  per-band prec:    {'zero': None, 'low': 0.48, 'healthy': 0.56, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/marketing.plan.json (prebuilt, 15 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/marketing.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [Pricing psychology — odd-ending prices  ] count=    1 low
+  Q 2 [Scarcity and urgency tactics            ] count=   97 healthy
+  Q 3 [Social proof and reviews                ] count=   68 healthy
+  Q 4 [Discounts vs. brand perception          ] count=   11 low
+  Q 5 [Ad creative elements that convert       ] count=  100 healthy
+  Q 6 [Landing page and checkout optimization  ] count=   72 healthy
+  Q 7 [Product naming and description          ] count=   69 healthy
+  Q 8 [Choice architecture and defaults        ] count=  122 healthy
+  Q 9 [Shipping and minimum purchase tactics   ] count=   13 low
+  Q10 [Personalization effectiveness           ] count=   67 healthy
+  Q11 [Price presentation and framing          ] count=    0 zero
+  Q12 [Visual attention in marketing contexts  ] count=   41 healthy
+  Q13 [Retention and churn in DTC/e-commerce   ] count=   12 low
+  Q14 [Message framing effects                 ] count=   16 low
+  Q15 [Influencer marketing effectiveness      ] count=   56 healthy
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/marketing.rescored.json
+======================================================================
+  queries:          15
+  bands:            zero=1 low=5 healthy=9 recall_safety=0 too_broad=0
+  frac healthy:     60%
+  mean precision:   38%
+  per-band prec:    {'zero': None, 'low': 0.46, 'healthy': 0.33, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+  scorer error: Expecting value: line 276 column 12 (char 3360)
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.json.plan.json (prebuilt, 15 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/marketing.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=   63 healthy
+  Q 2 [intersection                            ] count=  202 healthy
+  Q 3 [intersection                            ] count=   52 healthy
+  Q 4 [intersection                            ] count=   63 healthy
+  Q 5 [intersection                            ] count=  222 healthy
+  Q 6 [adjacent                                ] count=  542 recall_safety
+  Q 7 [adjacent                                ] count=  290 healthy
+  Q 8 [adjacent                                ] count=  236 healthy
+  Q 9 [serendipity                             ] count=  612 recall_safety
+  Q10 [serendipity                             ] count=  282 healthy
+  Q11 [core                                    ] count=   32 healthy
+  Q12 [core                                    ] count=   55 healthy
+  Q13 [core                                    ] count=   54 healthy
+  Q14 [core                                    ] count=  317 healthy
+  Q15 [core                                    ] count=    4 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.rescored.json
+======================================================================
+  queries:          15
+  bands:            zero=0 low=1 healthy=12 recall_safety=2 too_broad=0
+  frac healthy:     80%
+  mean precision:   0%
+  per-band prec:    {'zero': None, 'low': 0.0, 'healthy': 0.0, 'recall_safety': 0.0, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.json.plan.json (prebuilt, 15 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/marketing.md
+filter:  title_and_abstract.search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=    1 low
+  Q 2 [intersection                            ] count=    2 low
+  Q 3 [intersection                            ] count=    2 low
+  Q 4 [intersection                            ] count=    4 low
+  Q 5 [intersection                            ] count=    6 low
+  Q 6 [adjacent                                ] count=   92 healthy
+  Q 7 [adjacent                                ] count=   12 low
+  Q 8 [adjacent                                ] count=   12 low
+  Q 9 [serendipity                             ] count=   45 healthy
+  Q10 [serendipity                             ] count=   23 low
+  Q11 [core                                    ] count=    0 zero
+  Q12 [core                                    ] count=    0 zero
+  Q13 [core                                    ] count=    3 low
+  Q14 [core                                    ] count=    1 low
+  Q15 [core                                    ] count=    0 zero
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.rescored.tiab.json
+======================================================================
+  queries:          15
+  bands:            zero=3 low=10 healthy=2 recall_safety=0 too_broad=0
+  frac healthy:     13%
+  mean precision:   40%
+  per-band prec:    {'zero': None, 'low': 0.39, 'healthy': 0.45, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/afib.plan.json (prebuilt, 15 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [Core procedural technique               ] count=   33 healthy
+  Q 2 [Specific ablation technologies          ] count=   20 low
+  Q 3 [Anticoagulation pharmacotherapy         ] count=   38 healthy
+  Q 4 [Stroke prevention procedure             ] count=    8 low
+  Q 5 [Management strategy debate              ] count=   27 low
+  Q 6 [Recent landmark trial paradigms         ] count=    5 low
+  Q 7 [Anticoagulation safety                  ] count=   28 low
+  Q 8 [Challenging AFib subtype                ] count=    8 low
+  Q 9 [Pharmacologic rhythm control            ] count=   30 healthy
+  Q10 [Practice standards & updates            ] count=   36 healthy
+  Q11 [High-level evidence filter              ] count=   83 healthy
+  Q12 [Evidence synthesis                      ] count=  159 healthy
+  Q13 [Primary treatment goal                  ] count=   66 healthy
+  Q14 [Advanced/surgical ablation              ] count=    2 low
+  Q15 [Ablation perioperative management       ] count=   15 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/afib.rescored.json
+======================================================================
+  queries:          15
+  bands:            zero=0 low=8 healthy=7 recall_safety=0 too_broad=0
+  frac healthy:     47%
+  mean precision:   55%
+  per-band prec:    {'zero': None, 'low': 0.65, 'healthy': 0.44, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.json.plan.json (prebuilt, 16 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=   43 healthy
+  Q 2 [core                                    ] count=   14 low
+  Q 3 [intersection                            ] count=   34 healthy
+  Q 4 [adjacent                                ] count=    5 low
+  Q 5 [adjacent                                ] count=   19 low
+  Q 6 [adjacent                                ] count= 1042 recall_safety
+  Q 7 [adjacent                                ] count=   15 low
+  Q 8 [serendipity                             ] count=   43 healthy
+  Q 9 [core                                    ] count=    6 low
+  Q10 [core                                    ] count=    8 low
+  Q11 [core                                    ] count=   15 low
+  Q12 [core                                    ] count=   42 healthy
+  Q13 [intersection                            ] count=   15 low
+  Q14 [intersection                            ] count=    1 low
+  Q15 [intersection                            ] count=   21 low
+  Q16 [serendipity                             ] count=    5 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.rescored.json
+======================================================================
+  queries:          16
+  bands:            zero=0 low=11 healthy=4 recall_safety=1 too_broad=0
+  frac healthy:     25%
+  mean precision:   46%
+  per-band prec:    {'zero': None, 'low': 0.49, 'healthy': 0.5, 'recall_safety': 0.0, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.json.plan.json (prebuilt, 16 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md
+filter:  title_and_abstract.search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=    2 low
+  Q 2 [core                                    ] count=    2 low
+  Q 3 [intersection                            ] count=    1 low
+  Q 4 [adjacent                                ] count=    2 low
+  Q 5 [adjacent                                ] count=    2 low
+  Q 6 [adjacent                                ] count=   13 low
+  Q 7 [adjacent                                ] count=    4 low
+  Q 8 [serendipity                             ] count=    2 low
+  Q 9 [core                                    ] count=    0 zero
+  Q10 [core                                    ] count=    0 zero
+  Q11 [core                                    ] count=    2 low
+  Q12 [core                                    ] count=    2 low
+  Q13 [intersection                            ] count=    0 zero
+  Q14 [intersection                            ] count=    0 zero
+  Q15 [intersection                            ] count=    0 zero
+  Q16 [serendipity                             ] count=    0 zero
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.rescored.tiab.json
+======================================================================
+  queries:          16
+  bands:            zero=6 low=10 healthy=0 recall_safety=0 too_broad=0
+  frac healthy:     0%
+  mean precision:   38%
+  per-band prec:    {'zero': None, 'low': 0.38, 'healthy': None, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/adolescent_depression.plan.json (prebuilt, 16 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [Core subject - broad treatment landscape] count=   65 healthy
+  Q 2 [Methods - CBT and behavioral variants   ] count=   10 low
+  Q 3 [Methods - Interpersonal Psychotherapy fo] count=   11 low
+  Q 4 [Methods - Mindfulness and acceptance-bas] count=   12 low
+  Q 5 [Methods - Family-based interventions    ] count=    0 zero
+  Q 6 [Tools/Artifacts - Digital and app-based ] count=    3 low
+  Q 7 [Methods - Psychopharmacology (SSRIs)    ] count=    2 low
+  Q 8 [Methods - Combined treatment approaches ] count=    0 zero
+  Q 9 [Evaluation - Assessment tools and psycho] count=  392 healthy
+  Q10 [Applied concerns - Suicide risk screenin] count=   49 healthy
+  Q11 [Applied concerns - Social media and ment] count=  572 recall_safety
+  Q12 [Applied concerns - School-based preventi] count=   46 healthy
+  Q13 [Evaluation - RCTs (high-quality evidence] count=   14 low
+  Q14 [Evaluation - Meta-analyses and reviews  ] count=   28 low
+  Q15 [Core subject - Depression with comorbid ] count=    7 low
+  Q16 [Applied concerns - Implementation and re] count=    5 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/adolescent_depression.rescored.json
+======================================================================
+  queries:          16
+  bands:            zero=2 low=9 healthy=4 recall_safety=1 too_broad=0
+  frac healthy:     25%
+  mean precision:   45%
+  per-band prec:    {'zero': None, 'low': 0.51, 'healthy': 0.35, 'recall_safety': 0.3, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+  scorer error: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] ssl/tls alert bad record mac (_ssl.c:2658)
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.json.plan.json (prebuilt, 16 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=  416 healthy
+  Q 2 [core                                    ] count=  360 healthy
+  Q 3 [intersection                            ] count=  150 healthy
+  Q 4 [intersection                            ] count=  201 healthy
+  Q 5 [intersection                            ] count=  222 healthy
+  Q 6 [adjacent                                ] count=  360 healthy
+  Q 7 [adjacent                                ] count=  260 healthy
+  Q 8 [adjacent                                ] count=  191 healthy
+  Q 9 [serendipity                             ] count=   58 healthy
+  Q10 [core                                    ] count=  136 healthy
+  Q11 [core                                    ] count=   61 healthy
+  Q12 [core                                    ] count=   14 low
+  Q13 [core                                    ] count=   66 healthy
+  Q14 [intersection                            ] count=   79 healthy
+  Q15 [intersection                            ] count=  179 healthy
+  Q16 [serendipity                             ] count=  292 healthy
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.rescored.json
+======================================================================
+  queries:          16
+  bands:            zero=0 low=1 healthy=15 recall_safety=0 too_broad=0
+  frac healthy:     94%
+  mean precision:   0%
+  per-band prec:    {'zero': None, 'low': 0.0, 'healthy': 0.0, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+plan:    /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.json.plan.json (prebuilt, 16 queries)
+profile: /home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md
+filter:  title_and_abstract.search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=   17 low
+  Q 2 [core                                    ] count=    7 low
+  Q 3 [intersection                            ] count=    1 low
+  Q 4 [intersection                            ] count=    2 low
+  Q 5 [intersection                            ] count=    5 low
+  Q 6 [adjacent                                ] count=    4 low
+  Q 7 [adjacent                                ] count=    3 low
+  Q 8 [adjacent                                ] count=    3 low
+  Q 9 [serendipity                             ] count=    1 low
+  Q10 [core                                    ] count=    1 low
+  Q11 [core                                    ] count=    0 zero
+  Q12 [core                                    ] count=    0 zero
+  Q13 [core                                    ] count=    0 zero
+  Q14 [intersection                            ] count=    0 zero
+  Q15 [intersection                            ] count=    0 zero
+  Q16 [serendipity                             ] count=    0 zero
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.rescored.tiab.json
+======================================================================
+  queries:          16
+  bands:            zero=6 low=10 healthy=0 recall_safety=0 too_broad=0
+  frac healthy:     0%
+  mean precision:   37%
+  per-band prec:    {'zero': None, 'low': 0.37, 'healthy': None, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+=== llm_agents ===
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/llm_agents.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/llm_agents.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/llm_agents.md --filter title_and_abstract.search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/llm_agents.rescored.tiab.json
+    rc=0
+=== marketing ===
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/marketing.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/marketing.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/marketing.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/marketing.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/marketing.md --filter title_and_abstract.search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/marketing.rescored.tiab.json
+    rc=0
+=== afib ===
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/afib.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/afib.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md --filter title_and_abstract.search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/afib.rescored.tiab.json
+    rc=0
+=== adolescent_depression ===
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/adolescent_depression.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/adolescent_depression.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md --filter search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.rescored.json
+    rc=0
+  → score_plan.py --plan-from-file /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.json.plan.json --profile /home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md --filter title_and_abstract.search --out /home/aykut/dev/workspace/ResearchDigest/iter/runs/v9_keyword_discovery/adolescent_depression.rescored.tiab.json
+    rc=0

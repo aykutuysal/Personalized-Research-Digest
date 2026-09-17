@@ -1,0 +1,102 @@
+{
+  "subject": "Adolescent depression",
+  "queries": [
+    {
+      "id": 1,
+      "query": "(\"adolescent depression\" OR \"youth depression\" OR \"depressed adolescents\" OR \"teen depression\" OR \"depression in adolescents\" OR \"pediatric depression\" OR \"adolescent depressive symptoms\" OR \"adolescent major depression\") AND (therapy OR treatment OR psychotherapy OR intervention OR medication OR prevention)",
+      "angle": "Core subject - broad treatment landscape",
+      "rationale": "Captures the foundational literature on adolescent depression using a comprehensive phrase anchor paired with general intervention terms, ensuring high recall of treatment-focused papers."
+    },
+    {
+      "id": 2,
+      "query": "(\"cognitive behavioral therapy\" OR CBT OR \"behavioral activation\" OR BA) AND (\"adolescent depression\" OR \"youth depression\" OR \"depressed adolescents\")",
+      "angle": "Methods - CBT and behavioral variants",
+      "rationale": "Targets papers specifically evaluating CBT and its core behavioral components, which are central to the reader's clinical practice."
+    },
+    {
+      "id": 3,
+      "query": "(\"interpersonal psychotherapy\" OR IPT OR \"IPT-A\") AND (adolescent OR teen OR youth OR \"young people\")",
+      "angle": "Methods - Interpersonal Psychotherapy for Adolescents",
+      "rationale": "Focuses on the evidence base for IPT-A, a well-established manualized treatment for adolescent depression that the profile mentions."
+    },
+    {
+      "id": 4,
+      "query": "(\"mindfulness\" OR \"acceptance and commitment therapy\" OR ACT OR \"mindfulness-based cognitive therapy\" OR MBCT) AND (\"adolescent depression\" OR \"depressed youth\")",
+      "angle": "Methods - Mindfulness and acceptance-based approaches",
+      "rationale": "Covers the growing literature on mindfulness and third-wave CBT adaptations for adolescent depression."
+    },
+    {
+      "id": 5,
+      "query": "(\"family therapy\" OR \"family-based treatment\" OR \"attachment-based family therapy\" OR ABFT) AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Methods - Family-based interventions",
+      "rationale": "Queries for family-involved treatment models, which are crucial in adolescent mental health care."
+    },
+    {
+      "id": 6,
+      "query": "(\"digital intervention\" OR \"app-based\" OR \"mobile health\" OR mHealth OR \"internet-based\" OR \"computerized therapy\") AND (\"adolescent depression\" OR \"depressed youth\")",
+      "angle": "Tools/Artifacts - Digital and app-based interventions",
+      "rationale": "Searches for modern delivery methods and tools that expand treatment access, a key interest area."
+    },
+    {
+      "id": 7,
+      "query": "(SSRI OR \"selective serotonin reuptake inhibitor\" OR fluoxetine OR escitalopram OR sertraline) AND (\"adolescent depression\" OR \"pediatric depression\")",
+      "angle": "Methods - Psychopharmacology (SSRIs)",
+      "rationale": "Targets the evidence on first-line medication treatments, including safety and efficacy data relevant to clinical practice."
+    },
+    {
+      "id": 8,
+      "query": "(\"combination therapy\" OR \"medication and psychotherapy\" OR \"integrated treatment\") AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Methods - Combined treatment approaches",
+      "rationale": "Finds studies comparing or evaluating multimodal treatment, a critical practical consideration."
+    },
+    {
+      "id": 9,
+      "query": "(\"assessment\" OR \"screening\" OR \"measurement\" OR \"rating scale\") AND (\"adolescent depression\" OR \"depressive symptoms\") AND (validity OR reliability OR psychometric)",
+      "angle": "Evaluation - Assessment tools and psychometrics",
+      "rationale": "Focuses on the tools and instruments used to reliably assess depression in adolescents, separate from treatment papers."
+    },
+    {
+      "id": 10,
+      "query": "(\"suicide risk\" OR \"suicidal ideation\" OR \"self-harm\") AND (\"adolescent depression\" OR depressed) AND (screening OR assessment OR prevention)",
+      "angle": "Applied concerns - Suicide risk screening and management",
+      "rationale": "Captures the critical literature on risk assessment and prevention within the context of adolescent depression."
+    },
+    {
+      "id": 11,
+      "query": "(\"social media\" OR \"screen time\" OR \"digital media\" OR Instagram OR TikTok) AND (\"adolescent depression\" OR \"depressive symptoms\" OR \"mental health\")",
+      "angle": "Applied concerns - Social media and mental health links",
+      "rationale": "Addresses a major contemporary contextual factor influencing adolescent mental health that the profile explicitly mentions."
+    },
+    {
+      "id": 12,
+      "query": "(\"school-based\" OR \"universal prevention\" OR \"indicated prevention\" OR \"selective prevention\") AND (\"adolescent depression\" OR \"depressive symptoms\")",
+      "angle": "Applied concerns - School-based prevention programs",
+      "rationale": "Targets implementation science and public health approaches to depression prevention in educational settings."
+    },
+    {
+      "id": 13,
+      "query": "(\"randomized controlled trial\" OR RCT OR \"clinical trial\") AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Evaluation - RCTs (high-quality evidence)",
+      "rationale": "A recall-safety query to broadly capture the highest tier of treatment evidence, which the profile values."
+    },
+    {
+      "id": 14,
+      "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"adolescent depression\" OR \"pediatric depression\")",
+      "angle": "Evaluation - Meta-analyses and reviews",
+      "rationale": "A recall-safety query to capture synthesized evidence and effect sizes, another key interest for staying current."
+    },
+    {
+      "id": 15,
+      "query": "(\"comorbid\" OR \"co-occurring\" OR \"comorbidity\") AND (\"adolescent depression\" OR \"youth depression\") AND (anxiety)",
+      "angle": "Core subject - Depression with comorbid anxiety",
+      "rationale": "Specifically narrows the focus to the common clinical presentation the reader treats, filtering the broader depression literature."
+    },
+    {
+      "id": 16,
+      "query": "(\"implementation science\" OR \"dissemination\" OR \"effectiveness trial\" OR \"community settings\") AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Applied concerns - Implementation and real-world effectiveness",
+      "rationale": "Targets the bridge between research evidence and clinical practice, a growing area of importance."
+    }
+  ],
+  "coverage_notes": "The plan covers core treatment modalities (CBT, IPT-A, behavioral activation, mindfulness, family therapy, pharmacotherapy, combination), modern delivery (digital), key clinical concerns (assessment, suicide risk, comorbidity), and implementation contexts (school-based, real-world). It includes recall-safety queries for RCTs and meta-analyses. Angles deliberately skipped per profile: neuroimaging, biomarkers, pure developmental neuroscience, and adult-focused research without adolescent application. The plan assumes the reader's primary need is for clinically actionable research on interventions and assessment."
+}

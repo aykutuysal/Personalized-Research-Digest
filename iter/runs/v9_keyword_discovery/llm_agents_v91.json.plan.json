@@ -1,0 +1,113 @@
+{
+  "subject": "LLM agents",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "new agent architectures or frameworks",
+      "query": "LLM agent architecture modular design",
+      "rationale": "Directly addresses new agent architectures using vocabulary 'Architecture' (38x) and 'Modular design' (8x) from extracted data. Targets engineering-grounded architectural patterns relevant to a software engineer building agents.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "tool use and function calling",
+      "query": "agent tool use executable",
+      "rationale": "Addresses tool use and function calling with vocabulary 'Executable' (14x) from extracted data. Targets practical implementation of tool execution in agents, relevant for engineering-focused development.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "multi-agent systems and orchestration",
+      "query": "multi-agent system orchestration workflow",
+      "rationale": "Addresses multi-agent systems and orchestration using vocabulary 'Multi-agent system' (7x) and 'Workflow' (26x) from extracted data. Targets practical coordination patterns for multi-agent architectures.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "evaluation, benchmarks, or agent capability tests",
+      "query": "agent benchmarking evaluation empirical",
+      "rationale": "Covers evaluation and benchmarks using vocabulary 'Benchmarking' (21x) and 'Empirical research' (10x) from extracted data. Focuses on practical testing and measurement of agent capabilities.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "production engineering patterns (deployment, observability, cost)",
+      "query": "agent software deployment scalability",
+      "rationale": "Addresses production engineering patterns using vocabulary 'Software deployment' (23x) and 'Scalability' (18x) from extracted data. Directly relevant to deployment and operational concerns for a software engineer.",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "planning, reasoning, or chain-of-thought techniques",
+      "query": "agent cognitive architecture memory",
+      "rationale": "Combines planning/reasoning (angle 2) with memory systems (angle 4) using vocabulary 'Cognitive architecture' (11x) and 'Memory' terms. Serves angle 2 by exploring how memory enhances reasoning, based on extracted cognitive architecture papers.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 7,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "multi-agent systems and orchestration",
+      "query": "multi-agent decision support system",
+      "rationale": "Serves multi-agent systems (angle 5) through adjacent field of decision support systems, using vocabulary 'Decision support system' (7x) from extracted data. Relevant for practical orchestration applications in business/management contexts.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 8,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "tool use and function calling",
+      "query": "agent reinforcement learning tool",
+      "rationale": "Combines tool use (angle 3) with reinforcement learning techniques using vocabulary 'Reinforcement learning' (17x) from extracted data. Serves angle 3 by exploring how RL enhances tool learning and function calling.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 9,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "production engineering patterns (deployment, observability, cost)",
+      "query": "LLM agent workflow provenance",
+      "rationale": "Serves production engineering patterns (angle 7) through adjacent topic of workflow provenance, referenced in sample titles. Addresses observability and traceability in agent deployments for engineering-focused users.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 10,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "planning, reasoning, or chain-of-thought techniques",
+      "query": "cognitive architecture reasoning multi-agent system",
+      "rationale": "Replaced 'agent planning reasoning cognition' with vocabulary terms: 'cognitive architecture' (from keywords), 'reasoning' (kept), and 'multi-agent system' (from topics). This broadens from specific 'planning' while maintaining the cognition/agent angle.",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "memory systems and retrieval (RAG / long-term memory)",
+      "query": "memory management semantic memory cognitive architecture",
+      "rationale": "Replaced 'agent memory management semantic' with 'memory management' (kept from keywords), 'semantic memory' (from keywords), and 'cognitive architecture' (from keywords). This focuses on memory systems without requiring 'agent' specificity.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "safety, alignment, or guardrails for agents",
+      "query": "audit safety artificial intelligence ethics",
+      "rationale": "Replaced 'agent safety audit guardrails' with 'audit' (kept from keywords), 'safety' (kept), 'artificial intelligence' (from subfields), and 'ethics' (from topics). This broadens from specific 'guardrails' to the broader AI safety/ethics context.",
+      "dimension": "core"
+    }
+  ]
+}

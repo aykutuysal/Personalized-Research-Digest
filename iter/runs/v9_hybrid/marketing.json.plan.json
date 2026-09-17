@@ -1,0 +1,109 @@
+{
+  "subject": "Marketing science",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "pricing strategies consumer price sensitivity",
+      "rationale": "Directly targets the user's need for pricing tests and elasticity data, using exact phrasing from a retrieved e-commerce paper title."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "online advertising consumer behaviour",
+      "rationale": "Targets ad creative effectiveness and persuasion by pairing the extracted keywords 'online advertising' and 'consumer behaviour'."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "core",
+      "query": "brand loyalty repeat purchasing",
+      "rationale": "Focuses on the user's goal of retention and repeat purchase behavior, utilizing the extracted keywords 'brand loyalty' and 'purchasing'."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "influencer marketing purchasing behaviour",
+      "rationale": "Combines social proof trends with actual purchasing outcomes, fitting the user's desire for hard conversion data over fluffy marketing theory."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "digital marketing sales promotion",
+      "rationale": "Looks at how digital channels specifically handle promos and discounts, using high-frequency extracted keywords to find tactical, data-backed studies."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "technology adoption user behaviour",
+      "rationale": "Uses the extracted OpenAlex topic 'Technology Adoption and User Behaviour' to find UX and behavioral nudges that apply to landing page optimization."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "artificial intelligence marketing strategy",
+      "rationale": "Leverages the 'Artificial Intelligence' subfield and 'marketing strategy' keyword to find emerging, quantitative approaches to personalization and conversion."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "eco-friendly consumption purchasing perception",
+      "rationale": "Adapts the sustainability titles found in the data to see how green messaging acts as a conversion nudge or affects perceived value for DTC brands."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "core",
+      "query": "sales promotion consumer behaviour perception",
+      "rationale": "Replaced 'brand perception' with 'consumer behaviour perception' using high-frequency vocabulary terms (consumer behaviour 23x, perception 23x) to broaden from 2 results while maintaining relevance."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "core",
+      "query": "pricing consumer perception marketing",
+      "rationale": "Replaced 'charm pricing' with broader 'pricing' and added 'marketing' from subfields to create viable query after zero results."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "e-commerce pricing strategies consumer behaviour payment",
+      "rationale": "Added 'consumer behaviour' (23x) as qualifier to 'e-commerce pricing strategies payment' to make more specific while maintaining payment relevance."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "brand personality consumer perception marketing",
+      "rationale": "Replaced 'discount perception' with 'consumer perception' and added 'marketing' from high-frequency subfield after zero results."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "computer vision digital marketing online advertising",
+      "rationale": "Added 'digital marketing' (12x keyword, 5x topic) as bridge between computer vision and online advertising after zero results."
+    }
+  ]
+}

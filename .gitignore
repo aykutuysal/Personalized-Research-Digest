@@ -42,8 +42,14 @@ yarn-error.log*
 next-env.d.ts
 
 # legacy work
-iter/
 .superpowers/
 
 # worktrees
 .worktrees/
+
+# python caches (iter/ study harness)
+__pycache__/
+*.pyc
+
+# agent config
+.claude/

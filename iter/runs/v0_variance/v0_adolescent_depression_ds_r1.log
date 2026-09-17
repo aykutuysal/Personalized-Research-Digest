@@ -1,0 +1,35 @@
+prompt:  iter/prompts/v0_original.md
+profile: iter/profiles/adolescent_depression.md
+model:   deepseek/deepseek-v3.2
+dates:   2026-04-06 to 2026-04-13
+
+[1/3] generating plan... 98.3s, 16 queries, $0.00101922
+[2/3] running OpenAlex queries...
+  Q 1 [Core subject - CBT variants             ] count=    2 low
+  Q 2 [Methods / techniques                    ] count=    2 low
+  Q 3 [Core subject - IPT-A                    ] count=    0 zero
+  Q 4 [Methods / techniques                    ] count=    2 low
+  Q 5 [Applied / real-world concerns           ] count=    1 low
+  Q 6 [Tools / artifacts / instruments         ] count=    1 low
+  Q 7 [Core subject - Psychopharmacology       ] count=    2 low
+  Q 8 [Applied / real-world concerns           ] count=    0 zero
+  Q 9 [Applied / real-world concerns           ] count=    6 low
+  Q10 [Evaluation / evidence standards         ] count=   19 low
+  Q11 [Subspecialty intersections              ] count=    8 low
+  Q12 [Applied / real-world concerns           ] count=    5 low
+  Q13 [Evaluation / evidence standards         ] count=    9 low
+  Q14 [Evaluation / evidence standards         ] count=   19 low
+  Q15 [Applied / real-world concerns           ] count=    3 low
+  Q16 [Subspecialty intersections              ] count=    9 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: iter/runs/v0_variance/v0_adolescent_depression_ds_r1.json
+======================================================================
+  queries:          16
+  bands:            zero=2 low=14 healthy=0 recall_safety=0 too_broad=0
+  frac healthy:     0%
+  mean precision:   54%
+  per-band prec:    {'zero': None, 'low': 0.54, 'healthy': None, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.00101922
+  PASSING:          no

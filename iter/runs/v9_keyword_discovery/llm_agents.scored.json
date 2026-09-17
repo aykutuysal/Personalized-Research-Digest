@@ -1,0 +1,804 @@
+{
+  "timestamp": "2026-04-16T12:04:39.381806+00:00",
+  "prompt_file": "runs/v9_keyword_discovery/llm_agents.json.plan.json",
+  "profile_file": "profiles/llm_agents.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "search",
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 12,
+    "recall_safety": 3,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.8,
+  "frac_healthy_or_safety": 1.0,
+  "mean_precision": 0.59,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": 0.62,
+    "recall_safety": 0.5,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "LLM agents",
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent architecture modular",
+        "rationale": "Directly addresses user's interest in new architectures with vocabulary evidence: 'Architecture' (42x), 'Modular design' (12x), 'Agent architecture' (6x). Focuses on engineering-grounded design patterns."
+      },
+      {
+        "id": 2,
+        "angle_id": 2,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent tool use function calling",
+        "rationale": "Targets practical agent capabilities the user cares about. Combines 'tool use' (from seed queries) with 'function calling' (implied by tool use angle). Vocabulary shows 'Workflow' (13x) and 'Software' (6x) as relevant context."
+      },
+      {
+        "id": 3,
+        "angle_id": 3,
+        "slot": 1,
+        "angle": "core",
+        "query": "multi-agent LLM orchestration",
+        "rationale": "Addresses multi-agent systems angle with vocabulary evidence: 'Multi-agent system' (13x), 'Multi-Agent Systems and Negotiation' (25x). 'Orchestration' refines to practical engineering concerns over pure theory."
+      },
+      {
+        "id": 4,
+        "angle_id": 4,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent memory RAG retrieval",
+        "rationale": "Covers memory systems angle. Vocabulary includes 'Cognition' (15x) and 'Cognitive architecture' (8x), which relate to memory. RAG/retrieval are key techniques for long-term memory in agents."
+      },
+      {
+        "id": 5,
+        "angle_id": 5,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent evaluation benchmark",
+        "rationale": "Directly matches user's evaluation angle. Vocabulary shows 'Benchmark' in sample titles. Targets capability tests and practical assessment methods."
+      },
+      {
+        "id": 6,
+        "angle_id": 6,
+        "slot": 1,
+        "angle": "core",
+        "query": "LLM agent planning reasoning chain",
+        "rationale": "Targets planning/reasoning techniques. Vocabulary includes 'Cognition' (15x) and 'Thought Management System' from sample titles. 'Chain' references chain-of-thought approaches."
+      },
+      {
+        "id": 7,
+        "angle_id": 7,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "LLM agent deployment scalability",
+        "rationale": "Intersects agent engineering with production concerns. Vocabulary evidence: 'Scalability' (11x), 'Software deployment' (11x). Addresses practical deployment patterns the user wants."
+      },
+      {
+        "id": 8,
+        "angle_id": 8,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "LLM agent safety guardrails alignment",
+        "rationale": "Intersects agent functionality with safety/alignment concerns. Vocabulary includes 'Adversarial system' (8x) and 'Limiting' (8x), which relate to control and safety mechanisms."
+      },
+      {
+        "id": 9,
+        "angle_id": 9,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "LLM agent workflow automation",
+        "rationale": "Intersects agent capabilities with practical automation. Vocabulary evidence: 'Workflow' (13x). Targets engineering patterns for automating tasks with agents."
+      },
+      {
+        "id": 10,
+        "angle_id": 10,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "cognitive architecture LLM agent",
+        "rationale": "Intersects LLM agents with cognitive architectures from vocabulary: 'Cognitive architecture' (8x), 'Cognition' (15x). Could yield insights on reasoning and memory design."
+      },
+      {
+        "id": 11,
+        "angle_id": 11,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "reinforcement learning LLM agent",
+        "rationale": "Adjacent field from vocabulary: 'Reinforcement learning' (8x), 'Reinforcement Learning in Robotics' (3x). Could reveal techniques for agent learning and adaptation."
+      },
+      {
+        "id": 12,
+        "angle_id": 12,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "explainable AI LLM agent",
+        "rationale": "Adjacent field from vocabulary: 'Explainable Artificial Intelligence (XAI)' (4x). Important for debugging and trust in deployed agents."
+      },
+      {
+        "id": 13,
+        "angle_id": 13,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "distributed control multi-agent LLM",
+        "rationale": "Adjacent field from vocabulary: 'Distributed Control Multi-Agent Systems' (5x). Could yield engineering patterns for coordinating multiple agents."
+      },
+      {
+        "id": 14,
+        "angle_id": 14,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "LLM agent social simulation",
+        "rationale": "Unexpected field from sample titles: 'The 1st Workshop on LLM Agents for Social Simulation'. Vocabulary includes 'Sociology and Political Science' (11x). Might reveal novel emergent behaviors in agent populations."
+      },
+      {
+        "id": 15,
+        "angle_id": 15,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "LLM agent healthcare education",
+        "rationale": "Serendipitous applications from vocabulary: 'Artificial Intelligence in Healthcare and Education' (5x), 'Machine Learning in Healthcare' (3x). Could show agent use cases with practical constraints."
+      }
+    ]
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "LLM agent architecture modular",
+      "angle": "core",
+      "rationale": "Directly addresses user's interest in new architectures with vocabulary evidence: 'Architecture' (42x), 'Modular design' (12x), 'Agent architecture' (6x). Focuses on engineering-grounded design patterns.",
+      "openalex_count": 198,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "PLATO: Planning with LLMs and Affordances for Tool Manipulation",
+          "relevance_score": 17.177402,
+          "id": "https://openalex.org/W4403708691"
+        },
+        {
+          "title": "An Agentic System for Code Review &amp; Debugging",
+          "relevance_score": 5.391767,
+          "id": "https://openalex.org/W7153473541"
+        },
+        {
+          "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models",
+          "relevance_score": 5.0250096,
+          "id": "https://openalex.org/W4394947112"
+        },
+        {
+          "title": "Hybrid agentic AI and multi-agent systems in smart manufacturing",
+          "relevance_score": 5.020442,
+          "id": "https://openalex.org/W7150912933"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "relevance_score": 4.4514995,
+          "id": "https://openalex.org/W7153480434"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 2,
+      "query": "LLM agent tool use function calling",
+      "angle": "core",
+      "rationale": "Targets practical agent capabilities the user cares about. Combines 'tool use' (from seed queries) with 'function calling' (implied by tool use angle). Vocabulary shows 'Workflow' (13x) and 'Software' (6x) as relevant context.",
+      "openalex_count": 94,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models",
+          "relevance_score": 4.9188,
+          "id": "https://openalex.org/W4394947112"
+        },
+        {
+          "title": "Computer Science Achievement and Writing Skills Predict Vibe Coding Proficiency",
+          "relevance_score": 2.3311865,
+          "id": "https://openalex.org/W7138962433"
+        },
+        {
+          "title": "Interaction-Augmented Instruction: Modeling the Synergy of Prompts and Interactions in Human-GenAI Collaboration",
+          "relevance_score": 2.237183,
+          "id": "https://openalex.org/W7127909851"
+        },
+        {
+          "title": "Exploring Teacher-Chatbot Interaction and Affect in Block-Based Programming",
+          "relevance_score": 2.1962063,
+          "id": "https://openalex.org/W7140281905"
+        },
+        {
+          "title": "InnerPond: Fostering Inter-Self Dialogue with a Multi-Agent Approach for Introspection",
+          "relevance_score": 2.1961253,
+          "id": "https://openalex.org/W7148157723"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "PARTIAL",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 3,
+      "query": "multi-agent LLM orchestration",
+      "angle": "core",
+      "rationale": "Addresses multi-agent systems angle with vocabulary evidence: 'Multi-agent system' (13x), 'Multi-Agent Systems and Negotiation' (25x). 'Orchestration' refines to practical engineering concerns over pure theory.",
+      "openalex_count": 247,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Dynamic Attentional Context Scoping: Agent-Triggered Focus Sessions for Isolated Per-Agent Steering in Multi-Agent LLM Orchestration",
+          "relevance_score": 63.0511,
+          "id": "https://openalex.org/W7153671144"
+        },
+        {
+          "title": "LLM-Skill Orchestration: Achieving 202/202 Subtask Completion via Rule-Augmented Multi-Model Collaboration in 50 Agentic Tasks",
+          "relevance_score": 21.188196,
+          "id": "https://openalex.org/W7153532023"
+        },
+        {
+          "title": "PaperOrchestrator: An LLM-Orchestrated multi-agent pipeline for automated end-to-end scientific paper writing",
+          "relevance_score": 19.742249,
+          "id": "https://openalex.org/W7150980898"
+        },
+        {
+          "title": "InnerPond: Fostering Inter-Self Dialogue with a Multi-Agent Approach for Introspection",
+          "relevance_score": 18.052172,
+          "id": "https://openalex.org/W7148157723"
+        },
+        {
+          "title": "From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems and Its Implications for Orchestrated Democratic Discourse Analysis",
+          "relevance_score": 16.899744,
+          "id": "https://openalex.org/W7153671150"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 4,
+      "query": "LLM agent memory RAG retrieval",
+      "angle": "core",
+      "rationale": "Covers memory systems angle. Vocabulary includes 'Cognition' (15x) and 'Cognitive architecture' (8x), which relate to memory. RAG/retrieval are key techniques for long-term memory in agents.",
+      "openalex_count": 112,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models",
+          "relevance_score": 10.063446,
+          "id": "https://openalex.org/W4394947112"
+        },
+        {
+          "title": "HyperMem: Hypergraph Memory for Long-Term Conversations",
+          "relevance_score": 6.5866475,
+          "id": "https://openalex.org/W7153670247"
+        },
+        {
+          "title": "Addressing Memory Limitations in Large Language Model-Based Agents: An Architectural Evaluation of Modern Memory Management Frameworks",
+          "relevance_score": 5.8017297,
+          "id": "https://openalex.org/W7152688996"
+        },
+        {
+          "title": "MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents",
+          "relevance_score": 5.7861166,
+          "id": "https://openalex.org/W7151378852"
+        },
+        {
+          "title": "ADAM: A Systematic Data Extraction Attack on Agent Memory via Adaptive Querying",
+          "relevance_score": 5.7332044,
+          "id": "https://openalex.org/W7154290447"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 5,
+      "query": "LLM agent evaluation benchmark",
+      "angle": "core",
+      "rationale": "Directly matches user's evaluation angle. Vocabulary shows 'Benchmark' in sample titles. Targets capability tests and practical assessment methods.",
+      "openalex_count": 739,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+          "relevance_score": 15.002365,
+          "id": "https://openalex.org/W4405036134"
+        },
+        {
+          "title": "Evaluating Supportive LLM Behavior Over Multiple Turns across Demographics",
+          "relevance_score": 13.093212,
+          "id": "https://openalex.org/W7153875517"
+        },
+        {
+          "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models",
+          "relevance_score": 5.476605,
+          "id": "https://openalex.org/W4394947112"
+        },
+        {
+          "title": "CivBench: Progress-Based Evaluation for LLMs' Strategic Decision-Making in Civilization V",
+          "relevance_score": 5.1889596,
+          "id": "https://openalex.org/W7153670395"
+        },
+        {
+          "title": "Market-Bench: Benchmarking Large Language Models on Economic and Trade Competition",
+          "relevance_score": 4.8797035,
+          "id": "https://openalex.org/W7152933857"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 6,
+      "query": "LLM agent planning reasoning chain",
+      "angle": "core",
+      "rationale": "Targets planning/reasoning techniques. Vocabulary includes 'Cognition' (15x) and 'Thought Management System' from sample titles. 'Chain' references chain-of-thought approaches.",
+      "openalex_count": 253,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models",
+          "relevance_score": 6.094062,
+          "id": "https://openalex.org/W4394947112"
+        },
+        {
+          "title": "From Topology to Trajectory: LLM-Driven World Models For Supply Chain Resilience",
+          "relevance_score": 4.3478518,
+          "id": "https://openalex.org/W7154343401"
+        },
+        {
+          "title": "Belief Updating and Delegation in Multi-Task Human\u2013AI Interaction: Evidence from Controlled Simulations",
+          "relevance_score": 3.2264276,
+          "id": "https://openalex.org/W7127374940"
+        },
+        {
+          "title": "Towards AI-Native Software Engineering (SE 3.0): A Vision and a Challenge Roadmap",
+          "relevance_score": 2.9704485,
+          "id": "https://openalex.org/W4403344603"
+        },
+        {
+          "title": "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+          "relevance_score": 2.7149677,
+          "id": "https://openalex.org/W4405036134"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 7,
+      "query": "LLM agent deployment scalability",
+      "angle": "intersection",
+      "rationale": "Intersects agent engineering with production concerns. Vocabulary evidence: 'Scalability' (11x), 'Software deployment' (11x). Addresses practical deployment patterns the user wants.",
+      "openalex_count": 582,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "We Need Strong Preconditions For Using Simulations In Policy",
+          "relevance_score": 4.6855583,
+          "id": "https://openalex.org/W7153671861"
+        },
+        {
+          "title": "Multi-Agent Orchestration for High-Throughput Materials Screening on a Leadership-Class System",
+          "relevance_score": 4.5796423,
+          "id": "https://openalex.org/W7153670220"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "relevance_score": 4.087043,
+          "id": "https://openalex.org/W7153480434"
+        },
+        {
+          "title": "The Agent Coordination Bound (ACB): A Framework for Multi-LLM Fleet Sizing, Topology Selection, and Deployment Diagnostics",
+          "relevance_score": 3.829652,
+          "id": "https://openalex.org/W7154185868"
+        },
+        {
+          "title": "Chatbot-Based Assessment of Code Understanding in Automated Programming Assessment Systems",
+          "relevance_score": 3.8109558,
+          "id": "https://openalex.org/W7153671749"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 8,
+      "query": "LLM agent safety guardrails alignment",
+      "angle": "intersection",
+      "rationale": "Intersects agent functionality with safety/alignment concerns. Vocabulary includes 'Adversarial system' (8x) and 'Limiting' (8x), which relate to control and safety mechanisms.",
+      "openalex_count": 50,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories",
+          "relevance_score": 7.472906,
+          "id": "https://openalex.org/W7153670074"
+        },
+        {
+          "title": "The Siren Song of LLMs: How Users Perceive and Respond to Dark Patterns in Large Language Models",
+          "relevance_score": 3.9779701,
+          "id": "https://openalex.org/W4415250053"
+        },
+        {
+          "title": "Data-Prompt Co-Evolution: Growing Test Sets to Refine LLM Behavior",
+          "relevance_score": 2.993561,
+          "id": "https://openalex.org/W7128480797"
+        },
+        {
+          "title": "State Your Intention to Steer Your Attention: An AI Assistant for Intentional Digital Living",
+          "relevance_score": 2.7743824,
+          "id": "https://openalex.org/W4416146002"
+        },
+        {
+          "title": "When AI Gives Advice: Evaluating AI and Human Responses to Online Advice-Seeking for Well-Being",
+          "relevance_score": 2.7476327,
+          "id": "https://openalex.org/W4417288519"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 9,
+      "query": "LLM agent workflow automation",
+      "angle": "intersection",
+      "rationale": "Intersects agent capabilities with practical automation. Vocabulary evidence: 'Workflow' (13x). Targets engineering patterns for automating tasks with agents.",
+      "openalex_count": 200,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Multi-Agent Orchestration for High-Throughput Materials Screening on a Leadership-Class System",
+          "relevance_score": 5.451927,
+          "id": "https://openalex.org/W7153670220"
+        },
+        {
+          "title": "Third Workshop on Human-Centered Evaluation and Auditing of Language Models: AI Agents-in-the-Loop",
+          "relevance_score": 4.736813,
+          "id": "https://openalex.org/W7153838007"
+        },
+        {
+          "title": "A Model Context Protocol Server for Quantum Execution in Hybrid Quantum-HPC Environments",
+          "relevance_score": 4.687693,
+          "id": "https://openalex.org/W7153671882"
+        },
+        {
+          "title": "Agentic Compilation: Mitigating the LLM Rerun Crisis for Minimized Inference Cost Web Automation",
+          "relevance_score": 4.5329814,
+          "id": "https://openalex.org/W7141663619"
+        },
+        {
+          "title": "HealthAdminBench: Evaluating Computer-Use Agents on Healthcare Administration Tasks",
+          "relevance_score": 4.5142474,
+          "id": "https://openalex.org/W7154311626"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 10,
+      "query": "cognitive architecture LLM agent",
+      "angle": "intersection",
+      "rationale": "Intersects LLM agents with cognitive architectures from vocabulary: 'Cognitive architecture' (8x), 'Cognition' (15x). Could yield insights on reasoning and memory design.",
+      "openalex_count": 318,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 18.246681,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "\"Theater of Mind\" for LLMs: A Cognitive Architecture Based on Global Workspace Theory",
+          "relevance_score": 4.6998854,
+          "id": "https://openalex.org/W7153670984"
+        },
+        {
+          "title": "The Perception, Decision-Making, and Execution of the Centipede-Like Rescue Robot",
+          "relevance_score": 4.05142,
+          "id": "https://openalex.org/W7152748288"
+        },
+        {
+          "title": "Beyond Prompting: Decoupling Cognition from Execution in LLM-based Agents through the ORCA Framework",
+          "relevance_score": 3.9622061,
+          "id": "https://openalex.org/W7150994577"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "relevance_score": 3.739578,
+          "id": "https://openalex.org/W7151519476"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 11,
+      "query": "reinforcement learning LLM agent",
+      "angle": "adjacent",
+      "rationale": "Adjacent field from vocabulary: 'Reinforcement learning' (8x), 'Reinforcement Learning in Robotics' (3x). Could reveal techniques for agent learning and adaptation.",
+      "openalex_count": 446,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "AgentGL: Towards Agentic Graph Learning with LLMs via Reinforcement Learning",
+          "relevance_score": 26.175251,
+          "id": "https://openalex.org/W7151868415"
+        },
+        {
+          "title": "Hierarchical Reinforcement Learning with Augmented Step-Level Transitions for LLM Agents",
+          "relevance_score": 24.880028,
+          "id": "https://openalex.org/W7152933352"
+        },
+        {
+          "title": "Can We Trust a Black-box LLM? LLM Untrustworthy Boundary Detection via Bias-Diffusion and Multi-Agent Reinforcement Learning",
+          "relevance_score": 21.908112,
+          "id": "https://openalex.org/W7152933495"
+        },
+        {
+          "title": "Escaping the Context Bottleneck: Active Context Curation for LLM Agents via Reinforcement Learning",
+          "relevance_score": 21.630182,
+          "id": "https://openalex.org/W7154426196"
+        },
+        {
+          "title": "PoC-Adapt: Semantic-Aware Automated Vulnerability Reproduction with LLM Multi-Agents and Reinforcement Learning-Driven Adaptive Policy",
+          "relevance_score": 16.752405,
+          "id": "https://openalex.org/W7153669872"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 12,
+      "query": "explainable AI LLM agent",
+      "angle": "adjacent",
+      "rationale": "Adjacent field from vocabulary: 'Explainable Artificial Intelligence (XAI)' (4x). Important for debugging and trust in deployed agents.",
+      "openalex_count": 505,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "An LLM-Based Agentic Network Traffic Incident-Report Approach Towards Explainable-AI Network Defense",
+          "relevance_score": 19.06435,
+          "id": "https://openalex.org/W7151474267"
+        },
+        {
+          "title": "AI and My Values: User Perceptions of LLMs\u2019 Ability to Extract, Embody, and Explain Human Values from Casual Conversations",
+          "relevance_score": 14.418913,
+          "id": "https://openalex.org/W7127118203"
+        },
+        {
+          "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models",
+          "relevance_score": 4.770288,
+          "id": "https://openalex.org/W4394947112"
+        },
+        {
+          "title": "Hybrid agentic AI and multi-agent systems in smart manufacturing",
+          "relevance_score": 4.615733,
+          "id": "https://openalex.org/W7150912933"
+        },
+        {
+          "title": "Exploring Agentic AI with Model Context Protocol: A Case Study of Salesman in E-Commerce",
+          "relevance_score": 3.9287863,
+          "id": "https://openalex.org/W7151330995"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 13,
+      "query": "distributed control multi-agent LLM",
+      "angle": "adjacent",
+      "rationale": "Adjacent field from vocabulary: 'Distributed Control Multi-Agent Systems' (5x). Could yield engineering patterns for coordinating multiple agents.",
+      "openalex_count": 303,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Attacks in Adversarial Machine Learning: A Systematic Survey from the Lifecycle Perspective",
+          "relevance_score": 3.5165102,
+          "id": "https://openalex.org/W4321472343"
+        },
+        {
+          "title": "MCP-DPT: A Defense-Placement Taxonomy and Coverage Analysis for Model Context Protocol Security",
+          "relevance_score": 3.4985042,
+          "id": "https://openalex.org/W7153671088"
+        },
+        {
+          "title": "Governance Effectiveness in Distributed Multi-Agent LLM Systems: Confound Isolation, Diversity Erosion, and the Accidental Governance Effect",
+          "relevance_score": 3.2269425,
+          "id": "https://openalex.org/W7153272831"
+        },
+        {
+          "title": "From Reasoning to Agentic: Credit Assignment in Reinforcement Learning for Large Language Models",
+          "relevance_score": 3.023026,
+          "id": "https://openalex.org/W7154104649"
+        },
+        {
+          "title": "Mapping the Challenges of HCI: An Application and Evaluation of ChatGPT for Mining Insights at Scale",
+          "relevance_score": 2.684096,
+          "id": "https://openalex.org/W4380187116"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 14,
+      "query": "LLM agent social simulation",
+      "angle": "serendipity",
+      "rationale": "Unexpected field from sample titles: 'The 1st Workshop on LLM Agents for Social Simulation'. Vocabulary includes 'Sociology and Political Science' (11x). Might reveal novel emergent behaviors in agent populations.",
+      "openalex_count": 191,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "PolicySim: An LLM-Based Agent Social Simulation Sandbox for Proactive Policy Optimization",
+          "relevance_score": 18.255665,
+          "id": "https://openalex.org/W7152378370"
+        },
+        {
+          "title": "GTA: Generative Traffic Agents for Simulating Realistic Mobility Behavior",
+          "relevance_score": 12.411714,
+          "id": "https://openalex.org/W7125674531"
+        },
+        {
+          "title": "All Futures at Once: Supporting Speculative Design for Placemaking with Multi-Agent Social Simulation",
+          "relevance_score": 11.821846,
+          "id": "https://openalex.org/W7154019849"
+        },
+        {
+          "title": "AI Agents and the Future of Deliberation: Designing Human\u2013AI Collaboration for Democratic Dialogue",
+          "relevance_score": 10.595911,
+          "id": "https://openalex.org/W7153800799"
+        },
+        {
+          "title": "Coupling Macro Dynamics and Micro States for Long-Horizon Social Simulation",
+          "relevance_score": 4.351556,
+          "id": "https://openalex.org/W7153670591"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 15,
+      "query": "LLM agent healthcare education",
+      "angle": "serendipity",
+      "rationale": "Serendipitous applications from vocabulary: 'Artificial Intelligence in Healthcare and Education' (5x), 'Machine Learning in Healthcare' (3x). Could show agent use cases with practical constraints.",
+      "openalex_count": 116,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "NexusMind: Agentic AI Orchestration Model",
+          "relevance_score": 2.9348757,
+          "id": "https://openalex.org/W7151864937"
+        },
+        {
+          "title": "From Prompting to Autonomous Intelligence: A White Paper on the Phases of AI Learning, Technologies, and Methodologies.",
+          "relevance_score": 2.9335353,
+          "id": "https://openalex.org/W7153480635"
+        },
+        {
+          "title": "Mapping the Challenges of HCI: An Application and Evaluation of ChatGPT for Mining Insights at Scale",
+          "relevance_score": 2.79989,
+          "id": "https://openalex.org/W4380187116"
+        },
+        {
+          "title": "The Siren Song of LLMs: How Users Perceive and Respond to Dark Patterns in Large Language Models",
+          "relevance_score": 2.4169798,
+          "id": "https://openalex.org/W4415250053"
+        },
+        {
+          "title": "More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys",
+          "relevance_score": 2.2662592,
+          "id": "https://openalex.org/W7129328976"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    }
+  ]
+}

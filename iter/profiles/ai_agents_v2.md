@@ -1,0 +1,4 @@
+SUBJECT: AI agents
+PROFILE: A software engineer building AI agents who wants to stay on top of all latest developments with a practical focus for implementation insights. They want technical depth but applied relevance, and specifically mentioned including monitoring for AI agents. They want to know all the latest developments in the field, with mostly practical things they can relate to their work.
+
+OUTPUT_STYLE: Technical but applied tone, written for a software engineer building agents. Focus on practical takeaways, implementation patterns, and new techniques that can be directly used or adapted. Include clear summaries of methods, code/architecture insights where relevant, and note potential pitfalls or performance trade-offs. Organize by the tracked angles, with each section highlighting 1-3 key papers from the week.

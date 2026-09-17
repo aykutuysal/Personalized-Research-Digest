@@ -1,0 +1,96 @@
+{
+  "subject": "Marketing science",
+  "queries": [
+    {
+      "id": 1,
+      "query": "(\"charm pricing\" OR \"left-digit effect\" OR \".99 pricing\" OR \"odd pricing\") AND (marketing OR consumer OR retail OR pricing OR ecommerce OR \"direct-to-consumer\")",
+      "angle": "Pricing psychology \u2014 odd-ending prices",
+      "rationale": "Captures experimental evidence on whether prices ending in .99 or .95 still increase sales and under what conditions."
+    },
+    {
+      "id": 2,
+      "query": "(\"scarcity cue\" OR \"limited quantity\" OR \"limited time\" OR \"only X left\") AND (marketing OR consumer OR ecommerce OR \"online retail\" OR \"purchase decision\")",
+      "angle": "Scarcity and urgency tactics",
+      "rationale": "Finds field experiments and lab studies testing how scarcity messages impact conversion, cart abandonment, and perceived value."
+    },
+    {
+      "id": 3,
+      "query": "(\"social proof\" OR \"review valence\" OR \"review helpfulness\" OR \"star rating\") AND (marketing OR consumer OR ecommerce OR \"online retail\" OR \"conversion rate\")",
+      "angle": "Social proof and reviews",
+      "rationale": "Targets quantitative studies on how review volume, average rating, and review content influence product sales and trust."
+    },
+    {
+      "id": 4,
+      "query": "(\"discount depth\" OR \"promotion frequency\" OR \"deal proneness\" OR \"price promotion\") AND (brand OR \"perceived quality\" OR \"brand equity\" OR loyalty)",
+      "angle": "Discounts vs. brand perception",
+      "rationale": "Seeks research on when discounts erode brand premium or quality perceptions versus when they boost acquisition."
+    },
+    {
+      "id": 5,
+      "query": "(\"ad creative\" OR \"advertisement effectiveness\" OR \"visual appeal\" OR \"emotional appeal\") AND (conversion OR \"click-through rate\" OR \"purchase intent\" OR A/B)",
+      "angle": "Ad creative elements that convert",
+      "rationale": "Finds A/B tests and experimental studies isolating which elements of ad creative (imagery, text, CTAs) drive measurable performance."
+    },
+    {
+      "id": 6,
+      "query": "(\"landing page\" OR \"website design\" OR \"checkout flow\" OR \"conversion funnel\") AND (optimization OR A/B OR experiment OR \"user experience\")",
+      "angle": "Landing page and checkout optimization",
+      "rationale": "Captures controlled tests on layout, copy, form fields, and friction points that directly impact conversion rates."
+    },
+    {
+      "id": 7,
+      "query": "(\"product naming\" OR \"brand name\" OR \"product description\") AND (marketing OR consumer OR \"purchase likelihood\" OR memorability)",
+      "angle": "Product naming and description",
+      "rationale": "Targets evidence on how name characteristics (length, sound, meaning) and descriptive language affect consumer choice."
+    },
+    {
+      "id": 8,
+      "query": "(\"default option\" OR \"choice architecture\" OR nudging) AND (marketing OR consumer OR ecommerce OR \"subscription\" OR checkout)",
+      "angle": "Choice architecture and defaults",
+      "rationale": "Finds field experiments on how pre-selected options (e.g., subscription renewals, add-ons) influence final decisions and revenue."
+    },
+    {
+      "id": 9,
+      "query": "(\"free shipping\" OR \"shipping threshold\" OR \"minimum purchase\") AND (conversion OR \"average order value\" OR \"cart abandonment\" OR ecommerce)",
+      "angle": "Shipping and minimum purchase tactics",
+      "rationale": "Seeks quantitative studies on the impact of free shipping offers and minimum purchase requirements on basket size and conversion."
+    },
+    {
+      "id": 10,
+      "query": "(\"personalization\" OR \"recommendation system\" OR \"targeted message\") AND (ecommerce OR \"direct-to-consumer\" OR \"email marketing\" OR \"retargeting\")",
+      "angle": "Personalization effectiveness",
+      "rationale": "Captures A/B tests and field experiments measuring the lift from personalized product recommendations, emails, or ads."
+    },
+    {
+      "id": 11,
+      "query": "(\"price framing\" OR \"partitioned pricing\" OR \"drip pricing\") AND (consumer OR \"perceived cost\" OR \"transaction utility\" OR ecommerce)",
+      "angle": "Price presentation and framing",
+      "rationale": "Targets studies on how breaking down prices (product + shipping + tax) versus bundling affects perceived value and purchase."
+    },
+    {
+      "id": 12,
+      "query": "(\"visual attention\" OR \"eye tracking\") AND (marketing OR \"website design\" OR \"product page\" OR \"ad design\")",
+      "angle": "Visual attention in marketing contexts",
+      "rationale": "Finds eye-tracking and biometric studies showing what consumers actually look at on product pages, ads, and landing pages."
+    },
+    {
+      "id": 13,
+      "query": "(\"customer retention\" OR \"churn prediction\" OR \"loyalty program\") AND (ecommerce OR \"subscription business\" OR \"direct-to-consumer\" OR DTC)",
+      "angle": "Retention and churn in DTC/e-commerce",
+      "rationale": "Seeks evidence-based models and interventions for predicting and reducing customer churn in subscription and repeat-purchase contexts."
+    },
+    {
+      "id": 14,
+      "query": "(\"message framing\" OR \"gain-loss framing\" OR \"attribute framing\") AND (marketing OR advertising OR \"consumer persuasion\" OR ecommerce)",
+      "angle": "Message framing effects",
+      "rationale": "Captures experiments testing whether emphasizing benefits (gain) or avoiding losses (loss) is more effective in ads and promotional copy."
+    },
+    {
+      "id": 15,
+      "query": "(\"influencer marketing\" OR \"sponsored content\" OR \"creator marketing\") AND (effectiveness OR \"purchase intent\" OR ROI OR \"brand lift\")",
+      "angle": "Influencer marketing effectiveness",
+      "rationale": "Targets empirical studies measuring the sales impact, credibility, and ROI of influencer partnerships versus traditional ads."
+    }
+  ],
+  "coverage_notes": "Plan focuses on 15 high-precision queries targeting the reader's practical, conversion-driven interests in pricing, promotions, messaging, and digital experience optimization. Uses Pattern A (specific phenomenon \u00d7 marketing/consumer anchor) throughout, as marketing science is a broad field with many named effects. Angles covered include pricing psychology, scarcity, social proof, discounts/brand, ad creative, landing pages, naming, choice architecture, shipping, personalization, price framing, visual attention, retention, message framing, and influencer marketing. Deliberately skipped academic theory, advertising history, media studies, and brand-relationship frameworks, per the profile's preference for 'what actually works' with numbers."
+}

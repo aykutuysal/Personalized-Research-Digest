@@ -1,0 +1,714 @@
+{
+  "timestamp": "2026-04-13T10:01:29.147448+00:00",
+  "prompt_file": "iter/prompts/v0_original.md",
+  "profile_file": "iter/profiles/adolescent_depression.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.00120042,
+  "plan_elapsed_s": 63.2,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 7,
+    "healthy": 8,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.53,
+  "frac_healthy_or_safety": 0.53,
+  "mean_precision": 0.51,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.43,
+    "healthy": 0.57,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Adolescent depression",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"adolescent depression\" AND (\"cognitive behavioral therapy\" OR \"CBT\" OR \"behavioral activation\")",
+        "angle": "Core evidence-based psychotherapies",
+        "rationale": "Catches the foundational, most-studied psychological treatments that form the backbone of clinical practice."
+      },
+      {
+        "id": 2,
+        "query": "\"interpersonal psychotherapy\" AND (adolescent OR teen) AND depression",
+        "angle": "IPT-A and related interpersonal approaches",
+        "rationale": "Targets a major evidence-based alternative to CBT that this clinician specifically mentioned wanting to follow."
+      },
+      {
+        "id": 3,
+        "query": "(adolescent OR teen) AND depression AND (mindfulness OR \"acceptance and commitment therapy\" OR \"dialectical behavior therapy\")",
+        "angle": "Third-wave and mindfulness-based interventions",
+        "rationale": "Focuses on newer, increasingly popular therapeutic modalities relevant for a modern outpatient practice."
+      },
+      {
+        "id": 4,
+        "query": "(adolescent OR teen) AND depression AND (family OR \"family-based\" OR \"attachment-based\")",
+        "angle": "Family and systemic treatment approaches",
+        "rationale": "Captures research on interventions involving parents or caregivers, which is critical for this age group."
+      },
+      {
+        "id": 5,
+        "query": "(adolescent OR teen) AND depression AND (\"digital intervention\" OR \"app-based\" OR \"mobile health\" OR \"internet-delivered\")",
+        "angle": "Digital and technology-assisted interventions",
+        "rationale": "Targets the growing literature on scalable, accessible treatment formats this clinician wants to monitor."
+      },
+      {
+        "id": 6,
+        "query": "(adolescent OR teen) AND depression AND (SSRI OR \"selective serotonin reuptake inhibitor\" OR fluoxetine OR sertraline OR escitalopram)",
+        "angle": "Pharmacotherapy with SSRIs",
+        "rationale": "Focuses on the primary class of medications used, addressing efficacy, safety, and combination therapy questions."
+      },
+      {
+        "id": 7,
+        "query": "\"adolescent depression\" AND (\"combination therapy\" OR \"integrated treatment\" OR \"psychotherapy and medication\")",
+        "angle": "Combined treatment approaches",
+        "rationale": "Catches studies comparing or advocating for multimodal treatment, a key practical concern."
+      },
+      {
+        "id": 8,
+        "query": "(adolescent OR teen) AND depression AND (\"assessment\" OR \"measurement\" OR \"screening\" OR \"PHQ-9\" OR \"CDI\")",
+        "angle": "Assessment tools and screening",
+        "rationale": "Targets research on reliable, valid instruments for diagnosis and monitoring treatment progress."
+      },
+      {
+        "id": 9,
+        "query": "(adolescent OR teen) AND depression AND (\"suicide risk\" OR \"suicidal ideation\" OR \"self-harm\" OR \"safety planning\")",
+        "angle": "Suicide risk assessment and management",
+        "rationale": "Addresses a critical, high-stakes component of clinical care that the profile explicitly mentions."
+      },
+      {
+        "id": 10,
+        "query": "(adolescent OR teen) AND depression AND (\"social media\" OR \"screen time\" OR \"cyberbullying\" OR \"online\")",
+        "angle": "Social media and digital environment links",
+        "rationale": "Captures contemporary research on environmental risk/protective factors highly relevant to this population."
+      },
+      {
+        "id": 11,
+        "query": "(adolescent OR teen) AND depression AND (\"school-based\" OR \"universal prevention\" OR \"indicated prevention\" OR \"resilience program\")",
+        "angle": "School-based prevention and intervention",
+        "rationale": "Targets research on population-level and early intervention efforts in educational settings."
+      },
+      {
+        "id": 12,
+        "query": "\"adolescent depression\" AND (\"randomized controlled trial\" OR \"RCT\" OR \"clinical trial\")",
+        "angle": "High-quality efficacy studies",
+        "rationale": "A broad recall-safety query for the highest level of evidence this clinician values, scoped to the core subject."
+      },
+      {
+        "id": 13,
+        "query": "\"adolescent depression\" AND (\"meta-analysis\" OR \"systematic review\" OR \"effect size\")",
+        "angle": "Synthesis and review evidence",
+        "rationale": "Catches papers that summarize the evidence base, providing efficient updates on what 'actually helps'."
+      },
+      {
+        "id": 14,
+        "query": "(adolescent OR teen) AND depression AND (\"implementation\" OR \"dissemination\" OR \"feasibility\" OR \"effectiveness trial\")",
+        "angle": "Implementation science and real-world effectiveness",
+        "rationale": "Focuses on moving from research to practice, a concern for a clinician wanting applicable findings."
+      },
+      {
+        "id": 15,
+        "query": "(adolescent OR teen) AND (depression AND anxiety) AND (comorbid OR co-occurring)",
+        "angle": "Comorbid depression and anxiety",
+        "rationale": "Directly targets the specific clinical presentation this practitioner most frequently encounters."
+      }
+    ],
+    "coverage_notes": "The plan covers therapeutic modalities (CBT, IPT-A, mindfulness, family, digital), pharmacotherapy, assessment/safety, contextual factors (social media, schools), and evidence synthesis (RCTs, meta-analyses, implementation). It deliberately excludes neuroimaging, biomarkers, and pure developmental neuroscience as per the profile. The assumption is the clinician needs actionable clinical research, not mechanistic studies, hence the focus on interventions, tools, and real-world application."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"adolescent depression\" AND (\"cognitive behavioral therapy\" OR \"CBT\" OR \"behavioral activation\")",
+      "angle": "Core evidence-based psychotherapies",
+      "rationale": "Catches the foundational, most-studied psychological treatments that form the backbone of clinical practice.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "relevance_score": 0.85011816,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Association Between Purpose in Life and Depression in Medical Undergraduates: A Cross-Sectional Study in a Thai Medical School",
+          "relevance_score": 0.30751982,
+          "id": "https://openalex.org/W7151869051"
+        },
+        {
+          "title": "Exploring the relationship between family support and eating behaviors among college students with subjective well-being as the central mediating variable",
+          "relevance_score": 0.30455744,
+          "id": "https://openalex.org/W7151620801"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.33
+    },
+    {
+      "id": 2,
+      "query": "\"interpersonal psychotherapy\" AND (adolescent OR teen) AND depression",
+      "angle": "IPT-A and related interpersonal approaches",
+      "rationale": "Targets a major evidence-based alternative to CBT that this clinician specifically mentioned wanting to follow.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "K\u0131sa s\u00fcreli bili\u015fsel terapiye kimler uygun? Poliklini\u011fe ba\u015fvuran ki\u015filerin terap\u00f6tik ittifak, i\u00e7g\u00f6r\u00fc ve ki\u015filik \u00f6zelliklerine g\u00f6re incelenmesi",
+          "relevance_score": 0.530927,
+          "id": "https://openalex.org/W7151924898"
+        }
+      ],
+      "hit_labels": [
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 3,
+      "query": "(adolescent OR teen) AND depression AND (mindfulness OR \"acceptance and commitment therapy\" OR \"dialectical behavior therapy\")",
+      "angle": "Third-wave and mindfulness-based interventions",
+      "rationale": "Focuses on newer, increasingly popular therapeutic modalities relevant for a modern outpatient practice.",
+      "openalex_count": 91,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Editorial",
+          "relevance_score": 2.8420453,
+          "id": "https://openalex.org/W7151377538"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "relevance_score": 1.4377208,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "relevance_score": 0.91822815,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Mindfulness and academic alienation among university students: the mediating roles of cognitive fusion and psychological resilience",
+          "relevance_score": 0.85947055,
+          "id": "https://openalex.org/W7153200193"
+        },
+        {
+          "title": "Evaluating the Impact of Integrative Art Therapies on Psychological Well-Being in Pediatric Oncology: A Single-Group Pre\u2013Post Study",
+          "relevance_score": 0.7707522,
+          "id": "https://openalex.org/W7153088952"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "YES",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 4,
+      "query": "(adolescent OR teen) AND depression AND (family OR \"family-based\" OR \"attachment-based\")",
+      "angle": "Family and systemic treatment approaches",
+      "rationale": "Captures research on interventions involving parents or caregivers, which is critical for this age group.",
+      "openalex_count": 353,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "How physical activity and gender moderate the association between parental marital conflict and adolescent depression",
+          "relevance_score": 6.3794694,
+          "id": "https://openalex.org/W7151919775"
+        },
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "relevance_score": 5.4880877,
+          "id": "https://openalex.org/W7153462697"
+        },
+        {
+          "title": "Association Between Purpose in Life and Depression in Medical Undergraduates: A Cross-Sectional Study in a Thai Medical School",
+          "relevance_score": 4.735329,
+          "id": "https://openalex.org/W7151869051"
+        },
+        {
+          "title": "Overparenting blurs neural self-other integration during naturalistic parent-adolescent interactions and downgrades adolescent mental health",
+          "relevance_score": 4.5743427,
+          "id": "https://openalex.org/W7152681448"
+        },
+        {
+          "title": "Racial Discrimination and Mental Health Among Latine Adolescents: Parenting and Conflict as Potential Moderators",
+          "relevance_score": 4.5300293,
+          "id": "https://openalex.org/W7151602971"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 5,
+      "query": "(adolescent OR teen) AND depression AND (\"digital intervention\" OR \"app-based\" OR \"mobile health\" OR \"internet-delivered\")",
+      "angle": "Digital and technology-assisted interventions",
+      "rationale": "Targets the growing literature on scalable, accessible treatment formats this clinician wants to monitor.",
+      "openalex_count": 29,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "My Cosmos: development, clinical protocol, and preliminary usability of a gamified transdiagnostic digital CBT platform",
+          "relevance_score": 0.76255125,
+          "id": "https://openalex.org/W7153100829"
+        },
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "relevance_score": 0.73051697,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Perspectives of adolescents and young people on Digital Health Interventions and their impact on health knowledge",
+          "relevance_score": 0.6721168,
+          "id": "https://openalex.org/W7151343511"
+        },
+        {
+          "title": "Shedding light on mental health problems and potential solutions for young women: results from an anonymous asynchronous online focus group",
+          "relevance_score": 0.6047074,
+          "id": "https://openalex.org/W7153252140"
+        },
+        {
+          "title": "Community Interventions for Addressing Postpartum Depression Across the United States: A Narrative Review",
+          "relevance_score": 0.57742095,
+          "id": "https://openalex.org/W7153033173"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 6,
+      "query": "(adolescent OR teen) AND depression AND (SSRI OR \"selective serotonin reuptake inhibitor\" OR fluoxetine OR sertraline OR escitalopram)",
+      "angle": "Pharmacotherapy with SSRIs",
+      "rationale": "Focuses on the primary class of medications used, addressing efficacy, safety, and combination therapy questions.",
+      "openalex_count": 24,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Selective Serotonin Reuptake Inhibitors and Serotonin Norepinephrine Reuptake Inhibitors and Body Mass Index in Patients on Long Term Treatment: A Cross-Sectional Comparative Study",
+          "relevance_score": 2.177422,
+          "id": "https://openalex.org/W7151452484"
+        },
+        {
+          "title": "Placental and fetal consequences of maternal selective serotonin reuptake inhibitor use: current evidence and unresolved questions",
+          "relevance_score": 2.1227808,
+          "id": "https://openalex.org/W7153263725"
+        },
+        {
+          "title": "INIBIDORES SELETIVOS DA RECAPTA\u00c7\u00c3O DE SEROTONINA: ABORDAGEM CL\u00cdNICA INTEGRADA NO CONTROLE DA ASMA E DEPRESS\u00c3O",
+          "relevance_score": 1.8611395,
+          "id": "https://openalex.org/W7151542291"
+        },
+        {
+          "title": "Treating Soldier-Athletes: A Narrative Review of Psychiatric Disorder Management While Optimizing Physical and Mental Performance in US Army Soldiers",
+          "relevance_score": 1.5119551,
+          "id": "https://openalex.org/W7153199542"
+        },
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "relevance_score": 1.4333816,
+          "id": "https://openalex.org/W7151450270"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 7,
+      "query": "\"adolescent depression\" AND (\"combination therapy\" OR \"integrated treatment\" OR \"psychotherapy and medication\")",
+      "angle": "Combined treatment approaches",
+      "rationale": "Catches studies comparing or advocating for multimodal treatment, a key practical concern.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "relevance_score": 0.260998,
+          "id": "https://openalex.org/W7151450270"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 8,
+      "query": "(adolescent OR teen) AND depression AND (\"assessment\" OR \"measurement\" OR \"screening\" OR \"PHQ-9\" OR \"CDI\")",
+      "angle": "Assessment tools and screening",
+      "rationale": "Targets research on reliable, valid instruments for diagnosis and monitoring treatment progress.",
+      "openalex_count": 469,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Multimodal fusion of speech and PHQ-9 for machine learning-based adolescent depression screening",
+          "relevance_score": 23.34439,
+          "id": "https://openalex.org/W7151476627"
+        },
+        {
+          "title": "Integrated Assessment of Violence, Depression, and Suicidal Ideation Among Women and Adolescents: A Multi-Population Cross-Sectional Study",
+          "relevance_score": 12.5674,
+          "id": "https://openalex.org/W7153081759"
+        },
+        {
+          "title": "Assessing the psychometric properties of the Youth Externalizing Problems Screener (YEPS) in peruvian adolescents",
+          "relevance_score": 7.274154,
+          "id": "https://openalex.org/W7151087557"
+        },
+        {
+          "title": "Mental health and help-seeking behaviour among secondary school adolescents in Nsukka, Nigeria: a cross-sectional survey",
+          "relevance_score": 7.1621146,
+          "id": "https://openalex.org/W7151280074"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "relevance_score": 7.0338097,
+          "id": "https://openalex.org/W7152559689"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 9,
+      "query": "(adolescent OR teen) AND depression AND (\"suicide risk\" OR \"suicidal ideation\" OR \"self-harm\" OR \"safety planning\")",
+      "angle": "Suicide risk assessment and management",
+      "rationale": "Addresses a critical, high-stakes component of clinical care that the profile explicitly mentions.",
+      "openalex_count": 110,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Integrated Assessment of Violence, Depression, and Suicidal Ideation Among Women and Adolescents: A Multi-Population Cross-Sectional Study",
+          "relevance_score": 23.942547,
+          "id": "https://openalex.org/W7153081759"
+        },
+        {
+          "title": "Electroconvulsive therapy modulates Fronto-temporal functional connectivity in adolescents with depression and suicidal ideation",
+          "relevance_score": 19.908707,
+          "id": "https://openalex.org/W7153281369"
+        },
+        {
+          "title": "(Unlocking the World of) The Anxious Generation: How the Great Rewiring of Childhood Caused an Epidemic of Mental Illness by Jonathan Haidt",
+          "relevance_score": 8.117271,
+          "id": "https://openalex.org/W7152722578"
+        },
+        {
+          "title": "Psychiatric predictors of first-onset suicidal thoughts and behaviors throughout preadolescence: longitudinal associations in a US population-based study",
+          "relevance_score": 5.767311,
+          "id": "https://openalex.org/W7151024233"
+        },
+        {
+          "title": "Editorial",
+          "relevance_score": 1.8827744,
+          "id": "https://openalex.org/W7151377538"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 10,
+      "query": "(adolescent OR teen) AND depression AND (\"social media\" OR \"screen time\" OR \"cyberbullying\" OR \"online\")",
+      "angle": "Social media and digital environment links",
+      "rationale": "Captures contemporary research on environmental risk/protective factors highly relevant to this population.",
+      "openalex_count": 343,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Association of screen time and chronotype with depression and anxiety symptoms among Chinese adolescents",
+          "relevance_score": 12.544405,
+          "id": "https://openalex.org/W7151532653"
+        },
+        {
+          "title": "The Impact of Social Media Use on Adolescent Mental Health",
+          "relevance_score": 9.110829,
+          "id": "https://openalex.org/W7153718357"
+        },
+        {
+          "title": "Cyberbullying Among Adolescents in Ethiopia: Examining Prevalence and Association With Mental Health Problems",
+          "relevance_score": 7.9484305,
+          "id": "https://openalex.org/W7152515147"
+        },
+        {
+          "title": "The Role of Social Comparison in the Relationship Between Social Media Use and Adolescent Mental Health",
+          "relevance_score": 7.4418945,
+          "id": "https://openalex.org/W7151398278"
+        },
+        {
+          "title": "(Unlocking the World of) The Anxious Generation: How the Great Rewiring of Childhood Caused an Epidemic of Mental Illness by Jonathan Haidt",
+          "relevance_score": 7.410651,
+          "id": "https://openalex.org/W7152722578"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 11,
+      "query": "(adolescent OR teen) AND depression AND (\"school-based\" OR \"universal prevention\" OR \"indicated prevention\" OR \"resilience program\")",
+      "angle": "School-based prevention and intervention",
+      "rationale": "Targets research on population-level and early intervention efforts in educational settings.",
+      "openalex_count": 76,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Mental health and help-seeking behaviour among secondary school adolescents in Nsukka, Nigeria: a cross-sectional survey",
+          "relevance_score": 5.839757,
+          "id": "https://openalex.org/W7151280074"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "relevance_score": 5.4362507,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "COVID-19 Pandemic-related Differences in the Prevalence ofAnxiety and Depression among Adolescents in the United States",
+          "relevance_score": 5.348036,
+          "id": "https://openalex.org/W7153562164"
+        },
+        {
+          "title": "Substance Abuse and its Mental Effects on Secondary School Students in Kokona Local Government Area, Nasarawa State, North Central Nigeria",
+          "relevance_score": 4.898782,
+          "id": "https://openalex.org/W7150781269"
+        },
+        {
+          "title": "Cumulative childhood trauma exposure and depressive and anxiety symptoms among Kenyan adolescents: A multilevel school-based study",
+          "relevance_score": 3.691938,
+          "id": "https://openalex.org/W7151255133"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 12,
+      "query": "\"adolescent depression\" AND (\"randomized controlled trial\" OR \"RCT\" OR \"clinical trial\")",
+      "angle": "High-quality efficacy studies",
+      "rationale": "A broad recall-safety query for the highest level of evidence this clinician values, scoped to the core subject.",
+      "openalex_count": 10,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "relevance_score": 0.6653106,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "relevance_score": 0.6516279,
+          "id": "https://openalex.org/W7151450270"
+        },
+        {
+          "title": "Implementing Problem Management Plus (PM+) in Haiti: qualitative study",
+          "relevance_score": 0.49861082,
+          "id": "https://openalex.org/W7151576754"
+        },
+        {
+          "title": "Insomnia Severity Predicts Suicide Attempts in Youth with depression: A 6-Month Prospective Cohort Study",
+          "relevance_score": 0.47631875,
+          "id": "https://openalex.org/W7151109420"
+        },
+        {
+          "title": "Clinical Outcomes of a Tech-enabled Perinatal Collaborative Care Program to Treat Depression and Anxiety",
+          "relevance_score": 0.45670313,
+          "id": "https://openalex.org/W7152556157"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "NO",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 13,
+      "query": "\"adolescent depression\" AND (\"meta-analysis\" OR \"systematic review\" OR \"effect size\")",
+      "angle": "Synthesis and review evidence",
+      "rationale": "Catches papers that summarize the evidence base, providing efficient updates on what 'actually helps'.",
+      "openalex_count": 19,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The relationship between Resolution of Marital Conflict and Adolescents\u2019 Depressive Symptoms: The mediating role of Mother-Adolescent Bonding",
+          "relevance_score": 0.5314487,
+          "id": "https://openalex.org/W7151423824"
+        },
+        {
+          "title": "Insomnia Severity Predicts Suicide Attempts in Youth with depression: A 6-Month Prospective Cohort Study",
+          "relevance_score": 0.4762166,
+          "id": "https://openalex.org/W7151109420"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "relevance_score": 0.46089733,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "relevance_score": 0.45518667,
+          "id": "https://openalex.org/W7151450270"
+        },
+        {
+          "title": "Longitudinal Associations Between Family Socioeconomic Status and Adolescent Depressive Symptom Trajectories in China: A Chain Multiple Mediation Model",
+          "relevance_score": 0.44584954,
+          "id": "https://openalex.org/W7151335438"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 14,
+      "query": "(adolescent OR teen) AND depression AND (\"implementation\" OR \"dissemination\" OR \"feasibility\" OR \"effectiveness trial\")",
+      "angle": "Implementation science and real-world effectiveness",
+      "rationale": "Focuses on moving from research to practice, a concern for a clinician wanting applicable findings.",
+      "openalex_count": 337,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Substance Abuse and its Mental Effects on Secondary School Students in Kokona Local Government Area, Nasarawa State, North Central Nigeria",
+          "relevance_score": 4.3884997,
+          "id": "https://openalex.org/W7150781269"
+        },
+        {
+          "title": "Mental health counseling preferences amongst adolescents living with HIV, caregivers, and healthcare providers in Lilongwe, Malawi",
+          "relevance_score": 4.294971,
+          "id": "https://openalex.org/W7151390613"
+        },
+        {
+          "title": "Scaling nature-based programmes for adolescent mental health and wellbeing: Evidence- informed policy and research directions from England",
+          "relevance_score": 4.0951395,
+          "id": "https://openalex.org/W7151074728"
+        },
+        {
+          "title": "THE IMPACT OF EXCESSIVE SCREEN TIME ON CHILD COGNITIVE DEVELOPMENT",
+          "relevance_score": 3.0982757,
+          "id": "https://openalex.org/W7152156977"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "relevance_score": 1.2781707,
+          "id": "https://openalex.org/W7152673806"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 15,
+      "query": "(adolescent OR teen) AND (depression AND anxiety) AND (comorbid OR co-occurring)",
+      "angle": "Comorbid depression and anxiety",
+      "rationale": "Directly targets the specific clinical presentation this practitioner most frequently encounters.",
+      "openalex_count": 204,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Disordered Eating Behaviors Among U.S. Children With Neuropsychiatric Conditions: A Nationally Representative Study",
+          "relevance_score": 6.0240555,
+          "id": "https://openalex.org/W7153894068"
+        },
+        {
+          "title": "Psychosis-like experiences [PLEs] among adolescents in Bradford, England: evidence from the Born in Bradford Age of Wonder study",
+          "relevance_score": 5.739406,
+          "id": "https://openalex.org/W7150912062"
+        },
+        {
+          "title": "Associations between sleep disturbance, sleep-related impairment, and attention and learning disorders in youth with NF1",
+          "relevance_score": 5.148656,
+          "id": "https://openalex.org/W7151544739"
+        },
+        {
+          "title": "Advancing Equitable Inpatient Psychiatric Access for Children With Autism Spectrum Disorder",
+          "relevance_score": 2.116681,
+          "id": "https://openalex.org/W7151574246"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "relevance_score": 1.7032942,
+          "id": "https://openalex.org/W7152673806"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    }
+  ]
+}

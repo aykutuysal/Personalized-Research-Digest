@@ -1,0 +1,113 @@
+{
+  "subject": "Marketing science",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "product naming, branding, packaging",
+      "query": "product naming branding",
+      "rationale": "Direct coverage of product naming/branding angle using user's exact phrase 'product naming' and extracted term 'branding'. Focuses on practical evidence for naming decisions in e-commerce/DTC context.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "consumer psychology / behavioral findings on purchasing",
+      "query": "consumer psychology purchasing",
+      "rationale": "Core query for consumer psychology angle, combining 'consumer psychology' (user term) with 'purchasing' (74x in vocabulary). Targets behavioral findings with numbers that explain why purchases happen.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "query": "loyalty repeat purchase",
+      "rationale": "Serves loyalty/retention angle with 'loyalty' (45x in vocabulary) and 'repeat purchase' (user's interest in retention behavior). Focuses on evidence about what drives repeat buying in e-commerce contexts.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "query": "dynamic pricing strategies",
+      "rationale": "Adjacent query serving pricing strategy angle with 'dynamic pricing' (26x in vocabulary) from e-commerce/tech contexts. Provides evidence on algorithmic pricing approaches relevant to DTC brands.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 5,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "discounts and promotions and their effect on brand",
+      "query": "sales promotion brand effect",
+      "rationale": "Adjacent query for discounts/promotions angle using 'sales promotion' (14x in vocabulary) to explore promotional tactics beyond discounts. Addresses brand effects with empirical research vocabulary.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 6,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "ad creative effectiveness and persuasion",
+      "query": "online advertising conversion",
+      "rationale": "Adjacent query serving ad creative angle through 'online advertising' (13x in vocabulary) in digital contexts. Targets conversion evidence specific to digital ad formats the user likely employs.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 7,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "query": "customer retention behavior",
+      "rationale": "Intersection query combining loyalty/retention angle (8) with consumer psychology angle (7) via 'customer retention' (30x in vocabulary) and 'behavior'. Addresses the psychological drivers of repeat purchase with empirical findings.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 8,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "query": "pricing strategies consumer perception",
+      "rationale": "Replaced 'charm pricing' with broader 'pricing strategies' from keywords and added 'consumer perception' to maintain the value perception angle using vocabulary that appears in the corpus.",
+      "dimension": "core"
+    },
+    {
+      "id": 9,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "discounts and promotions and their effect on brand",
+      "query": "brand loyalty customer retention",
+      "rationale": "Replaced 'discounts' with 'customer retention' from keywords to broaden while maintaining the loyalty focus, using terms that appear frequently in the extracted vocabulary.",
+      "dimension": "core"
+    },
+    {
+      "id": 10,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "ad creative effectiveness and persuasion",
+      "query": "digital marketing persuasion",
+      "rationale": "Replaced 'ad creative' with 'digital marketing' from topics/keywords to use vocabulary that exists in the corpus while keeping the persuasion angle.",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "scarcity, urgency, social proof cues",
+      "query": "scarcity consumer behaviour",
+      "rationale": "Replaced 'social proof' with broader 'consumer behaviour' from keywords to loosen the query while maintaining the scarcity angle, using high-frequency vocabulary.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "landing page or checkout conversion optimization",
+      "query": "purchasing consumer behaviour",
+      "rationale": "Replaced 'checkout conversion optimization' with 'purchasing' and 'consumer behaviour' from keywords to capture the conversion angle using vocabulary that appears extensively in the corpus.",
+      "dimension": "core"
+    }
+  ]
+}

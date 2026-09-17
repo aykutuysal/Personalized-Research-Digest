@@ -1,0 +1,72 @@
+=== llm_agents === Mon Apr 20 15:36:21 CEST 2026
+  [discover v9.2 --use-angle-seeds]
+profile: profiles/llm_agents.md
+angles:  profiles/llm_agents.angles.json (8 angles, subject='LLM agents')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=deepseek/deepseek-v3.2  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_keyword_discovery/llm_agents_v92.json
+PLAN:      runs/v9_keyword_discovery/llm_agents_v92.json.plan.json
+======================================================================
+  seeds:           11 (LLM=5 + angle=6, 0.00012068$)
+  vocabulary:      550 papers, 15 topics, 25 keywords
+  library:         12 queries (0.0028235$)
+  coverage gap:    none — all 8 angles covered on first build
+  validation:      {'good': 11, 'zero': 1}
+  reformulated:    no (0 replacements, $0.0)
+  TOTAL COST:      $0.002944
+  TOTAL LATENCY:   395.0s
+    rc=0
+  [score: parallel, abstract-aware]
+plan:    runs/v9_keyword_discovery/llm_agents_v92.json.plan.json (prebuilt, 12 queries)
+profile: profiles/llm_agents.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running 12 OpenAlex queries in parallel...
+  Q 8 [safety, alignment, or guardrails for age] count=  251 healthy
+  Q 3 [tool use and function calling           ] count= 1320 recall_safety
+  Q 4 [memory systems and retrieval (RAG / long] count=  129 healthy
+  Q10 [production engineering patterns (deploym] count=  802 recall_safety
+  Q 2 [planning, reasoning, or chain-of-thought] count= 1028 recall_safety
+  Q 7 [production engineering patterns (deploym] count=  922 recall_safety
+  Q 6 [evaluation, benchmarks, or agent capabil] count= 2123 too_broad
+  Q 1 [new agent architectures or frameworks   ] count=  297 healthy
+  Q 5 [multi-agent systems and orchestration   ] count=  643 recall_safety
+  Q 9 [new agent architectures or frameworks   ] count=  915 recall_safety
+  Q11 [multi-agent systems and orchestration   ] count= 1200 recall_safety
+  Q12 [safety, alignment, or guardrails for age] count= 1792 recall_safety
+  OpenAlex stage took 62.2s
+[3/3] scoring hits via DeepSeek v3.2...
+  judge: 120 papers across 8 batches of ≤15, 5 workers
+    → submit batch 1/8 (15 papers)
+    → submit batch 2/8 (15 papers)
+    → submit batch 3/8 (15 papers)
+    → submit batch 4/8 (15 papers)
+    → submit batch 5/8 (15 papers)
+    → submit batch 6/8 (15 papers)
+    → submit batch 7/8 (15 papers)
+    → submit batch 8/8 (15 papers)
+    ← batch 3/8 done in 8.3s (got 15/15 labels) [1/8 complete]
+    ← batch 5/8 done in 151.3s (got 15/15 labels) [2/8 complete]
+    ← batch 6/8 done in 209.2s (got 15/15 labels) [3/8 complete]
+    ← batch 8/8 done in 43.0s (got 15/15 labels) [4/8 complete]
+    ← batch 4/8 done in 276.4s (got 15/15 labels) [5/8 complete]
+    ← batch 2/8 done in 276.6s (got 15/15 labels) [6/8 complete]
+    ← batch 1/8 done in 277.9s (got 15/15 labels) [7/8 complete]
+    ← batch 7/8 done in 139.8s (got 15/15 labels) [8/8 complete]
+  judge stage took 291.1s for 8 batches
+
+======================================================================
+SCORECARD: runs/v9_keyword_discovery/llm_agents_v92.rescored.json
+======================================================================
+  queries:          12
+  bands:            zero=0 low=0 healthy=3 recall_safety=8 too_broad=1
+  frac healthy:     25%
+  mean precision:   56%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.55, 'recall_safety': 0.57, 'too_broad': 0.55, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no

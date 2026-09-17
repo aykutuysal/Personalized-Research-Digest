@@ -1,0 +1,701 @@
+{
+  "timestamp": "2026-04-13T00:34:47.386818+00:00",
+  "prompt_file": "iter/prompts/v4_patterns.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "plan_model": "google/gemini-3.1-pro-preview",
+  "plan_cost_usd": 0.064152,
+  "plan_elapsed_s": 61.0,
+  "num_queries": 14,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 4,
+    "healthy": 10,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.71,
+  "frac_healthy_or_safety": 0.71,
+  "mean_precision": 0.6,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.4,
+    "healthy": 0.68,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "query": "(\"left-digit effect\" OR \"charm pricing\" OR \"odd pricing\" OR \"price ending\" OR \".99 pricing\") AND (marketing OR consumer OR retail OR ecommerce OR commerce)",
+        "angle": "Pricing tactics",
+        "rationale": "Captures empirical studies on specific price-ending strategies to answer whether $9.99 still outperforms $10.00."
+      },
+      {
+        "id": 2,
+        "query": "(\"price promotion\" OR \"deep discount\" OR \"promotional pricing\" OR \"price discount\") AND (\"brand equity\" OR \"brand image\" OR \"perceived quality\" OR \"brand value\")",
+        "angle": "Discounting impact on brand",
+        "rationale": "Investigates the long-term trade-off between running sales and damaging the brand's perceived premium status."
+      },
+      {
+        "id": 3,
+        "query": "(\"ad creative\" OR \"message framing\" OR \"emotional appeal\" OR \"rational appeal\" OR \"visual attention\") AND (marketing OR consumer OR ecommerce OR advertising OR retail)",
+        "angle": "Ad creative and copy",
+        "rationale": "Finds research on what elements of an advertisement actually capture attention and drive consumer action."
+      },
+      {
+        "id": 4,
+        "query": "(\"brand naming\" OR \"product name\" OR \"phonetic symbolism\" OR \"alphanumeric brand\" OR \"sound symbolism\") AND (marketing OR consumer OR retail OR ecommerce OR advertising)",
+        "angle": "Product naming",
+        "rationale": "Targets linguistic and psychological studies on how the sound and structure of a product name influence consumer perception."
+      },
+      {
+        "id": 5,
+        "query": "(\"scarcity message\" OR \"scarcity appeal\" OR \"limited time offer\" OR \"time pressure\" OR \"countdown timer\" OR \"limited quantity\") AND (marketing OR consumer OR ecommerce OR retail OR \"online shopping\")",
+        "angle": "Scarcity and urgency cues",
+        "rationale": "Gathers evidence on FOMO tactics like countdown timers and low-stock warnings to see when they boost checkout rates versus cause reactance."
+      },
+      {
+        "id": 6,
+        "query": "(\"choice architecture\" OR \"decoy effect\" OR \"compromise effect\" OR \"default option\" OR \"asymmetric dominance\") AND (marketing OR consumer OR ecommerce OR retail OR \"online shopping\")",
+        "angle": "Behavioral nudges",
+        "rationale": "Focuses on choice architecture and pricing tier structure to understand how presenting options changes the buyer's final selection."
+      },
+      {
+        "id": 7,
+        "query": "(\"conversion rate\" OR \"landing page\" OR \"cart abandonment\" OR \"checkout process\" OR \"click-through rate\") AND (ecommerce OR retail OR \"online shopping\" OR \"online store\" OR \"digital marketing\")",
+        "angle": "Funnel optimization",
+        "rationale": "Directly targets the core metrics of a growth marketer, pulling papers that analyze friction in the digital purchase journey."
+      },
+      {
+        "id": 8,
+        "query": "(\"social proof\" OR \"review valence\" OR \"review volume\" OR \"electronic word of mouth\" OR eWOM OR \"online review\") AND (ecommerce OR retail OR consumer OR marketing OR \"purchase intention\")",
+        "angle": "Social proof and reviews",
+        "rationale": "Examines the quantitative impact of star ratings, review text, and social validation on ecommerce conversion."
+      },
+      {
+        "id": 9,
+        "query": "(\"free shipping\" OR \"return policy\" OR \"shipping fee\" OR \"product return\" OR \"lenient return\") AND (ecommerce OR retail OR \"online shopping\" OR \"online retailer\" OR consumer)",
+        "angle": "Logistics as marketing",
+        "rationale": "Explores how shipping thresholds and return policies act as conversion levers and affect cart abandonment."
+      },
+      {
+        "id": 10,
+        "query": "(\"user-generated content\" OR UGC OR \"influencer marketing\" OR \"micro-influencer\" OR \"sponsored post\") AND (conversion OR \"purchase intention\" OR ROI OR \"click-through\" OR ecommerce)",
+        "angle": "UGC and influencers",
+        "rationale": "Looks past influencer hype to find studies measuring the actual return on investment and intent-to-buy generated by authentic content."
+      },
+      {
+        "id": 11,
+        "query": "(\"cross-selling\" OR \"up-selling\" OR \"product recommendation\" OR \"bundle pricing\" OR \"price bundling\") AND (ecommerce OR retail OR consumer OR marketing OR \"online shopping\")",
+        "angle": "AOV expansion",
+        "rationale": "Focuses on tactics used to increase average order value, such as algorithmic recommendations and bundled discounts."
+      },
+      {
+        "id": 12,
+        "query": "(\"customer lifetime value\" OR CLV OR \"loyalty program\" OR \"repurchase intention\" OR \"customer retention\") AND (ecommerce OR retail OR DTC OR \"direct to consumer\" OR marketing)",
+        "angle": "Retention and LTV",
+        "rationale": "Addresses the post-purchase growth loop, finding evidence on what actually keeps customers coming back and spending more over time."
+      },
+      {
+        "id": 13,
+        "query": "(\"subscription box\" OR \"subscription model\" OR \"replenishment\" OR \"subscribe and save\") AND (ecommerce OR retail OR consumer OR marketing OR DTC)",
+        "angle": "Subscription models",
+        "rationale": "Captures the DTC-heavy subscription mechanics to see what drives sign-ups and prevents churn in recurring revenue models."
+      },
+      {
+        "id": 14,
+        "query": "(\"personalized recommendation\" OR \"behavioral targeting\" OR retargeting OR \"personalized advertising\" OR \"dynamic pricing\") AND (ecommerce OR retail OR consumer OR marketing OR \"online shopping\")",
+        "angle": "Personalization and targeting",
+        "rationale": "Evaluates the effectiveness of data-driven targeting and retargeting ads on final conversion metrics."
+      }
+    ],
+    "coverage_notes": "The plan is heavily skewed toward Pattern A queries, anchoring specific behavioral economics and digital marketing phenomena to general ecommerce/retail contexts. Coverage spans the entire DTC growth funnel: ad creative, product naming, pricing psychology, landing page nudges, cart mechanics, and post-purchase retention. Theoretical advertising history, traditional media studies, and broad brand-building frameworks were deliberately excluded in favor of measurable, conversion-focused variables like 'purchase intention' and 'click-through rate' to match the reader's preference for hard numbers and practical application."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "(\"left-digit effect\" OR \"charm pricing\" OR \"odd pricing\" OR \"price ending\" OR \".99 pricing\") AND (marketing OR consumer OR retail OR ecommerce OR commerce)",
+      "angle": "Pricing tactics",
+      "rationale": "Captures empirical studies on specific price-ending strategies to answer whether $9.99 still outperforms $10.00.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+          "relevance_score": 8.011905,
+          "id": "https://openalex.org/W7152936304"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 2,
+      "query": "(\"price promotion\" OR \"deep discount\" OR \"promotional pricing\" OR \"price discount\") AND (\"brand equity\" OR \"brand image\" OR \"perceived quality\" OR \"brand value\")",
+      "angle": "Discounting impact on brand",
+      "rationale": "Investigates the long-term trade-off between running sales and damaging the brand's perceived premium status.",
+      "openalex_count": 9,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Analysis of the Impact of the 7p Marketing Mix on Patient Loyalty with the Moderating Variable of Hospital Brand Image (A Study at Anna Hospital and Anna Medika Hospital, Bekasi)",
+          "relevance_score": 0.5971022,
+          "id": "https://openalex.org/W7153261243"
+        },
+        {
+          "title": "Assessing the Effects of Marketing Strategies on Local Trade: A Case Study of Shoprite Zambia, Mufulira",
+          "relevance_score": 0.5713161,
+          "id": "https://openalex.org/W7153238748"
+        },
+        {
+          "title": "The Integration Between Green Marketing and Artificial Intelligence to Achieve Corporate Sustainability",
+          "relevance_score": 0.4425194,
+          "id": "https://openalex.org/W7151592262"
+        },
+        {
+          "title": "Assessing CSR initiatives: towards the development of a net benefits scorecard",
+          "relevance_score": 0.3481006,
+          "id": "https://openalex.org/W7150958506"
+        },
+        {
+          "title": "Electronic Word-of-Mouth and Consumer Spending: Evidence from Facebook-Based Online Clothing Retail",
+          "relevance_score": 0.25048554,
+          "id": "https://openalex.org/W7151293837"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 3,
+      "query": "(\"ad creative\" OR \"message framing\" OR \"emotional appeal\" OR \"rational appeal\" OR \"visual attention\") AND (marketing OR consumer OR ecommerce OR advertising OR retail)",
+      "angle": "Ad creative and copy",
+      "rationale": "Finds research on what elements of an advertisement actually capture attention and drive consumer action.",
+      "openalex_count": 60,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Perceived ethics and emotional appeals: consumer responses to manipulative advertising on Chinese social media",
+          "relevance_score": 14.50802,
+          "id": "https://openalex.org/W7153126718"
+        },
+        {
+          "title": "Recognition and Resistance as Dual Pathways in Self-Relevant Advertising: The Role of Narcissistic Admiration and Rivalry",
+          "relevance_score": 7.000562,
+          "id": "https://openalex.org/W7151431200"
+        },
+        {
+          "title": "THE DIGITAL FACE OF MUNICIPALITIES: A NEUROMARKETING STUDY OF WEBSITE ATTRACTIVENESS AND EFFECTIVENESS FOR ECOLOGICAL GENERATION Z USERS",
+          "relevance_score": 5.8942513,
+          "id": "https://openalex.org/W7151529696"
+        },
+        {
+          "title": "Optimizing Visual Attention",
+          "relevance_score": 5.668621,
+          "id": "https://openalex.org/W7152697981"
+        },
+        {
+          "title": "Examining the Effect of Message Framing and Demographic Traits on Public Support for a Child Sexual Abuse Prevention Program",
+          "relevance_score": 5.2570934,
+          "id": "https://openalex.org/W7153028928"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 4,
+      "query": "(\"brand naming\" OR \"product name\" OR \"phonetic symbolism\" OR \"alphanumeric brand\" OR \"sound symbolism\") AND (marketing OR consumer OR retail OR ecommerce OR advertising)",
+      "angle": "Product naming",
+      "rationale": "Targets linguistic and psychological studies on how the sound and structure of a product name influence consumer perception.",
+      "openalex_count": 33,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Skinny Labels at the Supreme Court\u2014Generic Competition, Patent Inducement, and Affordable Medicines",
+          "relevance_score": 5.7504616,
+          "id": "https://openalex.org/W7152667798"
+        },
+        {
+          "title": "Healthy breakfast perceptions: comparing private labels and national brands",
+          "relevance_score": 5.3462696,
+          "id": "https://openalex.org/W7152528138"
+        },
+        {
+          "title": "Snake repellent safety and efficacy in Sub-Saharan Africa. What is the evidence?",
+          "relevance_score": 1.4186244,
+          "id": "https://openalex.org/W7153205837"
+        },
+        {
+          "title": "Navigation bar design effects on consumer visual processing",
+          "relevance_score": 0.9621437,
+          "id": "https://openalex.org/W7153426875"
+        },
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 0.81930727,
+          "id": "https://openalex.org/W7153528954"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "NO",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 5,
+      "query": "(\"scarcity message\" OR \"scarcity appeal\" OR \"limited time offer\" OR \"time pressure\" OR \"countdown timer\" OR \"limited quantity\") AND (marketing OR consumer OR ecommerce OR retail OR \"online shopping\")",
+      "angle": "Scarcity and urgency cues",
+      "rationale": "Gathers evidence on FOMO tactics like countdown timers and low-stock warnings to see when they boost checkout rates versus cause reactance.",
+      "openalex_count": 49,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A Study on the Impact of Fear of Missing Out (FOMO) on Impulsive Buying Behaviour of Consumers During the Festive Season (August\u2013November) in the Indian Retail and E-Commerce Industry",
+          "relevance_score": 13.161857,
+          "id": "https://openalex.org/W7153251664"
+        },
+        {
+          "title": "The price of belonging: impulse buying in live shopping among low-income youth",
+          "relevance_score": 5.4033566,
+          "id": "https://openalex.org/W7151582668"
+        },
+        {
+          "title": "Consumer decision boundaries in informal food environments: A position paper on minimum judgment basis for consumer food safety guidance",
+          "relevance_score": 4.4536095,
+          "id": "https://openalex.org/W7153295651"
+        },
+        {
+          "title": "Digital marketing\u2019s targets: cyberloafing and impulsive buying",
+          "relevance_score": 1.0455348,
+          "id": "https://openalex.org/W7153384196"
+        },
+        {
+          "title": "Mobile Phone Interaction and Impulse Buying in Indian Grocery Chains: An S-O-R Perspective on Emotional and Situational Factors",
+          "relevance_score": 0.58918583,
+          "id": "https://openalex.org/W7152544697"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 6,
+      "query": "(\"choice architecture\" OR \"decoy effect\" OR \"compromise effect\" OR \"default option\" OR \"asymmetric dominance\") AND (marketing OR consumer OR ecommerce OR retail OR \"online shopping\")",
+      "angle": "Behavioral nudges",
+      "rationale": "Focuses on choice architecture and pricing tier structure to understand how presenting options changes the buyer's final selection.",
+      "openalex_count": 13,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Evaluation of Investment Performance and Perception of Investors in the State of Andhra Pradesh with respect to Equity Linked Savings Scheme (ELSS) Plans of Indian Mutual Funds: A Review Research Article",
+          "relevance_score": 3.7011697,
+          "id": "https://openalex.org/W7153330378"
+        },
+        {
+          "title": "More tips, fewer customers: Downstream consequences of higher vs. lower levels of default tipping options",
+          "relevance_score": 3.5283418,
+          "id": "https://openalex.org/W7153648348"
+        },
+        {
+          "title": "Health Shocks and Annuity Choices",
+          "relevance_score": 3.5055785,
+          "id": "https://openalex.org/W7151214425"
+        },
+        {
+          "title": "Use Infrastructures and the Design Evidence Link (DEL) for Urban Climate Mitigation: An Ex Ante and Ex Post Verification of User-Centred Mitigation Impacts",
+          "relevance_score": 0.54211664,
+          "id": "https://openalex.org/W7151289406"
+        },
+        {
+          "title": "Promoting healthier food purchases via social media: the role of polls and their visual features",
+          "relevance_score": 0.49631095,
+          "id": "https://openalex.org/W7153032948"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 7,
+      "query": "(\"conversion rate\" OR \"landing page\" OR \"cart abandonment\" OR \"checkout process\" OR \"click-through rate\") AND (ecommerce OR retail OR \"online shopping\" OR \"online store\" OR \"digital marketing\")",
+      "angle": "Funnel optimization",
+      "rationale": "Directly targets the core metrics of a growth marketer, pulling papers that analyze friction in the digital purchase journey.",
+      "openalex_count": 45,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "IMPACT OF CONSUMER BEHAVIOUR FACTORS ON SUSTAINABLE ONLINE PURCHASING DECISIONS",
+          "relevance_score": 6.9621096,
+          "id": "https://openalex.org/W7152967516"
+        },
+        {
+          "title": "A Study on the Effectiveness of Digital Lead Generation in B2B Manufacturing: A Study with Reference to STM Plastic",
+          "relevance_score": 5.220875,
+          "id": "https://openalex.org/W7151847185"
+        },
+        {
+          "title": "From Likes to Loyalty: How ENHYPEN's Social Media Metrics Drives Fandom's Purchase Behavior",
+          "relevance_score": 4.8892136,
+          "id": "https://openalex.org/W7151526032"
+        },
+        {
+          "title": "From Likes to Loyalty: How ENHYPEN\u2019s Social Media Metrics Drives Fandom\u2019s Purchase Behavior",
+          "relevance_score": 4.7842236,
+          "id": "https://openalex.org/W7152227726"
+        },
+        {
+          "title": "Marketing Campaign Performance and Conversion Analytics",
+          "relevance_score": 4.3395176,
+          "id": "https://openalex.org/W7153632180"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 8,
+      "query": "(\"social proof\" OR \"review valence\" OR \"review volume\" OR \"electronic word of mouth\" OR eWOM OR \"online review\") AND (ecommerce OR retail OR consumer OR marketing OR \"purchase intention\")",
+      "angle": "Social proof and reviews",
+      "rationale": "Examines the quantitative impact of star ratings, review text, and social validation on ecommerce conversion.",
+      "openalex_count": 110,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Electronic Word-of-Mouth and Consumer Spending: Evidence from Facebook-Based Online Clothing Retail",
+          "relevance_score": 27.892233,
+          "id": "https://openalex.org/W7151293837"
+        },
+        {
+          "title": "ELECTRONIC WORD OF MOUTH VIA SOCIAL MEDIA PLATFORMS AND EVENT MARKETING: PROMOTION OF RIVERS STATE CARNIVAL (CARNIRIV)",
+          "relevance_score": 20.253729,
+          "id": "https://openalex.org/W7151382228"
+        },
+        {
+          "title": "Analysis of Purchase Decisions for MSME-Processed Functional Food Products in the Jabodetabek Region: A Model Testing of the Effects of Functional Value, Brand Image, Electronic Word of Mouth, and Local Wisdom-Based Marketing",
+          "relevance_score": 19.279615,
+          "id": "https://openalex.org/W7152617516"
+        },
+        {
+          "title": "DETERMINANTS OF CONSUMERS' CONTINUANCE PURCHASE INTENTION TOWARD LOCAL FOOD THROUGH ONLINE FOOD DELIVERY SERVICES: THE MEDIATING ROLE OF ELECTRONIC WORD OF MOUTH",
+          "relevance_score": 16.23812,
+          "id": "https://openalex.org/W7152715122"
+        },
+        {
+          "title": "Responses to negative word of mouth: the influence of information overload on purchase intention",
+          "relevance_score": 13.254949,
+          "id": "https://openalex.org/W7151461149"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 9,
+      "query": "(\"free shipping\" OR \"return policy\" OR \"shipping fee\" OR \"product return\" OR \"lenient return\") AND (ecommerce OR retail OR \"online shopping\" OR \"online retailer\" OR consumer)",
+      "angle": "Logistics as marketing",
+      "rationale": "Explores how shipping thresholds and return policies act as conversion levers and affect cart abandonment.",
+      "openalex_count": 17,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Integrating Digital Forensics and Machine Learning for Retail Return Fraud Detection: A Comprehensive Review",
+          "relevance_score": 5.2181287,
+          "id": "https://openalex.org/W7150998473"
+        },
+        {
+          "title": "Immersive Commerce: Implementasi Augmented Reality untuk Meningkatkan Kepercayaan Konsumen dalam Transaksi E-Commerce",
+          "relevance_score": 4.3276463,
+          "id": "https://openalex.org/W7153228855"
+        },
+        {
+          "title": "PENERAPAN PRINSIP THE ART OF WAR PADA STRATEGI BISNIS AMAZON",
+          "relevance_score": 0.82894003,
+          "id": "https://openalex.org/W7153538970"
+        },
+        {
+          "title": "Did Covid-19 Make Professional Sales Obsolete in Business-to-Business Transactions?",
+          "relevance_score": 0.80040956,
+          "id": "https://openalex.org/W7152943949"
+        },
+        {
+          "title": "The Effect of Digital Marketing Strategy, Brand Awareness, and Customer Satisfaction on Shopee Customer Loyalty in Batam with Customer Engagement as a Mediator",
+          "relevance_score": 0.79720354,
+          "id": "https://openalex.org/W7153135492"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 10,
+      "query": "(\"user-generated content\" OR UGC OR \"influencer marketing\" OR \"micro-influencer\" OR \"sponsored post\") AND (conversion OR \"purchase intention\" OR ROI OR \"click-through\" OR ecommerce)",
+      "angle": "UGC and influencers",
+      "rationale": "Looks past influencer hype to find studies measuring the actual return on investment and intent-to-buy generated by authentic content.",
+      "openalex_count": 67,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Effect of Influencer Authenticity on Purchase Intention Mediated by Trust Transfer in Increasing Ventela Brand Consumers",
+          "relevance_score": 8.035405,
+          "id": "https://openalex.org/W7151545237"
+        },
+        {
+          "title": "The Influence of Micro-Influencers on Young Consumer Behavior",
+          "relevance_score": 7.4268036,
+          "id": "https://openalex.org/W7152616887"
+        },
+        {
+          "title": "Trust Perception and The Halo Effect in Shaping Purchase Intention and Brand Advocacy: A Parasocial Interaction Perspective",
+          "relevance_score": 6.8115497,
+          "id": "https://openalex.org/W7152955275"
+        },
+        {
+          "title": "Influence unveiled: examining sponsorship disclosure in influencer marketing through moderated serial mediation and MGA across PSRs and generational differences",
+          "relevance_score": 5.6524773,
+          "id": "https://openalex.org/W7151535035"
+        },
+        {
+          "title": "Effectiveness of Influencer Celebrities Vs Traditional Celebrities in Brand Promotion",
+          "relevance_score": 5.1904697,
+          "id": "https://openalex.org/W7151753007"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 11,
+      "query": "(\"cross-selling\" OR \"up-selling\" OR \"product recommendation\" OR \"bundle pricing\" OR \"price bundling\") AND (ecommerce OR retail OR consumer OR marketing OR \"online shopping\")",
+      "angle": "AOV expansion",
+      "rationale": "Focuses on tactics used to increase average order value, such as algorithmic recommendations and bundled discounts.",
+      "openalex_count": 33,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Sales Information System Using FP-Growth Algorithm Based on Consumer Purchasing Patterns",
+          "relevance_score": 7.7810802,
+          "id": "https://openalex.org/W7153243228"
+        },
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 7.04357,
+          "id": "https://openalex.org/W7153528954"
+        },
+        {
+          "title": "TrendScanner AI: An Agentic Intelligence-Based Framework for E-Commerce Trend Analysis and Product Recommendation",
+          "relevance_score": 3.9123178,
+          "id": "https://openalex.org/W7152979418"
+        },
+        {
+          "title": "E-Commerce Network Search System Based on Target Webpage Positioning and Sentiment Analysis Recommendation",
+          "relevance_score": 3.116009,
+          "id": "https://openalex.org/W7152058277"
+        },
+        {
+          "title": "Exploring the Influence of AI on Online Shopping Behaviour A Vadodara District Survey",
+          "relevance_score": 1.1458176,
+          "id": "https://openalex.org/W7151277888"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 12,
+      "query": "(\"customer lifetime value\" OR CLV OR \"loyalty program\" OR \"repurchase intention\" OR \"customer retention\") AND (ecommerce OR retail OR DTC OR \"direct to consumer\" OR marketing)",
+      "angle": "Retention and LTV",
+      "rationale": "Addresses the post-purchase growth loop, finding evidence on what actually keeps customers coming back and spending more over time.",
+      "openalex_count": 90,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Trust and Perceived Value as Strategic Drivers in Indonesia Omnichannel Beautypreneurship",
+          "relevance_score": 12.199432,
+          "id": "https://openalex.org/W7152066033"
+        },
+        {
+          "title": "A FACTOR INFLUENCING THE REPURCHASE INTENTION ON TIKTOK FOR BABY BOTTLES",
+          "relevance_score": 8.06611,
+          "id": "https://openalex.org/W7151913439"
+        },
+        {
+          "title": "INNOVATIVE ADVERTISING FORMATS IN THE SYSTEM OF MARKETING COMMUNICATIONS OF HoReCa ENTERPRISES",
+          "relevance_score": 8.03816,
+          "id": "https://openalex.org/W7152612022"
+        },
+        {
+          "title": "Factors Influencing AI-Driven Personalization on Consumer Trust and Purchase Intent among Gen-z",
+          "relevance_score": 7.7956786,
+          "id": "https://openalex.org/W7153025877"
+        },
+        {
+          "title": "TRENDS IN THE DEVELOPMENT OF THE DIGITAL MARKETING MARKET IN UKRAINE UNDER MARTIAL LAW",
+          "relevance_score": 6.2771106,
+          "id": "https://openalex.org/W7152724361"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "NO",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 13,
+      "query": "(\"subscription box\" OR \"subscription model\" OR \"replenishment\" OR \"subscribe and save\") AND (ecommerce OR retail OR consumer OR marketing OR DTC)",
+      "angle": "Subscription models",
+      "rationale": "Captures the DTC-heavy subscription mechanics to see what drives sign-ups and prevents churn in recurring revenue models.",
+      "openalex_count": 49,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Flowr -- Scaling Up Retail Supply Chain Operations Through Agentic AI in Large Scale Supermarket Chains",
+          "relevance_score": 3.5675733,
+          "id": "https://openalex.org/W7152934272"
+        },
+        {
+          "title": "Managing inventories for perishable e-groceries: The value of probabilistic information",
+          "relevance_score": 3.196559,
+          "id": "https://openalex.org/W7152540922"
+        },
+        {
+          "title": "CASE: Cadence-Aware Set Encoding for Large-Scale Next Basket Repurchase Recommendation",
+          "relevance_score": 3.0355713,
+          "id": "https://openalex.org/W7152770206"
+        },
+        {
+          "title": "Agentic automation driven reinforcement learning for inventory optimization",
+          "relevance_score": 2.2502685,
+          "id": "https://openalex.org/W7151090921"
+        },
+        {
+          "title": "Research and development of smoothie technology using sprouted wheat and rye grain juice",
+          "relevance_score": 1.9788985,
+          "id": "https://openalex.org/W7151315407"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 14,
+      "query": "(\"personalized recommendation\" OR \"behavioral targeting\" OR retargeting OR \"personalized advertising\" OR \"dynamic pricing\") AND (ecommerce OR retail OR consumer OR marketing OR \"online shopping\")",
+      "angle": "Personalization and targeting",
+      "rationale": "Evaluates the effectiveness of data-driven targeting and retargeting ads on final conversion metrics.",
+      "openalex_count": 87,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 14.547093,
+          "id": "https://openalex.org/W7153528954"
+        },
+        {
+          "title": "CONTENT MARKETING AS A TOOL FOR INFLUENCING CONSUMERS IN UKRAINIAN RETAIL TRADE NETWORKS",
+          "relevance_score": 7.143182,
+          "id": "https://openalex.org/W7152380935"
+        },
+        {
+          "title": "Surprise Marketing",
+          "relevance_score": 6.37957,
+          "id": "https://openalex.org/W7152722678"
+        },
+        {
+          "title": "Artificial Intelligence and Consumer Decision-Making in Business Administration: A Systematic Literature Review and the Enhanced TTG Framework",
+          "relevance_score": 4.634071,
+          "id": "https://openalex.org/W7151305908"
+        },
+        {
+          "title": "Real-Time Adaptive Pricing in E-Commerce Using Deep Learning and Customer Demand Forecasting",
+          "relevance_score": 4.5696425,
+          "id": "https://openalex.org/W7153254153"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.7
+    }
+  ]
+}

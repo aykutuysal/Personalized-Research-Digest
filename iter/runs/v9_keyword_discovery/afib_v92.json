@@ -1,0 +1,653 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "deepseek/deepseek-v3.2",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-22",
+  "seeds": {
+    "queries": [
+      "atrial fibrillation ablation",
+      "DOAC anticoagulation",
+      "rhythm control trials",
+      "left atrial appendage closure",
+      "AFib stroke prevention",
+      "rhythm control",
+      "catheter ablation",
+      "anticoagulation choices",
+      "rate rhythm",
+      "left atrial",
+      "stroke prevention",
+      "randomized clinical",
+      "AFib screening"
+    ],
+    "llm_seeds": [
+      "atrial fibrillation ablation",
+      "DOAC anticoagulation",
+      "rhythm control trials",
+      "left atrial appendage closure",
+      "AFib stroke prevention"
+    ],
+    "angle_seeds": [
+      "rhythm control",
+      "catheter ablation",
+      "anticoagulation choices",
+      "rate rhythm",
+      "left atrial",
+      "stroke prevention",
+      "randomized clinical",
+      "AFib screening"
+    ],
+    "use_angle_seeds": true,
+    "raw_results": [
+      {
+        "seed": "atrial fibrillation ablation",
+        "count": 1464
+      },
+      {
+        "seed": "DOAC anticoagulation",
+        "count": 329
+      },
+      {
+        "seed": "rhythm control trials",
+        "count": 305
+      },
+      {
+        "seed": "left atrial appendage closure",
+        "count": 212
+      },
+      {
+        "seed": "AFib stroke prevention",
+        "count": 7
+      },
+      {
+        "seed": "rhythm control",
+        "count": 2460
+      },
+      {
+        "seed": "catheter ablation",
+        "count": 1409
+      },
+      {
+        "seed": "anticoagulation choices",
+        "count": 91
+      },
+      {
+        "seed": "rate rhythm",
+        "count": 1615
+      },
+      {
+        "seed": "left atrial",
+        "count": 3508
+      },
+      {
+        "seed": "stroke prevention",
+        "count": 2177
+      },
+      {
+        "seed": "randomized clinical",
+        "count": 31907
+      },
+      {
+        "seed": "AFib screening",
+        "count": 9
+      }
+    ],
+    "cost": 0.000133829,
+    "latency_s": 2.2
+  },
+  "vocabulary": {
+    "total_papers": 566,
+    "topics": [
+      [
+        "Atrial Fibrillation Management and Outcomes",
+        285
+      ],
+      [
+        "Venous Thromboembolism Diagnosis and Management",
+        24
+      ],
+      [
+        "Cardiac Arrhythmias and Treatments",
+        22
+      ],
+      [
+        "Acute Ischemic Stroke Management",
+        16
+      ],
+      [
+        "Cardiovascular Function and Risk Factors",
+        15
+      ],
+      [
+        "ECG Monitoring and Analysis",
+        7
+      ],
+      [
+        "Heart Failure Treatment and Management",
+        7
+      ],
+      [
+        "Liver Disease and Transplantation",
+        5
+      ],
+      [
+        "Circadian rhythm and melatonin",
+        5
+      ],
+      [
+        "Acute Kidney Injury Research",
+        4
+      ],
+      [
+        "Patient-Provider Communication in Healthcare",
+        4
+      ],
+      [
+        "Intensive Care Unit Cognitive Disorders",
+        4
+      ],
+      [
+        "Heart Rate Variability and Autonomic Control",
+        4
+      ],
+      [
+        "Amyloidosis: Diagnosis, Treatment, Outcomes",
+        4
+      ],
+      [
+        "Sleep and Wakefulness Research",
+        4
+      ]
+    ],
+    "subfields": [
+      [
+        "Cardiology and Cardiovascular Medicine",
+        351
+      ],
+      [
+        "Internal Medicine",
+        24
+      ],
+      [
+        "Epidemiology",
+        20
+      ],
+      [
+        "Neurology",
+        10
+      ],
+      [
+        "Surgery",
+        10
+      ],
+      [
+        "General Health Professions",
+        9
+      ],
+      [
+        "Molecular Biology",
+        9
+      ],
+      [
+        "Genetics",
+        8
+      ],
+      [
+        "Pulmonary and Respiratory Medicine",
+        8
+      ],
+      [
+        "Nephrology",
+        8
+      ]
+    ],
+    "fields": [
+      [
+        "Medicine",
+        493
+      ],
+      [
+        "Neuroscience",
+        15
+      ],
+      [
+        "Health Professions",
+        13
+      ],
+      [
+        "Biochemistry, Genetics and Molecular Biology",
+        13
+      ],
+      [
+        "Psychology",
+        6
+      ]
+    ],
+    "keywords": [
+      [
+        "Atrial fibrillation",
+        311
+      ],
+      [
+        "Catheter ablation",
+        119
+      ],
+      [
+        "Ablation",
+        115
+      ],
+      [
+        "Randomized controlled trial",
+        108
+      ],
+      [
+        "Rhythm",
+        74
+      ],
+      [
+        "Clinical trial",
+        68
+      ],
+      [
+        "MEDLINE",
+        56
+      ],
+      [
+        "Appendage",
+        55
+      ],
+      [
+        "Heart failure",
+        47
+      ],
+      [
+        "Heart Rhythm",
+        42
+      ],
+      [
+        "Atrial Appendage",
+        41
+      ],
+      [
+        "Anticoagulant",
+        36
+      ],
+      [
+        "Catheter",
+        34
+      ],
+      [
+        "Ablation of atrial fibrillation",
+        34
+      ],
+      [
+        "Sinus rhythm",
+        32
+      ],
+      [
+        "Rivaroxaban",
+        31
+      ],
+      [
+        "Left atrial appendage occlusion",
+        30
+      ],
+      [
+        "Warfarin",
+        26
+      ],
+      [
+        "Heart rate",
+        26
+      ],
+      [
+        "Cardiac Ablation",
+        25
+      ],
+      [
+        "Thrombosis",
+        25
+      ],
+      [
+        "Cohort",
+        24
+      ],
+      [
+        "Complication",
+        20
+      ],
+      [
+        "Adverse effect",
+        20
+      ],
+      [
+        "Circadian rhythm",
+        20
+      ]
+    ],
+    "journals": [
+      [
+        "European Heart Journal",
+        21
+      ],
+      [
+        "Heart Rhythm",
+        19
+      ],
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        18
+      ],
+      [
+        "Circulation",
+        15
+      ],
+      [
+        "EP Europace",
+        10
+      ],
+      [
+        "New England Journal of Medicine",
+        10
+      ],
+      [
+        "JACC. Clinical electrophysiology",
+        9
+      ],
+      [
+        "Journal of the American College of Cardiology",
+        9
+      ],
+      [
+        "Open MIND",
+        9
+      ],
+      [
+        "Journal of Clinical Medicine",
+        8
+      ]
+    ],
+    "sample_titles": [
+      "Pulsed field ablation for atrial fibrillation ablation: a European Heart Rhythm Association survey",
+      "Nightmare after atrial fibrillation ablation",
+      "Controversy: pulsed field ablation is the standard technique for all the candidates for atrial fibrillation ablation",
+      "Impact of Timing of Atrial Fibrillation Ablation on AF Recurrence and Clinical Outcomes in Patients With HFpEF and HFrEF",
+      "Hybrid Atrial Fibrillation Ablation: A Decade-Long Single-Center Experience",
+      "Safety and efficacy of intracardiac echocardiography in atrial fibrillation ablation: a meta-analysis",
+      "Antithrombotic Therapy after Successful Catheter Ablation for Atrial Fibrillation",
+      "Evaluating catheter usage for atrial fibrillation ablation: improving rates of efficacy and safety",
+      "Efficacy and safety of operator-directed, nurse-administered propofol sedation in atrial fibrillation ablation",
+      "Role of Non\u2013Pulmonary Vein Triggers in Outcomes of First-Time Atrial Fibrillation Ablation",
+      "Explainable machine learning for risk prediction of acute cardiac tamponade during atrial fibrillation ablation",
+      "The Clinical Utility of <scp>3D</scp> Electroanatomical Mapping for Atrial Fibrillation Ablation by Pulsed Field Ablation",
+      "Adjunctive superior vena cava isolation to pulmonary vein isolation in atrial fibrillation ablation: A systematic review and meta-analysis of randomized trials",
+      "Endovascular Stenting for Pulmonary Vein Stenosis Following Atrial Fibrillation Ablation: From Diagnosis to Intervention",
+      "Optimising the atrial fibrillation ablation pathway using vascular closure devices: effects on length of stay, procedure time and outcomes"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "catheter ablation outcomes",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Serves angle 2 (catheter ablation techniques and outcomes) with high-frequency terms ('catheter ablation' 119x, 'ablation' 115x). Focuses on clinical outcomes relevant to an electrophysiologist's practice."
+      },
+      {
+        "query": "DOAC anticoagulation bleeding risk",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Covers angle 3 (anticoagulation choices) using specific vocabulary ('DOAC' from seed queries, 'anticoagulant' 36x, 'bleeding risk' from user profile). Addresses the user's interest in DOAC choices and bleeding complications."
+      },
+      {
+        "query": "rate rhythm control trials",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Directly serves angle 4 (rate vs rhythm control comparisons) with terms from vocabulary ('rhythm' 74x, 'rate' implied) and seed queries ('rate rhythm' 1615 results). Targets the user's interest in clinical debates and trial evidence."
+      },
+      {
+        "query": "left atrial appendage occlusion",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Addresses angle 5 (left atrial appendage closure/occlusion) using high-frequency vocabulary ('left atrial appendage occlusion' 30x, 'appendage' 55x). Directly relevant to the user's stroke prevention focus."
+      },
+      {
+        "query": "stroke prevention anticoagulation",
+        "angle_id": 6,
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Serves angle 6 (stroke prevention strategies) by intersecting with anticoagulation (angle 3). Uses vocabulary from seed queries ('AFib stroke prevention') and extracted terms ('anticoagulant' 36x). Targets the user's clinical focus on stroke prevention."
+      },
+      {
+        "query": "randomized controlled trial atrial fibrillation",
+        "angle_id": 7,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Directly covers angle 7 (randomized clinical trials) with high-frequency terms ('randomized controlled trial' 108x, 'atrial fibrillation' 311x). Meets the user's need for trial results and guideline updates."
+      },
+      {
+        "query": "pulsed field ablation atrial fibrillation",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Serves angle 2 (catheter ablation techniques) with specific emerging technique from sample titles ('pulsed field ablation'). Targets the user's interest in new ablation technologies and outcomes."
+      },
+      {
+        "query": "heart failure atrial fibrillation ablation",
+        "angle_id": 2,
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Serves angle 2 (catheter ablation outcomes) by incorporating adjacent topic 'heart failure' (47x in vocabulary). Relevant to the user's clinical population with comorbidities, based on sample titles mentioning HFpEF/HFrEF."
+      },
+      {
+        "query": "guidelines atrial fibrillation management",
+        "angle_id": 7,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Addresses angle 7 (guideline updates) using vocabulary from user profile and extracted topics ('Atrial Fibrillation Management and Outcomes' 285x). Directly meets the user's need for current clinical guidance."
+      },
+      {
+        "query": "rhythm control atrial fibrillation antiarrhythmic drugs",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'rhythm control' with 'rhythm' and added 'atrial fibrillation' from keywords to broaden the search while maintaining focus on antiarrhythmic drugs for AFib management."
+      },
+      {
+        "query": "atrial fibrillation screening ECG monitoring",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'AFib' with full term 'atrial fibrillation' from keywords and kept 'ECG monitoring' which appears in topics, ensuring the query aligns with vocabulary."
+      },
+      {
+        "query": "anticoagulant therapy catheter ablation atrial fibrillation",
+        "angle_id": 3,
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'antithrombotic' with 'anticoagulant' from keywords and added 'atrial fibrillation' to create a specific intersection between anticoagulation and ablation procedures."
+      }
+    ],
+    "cost": 0.00106876,
+    "latency_s": 181.5
+  },
+  "validation": [
+    {
+      "query": "catheter ablation outcomes",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 8,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "DOAC anticoagulation bleeding risk",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "rate rhythm control trials",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "left atrial appendage occlusion",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "stroke prevention anticoagulation",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 6,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "randomized controlled trial atrial fibrillation",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 8,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "pulsed field ablation atrial fibrillation",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 6,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "heart failure atrial fibrillation ablation",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "guidelines atrial fibrillation management",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "rhythm control atrial fibrillation antiarrhythmic drugs",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "atrial fibrillation screening ECG monitoring",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "anticoagulant therapy catheter ablation atrial fibrillation",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "fill_missing": {
+    "queries": [],
+    "cost": 0.0,
+    "latency": 0.0,
+    "raw": "",
+    "missing_before": [],
+    "missing_after": []
+  },
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "rhythm control antiarrhythmic drugs",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 1,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "AFib screening ECG monitoring",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "antithrombotic therapy catheter ablation",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "rhythm control atrial fibrillation antiarrhythmic drugs",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'rhythm control' with 'rhythm' and added 'atrial fibrillation' from keywords to broaden the search while maintaining focus on antiarrhythmic drugs for AFib management."
+      },
+      {
+        "query": "atrial fibrillation screening ECG monitoring",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'AFib' with full term 'atrial fibrillation' from keywords and kept 'ECG monitoring' which appears in topics, ensuring the query aligns with vocabulary."
+      },
+      {
+        "query": "anticoagulant therapy catheter ablation atrial fibrillation",
+        "angle_id": 3,
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'antithrombotic' with 'anticoagulant' from keywords and added 'atrial fibrillation' to create a specific intersection between anticoagulation and ablation procedures."
+      }
+    ],
+    "cost": 0.00032484,
+    "latency_s": 10.7
+  },
+  "costs": {
+    "seed_usd": 0.000133829,
+    "library_usd": 0.00106876,
+    "fill_missing_usd": 0.0,
+    "reformulate_usd": 0.00032484,
+    "total_usd": 0.001527
+  },
+  "total_latency_s": 226.5
+}

@@ -1,0 +1,294 @@
+{
+  "timestamp": "2026-04-13T10:28:33.507770+00:00",
+  "prompt_file": "iter/prompts/v0_original.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.0012357,
+  "plan_elapsed_s": 64.9,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 15
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"charm pricing\" OR \"odd pricing\" OR \"psychological pricing\" OR \"price ending\"",
+        "angle": "Core subject - Price perception mechanics",
+        "rationale": "Catches empirical studies on the effectiveness of specific price points like $9.99 versus round numbers."
+      },
+      {
+        "id": 2,
+        "query": "(\"price promotion\" OR \"discount\" OR \"sale\") AND (\"brand perception\" OR \"brand equity\" OR \"brand damage\" OR \"quality perception\")",
+        "angle": "Applied/real-world concerns - Discount side effects",
+        "rationale": "Targets research on when and how discounts negatively impact perceived brand value and long-term customer relationships."
+      },
+      {
+        "id": 3,
+        "query": "(\"ad creative\" OR \"advertisement\" OR \"advertising\") AND (\"conversion\" OR \"click-through rate\" OR \"purchase intent\") AND (\"A/B test\" OR \"experiment\" OR \"field study\")",
+        "angle": "Evaluation/evidence standards - Ad effectiveness",
+        "rationale": "Focuses on experimental, quantitative evidence linking specific ad creative elements to conversion metrics."
+      },
+      {
+        "id": 4,
+        "query": "(\"product name\" OR \"brand name\" OR \"naming\") AND (\"consumer preference\" OR \"memorability\" OR \"perception\") AND (\"experiment\" OR \"study\")",
+        "angle": "Applied/real-world concerns - Product naming",
+        "rationale": "Finds empirical studies testing how different naming conventions affect consumer evaluation and choice."
+      },
+      {
+        "id": 5,
+        "query": "(\"scarcity\" OR \"limited quantity\" OR \"limited time\") AND (\"purchase\" OR \"conversion\" OR \"checkout\") AND (\"online\" OR \"e-commerce\")",
+        "angle": "Methods/techniques - Scarcity cues",
+        "rationale": "Targets research on the effectiveness of scarcity and urgency tactics specifically in digital shopping contexts."
+      },
+      {
+        "id": 6,
+        "query": "(\"default option\" OR \"social proof\" OR \"reciprocity\" OR \"loss aversion\") AND (\"choice\" OR \"conversion\" OR \"checkout\") AND (\"e-commerce\" OR \"online\")",
+        "angle": "Methods/techniques - Behavioral nudges",
+        "rationale": "Captures field-tested applications of specific behavioral economics principles to improve online conversion rates."
+      },
+      {
+        "id": 7,
+        "query": "(\"landing page\" OR \"website\") AND (\"optimization\" OR \"conversion rate optimization\" OR \"CRO\") AND (\"A/B test\" OR \"experiment\")",
+        "angle": "Applied/real-world concerns - Landing page performance",
+        "rationale": "Focuses on experimental evidence about which page elements (layout, copy, CTAs) demonstrably improve conversion."
+      },
+      {
+        "id": 8,
+        "query": "(\"free shipping\" OR \"shipping cost\") AND (\"purchase\" OR \"cart abandonment\" OR \"conversion\") AND (\"experiment\" OR \"field study\")",
+        "angle": "Applied/real-world concerns - Pricing & shipping tactics",
+        "rationale": "Finds quantitative research on the impact of shipping fees and promotions on consumer purchase decisions."
+      },
+      {
+        "id": 9,
+        "query": "(\"visual appeal\" OR \"aesthetics\" OR \"image quality\") AND (\"product page\" OR \"e-commerce\") AND (\"willingness to pay\" OR \"trust\")",
+        "angle": "Methods/techniques - Visual presentation impact",
+        "rationale": "Targets studies measuring how visual elements on product pages influence perceived quality, trust, and price sensitivity."
+      },
+      {
+        "id": 10,
+        "query": "(\"customer reviews\" OR \"online reviews\" OR \"ratings\") AND (\"sales\" OR \"conversion\") AND (\"e-commerce\" OR \"DTC\")",
+        "angle": "Evaluation/evidence standards - Social proof impact",
+        "rationale": "Captures empirical evidence quantifying the sales impact of review volume, valence, and content."
+      },
+      {
+        "id": 11,
+        "query": "(\"personalization\" OR \"recommendation\") AND (\"e-commerce\" OR \"online retail\") AND (\"revenue\" OR \"conversion\" OR \"click-through\")",
+        "angle": "Methods/techniques - Personalization effectiveness",
+        "rationale": "Finds field studies and experiments measuring the business impact of personalized offers, emails, or product recommendations."
+      },
+      {
+        "id": 12,
+        "query": "(\"price test\" OR \"pricing experiment\" OR \"van Westendorp\") AND (\"methodology\" OR \"design\" OR \"analysis\")",
+        "angle": "Evaluation/evidence standards - Pricing research methods",
+        "rationale": "Targets papers on robust experimental designs and analytical methods for measuring price sensitivity and optimal price points."
+      },
+      {
+        "id": 13,
+        "query": "(\"subscription\" OR \"subscription box\" OR \"membership\") AND (\"retention\" OR \"churn\" OR \"cancellation\") AND (\"behavioral\" OR \"nudge\")",
+        "angle": "Applied/real-world concerns - Subscription model mechanics",
+        "rationale": "Captures research on what drives subscription retention/cancellation and what interventions effectively reduce churn."
+      },
+      {
+        "id": 14,
+        "query": "(\"payment method\" OR \"checkout flow\" OR \"one-click\") AND (\"abandonment\" OR \"conversion\")",
+        "angle": "Applied/real-world concerns - Friction reduction",
+        "rationale": "Finds studies testing how simplifying payment and checkout processes impacts completion rates."
+      },
+      {
+        "id": 15,
+        "query": "(\"bundling\" OR \"product bundle\") AND (\"pricing\" OR \"profit\" OR \"consumer choice\") AND (\"experiment\")",
+        "angle": "Methods/techniques - Product bundling tactics",
+        "rationale": "Targets experimental evidence on the effectiveness of different product bundling and pricing strategies."
+      }
+    ],
+    "coverage_notes": "Plan focuses on angles directly relevant to a DTC growth marketer: pricing tactics, discount effects, ad/landing page optimization, behavioral nudges, and specific e-commerce levers (reviews, shipping, subscriptions). Deliberately skips brand theory, advertising history, media planning, and pure consumer psychology without applied metrics. Assumes the reader values field experiments and quantifiable outcomes over conceptual frameworks."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"charm pricing\" OR \"odd pricing\" OR \"psychological pricing\" OR \"price ending\"",
+      "angle": "Core subject - Price perception mechanics",
+      "rationale": "Catches empirical studies on the effectiveness of specific price points like $9.99 versus round numbers.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 2,
+      "query": "(\"price promotion\" OR \"discount\" OR \"sale\") AND (\"brand perception\" OR \"brand equity\" OR \"brand damage\" OR \"quality perception\")",
+      "angle": "Applied/real-world concerns - Discount side effects",
+      "rationale": "Targets research on when and how discounts negatively impact perceived brand value and long-term customer relationships.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 3,
+      "query": "(\"ad creative\" OR \"advertisement\" OR \"advertising\") AND (\"conversion\" OR \"click-through rate\" OR \"purchase intent\") AND (\"A/B test\" OR \"experiment\" OR \"field study\")",
+      "angle": "Evaluation/evidence standards - Ad effectiveness",
+      "rationale": "Focuses on experimental, quantitative evidence linking specific ad creative elements to conversion metrics.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 4,
+      "query": "(\"product name\" OR \"brand name\" OR \"naming\") AND (\"consumer preference\" OR \"memorability\" OR \"perception\") AND (\"experiment\" OR \"study\")",
+      "angle": "Applied/real-world concerns - Product naming",
+      "rationale": "Finds empirical studies testing how different naming conventions affect consumer evaluation and choice.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 5,
+      "query": "(\"scarcity\" OR \"limited quantity\" OR \"limited time\") AND (\"purchase\" OR \"conversion\" OR \"checkout\") AND (\"online\" OR \"e-commerce\")",
+      "angle": "Methods/techniques - Scarcity cues",
+      "rationale": "Targets research on the effectiveness of scarcity and urgency tactics specifically in digital shopping contexts.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 6,
+      "query": "(\"default option\" OR \"social proof\" OR \"reciprocity\" OR \"loss aversion\") AND (\"choice\" OR \"conversion\" OR \"checkout\") AND (\"e-commerce\" OR \"online\")",
+      "angle": "Methods/techniques - Behavioral nudges",
+      "rationale": "Captures field-tested applications of specific behavioral economics principles to improve online conversion rates.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 7,
+      "query": "(\"landing page\" OR \"website\") AND (\"optimization\" OR \"conversion rate optimization\" OR \"CRO\") AND (\"A/B test\" OR \"experiment\")",
+      "angle": "Applied/real-world concerns - Landing page performance",
+      "rationale": "Focuses on experimental evidence about which page elements (layout, copy, CTAs) demonstrably improve conversion.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 8,
+      "query": "(\"free shipping\" OR \"shipping cost\") AND (\"purchase\" OR \"cart abandonment\" OR \"conversion\") AND (\"experiment\" OR \"field study\")",
+      "angle": "Applied/real-world concerns - Pricing & shipping tactics",
+      "rationale": "Finds quantitative research on the impact of shipping fees and promotions on consumer purchase decisions.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "(\"visual appeal\" OR \"aesthetics\" OR \"image quality\") AND (\"product page\" OR \"e-commerce\") AND (\"willingness to pay\" OR \"trust\")",
+      "angle": "Methods/techniques - Visual presentation impact",
+      "rationale": "Targets studies measuring how visual elements on product pages influence perceived quality, trust, and price sensitivity.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 10,
+      "query": "(\"customer reviews\" OR \"online reviews\" OR \"ratings\") AND (\"sales\" OR \"conversion\") AND (\"e-commerce\" OR \"DTC\")",
+      "angle": "Evaluation/evidence standards - Social proof impact",
+      "rationale": "Captures empirical evidence quantifying the sales impact of review volume, valence, and content.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 11,
+      "query": "(\"personalization\" OR \"recommendation\") AND (\"e-commerce\" OR \"online retail\") AND (\"revenue\" OR \"conversion\" OR \"click-through\")",
+      "angle": "Methods/techniques - Personalization effectiveness",
+      "rationale": "Finds field studies and experiments measuring the business impact of personalized offers, emails, or product recommendations.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "(\"price test\" OR \"pricing experiment\" OR \"van Westendorp\") AND (\"methodology\" OR \"design\" OR \"analysis\")",
+      "angle": "Evaluation/evidence standards - Pricing research methods",
+      "rationale": "Targets papers on robust experimental designs and analytical methods for measuring price sensitivity and optimal price points.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "(\"subscription\" OR \"subscription box\" OR \"membership\") AND (\"retention\" OR \"churn\" OR \"cancellation\") AND (\"behavioral\" OR \"nudge\")",
+      "angle": "Applied/real-world concerns - Subscription model mechanics",
+      "rationale": "Captures research on what drives subscription retention/cancellation and what interventions effectively reduce churn.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 14,
+      "query": "(\"payment method\" OR \"checkout flow\" OR \"one-click\") AND (\"abandonment\" OR \"conversion\")",
+      "angle": "Applied/real-world concerns - Friction reduction",
+      "rationale": "Finds studies testing how simplifying payment and checkout processes impacts completion rates.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 15,
+      "query": "(\"bundling\" OR \"product bundle\") AND (\"pricing\" OR \"profit\" OR \"consumer choice\") AND (\"experiment\")",
+      "angle": "Methods/techniques - Product bundling tactics",
+      "rationale": "Targets experimental evidence on the effectiveness of different product bundling and pricing strategies.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    }
+  ]
+}

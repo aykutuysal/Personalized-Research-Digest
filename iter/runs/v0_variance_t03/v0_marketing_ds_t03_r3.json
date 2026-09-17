@@ -1,0 +1,294 @@
+{
+  "timestamp": "2026-04-13T10:21:36.225982+00:00",
+  "prompt_file": "iter/prompts/v0_original.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": null,
+  "plan_elapsed_s": 121.6,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 15
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"charm pricing\" AND (effectiveness OR \"consumer response\" OR conversion)",
+        "angle": "Core subject - pricing tactics",
+        "rationale": "Targets empirical research on the specific effectiveness of psychological pricing (e.g., $9.99)."
+      },
+      {
+        "id": 2,
+        "query": "(\"price promotion\" OR discount) AND (\"brand perception\" OR \"brand equity\" OR \"brand damage\")",
+        "angle": "Critiques / failure modes",
+        "rationale": "Catches studies investigating when and why discounts might negatively impact brand value."
+      },
+      {
+        "id": 3,
+        "query": "\"ad creative\" AND (effectiveness OR \"conversion rate\" OR performance) AND (experiment OR A/B OR \"field test\")",
+        "angle": "Applied / real-world concerns",
+        "rationale": "Focuses on experimental evidence about what specific creative elements drive conversion."
+      },
+      {
+        "id": 4,
+        "query": "(\"product naming\" OR \"brand name\") AND (consumer OR \"purchase intent\" OR memorability) AND (test OR experiment)",
+        "angle": "Methods / techniques",
+        "rationale": "Seeks empirical studies on how different naming strategies influence measurable consumer outcomes."
+      },
+      {
+        "id": 5,
+        "query": "(\"scarcity cue\" OR \"limited quantity\") AND (purchase OR checkout OR \"conversion rate\")",
+        "angle": "Core subject - behavioral nudges",
+        "rationale": "Targets research on the impact of scarcity messaging on final purchase decisions."
+      },
+      {
+        "id": 6,
+        "query": "\"landing page\" AND (optimization OR \"conversion rate optimization\") AND (experiment OR \"A/B test\")",
+        "angle": "Applied / real-world concerns",
+        "rationale": "Narrows to experimental, data-driven findings about landing page elements that improve conversion."
+      },
+      {
+        "id": 7,
+        "query": "(\"nudge\" OR \"choice architecture\") AND (ecommerce OR \"online purchase\" OR checkout) AND (effect OR impact)",
+        "angle": "Evaluation / evidence standards",
+        "rationale": "Focuses on applied behavioral science interventions with measured effects in online commercial contexts."
+      },
+      {
+        "id": 8,
+        "query": "\"pricing test\" OR \"price experiment\"",
+        "angle": "Methods / techniques",
+        "rationale": "Captures methodological papers and case studies on running pricing experiments, which is a core activity for the reader."
+      },
+      {
+        "id": 9,
+        "query": "(\"promotional campaign\" OR \"sales promotion\") AND (effectiveness OR ROI OR \"return on investment\")",
+        "angle": "Evaluation / evidence standards",
+        "rationale": "Targets research measuring the actual financial impact of different promotional tactics."
+      },
+      {
+        "id": 10,
+        "query": "\"visual attention\" AND (advertisement OR \"ad creative\") AND (eye-tracking OR \"click-through rate\")",
+        "angle": "Tools / artifacts / instruments",
+        "rationale": "Finds studies using tools like eye-tracking to link specific ad elements to viewer attention and action."
+      },
+      {
+        "id": 11,
+        "query": "(\"free shipping\" OR \"shipping cost\") AND (purchase OR conversion) AND (experiment OR test)",
+        "angle": "Applied / real-world concerns",
+        "rationale": "Targets empirical evidence on a key e-commerce lever (shipping offers) and its impact on conversion."
+      },
+      {
+        "id": 12,
+        "query": "(\"social proof\" OR \"customer review\") AND (conversion OR \"purchase decision\") AND (ecommerce OR \"online store\")",
+        "angle": "Core subject - behavioral nudges",
+        "rationale": "Focuses on the measurable impact of social validation cues in online shopping environments."
+      },
+      {
+        "id": 13,
+        "query": "\"price framing\" AND (perception OR willingness-to-pay)",
+        "angle": "Core subject - pricing tactics",
+        "rationale": "Catches research on how different ways of presenting prices (e.g., monthly vs. annual) affect consumer judgment."
+      },
+      {
+        "id": 14,
+        "query": "(\"ad copy\" OR \"ad text\") AND (persuasion OR \"call to action\") AND (test OR experiment)",
+        "angle": "Applied / real-world concerns",
+        "rationale": "Narrows to tested evidence about the impact of specific wording and calls-to-action in advertising."
+      },
+      {
+        "id": 15,
+        "query": "(\"default option\" OR \"opt-out\") AND (adoption OR enrollment OR subscription)",
+        "angle": "Methods / techniques",
+        "rationale": "Targets research on the powerful nudge of setting defaults, relevant for subscription and checkout flows."
+      }
+    ],
+    "coverage_notes": "Plan focuses on empirical, test-driven findings for core DTC/e-commerce levers: pricing, promotions, ads, landing pages, and behavioral nudges. Angles deliberately skipped include brand theory, advertising history, media planning, and qualitative/ethnographic methods, per the reader's preference for 'what actually works and why' with numbers. Assumes the reader values actionable evidence over theoretical frameworks."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"charm pricing\" AND (effectiveness OR \"consumer response\" OR conversion)",
+      "angle": "Core subject - pricing tactics",
+      "rationale": "Targets empirical research on the specific effectiveness of psychological pricing (e.g., $9.99).",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 2,
+      "query": "(\"price promotion\" OR discount) AND (\"brand perception\" OR \"brand equity\" OR \"brand damage\")",
+      "angle": "Critiques / failure modes",
+      "rationale": "Catches studies investigating when and why discounts might negatively impact brand value.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 3,
+      "query": "\"ad creative\" AND (effectiveness OR \"conversion rate\" OR performance) AND (experiment OR A/B OR \"field test\")",
+      "angle": "Applied / real-world concerns",
+      "rationale": "Focuses on experimental evidence about what specific creative elements drive conversion.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 4,
+      "query": "(\"product naming\" OR \"brand name\") AND (consumer OR \"purchase intent\" OR memorability) AND (test OR experiment)",
+      "angle": "Methods / techniques",
+      "rationale": "Seeks empirical studies on how different naming strategies influence measurable consumer outcomes.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 5,
+      "query": "(\"scarcity cue\" OR \"limited quantity\") AND (purchase OR checkout OR \"conversion rate\")",
+      "angle": "Core subject - behavioral nudges",
+      "rationale": "Targets research on the impact of scarcity messaging on final purchase decisions.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 6,
+      "query": "\"landing page\" AND (optimization OR \"conversion rate optimization\") AND (experiment OR \"A/B test\")",
+      "angle": "Applied / real-world concerns",
+      "rationale": "Narrows to experimental, data-driven findings about landing page elements that improve conversion.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 7,
+      "query": "(\"nudge\" OR \"choice architecture\") AND (ecommerce OR \"online purchase\" OR checkout) AND (effect OR impact)",
+      "angle": "Evaluation / evidence standards",
+      "rationale": "Focuses on applied behavioral science interventions with measured effects in online commercial contexts.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 8,
+      "query": "\"pricing test\" OR \"price experiment\"",
+      "angle": "Methods / techniques",
+      "rationale": "Captures methodological papers and case studies on running pricing experiments, which is a core activity for the reader.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "(\"promotional campaign\" OR \"sales promotion\") AND (effectiveness OR ROI OR \"return on investment\")",
+      "angle": "Evaluation / evidence standards",
+      "rationale": "Targets research measuring the actual financial impact of different promotional tactics.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 10,
+      "query": "\"visual attention\" AND (advertisement OR \"ad creative\") AND (eye-tracking OR \"click-through rate\")",
+      "angle": "Tools / artifacts / instruments",
+      "rationale": "Finds studies using tools like eye-tracking to link specific ad elements to viewer attention and action.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 11,
+      "query": "(\"free shipping\" OR \"shipping cost\") AND (purchase OR conversion) AND (experiment OR test)",
+      "angle": "Applied / real-world concerns",
+      "rationale": "Targets empirical evidence on a key e-commerce lever (shipping offers) and its impact on conversion.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "(\"social proof\" OR \"customer review\") AND (conversion OR \"purchase decision\") AND (ecommerce OR \"online store\")",
+      "angle": "Core subject - behavioral nudges",
+      "rationale": "Focuses on the measurable impact of social validation cues in online shopping environments.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "\"price framing\" AND (perception OR willingness-to-pay)",
+      "angle": "Core subject - pricing tactics",
+      "rationale": "Catches research on how different ways of presenting prices (e.g., monthly vs. annual) affect consumer judgment.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 14,
+      "query": "(\"ad copy\" OR \"ad text\") AND (persuasion OR \"call to action\") AND (test OR experiment)",
+      "angle": "Applied / real-world concerns",
+      "rationale": "Narrows to tested evidence about the impact of specific wording and calls-to-action in advertising.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 15,
+      "query": "(\"default option\" OR \"opt-out\") AND (adoption OR enrollment OR subscription)",
+      "angle": "Methods / techniques",
+      "rationale": "Targets research on the powerful nudge of setting defaults, relevant for subscription and checkout flows.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    }
+  ]
+}

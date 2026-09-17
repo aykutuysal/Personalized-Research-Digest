@@ -1,0 +1,90 @@
+{
+  "subject": "LLM agents",
+  "queries": [
+    {
+      "id": 1,
+      "query": "\"LLM agent\" AND (\"tool use\" OR \"function calling\" OR \"tool calling\")",
+      "angle": "Core subject \u2014 tool integration",
+      "rationale": "Focuses on the fundamental capability of agents to interact with external tools and APIs."
+    },
+    {
+      "id": 2,
+      "query": "\"language model agent\" AND (\"planning\" OR \"task decomposition\" OR \"hierarchical planning\")",
+      "angle": "Core subject \u2014 planning and reasoning",
+      "rationale": "Captures research on how agents break down and sequence tasks, a key architectural component."
+    },
+    {
+      "id": 3,
+      "query": "\"autonomous agent\" AND (\"memory\" OR \"long-term memory\" OR \"agent memory\")",
+      "angle": "Core subject \u2014 memory systems",
+      "rationale": "Targets papers on designing persistent knowledge storage and retrieval for agents."
+    },
+    {
+      "id": 4,
+      "query": "\"LLM\" AND \"agent\" AND (\"benchmark\" OR \"evaluation\" OR \"AgentBench\" OR \"GAIA\")",
+      "angle": "Evaluation standards",
+      "rationale": "Covers new benchmarks and evaluation frameworks for measuring agent performance."
+    },
+    {
+      "id": 5,
+      "query": "\"LLM agent\" AND (\"multi-agent\" OR \"agent collaboration\" OR \"swarm\")",
+      "angle": "Subspecialty \u2014 multi-agent systems",
+      "rationale": "Focuses on architectures where multiple agents interact and coordinate."
+    },
+    {
+      "id": 6,
+      "query": "\"agent\" AND (\"ReAct\" OR \"Reflexion\" OR \"Chain of Hindsight\")",
+      "angle": "Named methods / techniques",
+      "rationale": "Queries for papers referencing specific, influential prompting or reasoning techniques for agents."
+    },
+    {
+      "id": 7,
+      "query": "\"LLM agent\" AND (\"code generation\" OR \"software repair\" OR \"automated debugging\")",
+      "angle": "Applied / engineering context",
+      "rationale": "Targets agents applied to software engineering tasks, aligning with the reader's background."
+    },
+    {
+      "id": 8,
+      "query": "\"agent\" AND (\"hallucination\" OR \"factual consistency\" OR \"verification\")",
+      "angle": "Critiques / failure modes",
+      "rationale": "Captures research on mitigating reliability issues like hallucination in agent outputs."
+    },
+    {
+      "id": 9,
+      "query": "\"LLM agent\" AND (\"cost\" OR \"latency\" OR \"efficiency\" OR \"optimization\")",
+      "angle": "Applied / real-world concerns",
+      "rationale": "Focuses on practical engineering constraints like runtime performance and expense."
+    },
+    {
+      "id": 10,
+      "query": "\"LLM agent\" AND (\"embodied agent\" OR \"robotics\" OR \"physical interaction\")",
+      "angle": "Subspecialty \u2014 embodied agents",
+      "rationale": "Captures a distinct research branch where agents interact with physical environments."
+    },
+    {
+      "id": 11,
+      "query": "\"agent\" AND (\"retrieval-augmented generation\" OR RAG)",
+      "angle": "Tools / artifacts",
+      "rationale": "Focuses on the integration of retrieval systems, a common architectural component."
+    },
+    {
+      "id": 12,
+      "query": "\"agent\" AND (\"simulation\" OR \"environment\" OR \"Sandbox\")",
+      "angle": "Tools / artifacts",
+      "rationale": "Targets papers on designing or using simulated environments for training and testing agents."
+    },
+    {
+      "id": 13,
+      "query": "\"LLM agent\" AND (\"human-in-the-loop\" OR \"human feedback\" OR \"RLHF\")",
+      "angle": "Methods / techniques",
+      "rationale": "Covers techniques for incorporating human guidance or feedback into agent loops."
+    },
+    {
+      "id": 14,
+      "query": "\"agent\" AND (\"instruction following\" OR \"constraint satisfaction\" OR \"specification\")",
+      "angle": "Core subject \u2014 instruction adherence",
+      "rationale": "Focuses on research on how agents interpret and faithfully execute complex instructions."
+    }
+  ],
+  "coverage_notes": "The plan covers core architectural components (tool use, planning, memory), applied engineering contexts (code generation, cost/latency), evaluation standards, and specific techniques (ReAct, RAG). It deliberately avoids pure theory (e.g., formal agent foundations) and adjacent fields like economics or social science, aligning with the reader's engineering focus and preference for skimmable, practical updates."
+}

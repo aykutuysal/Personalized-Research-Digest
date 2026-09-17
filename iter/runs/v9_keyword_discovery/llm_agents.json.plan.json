@@ -1,0 +1,125 @@
+{
+  "subject": "LLM agents",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent architecture modular",
+      "rationale": "Directly addresses user's interest in new architectures with vocabulary evidence: 'Architecture' (42x), 'Modular design' (12x), 'Agent architecture' (6x). Focuses on engineering-grounded design patterns."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent tool use function calling",
+      "rationale": "Targets practical agent capabilities the user cares about. Combines 'tool use' (from seed queries) with 'function calling' (implied by tool use angle). Vocabulary shows 'Workflow' (13x) and 'Software' (6x) as relevant context."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "core",
+      "query": "multi-agent LLM orchestration",
+      "rationale": "Addresses multi-agent systems angle with vocabulary evidence: 'Multi-agent system' (13x), 'Multi-Agent Systems and Negotiation' (25x). 'Orchestration' refines to practical engineering concerns over pure theory."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent memory RAG retrieval",
+      "rationale": "Covers memory systems angle. Vocabulary includes 'Cognition' (15x) and 'Cognitive architecture' (8x), which relate to memory. RAG/retrieval are key techniques for long-term memory in agents."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent evaluation benchmark",
+      "rationale": "Directly matches user's evaluation angle. Vocabulary shows 'Benchmark' in sample titles. Targets capability tests and practical assessment methods."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent planning reasoning chain",
+      "rationale": "Targets planning/reasoning techniques. Vocabulary includes 'Cognition' (15x) and 'Thought Management System' from sample titles. 'Chain' references chain-of-thought approaches."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "LLM agent deployment scalability",
+      "rationale": "Intersects agent engineering with production concerns. Vocabulary evidence: 'Scalability' (11x), 'Software deployment' (11x). Addresses practical deployment patterns the user wants."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "LLM agent safety guardrails alignment",
+      "rationale": "Intersects agent functionality with safety/alignment concerns. Vocabulary includes 'Adversarial system' (8x) and 'Limiting' (8x), which relate to control and safety mechanisms."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "LLM agent workflow automation",
+      "rationale": "Intersects agent capabilities with practical automation. Vocabulary evidence: 'Workflow' (13x). Targets engineering patterns for automating tasks with agents."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "cognitive architecture LLM agent",
+      "rationale": "Intersects LLM agents with cognitive architectures from vocabulary: 'Cognitive architecture' (8x), 'Cognition' (15x). Could yield insights on reasoning and memory design."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "reinforcement learning LLM agent",
+      "rationale": "Adjacent field from vocabulary: 'Reinforcement learning' (8x), 'Reinforcement Learning in Robotics' (3x). Could reveal techniques for agent learning and adaptation."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "explainable AI LLM agent",
+      "rationale": "Adjacent field from vocabulary: 'Explainable Artificial Intelligence (XAI)' (4x). Important for debugging and trust in deployed agents."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "distributed control multi-agent LLM",
+      "rationale": "Adjacent field from vocabulary: 'Distributed Control Multi-Agent Systems' (5x). Could yield engineering patterns for coordinating multiple agents."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "LLM agent social simulation",
+      "rationale": "Unexpected field from sample titles: 'The 1st Workshop on LLM Agents for Social Simulation'. Vocabulary includes 'Sociology and Political Science' (11x). Might reveal novel emergent behaviors in agent populations."
+    },
+    {
+      "id": 15,
+      "angle_id": 15,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "LLM agent healthcare education",
+      "rationale": "Serendipitous applications from vocabulary: 'Artificial Intelligence in Healthcare and Education' (5x), 'Machine Learning in Healthcare' (3x). Could show agent use cases with practical constraints."
+    }
+  ]
+}

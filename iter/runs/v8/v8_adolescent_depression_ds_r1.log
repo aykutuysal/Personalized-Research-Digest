@@ -1,0 +1,52 @@
+prompt:  iter/prompts/v7_slotfilled.md
+profile: iter/profiles/adolescent_depression.md
+angles:  12
+model:   deepseek/deepseek-v3.2
+
+[1/5] generating pass-1 plan...   scorer error: Expecting value: line 13 column 14 (char 371)
+159.6s, 24 queries
+[2/5] running pass-1 queries against OpenAlex...
+  Q 1 angle=1 count=    2 low
+  Q 2 angle=1 count=   86 healthy
+  Q 3 angle=2 count=    1 low
+  Q 4 angle=2 count=    0 zero
+  Q 5 angle=3 count=   11 low
+  Q 6 angle=3 count=    4 low
+  Q 7 angle=4 count=   88 healthy
+  Q 8 angle=4 count=    7 low
+  Q 9 angle=5 count=    1 low
+  Q10 angle=5 count=   11 low
+  Q11 angle=6 count=    1 low
+  Q12 angle=6 count=   23 low
+  Q13 angle=7 count=   51 healthy
+  Q14 angle=7 count=    2 low
+  Q15 angle=8 count=   17 low
+  Q16 angle=8 count=   57 healthy
+  Q17 angle=9 count=   31 healthy
+  Q18 angle=9 count=    7 low
+  Q19 angle=10 count=    8 low
+  Q20 angle=10 count=   70 healthy
+  Q21 angle=11 count=    5 low
+  Q22 angle=11 count=    5 low
+  Q23 angle=12 count=  128 healthy
+  Q24 angle=12 count=    5 low
+[3/5] scoring pass-1 hits...
+[4/5] running diagnostic + backfill generation... 28.2s — statuses: {'empty-corpus': 5, 'wrong-corpus': 7}, backfills: 7
+[5/5] running backfill queries...
+  BF25 angle=3 count=   32 healthy  ("behavioral activation" OR "BA") AND ("adolescent" OR "teen") AND ("randomized 
+  BF26 angle=4 count=    8 low  ("mindfulness-based cognitive therapy" OR "MBCT") AND adolescent AND depression 
+  BF27 angle=7 count=    1 low  ("fluoxetine" OR "escitalopram" OR "sertraline") AND ("adolescent depression" OR
+  BF28 angle=8 count=    1 low  ("Mood and Feelings Questionnaire" OR "MFQ" OR "RADS-2") AND (validation OR "psy
+  BF29 angle=9 count=    3 low  ("Columbia Suicide Severity Rating Scale" OR "C-SSRS" OR "ASQ") AND adolescent A
+  BF30 angle=10 count=   97 healthy  ("social media" OR "Instagram" OR "TikTok") AND ("longitudinal" OR "prospective"
+  BF31 angle=12 count=   27 low  ("comorbid" OR "co-occurring") AND (anxiety AND depression) AND (adolescent OR y
+
+======================================================================
+v8 SCORECARD: iter/runs/v8/v8_adolescent_depression_ds_r1.json
+======================================================================
+  pass1 queries:    24
+  backfill queries: 7
+  union YES:        7
+  union precision:  48%
+  diagnoses:        {'empty-corpus': 5, 'wrong-corpus': 7}
+  costs:            pass1=$0.00162806, diagnostic=$0.00147171

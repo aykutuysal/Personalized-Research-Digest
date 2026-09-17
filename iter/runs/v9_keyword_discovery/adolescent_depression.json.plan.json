@@ -1,0 +1,133 @@
+{
+  "subject": "Adolescent depression",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "social media adolescent mental health",
+      "rationale": "Addresses user's interest in social-media-and-mental-health links. 'Social media' appears frequently (41x) in vocabulary, and seed query yielded 237 results, suggesting active research area."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "school-based adolescent depression intervention",
+      "rationale": "Targets user's interest in school-based prevention/intervention. Vocabulary includes 'Student Stress and Coping' topic and 'Education' subfield evidence."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "adolescent depression anxiety comorbidity treatment",
+      "rationale": "Combines user's focus on comorbid anxiety with depression treatment. 'Anxiety' appears frequently (45x) in vocabulary, and user treats teens with both conditions."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "digital adolescent depression intervention",
+      "rationale": "Combines digital interventions with adolescent depression focus. 'Digital Mental Health Interventions' appears as topic (13x) in vocabulary, matching user's interest in app-based approaches."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "family-based adolescent depression therapy",
+      "rationale": "Addresses user's interest in family-based treatments for adolescent depression. Vocabulary includes 'Child and Adolescent Psychosocial and Emotional Development' topic (15x)."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "adolescent depression assessment tools",
+      "rationale": "Targets user's interest in assessment tools. Vocabulary includes 'Clinical Psychology' subfield (67x) and 'Psychological intervention' keyword (47x), suggesting assessment research exists."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "adolescent sleep depression review",
+      "rationale": "Adjacent to user's interests; 'Sleep and related disorders' appears as topic (4x) in vocabulary, and sample titles show sleep-depression connections in adolescents."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "adolescent trauma depression intervention",
+      "rationale": "Adjacent field; 'Posttraumatic Stress Disorder Research' appears as topic (2x) and sample titles include trauma-focused interventions for adolescents."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "adolescent ADHD depression treatment",
+      "rationale": "Unexpected connection from vocabulary: 'Attention Deficit Hyperactivity Disorder' appears as topic (5x). Could yield insights on comorbid conditions user encounters."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "core",
+      "query": "cognitive behavioral therapy adolescent depression randomized controlled trial",
+      "rationale": "Replaced 'CBT' with full term 'cognitive behavioral therapy' from keywords, kept other terms to maintain specificity for evidence-based interventions."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "core",
+      "query": "interpersonal psychotherapy adolescent depression",
+      "rationale": "Replaced 'IPT-A' with broader 'interpersonal psychotherapy' to match OpenAlex vocabulary while maintaining focus on adolescent depression treatment."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "core",
+      "query": "SSRIs adolescent depression safety pharmacology",
+      "rationale": "Added 'pharmacology' from subfields to qualify the safety focus and provide context for medication-related research."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "core",
+      "query": "suicide prevention adolescent mental health screening",
+      "rationale": "Replaced 'adolescent suicide' with broader 'adolescent mental health' and kept 'suicide prevention' from keywords to capture screening studies."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "mindfulness adolescent mental health randomized controlled trial",
+      "rationale": "Replaced 'depression' with broader 'mental health' from keywords while maintaining 'randomized controlled trial' for methodological rigor."
+    },
+    {
+      "id": 15,
+      "angle_id": 15,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "behavioral activation depression adolescent",
+      "rationale": "Simplified to core terms without additional qualifiers, using 'depression' and 'adolescent' which appear in extracted vocabulary."
+    },
+    {
+      "id": 16,
+      "angle_id": 16,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "writing mental health adolescent",
+      "rationale": "Replaced 'writing adolescent mental health' with natural phrase order using 'mental health' from keywords and 'adolescent' from context."
+    }
+  ]
+}

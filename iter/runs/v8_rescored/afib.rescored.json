@@ -1,0 +1,829 @@
+{
+  "timestamp": "2026-04-16T12:41:18.459185+00:00",
+  "prompt_file": "/home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/afib.plan.json",
+  "profile_file": "/home/aykut/dev/workspace/ResearchDigest/iter/profiles/afib.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "search",
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 8,
+    "healthy": 7,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.47,
+  "frac_healthy_or_safety": 0.47,
+  "mean_precision": 0.55,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.65,
+    "healthy": 0.44,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Atrial fibrillation treatment",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"catheter ablation\" AND (\"atrial fibrillation\" OR AFib)",
+        "angle": "Core procedural technique",
+        "rationale": "Catches primary research on the dominant rhythm control procedure for AFib, focusing on outcomes and techniques."
+      },
+      {
+        "id": 2,
+        "query": "(\"pulmonary vein isolation\" OR \"cryoballoon ablation\" OR \"pulsed field ablation\") AND (\"atrial fibrillation\")",
+        "angle": "Specific ablation technologies",
+        "rationale": "Targets papers on specific ablation modalities and newer energy sources, which are key for a practicing electrophysiologist."
+      },
+      {
+        "id": 3,
+        "query": "(\"direct oral anticoagulant\" OR DOAC OR apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (\"atrial fibrillation\")",
+        "angle": "Anticoagulation pharmacotherapy",
+        "rationale": "Captures clinical studies on DOAC use, choice, and outcomes in AFib patients, a central management pillar."
+      },
+      {
+        "id": 4,
+        "query": "\"left atrial appendage closure\" AND (\"atrial fibrillation\")",
+        "angle": "Stroke prevention procedure",
+        "rationale": "Focuses on the interventional alternative to long-term anticoagulation for stroke prevention."
+      },
+      {
+        "id": 5,
+        "query": "(\"rate control\" OR \"rhythm control\") AND (\"atrial fibrillation\")",
+        "angle": "Management strategy debate",
+        "rationale": "Targets the ongoing comparative effectiveness research and trial results on the fundamental treatment strategy choice."
+      },
+      {
+        "id": 6,
+        "query": "(\"early rhythm control\" OR \"EARLY-AF\" OR \"EAST-AFNET 4\") AND (\"atrial fibrillation\")",
+        "angle": "Recent landmark trial paradigms",
+        "rationale": "Queries for papers discussing or extending findings from key recent trials that shift practice."
+      },
+      {
+        "id": 7,
+        "query": "(\"bleeding risk\" OR \"major bleeding\" OR \"intracranial hemorrhage\") AND (\"atrial fibrillation\" AND anticoagulation)",
+        "angle": "Anticoagulation safety",
+        "rationale": "Catches studies focused on the major risk of therapy, including risk scores and management of bleeding."
+      },
+      {
+        "id": 8,
+        "query": "(\"persistent atrial fibrillation\" OR \"long-standing persistent\") AND (ablation OR \"rhythm control\")",
+        "angle": "Challenging AFib subtype",
+        "rationale": "Focuses on treatment approaches for more difficult-to-treat forms of AFib."
+      },
+      {
+        "id": 9,
+        "query": "(\"antiarrhythmic drug\" OR amiodarone OR flecainide OR dronedarone OR sotalol) AND (\"atrial fibrillation\")",
+        "angle": "Pharmacologic rhythm control",
+        "rationale": "Targets research on drug therapy for maintaining sinus rhythm, relevant for pre-ablation or ablation-ineligible patients."
+      },
+      {
+        "id": 10,
+        "query": "(\"clinical guideline\" OR \"consensus statement\" OR \"expert consensus\") AND (\"atrial fibrillation\")",
+        "angle": "Practice standards & updates",
+        "rationale": "Captures synthesis documents and guideline publications that directly inform care decisions."
+      },
+      {
+        "id": 11,
+        "query": "(\"randomized controlled trial\" OR RCT OR \"randomized trial\") AND (\"atrial fibrillation\" AND treatment)",
+        "angle": "High-level evidence filter",
+        "rationale": "A broad safety-net query for any treatment-focused RCTs in AFib, aligning with the reader's preference for trial data."
+      },
+      {
+        "id": 12,
+        "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"atrial fibrillation\" AND treatment)",
+        "angle": "Evidence synthesis",
+        "rationale": "Targets high-level summaries of evidence across multiple studies for efficient reading."
+      },
+      {
+        "id": 13,
+        "query": "(\"stroke prevention\" OR \"ischemic stroke\") AND (\"atrial fibrillation\")",
+        "angle": "Primary treatment goal",
+        "rationale": "Captures papers focused on the core objective of AFib management, beyond specific drugs or devices."
+      },
+      {
+        "id": 14,
+        "query": "(\"hybrid ablation\" OR \"convergent procedure\" OR \"epicardial ablation\") AND (\"atrial fibrillation\")",
+        "angle": "Advanced/surgical ablation",
+        "rationale": "Targets papers on combined surgical/catheter approaches for complex cases."
+      },
+      {
+        "id": 15,
+        "query": "(\"periprocedural\" OR \"post-ablation\" OR \"blanking period\") AND (\"atrial fibrillation\" AND ablation)",
+        "angle": "Ablation perioperative management",
+        "rationale": "Focuses on immediate post-procedure care, complications, and early recurrence management."
+      }
+    ],
+    "coverage_notes": "Plan covers core clinical angles: ablation techniques, anticoagulation, LAA closure, rate/rhythm control, and high-level evidence (trials, guidelines, meta-analyses). It deliberately excludes basic science (animal models, genetics) and health economics, as per the profile. Queries use Pattern B (specific x specific) for precision, with one Pattern C-style large anchor for 'persistent AFib' to ensure recall on that subtype. The 'RCT' and 'meta-analysis' queries are recall-safety nets using the disease as the specificity carrier."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"catheter ablation\" AND (\"atrial fibrillation\" OR AFib)",
+      "angle": "Core procedural technique",
+      "rationale": "Catches primary research on the dominant rhythm control procedure for AFib, focusing on outcomes and techniques.",
+      "openalex_count": 33,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Impact of anemia prior to catheter ablation for atrial fibrillation on clinical outcomes: a U.S. retrospective cohort analysis",
+          "abstract": "",
+          "relevance_score": 19.578514,
+          "id": "https://openalex.org/W7151456597"
+        },
+        {
+          "title": "Preserved Cardiorespiratory Fitness After Catheter Ablation in Athletes With Atrial Fibrillation",
+          "abstract": "",
+          "relevance_score": 15.749129,
+          "id": "https://openalex.org/W7151344869"
+        },
+        {
+          "title": "Procedural Complexity and Outcomes of Catheter Ablation for Atrial Fibrillation in Patients With Sick Sinus Syndrome",
+          "abstract": "Patients with SSS more frequently underwent PVI-plus ablation for AFL or non-PV foci, yet long-term AF recurrence was comparable to that in non-SSS patients, underscoring the importance of careful assessment for concomitant atrial arrhythmias in this population.",
+          "relevance_score": 14.471659,
+          "id": "https://openalex.org/W7153602343"
+        },
+        {
+          "title": "Right Ventricular\u2010Pulmonary Artery Coupling in Patients With Atrial Fibrillation and Changes After Catheter Ablation",
+          "abstract": "Approximately 20% of patients with AF with preserved left ventricular ejection fraction had abnormal RV-PA coupling, and CA improved RV-PA coupling status, whereas its benefits were observed in patients free from recurrent AF.",
+          "relevance_score": 13.763196,
+          "id": "https://openalex.org/W7152380303"
+        },
+        {
+          "title": "Transseptal Puncture and Catheter Ablation of Atrial Fibrillation in Patients With Atrial Septal Occluder Devices: Procedural Techniques and Outcomes",
+          "abstract": "Transseptal puncture and AF ablation can be performed safely and effectively in patients with ASO devices. A case-based procedural approach with appropriate imaging guidance enables reliable LA access even in the presence of an ASO device.",
+          "relevance_score": 12.8516,
+          "id": "https://openalex.org/W7152554706"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 2,
+      "query": "(\"pulmonary vein isolation\" OR \"cryoballoon ablation\" OR \"pulsed field ablation\") AND (\"atrial fibrillation\")",
+      "angle": "Specific ablation technologies",
+      "rationale": "Targets papers on specific ablation modalities and newer energy sources, which are key for a practicing electrophysiologist.",
+      "openalex_count": 20,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Pulsed field ablation versus cryoballoon ablation for pulmonary vein isolation in atrial fibrillation: a systematic review and meta-analysis with subgroup analyses by AF type",
+          "abstract": "Pulsed field ablation (PFA) is a non-thermal alternative to cryoballoon ablation (CBA) for pulmonary vein isolation in atrial fibrillation (AF). We compared their procedural efficiency, safety, and 1-year outcomes. We searched PubMed, Scopus, Web of Science, CENTRAL, and Embase through October 2025 for randomized and comparative cohort studies of adults undergoing PFA or CBA. Outcomes were procedure duration, fluoroscopy time, left-atrial dwell time, periprocedural complications, and 1-year atrial arrhythmia recurrence, synthesized using random-effects meta-analyses with AF-type subgroup analyses. Twenty-three studies were included overall, of which 22 contributed to the quantitative synthesis. Overall, PFA shortened procedure duration versus CBA (mean difference [MD] \u2212 11.50 min, 95% confidence interval [CI] \u2212 15.39 to \u2212 7.62), driven by persistent and mixed AF subgroups, while no significant difference was observed in paroxysmal AF. LA dwell time was reduced with PFA in paroxysmal AF, whereas fluoroscopy time did not differ significantly overall. Stroke, bleeding, and cardiac tamponade were comparable. PFA markedly decreased persistent (risk ratio [RR] 0.31, 95% CI 0.10\u20130.91) and transient (RR 0.19, 95% CI 0.07\u20130.53) phrenic nerve palsy. At 1 year, overall pooled analyses showed lower total atrial arrhythmia recurrence (RR 0.79, 95% CI 0.66\u20130.94) and AF recurrence (RR 0.72, 95% CI 0.62\u20130.83), with no difference in atrial flutter recurrence. PFA appears to offer shorter procedures and a more favorable phrenic-nerve safety profile than cryoballoon ablation, without evidence of excess major complications. Apparent 1-year efficacy advantages should be interpreted cautiously because the evidence base is dominated by observational studies and direct randomized PFA-versus-cryoballoon evidence remains limited.",
+          "relevance_score": 37.996674,
+          "id": "https://openalex.org/W7154089496"
+        },
+        {
+          "title": "Time-course changes in autonomic nervous system activity after pulsed-field ablation for paroxysmal atrial fibrillation: comparison with cryoballoon ablation",
+          "abstract": "",
+          "relevance_score": 30.006783,
+          "id": "https://openalex.org/W7154165289"
+        },
+        {
+          "title": "Ablation of visually identified spatiotemporal dispersion plus pulmonary vein isolation in persistent atrial fibrillation",
+          "abstract": "Structured Abstract Background and aims Pulmonary vein isolation (PVI) provides limited efficacy in persistent atrial fibrillation (AF). We performed PVI plus ablation of areas with visually detected spatiotemporal dispersion (STD) in consecutive patients with persistent AF, and compared them with a 1:1 propensity score-matched cohort of patients treated with a PVI-only approach. Methods STD was visually identified using conventional high-density mapping catheters (IntellaMap ORION, PentaRay NAV or Advisor HD Grid), without dedicated software. Areas with STD showing fractionated continuous electrograms (FCEs), if present, were ablated first, and other areas with STD were ablated in cases without AF conversion during ablation of FCEs. The right atrium was treated only in cases without AF conversion during left atrial ablation in which the AF cycle length was faster at the right atrium. Results 100 patients were treated with each ablation strategy (PVI+STD or PVI-only) (63.9\u00b110.1 years, 28% females). 35 Patients from the PVI+STD group showed areas with FCEs, which were ablated first, achieving AF termination in 9 patients. In the remaining 91 patients, 221 areas with STD were ablated. The right atrium was treated in 48 patients. Globally, AF conversion was achieved in 33 patients. The PVI+STD group showed lower atrial arrhythmia recurrences at 18-month follow-up (30% Vs 53%, p&amp;lt;0.001) and after a median follow-up of 45 [26\u201366] months (44% Vs 71%, p&amp;lt;0.001), and less progression to permanent AF (14% Vs 41%, p&amp;lt;0.001). Conclusion Ablation of areas with visually identified STD, added to PVI, reduced atrial arrhythmia recurrences and decreased progression to permanent AF.",
+          "relevance_score": 21.58046,
+          "id": "https://openalex.org/W7154036515"
+        },
+        {
+          "title": "Pulsed Field Ablation for the Interventional Treatment of Atrial Fibrillation. A Scientific Statement of the European Heart Rhythm Association (EHRA) of the ESC, the Heart Rhythm Society (HRS), the Asia Pacific Heart Rhythm Society (APHRS), the Latin American Heart Rhythm Society (LAHRS) and the Canadian Heart Rhythm Society (CHRS)",
+          "abstract": "Pulsed field ablation has emerged as a novel non-thermal treatment modality with a distinct safety profile for the interventional treatment of atrial fibrillation. By inducing irreversible electroporation, pulsed field ablation achieves myocardial ablation while preserving surrounding structures such as nerves, vasculature, and the esophagus. This European Heart Rhythm Association (EHRA) of the European Society of Cardiology (ESC) scientific statement, endorsed by major international societies, reviews the biophysics, technology, clinical evidence, workflow, safety, and training aspects of pulsed field ablation. Randomized trials demonstrate comparable efficacy to radiofrequency and cryoballoon ablation, with advantages in safety and efficiency. The statement provides practical advice for clinical implementation, operator training, and identifies key gaps in evidence and priorities for future research and innovation.",
+          "relevance_score": 20.80494,
+          "id": "https://openalex.org/W7154037036"
+        },
+        {
+          "title": "A multicentre study on persistent atrial fibrillation ablation targeting rotational activity on top of pulmonary vein isolation: insights from an extensive mapping technique",
+          "abstract": "Background-aims Recently, the etiopathogenetic role of rotational activity (RotAct) in atrial fibrillation (AF) has been proposed. We designed a prospective multicenter study using CARTO Finder to evaluate the presence/distribution of RotActs in persistent AF (persAF), pulmonary vein isolation (PVI)influences on RotActs, and the impact of its elimination on top of PVI on procedural outcomes. Methods For this study, 76 patients with pers AF ablation were enrolled. Procedural steps involved (1) using a CARTO-Finder map to look for RotActs (physician blinded); (2) PVI; (3) using a new map to look for residual/new RotActs; (4) ablation of RotActs, if present; (5) and finally using a new map to confirm RotAct elimination. Populations were divided based on the presence or absence of structural heart disease (Group I and II) and the presence or absence (R+ and R\u2212) of RotActs before PVI. Presence, number, and distribution of RotAct at STEP 1, the impact of PVI on RotAct at STEP 3, and maintenance of sinus rhythm (SR) during follow-up were evaluated. 56 AF patients undergoing standard ablation protocol were included as a control group. Results RotAct was identified in 29 (38%) patients at STEP1. RotAct did not differ between GI and GII patients. PVI significantly modified the number and localization of RotActs ( p = 0.012). RotActs which were present at STEP 1 were different after PVI, with disappearance in 18 and new appearance in 5 patients. 71 patients completed a mean 13 \u00b1 6 months follow-up and 91.5% were in stable SR. No difference in relapses was seen between R + and R- and GI and GII. RotAct ablation significantly reduced arrhythmia relapse during the follow-up compared to the control group (freedom from arrhythmia 91.5% vs. 78.6%, p = 0.025). Conclusion RotAct was present in 38% in persAF patients. PVI influenced the number and distribution of RotActs. A tailored ablation strategy provided a high success rate (91.5%) at the follow-up.",
+          "relevance_score": 19.398745,
+          "id": "https://openalex.org/W7153227500"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 3,
+      "query": "(\"direct oral anticoagulant\" OR DOAC OR apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (\"atrial fibrillation\")",
+      "angle": "Anticoagulation pharmacotherapy",
+      "rationale": "Captures clinical studies on DOAC use, choice, and outcomes in AFib patients, a central management pillar.",
+      "openalex_count": 38,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "abstract": "Introduction and purposeAtrial fibrillation (AF) is the most common sustained supraventricular arrhythmia and a major cause of ischemic stroke and systemic thromboembolism. In non-valvular AF, most thrombi originate in the left atrial appendage (LAA). Oral anticoagulation with vitamin K antagonists (VKAs) or direct oral anticoagulants (DOACs) remains the cornerstone of stroke prevention; however, long-term therapy may be limited by bleeding risk and adherence challenges. Percutaneous left atrial appendage closure (LAAC) has emerged as an anatomy-based alternative. This review aimed to compare the efficacy and safety of LAAC with DOACs and VKAs in patients with permanent AF at high risk of adverse events. Material and methodsA qualitative literature review was conducted using PubMed, Embase, Cochrane Library, and Web of Science. Randomized controlled trials, meta-analyses, pooled analyses, and large cohort or registry studies published between 2015 and 2025 were included. Outcomes of interest included ischemic stroke, systemic embolism, major bleeding, mortality, and procedure-related complications. ResultsAcross randomized trials and observational studies, LAAC, DOACs, and VKAs demonstrated comparable efficacy in preventing ischemic stroke and systemic embolism. Randomized data confirmed the non-inferiority of LAAC compared with warfarin and DOAC therapy. Safety profiles differed: DOACs showed lower rates of major bleeding than VKAs, whereas LAAC presented higher early procedural risk but fewer late bleeding events. ConclusionsLAAC provides stroke prevention efficacy comparable to oral anticoagulation and may offer long-term safety advantages in selected high-risk patients. Individualized treatment strategies remain essential in permanent AF.",
+          "relevance_score": 12.7146015,
+          "id": "https://openalex.org/W7152501191"
+        },
+        {
+          "title": "Plain language summary looking at the impact of drug management strategies on the incidence and cost of clinical events in patients with non-valvular atrial fibrillation receiving direct oral anticoagulants in the USA",
+          "abstract": "",
+          "relevance_score": 11.773831,
+          "id": "https://openalex.org/W7152871866"
+        },
+        {
+          "title": "Interpretable machine learning models for stroke risk prediction in patients with newly diagnosed atrial fibrillation",
+          "abstract": "Atrial fibrillation (AF) is the most common sustained arrhythmia and a leading cause of ischemic stroke. Existing risk scores, such as CHA\u2082DS\u2082-VASc, offer limited predictive accuracy and fail to capture complex clinical patterns. To improve generalizability and clinical utility, we developed and externally validated clinically interpretable machine learning models using only age, comorbidities, and medication use to predict 1-year stroke risk in patients with newly diagnosed AF. Both logistic regression (LR) and Platt-calibrated extreme gradient boosting (XGB) models achieved high discrimination in internal (AUCs = 0.915 and 0.914) and external validation cohorts (AUCs = 0.877-0.886), significantly outperforming CHA\u2082DS\u2082-VASc (AUCs = 0.614-0.621; p < 0.001). Calibration curves and decision curve analysis confirmed strong clinical utility. Long-term follow-up demonstrated superior risk stratification and treatment responsiveness in LR-defined high-risk groups. These models provide accurate, individualized stroke risk estimates to guide direct oral anticoagulant (DOAC) initiation in real-world hospital settings.",
+          "relevance_score": 11.270443,
+          "id": "https://openalex.org/W7151513738"
+        },
+        {
+          "title": "Anticoagulant adherence and associated complications and readmissions in older valve surgery adults: insights from a retrospective cohort study",
+          "abstract": "Valvular heart disease frequently affects older adults and necessitates valve replacement surgery followed by anticoagulation therapy. Although direct oral anticoagulants (DOACs) are increasingly used for atrial fibrillation and venous thromboembolism, they are not approved for use in mechanical heart valves. This study evaluated anticoagulant adherence and clinical outcomes among older patients after valve replacement using Taiwan\u2019s National Health Insurance data. This retrospective cohort study used the Taiwan National Health Insurance Research Database and included 4,872 patients aged \u2265 65 years with valvular heart disease who underwent valve replacement between 2010 and 2020. Patients with a history of end-stage renal disease, venous thromboembolism, or ischemic stroke before the index surgery were excluded. Anticoagulant use after discharge was identified, and medication adherence was defined as prescriptions covering \u2265 80% of days during a fixed 180-day post-discharge window. Multivariable logistic regression and Cox proportional hazards models were used to evaluate factors associated with adherence and clinical outcomes, including mortality and readmissions. Among the included patients, 38.53% did not receive any oral anticoagulant after discharge. Warfarin users demonstrated higher adherence rates than DOAC users. Females and those aged \u2265 75 years showed better adherence. Nonadherence was more common among DOAC users (OR: 1.51; 95% CI: 1.08\u20132.11) and was associated with higher stroke-related readmissions (DOACs, 7.63%; warfarin, 6.20%), although causal relationships cannot be established. DOAC users had lower observed 1-year mortality rates (4.31% vs. 8.36%) and similar rates of major bleeding events (6.12% vs. 6.34%) compared with warfarin users. Differences in anticoagulant adherence and clinical outcomes were observed among older patients following valve surgery. Warfarin users showed higher measured adherence, whereas DOAC users had lower observed mortality. Because treatment allocation was not randomized and adherence is closely related to treatment type, the independent effect of adherence on outcomes cannot be completely established. Therefore, these findings should be interpreted cautiously prospective studies should be conducted to elucidate the relationship between adherence and clinical outcomes.",
+          "relevance_score": 8.738939,
+          "id": "https://openalex.org/W7152561785"
+        },
+        {
+          "title": "Reusing Blood Samples from a Hospital-based Cohort to Apixaban Plasma Concentrations",
+          "abstract": "Abstract In the management of atrial fibrillation, the most frequently prescribed oral anticoagulant is apixaban, given at a fixed dose of 5mg BID. Apixaban is predominantly metabolized by cytochrome P4503A4 (CYP3A4) and is also a substrate for the drug efflux transporter P-glycoprotein (P-gp). In nearly 300,000 Medicare patients with AF receiving apixaban, we previously showed that concomitant therapy with drugs that inhibit both CYP3A4 and P-gp, specifically amiodarone or diltiazem, significantly increased serious bleeding that caused hospitalization and/or death. We hypothesized that this adverse effect was mediated by an increase in apixaban plasma concentrations caused by concomitant therapy that reduced drug elimination. Utilizing left-over samples obtained from clinically indicated blood draws that would typically be discarded, the Vanderbilt University Medical Center biobank BioVU contains &gt;353,000 samples linked to de-identified electronic medical records (EMRs), with both DNA and plasma harvested. Of 35 samples drawn from patients taking apixaban 5mg BID, 5 were identified to be drawn from patients concomitantly taking drugs inhibiting both CYP3A4 and P-gp. Using a chromogenic anti-Xa assay, we found that plasma concentrations of apixaban were significantly higher (347\u00b164 ng/mL; mean\u00b1SEM) for patients receiving concomitant CYP3A4/P-gp-inhibiting drugs compared to those not treated with these drugs (166\u00b167 ng/mL; P=0.025, Mann Whitney). There were no differences between the 2 patient groups with respect to age, weight, or serum creatinine. The results of this pilot study provide preliminary data to support our hypothesis, and they demonstrate the practicality of obtaining pharmacokinetic data from a large cohort of plasma samples linked to deidentified EMRs. This approach could be used to define the role of apixaban levels in high-risk clinical scenarios and to better understand the relationship between drug levels and bleeding risk.",
+          "relevance_score": 8.588129,
+          "id": "https://openalex.org/W7152038966"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 4,
+      "query": "\"left atrial appendage closure\" AND (\"atrial fibrillation\")",
+      "angle": "Stroke prevention procedure",
+      "rationale": "Focuses on the interventional alternative to long-term anticoagulation for stroke prevention.",
+      "openalex_count": 8,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A case of transient tachy-bradycardia syndrome following combined atrial fibrillation ablation and left atrial appendage closure",
+          "abstract": "Atrial fibrillation (AF) and atrial flutter (AFL) are common arrhythmias, with incidence increasing with age. Catheter ablation and left atrial appendage closure (LAAC) are guideline-recommended treatments for patient with AF and high thromboembolic risk of stroke. We report the case of a patient with paroxysmal AF/AFL at high thromboembolic risk who developed paroxysmal rapid AF with sinus arrest following combined pulmonary vein isolation (PVI) and LAAC. Notably, both the arrhythmia and sinus node dysfunction gradually resolved over three months without pacemaker implantation. We propose that a watchful waiting strategy may be appropriate in similar clinical scenarios.",
+          "relevance_score": 31.031733,
+          "id": "https://openalex.org/W7153203360"
+        },
+        {
+          "title": "Left atrial appendage closure non-inferior to NOACs in atrial fibrillation",
+          "abstract": "",
+          "relevance_score": 23.917917,
+          "id": "https://openalex.org/W7153026935"
+        },
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "abstract": "Introduction and purposeAtrial fibrillation (AF) is the most common sustained supraventricular arrhythmia and a major cause of ischemic stroke and systemic thromboembolism. In non-valvular AF, most thrombi originate in the left atrial appendage (LAA). Oral anticoagulation with vitamin K antagonists (VKAs) or direct oral anticoagulants (DOACs) remains the cornerstone of stroke prevention; however, long-term therapy may be limited by bleeding risk and adherence challenges. Percutaneous left atrial appendage closure (LAAC) has emerged as an anatomy-based alternative. This review aimed to compare the efficacy and safety of LAAC with DOACs and VKAs in patients with permanent AF at high risk of adverse events. Material and methodsA qualitative literature review was conducted using PubMed, Embase, Cochrane Library, and Web of Science. Randomized controlled trials, meta-analyses, pooled analyses, and large cohort or registry studies published between 2015 and 2025 were included. Outcomes of interest included ischemic stroke, systemic embolism, major bleeding, mortality, and procedure-related complications. ResultsAcross randomized trials and observational studies, LAAC, DOACs, and VKAs demonstrated comparable efficacy in preventing ischemic stroke and systemic embolism. Randomized data confirmed the non-inferiority of LAAC compared with warfarin and DOAC therapy. Safety profiles differed: DOACs showed lower rates of major bleeding than VKAs, whereas LAAC presented higher early procedural risk but fewer late bleeding events. ConclusionsLAAC provides stroke prevention efficacy comparable to oral anticoagulation and may offer long-term safety advantages in selected high-risk patients. Individualized treatment strategies remain essential in permanent AF.",
+          "relevance_score": 15.234089,
+          "id": "https://openalex.org/W7152501191"
+        },
+        {
+          "title": "Hybrid mitral repair and coronary artery bypass with Penditure left atrial appendage closure",
+          "abstract": "We present the case of an 84-year-old man with acute coronary syndrome, ischaemic mitral regurgitation, and chronic atrial fibrillation. The patient was successfully treated using a two-stage hybrid strategy consisting of initial transcatheter mitral valve edge-to-edge repair followed by coronary artery bypass grafting with Penditure-based left atrial appendage closure.",
+          "relevance_score": 13.028671,
+          "id": "https://openalex.org/W7151288947"
+        },
+        {
+          "title": "A pulmonary arteriovenous shunt hypoxemia and recurrent bleeding in the emergency department: a case report",
+          "abstract": "We report the case of a 62-year-old male with a long-standing history of Hereditary Hemorrhagic Telangiectasia (HHT, Rendu-Osler-Weber syndrome) complicated by multiple Pulmonary Arteriovenous Malformations (PAVMs), chronic anemia from recurrent gastrointestinal bleeding, and permanent atrial fibrillation. He presented to the Emergency Department (ED) with acute dyspnea and atrial fibrillation with rapid ventricular response. Despite high-flow oxygen therapy, severe hypoxemia persisted due to right-to-left shunt physiology. A prompt blood transfusion increased the oxygen delivery, contributing to transient clinical stabilization; however, the PaO2/FiO2 ratio remained severely reduced, confirming persistent impairment of oxygenation. After multidisciplinary evaluation, he underwent a successful embolization of one PAVMs, with overall clinical improvement. Because of high bleeding risk, long-term oral anticoagulation was avoided and left atrial appendage closure was proposed but declined by the patient. This case highlights the complexity of managing shunt hypoxia and anticoagulation in HHT patients with PAVMs presenting with acute dyspnea to the ED.",
+          "relevance_score": 11.825789,
+          "id": "https://openalex.org/W7151794631"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 5,
+      "query": "(\"rate control\" OR \"rhythm control\") AND (\"atrial fibrillation\")",
+      "angle": "Management strategy debate",
+      "rationale": "Targets the ongoing comparative effectiveness research and trial results on the fundamental treatment strategy choice.",
+      "openalex_count": 27,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Lev\u00e1 s\u00ed\u0148 a fibrilace s\u00edn\u00ed u kriticky nemocn\u00fdch: od echokardiografie k terapii",
+          "abstract": "New\u2011onset atrial fibrillation is common in critically ill patients with septic shock and worsens haemodynamics through loss of atrial contraction, shortening of diastolic filling time, decrease in cardiac output, and elevation of filling pressures. In this context, atrial fibrillation is associated with prolonged hospitalisation, a higher risk of ischaemic stroke, and increased mortality. The pathogenesis is multifactorial, combining patient\u2011specific predispositions and triggers associated with critical illness. These include excessive catecholamine release, electrolyte imbalances, autonomic nervous system dysregulation, systemic inflammation, and changes in preload and afterload. Together, these factors enhance atrial arrhythmogenicity and predispose to the development of new\u2011onset atrial fibrillation. Bedside echocardiography enables personalised diagnosis, treatment, and prevention. Parameters focused on the left atrium aid in the risk stratification of atrial fibrillation, prediction of sinus rhythm maintenance, and selection of an appropriate management strategy (rhythm control vs. rate control). Therefore, a comprehensive and individualised assessment of the left atrium, along with evaluation of diastolic and systolic function of both ventricles, should be an integral part of arrhythmia management in patients with septic shock. This review also provides a practical bedside algorithm to guide phenotype\u2011based management.",
+          "relevance_score": 9.002563,
+          "id": "https://openalex.org/W7152405070"
+        },
+        {
+          "title": "What are the recommended dosages for beta-blockers and calcium channel blockers in the management of atrial fibrillation?",
+          "abstract": "Beta-blockers and calcium channel blockers are commonly used for rate control in atrial fibrillation, with specific dosing for each stage of treatment. Dosage adjustments should consider patient-specific factors.",
+          "relevance_score": 7.0801983,
+          "id": "https://openalex.org/W7153137420"
+        },
+        {
+          "title": "Acute Atrial Fibrillation and Flutter Treated Electively (AFFELECT) \u2013 Rationale and design of the randomized controlled AFFELECT trial",
+          "abstract": "Abstract Background Cardioversion (CV) is commonly used in the emergency department (ED) to treat recent-onset atrial fibrillation (AF) or flutter (AFL). Design The AFFELECT trial (NCT04267159) is an investigator-initiated, prospective, unblinded randomized controlled non-inferiority trial comparing experimental delayed rhythm control (elective CV performed within 5-9 days after the index visit) to standard acute rhythm control (CV performed in ED) in patients with recent-onset (duration &amp;lt;48 hours) symptomatic AF/AFL suitable for rhythm control. A total of 500 patients are randomized in a 2:3 ratio to the acute and delayed groups, respectively, accounting for a possible one-third unplanned early CV rate in the delayed group due to higher symptom burden. Unplanned early CV means that patients with unbearable symptoms are offered the option for an earlier cardioversion (before the 5-9 days target timeline) if needed. Patients randomized to delayed group are discharged immediately after adequate heart rate control (heart rate &amp;lt;110bpm) and anticoagulation and are scheduled an appointment for delayed CV at a cardiology outpatient clinic (in transesophageal echocardiography guidance if required). Patients randomized to acute CV undergo cardioversion in the ED within 48 hours of arrhythmia onset and are assigned to a cardiologic outpatient clinic visit also within 5-9 days. The primary endpoint is the presence of sinus rhythm on electrocardiogram at 4 weeks after the outpatient clinic visit. Conclusion The AFFELECT trial tests whether delayed management of recent-onset AF/AFL is non-inferior alternative to acute CV, aiming to reduce ED burden, number of needed CVs and redirect care to specialized arrhythmia units.",
+          "relevance_score": 6.3605504,
+          "id": "https://openalex.org/W7154015347"
+        },
+        {
+          "title": "First Documented Atrial Fibrillation Triggered by Dialysis-Induced Autonomic Instability in End-Stage Kidney Disease",
+          "abstract": "Atrial fibrillation (AF) is the most common sustained arrhythmia in the general population. However, it is seldom the initial rhythm disturbance in dialysis-dependent patients, who more often present with bradyarrhythmias or ventricular tachyarrhythmias. We report a 59-year-old man with end-stage kidney disease on thrice-weekly hemodialysis who developed his first documented AF with rapid ventricular response immediately after dialysis. Coexisting hypotension, asthma, and severely reduced left ventricular ejection fraction limited the use of \u03b2-blockers, calcium channel blockers, and digoxin. Given these limitations, intravenous amiodarone was selected as the most appropriate option, providing both rhythm and partial rate control while maintaining hemodynamic stability, and cautious crystalloid resuscitation was administered, resulting in partial stabilization and intermittent reversion to sinus rhythm. This case illustrates dialysis as a direct arrhythmogenic stressor through autonomic imbalance and electrolyte shifts, with underlying ventricular dysfunction serving as a substrate. It emphasizes the challenges of managing AF when standard therapies are contraindicated and highlights the importance of individualized treatment in dialysis patients with complex comorbidities.",
+          "relevance_score": 4.580652,
+          "id": "https://openalex.org/W7151624431"
+        },
+        {
+          "title": "Determinants of ECG misdiagnosis of atrial fibrillation or flutter in the emergency department and their clinical implications: results from a single-center observational study",
+          "abstract": "Atrial fibrillation (AF) and atrial flutter (AFL) are common arrhythmias frequently misdiagnosed. The emergency department (ED), a fast-paced environment, presents challenges for accurate ECG interpretation. This study examined whether timing of ED presentation affects diagnostic accuracy. Over five years (2019\u20132024), consecutive ECGs from patients discharged with AF or AFL were independently reviewed by two cardiologists. Diagnoses were classified as correct, partially correct (AF misread as AFL or vice versa), or overinterpreted (non-AF/AFL rhythms misread as AF/AFL). Arrival times were grouped into morning (07:00\u201315:00), afternoon (15:00\u201323:00), and night (23:00\u201307:00) shifts. Multivariable logistic regression analyzed predictors of overinterpretation. Among 2,003 patients (1,794 AF; 209 AFL), interpretations were correct in 1,780 (88.9%), partially correct in 166 (8.3%), and overinterpreted in 57 (2.8%). Overinterpretation rates were highest in the afternoon (4.3%) versus morning (2.8%) and night (0.7%) (p = 0.012). Independent predictors included afternoon arrival (OR 1.87; 95% CI 1.07\u20133.25; p = 0.027) and premature beats (OR 2.22; 95% CI 1.30\u20133.81; p < 0.001). Overinterpretation was independent of shift workload and physician experience, and resulted in inappropriate new prescriptions of rate-control agents (38.5%), antiarrhythmics (28%), and anticoagulants (56%), with minor and major bleeding occurring in 16% and 3.5% of cases, respectively. Diagnosis was revised during outpatient follow-up in only 5% of cases. Overinterpretation of AF remains a concern in the ED. Error rates did not rise during nighttime shifts, implying that factors other than clinician fatigue may underlie these mistakes.",
+          "relevance_score": 3.5777068,
+          "id": "https://openalex.org/W7151261058"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 6,
+      "query": "(\"early rhythm control\" OR \"EARLY-AF\" OR \"EAST-AFNET 4\") AND (\"atrial fibrillation\")",
+      "angle": "Recent landmark trial paradigms",
+      "rationale": "Queries for papers discussing or extending findings from key recent trials that shift practice.",
+      "openalex_count": 5,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A single center experience and preliminary results on pulsed field ablation: early report from the MENA region",
+          "abstract": "",
+          "relevance_score": 5.016634,
+          "id": "https://openalex.org/W7153757753"
+        },
+        {
+          "title": "Editorial: Prognostic value of inflammatory and thrombotic biomarkers in acute coronary syndrome",
+          "abstract": "Ischemic heart disease still represents the first cause of death and disability-adjusted life-year (DALYs) globally, especially in patients older than 50 years [1].Despite substantial advances in pharmacological and interventional management, acute coronary syndrome (ACS) is still associated with significant morbidity and mortality, and in-hospital and post-discharge complications remain frequent [2]. The pathogenesis of ACS is complex and multifactorial, involving both inflammatory and non-inflammatory mechanisms that contribute to plaque destabilization, including plaque rupture or erosion. [3] These processes ultimately lead to the formation of a fibrin-rich thrombus and acute coronary obstruction, resulting in myocardial ischemia and necrosis.Therefore, identification and validation of prognostic biomarkers in ACS context represent a critical step toward improving risk stratification and enabling early identification of patients at increased risk of adverse outcomes. . Biomarkers reflecting inflammatory activation, metabolic stress, and thrombotic processes may provide valuable insights into disease severity and progression, and may help guide therapeutic decision-making and patient management.Value of Inflammatory and Thrombotic Biomarkers in Acute Coronary Syndrome\" aims to identify several inflammatory and thrombotic biomarkers that could be useful as diagnostic and prognostic tool for clinicians. The Research Topic consisted of eight articles that overall give an advancement in this field.interleukin 38 (IL-38), one of the latest members identified in the IL-1 cytokine family, as predictors of major cardiac events (MACE), a severe complication often occurring after a percutaneous coronary intervention (PCI): indeed, while the inflammation, suggested by high serum level of CRP was strongly associated with higher risk of MACE in post-PCI patients, serum levels of IL-38 were inversely related to MACE, probably due to the ability to bind the IL-36 receptor (IL-1R6) exhibiting anti-inflammatory properties.Xiong et al. explored the acute severe heart failure predictive value of monocyte count, monocyteto-white blood cell ratio, and monocyte-to-lymphocyte ratio in 173 patients with acute myocardial infarction. Authors found that these biomarkers were significantly higher in patients with acute severe heart failure representing potential biomarkers for this complication.Yang et al. investigated the role of Systemic Inflammatory Response Index (SIRI) defined as ([neutrophil count \u00d7 monocyte count]/ lymphocyte count) in predicting myocardial infarction in patients with unstable angina. Indeed, unstable angina may evolve rapidly to myocardial infarction and inflammation had a key role in this process. For this reason, Authors investigated SIRI as potential predictor of myocardial infarction in 129 patients with unstable angina. In this study, SIRI demonstrated excellent predictive performance for myocardial infarction and resulted in an independent predictor of myocardial infarction in this population.Beyond inflammation, metabolic stress and glycemic abnormalities represent additional determinants of adverse outcomes in ACS. Wang et al. evaluated the stress hyperglycemia ratio (SHR) as potential predictor of in-hospital cardiogenic shock in 1,776 patients with ST-elevation myocardial infarction (STEMI). Authors found that SHR was independently associated with inhospital cardiogenic shock and the inclusion of SHR into established risk scores significantly improved predictive accuracy.controls evaluating if serum cyclophilin A (CyPA), a novel biomarker, could be helpful in prognosis improvement. Authors found that serum CyPA levels were significantly higher in patients with acute STEMI than in healthy controls and resulted independently associated with acute STEMI suggesting a potential role of this biomarker in the first phase of STEMI identification.Coronary Arteries (MINOCA), that accounts for up to 15% of acute myocardial infarction. As shown by this study, FnBPA5 seems to enable the selective detection of microthrombi in coronary arteries by targeting untensed fibronectin fibers, a novel mechanical biomarker of microthrombi making this biomarker a promising tool for advanced microthrombi detection.Gensini score, that quantifies coronary artery lesions and fasting blood glucose (FBG) levels in 464 STEMI patients treated with PCI. The U-shaped relationship found remarked a significant, non-linear association between FBG levels and coronary artery lesion severity, regardless of diabetes status, suggesting a potential role of FBG monitoring in STEMI patients.Finally, Pannunzio et al. summarize in a narrative review the two-way relationship between atrial fibrillation (AF) and coronary artery disease: indeed, these disorders often coexist and may represent a clinical feature that could foresee the other condition. In particular, AF and acute myocardial infarction share several mechanisms of injury, such as increased oxidative stress, systemic inflammation and increased platelet aggregation. Furthermore, the Authors described the pathophysiological difference between early AF (occurring within the first 24 hours after the index event and associated with atrial ischemia, oxidative stress and a better outcome) and late AF (occurring after 24 hours from myocardial infarction and correlated with increased left atrial pressures, deterioration of hemodynamic status, and a worse outcome) suggesting as the timing of AF onset may represent itself a clinically relevant prognostic markerof worse outcome in patients with acute myocardial infarction.In conclusion, the studies included in this Research Topic emphasize the central role of inflammatory activation, metabolic stress, and thrombotic mechanisms in determining disease severity and clinical outcomes in ACS. Emerging biomarkers reflecting these biological pathways provide valuable prognostic information and may contribute to improved risk stratification and personalized management of patients with ACS.",
+          "relevance_score": 2.5824265,
+          "id": "https://openalex.org/W7151222782"
+        },
+        {
+          "title": "Treatment (\u03b1) and Patient Choice (\u03b2) Effects in Medicine: Quantifying the Causal Effect of Preference on Physical Outcomes",
+          "abstract": "Randomized trials are designed to elicit biological treatment effects, and patient choice-treated as a potential confounder-is therefore typically suppressed.When preference-mediated selection is permitted within a randomized framework-as in the singular case of the Spine Patient Outcomes Research Trial (SPORT)-the resulting divergence between randomized and observational estimates, under substantial bidirectional crossover, can be interpreted not as noise but as a measurable component of outcome.Using published contrasts, instrumentalvariable analysis with randomized assignment as the instrument estimated biological effects among compliers ().We defined a preference-mediated effect () as the residual between observational contrasts and causal (IV/CACE) estimates under coexistence of randomization and choice.Across SF-36 Bodily Pain, Physical Function, and the Oswestry Disability Index, the aggregate biological effect was substantial (G 15.7), but the net biological difference between surgical and nonoperative care was small ( 0.65).By contrast, the preference-mediated effect was clinically meaningful (G 7.4) and exceeded by more than an order of magnitude, placing SPORT in a -dominant regime in which comparative outcomes depend more on preference alignment than on treatment superiority.To our knowledge, this is the first quantification of a preference-mediated effect on physical outcomes.Unlike patient-preference trials-which document preference without identifying a causal effect on outcomes-our framework separates from , reframes crossover as informative behavior, and generalizes to conditions of clinical equipoise with biologically similar outcomes.More broadly, and define orthogonal axes of clinical decision-making-a 22 regime map spanning conditions and settings.Accordingly, trials in preference-sensitive domains should be -identifying by design, and decision support -aware, eliciting and incorporating patient preferences rather than optimizing only average (-centric) effects.",
+          "relevance_score": 1.169102,
+          "id": "https://openalex.org/W7152700869"
+        },
+        {
+          "title": "Case Report: Right-atrial reverse remodeling causing resolution of new-onset torrential tricuspid regurgitation after successful rhythm control",
+          "abstract": "In patients with persistent atrial fibrillation, adverse atrial remodeling may induce annular enlargement causing severe mitral- or tricuspid valve regurgitation and heart failure symptoms. Herein, we describe a case of rapidly progressive right atrial (RA) adverse remodeling due to new onset persistent AF, causing tricuspid annular dilatation and torrential tricuspid regurgitation (TR) in a 79-year-old female patient. This condition could be diagnosed by echocardiography, which helped guiding further patient management. After successful electric cardioversion, reverse RA remodeling took place, resulting in resolution of RA enlargement, TR and clinical symptoms within a few weeks. To maintain sinus rhythm, the patient underwent cryoablation and her further clinical course was uneventful.",
+          "relevance_score": 1.1594015,
+          "id": "https://openalex.org/W7153219017"
+        },
+        {
+          "title": "Caracter\u00edsticas epidemiol\u00f3gicas de pacientes con fibrilaci\u00f3n auricular mayores de 65 a\u00f1os",
+          "abstract": "This study constitutes one of the first local characterizations of AF in older adults and shows a clinical pattern consistent with international reports. Anticoagulation patterns are consistent with those proposed by the guidelines, and the percentage of use is higher than previously reported. However, there are differences in access to advanced therapies, probably due to economic reasons.",
+          "relevance_score": 0.7024853,
+          "id": "https://openalex.org/W7150927669"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 7,
+      "query": "(\"bleeding risk\" OR \"major bleeding\" OR \"intracranial hemorrhage\") AND (\"atrial fibrillation\" AND anticoagulation)",
+      "angle": "Anticoagulation safety",
+      "rationale": "Catches studies focused on the major risk of therapy, including risk scores and management of bleeding.",
+      "openalex_count": 28,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A pulmonary arteriovenous shunt hypoxemia and recurrent bleeding in the emergency department: a case report",
+          "abstract": "We report the case of a 62-year-old male with a long-standing history of Hereditary Hemorrhagic Telangiectasia (HHT, Rendu-Osler-Weber syndrome) complicated by multiple Pulmonary Arteriovenous Malformations (PAVMs), chronic anemia from recurrent gastrointestinal bleeding, and permanent atrial fibrillation. He presented to the Emergency Department (ED) with acute dyspnea and atrial fibrillation with rapid ventricular response. Despite high-flow oxygen therapy, severe hypoxemia persisted due to right-to-left shunt physiology. A prompt blood transfusion increased the oxygen delivery, contributing to transient clinical stabilization; however, the PaO2/FiO2 ratio remained severely reduced, confirming persistent impairment of oxygenation. After multidisciplinary evaluation, he underwent a successful embolization of one PAVMs, with overall clinical improvement. Because of high bleeding risk, long-term oral anticoagulation was avoided and left atrial appendage closure was proposed but declined by the patient. This case highlights the complexity of managing shunt hypoxia and anticoagulation in HHT patients with PAVMs presenting with acute dyspnea to the ED.",
+          "relevance_score": 10.697292,
+          "id": "https://openalex.org/W7151794631"
+        },
+        {
+          "title": "Outcomes associated with left atrial appendage occlusion in patients with cancer-associated atrial fibrillation: a real-world propensity-matched analysis",
+          "abstract": "Atrial fibrillation (AF) is a common comorbidity in cancer patients, increasing their risk of stroke and mortality. Cancer patients are often excluded from risk stratification models such as HAS-BLED and CHA\u2082DS\u2082-VASc, which may underestimate AF-related risks. Additionally, oral anticoagulation in this population increases bleeding risk. This study evaluated the role of left atrial appendage occlusion (LAAO) in cancer patients with AF. TriNetX, a global federated health research network, was used to identify cancer patients with AF, with and without LAAO, from 2015 to 2023. Propensity score matching (1:1) was performed for age, race, sex, comorbidities, and medication use, generating two equal cohorts of 1,228 patients. The primary endpoint was major bleeding; the secondary endpoints were ischemic stroke and all-cause mortality. Secondary analyses compared LAAO with direct oral anticoagulants (DOACs) and warfarin. Among 2,456 matched AF patients, 1,228 underwent LAAO. LAAO was correlated with significantly lower major bleeding at 3 months (26.4% vs. 33.0%, p < 0.001), with similar trends at 1 year (p = 0.019) and 3 years (p = 0.005). Compared to warfarin, LAAO had lower major bleeding (p = 0.006); rates were similar to DOACs (p = 0.356). Ischemic stroke rates were not significantly different between groups at any time point. LAAO recipients exhibited lower mortality at 3 months (3.6% vs. 15.3%, p < 0.0001), 1 year (11.1% vs. 29.7%, p < 0.001), and 3 years (23.5% vs. 36.9%, p < 0.001). Mortality was also lower in LAAO recipients compared with DOAC (p < 0.001) and warfarin (p < 0.001) groups. In adjusted Cox models, LAAO remained associated with significantly lower mortality (adjusted HR 0.63), while adjusted risks of major bleeding and ischemic stroke did not differ between groups. In cancer patients with AF, LAAO was correlated with lower major bleeding and mortality in matched analyses, while stroke rates were similar. In adjusted Cox models, LAAO remained correlated with lower mortality, whereas bleeding and stroke risks were not significantly different. These findings should be interpreted in the context of real-world treatment selection and the absence of granular data on cancer stage, disease activity, timing of LAAO, and cause-specific mortality.",
+          "relevance_score": 8.494187,
+          "id": "https://openalex.org/W7151922763"
+        },
+        {
+          "title": "Anticoagulant adherence and associated complications and readmissions in older valve surgery adults: insights from a retrospective cohort study",
+          "abstract": "Valvular heart disease frequently affects older adults and necessitates valve replacement surgery followed by anticoagulation therapy. Although direct oral anticoagulants (DOACs) are increasingly used for atrial fibrillation and venous thromboembolism, they are not approved for use in mechanical heart valves. This study evaluated anticoagulant adherence and clinical outcomes among older patients after valve replacement using Taiwan\u2019s National Health Insurance data. This retrospective cohort study used the Taiwan National Health Insurance Research Database and included 4,872 patients aged \u2265 65 years with valvular heart disease who underwent valve replacement between 2010 and 2020. Patients with a history of end-stage renal disease, venous thromboembolism, or ischemic stroke before the index surgery were excluded. Anticoagulant use after discharge was identified, and medication adherence was defined as prescriptions covering \u2265 80% of days during a fixed 180-day post-discharge window. Multivariable logistic regression and Cox proportional hazards models were used to evaluate factors associated with adherence and clinical outcomes, including mortality and readmissions. Among the included patients, 38.53% did not receive any oral anticoagulant after discharge. Warfarin users demonstrated higher adherence rates than DOAC users. Females and those aged \u2265 75 years showed better adherence. Nonadherence was more common among DOAC users (OR: 1.51; 95% CI: 1.08\u20132.11) and was associated with higher stroke-related readmissions (DOACs, 7.63%; warfarin, 6.20%), although causal relationships cannot be established. DOAC users had lower observed 1-year mortality rates (4.31% vs. 8.36%) and similar rates of major bleeding events (6.12% vs. 6.34%) compared with warfarin users. Differences in anticoagulant adherence and clinical outcomes were observed among older patients following valve surgery. Warfarin users showed higher measured adherence, whereas DOAC users had lower observed mortality. Because treatment allocation was not randomized and adherence is closely related to treatment type, the independent effect of adherence on outcomes cannot be completely established. Therefore, these findings should be interpreted cautiously prospective studies should be conducted to elucidate the relationship between adherence and clinical outcomes.",
+          "relevance_score": 5.092146,
+          "id": "https://openalex.org/W7152561785"
+        },
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "abstract": "Introduction and purposeAtrial fibrillation (AF) is the most common sustained supraventricular arrhythmia and a major cause of ischemic stroke and systemic thromboembolism. In non-valvular AF, most thrombi originate in the left atrial appendage (LAA). Oral anticoagulation with vitamin K antagonists (VKAs) or direct oral anticoagulants (DOACs) remains the cornerstone of stroke prevention; however, long-term therapy may be limited by bleeding risk and adherence challenges. Percutaneous left atrial appendage closure (LAAC) has emerged as an anatomy-based alternative. This review aimed to compare the efficacy and safety of LAAC with DOACs and VKAs in patients with permanent AF at high risk of adverse events. Material and methodsA qualitative literature review was conducted using PubMed, Embase, Cochrane Library, and Web of Science. Randomized controlled trials, meta-analyses, pooled analyses, and large cohort or registry studies published between 2015 and 2025 were included. Outcomes of interest included ischemic stroke, systemic embolism, major bleeding, mortality, and procedure-related complications. ResultsAcross randomized trials and observational studies, LAAC, DOACs, and VKAs demonstrated comparable efficacy in preventing ischemic stroke and systemic embolism. Randomized data confirmed the non-inferiority of LAAC compared with warfarin and DOAC therapy. Safety profiles differed: DOACs showed lower rates of major bleeding than VKAs, whereas LAAC presented higher early procedural risk but fewer late bleeding events. ConclusionsLAAC provides stroke prevention efficacy comparable to oral anticoagulation and may offer long-term safety advantages in selected high-risk patients. Individualized treatment strategies remain essential in permanent AF.",
+          "relevance_score": 1.6689129,
+          "id": "https://openalex.org/W7152501191"
+        },
+        {
+          "title": "Changes in the use of vitamin K antagonists and direct oral anticoagulants and impact on the incidence of oral anticoagulation-related intracerebral hemorrhage: population-wide prescription patterns in two 5-year cohorts",
+          "abstract": "ICH incidence remained stable despite near-doubled OAC use. The lower ICH rates with DOACs compared to VKAs support their safety advantage.",
+          "relevance_score": 1.5064182,
+          "id": "https://openalex.org/W7150961025"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "NO",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 8,
+      "query": "(\"persistent atrial fibrillation\" OR \"long-standing persistent\") AND (ablation OR \"rhythm control\")",
+      "angle": "Challenging AFib subtype",
+      "rationale": "Focuses on treatment approaches for more difficult-to-treat forms of AFib.",
+      "openalex_count": 8,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Ablation of visually identified spatiotemporal dispersion plus pulmonary vein isolation in persistent atrial fibrillation",
+          "abstract": "Structured Abstract Background and aims Pulmonary vein isolation (PVI) provides limited efficacy in persistent atrial fibrillation (AF). We performed PVI plus ablation of areas with visually detected spatiotemporal dispersion (STD) in consecutive patients with persistent AF, and compared them with a 1:1 propensity score-matched cohort of patients treated with a PVI-only approach. Methods STD was visually identified using conventional high-density mapping catheters (IntellaMap ORION, PentaRay NAV or Advisor HD Grid), without dedicated software. Areas with STD showing fractionated continuous electrograms (FCEs), if present, were ablated first, and other areas with STD were ablated in cases without AF conversion during ablation of FCEs. The right atrium was treated only in cases without AF conversion during left atrial ablation in which the AF cycle length was faster at the right atrium. Results 100 patients were treated with each ablation strategy (PVI+STD or PVI-only) (63.9\u00b110.1 years, 28% females). 35 Patients from the PVI+STD group showed areas with FCEs, which were ablated first, achieving AF termination in 9 patients. In the remaining 91 patients, 221 areas with STD were ablated. The right atrium was treated in 48 patients. Globally, AF conversion was achieved in 33 patients. The PVI+STD group showed lower atrial arrhythmia recurrences at 18-month follow-up (30% Vs 53%, p&amp;lt;0.001) and after a median follow-up of 45 [26\u201366] months (44% Vs 71%, p&amp;lt;0.001), and less progression to permanent AF (14% Vs 41%, p&amp;lt;0.001). Conclusion Ablation of areas with visually identified STD, added to PVI, reduced atrial arrhythmia recurrences and decreased progression to permanent AF.",
+          "relevance_score": 18.447739,
+          "id": "https://openalex.org/W7154036515"
+        },
+        {
+          "title": "A multicentre study on persistent atrial fibrillation ablation targeting rotational activity on top of pulmonary vein isolation: insights from an extensive mapping technique",
+          "abstract": "Background-aims Recently, the etiopathogenetic role of rotational activity (RotAct) in atrial fibrillation (AF) has been proposed. We designed a prospective multicenter study using CARTO Finder to evaluate the presence/distribution of RotActs in persistent AF (persAF), pulmonary vein isolation (PVI)influences on RotActs, and the impact of its elimination on top of PVI on procedural outcomes. Methods For this study, 76 patients with pers AF ablation were enrolled. Procedural steps involved (1) using a CARTO-Finder map to look for RotActs (physician blinded); (2) PVI; (3) using a new map to look for residual/new RotActs; (4) ablation of RotActs, if present; (5) and finally using a new map to confirm RotAct elimination. Populations were divided based on the presence or absence of structural heart disease (Group I and II) and the presence or absence (R+ and R\u2212) of RotActs before PVI. Presence, number, and distribution of RotAct at STEP 1, the impact of PVI on RotAct at STEP 3, and maintenance of sinus rhythm (SR) during follow-up were evaluated. 56 AF patients undergoing standard ablation protocol were included as a control group. Results RotAct was identified in 29 (38%) patients at STEP1. RotAct did not differ between GI and GII patients. PVI significantly modified the number and localization of RotActs ( p = 0.012). RotActs which were present at STEP 1 were different after PVI, with disappearance in 18 and new appearance in 5 patients. 71 patients completed a mean 13 \u00b1 6 months follow-up and 91.5% were in stable SR. No difference in relapses was seen between R + and R- and GI and GII. RotAct ablation significantly reduced arrhythmia relapse during the follow-up compared to the control group (freedom from arrhythmia 91.5% vs. 78.6%, p = 0.025). Conclusion RotAct was present in 38% in persAF patients. PVI influenced the number and distribution of RotActs. A tailored ablation strategy provided a high success rate (91.5%) at the follow-up.",
+          "relevance_score": 11.948547,
+          "id": "https://openalex.org/W7153227500"
+        },
+        {
+          "title": "Case Report: Right-atrial reverse remodeling causing resolution of new-onset torrential tricuspid regurgitation after successful rhythm control",
+          "abstract": "In patients with persistent atrial fibrillation, adverse atrial remodeling may induce annular enlargement causing severe mitral- or tricuspid valve regurgitation and heart failure symptoms. Herein, we describe a case of rapidly progressive right atrial (RA) adverse remodeling due to new onset persistent AF, causing tricuspid annular dilatation and torrential tricuspid regurgitation (TR) in a 79-year-old female patient. This condition could be diagnosed by echocardiography, which helped guiding further patient management. After successful electric cardioversion, reverse RA remodeling took place, resulting in resolution of RA enlargement, TR and clinical symptoms within a few weeks. To maintain sinus rhythm, the patient underwent cryoablation and her further clinical course was uneventful.",
+          "relevance_score": 0.8601874,
+          "id": "https://openalex.org/W7153219017"
+        },
+        {
+          "title": "BMI, race and AF recurrence post ablation: a meta-analysis and systematic review",
+          "abstract": "Aims Obesity increases atrial fibrillation (AF) risk, but it remains unclear whether this association can be extrapolated to AF patients who undergoing pulmonary vein isolation (PVI), and whether there are racial differences. This study aims to explore the role and interaction of body mass index (BMI) and racial factors in the risk of AF recurrence post PVI. Methods A systematic search was conducted in PubMed, Web of Science, Engineering Index, Wan Fang database, CNKI, and relevant meta-analyses from database inception to May 19, 2025. Standardized data extraction was performed in accordance with the Meta-analysis of Observational Studies in Epidemiology Reporting Guidelines. Primary outcome was the recurrence of AF post PVI. Secondary outcomes included procedural complications, and echocardiographic parameters. Results Finally, 26 studies involving 35,237 individuals were included. The results showed a linear positive correlation between BMI and the risk of AF recurrence post PVI. For every 5-units increase in BMI, the recurrence risk of AF increased by 9%. Subgroup analysis indicated that obese Europeans had a 9% higher recurrence risk ( P &amp;lt; 0.001), obese North Americans had a 14% higher recurrence risk ( P &amp;lt; 0.001), and Asians had the highest increase in recurrence risk, reaching 37% ( P &amp;lt; 0.001). Meta-regression analysis suggested that racial differences were potentially related to the strength of the association between BMI and AF recurrence ( P = 0.033). Risk factor analysis identified enlarged left atrial diameter as a potential risk factor contributing to the recurrence of AF ( P = 0.021). No statistically significant difference in surgical complications risk was observed between obese and non-obese populations ( P = 0.083). Conclusion Our findings confirm a linear positive correlation between BMI and the risk of AF recurrence post PVI. An enlarged left atrial diameter may be one potential mechanisms underlying AF recurrence. Furthermore, significant racial disparities were identified in AF recurrence risk, with Asian patients showing a significantly higher recurrence risk than European and American patients. Systematic Review Registration https://www.crd.york.ac.uk/prospero/display_record.php?ID=CRD42024496463 , PROSPERO CRD42024496463.",
+          "relevance_score": 0.5700024,
+          "id": "https://openalex.org/W7152233417"
+        },
+        {
+          "title": "From signal analysis to clinical practice: the use of peak frequency in mapping and ablation",
+          "abstract": "Differentiating near-field (NF) from far-field (FF) electrograms (EGMs) is essential for accurate mapping and ablation of cardiac arrhythmias. With the advent of high density mapping systems, this distinction has traditionally relied on bipolar voltage analysis and activation mapping, while the evaluation of signal frequency has remained largely underexplored. Recently, a novel algorithm called peak frequency (PF) has been introduced as a complementary tool to conventional mapping strategies. By applying Wavelet transformation (WT), PF enables objective quantification of signal frequency, accurate identification of FF electrograms, and visualization of high frequency components on electro-anatomical maps. This review examines the role of peak frequency in mapping and ablation, spanning from fundamental signal analysis to clinical applications.",
+          "relevance_score": 0.5383127,
+          "id": "https://openalex.org/W7152966778"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 9,
+      "query": "(\"antiarrhythmic drug\" OR amiodarone OR flecainide OR dronedarone OR sotalol) AND (\"atrial fibrillation\")",
+      "angle": "Pharmacologic rhythm control",
+      "rationale": "Targets research on drug therapy for maintaining sinus rhythm, relevant for pre-ablation or ablation-ineligible patients.",
+      "openalex_count": 30,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Amiodarone-Induced Thyrotoxicosis and Clinical Risk Factors for Thyrotoxic Crisis",
+          "abstract": "Abstract Background Amiodarone-induced thyrotoxicosis (AIT) is a serious complication of long-term amiodarone therapy. Its most severe manifestation is thyrotoxic crisis (TxC), a rare but life-threatening condition. Aim To analyze patients with AIT, identify demographic and clinical parameters, evaluate diagnostic and therapeutic approaches, and determine predictive risk factors for TxC. Methods A retrospective study of 55 consecutive patients with confirmed AIT followed between 2005 and 2024. Baseline characteristics, laboratory findings, thyroid ultrasound, clinical presentation, therapy and outcomes were analyzed. Patients were classified into AIT type 1, type 2, or mixed type. TxC was diagnosed using the Burch\u2013Wartofsky scoring system. Results The cohort comprised 45 men (82%) and 10 women (18%) with a mean age of 62.3 \u00b1 9.9 years. Amiodarone was most commonly prescribed for atrial fibrillation (78%), and the mean duration of therapy before AIT onset was 988 \u00b1 502 days. Mean fT4 at diagnosis was 43.2 \u00b1 18.3 pmol/L and mean TSH 0.017 \u00b1 0.052 mIU/L. AIT type 1 was identified in 23%, type 2 in 44%, and mixed type in 33% of patients. TxC developed in 6 patients (11%). These patients were all men, had higher maximum fT4 levels (&gt; 74.5 pmol/L) and larger thyroid volume (&gt; 19 mL), and urgent thyroidectomy was required in 5 cases. Conclusion TxC occurred in 11% of patients with AIT and was associated with higher thyroid hormone levels and larger thyroid volume. Early recognition and interdisciplinary management are essential for improving outcomes.",
+          "relevance_score": 6.7004976,
+          "id": "https://openalex.org/W7151397668"
+        },
+        {
+          "title": "First Documented Atrial Fibrillation Triggered by Dialysis-Induced Autonomic Instability in End-Stage Kidney Disease",
+          "abstract": "Atrial fibrillation (AF) is the most common sustained arrhythmia in the general population. However, it is seldom the initial rhythm disturbance in dialysis-dependent patients, who more often present with bradyarrhythmias or ventricular tachyarrhythmias. We report a 59-year-old man with end-stage kidney disease on thrice-weekly hemodialysis who developed his first documented AF with rapid ventricular response immediately after dialysis. Coexisting hypotension, asthma, and severely reduced left ventricular ejection fraction limited the use of \u03b2-blockers, calcium channel blockers, and digoxin. Given these limitations, intravenous amiodarone was selected as the most appropriate option, providing both rhythm and partial rate control while maintaining hemodynamic stability, and cautious crystalloid resuscitation was administered, resulting in partial stabilization and intermittent reversion to sinus rhythm. This case illustrates dialysis as a direct arrhythmogenic stressor through autonomic imbalance and electrolyte shifts, with underlying ventricular dysfunction serving as a substrate. It emphasizes the challenges of managing AF when standard therapies are contraindicated and highlights the importance of individualized treatment in dialysis patients with complex comorbidities.",
+          "relevance_score": 5.613055,
+          "id": "https://openalex.org/W7151624431"
+        },
+        {
+          "title": "Reusing Blood Samples from a Hospital-based Cohort to Apixaban Plasma Concentrations",
+          "abstract": "Abstract In the management of atrial fibrillation, the most frequently prescribed oral anticoagulant is apixaban, given at a fixed dose of 5mg BID. Apixaban is predominantly metabolized by cytochrome P4503A4 (CYP3A4) and is also a substrate for the drug efflux transporter P-glycoprotein (P-gp). In nearly 300,000 Medicare patients with AF receiving apixaban, we previously showed that concomitant therapy with drugs that inhibit both CYP3A4 and P-gp, specifically amiodarone or diltiazem, significantly increased serious bleeding that caused hospitalization and/or death. We hypothesized that this adverse effect was mediated by an increase in apixaban plasma concentrations caused by concomitant therapy that reduced drug elimination. Utilizing left-over samples obtained from clinically indicated blood draws that would typically be discarded, the Vanderbilt University Medical Center biobank BioVU contains &gt;353,000 samples linked to de-identified electronic medical records (EMRs), with both DNA and plasma harvested. Of 35 samples drawn from patients taking apixaban 5mg BID, 5 were identified to be drawn from patients concomitantly taking drugs inhibiting both CYP3A4 and P-gp. Using a chromogenic anti-Xa assay, we found that plasma concentrations of apixaban were significantly higher (347\u00b164 ng/mL; mean\u00b1SEM) for patients receiving concomitant CYP3A4/P-gp-inhibiting drugs compared to those not treated with these drugs (166\u00b167 ng/mL; P=0.025, Mann Whitney). There were no differences between the 2 patient groups with respect to age, weight, or serum creatinine. The results of this pilot study provide preliminary data to support our hypothesis, and they demonstrate the practicality of obtaining pharmacokinetic data from a large cohort of plasma samples linked to deidentified EMRs. This approach could be used to define the role of apixaban levels in high-risk clinical scenarios and to better understand the relationship between drug levels and bleeding risk.",
+          "relevance_score": 5.0213733,
+          "id": "https://openalex.org/W7152038966"
+        },
+        {
+          "title": "Dreaming of a cardiovascular drug sanctuary: Why some old drugs still matter",
+          "abstract": "As cardiovascular physicians, we live in exciting times. New treatment options become available, new mechanisms are targeted and therapeutic strategies grow increasingly precise. Inevitably, some older medications fall out of favour in routine clinical practice while sometimes retaining relevance as research tools. Yet, some prototypical drugs or entire drug classes vanish completely, becoming unavailable for, both, patient care and clinical investigation. Against the background of rapid innovation, renewed interest in older drugs like colchicine in cardiovascular medicine appears paradoxical. Are we romanticizing the past or is there a need for a cardiovascular drug sanctuary? Colchicine's unique anti-inflammatory actions target mechanisms implicated in the pathogenesis of left ventricular hypertrophy.1, 2 The COLCAD trial was a randomized, double-blind, placebo-controlled study designed to test whether low-dose colchicine could reduce left ventricular hypertrophy in patients with coronary artery disease.3 Sixty-six adults with established coronary artery disease, echocardiographically defined left ventricular hypertrophy and well-controlled blood pressure were assigned to colchicine 0.6 mg daily or to placebo for 48 weeks. The primary outcome was the change in left ventricular mass indexed to body surface area, measured by cardiac magnetic resonance imaging. After 48 weeks, there was no significant difference in left ventricular mass regression between the colchicine and placebo groups. Similarly, no relevant treatment effects were observed for left ventricular or left atrial volumes, inflammatory markers, glycaemic parameters or body mass index. Recruitment was stopped prematurely because of slow enrolment, resulting in a sample size substantially smaller than originally planned. Consequently, the study was underpowered to detect modest but potentially meaningful effects. In any event, colchicine did not demonstrate a measurable benefit on left ventricular hypertrophy, even though benefits have been reported in other cardiovascular indications.4, 5 The neutral findings underscore the limited impact of anti-inflammatory therapy on left ventricular hypertrophy in patients with low residual inflammatory activity and optimized cardiovascular treatment. Most participants had low baseline levels of systemic inflammation, good blood pressure control and were on renin-angiotensin system inhibitors, all of which reduce the likelihood of further structural regression. In addition, cardiac magnetic resonance imaging revealed relatively modest ventricular hypertrophy in many patients, raising concerns about target misclassification. Rather than excluding a role for colchicine, the study emphasizes the need for more precise patient selection. Future trials should preferentially include patients with clearly defined hypertrophy on magnetic resonance imaging, higher inflammatory burden or ongoing hemodynamic stress, where anti-inflammatory interventions may be more likely to show benefit. Beyond colchicine, long-established cardiovascular drugs are undergoing renewed investigation. Digitoxin, once central in the management of heart failure and atrial fibrillation, lost prominence in clinical practice and in pharmacology curricula with the advent of angiotensin receptor-neprilysin inhibition and sodium-glucose cotransporter 2 inhibitors. Yet, its interaction with the Na+/K+-ATPase extends beyond inotropy,6 functioning as a signalling platform influencing hypertrophy, fibrosis and neurohumoral activation. Recent randomized data suggest that digitoxin may reduce clinically meaningful endpoints in advanced heart failure,7 prompting reconsideration of its position within guideline-directed therapy. Digitoxin exemplifies a recurring theme in pharmacology: Disappearance from routine practice does not necessarily reflect exhaustion of biological relevance. Other agents illustrate persistence rather than rediscovery. Vitamin K antagonists such as phenprocoumon with decades of clinical experience remain indispensable in patients with mechanical heart valves.8 Despite the rise in direct oral anticoagulant prescriptions, they continue to serve as the standard of care in specific indications. When anticoagulation quality is high, outcomes may be comparable to, or in selected contexts even more favourable than, those achieved with newer agents.9 Therapeutic innovation, therefore, does not automatically imply universal superiority. Some cardiovascular agents have almost disappeared from contemporary practice, not because their biological effects were trivial, but because their therapeutic window was narrow, their tolerability limited or their commercial relevance small. Quinidine, once foundational in rhythm control, is now confined to rare indications.10 Hydralazine survives in contemporary practice in specific heart failure combinations11, 12 and management of treatment-resistant hypertension13 or hypertension in pregnancy.14 Amiodarone, with its complex pharmacokinetics and extracardiac toxicities, would certainly face formidable regulatory hurdles if submitted today, yet remains indispensable in refractory ventricular arrhythmias. In these cases, obsolescence is contextual rather than absolute. At times, we lose important tools entirely. Trimethaphan, a short-acting ganglionic nicotinic receptor antagonist formerly used to induce controlled hypotension, provided a uniquely precise method to interrupt autonomic transmission. Ganglionic blockade allowed quantification of autonomic support of blood pressure and exploration of baroreflex function under controlled conditions.15, 16 As its therapeutic indications dwindled and commercial incentives vanished, trimethaphan disappeared from the market. With it, a powerful instrument for mechanism-oriented experimentation in human integrative physiology was lost. The notion of a cardiovascular drug sanctuary is, therefore, not an appeal to nostalgia, but a proposal for structured preservation and systematic reappraisal. Many older agents were introduced before contemporary standards of phenotyping, imaging and molecular characterization. Their trials often lacked the precision now expected. Re-examined with modern methodologies, some may reveal context-dependent benefits that were previously obscured. Why should clinical pharmacology concern itself with drugs that might not pass today's approval filters? Established agents serve as mechanistic anchors; they shaped our understanding of ion transport, neurohumoral regulation, inflammation and coagulation. They also provide therapeutic resilience where cost and availability limit access to newer compounds. Finally, systematic re-evaluation may identify subgroups in which traditional agents retain relevance. We have, for example, applied peripheral sympatholytic agents such as guanadrel or guanethidine, obsolete in garden variety hypertension, to attenuate neurogenic blood pressure surges in patients with afferent baroreflex failure.17 Suffice it to say that these drugs are no longer available. The COLCAD trial,3 despite its neutral findings, does not close the chapter on colchicine in structural heart disease but sharpens the question. In patients with low inflammatory burden and optimized therapy, broad anti-inflammatory modulation may simply be insufficient. Innovation drives medicine forward. Yet when drugs vanish entirely, we risk losing not only treatment options but experimental instruments and conceptual frameworks. Whether a cardiovascular drug sanctuary is romanticism or necessity is ultimately a matter of perspective. But if clinical pharmacology confines itself to the new, it may inadvertently narrow its own intellectual horizon. LK has no confict of interest, JJ served as advisor for Theravance. Not applicable.",
+          "relevance_score": 1.6351895,
+          "id": "https://openalex.org/W7152614805"
+        },
+        {
+          "title": "Myopericarditis in an emergency department patient presenting with chest pain and ECG changes: a case report",
+          "abstract": "Emergency physicians should initiate early treatment for myopericarditis to reduce inflammation for improved patient outcomes while still considering ACS in all patients presenting with chest pain. Point-of-care ultrasound can identify a pericardial effusion or acute heart failure to guide management. Patients with myocardial involvement can develop permanent heart damage but can exhibit excellent recovery with appropriate treatment, which includes nonsteroidal anti-inflammatories, colchicine, and high-dose ASA.",
+          "relevance_score": 1.1097612,
+          "id": "https://openalex.org/W7151582689"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 10,
+      "query": "(\"clinical guideline\" OR \"consensus statement\" OR \"expert consensus\") AND (\"atrial fibrillation\")",
+      "angle": "Practice standards & updates",
+      "rationale": "Captures synthesis documents and guideline publications that directly inform care decisions.",
+      "openalex_count": 36,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Use of landiolol in septic shock patients with new onset of atrial fibrillation: A European Delphi Consensus",
+          "abstract": "",
+          "relevance_score": 0.819472,
+          "id": "https://openalex.org/W7152459607"
+        },
+        {
+          "title": "A single center experience and preliminary results on pulsed field ablation: early report from the MENA region",
+          "abstract": "",
+          "relevance_score": 0.804612,
+          "id": "https://openalex.org/W7153757753"
+        },
+        {
+          "title": "Atrial fibrillation ablation in patients with type 2 diabetes mellitus: long-term follow-up study for atrial tachyarrhythmia recurrence and adverse cardiovascular events",
+          "abstract": "The presence of T2DM is an important, independent and modifiable risk factor for both atrial-tachyarrhythmia recurrence and adverse CV events in patients treated with CBA for AF. It was concluded that comprehensive management of T2DM is necessary to improve long-term outcomes of CBA.",
+          "relevance_score": 0.7937094,
+          "id": "https://openalex.org/W7153254290"
+        },
+        {
+          "title": "Comorbidity and Integrated Care in Patients with Cardiac Implantable Devices",
+          "abstract": "Patients with multiple coexisting illnesses present complex medical and psychosocial challenges that require coordinated, patient-centered care. Those with cardiac implantable electronic devices \u2013 such as pacemakers, defibrillators, and cardiac resynchronization devices \u2013 represent a unique group within this population. Beyond managing several chronic conditions, they must also adapt to living with a palpable device that sustains life but may generate anxiety about physical limitations and interference with daily activities. These patients often experience fragmented care, limited understanding of their illnesses, and uncertainty about treatment priorities. Effective management demands comprehensive follow-up, clear communication, and multidisciplinary collaboration to empower patients and improve outcomes. Remote and telephone follow-up programs have demonstrated benefits in resolving doubts, detecting complications early, and enhancing patients\u2019 sense of security and support. Addressing comorbidity in this population requires a holistic approach that integrates technology, education, and empathy.",
+          "relevance_score": 0.76108485,
+          "id": "https://openalex.org/W7153259708"
+        },
+        {
+          "title": "The ABC of sealing following left atrial appendage closure",
+          "abstract": "Type A was associated with sealing irrespective of imaging modality, while Type C was always an indicator of PDL. This unifying classification was highly reproducible across imaging modalities and among readers of differing levels of experience.",
+          "relevance_score": 0.7432844,
+          "id": "https://openalex.org/W7153970855"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 11,
+      "query": "(\"randomized controlled trial\" OR RCT OR \"randomized trial\") AND (\"atrial fibrillation\" AND treatment)",
+      "angle": "High-level evidence filter",
+      "rationale": "A broad safety-net query for any treatment-focused RCTs in AFib, aligning with the reader's preference for trial data.",
+      "openalex_count": 83,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Pulsed Field Ablation for the Interventional Treatment of Atrial Fibrillation. A Scientific Statement of the European Heart Rhythm Association (EHRA) of the ESC, the Heart Rhythm Society (HRS), the Asia Pacific Heart Rhythm Society (APHRS), the Latin American Heart Rhythm Society (LAHRS) and the Canadian Heart Rhythm Society (CHRS)",
+          "abstract": "Pulsed field ablation has emerged as a novel non-thermal treatment modality with a distinct safety profile for the interventional treatment of atrial fibrillation. By inducing irreversible electroporation, pulsed field ablation achieves myocardial ablation while preserving surrounding structures such as nerves, vasculature, and the esophagus. This European Heart Rhythm Association (EHRA) of the European Society of Cardiology (ESC) scientific statement, endorsed by major international societies, reviews the biophysics, technology, clinical evidence, workflow, safety, and training aspects of pulsed field ablation. Randomized trials demonstrate comparable efficacy to radiofrequency and cryoballoon ablation, with advantages in safety and efficiency. The statement provides practical advice for clinical implementation, operator training, and identifies key gaps in evidence and priorities for future research and innovation.",
+          "relevance_score": 7.128808,
+          "id": "https://openalex.org/W7154037036"
+        },
+        {
+          "title": "Colchicine in modern cardiology: opportunities, limitations and promising results. An analytical review of the recent clinical trial outcomes",
+          "abstract": "Background . Colchicine, traditionally used for gout treatment, has recently emerged as a promising therapeutic option for coronary artery disease (CAD) due to its anti-inflammatory properties. However, its use is accompanied by conflicting clinical data and potential risks. Objective . To systematize current evidence on the efficacy and safety of colchicine in cardiovascular diseases, identifying key areas of certainty and uncertainty. Design and methods . We analyzed 35 clinical studies (2021-2025), including randomized controlled trials (LoDoCo2, COLCOT, CLEAR), meta-analyses and cohort studies. The study was supported by the Russian Science Foundation (Agreement No. 25-15-20110). Results . Proven benefits: 28 % reduction in cardiovascular events in chronic CAD; atherosclerotic plaque stabilization (+ 34,2 \u03bcm fibrous cap thickness); 33 % reduction in postoperative atrial fibrillation. Controversial data: no benefit in acute coronary syndrome (odds ratio (OR) 0,99); increased dementia risk with long-term use (OR 1,45). Safety concerns: gastrointestinal complications (+ 3,6 %); trend toward increased non-cardiac mortality (+ 38 %); dose-dependent increase in dementia risk (+ 45 %). Conclusion . Colchicine represents a promising tool for secondary prevention of atherothrombosis, combining centuries of clinical experience with modern understanding of inflammatory mechanisms. Its niche included patients with chronic CAD and persistent inflammatory activity, where it complements standard therapy without increasing bleeding risk, unlike more aggressive antithrombotic strategies. Further research should clarify its role in acute settings and optimize dosing regimens considering individual safety profiles.",
+          "relevance_score": 6.1671457,
+          "id": "https://openalex.org/W7153182583"
+        },
+        {
+          "title": "Efficacy of Personalized Accelerated Pacing on Quality of Life, Physical Activity and Atrial Fibrillation in HFpEF",
+          "abstract": "Background: Heart failure that preserves ejection fraction (HFpEF) is associated with poor diastolic performance, decreased physical performance, and elevated patient-related symptoms leading to poor quality of life (QoL). AF and chronotropic incompetence are common comorbid conditions in HFpEF and also contribute towards the improved capacity of the heart. Personalized accelerated pacing (PAP) that changes the pacing rates in accordance to personal physiologic demand has been proposed as possibly useful in improving cardiac performance, advancing physical activity, and decreasing AF load but there is less evidence on the holistic effects of this on patient-centered outcomes. Objective: There is a need to determine the effectiveness of individualized accelerated pacing on the quality of life, physical activity, and burden of atrial fibrillation in HFpEF patients. Methods: This was a prospective, randomized, controlled trial that recruited HFpEF participants with either pacemaker or cardiac device capability of individually adjusting their rate. Individuals were randomly assigned to (1) PAP with profiles of individual chronotropic response programmed, or (2) guideline based pacing. The main outcomes were a change in the quality of life (Kansas City Cardiomyopathy Questionnaire [KCCQ] score) and daily physical activity (measured by accelerometer-monitored step counts and duration of activities) in 6 months. The secondary endpoints were AF burden (measured as device), NT-proBNP levels, 6-minute walk distance (6MWD), and the heart rate variability variables. The methods of analysis were intention-to-treat repeated-measures modeling. Results: Follow up was done in 148 patients (mean age 72 \u00b1 8 years; 61% female). PAP led to lower QoL with KCCQ overall summary score improving by 18 \u00b1 6 points compared to 6 \u00b1 4 points in controls (p &lt; 0.001). Patients in PAP relative condition showed a 24 percentage improvement in daily physical activity, especially in the number of steps and length of time in moderate intensity, as well (p = 0.01). In the PAP group, the decrement of AF burden was 32 percent less than that of controls (no significant difference, p = 0.02). PAP was also preferred in terms of secondary outcomes such as the increase of the 6MWD (+45 m vs. +12 m, p &lt; 0.05) and the decreasing levels of NT-proBNP (p = 0.04). Adverse events associated with devices were not noticed. Conclusion: Individualized accelerated pacing appears to have exceptional contributions to quality of life, more physical activity and less burden of atrial fibrillation in patients with HFpEF. These results indicate that customized rate-sensitive pacing could be used to strengthen physiologic restraints within critical conditions in HFpEF and is a promising non-pharmacologic treatment methodology.",
+          "relevance_score": 5.3550925,
+          "id": "https://openalex.org/W7154159063"
+        },
+        {
+          "title": "Stroke and transient ischemic attack recurrence after PFO closure in patients with cryptogenic embolism",
+          "abstract": "In this study, the rate of recurrent stroke/TIA after PFO closure was low, but higher than reported in previous studies. These elevated values are primarily due to the higher risk of recurrent TIA, as the recurrent stroke risk in our cohort is comparable to that reported in RCTs. Hypertension was significantly associated with the recurrence of a stroke/TIA.",
+          "relevance_score": 3.8562474,
+          "id": "https://openalex.org/W7151981297"
+        },
+        {
+          "title": "A\u00a0cardiac-rehab home-based mHealth program to improve physical activity in patients with coronary artery disease: a\u00a0randomized controlled trial",
+          "abstract": "A smartphone training program on top of the usual CR did not yield additional benefits. A more elaborate mHealth intervention seems needed to change PA during CR in active patients with CAD.",
+          "relevance_score": 2.4510674,
+          "id": "https://openalex.org/W7152542505"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 12,
+      "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"atrial fibrillation\" AND treatment)",
+      "angle": "Evidence synthesis",
+      "rationale": "Targets high-level summaries of evidence across multiple studies for efficient reading.",
+      "openalex_count": 159,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Clinical Characteristics and Management Outcomes of Severe Multi-Valvular Rheumatic Heart Disease: A Hospital-Based Analysis",
+          "abstract": "Background: Multi-valvular involvement represents the most severe form of rheumatic heart disease (RHD), presenting complex clinical challenges requiring a comprehensive understanding for optimal patient management. In resource-limited settings, late presentation and inadequate secondary prophylaxis result in advanced disease with high complication burdens. Objective: To analyze the clinical presentation, diagnostic findings, treatment strategies, and outcomes, specifically in-hospital complication rates, mortality, functional improvement, and six-month follow-up outcomes in patients with severe multi-valvular RHD presenting to secondary and tertiary academic centers in Delhi, India. Methods: A retrospective observational analysis was conducted of 385 consecutive patients with severe multi-valvular RHD admitted to Lal Bahadur Shastri Hospital and Dr. Ram Manohar Lohia Hospital, New Delhi, between September 2023 and September 2025. Clinical data, echocardiographic parameters, laboratory findings, treatment protocols, and outcomes were systematically reviewed and analyzed. Results: Mean age was 31.2 \u00b1 7.4 years; 68% were female. The majority (57%) presented with New York Heart Association Functional Classification (NYHA) Class III-IV symptoms. Atrial fibrillation was documented in 58%, severe pulmonary hypertension (&gt;60 mmHg) in 82%, and right ventricular dysfunction in 69%. Healthcare-associated infections occurred in 23%, including MRSA bacteremia in 12%. In-hospital mortality was 3.4%; 6-month mortality was 7.2%. Admissions peaked during monsoon months (18% higher case volume). Conclusion: Severe multi-valvular rheumatic heart disease (RHD) presents complex management challenges requiring comprehensive evaluation and multidisciplinary care. Early recognition of complications and timely intervention are crucial for improving outcomes in this high-risk population.",
+          "relevance_score": 4.7152314,
+          "id": "https://openalex.org/W7154188741"
+        },
+        {
+          "title": "Stroke and transient ischemic attack recurrence after PFO closure in patients with cryptogenic embolism",
+          "abstract": "In this study, the rate of recurrent stroke/TIA after PFO closure was low, but higher than reported in previous studies. These elevated values are primarily due to the higher risk of recurrent TIA, as the recurrent stroke risk in our cohort is comparable to that reported in RCTs. Hypertension was significantly associated with the recurrence of a stroke/TIA.",
+          "relevance_score": 2.305582,
+          "id": "https://openalex.org/W7151981297"
+        },
+        {
+          "title": "A\u00a0cardiac-rehab home-based mHealth program to improve physical activity in patients with coronary artery disease: a\u00a0randomized controlled trial",
+          "abstract": "A smartphone training program on top of the usual CR did not yield additional benefits. A more elaborate mHealth intervention seems needed to change PA during CR in active patients with CAD.",
+          "relevance_score": 2.1011589,
+          "id": "https://openalex.org/W7152542505"
+        },
+        {
+          "title": "Electrocardiographic assessment in obstructive sleep apnea: bridging pathophysiology and clinical practice",
+          "abstract": "Obstructive sleep apnea syndrome (OSAS) represents one of the most prevalent sleep-related breathing disorders, affecting approximately 50% of men and 23% of women aged 40 years or older when defined by an apnea-hypopnea index \u226515 events/h (Heinzer et al., 2015).Beyond its impact on sleep architecture and daytime function, OSAS has emerged as a significant cardiovascular risk factor, with mounting evidence demonstrating associations with hypertension, coronary artery disease, heart failure, and cardiac arrhythmias (Javaheri et al., 2024). The repetitive cycles of upper airway obstruction, intermittent hypoxemia, and arousal-mediated sympathetic activation create a unique pathophysiological milieu that profoundly affects cardiac electrophysiology. While polysomnography remains the diagnostic gold standard for OSAS, electrocardiographic (ECG) monitoring offers complementary insights that extend beyond traditional sleep parameters. The heart's electrical signature of OSAS reflects complex autonomic, hemodynamic, oxidative stress and inflammatory processes that contribute to cardiovascular morbidity. Recent technological advances in automated ECG analysis, artificial intelligence (AI), and wearable monitoring have renewed interest in leveraging cardiac electrical signals for OSAS screening, risk stratification, and treatment monitoring.This Opinion article synthesizes current evidence on ECG applications in OSAS management, examines the physiological mechanisms underlying cardiac electrical abnormalities, and proposes an integrated framework for incorporating ECG assessment into clinical practice.We argue that ECG monitoring represents an underused tool that can enhance cardiovascular risk assessment in OSAS patients and provide objective markers of treatment efficacy.[REVISED R1-#1] The evidence presented in this article was identified through a structured narrative review of the literature. We searched PubMed, MEDLINE, and EMBASE databases for publications up to December 2025 using the following key terms in various combinations:These oscillations persist beyond sleep periods, contributing to sustained cardiovascular stress during wakefulness.[REVISED R1-#2] A hallmark electrophysiological feature of OSAS is the cyclical variation of heart rate (CVHR), a distinctive pattern observable on single-lead ECG recordings. During an obstructive apnea, the initial phase is characterized by bradycardia driven by the activation of pulmonary stretch receptors and enhanced vagal tone -the so-called 'diving reflex' response to hypoxemia and hypercapnia. As the apneic episode progresses, accumulating hypoxemia and hypercapnia progressively stimulate peripheral chemoreceptors (carotid bodies), generating a sympatho-excitatory surge that accelerates heart rate. At the moment of arousal and resumption of ventilation, a secondary tachycardia ensues due to sympathetic activation, followed by a vagally-mediated deceleration as breathing resumes. This cyclical pattern -bradycardia during apnea, tachycardia on arousal, then normalization -produces a characteristic oscillation in R-R intervals detectable on standard Holter or 30-second ECG strips. The amplitude and periodicity of CVHR correlate with AHI severity (r \u2248 0.65-0.75) and can achieve a sensitivity of 74% and specificity of 87% for moderate-to-severe OSAS when analyzed algorithmically from a single-lead ECG (Guilleminault et al., 1983;Sankari et al., 2017). From a prognostic standpoint, the persistence of CVHR despite CPAP therapy identifies patients with residual autonomic impairment and incomplete cardiovascular protection, underscoring its value as a dynamic treatment marker beyond simple AHI normalization.Heart rate variability (HRV) analysis provides a broader non-invasive window into autonomic function. OSAS patients consistently demonstrate reduced daily time-domain parameters (SDNN, RMSSD) and altered frequency-domain indices, with decreased high-frequency (HF) power reflecting diminished parasympathetic tone and increased low-frequency to highfrequency (LF/HF) ratio indicating sympathovagal imbalance (Qin et al., 2021). Recent studies have confirmed that the magnitude of HRV reduction correlates with OSAS severity and predicts cardiovascular outcomes, positioning HRV as both a diagnostic marker and potential prognostic tool (Ucak et al., 2024).[NEW -Reviewer 3] It is increasingly recognized that OSAS is a heterogeneous syndrome with distinct physiological phenotypes that differentially modulate autonomic and ECG responses.Patients with high hypoxic burden -characterized by prolonged and severe oxygen desaturation per apneic event -demonstrate more pronounced QT prolongation, greater HRV impairment, and higher cardiovascular risk than those with equivalent AHI but lower desaturation profiles. REM-predominant OSAS, which is more common in women and in older patients, generates discrete bursts of sympathetic activation during REM sleep that produce distinctive ECG patterns -including clusters of ventricular ectopy and abrupt HRV oscillations -that differ quantitatively from those of NREM-predominant disease. Sex differences further modulate cardiac electrical responses: women with OSAS exhibit attenuated CVHR amplitude and different sympathovagal adaptation patterns compared to men of equivalent disease severity, which may contribute to the lower diagnostic sensitivity of ECG-based screening algorithms in female populations. These phenotypic distinctions have direct implications for ECG-based risk assessment and partially explain inter-individual variability in cardiac electrical findings at equivalent AHI levels, underscoring the need for phenotypeaware diagnostic and monitoring approaches.Upper airway obstruction generates large negative intrathoracic pressure swings, increasing venous return and cardiac transmural pressure. Simultaneously, intermittent hypoxemia activates chemoreceptors, triggering vasoconstriction and blood pressure surges that increase cardiac afterload. These repetitive hemodynamic stresses contribute to left ventricular hypertrophy and atrial remodeling, creating substrates for arrhythmias (Javaheri et al., 2024). Chronic intermittent hypoxemia also promotes low-grade systemic inflammation and oxidative stress. These mediators accelerate atherosclerosis, promote endothelial dysfunction, and facilitate myocardial fibrosis, all of which influence cardiac conduction and repolarization (Amen et al., 2024).[REVISED R1-#3] Bradyarrhythmias represent an important and often underrecognized manifestation of OSAS. Nocturnal sinus bradycardia, sinus pauses exceeding 2.5 seconds, and varying degrees of atrioventricular (AV) block occur in 18-37% of OSAS patients, predominantly during apneic episodes when coordinated vagal surges and hypoxemia-related conduction slowing converge. The severity and frequency of bradyarrhythmic events scale with AHI and nocturnal oxygen desaturation index. In a subset of patients, high-degree AV block may precipitate syncope, representing a directly treatable consequence of unrecognized OSAS. The 2022 American Heart Association/Heart Rhythm Society Scientific Statement on Sleep-Disordered Breathing and Cardiac Arrhythmias explicitly recommends ECG rhythm assessment -ideally via overnight cardiac monitoring -in patients with OSAS presenting with unexplained syncope, documented bradyarrhythmia, or prior to pacemaker implantation, as CPAP therapy alone may reverse conduction abnormalities and obviate device therapy (Mehra et al., 2022).Atrial fibrillation (AF) demonstrates particularly robust associations with OSAS. Recent evidence confirms that OSAS increases AF risk 2-4 fold, with the Sleep Heart Health Study documenting that severe OSAS (AHI >30) confers a 4-fold increased AF risk (Mehra et al., 2022). A recent study found AF odds 2.5 times higher in OSAS patients (Alshomrani et al., 2024). Proposed mechanisms include atrial stretch from increased venous return, autonomic imbalance, and inflammatory-mediated atrial remodeling (Linz et al., 2023). The bidirectional relationship between OSAS and AF is clinically pivotal: patients referred from cardiology for AF evaluation or catheter ablation planning should be systematically screened for OSAS, given AHA/ACC guideline recommendations that OSAS identification and treatment may reduce AF recurrence (Mehra et al., 2022;Ndakotsu et al., 2024). Conversely, new-onset AF detected on Holter monitoring in a sleep clinic patient should prompt formal cardiac rhythm evaluation and cardiology co-management.Ventricular arrhythmias, while less common than atrial arrhythmias, occur with increased frequency in severe OSAS. Complex ventricular ectopy and non-sustained ventricular tachycardia have been reported in 15-25% of patients during sleep studies, with occurrence linked to hypoxemia severity and sympathetic activation.QT interval abnormalities represent particularly concerning ECG findings in OSAS given their association with ventricular arrhythmias and sudden cardiac death. QT prolongation occurs in 23-41% of patients with moderate-to-severe OSAS. A 2021 study demonstrated significant prolongation of Tp-e interval, Tp-e/QT ratio, and Tp-e/QTc ratio across increasing OSAS severity categories, with strong positive correlations between AHI and these repolarization parameters (Karacop and Karacop, 2021). Recent evidence shows that QTc prolongation in OSAS patients is associated with multiple cardiovascular risk factors including older age, female gender, higher BMI, and comorbidities such as diabetes mellitus and hypertension (Shi and Jiang, 2020). A pro-QTc risk score for mortality stratification demonstrated that higher scores independently predicted increased mortality risk across all OSAS severity categories (Memon et al., 2023). QT variability, reflecting beat-to-beat variations in ventricular repolarization, shows significant elevation during apneic episodes and correlates strongly with respiratory disturbance index severity. The mechanisms underlying QT abnormalities likely involve autonomic imbalance, intermittent hypoxemia-induced ion channel dysfunction, electrolyte disturbances, and sympathoadrenal activation with elevated catecholamines. Notably, CPAP therapy has been shown to improve QT parameters, suggesting reversibility of these repolarization abnormalities with effective treatment. T-wave abnormalities and ST-segment depression during sleep occur in 20-35% and 15-25% of OSAS patients, respectively, typically coinciding with apneic episodes and oxygen desaturation.The accessibility and low cost of ECG monitoring make it an attractive screening tool for OSAS, particularly in settings where polysomnography access is limited. Recent developments in automated ECG analysis leverage machine learning and deep learning algorithms to detect OSAS-related patterns in heart rate dynamics, HRV parameters, and respiratory-related cardiac oscillations. A comprehensive meta-analysis evaluated the diagnostic accuracy of machine learning and deep learning algorithms for detecting sleep apnea from single-lead ECG data (Hosseini et al., 2025). The analysis demonstrated that current ECG-based screening algorithms achieve pooled sensitivity and specificity of 75-85% for detecting moderate-tosevere OSAS. Recent deep learning models have achieved even higher performance, with convolutional neural network architectures demonstrating accuracy exceeding 90-97% (Bazoukis et al., 2023;Liu et al., 2024). Multi-modal approaches combining ECG with oxygen saturation signals achieve per-segment detection accuracy of 91.38% and per-recording accuracy of 96.08% (Gao et al., 2025). A recent study from Mayo Clinic developed a deep convolutional neural network model achieving an AUC of 0.80 for OSAS identification, with particularly strong performance in females (AUC: 0.82) compared to males (AUC: 0.73) (Covassin et al., 2025). Multi-night ECG recordings enhance diagnostic yield by capturing night-to-night variability. Patch-based monitors and wearable devices worn for 7-14 days demonstrate excellent correlation with polysomnography while offering improved patient acceptability and real-world representativeness.[NEW -Reviewer 3] These performance metrics, however, warrant critical appraisal before clinical translation. The majority of published AI models were developed and evaluated on retrospective, single-center or consortium datasets, raising substantial concerns about external validity and overfitting. Dataset heterogeneity -encompassing differences in ECG acquisition protocols, patient demographics, OSAS severity distributions, and polysomnographic scoring criteria (notably hypopnea definitions) -complicates direct performance comparisons across studies. Many models have been trained and tested on overlapping or non-independent cohorts, which artificially inflates reported accuracy.Prospective, large-scale external validation in heterogeneous real-world populationsparticularly in women, elderly patients, and those with significant comorbidities or polypharmacy -remains sparse, and published benchmark accuracies are rarely replicated outside their training environments. Until such validation is available, ECG-based AI algorithms should be regarded as promising research tools requiring further prospective validation rather than ready-to-deploy clinical diagnostics.[NEW -Reviewer 2] It is equally important to emphasize that ECG-based assessment is strictly complementary to polysomnography and does not replace it. Current major guidelinesincluding those from the American Academy of Sleep Medicine, the European Respiratory Society, and the American Heart Association -do not recommend ECG analysis as a standalone diagnostic modality for OSAS. ECG monitoring provides adjunctive cardiovascular information and may serve as a low-cost screening trigger in specific high-risk populations (e.g., patients with AF, unexplained syncope, or metabolic syndrome), but confirmed diagnosis and severity assessment of OSAS requires polysomnography or validated home sleep apnea testing. The clinical algorithms proposed in this article are designed to complement, not substitute, established diagnostic pathways.Beyond OSAS diagnosis, ECG findings provide valuable prognostic information regarding cardiovascular risk. Frequent premature atrial contractions identify patients at heightened risk for AF development. QT prolongation and increased QT dispersion associate with ventricular arrhythmias and sudden cardiac death. The pro-QTc risk score demonstrates independent predictive value for mortality in OSAS patients (Memon et al., 2023).[REVISED R1-#4] Nocturnal heart rate and ECG-derived parameters have emerged as powerful independent predictors of cardiovascular morbidity and mortality in OSAS. Two landmark cohort studies have provided robust evidence in this regard. Sankari et al. (2019), analyzing data from the Wisconsin Sleep Cohort Study (n=569, up to 15 years of follow-up), demonstrated that the nocturnal R-R interval dips index (RRDI) -reflecting beat-to-beat heart rate oscillations during sleep -was independently associated with composite cardiovascular events and mortality. Individuals in the highest RRDI category (\u226528 dips/hour) had a 7.4-fold increased hazard for CVD incidence and mortality compared to those in the lowest category (HR 7.4, 95% CI 1.97-27.7, p=0.003), independent of AHI, demographics, and comorbidities (Sankari et al., 2019). In a complementary approach, Azarbarzin et al. (2021) quantified the sleep apnea-specific pulse-rate response (\u0394HR -the magnitude of heart rate increase following apneas and hypopneas) in the MESA (n=1,395) and SHHS (n=4,575) cohorts. Individuals with a high \u0394HR were at significantly increased risk of non-fatal cardiovascular disease (adjusted HR 1.60, 95% CI 1.28-2.00), fatal CVD (adjusted HR 1.68, 95% CI 1.22-2.30), and all-cause mortality (adjusted HR 1.29, 95% CI 1.07-1.55), with the greatest risk amplification in those with concurrent high hypoxic burden. These findings collectively suggest that ECG-derived nocturnal heart rate metrics provide clinically actionable prognostic information beyond conventional AHI-based severity classification.Risk stratification algorithms incorporating ECG parameters alongside OSAS severity and clinical variables outperform traditional cardiovascular risk scores in predicting adverse events. Ambulatory ST-segment monitoring during sleep reveals ischemic episodes in 15-30% of OSAS patients, many of which occur silently without recognized anginal symptoms.Detection of nocturnal ischemia may prompt earlier coronary artery evaluation and revascularization in high-risk patients.Continuous positive airway pressure (CPAP) represents the first-line treatment for moderateto-severe OSAS, and ECG monitoring provides objective markers of therapeutic response.Studies consistently demonstrate significant improvements in most ECG parameters within 3-6 months of effective CPAP therapy. Nocturnal arrhythmia burden decreases by 60-80% in adherent patients, with particular reductions in bradyarrhythmic episodes. AF burden shows substantial reduction with effective CPAP therapy, especially in patients with good adherence (S\u00e1nchez-de-la-Torre et al., 2023). QT parameters also improve with CPAP therapy, with studies demonstrating normalization of QTc intervals and reduction in QT dispersion.[REVISED R1-#5] Importantly, some ECG improvements may occur acutely with CPAP application. Optimal CPAP pressure significantly normalized R-R interval dip indices and reduced heart rate changes associated with non-apneic respiratory events, with RRI returning to baseline levels once resistive respiratory load was abolished (Sankari et al., 2017). This acute normalization reflects the immediate restoration of sympathovagal balance and elimination of hypoxemia-related autonomic excitation, even before structural cardiac remodeling can occur. This acute response has a practical clinical implication: the absence of short-term ECG improvement despite apparent CPAP adherence may therapy or parameters consistently improve with CPAP therapy, with and demonstrating significant increases within of treatment improvements occur in patients with higher CPAP suggesting a relationship between treatment and autonomic The magnitude of HRV improvement correlates with cardiovascular positioning HRV monitoring as a potential tool for treatment and adherence assessment (Qin et al., and upper airway also demonstrate ECG typically of magnitude compared to CPAP therapy. A of the for by et al. demonstrated that therapy in patients with moderate-to-severe OSAS significant improvements in and low-frequency HRV power across all sleep at with the of HRV improvement with AHI reduction achieved et al., 2019). Notably, a of the therapy not reverse the HRV suggesting autonomic These the that upper airway of the modality the of autonomic cardiac particular as a treatment with direct cardiovascular electrophysiological independently and promotes atrial OSAS these reduction of in OSAS patients significantly AHI and ECG improvements including normalization of reduction in premature atrial and restoration of HRV parameters The cardiovascular ECG of to through direct improvement in metabolic and inflammatory milieu myocardial and from reduced upper airway the and most has been associated with the most substantial ECG including reductions in AF burden and ventricular ectopy to those with ECG with the of further the of as a cardiovascular risk in OSAS increasingly the value of ECG monitoring in OSAS The 2021 American Heart Association Scientific Statement recommends cardiac rhythm assessment in patients with moderate-to-severe OSAS or significant cardiovascular comorbidities et al., 2021). requires for ECG analysis, and in the of We a clinically to ECG in OSAS that reflects real-world patient In ECG assessment in OSAS typically in clinical the sleep where patients are referred for OSAS, and the cardiology where patients with established AF or unexplained bradycardia referred for sleep assessment prior to cardiac In the the initial evaluation at the clinic on cardiovascular risk assessment prior arrhythmia of During the diagnostic sleep a single-lead ECG channel is during polysomnography cardiac rhythm data the In home sleep apnea rate as a its is to reveals significant arrhythmias bradyarrhythmia, ventricular or concerning QT changes formal ECG Holter is as a high-risk patients with syncope, or elevated sudden cardiac ECG monitoring with provides In the clinical -the patient referred from cardiology recommend that OSAS be identified and prior to AF or therapy as OSAS treatment may or significantly reduce arrhythmia burden (Mehra et al., et al., intelligence and deep learning applications represent the of ECG-based OSAS The 2025 meta-analysis confirmed that machine learning algorithms analyzing ECG signals achieve diagnostic accuracy of with the most deep learning models exceeding 90-97% (Hosseini et al., et al., 2023). devices a particularly promising for the between and and monitors worn for 7-14 days night-to-night variability in cardiac rhythm and a more of OSAS cardiovascular impact than a In patients CPAP therapy, wearable ECG can HRV and arrhythmia burden to objective The of ECG assessment into OSAS represents a in of breathing as a with cardiovascular ECG monitoring offers low of and to provide which a of a ECG-based approaches can night-to-night variability and treatment response important be The greatest clinical value of ECG in OSAS may not in diagnosis per but in cardiovascular risk stratification and treatment OSAS patients with high arrhythmia prolonged QT increased QT variability, or nocturnal ischemia that may adverse cardiovascular events. The pro-QTc risk score demonstrates ECG parameters can be integrated into clinical tools for mortality risk stratification (Memon et al., 2023). ECG improvements with CPAP therapy provides objective evidence of treatment beyond of artificial intelligence and wearable to access to cardiac monitoring and OSAS learning approaches achieve clinically diagnostic accuracy (Hosseini et al., with the most models or exceeding",
+          "relevance_score": 1.2996234,
+          "id": "https://openalex.org/W7151424033"
+        },
+        {
+          "title": "BMI, race and AF recurrence post ablation: a meta-analysis and systematic review",
+          "abstract": "Aims Obesity increases atrial fibrillation (AF) risk, but it remains unclear whether this association can be extrapolated to AF patients who undergoing pulmonary vein isolation (PVI), and whether there are racial differences. This study aims to explore the role and interaction of body mass index (BMI) and racial factors in the risk of AF recurrence post PVI. Methods A systematic search was conducted in PubMed, Web of Science, Engineering Index, Wan Fang database, CNKI, and relevant meta-analyses from database inception to May 19, 2025. Standardized data extraction was performed in accordance with the Meta-analysis of Observational Studies in Epidemiology Reporting Guidelines. Primary outcome was the recurrence of AF post PVI. Secondary outcomes included procedural complications, and echocardiographic parameters. Results Finally, 26 studies involving 35,237 individuals were included. The results showed a linear positive correlation between BMI and the risk of AF recurrence post PVI. For every 5-units increase in BMI, the recurrence risk of AF increased by 9%. Subgroup analysis indicated that obese Europeans had a 9% higher recurrence risk ( P &amp;lt; 0.001), obese North Americans had a 14% higher recurrence risk ( P &amp;lt; 0.001), and Asians had the highest increase in recurrence risk, reaching 37% ( P &amp;lt; 0.001). Meta-regression analysis suggested that racial differences were potentially related to the strength of the association between BMI and AF recurrence ( P = 0.033). Risk factor analysis identified enlarged left atrial diameter as a potential risk factor contributing to the recurrence of AF ( P = 0.021). No statistically significant difference in surgical complications risk was observed between obese and non-obese populations ( P = 0.083). Conclusion Our findings confirm a linear positive correlation between BMI and the risk of AF recurrence post PVI. An enlarged left atrial diameter may be one potential mechanisms underlying AF recurrence. Furthermore, significant racial disparities were identified in AF recurrence risk, with Asian patients showing a significantly higher recurrence risk than European and American patients. Systematic Review Registration https://www.crd.york.ac.uk/prospero/display_record.php?ID=CRD42024496463 , PROSPERO CRD42024496463.",
+          "relevance_score": 0.75711524,
+          "id": "https://openalex.org/W7152233417"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 13,
+      "query": "(\"stroke prevention\" OR \"ischemic stroke\") AND (\"atrial fibrillation\")",
+      "angle": "Primary treatment goal",
+      "rationale": "Captures papers focused on the core objective of AFib management, beyond specific drugs or devices.",
+      "openalex_count": 66,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Competing Stroke Etiologies and Outcomes After Breakthrough Ischemic Stroke on Oral Anticoagulants in Patients With Atrial Fibrillation",
+          "abstract": "ClinicalTrials.gov NCT06823466.",
+          "relevance_score": 12.734313,
+          "id": "https://openalex.org/W7154143461"
+        },
+        {
+          "title": "Dental Flossing May Lower the Risk for Incident Ischemic Stroke, Cardioembolic Stroke Subtype, and Atrial Fibrillation",
+          "abstract": "URL: https://www.clinicaltrials.gov; Unique identifier: NCT00005131.",
+          "relevance_score": 12.680858,
+          "id": "https://openalex.org/W7151909927"
+        },
+        {
+          "title": "Incidence of ischemic stroke in Takotsubo cardiomyopathy patients: a systematic review and meta-analysis",
+          "abstract": "Ischemic stroke in TC patients correlates with an increased mortality rate and is associated with age, sex, and comorbidities, including diabetes and atrial fibrillation. Additional research is necessary to evaluate the possible advantages of anticoagulant therapy in TC patients.",
+          "relevance_score": 10.249754,
+          "id": "https://openalex.org/W7153882105"
+        },
+        {
+          "title": "Does elevated lipoprotein A relate to the incidence of stroke in atrial fibrillation?",
+          "abstract": "Evidence suggests a potential association between elevated Lp(a) and increased ischemic stroke risk in atrial fibrillation patients, but findings are mixed, and evidence quality varies.",
+          "relevance_score": 9.792921,
+          "id": "https://openalex.org/W7151630171"
+        },
+        {
+          "title": "Is left atrial diameter related to ischemic stroke?",
+          "abstract": "Purpose: Stroke is the second leading cause of death and the third leading cause of disability worldwide. The highest recurrence rates are observed in subtypes such as large artery atherosclerosis (LAA) and cardioembolic (CE) stroke. Atrial fibrillation (AF) is a common cause of CE. However, the role of increased left atrial (LA) size as a potential risk factor for ischemic stroke remains controversial. This study aimed to evaluate whether LA size is associated with the long-term risk of stroke recurrence in patients with non-valvular atrial fibrillation.Materials and methods: This retrospective study included 191 patients diagnosed with ischemic stroke by a specialist neurologist at Afyonkarahisar University of Health Sciences between January 1, 2024, and June 1, 2024. Patients aged &amp;gt;18 years with acute ischemic stroke were included. Patients with a history of ischemic stroke who had not undergone transthoracic echocardiography were excluded. The etiological subtype of ischemic stroke was determined according to the TOAST (Trial of Org 10172 in Acute Stroke Treatment) criteria.Results: A total of 191 patients were included. Of these, 155 (81.2%) had non-recurrent stroke, while 36 (18.8%) experienced recurrent stroke. Smoking was significantly more common in patients with recurrent ischemic stroke (30.6% vs. 16.1%; p=0.046). The prevalence of AF was also higher in the recurrent stroke group (33.3% vs. 12.9%; p=0.003). Moreover, LA diameter was significantly greater in patients with recurrent ischemic stroke (median [interquartile range]: 43 [35.75-47] vs. 35 [33-37]; p&amp;lt;0.001).Conclusion: This study demonstrates that increased LA diameter, smoking, and AF are associated with a higher risk of recurrent ischemic stroke. Notably, larger LA diameter may contribute to blood stasis and thrombus formation in the left atrium, thereby elevating the risk of CE events. Further research is warranted to confirm these associations and strengthen the current evidence base.",
+          "relevance_score": 8.806296,
+          "id": "https://openalex.org/W7154190069"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 14,
+      "query": "(\"hybrid ablation\" OR \"convergent procedure\" OR \"epicardial ablation\") AND (\"atrial fibrillation\")",
+      "angle": "Advanced/surgical ablation",
+      "rationale": "Targets papers on combined surgical/catheter approaches for complex cases.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Colchicine in modern cardiology: opportunities, limitations and promising results. An analytical review of the recent clinical trial outcomes",
+          "abstract": "Background . Colchicine, traditionally used for gout treatment, has recently emerged as a promising therapeutic option for coronary artery disease (CAD) due to its anti-inflammatory properties. However, its use is accompanied by conflicting clinical data and potential risks. Objective . To systematize current evidence on the efficacy and safety of colchicine in cardiovascular diseases, identifying key areas of certainty and uncertainty. Design and methods . We analyzed 35 clinical studies (2021-2025), including randomized controlled trials (LoDoCo2, COLCOT, CLEAR), meta-analyses and cohort studies. The study was supported by the Russian Science Foundation (Agreement No. 25-15-20110). Results . Proven benefits: 28 % reduction in cardiovascular events in chronic CAD; atherosclerotic plaque stabilization (+ 34,2 \u03bcm fibrous cap thickness); 33 % reduction in postoperative atrial fibrillation. Controversial data: no benefit in acute coronary syndrome (odds ratio (OR) 0,99); increased dementia risk with long-term use (OR 1,45). Safety concerns: gastrointestinal complications (+ 3,6 %); trend toward increased non-cardiac mortality (+ 38 %); dose-dependent increase in dementia risk (+ 45 %). Conclusion . Colchicine represents a promising tool for secondary prevention of atherothrombosis, combining centuries of clinical experience with modern understanding of inflammatory mechanisms. Its niche included patients with chronic CAD and persistent inflammatory activity, where it complements standard therapy without increasing bleeding risk, unlike more aggressive antithrombotic strategies. Further research should clarify its role in acute settings and optimize dosing regimens considering individual safety profiles.",
+          "relevance_score": 0.7293055,
+          "id": "https://openalex.org/W7153182583"
+        },
+        {
+          "title": "Pericoronary Fat Attenuation Index and MRI-Derived Coronary Flow Reserve: A Comparative Study in Suspected Versus Known Coronary Artery Disease",
+          "abstract": "Background: The fat attenuation index (FAI) derived from coronary computed tomography angiography (CTA) is an emerging imaging biomarker of perivascular inflammation. Coronary flow reserve (CFR), assessed by phase-contrast (PC) cine cardiac magnetic resonance (CMR) of the coronary sinus, reflects coronary microvascular function. Although FAI has been linked to adverse outcomes in coronary artery disease (CAD), its relationship with CFR across different CAD stages is not well defined. Methods: We retrospectively evaluated 241 patients (mean age 73.4 \u00b1 10.8 years; 149 men [61.8%]) who underwent both coronary CTA and CMR (122 with known CAD and 119 with suspected CAD). FAI was measured in the proximal left anterior descending (LAD), left circumflex (LCX), and right coronary (RCA) arteries. Impaired CFR was defined as &lt;2.0. Univariable and multivariable logistic regression analyses were performed to identify factors associated with impaired CFR. Results: Impaired CFR was observed in 38 of 122 patients (31.1%) with known CAD and 26 of 119 (21.8%) with suspected CAD. Higher LAD-FAI was associated with impaired CFR in both groups: OR 1.06 (95% CI 1.01\u20131.11; p = 0.018) in known CAD and OR 1.08 (95% CI 1.02\u20131.15; p = 0.017) in suspected CAD. Correlation analysis also demonstrated an inverse relationship between LAD-FAI and CFR (p &lt; 0.001), and the strength of association was comparable between the two groups. Conclusions: LAD-FAI was associated with impaired CFR in both suspected and known CAD, with comparable strength of association across the two groups. These findings indicate that perivascular inflammation, reflected by FAI, may relate to coronary microvascular dysfunction in different stages of CAD.",
+          "relevance_score": 0.650982,
+          "id": "https://openalex.org/W7154103719"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 15,
+      "query": "(\"periprocedural\" OR \"post-ablation\" OR \"blanking period\") AND (\"atrial fibrillation\" AND ablation)",
+      "angle": "Ablation perioperative management",
+      "rationale": "Focuses on immediate post-procedure care, complications, and early recurrence management.",
+      "openalex_count": 15,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A single center experience and preliminary results on pulsed field ablation: early report from the MENA region",
+          "abstract": "",
+          "relevance_score": 6.9977903,
+          "id": "https://openalex.org/W7153757753"
+        },
+        {
+          "title": "Impact of anemia prior to catheter ablation for atrial fibrillation on clinical outcomes: a U.S. retrospective cohort analysis",
+          "abstract": "",
+          "relevance_score": 6.21432,
+          "id": "https://openalex.org/W7151456597"
+        },
+        {
+          "title": "Time-course changes in autonomic nervous system activity after pulsed-field ablation for paroxysmal atrial fibrillation: comparison with cryoballoon ablation",
+          "abstract": "",
+          "relevance_score": 5.9427257,
+          "id": "https://openalex.org/W7154165289"
+        },
+        {
+          "title": "Pulsed field ablation versus cryoballoon ablation for pulmonary vein isolation in atrial fibrillation: a systematic review and meta-analysis with subgroup analyses by AF type",
+          "abstract": "Pulsed field ablation (PFA) is a non-thermal alternative to cryoballoon ablation (CBA) for pulmonary vein isolation in atrial fibrillation (AF). We compared their procedural efficiency, safety, and 1-year outcomes. We searched PubMed, Scopus, Web of Science, CENTRAL, and Embase through October 2025 for randomized and comparative cohort studies of adults undergoing PFA or CBA. Outcomes were procedure duration, fluoroscopy time, left-atrial dwell time, periprocedural complications, and 1-year atrial arrhythmia recurrence, synthesized using random-effects meta-analyses with AF-type subgroup analyses. Twenty-three studies were included overall, of which 22 contributed to the quantitative synthesis. Overall, PFA shortened procedure duration versus CBA (mean difference [MD] \u2212 11.50 min, 95% confidence interval [CI] \u2212 15.39 to \u2212 7.62), driven by persistent and mixed AF subgroups, while no significant difference was observed in paroxysmal AF. LA dwell time was reduced with PFA in paroxysmal AF, whereas fluoroscopy time did not differ significantly overall. Stroke, bleeding, and cardiac tamponade were comparable. PFA markedly decreased persistent (risk ratio [RR] 0.31, 95% CI 0.10\u20130.91) and transient (RR 0.19, 95% CI 0.07\u20130.53) phrenic nerve palsy. At 1 year, overall pooled analyses showed lower total atrial arrhythmia recurrence (RR 0.79, 95% CI 0.66\u20130.94) and AF recurrence (RR 0.72, 95% CI 0.62\u20130.83), with no difference in atrial flutter recurrence. PFA appears to offer shorter procedures and a more favorable phrenic-nerve safety profile than cryoballoon ablation, without evidence of excess major complications. Apparent 1-year efficacy advantages should be interpreted cautiously because the evidence base is dominated by observational studies and direct randomized PFA-versus-cryoballoon evidence remains limited.",
+          "relevance_score": 5.543141,
+          "id": "https://openalex.org/W7154089496"
+        },
+        {
+          "title": "A multicentre study on persistent atrial fibrillation ablation targeting rotational activity on top of pulmonary vein isolation: insights from an extensive mapping technique",
+          "abstract": "Background-aims Recently, the etiopathogenetic role of rotational activity (RotAct) in atrial fibrillation (AF) has been proposed. We designed a prospective multicenter study using CARTO Finder to evaluate the presence/distribution of RotActs in persistent AF (persAF), pulmonary vein isolation (PVI)influences on RotActs, and the impact of its elimination on top of PVI on procedural outcomes. Methods For this study, 76 patients with pers AF ablation were enrolled. Procedural steps involved (1) using a CARTO-Finder map to look for RotActs (physician blinded); (2) PVI; (3) using a new map to look for residual/new RotActs; (4) ablation of RotActs, if present; (5) and finally using a new map to confirm RotAct elimination. Populations were divided based on the presence or absence of structural heart disease (Group I and II) and the presence or absence (R+ and R\u2212) of RotActs before PVI. Presence, number, and distribution of RotAct at STEP 1, the impact of PVI on RotAct at STEP 3, and maintenance of sinus rhythm (SR) during follow-up were evaluated. 56 AF patients undergoing standard ablation protocol were included as a control group. Results RotAct was identified in 29 (38%) patients at STEP1. RotAct did not differ between GI and GII patients. PVI significantly modified the number and localization of RotActs ( p = 0.012). RotActs which were present at STEP 1 were different after PVI, with disappearance in 18 and new appearance in 5 patients. 71 patients completed a mean 13 \u00b1 6 months follow-up and 91.5% were in stable SR. No difference in relapses was seen between R + and R- and GI and GII. RotAct ablation significantly reduced arrhythmia relapse during the follow-up compared to the control group (freedom from arrhythmia 91.5% vs. 78.6%, p = 0.025). Conclusion RotAct was present in 38% in persAF patients. PVI influenced the number and distribution of RotActs. A tailored ablation strategy provided a high success rate (91.5%) at the follow-up.",
+          "relevance_score": 0.80318934,
+          "id": "https://openalex.org/W7153227500"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.9
+    }
+  ]
+}

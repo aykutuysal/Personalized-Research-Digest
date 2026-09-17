@@ -1,0 +1,627 @@
+{
+  "subject": "AI agents",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "deepseek/deepseek-v3.2",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "AI agent monitoring",
+      "tool use agents",
+      "multi-agent systems",
+      "agent reasoning architectures",
+      "RAG agents"
+    ],
+    "raw_results": [
+      {
+        "seed": "AI agent monitoring",
+        "count": 1639
+      },
+      {
+        "seed": "tool use agents",
+        "count": 8173
+      },
+      {
+        "seed": "multi-agent systems",
+        "count": 16120
+      },
+      {
+        "seed": "agent reasoning architectures",
+        "count": 3183
+      },
+      {
+        "seed": "RAG agents",
+        "count": 1680
+      }
+    ],
+    "cost": 0.00013578,
+    "latency_s": 3.2
+  },
+  "vocabulary": {
+    "total_papers": 250,
+    "topics": [
+      [
+        "Topic Modeling",
+        24
+      ],
+      [
+        "Multi-Agent Systems and Negotiation",
+        16
+      ],
+      [
+        "Multimodal Machine Learning Applications",
+        12
+      ],
+      [
+        "Explainable Artificial Intelligence (XAI)",
+        12
+      ],
+      [
+        "Artificial Intelligence in Healthcare and Education",
+        10
+      ],
+      [
+        "Reinforcement Learning in Robotics",
+        8
+      ],
+      [
+        "Ethics and Social Impacts of AI",
+        7
+      ],
+      [
+        "Scientific Computing and Data Management",
+        7
+      ],
+      [
+        "AI-based Problem Solving and Planning",
+        7
+      ],
+      [
+        "Blockchain Technology Applications and Security",
+        6
+      ],
+      [
+        "Access Control and Trust",
+        6
+      ],
+      [
+        "Advanced Graph Neural Networks",
+        6
+      ],
+      [
+        "Cognitive Computing and Networks",
+        5
+      ],
+      [
+        "Language and cultural evolution",
+        5
+      ],
+      [
+        "Distributed Control Multi-Agent Systems",
+        5
+      ]
+    ],
+    "subfields": [
+      [
+        "Artificial Intelligence",
+        101
+      ],
+      [
+        "Computer Networks and Communications",
+        18
+      ],
+      [
+        "Information Systems",
+        13
+      ],
+      [
+        "Computer Vision and Pattern Recognition",
+        12
+      ],
+      [
+        "Health Informatics",
+        10
+      ],
+      [
+        "Information Systems and Management",
+        9
+      ],
+      [
+        "Safety Research",
+        7
+      ],
+      [
+        "Sociology and Political Science",
+        7
+      ],
+      [
+        "Control and Systems Engineering",
+        5
+      ],
+      [
+        "Computational Theory and Mathematics",
+        5
+      ]
+    ],
+    "fields": [
+      [
+        "Computer Science",
+        154
+      ],
+      [
+        "Social Sciences",
+        23
+      ],
+      [
+        "Engineering",
+        20
+      ],
+      [
+        "Decision Sciences",
+        13
+      ],
+      [
+        "Medicine",
+        10
+      ]
+    ],
+    "keywords": [
+      [
+        "Architecture",
+        45
+      ],
+      [
+        "Cognition",
+        26
+      ],
+      [
+        "Workflow",
+        22
+      ],
+      [
+        "Corporate governance",
+        21
+      ],
+      [
+        "Reinforcement learning",
+        18
+      ],
+      [
+        "Orchestration",
+        17
+      ],
+      [
+        "Scalability",
+        17
+      ],
+      [
+        "Graph",
+        16
+      ],
+      [
+        "Cognitive architecture",
+        16
+      ],
+      [
+        "Enforcement",
+        11
+      ],
+      [
+        "Software deployment",
+        11
+      ],
+      [
+        "Inference",
+        11
+      ],
+      [
+        "Language model",
+        11
+      ],
+      [
+        "Executable",
+        10
+      ],
+      [
+        "Verifiable secret sharing",
+        10
+      ],
+      [
+        "Modular design",
+        10
+      ],
+      [
+        "Decision support system",
+        9
+      ],
+      [
+        "Security token",
+        9
+      ],
+      [
+        "Anomaly detection",
+        8
+      ],
+      [
+        "Generalization",
+        8
+      ],
+      [
+        "Automation",
+        7
+      ],
+      [
+        "Testbed",
+        7
+      ],
+      [
+        "Trustworthiness",
+        7
+      ],
+      [
+        "Correctness",
+        7
+      ],
+      [
+        "Natural language",
+        7
+      ]
+    ],
+    "journals": [
+      [
+        "arXiv (Cornell University)",
+        47
+      ],
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        44
+      ],
+      [
+        "ArXiv.org",
+        26
+      ],
+      [
+        "Open MIND",
+        16
+      ],
+      [
+        "Lecture notes in computer science",
+        5
+      ],
+      [
+        "Frontiers in artificial intelligence and applications",
+        4
+      ],
+      [
+        "SSRN Electronic Journal",
+        3
+      ],
+      [
+        "Proceedings of the AAAI Conference on Artificial Intelligence",
+        3
+      ],
+      [
+        "Smart Agricultural Technology",
+        3
+      ],
+      [
+        "Research Square",
+        3
+      ]
+    ],
+    "sample_titles": [
+      "Autonomous agentic AI with policy adaptation for physics-informed spectral learning in Structural Health Monitoring",
+      "Agentic AI on Customer Dashboards in Remote Monitoring and Diagnostic Services",
+      "Adaptive monitoring and real-world evaluation of agentic AI systems",
+      "Bridging AI-automated Governance, Adaptive Certification, Behavioral Authentication, and AI-agent Risk Monitoring in Zero-trust Digital Infrastructures",
+      "Monitoring Teams of AI Agents",
+      "Recalibrate: Metacognitive Monitoring for Persistent AI Agents",
+      "Recalibrate: Metacognitive Monitoring for Persistent AI Agents",
+      "Agentic AI System for Stress Monitoring: A Multi-agent Healthcare Crew",
+      "Perspectives on a Reliability Monitoring Framework for Agentic AI Systems",
+      "From Monitoring to Authorization: The Structural Shift in Agentic AI Governance",
+      "From Monitoring to Authorization: The Structural Shift in Agentic AI Governance",
+      "From Monitoring to Authorization: The Structural Shift in Agentic AI Governance",
+      "From Monitoring to Authorization: The Structural Shift in Agentic AI Governance",
+      "Adaptive Monitoring and Real-World Evaluation of Agentic AI Systems",
+      "AI Agents for Cloud Operations: Copilot Integration with Azure Monitor and Defender"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "tool use function calling agents",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Core angle confirmed by user. 'Tool use' appears in seed queries and vocabulary shows 'executable' and 'workflow' terms. Focuses on practical implementation patterns for agent tool integration."
+      },
+      {
+        "query": "multi agent collaboration orchestration",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "User cares about multi-agent systems. Vocabulary shows 'orchestration' (17x) and 'multi-agent systems' (16x). Targets practical coordination patterns and implementation architectures."
+      },
+      {
+        "query": "agent reasoning planning architectures",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "User specifically mentioned reasoning architectures. Vocabulary shows 'architecture' (45x), 'cognition' (26x), and 'cognitive architecture' (16x). Focuses on practical implementations like ReAct, Tree-of-Thoughts."
+      },
+      {
+        "query": "agent benchmarking evaluation testbed",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "User wants agent benchmarking. Vocabulary shows 'testbed' (7x) and 'evaluation' contexts. Focuses on practical evaluation frameworks and metrics for agent systems."
+      },
+      {
+        "query": "agent monitoring anomaly detection",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Intersects monitoring (user priority) with anomaly detection (8x in vocabulary). Practical focus on identifying agent failures and performance issues in production systems."
+      },
+      {
+        "query": "multi agent workflow orchestration",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Combines multi-agent systems with workflow (22x in vocabulary). Targets practical coordination patterns and task sequencing in agent teams."
+      },
+      {
+        "query": "agent cost latency optimization",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Intersects cost optimization (confirmed angle) with latency concerns. Vocabulary shows 'scalability' (17x) and 'inference' (11x). Practical focus on production efficiency."
+      },
+      {
+        "query": "human loop agent delegation",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Combines human-in-the-loop (confirmed angle) with delegation patterns. Vocabulary shows 'decision support system' (9x). Practical focus on hybrid human-agent workflows."
+      },
+      {
+        "query": "agent modular design architecture",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Intersects architecture design with modularity (10x in vocabulary). Practical focus on building maintainable, composable agent systems."
+      },
+      {
+        "query": "cognitive architecture agents",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent field from vocabulary showing 'cognitive architecture' (16x) and 'cognition' (26x). Could yield insights from cognitive science applied to practical agent design."
+      },
+      {
+        "query": "agent security access control",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent security focus from vocabulary showing 'access control' (6x) and 'security token' (9x). Practical implications for secure agent deployment and tool access."
+      },
+      {
+        "query": "distributed control multi agent",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent field from vocabulary showing 'distributed control multi-agent systems' (5x). Could yield practical coordination algorithms from control theory."
+      },
+      {
+        "query": "agent corporate governance",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Unexpected connection from vocabulary showing 'corporate governance' (21x) frequently. Might yield surprising papers on organizational structures for agent teams or ethical oversight frameworks."
+      },
+      {
+        "query": "monitoring observability multi-agent systems",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent monitoring observability' with broader terms from vocabulary: 'monitoring observability' combined with 'Multi-Agent Systems' topic to maintain relevance while expanding scope."
+      },
+      {
+        "query": "memory management retrieval augmented generation agents",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'RAG agents memory management' with expanded phrasing using 'retrieval augmented generation' (RAG) and 'agents' from vocabulary, focusing on memory management aspect."
+      },
+      {
+        "query": "verifiable secret sharing blockchain security",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'agent verifiable secret sharing' by removing 'agent' and connecting 'verifiable secret sharing' (from keywords) with 'Blockchain Technology Applications and Security' topic for broader context."
+      }
+    ],
+    "cost": 0.00088974,
+    "latency_s": 42.6
+  },
+  "validation": [
+    {
+      "query": "tool use function calling agents",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 6,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "multi agent collaboration orchestration",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 12,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent reasoning planning architectures",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 32,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent benchmarking evaluation testbed",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 11,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent monitoring anomaly detection",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 6,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "multi agent workflow orchestration",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 41,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent cost latency optimization",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "human loop agent delegation",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "agent modular design architecture",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 14,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "cognitive architecture agents",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 123,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent security access control",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 22,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "distributed control multi agent",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 41,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent corporate governance",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "monitoring observability multi-agent systems",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "memory management retrieval augmented generation agents",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "verifiable secret sharing blockchain security",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "agent monitoring observability",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 1,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "RAG agents memory management",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "agent verifiable secret sharing",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "monitoring observability multi-agent systems",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent monitoring observability' with broader terms from vocabulary: 'monitoring observability' combined with 'Multi-Agent Systems' topic to maintain relevance while expanding scope."
+      },
+      {
+        "query": "memory management retrieval augmented generation agents",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'RAG agents memory management' with expanded phrasing using 'retrieval augmented generation' (RAG) and 'agents' from vocabulary, focusing on memory management aspect."
+      },
+      {
+        "query": "verifiable secret sharing blockchain security",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'agent verifiable secret sharing' by removing 'agent' and connecting 'verifiable secret sharing' (from keywords) with 'Blockchain Technology Applications and Security' topic for broader context."
+      }
+    ],
+    "cost": 0.000301081,
+    "latency_s": 11.4
+  },
+  "costs": {
+    "seed_usd": 0.00013578,
+    "library_usd": 0.00088974,
+    "reformulate_usd": 0.000301081,
+    "total_usd": 0.001327
+  },
+  "total_latency_s": 139.9
+}

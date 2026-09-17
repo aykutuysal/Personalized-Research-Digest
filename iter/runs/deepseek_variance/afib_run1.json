@@ -1,0 +1,744 @@
+{
+  "timestamp": "2026-04-13T01:13:13.008391+00:00",
+  "prompt_file": "iter/prompts/v4_patterns.md",
+  "profile_file": "iter/profiles/afib.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.0039275,
+  "plan_elapsed_s": 11.6,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 11,
+    "healthy": 4,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.27,
+  "frac_healthy_or_safety": 0.27,
+  "mean_precision": 0.6,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.64,
+    "healthy": 0.47,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Atrial fibrillation treatment",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"catheter ablation\" AND (\"atrial fibrillation\" OR AFib)",
+        "angle": "Core procedural technique",
+        "rationale": "Catches primary research on the dominant rhythm control procedure for AFib, focusing on outcomes and techniques."
+      },
+      {
+        "id": 2,
+        "query": "(\"pulmonary vein isolation\" OR \"cryoballoon ablation\" OR \"pulsed field ablation\") AND (\"atrial fibrillation\")",
+        "angle": "Specific ablation technologies",
+        "rationale": "Targets papers on specific ablation modalities and newer energy sources, which are key for a practicing electrophysiologist."
+      },
+      {
+        "id": 3,
+        "query": "(\"direct oral anticoagulant\" OR DOAC OR apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (\"atrial fibrillation\")",
+        "angle": "Anticoagulation pharmacotherapy",
+        "rationale": "Captures clinical studies on DOAC use, choice, and outcomes in AFib patients, a central management pillar."
+      },
+      {
+        "id": 4,
+        "query": "\"left atrial appendage closure\" AND (\"atrial fibrillation\")",
+        "angle": "Stroke prevention procedure",
+        "rationale": "Focuses on the interventional alternative to long-term anticoagulation for stroke prevention."
+      },
+      {
+        "id": 5,
+        "query": "(\"rate control\" OR \"rhythm control\") AND (\"atrial fibrillation\")",
+        "angle": "Management strategy debate",
+        "rationale": "Targets the ongoing comparative effectiveness research and trial results on the fundamental treatment strategy choice."
+      },
+      {
+        "id": 6,
+        "query": "(\"early rhythm control\" OR \"EARLY-AF\" OR \"EAST-AFNET 4\") AND (\"atrial fibrillation\")",
+        "angle": "Recent landmark trial paradigms",
+        "rationale": "Queries for papers discussing or extending findings from key recent trials that shift practice."
+      },
+      {
+        "id": 7,
+        "query": "(\"bleeding risk\" OR \"major bleeding\" OR \"intracranial hemorrhage\") AND (\"atrial fibrillation\" AND anticoagulation)",
+        "angle": "Anticoagulation safety",
+        "rationale": "Catches studies focused on the major risk of therapy, including risk scores and management of bleeding."
+      },
+      {
+        "id": 8,
+        "query": "(\"persistent atrial fibrillation\" OR \"long-standing persistent\") AND (ablation OR \"rhythm control\")",
+        "angle": "Challenging AFib subtype",
+        "rationale": "Focuses on treatment approaches for more difficult-to-treat forms of AFib."
+      },
+      {
+        "id": 9,
+        "query": "(\"antiarrhythmic drug\" OR amiodarone OR flecainide OR dronedarone OR sotalol) AND (\"atrial fibrillation\")",
+        "angle": "Pharmacologic rhythm control",
+        "rationale": "Targets research on drug therapy for maintaining sinus rhythm, relevant for pre-ablation or ablation-ineligible patients."
+      },
+      {
+        "id": 10,
+        "query": "(\"clinical guideline\" OR \"consensus statement\" OR \"expert consensus\") AND (\"atrial fibrillation\")",
+        "angle": "Practice standards & updates",
+        "rationale": "Captures synthesis documents and guideline publications that directly inform care decisions."
+      },
+      {
+        "id": 11,
+        "query": "(\"randomized controlled trial\" OR RCT OR \"randomized trial\") AND (\"atrial fibrillation\" AND treatment)",
+        "angle": "High-level evidence filter",
+        "rationale": "A broad safety-net query for any treatment-focused RCTs in AFib, aligning with the reader's preference for trial data."
+      },
+      {
+        "id": 12,
+        "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"atrial fibrillation\" AND treatment)",
+        "angle": "Evidence synthesis",
+        "rationale": "Targets high-level summaries of evidence across multiple studies for efficient reading."
+      },
+      {
+        "id": 13,
+        "query": "(\"stroke prevention\" OR \"ischemic stroke\") AND (\"atrial fibrillation\")",
+        "angle": "Primary treatment goal",
+        "rationale": "Captures papers focused on the core objective of AFib management, beyond specific drugs or devices."
+      },
+      {
+        "id": 14,
+        "query": "(\"hybrid ablation\" OR \"convergent procedure\" OR \"epicardial ablation\") AND (\"atrial fibrillation\")",
+        "angle": "Advanced/surgical ablation",
+        "rationale": "Targets papers on combined surgical/catheter approaches for complex cases."
+      },
+      {
+        "id": 15,
+        "query": "(\"periprocedural\" OR \"post-ablation\" OR \"blanking period\") AND (\"atrial fibrillation\" AND ablation)",
+        "angle": "Ablation perioperative management",
+        "rationale": "Focuses on immediate post-procedure care, complications, and early recurrence management."
+      }
+    ],
+    "coverage_notes": "Plan covers core clinical angles: ablation techniques, anticoagulation, LAA closure, rate/rhythm control, and high-level evidence (trials, guidelines, meta-analyses). It deliberately excludes basic science (animal models, genetics) and health economics, as per the profile. Queries use Pattern B (specific x specific) for precision, with one Pattern C-style large anchor for 'persistent AFib' to ensure recall on that subtype. The 'RCT' and 'meta-analysis' queries are recall-safety nets using the disease as the specificity carrier."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"catheter ablation\" AND (\"atrial fibrillation\" OR AFib)",
+      "angle": "Core procedural technique",
+      "rationale": "Catches primary research on the dominant rhythm control procedure for AFib, focusing on outcomes and techniques.",
+      "openalex_count": 27,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Impact of anemia prior to catheter ablation for atrial fibrillation on clinical outcomes: a U.S. retrospective cohort analysis",
+          "relevance_score": 19.575644,
+          "id": "https://openalex.org/W7151456597"
+        },
+        {
+          "title": "Preserved Cardiorespiratory Fitness After Catheter Ablation in Athletes With Atrial Fibrillation",
+          "relevance_score": 15.746422,
+          "id": "https://openalex.org/W7151344869"
+        },
+        {
+          "title": "Procedural Complexity and Outcomes of Catheter Ablation for Atrial Fibrillation in Patients With Sick Sinus Syndrome",
+          "relevance_score": 14.472806,
+          "id": "https://openalex.org/W7153602343"
+        },
+        {
+          "title": "Right Ventricular\u2010Pulmonary Artery Coupling in Patients With Atrial Fibrillation and Changes After Catheter Ablation",
+          "relevance_score": 13.770221,
+          "id": "https://openalex.org/W7152380303"
+        },
+        {
+          "title": "Transseptal Puncture and Catheter Ablation of Atrial Fibrillation in Patients With Atrial Septal Occluder Devices: Procedural Techniques and Outcomes",
+          "relevance_score": 12.848499,
+          "id": "https://openalex.org/W7152554706"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 2,
+      "query": "(\"pulmonary vein isolation\" OR \"cryoballoon ablation\" OR \"pulsed field ablation\") AND (\"atrial fibrillation\")",
+      "angle": "Specific ablation technologies",
+      "rationale": "Targets papers on specific ablation modalities and newer energy sources, which are key for a practicing electrophysiologist.",
+      "openalex_count": 14,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A multicentre study on persistent atrial fibrillation ablation targeting rotational activity on top of pulmonary vein isolation: insights from an extensive mapping technique",
+          "relevance_score": 19.396696,
+          "id": "https://openalex.org/W7153227500"
+        },
+        {
+          "title": "Effect of SGLT2 Inhibitors on the Efficacy of First-Time Pulmonary Vein Isolation and Clinical Course of Patients with Heart Failure with Preserved Ejection Fraction and Atrial Fibrillation",
+          "relevance_score": 18.839006,
+          "id": "https://openalex.org/W7151536519"
+        },
+        {
+          "title": "A case of transient tachy-bradycardia syndrome following combined atrial fibrillation ablation and left atrial appendage closure",
+          "relevance_score": 8.94921,
+          "id": "https://openalex.org/W7153203360"
+        },
+        {
+          "title": "Persistence of Low\u2010Voltage Area in the Superior Vena Cava Following Pulsed\u2010Field Ablation for Pulmonary Vein Isolation: Findings During Repeat Procedure",
+          "relevance_score": 8.191226,
+          "id": "https://openalex.org/W7153603888"
+        },
+        {
+          "title": "BMI, race and AF recurrence post ablation: a meta-analysis and systematic review",
+          "relevance_score": 5.9156895,
+          "id": "https://openalex.org/W7152233417"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 3,
+      "query": "(\"direct oral anticoagulant\" OR DOAC OR apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (\"atrial fibrillation\")",
+      "angle": "Anticoagulation pharmacotherapy",
+      "rationale": "Captures clinical studies on DOAC use, choice, and outcomes in AFib patients, a central management pillar.",
+      "openalex_count": 32,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "relevance_score": 12.718361,
+          "id": "https://openalex.org/W7152501191"
+        },
+        {
+          "title": "Plain language summary looking at the impact of drug management strategies on the incidence and cost of clinical events in patients with non-valvular atrial fibrillation receiving direct oral anticoagulants in the USA",
+          "relevance_score": 11.774735,
+          "id": "https://openalex.org/W7152871866"
+        },
+        {
+          "title": "Interpretable machine learning models for stroke risk prediction in patients with newly diagnosed atrial fibrillation",
+          "relevance_score": 11.270118,
+          "id": "https://openalex.org/W7151513738"
+        },
+        {
+          "title": "Anticoagulant adherence and associated complications and readmissions in older valve surgery adults: insights from a retrospective cohort study",
+          "relevance_score": 8.74365,
+          "id": "https://openalex.org/W7152561785"
+        },
+        {
+          "title": "Reusing Blood Samples from a Hospital-based Cohort to Apixaban Plasma Concentrations",
+          "relevance_score": 8.5900135,
+          "id": "https://openalex.org/W7152038966"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 4,
+      "query": "\"left atrial appendage closure\" AND (\"atrial fibrillation\")",
+      "angle": "Stroke prevention procedure",
+      "rationale": "Focuses on the interventional alternative to long-term anticoagulation for stroke prevention.",
+      "openalex_count": 7,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A case of transient tachy-bradycardia syndrome following combined atrial fibrillation ablation and left atrial appendage closure",
+          "relevance_score": 31.027363,
+          "id": "https://openalex.org/W7153203360"
+        },
+        {
+          "title": "Left atrial appendage closure non-inferior to NOACs in atrial fibrillation",
+          "relevance_score": 23.923306,
+          "id": "https://openalex.org/W7153026935"
+        },
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "relevance_score": 15.235756,
+          "id": "https://openalex.org/W7152501191"
+        },
+        {
+          "title": "Hybrid mitral repair and coronary artery bypass with Penditure left atrial appendage closure",
+          "relevance_score": 13.030455,
+          "id": "https://openalex.org/W7151288947"
+        },
+        {
+          "title": "A pulmonary arteriovenous shunt hypoxemia and recurrent bleeding in the emergency department: a case report",
+          "relevance_score": 11.821123,
+          "id": "https://openalex.org/W7151794631"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 5,
+      "query": "(\"rate control\" OR \"rhythm control\") AND (\"atrial fibrillation\")",
+      "angle": "Management strategy debate",
+      "rationale": "Targets the ongoing comparative effectiveness research and trial results on the fundamental treatment strategy choice.",
+      "openalex_count": 23,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Lev\u00e1 s\u00ed\u0148 a fibrilace s\u00edn\u00ed u kriticky nemocn\u00fdch: od echokardiografie k terapii",
+          "relevance_score": 9.001496,
+          "id": "https://openalex.org/W7152405070"
+        },
+        {
+          "title": "What are the recommended dosages for beta-blockers and calcium channel blockers in the management of atrial fibrillation?",
+          "relevance_score": 7.0819454,
+          "id": "https://openalex.org/W7153137420"
+        },
+        {
+          "title": "First Documented Atrial Fibrillation Triggered by Dialysis-Induced Autonomic Instability in End-Stage Kidney Disease",
+          "relevance_score": 4.5800447,
+          "id": "https://openalex.org/W7151624431"
+        },
+        {
+          "title": "Determinants of ECG misdiagnosis of atrial fibrillation or flutter in the emergency department and their clinical implications: results from a single-center observational study",
+          "relevance_score": 3.5782752,
+          "id": "https://openalex.org/W7151261058"
+        },
+        {
+          "title": "Dreaming of a cardiovascular drug sanctuary: Why some old drugs still matter",
+          "relevance_score": 1.5962567,
+          "id": "https://openalex.org/W7152614805"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 6,
+      "query": "(\"early rhythm control\" OR \"EARLY-AF\" OR \"EAST-AFNET 4\") AND (\"atrial fibrillation\")",
+      "angle": "Recent landmark trial paradigms",
+      "rationale": "Queries for papers discussing or extending findings from key recent trials that shift practice.",
+      "openalex_count": 4,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Editorial: Prognostic value of inflammatory and thrombotic biomarkers in acute coronary syndrome",
+          "relevance_score": 2.5807772,
+          "id": "https://openalex.org/W7151222782"
+        },
+        {
+          "title": "Treatment (\u03b1) and Patient Choice (\u03b2) Effects in Medicine: Quantifying the Causal Effect of Preference on Physical Outcomes",
+          "relevance_score": 1.1713802,
+          "id": "https://openalex.org/W7152700869"
+        },
+        {
+          "title": "Case Report: Right-atrial reverse remodeling causing resolution of new-onset torrential tricuspid regurgitation after successful rhythm control",
+          "relevance_score": 1.1594234,
+          "id": "https://openalex.org/W7153219017"
+        },
+        {
+          "title": "Caracter\u00edsticas epidemiol\u00f3gicas de pacientes con fibrilaci\u00f3n auricular mayores de 65 a\u00f1os",
+          "relevance_score": 0.7028934,
+          "id": "https://openalex.org/W7150927669"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.38
+    },
+    {
+      "id": 7,
+      "query": "(\"bleeding risk\" OR \"major bleeding\" OR \"intracranial hemorrhage\") AND (\"atrial fibrillation\" AND anticoagulation)",
+      "angle": "Anticoagulation safety",
+      "rationale": "Catches studies focused on the major risk of therapy, including risk scores and management of bleeding.",
+      "openalex_count": 27,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A pulmonary arteriovenous shunt hypoxemia and recurrent bleeding in the emergency department: a case report",
+          "relevance_score": 10.69463,
+          "id": "https://openalex.org/W7151794631"
+        },
+        {
+          "title": "Outcomes associated with left atrial appendage occlusion in patients with cancer-associated atrial fibrillation: a real-world propensity-matched analysis",
+          "relevance_score": 8.494616,
+          "id": "https://openalex.org/W7151922763"
+        },
+        {
+          "title": "Safety and efficacy of anticoagulation for cerebral amyloid angiopathy patients with high-risk atrial fibrillation",
+          "relevance_score": 7.909297,
+          "id": "https://openalex.org/W7153531668"
+        },
+        {
+          "title": "Anticoagulant adherence and associated complications and readmissions in older valve surgery adults: insights from a retrospective cohort study",
+          "relevance_score": 5.0935574,
+          "id": "https://openalex.org/W7152561785"
+        },
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "relevance_score": 1.6696184,
+          "id": "https://openalex.org/W7152501191"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "YES",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 8,
+      "query": "(\"persistent atrial fibrillation\" OR \"long-standing persistent\") AND (ablation OR \"rhythm control\")",
+      "angle": "Challenging AFib subtype",
+      "rationale": "Focuses on treatment approaches for more difficult-to-treat forms of AFib.",
+      "openalex_count": 7,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A multicentre study on persistent atrial fibrillation ablation targeting rotational activity on top of pulmonary vein isolation: insights from an extensive mapping technique",
+          "relevance_score": 11.952328,
+          "id": "https://openalex.org/W7153227500"
+        },
+        {
+          "title": "Case Report: Right-atrial reverse remodeling causing resolution of new-onset torrential tricuspid regurgitation after successful rhythm control",
+          "relevance_score": 0.8602651,
+          "id": "https://openalex.org/W7153219017"
+        },
+        {
+          "title": "BMI, race and AF recurrence post ablation: a meta-analysis and systematic review",
+          "relevance_score": 0.570325,
+          "id": "https://openalex.org/W7152233417"
+        },
+        {
+          "title": "From signal analysis to clinical practice: the use of peak frequency in mapping and ablation",
+          "relevance_score": 0.5384807,
+          "id": "https://openalex.org/W7152966778"
+        },
+        {
+          "title": "Humanin and MOTS-c Attenuate Atrial Fibrillation by Suppressing Fibrosis and Mitochondrial Dysfunction",
+          "relevance_score": 0.48050702,
+          "id": "https://openalex.org/W7151031334"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 9,
+      "query": "(\"antiarrhythmic drug\" OR amiodarone OR flecainide OR dronedarone OR sotalol) AND (\"atrial fibrillation\")",
+      "angle": "Pharmacologic rhythm control",
+      "rationale": "Targets research on drug therapy for maintaining sinus rhythm, relevant for pre-ablation or ablation-ineligible patients.",
+      "openalex_count": 25,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Amiodarone-Induced Thyrotoxicosis and Clinical Risk Factors for Thyrotoxic Crisis",
+          "relevance_score": 6.697606,
+          "id": "https://openalex.org/W7151397668"
+        },
+        {
+          "title": "First Documented Atrial Fibrillation Triggered by Dialysis-Induced Autonomic Instability in End-Stage Kidney Disease",
+          "relevance_score": 5.6085196,
+          "id": "https://openalex.org/W7151624431"
+        },
+        {
+          "title": "Reusing Blood Samples from a Hospital-based Cohort to Apixaban Plasma Concentrations",
+          "relevance_score": 5.0209527,
+          "id": "https://openalex.org/W7152038966"
+        },
+        {
+          "title": "Dreaming of a cardiovascular drug sanctuary: Why some old drugs still matter",
+          "relevance_score": 1.6331782,
+          "id": "https://openalex.org/W7152614805"
+        },
+        {
+          "title": "Myopericarditis in an emergency department patient presenting with chest pain and ECG changes: a case report",
+          "relevance_score": 1.1094099,
+          "id": "https://openalex.org/W7151582689"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 10,
+      "query": "(\"clinical guideline\" OR \"consensus statement\" OR \"expert consensus\") AND (\"atrial fibrillation\")",
+      "angle": "Practice standards & updates",
+      "rationale": "Captures synthesis documents and guideline publications that directly inform care decisions.",
+      "openalex_count": 24,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Use of landiolol in septic shock patients with new onset of atrial fibrillation: A European Delphi Consensus",
+          "relevance_score": 0.81936246,
+          "id": "https://openalex.org/W7152459607"
+        },
+        {
+          "title": "Atrial fibrillation ablation in patients with type 2 diabetes mellitus: long-term follow-up study for atrial tachyarrhythmia recurrence and adverse cardiovascular events",
+          "relevance_score": 0.79422116,
+          "id": "https://openalex.org/W7153254290"
+        },
+        {
+          "title": "Comorbidity and Integrated Care in Patients with Cardiac Implantable Devices",
+          "relevance_score": 0.76157135,
+          "id": "https://openalex.org/W7153259708"
+        },
+        {
+          "title": "&lt;a&gt;&lt;/a&gt;From a purple digit to left atrial appendage thrombus: the critical role of point-of-care transesophageal echocardiography in the emergency department: a case report",
+          "relevance_score": 0.6568137,
+          "id": "https://openalex.org/W7151866377"
+        },
+        {
+          "title": "BMI, race and AF recurrence post ablation: a meta-analysis and systematic review",
+          "relevance_score": 0.6499179,
+          "id": "https://openalex.org/W7152233417"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "NO",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 11,
+      "query": "(\"randomized controlled trial\" OR RCT OR \"randomized trial\") AND (\"atrial fibrillation\" AND treatment)",
+      "angle": "High-level evidence filter",
+      "rationale": "A broad safety-net query for any treatment-focused RCTs in AFib, aligning with the reader's preference for trial data.",
+      "openalex_count": 58,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Colchicine in modern cardiology: opportunities, limitations and promising results. An analytical review of the recent clinical trial outcomes",
+          "relevance_score": 6.170928,
+          "id": "https://openalex.org/W7153182583"
+        },
+        {
+          "title": "Stroke and transient ischemic attack recurrence after PFO closure in patients with cryptogenic embolism",
+          "relevance_score": 3.8621294,
+          "id": "https://openalex.org/W7151981297"
+        },
+        {
+          "title": "A\u00a0cardiac-rehab home-based mHealth program to improve physical activity in patients with coronary artery disease: a\u00a0randomized controlled trial",
+          "relevance_score": 2.4511707,
+          "id": "https://openalex.org/W7152542505"
+        },
+        {
+          "title": "Efficacy and safety of direct oral anticoagulants in pediatric patients: a systematic review and meta-analysis",
+          "relevance_score": 0.9622034,
+          "id": "https://openalex.org/W7151498159"
+        },
+        {
+          "title": "Effect of SGLT2 Inhibitors on the Efficacy of First-Time Pulmonary Vein Isolation and Clinical Course of Patients with Heart Failure with Preserved Ejection Fraction and Atrial Fibrillation",
+          "relevance_score": 0.7799097,
+          "id": "https://openalex.org/W7151536519"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 12,
+      "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"atrial fibrillation\" AND treatment)",
+      "angle": "Evidence synthesis",
+      "rationale": "Targets high-level summaries of evidence across multiple studies for efficient reading.",
+      "openalex_count": 113,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Stroke and transient ischemic attack recurrence after PFO closure in patients with cryptogenic embolism",
+          "relevance_score": 2.3081388,
+          "id": "https://openalex.org/W7151981297"
+        },
+        {
+          "title": "A\u00a0cardiac-rehab home-based mHealth program to improve physical activity in patients with coronary artery disease: a\u00a0randomized controlled trial",
+          "relevance_score": 2.1019511,
+          "id": "https://openalex.org/W7152542505"
+        },
+        {
+          "title": "Electrocardiographic assessment in obstructive sleep apnea: bridging pathophysiology and clinical practice",
+          "relevance_score": 1.2999654,
+          "id": "https://openalex.org/W7151424033"
+        },
+        {
+          "title": "BMI, race and AF recurrence post ablation: a meta-analysis and systematic review",
+          "relevance_score": 0.758615,
+          "id": "https://openalex.org/W7152233417"
+        },
+        {
+          "title": "Effect of SGLT2 Inhibitors on the Efficacy of First-Time Pulmonary Vein Isolation and Clinical Course of Patients with Heart Failure with Preserved Ejection Fraction and Atrial Fibrillation",
+          "relevance_score": 0.7553633,
+          "id": "https://openalex.org/W7151536519"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 13,
+      "query": "(\"stroke prevention\" OR \"ischemic stroke\") AND (\"atrial fibrillation\")",
+      "angle": "Primary treatment goal",
+      "rationale": "Captures papers focused on the core objective of AFib management, beyond specific drugs or devices.",
+      "openalex_count": 52,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Dental Flossing May Lower the Risk for Incident Ischemic Stroke, Cardioembolic Stroke Subtype, and Atrial Fibrillation",
+          "relevance_score": 12.678296,
+          "id": "https://openalex.org/W7151909927"
+        },
+        {
+          "title": "Does elevated lipoprotein A relate to the incidence of stroke in atrial fibrillation?",
+          "relevance_score": 9.793669,
+          "id": "https://openalex.org/W7151630171"
+        },
+        {
+          "title": "Sex-Specific Health and Economic Benefits in Older Women at Risk of Atrial Fibrillation: A Proof-of-Concept Evaluation of an AI-Enabled Strategy for Early Thromboembolic Risk Detection",
+          "relevance_score": 8.612106,
+          "id": "https://openalex.org/W7153331880"
+        },
+        {
+          "title": "&lt;a&gt;&lt;/a&gt;From a purple digit to left atrial appendage thrombus: the critical role of point-of-care transesophageal echocardiography in the emergency department: a case report",
+          "relevance_score": 8.1301365,
+          "id": "https://openalex.org/W7151866377"
+        },
+        {
+          "title": "Interpretable machine learning models for stroke risk prediction in patients with newly diagnosed atrial fibrillation",
+          "relevance_score": 7.1146154,
+          "id": "https://openalex.org/W7151513738"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 14,
+      "query": "(\"hybrid ablation\" OR \"convergent procedure\" OR \"epicardial ablation\") AND (\"atrial fibrillation\")",
+      "angle": "Advanced/surgical ablation",
+      "rationale": "Targets papers on combined surgical/catheter approaches for complex cases.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Colchicine in modern cardiology: opportunities, limitations and promising results. An analytical review of the recent clinical trial outcomes",
+          "relevance_score": 0.72985697,
+          "id": "https://openalex.org/W7153182583"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 15,
+      "query": "(\"periprocedural\" OR \"post-ablation\" OR \"blanking period\") AND (\"atrial fibrillation\" AND ablation)",
+      "angle": "Ablation perioperative management",
+      "rationale": "Focuses on immediate post-procedure care, complications, and early recurrence management.",
+      "openalex_count": 9,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Impact of anemia prior to catheter ablation for atrial fibrillation on clinical outcomes: a U.S. retrospective cohort analysis",
+          "relevance_score": 6.2114496,
+          "id": "https://openalex.org/W7151456597"
+        },
+        {
+          "title": "A multicentre study on persistent atrial fibrillation ablation targeting rotational activity on top of pulmonary vein isolation: insights from an extensive mapping technique",
+          "relevance_score": 0.80443805,
+          "id": "https://openalex.org/W7153227500"
+        },
+        {
+          "title": "Effect of SGLT2 Inhibitors on the Efficacy of First-Time Pulmonary Vein Isolation and Clinical Course of Patients with Heart Failure with Preserved Ejection Fraction and Atrial Fibrillation",
+          "relevance_score": 0.7841593,
+          "id": "https://openalex.org/W7151536519"
+        },
+        {
+          "title": "Comparison of the Efficacy and Safety of Percutaneous Left Atrial Appendage Closure Versus Direct Oral Anticoagulants and Vitamin K Antagonists in Patients With Permanent Atrial Fibrillation and High Risk of Adverse Events: A Literature Review",
+          "relevance_score": 0.7614011,
+          "id": "https://openalex.org/W7152501191"
+        },
+        {
+          "title": "Multimodal PSOCT-NIRS catheter for guided ablation of atrial fibrillation",
+          "relevance_score": 0.7166885,
+          "id": "https://openalex.org/W7150967717"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    }
+  ]
+}

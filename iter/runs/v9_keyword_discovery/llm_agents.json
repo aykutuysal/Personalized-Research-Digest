@@ -1,0 +1,573 @@
+{
+  "subject": "LLM agents",
+  "model": "deepseek/deepseek-v3.2",
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "LLM agents",
+      "agent architectures",
+      "tool use",
+      "multi-agent systems",
+      "agent evaluation"
+    ],
+    "raw_results": [
+      {
+        "seed": "LLM agents",
+        "count": 13963
+      },
+      {
+        "seed": "agent architectures",
+        "count": 16207
+      },
+      {
+        "seed": "tool use",
+        "count": 197687
+      },
+      {
+        "seed": "multi-agent systems",
+        "count": 16027
+      },
+      {
+        "seed": "agent evaluation",
+        "count": 40570
+      }
+    ],
+    "cost": 0.0001102,
+    "latency_s": 2.8
+  },
+  "vocabulary": {
+    "total_papers": 250,
+    "topics": [
+      [
+        "Multi-Agent Systems and Negotiation",
+        25
+      ],
+      [
+        "Language and cultural evolution",
+        6
+      ],
+      [
+        "Topic Modeling",
+        6
+      ],
+      [
+        "Scientific Computing and Data Management",
+        6
+      ],
+      [
+        "Access Control and Trust",
+        6
+      ],
+      [
+        "Artificial Intelligence in Healthcare and Education",
+        5
+      ],
+      [
+        "Adaptive Dynamic Programming Control",
+        5
+      ],
+      [
+        "Distributed Control Multi-Agent Systems",
+        5
+      ],
+      [
+        "Geographic Information Systems Studies",
+        4
+      ],
+      [
+        "Explainable Artificial Intelligence (XAI)",
+        4
+      ],
+      [
+        "AI in Service Interactions",
+        4
+      ],
+      [
+        "Synthesis and biological activity",
+        4
+      ],
+      [
+        "Data Mining Algorithms and Applications",
+        3
+      ],
+      [
+        "Machine Learning in Healthcare",
+        3
+      ],
+      [
+        "Reinforcement Learning in Robotics",
+        3
+      ]
+    ],
+    "subfields": [
+      [
+        "Artificial Intelligence",
+        67
+      ],
+      [
+        "Computer Networks and Communications",
+        16
+      ],
+      [
+        "Information Systems",
+        14
+      ],
+      [
+        "Sociology and Political Science",
+        11
+      ],
+      [
+        "Control and Systems Engineering",
+        7
+      ],
+      [
+        "Mechanical Engineering",
+        7
+      ],
+      [
+        "Cultural Studies",
+        6
+      ],
+      [
+        "Information Systems and Management",
+        6
+      ],
+      [
+        "Computational Theory and Mathematics",
+        6
+      ],
+      [
+        "Social Psychology",
+        5
+      ]
+    ],
+    "fields": [
+      [
+        "Computer Science",
+        111
+      ],
+      [
+        "Engineering",
+        35
+      ],
+      [
+        "Social Sciences",
+        29
+      ],
+      [
+        "Medicine",
+        16
+      ],
+      [
+        "Psychology",
+        11
+      ]
+    ],
+    "keywords": [
+      [
+        "Architecture",
+        42
+      ],
+      [
+        "Cognition",
+        15
+      ],
+      [
+        "Multi-agent system",
+        13
+      ],
+      [
+        "Workflow",
+        13
+      ],
+      [
+        "Modular design",
+        12
+      ],
+      [
+        "Corporate governance",
+        11
+      ],
+      [
+        "Scalability",
+        11
+      ],
+      [
+        "Software deployment",
+        11
+      ],
+      [
+        "Generative grammar",
+        10
+      ],
+      [
+        "Reinforcement learning",
+        8
+      ],
+      [
+        "Limiting",
+        8
+      ],
+      [
+        "Adversarial system",
+        8
+      ],
+      [
+        "Cognitive architecture",
+        8
+      ],
+      [
+        "MEDLINE",
+        8
+      ],
+      [
+        "Systems architecture",
+        8
+      ],
+      [
+        "Nonlinear system",
+        8
+      ],
+      [
+        "Computer science",
+        7
+      ],
+      [
+        "Natural language",
+        7
+      ],
+      [
+        "Perception",
+        7
+      ],
+      [
+        "Software",
+        6
+      ],
+      [
+        "Agent architecture",
+        6
+      ],
+      [
+        "Usability",
+        6
+      ],
+      [
+        "Intelligent agent",
+        6
+      ],
+      [
+        "Qualitative research",
+        6
+      ],
+      [
+        "Visualization",
+        6
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        22
+      ],
+      [
+        "arXiv (Cornell University)",
+        11
+      ],
+      [
+        "Scientific Reports",
+        11
+      ],
+      [
+        "Open MIND",
+        6
+      ],
+      [
+        "Lecture notes in computer science",
+        4
+      ],
+      [
+        "Applied Sciences",
+        4
+      ],
+      [
+        "Bioorganic Chemistry",
+        4
+      ],
+      [
+        "ArXiv.org",
+        3
+      ],
+      [
+        "Artificial Intelligence Review",
+        3
+      ],
+      [
+        "Discover Education",
+        3
+      ]
+    ],
+    "sample_titles": [
+      "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies",
+      "Maslow Machines: Emergent Civilisation from Intrinsic Drive Hierarchies in LLM Agent Populations",
+      "LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Design of Multi Active/Passive Core-Agent Architectures",
+      "Embodied LLM Agents Learn to Cooperate in Organized Teams",
+      "Benchmark Test-Time Scaling of General LLM Agents",
+      "AutoPentester: An LLM Agent-based Framework for Automated Pentesting",
+      "DRF: LLM-AGENT Dynamic Reputation Filtering Framework",
+      "The 1st Workshop on LLM Agents for Social Simulation",
+      "Thought Management System for long-horizon, goal-driven LLM agents",
+      "Structured Personality Control and Adaptation for LLM Agents",
+      "Collaborative LLM agents for flexible software development of intelligent industrial robot control systems",
+      "The Impact of Educational LLM Agent Use on Teachers\u2019 Curriculum Content Creation: The Chain Mediating Role of School Support and Teacher Self-Efficacy",
+      "ShapeCraft: LLM Agents for Structured, Textured and Interactive 3D Modeling",
+      "EpidemIQs: Prompt-to-Paper LLM Agents for Epidemic Modeling and Analysis",
+      "LLM Agents for Georelating - A New Task for Locating Events"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "LLM agent architecture modular",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Directly addresses user's interest in new architectures with vocabulary evidence: 'Architecture' (42x), 'Modular design' (12x), 'Agent architecture' (6x). Focuses on engineering-grounded design patterns."
+      },
+      {
+        "query": "LLM agent tool use function calling",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Targets practical agent capabilities the user cares about. Combines 'tool use' (from seed queries) with 'function calling' (implied by tool use angle). Vocabulary shows 'Workflow' (13x) and 'Software' (6x) as relevant context."
+      },
+      {
+        "query": "multi-agent LLM orchestration",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Addresses multi-agent systems angle with vocabulary evidence: 'Multi-agent system' (13x), 'Multi-Agent Systems and Negotiation' (25x). 'Orchestration' refines to practical engineering concerns over pure theory."
+      },
+      {
+        "query": "LLM agent memory RAG retrieval",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Covers memory systems angle. Vocabulary includes 'Cognition' (15x) and 'Cognitive architecture' (8x), which relate to memory. RAG/retrieval are key techniques for long-term memory in agents."
+      },
+      {
+        "query": "LLM agent evaluation benchmark",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Directly matches user's evaluation angle. Vocabulary shows 'Benchmark' in sample titles. Targets capability tests and practical assessment methods."
+      },
+      {
+        "query": "LLM agent planning reasoning chain",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Targets planning/reasoning techniques. Vocabulary includes 'Cognition' (15x) and 'Thought Management System' from sample titles. 'Chain' references chain-of-thought approaches."
+      },
+      {
+        "query": "LLM agent deployment scalability",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Intersects agent engineering with production concerns. Vocabulary evidence: 'Scalability' (11x), 'Software deployment' (11x). Addresses practical deployment patterns the user wants."
+      },
+      {
+        "query": "LLM agent safety guardrails alignment",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Intersects agent functionality with safety/alignment concerns. Vocabulary includes 'Adversarial system' (8x) and 'Limiting' (8x), which relate to control and safety mechanisms."
+      },
+      {
+        "query": "LLM agent workflow automation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Intersects agent capabilities with practical automation. Vocabulary evidence: 'Workflow' (13x). Targets engineering patterns for automating tasks with agents."
+      },
+      {
+        "query": "cognitive architecture LLM agent",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Intersects LLM agents with cognitive architectures from vocabulary: 'Cognitive architecture' (8x), 'Cognition' (15x). Could yield insights on reasoning and memory design."
+      },
+      {
+        "query": "reinforcement learning LLM agent",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent field from vocabulary: 'Reinforcement learning' (8x), 'Reinforcement Learning in Robotics' (3x). Could reveal techniques for agent learning and adaptation."
+      },
+      {
+        "query": "explainable AI LLM agent",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent field from vocabulary: 'Explainable Artificial Intelligence (XAI)' (4x). Important for debugging and trust in deployed agents."
+      },
+      {
+        "query": "distributed control multi-agent LLM",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent field from vocabulary: 'Distributed Control Multi-Agent Systems' (5x). Could yield engineering patterns for coordinating multiple agents."
+      },
+      {
+        "query": "LLM agent social simulation",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Unexpected field from sample titles: 'The 1st Workshop on LLM Agents for Social Simulation'. Vocabulary includes 'Sociology and Political Science' (11x). Might reveal novel emergent behaviors in agent populations."
+      },
+      {
+        "query": "LLM agent healthcare education",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Serendipitous applications from vocabulary: 'Artificial Intelligence in Healthcare and Education' (5x), 'Machine Learning in Healthcare' (3x). Could show agent use cases with practical constraints."
+      }
+    ],
+    "cost": 0.00087352,
+    "latency_s": 42.3
+  },
+  "validation": [
+    {
+      "query": "LLM agent architecture modular",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 18,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent tool use function calling",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "multi-agent LLM orchestration",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 64,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent memory RAG retrieval",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 8,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent evaluation benchmark",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 150,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent planning reasoning chain",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "LLM agent deployment scalability",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 49,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent safety guardrails alignment",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "LLM agent workflow automation",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 19,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "cognitive architecture LLM agent",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 40,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "reinforcement learning LLM agent",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 67,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "explainable AI LLM agent",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 15,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "distributed control multi-agent LLM",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent social simulation",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 28,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent healthcare education",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": false,
+    "failures_input": [
+      {
+        "query": "LLM agent tool use function calling",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [],
+    "cost": 0.0,
+    "latency_s": 0.0
+  },
+  "costs": {
+    "seed_usd": 0.0001102,
+    "library_usd": 0.00087352,
+    "reformulate_usd": 0.0,
+    "total_usd": 0.000984
+  },
+  "total_latency_s": 85.9
+}

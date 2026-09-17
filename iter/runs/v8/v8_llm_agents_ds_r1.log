@@ -1,0 +1,36 @@
+prompt:  iter/prompts/v7_slotfilled.md
+profile: iter/profiles/llm_agents.md
+angles:  8
+model:   deepseek/deepseek-v3.2
+
+[1/5] generating pass-1 plan... 229.7s, 16 queries
+[2/5] running pass-1 queries against OpenAlex...
+  Q 1 angle=1 count=  116 healthy
+  Q 2 angle=1 count=  264 healthy
+  Q 3 angle=2 count=  264 healthy
+  Q 4 angle=2 count=  450 healthy
+  Q 5 angle=3 count=   88 healthy
+  Q 6 angle=3 count=   35 healthy
+  Q 7 angle=4 count=  172 healthy
+  Q 8 angle=4 count=  294 healthy
+  Q 9 angle=5 count=  491 healthy
+  Q10 angle=5 count=  400 healthy
+  Q11 angle=6 count=  308 healthy
+  Q12 angle=6 count=   50 healthy
+  Q13 angle=7 count=  209 healthy
+  Q14 angle=7 count=  239 healthy
+  Q15 angle=8 count=  111 healthy
+  Q16 angle=8 count=  162 healthy
+[3/5] scoring pass-1 hits...
+[4/5] running diagnostic + backfill generation... 14.3s — statuses: {'covered': 8}, backfills: 0
+[5/5] no backfills needed (all angles covered or empty-corpus)
+
+======================================================================
+v8 SCORECARD: iter/runs/v8/v8_llm_agents_ds_r1.json
+======================================================================
+  pass1 queries:    16
+  backfill queries: 0
+  union YES:        29
+  union precision:  60%
+  diagnoses:        {'covered': 8}
+  costs:            pass1=$0.00118216, diagnostic=$0.00097482

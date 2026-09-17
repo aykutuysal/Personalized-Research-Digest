@@ -1,0 +1,109 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "atrial fibrillation major bleeding",
+      "rationale": "Matches the user's focus on DOAC choices and bleeding risk. 'Major bleeding' is a frequent keyword (10x) that filters out general AFib noise."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "atrial fibrillation randomized controlled trial",
+      "rationale": "The user explicitly wants RCTs for bottom-line clinical takeaways. 'Randomized controlled trial' is a top keyword (36x)."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "core",
+      "query": "catheter ablation pulmonary vein",
+      "rationale": "Captures core EP procedures and techniques. 'Catheter ablation' (50x) and 'Pulmonary vein' (11x) are highly frequent keywords."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "atrial fibrillation ablation heart failure",
+      "rationale": "Intersects AFib treatment with major comorbidities (HFrEF/HFpEF seen in titles). 'Heart failure' is a frequent keyword (12x)."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "left atrial appendage thrombus",
+      "rationale": "Intersects LAA management with stroke prevention. 'Appendage' (35x) and 'Thrombus' (16x) are highly prevalent keywords."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "atrial fibrillation obstructive sleep apnea",
+      "rationale": "'Obstructive Sleep Apnea Research' appeared as a topic. Treating OSA is highly relevant to rhythm control and AFib recurrence, providing actionable clinical insights."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "intracardiac echocardiography atrial fibrillation",
+      "rationale": "Found in sample titles. Highlights advanced imaging techniques during ablation procedures, offering niche but highly practical clinical value for an EP."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "core",
+      "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+      "rationale": "Original had 4 results. Added 'randomized controlled trial' from keywords to focus on high-evidence studies while maintaining specificity."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "core",
+      "query": "left atrial appendage occlusion atrial fibrillation",
+      "rationale": "Original had 4 results. Added 'atrial fibrillation' from keywords to broaden context while staying relevant to the user's cardiovascular focus."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "antithrombotic atrial fibrillation ablation",
+      "rationale": "Original had zero results. Replaced 'catheter ablation' with broader 'ablation' from keywords and added 'atrial fibrillation' to align with user's main topic."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "catheter ablation complication bleeding",
+      "rationale": "Original had zero results. Replaced 'tamponade' with broader 'bleeding' from keywords ('major bleeding') while keeping the complication focus."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "mobile health atrial fibrillation",
+      "rationale": "Original had zero results. Simplified to 'mobile health' from topics and paired with 'atrial fibrillation' from keywords to match user's cardiovascular context."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "anticoagulant intracranial aneurysm treatment",
+      "rationale": "Original had zero results. Added 'treatment' from topics ('Intracranial Aneurysms: Treatment and Complications') to broaden scope while maintaining aneurysm focus."
+    }
+  ]
+}

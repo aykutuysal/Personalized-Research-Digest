@@ -1,0 +1,83 @@
+=== adolescent_depression === Mon Apr 20 15:47:31 CEST 2026
+[discover v9.2 --use-angle-seeds]
+profile: profiles/adolescent_depression.md
+angles:  profiles/adolescent_depression.angles.json (12 angles, subject='Adolescent depression')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=deepseek/deepseek-v3.2  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_keyword_discovery/adolescent_depression_v92.json
+PLAN:      runs/v9_keyword_discovery/adolescent_depression_v92.json.plan.json
+======================================================================
+  seeds:           17 (LLM=5 + angle=12, 0.000167$)
+  vocabulary:      755 papers, 15 topics, 25 keywords
+  library:         16 queries (0.002112$)
+  coverage gap:    none — all 12 angles covered on first build
+  validation:      {'good': 4, 'low': 8, 'zero': 4}
+  reformulated:    yes (7 replacements, $0.000475115)
+  TOTAL COST:      $0.002754
+  TOTAL LATENCY:   180.7s
+[discover rc=0]
+[score: parallel, abstract-aware]
+plan:    runs/v9_keyword_discovery/adolescent_depression_v92.json.plan.json (prebuilt, 16 queries)
+profile: profiles/adolescent_depression.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running 16 OpenAlex queries in parallel...
+  Q 8 [digital, app-based, telehealth intervent] count=   23 low
+  Q 6 [school-based prevention or intervention ] count=  204 healthy
+  Q 2 [mindfulness and acceptance-based therapi] count=  129 healthy
+  Q 3 [family-based or attachment-based treatme] count=  323 healthy
+  Q 1 [CBT and CBT variants for adolescent depr] count=  270 healthy
+  Q 4 [assessment tools and screening instrumen] count=  398 healthy
+  Q 7 [comorbid anxiety with depression        ] count=   56 healthy
+  Q 5 [social media and adolescent mental healt] count=  466 healthy
+  Q10 [interpersonal psychotherapy (IPT-A)     ] count=   74 healthy
+  Q13 [psychopharmacology (SSRIs, combination t] count=   14 low
+  Q 9 [CBT and CBT variants for adolescent depr] count=  295 healthy
+  Q15 [comorbid anxiety with depression        ] count=  187 healthy
+  Q14 [suicide risk screening and prevention   ] count=   90 healthy
+  Q11 [behavioral activation                   ] count=  189 healthy
+  Q12 [digital, app-based, telehealth intervent] count=  209 healthy
+  Q16 [family-based or attachment-based treatme] count=  120 healthy
+  OpenAlex stage took 1.8s
+[3/3] scoring hits via DeepSeek v3.2...
+  judge: 160 papers across 11 batches of ≤15, 5 workers
+    → submit batch 1/11 (15 papers)
+    → submit batch 2/11 (15 papers)
+    → submit batch 3/11 (15 papers)
+    → submit batch 4/11 (15 papers)
+    → submit batch 5/11 (15 papers)
+    → submit batch 6/11 (15 papers)
+    → submit batch 7/11 (15 papers)
+    → submit batch 8/11 (15 papers)
+    → submit batch 9/11 (15 papers)
+    → submit batch 10/11 (15 papers)
+    → submit batch 11/11 (10 papers)
+    ← batch 2/11 done in 4.7s (got 15/15 labels) [1/11 complete]
+    ← batch 5/11 done in 8.1s (got 15/15 labels) [2/11 complete]
+    ← batch 1/11 done in 9.8s (got 15/15 labels) [3/11 complete]
+    ← batch 4/11 done in 10.7s (got 15/15 labels) [4/11 complete]
+    ← batch 7/11 done in 6.7s (got 15/15 labels) [5/11 complete]
+    ← batch 8/11 done in 6.7s (got 15/15 labels) [6/11 complete]
+    ← batch 9/11 done in 8.2s (got 15/15 labels) [7/11 complete]
+    ← batch 6/11 done in 14.4s (got 15/15 labels) [8/11 complete]
+    ← batch 3/11 done in 19.5s (got 15/15 labels) [9/11 complete]
+    ← batch 10/11 done in 6.3s (got 15/15 labels) [10/11 complete]
+    ← batch 11/11 done in 8.6s (got 10/10 labels) [11/11 complete]
+  judge stage took 25.0s for 11 batches
+
+======================================================================
+SCORECARD: runs/v9_keyword_discovery/adolescent_depression_v92.rescored.json
+======================================================================
+  queries:          16
+  bands:            zero=0 low=2 healthy=14 recall_safety=0 too_broad=0
+  frac healthy:     88%
+  mean precision:   31%
+  per-band prec:    {'zero': None, 'low': 0.17, 'healthy': 0.33, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+[score rc=0] done Mon Apr 20 15:50:58 CEST 2026

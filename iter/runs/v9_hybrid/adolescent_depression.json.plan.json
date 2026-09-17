@@ -1,0 +1,117 @@
+{
+  "subject": "Adolescent depression",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "digital mental health intervention adolescent",
+      "rationale": "Captures the user's interest in app-based/telehealth treatments using the exact extracted topic 'Digital Mental Health Interventions' (12x)."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "school based psychological intervention adolescent",
+      "rationale": "Targets the user's interest in school-based prevention. Combines 'school based' from titles with the highly frequent keyword 'Psychological intervention' (57x)."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "sleep disorders adolescent depression cbt",
+      "rationale": "Combines CBT interventions with 'Sleep and related disorders' (extracted topic) which frequently co-occurs with adolescent depression in the sample titles."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "trauma focused intervention adolescent depression",
+      "rationale": "Draws from the extracted 'Trauma-Focused Interventions' title vocabulary. While PTSD wasn't explicitly requested, trauma is highly adjacent to adolescent depression and offers applicable clinical insights."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "core",
+      "query": "cognitive behavioral therapy adolescent depression",
+      "rationale": "Replaced 'adolescent cognitive behavioral therapy depression' by removing the restrictive ordering and using terms from vocabulary (Cognitive behavioral therapy, adolescent, depression)."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "core",
+      "query": "suicide prevention adolescent screening",
+      "rationale": "Replaced 'adolescent suicide prevention screening' by reordering to use vocabulary terms (suicide prevention, adolescent, screening) and removing restrictive phrasing."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "core",
+      "query": "major depressive disorder adolescent antidepressant",
+      "rationale": "Replaced 'ssri' with broader term 'antidepressant' from pharmacology subfield to capture more results while maintaining focus on medication treatment."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "social media adolescent depression",
+      "rationale": "Replaced 'major depressive disorder' with broader 'depression' from keywords and simplified to focus on social media impact on adolescent depression."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "cognitive behavioral therapy adolescent",
+      "rationale": "Removed 'transdiagnostic' which was too specific and used vocabulary terms (cognitive behavioral therapy, adolescent) to broaden search."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "parenting adolescent depression anxiety",
+      "rationale": "Replaced 'parenting style' with broader 'parenting' and used vocabulary terms (adolescent, depression, anxiety) to capture more results."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "bullying adolescent psychological intervention",
+      "rationale": "Replaced 'victimization' with broader 'bullying' from topics and used vocabulary terms (adolescent, psychological intervention)."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "lgbtq adolescent suicide intervention",
+      "rationale": "Replaced 'suicidal ideation' with broader 'suicide' from topics and used vocabulary terms (lgbtq, adolescent, intervention)."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "virtual reality adolescent depression",
+      "rationale": "Replaced 'virtual reality therapy' with 'virtual reality' to broaden search while maintaining focus on adolescent depression applications."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "mindfulness adolescent distress",
+      "rationale": "Removed 'compassion intervention' which was too specific and used vocabulary terms (mindfulness, adolescent, distress) to capture broader mindfulness interventions."
+    }
+  ]
+}

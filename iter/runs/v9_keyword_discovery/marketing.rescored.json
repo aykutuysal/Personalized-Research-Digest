@@ -1,0 +1,872 @@
+{
+  "timestamp": "2026-04-16T12:47:56.847466+00:00",
+  "prompt_file": "runs/v9_keyword_discovery/marketing.json.plan.json",
+  "profile_file": "profiles/marketing.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "search",
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 1,
+    "healthy": 12,
+    "recall_safety": 2,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.8,
+  "frac_healthy_or_safety": 0.93,
+  "mean_precision": 0.52,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.25,
+    "healthy": 0.51,
+    "recall_safety": 0.7,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "slot": 1,
+        "angle": "core",
+        "query": "scarcity urgency conversion",
+        "rationale": "Addresses scarcity cues affecting checkout. 'Conversion' is implied in user's angles, and 'urgency' is a related behavioral concept from extracted vocabulary."
+      },
+      {
+        "id": 2,
+        "angle_id": 2,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "pricing promotions consumer behavior",
+        "rationale": "Combines pricing and promotions (user's key angles) with 'Consumer behaviour' (53x), the most frequent keyword in extracted data."
+      },
+      {
+        "id": 3,
+        "angle_id": 3,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "social proof online advertising",
+        "rationale": "Intersects social proof cues (user angle) with 'Online advertising' (14x) from keywords. Targets digital context relevant to e-commerce/DTC."
+      },
+      {
+        "id": 4,
+        "angle_id": 4,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "brand loyalty repeat purchase",
+        "rationale": "Connects 'Brand loyalty' (5x) from keywords with repeat purchase behavior (user angle). Addresses retention, which is crucial for growth marketers."
+      },
+      {
+        "id": 5,
+        "angle_id": 5,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "personalization conversion optimization",
+        "rationale": "Combines 'Personalization' (7x) from keywords with conversion optimization (user angle). Relevant for e-commerce targeting and ad creative."
+      },
+      {
+        "id": 6,
+        "angle_id": 6,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "influencer marketing purchasing",
+        "rationale": "Adjacent to ad creative, using 'Influencer marketing' (6x) from keywords. Influencers are a modern ad channel with measurable effects on purchasing (32x)."
+      },
+      {
+        "id": 7,
+        "angle_id": 7,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "consumer packaging perceptions",
+        "rationale": "Adjacent to product naming/branding. 'Consumer Packaging Perceptions' appears as a topic (3x) in extracted data, relevant for DTC physical products."
+      },
+      {
+        "id": 8,
+        "angle_id": 8,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "digital marketing revenue",
+        "rationale": "Adjacent field connecting 'Digital marketing' (24x) and 'Revenue' (6x) from keywords. Provides bottom-line focus aligned with user's growth marketing role."
+      },
+      {
+        "id": 9,
+        "angle_id": 9,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "sustainability consumer behaviour",
+        "rationale": "Unexpected but present in data: 'Sustainability' (8x) and 'Environmental Sustainability in Business' (5x). May yield insights on modern consumer values affecting purchasing."
+      },
+      {
+        "id": 10,
+        "angle_id": 10,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "AI personalization marketing",
+        "rationale": "Serendipitous from 'AI in Service Interactions' (5x) and 'Artificial Intelligence' (6x) subfields. Could reveal cutting-edge ad creative or pricing tools."
+      },
+      {
+        "id": 11,
+        "angle_id": 11,
+        "slot": 1,
+        "angle": "core",
+        "query": "price endings consumer behavior",
+        "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus."
+      },
+      {
+        "id": 12,
+        "angle_id": 12,
+        "slot": 1,
+        "angle": "core",
+        "query": "discounts brand perception consumer behavior",
+        "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception."
+      },
+      {
+        "id": 13,
+        "angle_id": 13,
+        "slot": 1,
+        "angle": "core",
+        "query": "click-through rate online advertising",
+        "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context."
+      },
+      {
+        "id": 14,
+        "angle_id": 14,
+        "slot": 1,
+        "angle": "core",
+        "query": "product naming consumer behavior",
+        "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses."
+      },
+      {
+        "id": 15,
+        "angle_id": 15,
+        "slot": 1,
+        "angle": "core",
+        "query": "landing page optimization A/B testing digital marketing",
+        "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area."
+      }
+    ]
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "scarcity urgency conversion",
+      "angle": "core",
+      "rationale": "Addresses scarcity cues affecting checkout. 'Conversion' is implied in user's angles, and 'urgency' is a related behavioral concept from extracted vocabulary.",
+      "openalex_count": 63,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "CuO composite foam with sandwich architecture for enhanced solar evaporation and ionovoltaic electricity harvesting",
+          "abstract": "",
+          "relevance_score": 2.3635182,
+          "id": "https://openalex.org/W7153176546"
+        },
+        {
+          "title": "Use of Ozone Therapy in Veterinary Medicine: Evidence, Applications and Translational Perspectives for Tissue Repair and Inflammatory Modulation",
+          "abstract": "Ozone therapy has emerged as a promising therapeutic strategy in veterinary medicine due to its antimicrobial, anti-inflammatory, immunomodulatory, and regenerative properties.This systematic review synthesizes current evidence regarding the physiological and biochemical mechanisms of medical ozone, its clinical applications across different species, and the relevance of laboratory biomarkers for therapeutic monitoring.The findings reveal that ozone modulates pro-and anti-inflammatory cytokines, stimulates angiogenesis, enhances collagen synthesis, reduces microbial biofilms, and improves peripheral oxygenation, resulting in significant clinical benefits for wound healing, musculoskeletal disorders, autoimmune conditions, chronic infections, and refractory cases.However, methodological gaps were identified, especially concerning dose standardization, administration protocols, and laboratory monitoring practices.Overall, ozone therapy demonstrates substantial clinical potential in veterinary practice and offers translational relevance for human medicine.Further controlled clinical trials and multicentre studies are essential to validate its efficacy and safety.",
+          "relevance_score": 0.9053767,
+          "id": "https://openalex.org/W7151107678"
+        },
+        {
+          "title": "Fear of missing out (FOMO) and impulsive buying behavior: The role of social media, self-control, and socio-economic factors",
+          "abstract": "This study investigates how fear of missing out (FOMO) influences impulsive buying behavior, examining the mediating role of social media engagement and the moderating effects of self-control and socio-economic factors in digital consumer environments.",
+          "relevance_score": 0.3616544,
+          "id": "https://openalex.org/W7154128469"
+        },
+        {
+          "title": "Analysis of the Water Balance of the Prumpung River Area (DAS) in Tuban Regency Using the Thornthwaite-Mather Method",
+          "abstract": "Water is a vital resource whose availability is increasingly uneven due to climate variability, land-use changes, and rising water demand. This condition leads to water surplus during the rainy season and deficit during the dry season, including in the Prumpung Watershed, Tuban Regency. This study aims to analyze the monthly and annual water balance and evaluate the relationship between water availability and water demand in the study area. A descriptive quantitative approach was employed using the Thornthwaite\u2013Mather method, based on rainfall and air temperature data from 2015 to 2024, combined with domestic and non-domestic water demand data for 2024. The results indicate that potential evapotranspiration fluctuates in accordance with air temperature, while actual evapotranspiration is influenced by groundwater availability. Groundwater storage increases during the rainy season and decreases during the dry season. The annual water balance reveals a dominance of deficit conditions in most observation years, although surplus occurs during certain periods. The Prumpung Watershed is vulnerable to water deficits due to uneven rainfall distribution. Sustainable water resource management strategies, focusing on conservation, are required to maintain a long-term hydrological balance.",
+          "relevance_score": 0.3549027,
+          "id": "https://openalex.org/W7153762723"
+        },
+        {
+          "title": "Blind Box Preferences Under Uncertainty: A Positioning-Schema-Value Model with Self-Determination Motivation",
+          "abstract": "This conceptual article develops an integrative model to explain the formation of consumer preferences for blind boxes in conditions of uncertainty through the linkage of brand strategy, consumer cognitive structure, and motivational orientation. The purpose of this study is to formulate the process mechanism whereby brand positioning shapes brand schema, schema helps consumers interpret uncertainty, and the results of that interpretation accumulate into perceived value, which then drives preference. The method used is narrative conceptual synthesis to integrate literature on positioning and brand meaning, schema-based information processing, perceived value theory, and Self-Determination Theory. The synthesis results in a Positioning\u2013Schema\u2013Value model with four testable propositions: (1) brand positioning positively influences the formation of brand schema, (2) brand schema positively influences perceived value of blind boxes, (3) perceived value positively influences consumer preferences, and (4) intrinsic and extrinsic motivation moderate the relationship between perceived value and preferences. This model explains why uncertainty can be interpreted as a source of emotional and symbolic value, and why consumers with similar levels of perceived value can show different strengths of preference. In conclusion, managing blind box preferences requires consistent positioning that aligns with the target schema and motivational apel settings to increase value without reinforcing harmful impulsivity. This framework provides a theoretical basis for further empirical testing through survey-based SEM or experiments.",
+          "relevance_score": 0.35304666,
+          "id": "https://openalex.org/W7151014625"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "YES",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 2,
+      "query": "pricing promotions consumer behavior",
+      "angle": "intersection",
+      "rationale": "Combines pricing and promotions (user's key angles) with 'Consumer behaviour' (53x), the most frequent keyword in extracted data.",
+      "openalex_count": 202,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Assessing the Effects of Marketing Strategies on Local Trade: A Case Study of Shoprite Zambia, Mufulira",
+          "abstract": "This study examines the effect of Shoprite Zambia\u2019s marketing strategies on Local trade in Mufulira. As one of the leading retail chains in the town, Shoprite employs a range of marketing activities grounded in the principles of the Marketing Mix (4Ps), product variety, promotional discounts, and strategically designed in-store placement. These strategies are widely recognized for influencing customer decision-making and shaping shopping patterns within modern retail environments. Guided by Kotler\u2019s Marketing Mix (4Ps) and the Consumer Behavior Model, the study investigates how Shoprite\u2019s pricing, product assortment, promotional activities, and distribution practices affect consumer preferences, purchase frequency, and loyalty. The Consumer Behavior Model provides insight into how customers\u2019 psychological, cultural, and social factors interact with Shoprite\u2019s marketing efforts to influence buying intentions and actual purchasing behavior. A mixed-methods approach will be adopted, utilizing quantitative surveys administered to Shoprite customers and qualitative interviews with selected shoppers and Shoprite staff. The research will focus solely on the interactions between Shoprite\u2019s marketing strategies and customer responses within the Mufulira context. The study is expected to generate insights into the extent to which Shoprite\u2019s marketing efforts shape consumer choices and shopping habits, thereby contributing to literature on retail marketing effectiveness in developing economies. The findings will also provide practical implications for Shoprite\u2019s customer focused marketing improvements.",
+          "relevance_score": 4.0944734,
+          "id": "https://openalex.org/W7153238748"
+        },
+        {
+          "title": "Pengaruh Harga, Tempat, Produk, dan Promosi pada Sikap Pelanggan terhadap Minat Pembelian saat Pemilihan Restoran Makanan",
+          "abstract": "The intense competition in the food industry in Central Java requires business actors to understand the marketing factors that influence consumer behavior. The lack of understanding regarding the impact of each element of the marketing mix (4P) on consumer attitudes and purchase intentions forms the background of this study. This research aims to analyze the influence of the 4P marketing mix elements\u2014product, price, place, and promotion\u2014on consumer attitudes and purchase intentions toward food products in Central Java. Using a quantitative approach with the PLS-SEM method, data were collected from 500 respondents aged 15\u201360 through an online survey distributed via social media. The analysis results indicate that only two relationships were statistically significant. These findings suggest that in the context of the food industry in Central Java, product quality and the development of consumer attitudes are the primary factors influencing purchase intention. This study contributes to a deeper understanding of local consumer behavior and serves as a strategic reference for business actors in formulating more effective marketing strategies. Keywords: \u03b2 coefficient, consumer attitude, Central Java market, marketing mix (4P), online survey.",
+          "relevance_score": 3.5030134,
+          "id": "https://openalex.org/W7153788667"
+        },
+        {
+          "title": "Credibility Matters: Motivations, Characteristics, and Influence Mechanisms of Crypto Key Opinion Leaders",
+          "abstract": "Crypto Key Opinion Leaders (KOLs) shape Web3 narratives and retail investment behaviour. In volatile, high-risk markets, their credibility becomes a key determinant of their influence on followers. Yet prior research has focused on lifestyle influencers or generic financial commentary, leaving crypto KOLs' understandings of motivation, credibility, and responsibility underexplored. Drawing on interviews with 13 KOLs and self-determination theory (SDT), we examine how psychological needs are negotiated alongside monetisation and community expectations. Whereas prior work treats finfluencer credibility as a set of static credentials, our findings reveal it to be a self-determined, ethically enacted practice. We identify four community-recognised markers of credibility: self-regulation, bounded epistemic competence, accountability, and reflexive self-correction. This reframes credibility as socio-technical performance, extending SDT into high-risk crypto ecosystems. Methodologically, we employ a hybrid human-LLM thematic analysis. The study surfaces implications for designing credibility signals that prioritise transparency over hype.",
+          "relevance_score": 1.6261873,
+          "id": "https://openalex.org/W7135375125"
+        },
+        {
+          "title": "Bloom: Designing for LLM-Augmented Behavior Change Interactions",
+          "abstract": "Large language models (LLMs) offer novel opportunities to support health behavior change, yet existing work has narrowly focused on text-only interactions. Building on decades of HCI research on effective behavior change interactions, we present Bloom, an application for physical activity promotion that integrates an LLM-based health coaching chatbot with existing design strategies and UI elements. As part of Bloom\u2019s development, we conducted a redteaming evaluation and contribute a safety benchmark dataset. In a four-week randomized field study (N=54) comparing Bloom to a no-LLM control, we observed important shifts in psychological outcomes: participants in the LLM condition reported stronger beliefs that activity was beneficial, greater enjoyment, and more self-compassion. Both conditions significantly increased physical activity levels, doubling the proportion of participants meeting recommended weekly guidelines, though descriptively, we observed no advantage for the LLM condition in short-term physical activity levels. Instead, our findings suggest that LLMs may be more effective at shifting mindsets that precede longer-term behavior change.",
+          "relevance_score": 1.266597,
+          "id": "https://openalex.org/W4414976961"
+        },
+        {
+          "title": "Characterizing Scam-Driven Human Trafficking Across Chinese Borders and Online Community Responses on RedNote",
+          "abstract": "A new form of human trafficking has emerged across Chinese borders, where individuals are lured to Southeast Asia with fraudulent job offers and then coerced into operating online scams. Despite its massive economic and human toll, this scam-driven trafficking remains underexplored in academic research. Through qualitative analysis of 158 RedNote posts, we examined how Chinese online communities respond to this threat. Our findings reveal that perpetrators exploit cultural ties to recruit victims for cybercriminal roles within self-sustaining compounds, using sophisticated manipulation tactics. Survivors face serious reintegration barriers, including family rejection, as the cultural values that enable trafficking also hinder their recovery. While communities present protective strategies, efforts are complicated by doubts about the reliability of support and cross-border coordination. We discuss key implications for prevention, platform governance, and international cooperation against scam-driven trafficking. Warning: This paper contains descriptions of physical, psychological, and sexual abuse.",
+          "relevance_score": 0.9544363,
+          "id": "https://openalex.org/W7143791168"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 3,
+      "query": "social proof online advertising",
+      "angle": "intersection",
+      "rationale": "Intersects social proof cues (user angle) with 'Online advertising' (14x) from keywords. Targets digital context relevant to e-commerce/DTC.",
+      "openalex_count": 52,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A PANORAMIC VIEW ON SOCIAL MEDIA MARKETING AND PURCHASE DECISIONS OF COLLEGE STUDENTS IN KOZHIKODE",
+          "abstract": "Social media marketing has emerged as a powerful tool influencing consumer behaviour, particularly among young and digitally active populations such as college students. In recent years, platforms like Instagram, Facebook, YouTube, and Twitter have transformed traditional advertising into interactive, personalized, and engaging experiences. Against this backdrop, the present study provides a panoramic view of the role of social media marketing in shaping the purchase decisions of college students in Kozhikode. The study explores how various elements of social media advertising such as influencer endorsements, user-generated content, targeted advertisements, brand engagement, and promotional campaigns affect the awareness, interest, and buying intentions of students. College students, being highly active on digital platforms, are more susceptible to online trends, peer opinions, and visual content, which significantly impact their preferences and consumption patterns. The research also examines the psychological and social factors, including trust, perceived credibility, and social proof, that mediate the relationship between social media exposure and purchase decisions. Primary data for the study are typically collected through structured questionnaires administered among college students in Kozhikode, ensuring representation across different age groups, academic disciplines, and usage patterns. Analytical tools such as percentage analysis, correlation, and regression are employed to interpret the data and identify key influencing factors. The findings indicate that social media marketing has a substantial and positive impact on students\u2019 purchase decisions, with influencer marketing and peer reviews playing a crucial role in building trust and driving engagement. Visual appeal, frequency of exposure, and personalized content further enhance the effectiveness of advertisements. However, concerns regarding misleading information and overexposure to advertisements are also noted. The study concludes that social media marketing is a dominant force in shaping modern consumer behaviour among college students, offering valuable insights for marketers to design more effective and ethical digital marketing strategies.",
+          "relevance_score": 2.8609624,
+          "id": "https://openalex.org/W7152689020"
+        },
+        {
+          "title": "\u201cWhat I\u2019m interested in is something that violates the law\u201d: Regulatory practitioner views on automated detection of deceptive design patterns",
+          "abstract": "Although deceptive design patterns are subject to growing regulatory oversight, enforcement races to keep up with the scale of the problem. One promising solution is automated detection tools, many of which are developed within academia. We interviewed nine experienced practitioners working within or alongside regulatory bodies to understand their work against deceptive design patterns, including the use of supporting tools and the prospect of automation. Computing technologies have their place in regulatory practice, but not as envisioned in research. For example, investigations require utmost transparency and accountability in all the activities we identify as accompanying dark pattern detection, which many existing tools cannot provide. Moreover, tools need to map interfaces to legal violations to be of use. We thus recommend conducting user requirement research to maximize research impact, supporting ancillary activities beyond detection, and establishing practical tech adoption pathways that account for the needs of both scientific and regulatory activities.",
+          "relevance_score": 1.0086432,
+          "id": "https://openalex.org/W7130582618"
+        },
+        {
+          "title": "The Impact of Social Media Influencers and User-Generated Content on Umrah Travel Purchase Decisions in Indonesia",
+          "abstract": "This study aims to examine the influence of social media influencer source credibility and homophily-based user-generated content on Umrah pilgrims\u2019 purchase decisions in the digital environment. The research adopts a quantitative approach using a survey method, with data collected from 316 respondents across Indonesia who have experience or interest in Umrah travel. Data were analyzed using Partial Least Squares-Structural Equation Modeling to evaluate both the measurement and structural models. The results indicate that influencer expertise has a positive and significant effect on purchase decisions, while trustworthiness and attractiveness do not show a significant direct influence. In addition, homophily-based user-generated content demonstrates a strong and significant effect, highlighting the importance of perceived similarity in shaping consumer confidence and reducing perceived risk. These findings suggest that Umrah pilgrims prioritize informational value, experiential relevance, and perceived similarity over visual appeal or assumed trust when making high-risk religious travel decisions. In conclusion, this study emphasizes the strategic role of expert-driven influencer credibility and authentic, homophilic user-generated content in digital marketing communication for Umrah travel services, contributing to the understanding of digital consumer behavior in high-risk and religious service contexts.",
+          "relevance_score": 0.45891938,
+          "id": "https://openalex.org/W7152500477"
+        },
+        {
+          "title": "Is Contextual Advertising Safe? Analyzing Systemic Risks with Ads on YouTube",
+          "abstract": "International audience",
+          "relevance_score": 0.45048115,
+          "id": "https://openalex.org/W7128287590"
+        },
+        {
+          "title": "Building Trust in the Digital Marketplace: A Comparative Review of the Mechanisms and Effects of User-Generated vs. Brand-Generated Content",
+          "abstract": "In the contemporary digital marketing landscape, both user-generated content (UGC) and brand-generated content (BGC) are vital in shaping consumers' trust. However, there is still no systematic comparison of their underlying mechanisms and differential impacts. Through a targeted review of the extant literature, this paper explores differences in mechanisms between UGC and BGC, focusing on three aspects: perceived authenticity, information reliability, and emotional resonance. It will also examine the factors that influence these mechanisms. The analysis reveals that UGC primarily leverages perceived authenticity and peer-to-peer empathy to build communal trust. At the same time, BGC relies on professional authority and consistent messaging to establish trust with customers. Moreover, these differences are highly influenced by the products and targeted consumers. The finding suggests that the two content types are not exclusive but rather mutually complementary, which depend on the product type and targeted customers. This study provides strategic insights into the trust machine and helps brands optimize their content.",
+          "relevance_score": 0.44394594,
+          "id": "https://openalex.org/W7151288861"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 4,
+      "query": "brand loyalty repeat purchase",
+      "angle": "intersection",
+      "rationale": "Connects 'Brand loyalty' (5x) from keywords with repeat purchase behavior (user angle). Addresses retention, which is crucial for growth marketers.",
+      "openalex_count": 63,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Impact of Artificial Intelligence on Personalized Marketing: Enhancing Customer Engagement and Ethical Considerations",
+          "abstract": "ABSTARCT This research explores the impact of personalized marketing strategies on consumer behavior and preferences. Through survey analysis, it is evident that consumers strongly favor brands offering personalized offers and recommendations, indicating a significant influence on purchasing decisions and repeat buying intentions. Brand recognition emerges as a critical factor, with consumers more inclined to engage with recognized retailers. The study also highlights the role of personalized communications in influencing impulse purchases and mitigating brand switching tendencies. Notably, consumers express a willingness to share personal information with trusted brands for AI driven personalization, contingent upon transparency and data security measures. Statistical analysis underscores the substantial differences in preferences between consumers who support personalized marketing strategies and those who do not. Overall, the findings underscore the importance for brands to prioritize personalized experiences across the customer journey to foster brand recognition, trust, and long-term customer loyalty. Moreover, the research underscores the necessity for brands to balance personalization with consumer privacy concerns. While consumers demonstrate openness to AI-driven personalization, ensuring transparency, data security, and building trust are imperative for fostering greater willingness to share personal information. The study's outcomes provide valuable insights for marketers aiming to enhance brand recognition, drive repeat purchases, and cultivate lasting customer relationships in an increasingly competitive market landscape. By aligning with consumer preferences and expectations for personalized experiences, brands can effectively differentiate themselves, strengthen customer loyalty, and ultimately drive revenue growth",
+          "relevance_score": 5.237234,
+          "id": "https://openalex.org/W7153463434"
+        },
+        {
+          "title": "MENDAPATKAN LOYALITAS PELANGGAN MELALUI GAMIFIKASI : A SYSTEMATIC LITERATURE REVIEW",
+          "abstract": "This research aims to evaluate the role of relationship between gamification and customer loyalty through a Systematic Literature Review approach. The SLR stages applied include formulating research questions, conducting a literature search using Google Scholar and ScienceDirect, screening based on inclusion\u2013exclusion criteria, and assessing article quality. The initial identification process yielded 318 national and international indexed articles published between 2020\u20132025. After a series of screening steps, 18 articles relevant to gamification and customer loyalty were selected for descriptive analysis. The findings indicate that gamification has a positive and significant effect on customer loyalty, and this influence becomes stronger when user engagement functions as a mediator. Gamification elements such as points, rewards, badges, and leaderboards are shown to enhance intrinsic motivation, enjoyable user experience, and emotional attachment to digital platforms, which subsequently encourage repeat purchases, user recommendations, and brand commitment. Thus, user engagement serves as an essential psychological mechanism that connects game-based experiences with the formation of customer loyalty. Future studies are recommended to expand sample contexts, consider demographic and cultural factors as moderating variables, and employ longitudinal methods to obtain a more comprehensive understanding of loyalty dynamics driven by gamification.",
+          "relevance_score": 4.184189,
+          "id": "https://openalex.org/W7152456303"
+        },
+        {
+          "title": "Omnichannel commerce and the modernization of small and medium jewelry Enterprises: Evidence from Ukraine and the United States",
+          "abstract": "This research study examines how small and medium-sized jewelry enterprises (SMEs) are able to use the best omnichannel strategies to meet the expectations of Generation Z and Millennial consumers. Based on the mixed-methods approach combining case studies of four benchmark jewelry brands and the surveys of 250 consumers and 100 SME owners in the United States and Ukraine, the research determines a significant gap between the high consumer demand of the integrated digital experiences, including the augmented reality (AR) try-on and the ability to integrate channels, and the limited capabilities of SMEs, hindered by internal organizational and skills-related factors. The results affirm that perceived channel integration is the best predictor of customer loyalty and repeat purchase intention as compared to other effects of isolated technological features. Furthermore, the study unveils that the omnichannel approach is situational and not global, that the stable market maximizing growth model should focus on customer relationship management (CRM) and experience technology, whereas the volatile environment model should be agile social commerce and community interaction. This study has the main value in the form of a phased implementation structure that will enable jewelry SMEs to prioritize digital investments based on the nature of their market. The framework will improve the customer experience and make the omnichannel strategy a practical roadmap, turning it into a theoretically sound concept into a practical one.",
+          "relevance_score": 3.92746,
+          "id": "https://openalex.org/W7153637162"
+        },
+        {
+          "title": "Relationship Between Consumer Satisfaction and Usage, Market Trends, and Product Preferences Among the Lip Tint Users",
+          "abstract": "This study examined the relationship between consumer satisfaction and usage, market trends, and product preferences among lip tint users. Using a descriptive\u2013correlational design, data were collected from 321 university students through a structured questionnaire. Descriptive results revealed high levels across all variables: consumer usage (M = 4.42, SD = 0.400), market trends (M = 4.14, SD = 0.478), product preferences (M = 4.34, SD = 0.478), and consumer satisfaction (M = 4.26, SD = 0.516). Among usage indicators, frequency (M = 4.45) and application convenience (M = 4.44) were notably high. For market trends, celebrity endorsement (M = 4.04) and price competitiveness (M = 4.14) showed strong influence. In preferences, product quality (M = 4.38) and packaging and design appeal (M = 4.40) were highly rated. Inferential analysis using Pearson\u2019s r revealed significant positive relationships between consumer satisfaction and usage (r = .787, p &lt; .05), market trends (r = .511, p &lt; .05), and preferences (r = .888, p &lt; .05). Strong correlations were observed for product quality (r = .819), personalization (r = .812), color variety (r = .755), and application convenience (r = .703). Price competitiveness (r = .686) also demonstrated a substantial relationship with satisfaction. However, trendy shades showed no significant relationship (r = .146, p = .074). The findings indicate that satisfaction is primarily driven by functional and personalized product attributes rather than trend-based factors. Overall, the study highlights that quality, convenience, and personalization are key determinants of consumer satisfaction, influencing repeat purchase behavior and brand loyalty among lip tint users.",
+          "relevance_score": 3.4050908,
+          "id": "https://openalex.org/W7154170704"
+        },
+        {
+          "title": "REPUTATION MANAGEMENT ON CUSTOMER LOYALTY OF TRANSPORTATION FIRMS IN PORT HARCOURT",
+          "abstract": "Abstract This study examined the influence of reputation management on customer loyalty of transport firms in Port Harcourt. Reputation management was proxied using trust and reciprocity as its dimensions while referrals and repeat purchase as measures of customer loyalty. Social Exchange Theory was the baseline theory which the study anchored on. The study adopted a quantitative survey research design, which data were collected from 120 customers of selected transport firms using a structured questionnaire measured on a five-point Likert scale. Reliability of the instrument was confirmed using Cronbach\u2019s Alpha coefficients, of which all instruments fell within acceptable thresholds. Findings revealed that trust and reciprocity jointly influence customer referrals, accounting for reasonable degree of variation on referrals. Similarly, trust and reciprocity were found to have significant influence on repeat purchase as it explains relative percent of its variation. The results indicate that customers are more likely to remain loyal to transport firms that are perceived to be trustworthy and responsive. Also, the liberal actions of firm are reciprocated through repeat patronage and recommendations. The study concludes that effective reputation management is very essential as it influences customer loyalty in the transport industry. We recommend among others that organization had better understand that customer loyalty can be achieved through trust building and reciprocity-based practices.",
+          "relevance_score": 0.6621475,
+          "id": "https://openalex.org/W7151896753"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 5,
+      "query": "personalization conversion optimization",
+      "angle": "intersection",
+      "rationale": "Combines 'Personalization' (7x) from keywords with conversion optimization (user angle). Relevant for e-commerce targeting and ad creative.",
+      "openalex_count": 222,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A Study on Content Marketing Strategies for B2B Companies at Newmak Technology",
+          "abstract": "ABSTRACT Content marketing has emerged as a crucial strategy for business-to-business (B2B) companies to engage target audiences, build brand authority, and generate leads in an increasingly competitive digital marketplace. This study focuses on NewMak Technology, a B2B technology solutions provider, to examine the role and effectiveness of content marketing strategies in driving business growth. The research explores different types of content, including blogs, whitepapers, case studies, webinars, and social media campaigns, and their impact on customer engagement and lead conversion. The study also investigates the alignment of content marketing with the buyer\u2019s journey, highlighting how personalized and informative content influences purchasing decisions. Primary data was collected through surveys of 150 key stakeholders, marketing managers, and B2B clients, while secondary data was analyzed from industry reports and academic sources. The findings suggest that strategically designed content marketing initiatives not only strengthen brand recognition but also enhance customer trust and loyalty, ultimately improving lead generation and revenue performance. The research concludes by providing actionable recommendations for B2B companies like NewMak Technology to optimize their content strategies for maximum impact. Keywords: Content Marketing, B2B Marketing, Lead Generation, Brand Awareness, Customer Engagement, Digital Marketing, Content Strategy, Buyer\u2019s Journey, Content Personalization, Social Media Marketing, SEO, Marketing ROI, Content Distribution, Thought Leadership, Marketing Analytics",
+          "relevance_score": 2.2164001,
+          "id": "https://openalex.org/W7152070192"
+        },
+        {
+          "title": "Dose Conversion Factors in Coronary Diagnostic and Therapeutic Interventions: The Good, the Bad, and the challenges of Dose Estimation",
+          "abstract": "Interventional cardiology procedures, particularly coronary angiography (CA) and percutaneous coronary intervention (PCI), are among the most radiation-intensive medical imaging techniques. Accurate estimation of patient radiation dose is essential for risk assessment, dose optimization, and the development of diagnostic reference levels. This scoping review critically analyzes the current literature on dose conversion factors based on kerma-area product (KAP) for estimating effective (E) and organ-specific (HT) doses in adult patients undergoing CA and PCI. A total of 14 studies meeting defined eligibility criteria were included, encompassing methodologies such as Monte Carlo simulations (e.g., PCXMC, Geant4), physical phantoms, and clinical measurements. Reported E/KAP factors varied from 0.14 to 0.33 mSv/Gy\u00b7cm\u00b2, with PCI generally yielding higher values. HT/KAP values were notably highest for lungs and varied based on sex, anatomy, and procedural parameters. Technical factors such as X-ray filtration also significantly influenced dose estimation. The findings highlight substantial methodological heterogeneity and emphasize the need to standardize conversion factor recommendations across settings. Future efforts should focus on integrating personalized dosimetry, artificial intelligence tools, and real-time dose monitoring to enhance radiological safety and ensure consistent practice in interventional cardiology.",
+          "relevance_score": 2.2070289,
+          "id": "https://openalex.org/W7152394384"
+        },
+        {
+          "title": "MASS: Mesh-inellipse Aligned Deformable Surfel Splatting for Hand Reconstruction and Rendering from Egocentric Monocular Video",
+          "abstract": "Reconstructing high-fidelity 3D hands from egocentric monocular videos remains a challenge due to the limitations in capturing high-resolution geometry, hand-object interactions, and complex objects on hands. Additionally, existing methods often incur high computational costs, making them impractical for real-time applications. In this work, we propose Mesh-inellipse Aligned deformable Surfel Splatting (MASS) to address these challenges by leveraging a deformable 2D Gaussian Surfel representation. We introduce the mesh-aligned Steiner Inellipse and fractal densification for mesh-to-surfel conversion that initiates high-resolution 2D Gaussian surfels from coarse parametric hand meshes, providing surface representation with photorealistic rendering potential. Second, we propose Gaussian Surfel Deformation, which enables efficient modeling of hand deformations and personalized features by predicting residual updates to surfel attributes and introducing an opacity mask to refine geometry and texture without adaptive density control. In addition, we propose a two-stage training strategy and a novel binding loss to improve the optimization robustness and reconstruction quality. Extensive experiments on the ARCTIC dataset, the Hand Appearance dataset, and the Interhand2.6M dataset demonstrate that our model achieves superior reconstruction performance compared to state-of-the-art methods.",
+          "relevance_score": 1.9360483,
+          "id": "https://openalex.org/W7154427373"
+        },
+        {
+          "title": "High-Concurrency Orchestration in Distributed Incentive Engines: Patterns for Low-Latency Promotional Evaluation at Scale",
+          "abstract": "Modern enterprise e-commerce platforms operate under conditions where promotional evaluation must occur at every buyer touchpoint without compromising the millisecond-level response windows that conversion rates depend on. Legacy sequential architectures buckle under the combinatorial complexity of multi-layered incentive structures, creating bottlenecks that degrade user experience precisely when platform engagement is highest. An architectural synthesis rather than a new algorithm addresses this structural problem. Three mature distributed patterns converge into a framework where transactional integrity and discovery throughput reinforce each other rather than compete. Scatter-gather orchestration handles the concurrency problem, polyglot persistence handles the data access problem, and the transactional outbox pattern handles the consistency problem, each solving a distinct dimension of the incentive evaluation challenge without introducing dependencies that would compromise the others. Complex evaluation tasks are split into independent concurrent operations, keeping latency constant as incentive catalog depth grows rather than allowing it to scale linearly with complexity. Relational databases anchor the consistency requirements, while read-optimized NoSQL stores carry the discovery workload, with Apache Kafka event streaming handling the synchronization between write operations and the high-volume read path that billions of daily evaluation requests depend on. Parallelized batch processing pipelines carry this architectural discipline outward to affiliate networks and advertising platforms, keeping external partner ecosystems current with internal promotional states without pulling latency back into the evaluation path where it would cost conversion. The result is a production-ready blueprint that treats tail latency as a design constraint rather than a monitoring concern, building resilience patterns into the foundation so that real-time personalization at a global enterprise scale survives the traffic conditions that expose weaker architectures. Platforms built on these principles demonstrate the capacity to absorb traffic spikes of substantial magnitude while maintaining the sub-50 ms response windows that separate high-performing promotional engines from those that surrender conversion opportunities to infrastructure constraints.",
+          "relevance_score": 1.9341981,
+          "id": "https://openalex.org/W7152544659"
+        },
+        {
+          "title": "Bridging Gulfs in UI Generation through Semantic Guidance",
+          "abstract": "While generative AI enables high-fidelity UI generation from text prompts, users struggle to articulate design intent and evaluate or refine results\u2014creating gulfs of execution and evaluation. To understand the information needed for UI generation, we conducted a thematic analysis of UI prompting guidelines, identifying key design semantics and discovering that they are hierarchical and interdependent. Leveraging these findings, we developed a system that enables users to specify semantics, visualize relationships, and extract how semantics are reflected in generated UIs. By making semantics serve as an intermediate representation between human intent and AI output, our system bridges both gulfs by making requirements explicit and outcomes interpretable. A comparative user study suggests that our approach enhances users\u2019 perceived control over intent expression and outcome interpretation, and facilitates more predictable iterative refinement. Our work demonstrates how explicit semantic representation enables systematic and explainable exploration of design possibilities in AI-driven UI design.",
+          "relevance_score": 1.034866,
+          "id": "https://openalex.org/W7125893406"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 6,
+      "query": "influencer marketing purchasing",
+      "angle": "adjacent",
+      "rationale": "Adjacent to ad creative, using 'Influencer marketing' (6x) from keywords. Influencers are a modern ad channel with measurable effects on purchasing (32x).",
+      "openalex_count": 542,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "The Influence of Digital Marketing on Purchase Intention with Brand Image as an Intervening Variable",
+          "abstract": "In the digital era, the rapid growth of internet use and social media has encouraged companies to adopt digital marketing strategies to influence consumer behavior and strengthen their competitive position. Digital marketing is considered an effective tool not only for delivering product information but also for shaping a positive brand image that may lead to higher purchase intention. This study examines the influence of digital marketing on purchase intention, positioning brand image as a mediating mechanism within the relationship. Drawing on contemporary digital consumer behavior perspectives, the research investigates how interactive and content-driven marketing activities shape consumers\u2019 cognitive evaluations and behavioral intentions. A purposive sampling method was employed, involving 137 respondents residing in Semarang City who actively engage with digital platforms. Data were analyzed using Structural Equation Modeling\u2013Partial Least Squares (SEM-PLS) with WarpPLS 8.0 to assess both direct and indirect effects. The findings demonstrate that digital marketing significantly and positively affects brand image and purchase intention. Brand image also exerts a significant positive influence on purchase intention and partially mediates the relationship between digital marketing and purchase intention. These results suggest that digital marketing not only directly stimulates consumer buying intention but also operates indirectly by strengthening favorable brand perceptions. In conclusion, the results are useful for evaluating the implementation of digital marketing and brand image in increasing product purchase intention.",
+          "relevance_score": 19.05474,
+          "id": "https://openalex.org/W7154087228"
+        },
+        {
+          "title": "Influence of Marketing Strategies on Customer Purchase Intentions: A Study with Special Reference to Ojin Bakes, Calicut",
+          "abstract": "This study investigates the influence of marketing strategies on customer purchase intentions with special reference to OJIN Bakes, a well-established bakery brand located in Calicut (Kozhikode), Kerala. In an intensely competitive food and bakery market, effective marketing strategies are critical for attracting and retaining customers. The research adopts a descriptive research design, and primary data were collected from 100 respondents through a structured questionnaire using convenience sampling. The study focuses on four key marketing variables: product packaging, product quality, service quality, and pricing strategy. Data were analyzed using percentage analysis and presented through tables and charts. Findings reveal that packaging, product quality, and service quality each positively influence about 73\u201375% of customers' purchase intentions, while reasonable pricing influences approximately 71% of customers. Product variety emerged as the most influential marketing strategy (30%), followed by social media promotion and customer service (25% each), and advertising (20%). The study concludes that an integrated marketing approach encompassing quality products, attractive packaging",
+          "relevance_score": 17.010212,
+          "id": "https://openalex.org/W7153754800"
+        },
+        {
+          "title": "&lt;b&gt;Examining the Influence of Content Marketing on The Purchase Intentions of Domestic Tourism Among Graduate Business Students at The University of Zambia&lt;/b&gt;",
+          "abstract": "This study examined the influence of content marketing on the purchase intentions of domestic tourism among Graduate Business students at the University of Zambia, focusing on content quality, engagement, and personalisation. Guided by the Theory of Planned Behaviour (TPB) and the Elaboration Likelihood Model (ELM), the study adopted a quantitative descriptive survey design. A sample of 334 students was selected from a population of 2,000 using simple random sampling. Data were collected through a structured, closed-ended questionnaire and analysed using SPSS, employing descriptive statistics, regression analysis, and ANOVA to test relationships and determine statistical significance. The results indicated that all three variables had a positive and statistically significant effect on purchase intention (p &lt; 0.001), with content quality emerging as the strongest predictor, followed by content engagement, while personalisation had a weaker but still significant effect. These findings suggest that high-quality and engaging content exert a substantial practical impact on students\u2019 travel decision-making by strengthening attitudes, trust, and perceived relevance. The study contributes theoretically by integrating TPB and ELM to explain how digital content influences behavioural intention in a developing country context, demonstrating that attitude serves as a key mediating mechanism between content marketing and purchase intention. Practically, the findings highlight the need for tourism marketers and policymakers to prioritise high-quality, interactive, and ethically managed personalised content to maximise effectiveness. However, the impact of personalisation was moderated by challenges such as data privacy concerns, technological limitations, and content saturation. The study recommends the adoption of integrated content strategies that combine informational quality, social engagement, and responsible personalisation. Limitations include reliance on self-reported data and a single institutional sample, which may limit generalisability. Overall, the study concludes that content marketing plays a critical role in shaping domestic tourism demand among university students in Zambia and provides both theoretical and practical insights for enhancing digital tourism strategies.",
+          "relevance_score": 13.118419,
+          "id": "https://openalex.org/W7153081453"
+        },
+        {
+          "title": "Digital Marketing on Purchasing Decisions: Exploring the Sustainable Marketing Dynamics",
+          "abstract": "The main objective of this paper is to examine the impact of digital marketing on the consumer purchase decisions, with a particular focus on the online purchasing behavior, product reviews, social media influence, and customer loyalty. A descriptive cross-sectional analytical study with a sample size of 100 with semi-structured questionnaires has been employed to assess the role of digital marketing on the purchase decisions. Out of the total respondents, majority are the young group of people with 59 percent, mostly having the secondary level of education and engaged in services, with 60 percent of respondents frequently purchase through online on the weekly basis and nearly half of respondents had the influence of digital marketing like social media, including the product reviews on their purchasing habit. The study also shows the relationship between the purchasing frequency and loyalty toward their businesses that provide the regular order updates and advertisements of their product. The study concludes that the effective digital marketing practices, particularly the transparent communication and customer engagement, play a vital role in shaping the purchase decisions and in fostering a long term consumer loyalty.",
+          "relevance_score": 3.9742115,
+          "id": "https://openalex.org/W7154177346"
+        },
+        {
+          "title": "The Effect of Influencer Authenticity on Purchase Intention Mediated by Trust Transfer in Increasing Ventela Brand Consumers",
+          "abstract": "The development of digital marketing encourages the increasing use of influencers as a promotional strategy, especially for local products marketed through online marketplaces. However, the effectiveness of influencer marketing is largely determined by the level of authenticity of influencers in building consumer trust. This study aims to analyze the influence of influencer authenticity on purchase intention with trust transfer as a mediating variable in consumers of Ventela shoe products in the Cirebon City marketplace. The study used a quantitative approach with a survey method of 200 respondents who had an interest and experience of being exposed to Ventela's promotion by influencers. Data were collected through an online questionnaire and analyzed using the Partial Least Squares\u2013Structural Equation Modeling (PLS-SEM) method. The results of the study show that influencer authenticity has a positive and significant effect on purchase intention. In addition, influencer authenticity also has a significant effect on trust transfer, and trust transfer has a significant effect on purchase intention. The results of the mediation test showed that trust transfer partially mediated the relationship between influencer authenticity and purchase intention. These findings indicate that influencer authenticity not only influences purchase intent directly, but also through the mechanism of transferring trust from influencers to brands. This research provides theoretical and practical contributions in the development of trust-based influencer marketing strategies to increase the competitiveness of local products in the digital marketplace.",
+          "relevance_score": 3.9230895,
+          "id": "https://openalex.org/W7151545237"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 7,
+      "query": "consumer packaging perceptions",
+      "angle": "adjacent",
+      "rationale": "Adjacent to product naming/branding. 'Consumer Packaging Perceptions' appears as a topic (3x) in extracted data, relevant for DTC physical products.",
+      "openalex_count": 290,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Influence of Individual Multisensory Packaging Elements on Consumer Perception and Product Competitiveness",
+          "abstract": "This study outlines key marketing concepts based on the use of sensory elements to develop individual competitive advantages. Multisensory packaging elements perceived by consumers through tactile sensations are characterized. The aim of the experiment was to determine the impact of multisensory packaging elements, determined by human tactile receptors, on the overall perception of container design and brand recognition. The experiment established the influence of embossed elements applied to glass containers, which facilitate brand identification. Design decisions regarding the shape of glass beverage containers were found to have a positive impact on overall judgment during a blind evaluation of a natural object. The impact of visualization of glass beverage containers was assessed, taking into account design elements determined only by human vision. Calculations were made of changes in overall design perception when visualizing the test objects. An assessment was conducted of the sensory memory developed by test subjects under the influence of multisensory packaging elements, determined during tactile and visual testing. The level of qualitative memorization of the object was determined based on the assessment of memory formed under the influence of emotions elicited during an impersonal and visual testing. This study has practical applications in developing product packaging concepts and shaping a brand's competitive advantages.",
+          "relevance_score": 18.63939,
+          "id": "https://openalex.org/W7152526840"
+        },
+        {
+          "title": "Awareness of nano-materials in food packaging and environmental discharge points: A comparative study of organized communities in Lagos State, Nigeria",
+          "abstract": "The growing demand for advanced food packaging has increased the use of nanomaterials, which enhance food safety and preserve shelf life. However, potential health and environmental risks arise when these materials are not properly managed, and public understanding remains limited. This study evaluated the availability, awareness, and disposal of nano-food packaging in organized communities in Lagos, Nigeria. By comparing local packaging with international database and surveying 343 individuals from both academic and non-academic populations, the study found that 65% of local packaging contained nanomaterials. Despite this prevalence, awareness was critically low&mdash;35.2% of academic and 41.7% of non-academic respondents were familiar with Nano-packaging. Cafeterias and eateries were identified as key disposal points, highlighting environmental risks due to inadequate waste management. The results underscore an urgent need for targeted awareness campaigns and improved disposal protocols. Without concerted efforts from policymakers, industry leaders, and educators, the benefits of Nano-packaging may be outweighed by its unintended environmental and health impacts. Key words:&nbsp;Nanomaterial, food packaging, public awareness, environmental discharge, waste management, consumer perception.",
+          "relevance_score": 3.1776614,
+          "id": "https://openalex.org/W7152669364"
+        },
+        {
+          "title": "Connecting consumers to production processes: A new pathway to sustainable behaviour",
+          "abstract": "A growing body of research shows that consumers feel increasingly distant from the production processes of everyday commodities, particularly fast-moving consumer goods. Literature on psychological distance suggests that when individuals feel distant from events, such as climate change, their engagement and pro-environmental behaviour decline. However, while psychological distance has been widely studied, its application to production-consumption patterns remains unexplored. Moreover, despite numerous behavioural interventions, none address \u201cdistance from the production process\u201d as a means of fostering sustainable consumption. Across three studies, one online and two laboratory experiments, this research explores how implicit and explicit packaging design interventions can frame production processes as either closer to or more distant from the consumer, and how such framings affect sustainability perceptions and disposal behaviour. Results demonstrate that short-distance framings enhance perceived packaging sustainability and encourage environmentally responsible disposal, directly or by strengthening consumers\u2019 sense of connection to the production process. These findings highlight the role of design in connecting consumers to production processes as a novel and actionable pathway for sustainable behaviour.",
+          "relevance_score": 3.0148664,
+          "id": "https://openalex.org/W7154106235"
+        },
+        {
+          "title": "Influence of technological integration and design aesthetics on consumer engagement in digital marketing campaigns",
+          "abstract": "",
+          "relevance_score": 2.732771,
+          "id": "https://openalex.org/W7150954008"
+        },
+        {
+          "title": "ADVERTISING AND SALES PROMOTION AT VI MOBILE NETWORK",
+          "abstract": "This research investigates the impact of Vi's (Vodafone Idea) marketing and sales campaigns on the brand's recognition and perception, as well as consumers' purchasing decisions in the highly competitive Indian mobile phone market. The investigation examines the impact of digital advertisements, celebrity endorsements, discount programs, recharge incentives, and service packages on consumers' decisions. The study examines the marketing strategies that result in recall and loyalty versus those that only lead to short-term subscriptions by utilizing secondary data, customer responses, and comparisons with competing networks. The findings indicate that fragmented promotions can impede the ability of individuals to identify a brand. Conversely, involvement is enhanced through the implementation of integrated communication, value-based offerings, and consistent brand language. The study's conclusion provides management with suggestions for enhancing Vi's promotional combination to maintain growth and enhance its market position.",
+          "relevance_score": 2.653198,
+          "id": "https://openalex.org/W7150757174"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 8,
+      "query": "digital marketing revenue",
+      "angle": "adjacent",
+      "rationale": "Adjacent field connecting 'Digital marketing' (24x) and 'Revenue' (6x) from keywords. Provides bottom-line focus aligned with user's growth marketing role.",
+      "openalex_count": 236,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "ROI Analysis of Meta Ads and LinkedIn Ads for Industrial Product Marketing- A Comparative Study at STM CNC",
+          "abstract": "ABSTRACT The rapid advancement of digital marketing has compelled industrial companies to explore paid advertising platforms for lead generation and business growth. This study compares the Return on Investment (ROI) of Meta Ads (Facebook/Instagram) and LinkedIn Ads for industrial product marketing, with a specific focus on the machine tool sector and STM CNC as the organizational context. Using campaign performance data comprising advertising spend, leads generated, lead quality, revenue, and ROI calculations, this research provides a structured comparative evaluation. Meta Ads generated 110 leads at a Cost Per Lead (CPL) of \u20b990.91 with an ROI of 34,900%, while LinkedIn Ads generated 40 leads at a CPL of \u20b91,000 with an ROI of 13,650%. LinkedIn produced a higher lead quality percentage (70%) and higher total revenue (\u20b955 lakhs vs. \u20b935 lakhs). The analysis reveals concludes that Meta Ads are more efficient for ROI and cost-effective lead generation, while LinkedIn Ads are more suitable for premium B2B targeting and higher-value revenue opportunities. A dual-platform strategy is recommended for industrial marketers seeking both volume and quality. Keywords: Digital Advertising, Meta Ads, LinkedIn Ads, Return on Investment (ROI), Industrial Marketing, B2B Marketing, Lead Generation, Cost Per Lead, Industrial Products.",
+          "relevance_score": 3.4695616,
+          "id": "https://openalex.org/W7150992373"
+        },
+        {
+          "title": "Innovation of Marketing Model and the Path of Increasing Consumer Satisfaction of Rural Tourism in Chongqing Driven by Digital Economy",
+          "abstract": "Chongqing's rural tourism, endowed with a robust natural foundation and distinctive cultural identity, has achieved remarkable progress in recent years. In 2024, it welcomed over 280 million visitors, generating a total revenue of 68 billion yuan. However, challenges persist during digital transformation, including traditional marketing inertia, superficial technology adoption, and talent shortages. This paper explores digital economy empowerment, proposing innovative approaches such as big data-driven precision marketing and social media content marketing. These strategies leverage digital technologies to enhance travel experiences, intelligent systems to boost service efficiency, and data-driven methods to strengthen interactive engagement. Case studies of Wulong Fairy Mountain and Youyang Gongtan Ancient Town validate these approaches. The research indicates that high-quality development of Chongqing's rural tourism requires differentiated digital marketing and comprehensive service upgrades to elevate visitor satisfaction.",
+          "relevance_score": 3.444005,
+          "id": "https://openalex.org/W7154303960"
+        },
+        {
+          "title": "INNOVATIVE ADVERTISING FORMATS IN THE SYSTEM OF MARKETING COMMUNICATIONS OF HoReCa ENTERPRISES",
+          "abstract": "The article explores theoretical, methodological and applied aspects of implementing innovative advertising formats within the system of marketing communications of HoReCa enterprises under conditions of digital economic transformation. It is substantiated that innovative advertising is evolving from a purely informational tool into a strategic instrument that ensures competitive differentiation, strengthens brand positioning and enhances long-term financial sustainability. The study systematizes contemporary approaches to defining advertising innovation through technological novelty, interactivity, personalization of communication and analytical measurability of results. Particular attention is paid to the sector-specific characteristics of HoReCa businesses, where customer experience, repeat visits and emotional engagement directly determine revenue generation and profitability dynamics. The paper emphasizes that innovative advertising formats, including digital menus, mobile applications, gamified loyalty programs, geolocation-based communication, augmented reality tools and integrated CRM-driven campaigns, create a multidimensional impact on consumer behavior. Unlike traditional one-way advertising models, innovative communication integrates into the customer journey and generates both short-term financial returns and long-term behavioral effects. In this context, the necessity of comprehensive economic assessment is justified, as innovation in advertising entails not only additional opportunities but also increased financial, technological and reputational risks. To ensure a holistic evaluation framework, the study proposes an integrated model of strategic effectiveness combining Return on Marketing Investment (ROMI), Customer Engagement Index (CEI), change in Customer Lifetime Value (\u0394CLV) and Risk Index (RI). ROMI reflects short-term financial efficiency and the payback level of marketing expenditures. CEI captures the intensity and quality of consumer interaction with the brand. \u0394CLV measures the accumulated long-term financial contribution of retained customers, while RI accounts for potential negative effects associated with innovation implementation. The weighted integration of these indicators into a unified Strategic Effectiveness Index allows adaptation of the model to specific managerial priorities and competitive conditions. Empirical findings confirm a statistically significant positive relationship between the level of advertising innovation and revenue growth, provided that innovative formats are systematically embedded in the overall marketing strategy. Enterprises demonstrating a high Innovation Index achieved substantially higher revenue increases compared to those relying on traditional communication tools. Moreover, the mediating role of CLV growth indicates that the economic impact of innovative advertising is largely strategic rather than purely operational. At the same time, elevated risk levels reduce the effectiveness of innovation, highlighting the importance of balanced managerial decision-making. The practical value of the proposed model lies in its applicability for advertising budget planning, comparative performance assessment and evidence-based marketing management in the HoReCa sector. The research contributes to the development of an economically grounded approach to evaluating innovative advertising, shifting managerial focus from intuitive decisions toward analytically justified strategic choices.",
+          "relevance_score": 3.2394443,
+          "id": "https://openalex.org/W7152612022"
+        },
+        {
+          "title": "A Study on Content Marketing Strategies for B2B Companies at Newmak Technology",
+          "abstract": "ABSTRACT Content marketing has emerged as a crucial strategy for business-to-business (B2B) companies to engage target audiences, build brand authority, and generate leads in an increasingly competitive digital marketplace. This study focuses on NewMak Technology, a B2B technology solutions provider, to examine the role and effectiveness of content marketing strategies in driving business growth. The research explores different types of content, including blogs, whitepapers, case studies, webinars, and social media campaigns, and their impact on customer engagement and lead conversion. The study also investigates the alignment of content marketing with the buyer\u2019s journey, highlighting how personalized and informative content influences purchasing decisions. Primary data was collected through surveys of 150 key stakeholders, marketing managers, and B2B clients, while secondary data was analyzed from industry reports and academic sources. The findings suggest that strategically designed content marketing initiatives not only strengthen brand recognition but also enhance customer trust and loyalty, ultimately improving lead generation and revenue performance. The research concludes by providing actionable recommendations for B2B companies like NewMak Technology to optimize their content strategies for maximum impact. Keywords: Content Marketing, B2B Marketing, Lead Generation, Brand Awareness, Customer Engagement, Digital Marketing, Content Strategy, Buyer\u2019s Journey, Content Personalization, Social Media Marketing, SEO, Marketing ROI, Content Distribution, Thought Leadership, Marketing Analytics",
+          "relevance_score": 3.2137434,
+          "id": "https://openalex.org/W7152070192"
+        },
+        {
+          "title": "TRENDS IN THE DEVELOPMENT OF THE DIGITAL MARKETING MARKET IN UKRAINE UNDER MARTIAL LAW",
+          "abstract": "The fundamental transformations and key trends in the development of the digital marketing market in Ukraine under macroeconomic turbulence and martial law are investigated. The paradox of the advanced growth of the digital segment against the background of general economic stagnation is considered, which is confirmed by the increase in the volume of the internet advertising market in 2024\u20132025. Structural changes in content consumption are analyzed, in particular the dominance of video formats, the rapid development of the Connected TV segment, and the boom in Digital Out-of-Home advertising. It is established that in the conditions of high inflationary pressure, devaluation of the national currency, and new legislative restrictions, advertisers redirect budgets to tools with a high level of measurability, and social networks are transformed from an image channel into a direct sales tool. Significant attention is paid to the evolution of marketing services, the strengthening of the role of loyalty programs and event marketing. The risks and opportunities associated with the mass implementation of artificial intelligence in the operational and creative processes of Ukrainian enterprises are identified, and the impact of changes in consumer habits is analyzed. Based on the results of the analysis, the following key directions for the development of the industry can be identified. In particular, changes in advertising formats are manifested in the dominance of views from mobile phones and the popularity of vertical videos, as well as the rapid growth of advertising on Smart TVs and digital outdoor screens, which combine large-scale reach with the precision of computerized targeting. The transformation of social media is characterized by a shift in the use of social networks from traditional PR activities to a direct sales tool with a strict linkage to the cost of each purchase, against the backdrop of the enormous popularity of the Telegram messenger in the information space. Legislative regulation is also important, indicating the need for the advertising market to adapt to new strict laws and the gradual implementation of European standards. The large-scale application of artificial intelligence observed in recent years is characterized by the widespread use of AI-based programs for creating advertising materials, writing texts, and analyzing large volumes of data, which is becoming a key factor in reducing the operating costs of marketing agencies. Particular emphasis is placed on customer retention, as the growth of the loyalty marketing segment and the organization of live events confirm companies\u2019 intention to spend less on acquiring new customers and to generate greater revenue by retaining and increasing the value of existing clients.",
+          "relevance_score": 3.125761,
+          "id": "https://openalex.org/W7152724361"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 9,
+      "query": "sustainability consumer behaviour",
+      "angle": "serendipity",
+      "rationale": "Unexpected but present in data: 'Sustainability' (8x) and 'Environmental Sustainability in Business' (5x). May yield insights on modern consumer values affecting purchasing.",
+      "openalex_count": 612,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "IMPACT OF CONSUMER BEHAVIOUR FACTORS ON SUSTAINABLE ONLINE PURCHASING DECISIONS",
+          "abstract": "The present study explores the growing importance of aligning sustainable sales strategies with consumer purchasing behaviour in the digital marketplace. The objective of the research is to examine consumer behaviour in the context of online shopping, with a view to identifying how sustainability-related and behavioural factors influence purchasing decisions across diverse customer groups. A research gap has been identified in relation to sustainable sales and consumers' purchasing behaviour. The research focuses on consumer behaviour in online shopping. The goal of this study is to explore how different factors impact purchasing decisions in the context of a company\u2019s sustainable development. Methodology. The application of K-Means clustering and regression analysis in this study offers valuable insights into the responses of distinct consumer segments to social, economic, and environmental drivers. This supports companies in achieving sustainable growth. The results obtained demonstrate the variation in consumer behaviour across the various customer groups (i.e., browsers, cart abandoners, buyers, premium shoppers) and illustrate the significance of each factor for each created cluster. The findings of this study indicate that representatives of the Browsers cluster were primarily influenced by social media engagement (+0.42) and advertising interaction (+0.36). Customers in the Cart Abandoners cluster showed discount sensitivity (0.51) and shipping preferences (-0.44). For the Buyers cluster, important factors are brand loyalty (+0.58), customer loyalty programmes (+0.46) and product ratings (+0.31). Premium shoppers have a high income and education level, and value time spent on product research. Practical implications. The study demonstrates that distinct behavioural patterns have a significant impact on the outcomes of consumption. The findings of the research project have the potential to contribute to the development of sustainable online purchasing as a significant component of sustainable development. Value/Originality. The present study draws on consumer behaviour theory in order to investigate the factors that shape online purchasing. It thereby offers original insights into consumer behaviour in the context of sustainable online purchasing decisions, thus contributing to a deeper understanding of how sustainability considerations influence digital consumption patterns.",
+          "relevance_score": 18.718924,
+          "id": "https://openalex.org/W7152967516"
+        },
+        {
+          "title": "Connecting consumers to production processes: A new pathway to sustainable behaviour",
+          "abstract": "A growing body of research shows that consumers feel increasingly distant from the production processes of everyday commodities, particularly fast-moving consumer goods. Literature on psychological distance suggests that when individuals feel distant from events, such as climate change, their engagement and pro-environmental behaviour decline. However, while psychological distance has been widely studied, its application to production-consumption patterns remains unexplored. Moreover, despite numerous behavioural interventions, none address \u201cdistance from the production process\u201d as a means of fostering sustainable consumption. Across three studies, one online and two laboratory experiments, this research explores how implicit and explicit packaging design interventions can frame production processes as either closer to or more distant from the consumer, and how such framings affect sustainability perceptions and disposal behaviour. Results demonstrate that short-distance framings enhance perceived packaging sustainability and encourage environmentally responsible disposal, directly or by strengthening consumers\u2019 sense of connection to the production process. These findings highlight the role of design in connecting consumers to production processes as a novel and actionable pathway for sustainable behaviour.",
+          "relevance_score": 18.473883,
+          "id": "https://openalex.org/W7154106235"
+        },
+        {
+          "title": "A Study on Consumer Buying Behaviour Influencing the Purchase of Imported Skincare Brands with Reference to Clean Beauty and Sustainability Trends in Coimbatore City",
+          "abstract": "This study examines consumer buying behaviour towards imported skincare brands with reference to clean beauty and sustainability trends in Coimbatore city. The growing awareness of safe ingredients, environmental impact, and ethical practices has increased the demand for imported skincare products. The study is based on primary data collected from 158 respondents using a structured questionnaire. Statistical tools such as percentage analysis, Chi-square, regression, and ANOVA were used for analysis. The findings show that young consumers prefer imported brands, and factors like online reviews, social media influence, and environmental concern significantly affect purchase decisions. However, price perception does not vary across income groups. The study concludes that clean beauty and sustainability play a key role in influencing consumer preferences for imported skincare brands. Keywords: Consumer Buying Behaviour, imported Skincare Brands, Clean Beauty, Sustainability, Purchase Decision, Environmental Concern, Social Media Influence.",
+          "relevance_score": 14.079561,
+          "id": "https://openalex.org/W7153477650"
+        },
+        {
+          "title": "DETERMINANTS OF CONSUMER AWARENESS AND PREFERENCE FOR ECO-FRIENDLY PRODUCTS: AN EMPIRICAL INVESTIGATION IN PUDUKKOTTAI DISTRICT",
+          "abstract": "This study examines the key determinants influencing consumer awareness and preference for eco-friendly products in Pudukkottai District, with a focus on understanding the behavioural and socio-economic factors that drive sustainable consumption. In recent years, increasing environmental concerns, climate change awareness, and government initiatives have contributed to a growing interest in green products. However, the extent to which consumers are aware of and prefer such products varies significantly across regions. The research adopts an empirical approach, collecting primary data through a structured questionnaire administered to consumers across different demographic segments in Pudukkottai District. The study analyses factors such as environmental knowledge, income level, education, price sensitivity, product availability, brand trust, and social influence to evaluate their impact on consumer awareness and preference. Statistical tools such as percentage analysis, correlation, and regression are employed to interpret the data and identify significant relationships. The findings reveal that environmental awareness, education level, and perceived product quality play a crucial role in shaping consumer preferences for eco-friendly products. While a majority of respondents exhibit positive attitudes towards sustainability, high prices and limited availability act as major barriers to actual purchase behaviour. Additionally, social influence and promotional efforts are found to significantly enhance consumer awareness and willingness to adopt green products. The study highlights the need for increased awareness campaigns, affordable pricing strategies, and improved distribution channels to promote eco-friendly consumption. It provides valuable insights for policymakers, marketers, and environmental organizations to design effective strategies for encouraging sustainable consumer behaviour in semi-urban and rural contexts like Pudukkottai District.",
+          "relevance_score": 5.7143965,
+          "id": "https://openalex.org/W7152370699"
+        },
+        {
+          "title": "Behavioural drivers of internet of things adoption in food consumption",
+          "abstract": "Purpose This study examines factors influencing consumers\u2019 intention to use Internet of Things (IoT) technology in food practices. The adoption of the IoT by consumers has significant potential to address sustainability challenges, as IoT provides a high-frequency data layer that artificial intelligence (AI) and machine learning (ML) can translate into insights and automated processes, triggering sustainable consumer behaviours. A modified Unified Theory of Acceptance and Use of Technology (UTAUT) model is employed to assess antecedents of Behavioural Intention (BI). Design/methodology/approach Data were collected via an online research panel (n = 600). Partial Least Squares Consistent structural equation modelling (PLSc-SEM) was used to test hypotheses. To facilitate interpretation in the context of social change, we conducted a Combined Importance\u2013Performance Map Analysis (cIPMA). Findings Performance Expectancy (PE) and Social Influence (SI) emerged as sufficient conditions for determining Behavioural Intention (BI). Attitudes (ATT) toward IoT were significantly shaped by four antecedents \u2013 PE, Effort Expectancy (EE), SI, and Trust (TR) \u2013 and ATT mediated the relationships between these variables and BI in the food-consumption context. The cIPMA further highlighted the central role of PE in shaping BI. Practical implications The findings provide practitioners with actionable guidance. Enhancing performance value, simplifying the user experience, and strengthening trust through transparent data practices can meaningfully increase consumer acceptance of IoT solutions that support sustainable food consumption. Originality/value The study contributes to refining the UTAUT model by integrating Trust and Attitudes towards IoT as mediating variables, thereby extending the understanding of the factors influencing Behavioural Intention in this domain.",
+          "relevance_score": 5.595641,
+          "id": "https://openalex.org/W7154167893"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 10,
+      "query": "AI personalization marketing",
+      "angle": "serendipity",
+      "rationale": "Serendipitous from 'AI in Service Interactions' (5x) and 'Artificial Intelligence' (6x) subfields. Could reveal cutting-edge ad creative or pricing tools.",
+      "openalex_count": 282,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "AI-PERSONALIZED GREEN MARKETING: DRIVING ECO-CONSCIOUS CONSUMER BEHAVIOR IN REAL-TIME",
+          "abstract": "This study examines the integration of artificial intelligence in green marketing strategies, specifically focusing on personalized eco-engagement campaigns. Through a qualitative case study approach utilizing secondary data from The Body Shop Malaysia's sustainability initiatives, this research investigates how AI-driven personalization enhances eco-conscious consumer behavior. The findings reveal that AI-powered green marketing significantly improves consumer engagement rates, purchase intentions, and environmental awareness. This research contributes to the understanding of technology-enabled sustainable marketing practices in Southeast Asia and provides practical insights for businesses seeking to enhance their environmental impact through personalized digital strategies.",
+          "relevance_score": 19.506952,
+          "id": "https://openalex.org/W7154035623"
+        },
+        {
+          "title": "AI-Enabled Personalization and Consumer Trust: An Exploration of the Ethical Considerations in the Modern Marketing Environment Utilizing Data",
+          "abstract": "Abstract This chapter discusses the complicated AI-powered personalization and consumer confidence in the emerging scenario of data-driven marketing. With marketers taking advantage of artificial intelligence (AI) to provide hyper-personalized experiences, data ethics, transparency, and user consent concerns have come to the fore. This study uses a mixed-methodology allowing the researcher to triangulate quantitative data, collected in a 500 consumer\u2019s survey in the United States and the United Kingdom, with that of qualitative data obtained through 20 semistructured interviews with marketing experts. The results reveal that AI personalization deeply increases perceived relevance (beta = 0.74, p &amp;lt; 0.01) and consumer engagement (beta = 0.69, p &amp;lt; 0.01). Nevertheless, trust relies strongly on the perceived transparency (beta = 0.62; p &amp;lt; 0.01) and good data habits (beta = 0.67; p &amp;lt; 0.01). Interviewees recognized the need to utilize explainable AI and explicit consent models to ensure confidence of the consumer. This chapter gives a conceptual approach to ethical AI personalization and offers practical implications to marketers who intend to use personalization to maintain a balance between the challenges of data stewardship and personalization.",
+          "relevance_score": 17.868156,
+          "id": "https://openalex.org/W7154177205"
+        },
+        {
+          "title": "AI-Driven Personalization and Data-Centric Marketing in Indian FinTech: Empirical Evidence on Customer Satisfaction, Trust, and Engagement",
+          "abstract": "ABSTRACT The rapid proliferation of Financial Technology (FinTech) has fundamentally transformed customer engagement paradigms in the Indian financial services sector. This study empirically investigates the influence of Artificial Intelligence (AI)-driven personalization and automation tools on customer satisfaction, trust, and engagement among Indian FinTech users. Grounded in the Technology Acceptance Model (TAM), UTAUT2, Privacy Calculus Theory, and Information Systems Trust Theory, the research adopts a quantitative cross-sectional design. Primary data were collected from 200 FinTech users across India using a structured Likert-scale questionnaire spanning eight constructs. Statistical analyses comprising one-sample t-tests, Pearson correlation analysis, and one-way ANOVA were executed using SPSS. Key findings reveal that AI personalization exerts the strongest positive influence on customer satisfaction (r = 0.706, p &lt; 0.01) and trust (r = 0.671, p &lt; 0.01). Automation exposure significantly correlates with engagement (r = 0.438, p &lt; 0.01). Transparency positively moderates trust (r = 0.478, p &lt; 0.01), while privacy risk demonstrates only a weak negative effect on trust (r = \u22120.152, p &lt; 0.05) without influencing satisfaction. Digital literacy exhibits no significant moderating effect (r = \u22120.064, p &gt; 0.05), indicating that contemporary FinTech interfaces have democratized AI benefits across literacy strata. The study validates three of five hypotheses and contributes novel context-specific evidence to the global FinTech personalization literature, offering actionable implications for practitioners and policymakers. Keywords: FinTech, AI personalization, data-driven marketing, customer experience, automation, trust, privacy risk, digital literacy",
+          "relevance_score": 16.507343,
+          "id": "https://openalex.org/W7153821089"
+        },
+        {
+          "title": "Leveraging AI for Individualized Outreach in Enrollment Marketing: A Study on Boosting University Application Intentions",
+          "abstract": "Background: With the rise of Artificial Intelligence (AI) in higher education marketing, universities can reach prospective students in a more personalized manner. Nevertheless, only a few studies in the prevailing literature examine the dependence of students' enrollment decisions on trust and privacy perceptions regarding an institution's admission ability due to its AI-driven marketing, especially in an Indonesian setting. Objective: This study investigates the impact of AI marketing strategies on university application intentions of prospective students. Through the Stimulus-Organism-Response framework, it examines how AI content recommendation and interaction quality affect perceived trust and privacy risks, and subsequently, enrollment behavior. Method: This quantitative research employed purposive sampling, collecting data from 350 prospective students. The conceptual model was examined using Partial Least Squares Structural Equation Modeling (PLS-SEM) with SmartPLS 4. Privacy calculus was included as a moderator to examine trade-offs between personalization advantages and data privacy risks. Results: All seven hypotheses received support, as both AI content recommendations and interaction quality have direct and indirect influences on university application intentions. Perceived trust had a strong mediation effect on content quality, while privacy risk had a strong mediation effect on AI interaction. Privacy calculus moderated the effect of privacy risk on application intention, indicating that high AI service utility can alleviate data-related concerns. Conclusion:This study extends higher education marketing literature by presenting a holistic perspective on the Privacy-Personalization Paradox. It identifies institutional trust and privacy calculus as critical psychological determinants of digital recruitment systems, and offers strategies for universities leveraging AI-based engagement tools.",
+          "relevance_score": 4.3449035,
+          "id": "https://openalex.org/W7151347179"
+        },
+        {
+          "title": "AI DRIVEN AND DATA DRIVEN MARKETING STRATEGIES AS PREDICTORS OF BRAND ENGAGEMENT: THE MEDIATING ROLE OF CONSUMER PREFERENCES AND BEHAVIOUR IN THE UK E COMMERCE INDUSTRY",
+          "abstract": "In the digital age, AI-driven and data-driven marketing strategies have transformed consumer-brand interactions, yet their impact on brand engagement remains underexplored, particularly in fashion retail. This study investigates how AI-powered personalization, predictive recommendations, and chatbots, alongside data-driven segmentation and historical analysis, influence cognitive, emotional, and behavioral engagement among UK online fashion consumers. A quantitative survey was conducted with 350 participants, and reliability, validity, and structural equation modeling analyses were performed. Findings reveal that both AI- and data-driven marketing strategies significantly enhance brand engagement, with consumer preferences and behavioral patterns serving as critical mediators. The results highlight that effective marketing requires not only technological sophistication but also an understanding of the psychological and behavioral mechanisms driving consumer interactions. This study addresses the \u201cquantitative illusion of understanding\u201d by bridging strategic inputs with consumer experiences, providing practical insights for fashion retailers seeking to foster authentic engagement. Implications for theory and practice are discussed, and directions for future research, including cross-industry studies, longitudinal analysis, and ethical considerations in hyper-personalized marketing, are proposed.",
+          "relevance_score": 4.2276726,
+          "id": "https://openalex.org/W7153003391"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 11,
+      "query": "price endings consumer behavior",
+      "angle": "core",
+      "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus.",
+      "openalex_count": 32,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+          "abstract": "While most studies of 'charm pricing' feature everyday consumer purchases, the current study considers the use of this pricing strategy in the context of the residential real estate market.The study utilizes data from the Multiple Listing Service (MLS) of a mid-sized Southeastern city, for all homes sold between 2006 to 2021.Analysis considers the effect a strategic 'charm' price upon final sales price.The impact of this pricing strategy is considered in relation to home price segment, as well as real estate market conditions (hot vs. cold) across time.Results suggest that charm pricing in the real estate market is commonplace, and that the strategy does work -most effectively within cold real estate markets, and within lower price segments.However, it is used most often in higher price segmentswhich can actually harm final sales price.",
+          "relevance_score": 0.51050055,
+          "id": "https://openalex.org/W7152936304"
+        },
+        {
+          "title": "Essays on Empirical Search and Matching",
+          "abstract": "abstract",
+          "relevance_score": 0.41860116,
+          "id": "https://openalex.org/W7152685848"
+        },
+        {
+          "title": "ARTIFICIAL INTELLIGENCE AND NLP ON REDDIT: UNSUPERVISED DETECTION OF FOOD TRENDS AND HEALTHY EATING PATTERNS",
+          "abstract": "Traditional sensory analysis in food innovation provides limited insight into consumer behavior, whereas social platforms such as Reddit offer large-scale, real-time textual data on food-related practices and perceptions. This study evaluates Reddit as a scalable source for detecting food trends and healthy eating patterns in Spanish-language discussions using artificial intelligence (AI) and natural language processing (NLP). An end-to-end pipeline was implemented, including targeted data scraping across seven foodrelated domains, Spanish-language filtering (\u226570% confidence), customized preprocessing, and unsupervised topic discovery via k-means clustering. The system processed 17,774 Spanish-language posts from an initial corpus of 92,949 entries. Despite linguistic challenges such as polysemy and lemmatization errors, the method produced coherent and representative themes, including barriers to home cooking, weight management concerns, economic factors, food categories, and nutrition-related consultations. These results demonstrate the effectiveness of unsupervised NLP techniques for large-scale monitoring of food-related discourse on social media.",
+          "relevance_score": 0.4165377,
+          "id": "https://openalex.org/W7153117931"
+        },
+        {
+          "title": "Consumer Perceptions of Recycled Cotton Fabric in Support of Advancing SDG 12: A Developing Economy Perspective",
+          "abstract": "Developing economy\u2019s fashion industry continues to grow with a balance of environmental responsibility and creative expression; however, fast-fashion practices hinder the progress toward circular production systems. Within this context, recycled cotton emerges as a viable solution to reduce textile waste and advance Sustainable Development Goal 12 (SDG 12): Responsible Consumption and Production. However, consumer perceptions and understanding of recycled cotton and the process of influencing its sustainable adoption remains limited. This study explored how individuals perceive recycled cotton fabric and the extent to which their perceptions support sustainable consumption behaviour. This study adopted the Value-Belief-Norm (VBN) theory and the Theory of Planned Behaviour (TPB) as the theoretical framework. An exploratory research design was applied with an interpretivist philosophical standpoint. A qualitative research approach was adopted, while data was collected from twenty-four (24) purposively selected participants, comprising of postgraduate students (16) and educators (8) from South Africa. An interview guide was used to collect data through semi-structured interviews. Thematic analysis using Atlas.TI identified several key themes, namely: reduction in pollution, avoiding landfills, promoting circularity, rejection of fast fashion, education, trust, variability and cost implications of slow fashion. The results indicate that participants' perceptions about recycled cotton fabric are anchored on environmental textile benefits, knowledge shaping sustainability choices, trust, variability and cost implications as barriers for utilising recycled cotton fabric. The study concludes with applicable recommendations and future study directions.",
+          "relevance_score": 0.40625665,
+          "id": "https://openalex.org/W7151245127"
+        },
+        {
+          "title": "Cross-industry beta and comparative analysis of regression models for stock price prediction",
+          "abstract": "This paper looks at how systematic risk\u2014measured through beta coefficients\u2014behaves differently depending on whether we use daily or monthly return data. We pick nine major industry sectors and run standard market model regressions at both frequencies over a three-year window (March 2017 to March 2020, using S&amp;P 500 as the benchmark). What we find is pretty striking: for most sectors, the sign of the average beta actually flips between daily and monthly estimates. Daily betas tend to be noisy and jump around a lot, while monthly ones give much smoother trajectories. These results suggest that anyone relying on just one frequency for risk assessment might be getting an incomplete\u2014or even misleading\u2014picture. We also argue that simple OLS-based approaches, rather than fancy machine learning models, work quite well here precisely because complex models tend to overfit the short-term noise.",
+          "relevance_score": 0.39921242,
+          "id": "https://openalex.org/W7152763306"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 12,
+      "query": "discounts brand perception consumer behavior",
+      "angle": "core",
+      "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception.",
+      "openalex_count": 55,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Web engineering for the evaluation of large complex web systems: methodologies in web metrics",
+          "abstract": "Roaming the Internet, users sometimes encounter severe problems or feel dissatisfied using a particular site. E-government websites are the public gateways to access information and services but there is still no agreement on how to assess a government\u2019s online presence. Failure of e-government projects in achieving their goals is common and there is uncertainty about how best to evaluate an e-government website. It has been argued that existing evaluation frameworks have some methodological limitations and they mostly neglected citizens. There is a lack of an engineering approach for building web systems and the literature on measuring the quality of website is limited. There is an uncertainty in the selection of evaluation methods and some risks of standardizing inadequate evaluation practices. Managing the complexity of web applications, Web Engineering is emerging as a new discipline for the development and evaluation of web systems to promote high-quality websites. But web quality is still a debatable issue and web metrics is considered a valuable area of ongoing research. Therefore this research focuses on the methodological issues underlying web metrics and how to develop an applicable set of measurement for designing websites. The main aim is to create new metrics for web engineering and develop a generalizable measurement framework for local e-government since research in this field is limited. This study adopted a positivist quantitative research and used triangulation web evaluation methods (heuristic evaluation, user testing, automatic link checkers, and Alexa) to test multiple-case study of Saudi city websites. The proposed E-City Usability Framework is unique in integrating 3-dimension measures (website usability, e-services, and the number and type of e-services), and in using multi-orientations to cover several aspects of e-government: output (information and services), outcomes (citizen-centricity indicators), model, and model-based assessments. Existing e-government models were criticized, and the findings employed in developing the proposed framework. The best web evaluation methods were heuristic evaluation and user testing, while link checkers and Alexa proved to be unreliable tools; nevertheless, they can be used as a useful complementary approach. Saudi city websites were ranked by website quality, e-services, and overall evaluation. Common usability problems in these websites were found to be: the sites were not citizen-centered, limited e-services and information, no e-transaction, no emergency alerts, no municipal budget, and no city council reports. They also suffered from broken links, an inactive city map, a poor eComplaint section, and a nonfunctioning search facility.",
+          "relevance_score": 0.93830264,
+          "id": "https://openalex.org/W2767728468"
+        },
+        {
+          "title": "The Influence of E-wom, Brand Image, and Price on Erigo's Purchase Decision on the Shopee Application",
+          "abstract": "Seeing the progress and development of the e-commerce world in Indonesia, which is very dynamic, many local brands must be able to understand and know what digital factors have an impact on increasingly selective consumer behavior. This study seeks to provide an analysis related to the influence of Electronic Word of Mouth (e-WOM) and Brand Image and Price on the purchase decision of Erigo products in the Shopee application through an associative quantitative approach and gathered around 156 respondents in Cirebon Regency by applying the 10-times rule technique. Data was collected from the questionnaire and the use of the Likert scale and analyzed with Structural Equation Modeling (SEM) on the basis of Partial Least Squares (PLS). The results indicate that the acquisition of a value of R\u00b2 0.713 is significant if the independent variable describes about 71.3% variation in the purchase decision. Then e-WOM produced a positive and significant effect (O = 0.348; P = 0.009) or that consumer reviews are considered as the dominant factor in building trust and driving purchases. Brand Image also produces positive and significant influence (O = 0.329; P = 0.016), indicates the importance of brand image to increase consumer confidence in Erigo products. However, the price produced a positive and insignificant effect at the level of 5% (O = 0.228; P = 0.064). This result means that digital reputation and brand image have more impact on purchasing decisions than price and make local businesses need to pay attention to online reviews and brand image in providing an increase in competitiveness.",
+          "relevance_score": 0.67400455,
+          "id": "https://openalex.org/W7151819364"
+        },
+        {
+          "title": "Changing Food Consumption Patterns: A Study of Quick-Service",
+          "abstract": "The rapid expansion of Quick-Service Restaurants (QSRs) in Tier-2 cities such as Patna signifies a substantial transformation in consumer eating habits, lifestyle preferences, and socio-economic dynamics. As urbanization accelerates and disposable incomes rise, consumers increasingly favor convenient, affordable, and standardized food options offered by QSRs. This study examines the evolving food consumption patterns in Patna, focusing on the factors that shape consumer preference for QSRs, including demographic variables, digital influence, brand perception, and service convenience. Using a mixed-method research design, primary data were collected from 100 respondents through a structured questionnaire, supplemented by an extensive review of contemporary literature. Analytical techniques such as frequency distribution, percentage analysis, mean scoring, and chi-square testing were applied to interpret consumer behavior trends. The findings reveal a pronounced shift toward QSR consumption, particularly among individuals aged 18\u201335, driven by convenience, taste consistency, hygiene expectations, and the growing reliance on digital platforms such as Zomato, Swiggy, and social media channels like Instagram. These platforms significantly impact decision-making by offering promotional incentives, peer reviews, and effortless accessibility. The study concludes that QSRs play an increasingly pivotal role in Patna\u2019s food ecosystem and highlights the importance of digital engagement, value-based offerings, and localized menu strategies. Practical recommendations and future research directions are proposed to assist QSR operators, marketers, and policymakers in leveraging consumer trends effectively.",
+          "relevance_score": 0.6727701,
+          "id": "https://openalex.org/W7151902725"
+        },
+        {
+          "title": "Exploring the Alignment Between Consumer Expectations and Retailer Strategies for Sustainable Practices in Indian Supermarkets",
+          "abstract": "Sustainability has gradually become vital in the present retail food processing industry strategy, particularly within food distribution systems. Although sustainability in retail has received considerable research attention, existing research largely focuses on metropolitan markets. Whereas Tier-3 cities, despite contributing a significant share of emerging market retail growth, remain comparatively low in the research section. The research contributes empirical evidence from a Tier-3 Indian retail context, addressing geographical bias in sustainability literature. This study investigates sustainability practices implemented in supermarkets operating in the tier-3 cities of the Rayalaseema region, A.P., in India, from dual perspectives of owners/managers and consumers. By addressing the geographical imbalance in sustainability research, the findings provide insights relevant to practical policy for advancing sustainable retail ecosystems in emerging markets. A survey was conducted among a sample of 270 customers and 112 supermarket managers using a well-structured questionnaire. The results of the study indicate that consumers hold a favourable perception of ethical product availability and pricing fairness, moderate eco-initiatives. From the managerial perspective, plastic reduction policies and eco-friendly packaging are widely implemented, whereas renewable energy adoption and structured local sourcing remain limited. The outcome of the Inferential statistical analysis reveals a significant positive association between sustainability practices and ethical perception. However, the chi-square test revealed no significant relationship between stated motivation for reusable bag use and actual usage frequency, nor between plastic policy strength and adoption challenges stemming from many awareness gaps. The investigation suggests resolving an attitude\u2013behaviour gap and raising awareness of the availability of sustainable products and practices. Policy and managerial implications highlight the need for AI-driven waste forecasting, solar energy subsidies, enhanced eco-labelling, and strengthened local supply networks.",
+          "relevance_score": 0.6719377,
+          "id": "https://openalex.org/W7154000394"
+        },
+        {
+          "title": "Factors influencing customers to switch mobile brands",
+          "abstract": "The study demonstrates that switching mobile brands results from the interaction of economic, product-related, psychological, social, and technological factors.Findings indicate that price sensitivity, perceived value, and promotional incentives are influential when aligned with credible product improvements.Quality, reliability, design, and innovation emerge as decisive triggers, while customer satisfaction, perceived risk, and trust shape the likelihood of switching.Social influence and cultural contexts further determine the timing and direction of brand change.Technological foundations and ecosystem integration provide the infrastructure that either lowers or raises barriers to migration.",
+          "relevance_score": 0.6644578,
+          "id": "https://openalex.org/W7153674567"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 13,
+      "query": "click-through rate online advertising",
+      "angle": "core",
+      "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context.",
+      "openalex_count": 54,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Evaluation of the Online Media Advertising Cost Calculation System Using the Cost Per Click and Cost Per Mille Methods",
+          "abstract": "Online advertising platforms commonly employ Cost-Per-Click (CPC) and Cost-Per-Thousand-Impressions (CPM) models to determine advertiser fees based on user engagement and exposure metrics. While these pricing arrangements are mathematically simple, ensuring calculation accuracy and the scalability of the costing system is crucial for maintaining financial transparency and operational security. This study examines an online media advertising costing system using CPC and CPM methods through a structured system validation approach. The evaluation includes calculation verification, consistency testing against manual calculations, performance benchmarking, scalability assessment, and sensitivity analysis. A simulated dataset of 100 ad records was used to assess the system's accuracy and behavioral performance. The results demonstrate no calculation deviation between manual and system outputs, predictable linear scalability, and logistic revenue sensitivity under rate variations. These findings indicate that the evaluated system exhibits reliable calculation performance under controlled conditions. This study contributes to the evaluation of applied information systems by providing a structured methodology for validating ad collection systems.",
+          "relevance_score": 4.1414685,
+          "id": "https://openalex.org/W7151734899"
+        },
+        {
+          "title": "Privacy Settings and Ad Perception: The Shift from Third-Party Cookies to the Privacy Sandbox",
+          "abstract": "Online behavioral advertising, heavily reliant on privacy-invasive third-party cookie tracking, faces a significant shift as browsers like Safari, Brave, and Firefox have already deprecated them. Google Chrome announced its parallel move with the \u201cPrivacy Sandbox Initiative\u201d in 2019, proposing privacy-preserving advertising mechanisms. The extent to which Privacy Sandbox can deliver comparable ad effectiveness to the established third-party cookies system will likely determine its adoption as a widespread alternative. This paper presents the first user study evaluating the impact of Privacy Sandbox APIs on ad perception. Our findings show that users perceive Privacy Sandbox ads as less relevant and exhibit lower purchase intent compared to third-party cookie\u2013based ads, without a corresponding increase in perceived privacy protection. These results contribute to the ongoing assessment of Privacy Sandbox as an alternative to third-party cookies.",
+          "relevance_score": 1.9663107,
+          "id": "https://openalex.org/W7128790349"
+        },
+        {
+          "title": "Exploring the Role of Interaction Data to Empower End-User Decision-Making in UI Personalization",
+          "abstract": "User interface personalization enhances digital efficiency, usability, and accessibility. However, in user-driven setups, limited support for identifying and evaluating worthwhile opportunities often leads to underuse. We explore a reflexive personalization approach where individuals engage with their digital interaction data to identify meaningful personalization opportunities and benefits. We interviewed 12 participants, using experimental vignettes as design probes to support reflection on different forms of using interaction data to empower decision-making in personalization and the preferred level of system support. We found that people can independently identify personalization opportunities but prefer system support through visual personalization suggestions. Interaction data can shape how users perceive and approach personalization by reinforcing the perceived value of change and data collection, helping them weigh benefits against effort, and increasing the transparency of system suggestions. We discuss opportunities for designing personalization software that raises end-users\u2019 agency over interfaces through reflective engagement with their interaction data.",
+          "relevance_score": 1.4829762,
+          "id": "https://openalex.org/W7139991763"
+        },
+        {
+          "title": "Fit Matters: Format\u2013Distance Alignment Improves Conversational Search",
+          "abstract": "Existing conversational search systems can synthesize information into responses, but they lack principled ways to adapt response formats to users\u2019 cognitive states. This paper investigates whether aligning format and distance, which involves matching information granularity and media to users\u2019 psychological distance, improves user experience. In a between-subjects experiment (N = 464) on travel planning, we crossed two distance dimensions (temporal/spatial \u00d7 near/far) with four formats varying in granularity (abstract/concrete) and media (text/image-and-text). The experiment established that format\u2013distance alignment reduced users\u2019 risk perceptions while increasing decision confidence, perceptions of information usefulness, ease of use, enjoyment, and credibility, and adoption intentions. Concrete formats imposed higher cognitive load, but yielded productive effort when matched to near-distance tasks. Images enhanced concrete but not abstract text, suggesting multimedia benefits depend on complementarity. These findings establish format\u2013distance alignment as a distinctive and important design dimension, enabling systems to tailor response formats to users\u2019 psychological distance.",
+          "relevance_score": 1.3397163,
+          "id": "https://openalex.org/W7125281547"
+        },
+        {
+          "title": "From Vulnerable to Resilient: Examining Parent and Teen Perceptions on How to Respond to Unwanted Cybergrooming Advances",
+          "abstract": "Cybergrooming is a form of online abuse that threatens teens\u2019 mental health and physical safety. Yet, most prior work has focused on detecting perpetrators\u2019 behaviors, leaving a limited understanding of how teens might respond to such unwanted advances. To address this gap, we conducted an online survey with 74 participants\u201451 parents and 23 teens\u2014who responded to simulated cybergrooming scenarios in two ways: responses that they think would make teens more vulnerable or resilient to unwanted sexual advances. Through a mixed-methods analysis, we identified four types of vulnerable responses (encouraging escalation, accepting an advance, displaying vulnerability, and negating risk concern) and four types of protective strategies (setting boundaries, directly declining, signaling risk awareness, and leveraging avoidance techniques). As the cybergrooming risk escalated, both vulnerable responses and protective strategies showed a corresponding progression. This study contributes a teen-centered understanding of cybergrooming, a labeled dataset, and a stage-based taxonomy of perceived protective strategies, while offering implications for educational programs and sociotechnical interventions.",
+          "relevance_score": 1.3324406,
+          "id": "https://openalex.org/W7126231144"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 14,
+      "query": "product naming consumer behavior",
+      "angle": "core",
+      "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses.",
+      "openalex_count": 317,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Snake repellent safety and efficacy in Sub-Saharan Africa. What is the evidence?",
+          "abstract": "Sales of snake repellents are booming in Sub-Saharan Africa (SSA). A recently published study of commercial snake repellents available across six East-African countries (Burundi, Ethiopia, Kenya, Rwanda, Tanzania, Uganda) revealed 98 different products sold online and in agro-veterinary outlets [1].These ranged from chemical sprays, powders and lotions to gum-traps and ultra-sonic devices. This is merely the tip of the iceberg. Far more so-called repellents and remedies are sold through nonconventional and unmonitored channels, such as local traditional healers [2].Motivation to prevent snakebite envenoming (SBE) is high. Across SSA, SBE accounts for 12,290 (95%CI: 9,710-14,924) deaths and 14,766 (95%CI: 9,043-25,183) amputations per year, causing an annual burden of 1.03 million DALYs (95%CI: 0.80-1.28 million DALYs) [3]. Those most affected are children and poor rural farmers who live furthest from health facilities but closest to snake habitats. Moreover, venomous snakes injure and kill livestock [4], impacting household income and food security. Clearly, prevention is crucial to achieving the World Health Organization (WHO) goal of halving SBE injuries and deaths by 2030 [5].For those bitten, snake antivenoms (SAV) to treat envenomed people or livestock are often scarce, inappropriate, and/or expensive [6,7]. Across the continent, SSA receives only 2.5% of the SAV it needs, with frequent stock-outs across the private and public health sectors [8]. In Rwanda, a single dose of 2 SAV among uninsured individuals, costs on average 10 days of work, leaving some victims lingering with medical debts, stress and financial insecurity [6]. Moreover, a recent WHO review of Good Manufacturing Practices among producers of African SAV identified widespread quality issues, clearing only one polyvalent SAV for use across SSA [9]. In the absence of SAV, communities often defer to traditional healers for advice on how to repel snakes or treat SBE [2].In the original study, a desk-based assessment of product ingredients was performed to evaluate safety and appropriateness of snake repellents being sold across 78 agro-veterinary outlets [1]. 56 chemical products, in the form of liquids, granules and powders (Fig 1 ), mostly containing essential oils (cinnamon, peppermint, cloves and cedarwood) were found. Some products claimed efficacy against Pantherophis obsoletus (Black snake), Pituophis catenifer sayi (Bull snake), Lampropeltis triangulum (Milk snakes) and Agkistrodon contortrix (Copperhead); none of which are found on the African continent. Only one study in Africa has experimentally evaluated the efficacy of essential oils and other popular outdoor chemicals in driving away snakes in an outdoor real-world environment [10]. None of the products demonstrated effectiveness. This contrasts with Brazil, where efficacy of olfactory repellents on Bothrops moojeni was demonstrated under controlled experimental conditions [11]. The study demonstrated the potential of a natural non-toxic alternative for snake management. However, the study relied on a limited number of snakes and behavioral observations in a controlled setting may not fully replicate natural complex environmental conditions. On the other hand, behavioral avoidance and irritation in the presence of natural product compounds may suggest a plausible chemosensory disruption mechanism of action but does not necessarily translate into long-term removal of snakes. The original study documented 42 mechanical products, including electric vibrators, ultra-sonic sound devices and glue traps [1]. The solar powered ultra-sonic devices claimed to emit high-frequency waves that disrupted snake behavior by emitting sounds and vibrations through the soil. However, there is no scientific evidence to support this claim. The full methodology for evaluating repellent safety and efficacy is described in the original article [1].More than one-third (42%) of the chemical repellents evaluated in the original study were not intended to be used as snake repellents [1]. Such products included disinfectants like soap, tar acids and Kerol; fertilizers such as ammonium sulphate; and acaricides such as Mission 415EC (formulated to control diamondback moths in cabbages and/or ticks and mites in livestock). Misuse of acaricides has been linked to environmental degradation, increased prevalence of tick-borne diseases in humans and animals, and economic loss [12]. Mothballs, which contain up to 99.95% of naphthalene or paradichlorobenzene, were also marketed as effective snake repellents [1]. Naphthalene has a permissible exposure limit of 0.001% [13]. Inhalation exposure above this level can be toxic to humans and animals, causing damage to the liver, kidney, skin, lungs and nervous system [14]. These ingredients can also release fumes that pollute air, leak into the soil, and contaminate ground water. From an environmental point of view, mechanical traps could be considered safer. However, there is no literature to support their efficacy in deterring or trapping snakes. Moreover, the traps are non-specific and pose a hazard to 'unaware' humans such as children and non-target animals. Continued use of unproven products undermines integrated snake management approaches as these ineffective products create a false sense of security, leading to decreased vigilance and, increased risk of snakebites and the neglect of proven habitat modification methods. The WHO recommended long-term strategies on prevention focusing on education and environmental modification would benefit communities rather than relying on ineffective commercial repellents [15]. Snake repellent products often lack adequate labels [1,16]. Product labels are a legal requirement, and they convey important information about product name, manufacturer, ingredients list, storage conditions, usage instructions, expiration dates, and potential hazards, among others. In East Africa, it is currently not possible to fully evaluate the safety of snake repellents for people, environment, snakes, or other animals due to this gap in product labelling.The sale of ineffective and possibly unsafe snake repellents in East Africa indicates serious gaps in effective One Health evidence-based regulation, coordination and enforcement across public health, environment and agricultural sectors. Moreover, publicly available resources on SBE prevention often omit advice related to the use of snake repellents in protecting farmers and their livestock. It is unclear how snake repellents are categorized to ensure appropriate risk management and consumer protection.In East Africa, countries can have numerous agencies responsible for the regulation and enforcement of agro-chemical policies, shaping how quality and safety standards are met. In Rwanda, these include the Rwanda Inspectorate, Competition and Consumer Protection Authority (RICA), which is responsible for registering and licensing all agrochemical traders; the Food and Agricultural Organization (FAO), which facilitates development of harmonized pesticide guidelines; and Rwanda Food and Drug Authority (FDA), which sets standards for quality, safety and efficacy. It is not clear how such agencies coordinate their activities regionally.The Mutual Recognition Agreement that sought to harmonize guidelines for veterinary medicines between East African Communities is a typical example of how joint enforcement can mitigate unwanted/sub-standard products in the region [17]. A similar approach could benefit the local evaluation of snake repellents and antivenoms that currently lack standardized guidelines and monitoring systems.There is lack of credible high-quality data in form of peer-reviewed, reproducible and objective studies to support conclusions about the safety of snake repellents and their efficacy in protecting humans and livestock. With the current global focus on SBE, now is an opportune time to conduct research on these topics and to update public websites and learning materials to provide accurate information on reputable methods for snakebite prevention. Moreover, the dissemination of such information to diverse policy actors is needed to ensure that such stakeholders work collectively to remove inappropriate information and products from the public domain.",
+          "relevance_score": 1.9562309,
+          "id": "https://openalex.org/W7153205837"
+        },
+        {
+          "title": "Towards trustworthy management of AIGC copyright: blockchain-enabled full lifecycle recording and multi-party auditing approach",
+          "abstract": "Abstract With the escalating proliferation of artificial intelligence technologies, AI-generated content (AIGC) has progressively permeated across diverse domains. However, this explosive application has also sparked widespread public discussion about the copyright of AIGC. Existing copyright legal frameworks, originally designed around human creators, now face a paradigm shift. As human involvement in the generation of AIGC diminishes, where creative expression increasingly hinges on AI. This discrepancy has introduced multifaceted complexities and challenges in determining the copyright ownership of AIGC within established legal boundaries. Given this, meticulous recording and auditing of contributions from all parties in AIGC generation becomes imperative. Blockchain, with its decentralized storage, offers a robust technical foundation for AIGC copyright management. Yet existing blockchain-based solutions have clear limitations: most only focus on certifying final generated products, ignoring the management of critical intermediate data across the full lifecycle, thus failing to meet the needs of core scenarios like copyright confirmation and multi-party profit distribution. For this purpose, this paper introduces AIGC-Chain, a trustworthy AIGC copyright management system. It conducts a comprehensive recording of intermediate data generated across the full lifecycle of AIGC. Such data is deposited into a decentralized blockchain for secure multi-party auditing, thereby constructing a trustworthy management for AIGC copyright. In copyright dispute scenarios, auditors can retrieve critical proof from the blockchain, facilitating precise determination of the copyright ownership of AIGC products. Both theoretical and experimental analyses confirm that this scheme shows exceptional performance and security in AIGC copyright management.",
+          "relevance_score": 1.4766104,
+          "id": "https://openalex.org/W4399990958"
+        },
+        {
+          "title": "Risk, Data, Alignment: Making Credit Scoring Work in Kenya",
+          "abstract": "Credit scoring is an increasingly central and contested domain of data and AI governance, frequently framed as a neutral and objective method of assessing risk across diverse economic and political contexts. Based on a nine-month ethnography of credit scoring practices in Nairobi, Kenya, we examined the sociotechnical and institutional work of data science in digital lending. While established regional telcos and banks are leveraging proprietary data to develop digital loan products, algorithmic credit scoring is being transformed by new actors, techniques, and shifting regulations. Our findings show how practitioners construct alternative data using technical and legal workarounds, formulate risk through multiple interpretations, and negotiate model performance via technical and political means. We argue that algorithmic credit scoring is accomplished through the ongoing work of alignment that stabilizes risk under conditions of persistent uncertainty, which takes epistemic, modeling, and contextual forms. Extending work on alignment in HCI, we show how alignment operates as a two-way translation, where models are made \u201csafe for worlds\u201d while those worlds are reshaped to be \u201csafe for models.\u201d",
+          "relevance_score": 1.3046693,
+          "id": "https://openalex.org/W7127446770"
+        },
+        {
+          "title": "The Siren Song of LLMs: How Users Perceive and Respond to Dark Patterns in Large Language Models",
+          "abstract": "Large language models can influence users through conversation, creating new forms of dark patterns that differ from traditional UX dark patterns. We define LLM dark patterns as manipulative or deceptive behaviors enacted in dialogue. Drawing on prior work and AI incident reports, we outline a diverse set of categories with real-world examples. Using them, we conducted a scenario-based study where participants (N=34) compared manipulative and neutral LLM responses. Our results reveal that recognition of LLM dark patterns often hinged on conversational cues such as exaggerated agreement, biased framing, or privacy intrusions, but these behaviors were also sometimes normalized as ordinary assistance. Users\u2019 perceptions of these dark patterns shaped how they respond to them. Responsibilities for these behaviors were also attributed in different ways, with participants assigning it to companies and developers, the model itself, or to users. We conclude with implications for design, advocacy, and governance to safeguard user autonomy.",
+          "relevance_score": 1.2514058,
+          "id": "https://openalex.org/W4415250053"
+        },
+        {
+          "title": "Large Language Models: An Applied Econometric Framework",
+          "abstract": "Large language models (LLMs) enable researchers to analyze text at unprecedented scale and minimal cost. Researchers can now revisit old questions and tackle novel ones with rich data. We provide an econometric framework for realizing this potential in two empirical uses. For prediction problems\u2014forecasting outcomes from text\u2014valid conclusions require \u201cno training leakage\u201d between the LLM's training data and the researcher's sample, which can be enforced through careful model choice and research design. For estimation problems\u2014automating the measurement of economic concepts for downstream analysis\u2014valid downstream inference requires combining LLM outputs with a small validation sample to deliver consistent and precise estimates. Absent a validation sample, researchers cannot assess possible errors in LLM outputs, and consequently seemingly innocuous choices (which model, which prompt) can produce dramatically different parameter estimates. When used appropriately, LLMs are powerful tools that can expand the frontier of empirical economics.",
+          "relevance_score": 1.1975193,
+          "id": "https://openalex.org/W4405255026"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 15,
+      "query": "landing page optimization A/B testing digital marketing",
+      "angle": "core",
+      "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area.",
+      "openalex_count": 4,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "\u0406\u041d\u0422\u0415\u041b\u0415\u041a\u0422\u0423\u0410\u041b\u042c\u041d\u0410 \u0410\u0412\u0422\u041e\u041c\u0410\u0422\u0418\u0417\u0410\u0426\u0406\u042f \u0412\u0415\u0411\u0420\u041e\u0417\u0420\u041e\u0411\u041a\u0418: \u0421\u0422\u0412\u041e\u0420\u0415\u041d\u041d\u042f \u041b\u0415\u041d\u0414\u0418\u041d\u0413 \u0421\u0422\u041e\u0420\u0406\u041d\u041e\u041a \u0406\u0417 \u0412\u0418\u041a\u041e\u0420\u0418\u0421\u0422\u0410\u041d\u041d\u042f\u041c \u0413\u0415\u041d\u0415\u0420\u0410\u0422\u0418\u0412\u041d\u041e\u0407 \u041c\u041e\u0412\u041d\u041e\u0407 \u041c\u041e\u0414\u0415\u041b\u0406 CHATGPT",
+          "abstract": "\u041c\u0435\u0442\u043e\u044e \u0434\u043e\u0441\u043b\u0456\u0434\u0436\u0435\u043d\u043d\u044f \u0454 \u0430\u043d\u0430\u043b\u0456\u0437 \u0456 \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u043d\u0430 \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u043a\u0430 \u043c\u043e\u0436\u043b\u0438\u0432\u043e\u0441\u0442\u0435\u0439 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f \u0433\u0435\u043d\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0457 \u043c\u043e\u0432\u043d\u043e\u0457 \u043c\u043e\u0434\u0435\u043b\u0456 ChatGPT \u0434\u043b\u044f \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u043b\u0435\u043d\u0434\u0438\u043d\u0433 \u0441\u0442\u043e\u0440\u0456\u043d\u043e\u043a, \u0432\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u0435\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456 \u0442\u0430\u043a\u043e\u0433\u043e \u043f\u0456\u0434\u0445\u043e\u0434\u0443 \u0432 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0456 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0456\u0457 \u0432\u0435\u0431\u0440\u043e\u0437\u0440\u043e\u0431\u043a\u0438 \u0442\u0430 \u0441\u043a\u043e\u0440\u043e\u0447\u0435\u043d\u043d\u044f \u0432\u0438\u0442\u0440\u0430\u0442 \u0447\u0430\u0441\u0443 \u0456 \u0440\u0435\u0441\u0443\u0440\u0441\u0456\u0432. \u0420\u043e\u0431\u043e\u0442\u0430 \u0441\u043f\u0440\u044f\u043c\u043e\u0432\u0430\u043d\u0430 \u043d\u0430 \u043e\u0446\u0456\u043d\u043a\u0443 \u043f\u043e\u0442\u0435\u043d\u0446\u0456\u0430\u043b\u0443 ChatGPT \u044f\u043a \u0456\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0443 \u0456\u043d\u0442\u0435\u0433\u0440\u043e\u0432\u0430\u043d\u043e\u0457 \u0440\u043e\u0437\u0440\u043e\u0431\u043a\u0438, \u0437\u0434\u0430\u0442\u043d\u043e\u0433\u043e \u0432\u0438\u043a\u043e\u043d\u0443\u0432\u0430\u0442\u0438 \u0444\u0443\u043d\u043a\u0446\u0456\u0457 \u043a\u043e\u043f\u0456\u0440\u0430\u0439\u0442\u0435\u0440\u0430, \u0432\u0435\u0431\u0440\u043e\u0437\u0440\u043e\u0431\u043d\u0438\u043a\u0430 \u0442\u0430 \u0434\u0438\u0437\u0430\u0439\u043d\u0435\u0440\u0430 \u0443 \u043c\u0435\u0436\u0430\u0445 \u043e\u0434\u043d\u043e\u0433\u043e \u0441\u0435\u0440\u0435\u0434\u043e\u0432\u0438\u0449\u0430. \u0423 \u0440\u043e\u0431\u043e\u0442\u0456 \u0437\u0430\u0441\u0442\u043e\u0441\u043e\u0432\u0430\u043d\u043e \u0435\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u0438\u0439 \u043f\u0456\u0434\u0445\u0456\u0434, \u0449\u043e \u043f\u0435\u0440\u0435\u0434\u0431\u0430\u0447\u0430\u0454 \u0442\u0440\u0438\u0435\u0442\u0430\u043f\u043d\u0443 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0443: \u043f\u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0437\u0430\u0432\u0434\u0430\u043d\u043d\u044f (\u0432\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0456\u0432 \u043c\u0430\u0439\u0431\u0443\u0442\u043d\u044c\u043e\u0457 \u043b\u0435\u043d\u0434\u0438\u043d\u0433 \u0456 \u0444\u043e\u0440\u043c\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u0440\u043e\u043c\u0442\u0456\u0432 \u0434\u043b\u044f ChatGPT, \u0449\u043e \u0456\u043c\u0456\u0442\u0443\u044e\u0442\u044c \u0440\u043e\u0431\u043e\u0442\u0443 \u043c\u0430\u0440\u043a\u0435\u0442\u043e\u043b\u043e\u0433\u0430 \u0439 \u0440\u043e\u0437\u0440\u043e\u0431\u043d\u0438\u043a\u0430) ; \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0456\u044f \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0443 \u0442\u0430 \u043a\u043e\u0434\u0443 (\u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f ChatGPT \u0434\u043b\u044f \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u043e\u0433\u043e \u043d\u0430\u043f\u043e\u0432\u043d\u0435\u043d\u043d\u044f, HTML/CSS/JavaScript-\u043a\u043e\u0434\u0443 \u0442\u0430 \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0446\u0456\u0439 \u0449\u043e\u0434\u043e UX/UI-\u0434\u0438\u0437\u0430\u0439\u043d\u0443); \u0442\u0435\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0430 \u0430\u043d\u0430\u043b\u0456\u0437 \u2013 \u0440\u043e\u0437\u0433\u043e\u0440\u0442\u0430\u043d\u043d\u044f \u043e\u0442\u0440\u0438\u043c\u0430\u043d\u043e\u0433\u043e \u043a\u043e\u0434\u0443 \u0443 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u0441\u0435\u0440\u0435\u0434\u043e\u0432\u0438\u0449\u0456, \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u043a\u0430 \u043f\u0440\u0430\u0446\u0435\u0437\u0434\u0430\u0442\u043d\u043e\u0441\u0442\u0456, \u0430\u0434\u0430\u043f\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456, \u0448\u0432\u0438\u0434\u043a\u043e\u0441\u0442\u0456 \u0437\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u043f\u043e\u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u0437 \u0442\u0440\u0430\u0434\u0438\u0446\u0456\u0439\u043d\u0438\u043c \u043f\u0456\u0434\u0445\u043e\u0434\u043e\u043c \u0432\u0435\u0431\u0440\u043e\u0437\u0440\u043e\u0431\u043a\u0438. \u0422\u0430\u043a\u0438\u0439 \u043c\u0435\u0442\u043e\u0434 \u0437\u0430\u0431\u0435\u0437\u043f\u0435\u0447\u0443\u0454 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u0435 \u043e\u0446\u0456\u043d\u044e\u0432\u0430\u043d\u043d\u044f \u0435\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456 ChatGPT \u0437 \u043f\u043e\u0437\u0438\u0446\u0456\u0439 \u0442\u0435\u0445\u043d\u0456\u0447\u043d\u043e\u0457 \u044f\u043a\u043e\u0441\u0442\u0456, \u0437\u0440\u0443\u0447\u043d\u043e\u0441\u0442\u0456 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f \u0442\u0430 \u043c\u043e\u0436\u043b\u0438\u0432\u043e\u0441\u0442\u0456 \u0456\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0456\u0457 \u0443 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u0456 \u043f\u0440\u043e\u0446\u0435\u0441\u0438 \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u0432\u0435\u0431\u0440\u0435\u0441\u0443\u0440\u0441\u0456\u0432. \u0423\u043f\u0435\u0440\u0448\u0435 \u043e\u0431\u0491\u0440\u0443\u043d\u0442\u043e\u0432\u0430\u043d\u043e \u043f\u0456\u0434\u0445\u0456\u0434 \u0434\u043e \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u043e\u0432\u0430\u043d\u043e\u0433\u043e \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u043b\u0435\u043d\u0434\u0438\u043d\u0433 \u0441\u0442\u043e\u0440\u0456\u043d\u043e\u043a \u0456\u0437 \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u0432\u0430\u043d\u043d\u044f\u043c \u0433\u0435\u043d\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u0448\u0442\u0443\u0447\u043d\u043e\u0433\u043e \u0456\u043d\u0442\u0435\u043b\u0435\u043a\u0442\u0443. \u0414\u043e\u0441\u043b\u0456\u0434\u0436\u0435\u043d\u043d\u044f \u0434\u0435\u043c\u043e\u043d\u0441\u0442\u0440\u0443\u0454, \u0449\u043e ChatGPT \u043c\u043e\u0436\u0435 \u043d\u0435 \u043b\u0438\u0448\u0435 \u0433\u0435\u043d\u0435\u0440\u0443\u0432\u0430\u0442\u0438 \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u0438\u0439 \u043a\u043e\u043d\u0442\u0435\u043d\u0442, \u0430 \u0439 \u0441\u0442\u0432\u043e\u0440\u044e\u0432\u0430\u0442\u0438 \u043f\u0440\u0430\u0446\u0435\u0437\u0434\u0430\u0442\u043d\u0438\u0439 \u043f\u0440\u043e\u0442\u043e\u0442\u0438\u043f \u0441\u0430\u0439\u0442\u0443, \u0449\u043e \u043f\u043e\u0454\u0434\u043d\u0443\u0454 \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0438 \u0432\u0435\u0440\u0441\u0442\u043a\u0438, \u0441\u0442\u0438\u043b\u0456\u0437\u0430\u0446\u0456\u0457 \u0442\u0430 \u0456\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456. \u0417\u0430\u043f\u0440\u043e\u043f\u043e\u043d\u043e\u0432\u0430\u043d\u043e \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0443 \u043f\u0440\u043e\u043c\u0442\u0456\u0432, \u044f\u043a\u0430 \u043f\u0456\u0434\u0432\u0438\u0449\u0443\u0454 \u0440\u0435\u043b\u0435\u0432\u0430\u043d\u0442\u043d\u0456\u0441\u0442\u044c \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0456\u0432 \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0456\u0457 \u0442\u0430 \u043d\u0430\u0431\u043b\u0438\u0436\u0430\u0454 \u043f\u0440\u043e\u0446\u0435\u0441 \u0434\u043e \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0445 \u043f\u0440\u0430\u043a\u0442\u0438\u043a \u0432\u0435\u0431\u0440\u043e\u0437\u0440\u043e\u0431\u043a\u0438. \u0420\u043e\u0431\u043e\u0442\u0430 \u043f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0436\u0443\u0454, \u0449\u043e \u0433\u0435\u043d\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0456 \u043c\u043e\u0434\u0435\u043b\u0456 \u0437\u0434\u0430\u0442\u043d\u0456 \u0441\u0443\u0442\u0442\u0454\u0432\u043e \u0437\u043c\u0435\u043d\u0448\u0438\u0442\u0438 \u043e\u0431\u0441\u044f\u0433 \u0440\u0443\u0442\u0438\u043d\u043d\u0438\u0445 \u0437\u0430\u0432\u0434\u0430\u043d\u044c \u0456 \u0432\u0438\u0441\u0442\u0443\u043f\u0430\u0442\u0438 \u0431\u0430\u0437\u043e\u0432\u0438\u043c \u0456\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u043e\u043c \u0434\u043b\u044f \u0448\u0432\u0438\u0434\u043a\u043e\u0433\u043e \u043f\u0440\u043e\u0442\u043e\u0442\u0438\u043f\u0443\u0432\u0430\u043d\u043d\u044f. \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0438 \u0435\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u0443 \u043f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u043b\u0438, \u0449\u043e ChatGPT \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043e\u043d\u0443\u0432\u0430\u0442\u0438 \u0440\u043e\u043b\u044c \u0435\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u0430\u0441\u0438\u0441\u0442\u0435\u043d\u0442\u0430 \u0443 \u043f\u0440\u043e\u0446\u0435\u0441\u0456 \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u043b\u0435\u043d\u0434\u0438\u043d\u0433 \u0441\u0442\u043e\u0440\u0456\u043d\u043e\u043a. \u0417\u0433\u0435\u043d\u0435\u0440\u043e\u0432\u0430\u043d\u0438\u0439 \u043a\u043e\u0434 \u0432\u0438\u044f\u0432\u0438\u0432\u0441\u044f \u043f\u0440\u0430\u0446\u0435\u0437\u0434\u0430\u0442\u043d\u0438\u043c \u0456 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u043e\u0432\u0430\u043d\u0438\u043c, \u0430 \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u0438\u0439 \u043a\u043e\u043d\u0442\u0435\u043d\u0442 \u2013 \u0440\u0435\u043b\u0435\u0432\u0430\u043d\u0442\u043d\u0438\u043c \u0456 \u043b\u043e\u0433\u0456\u0447\u043d\u043e \u043e\u0440\u0433\u0430\u043d\u0456\u0437\u043e\u0432\u0430\u043d\u0438\u043c. \u0420\u0430\u0437\u043e\u043c \u0437 \u0442\u0438\u043c, \u0432\u0438\u044f\u0432\u043b\u0435\u043d\u043e \u043e\u0431\u043c\u0435\u0436\u0435\u043d\u043d\u044f, \u043f\u043e\u0432\u2019\u044f\u0437\u0430\u043d\u0456 \u0437 \u0430\u0434\u0430\u043f\u0442\u0438\u0432\u043d\u0456\u0441\u0442\u044e \u0442\u0430 UX/UI-\u043e\u043f\u0442\u0438\u043c\u0456\u0437\u0430\u0446\u0456\u0454\u044e, \u0449\u043e \u043f\u043e\u0442\u0440\u0435\u0431\u0443\u044e\u0442\u044c \u0443\u0447\u0430\u0441\u0442\u0456 \u0444\u0430\u0445\u0456\u0432\u0446\u0456\u0432 \u043d\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u043b\u044c\u043d\u0438\u0445 \u0435\u0442\u0430\u043f\u0430\u0445 \u0440\u043e\u0437\u0440\u043e\u0431\u043a\u0438. \u041f\u0440\u0430\u043a\u0442\u0438\u0447\u043d\u0430 \u0446\u0456\u043d\u043d\u0456\u0441\u0442\u044c \u0434\u043e\u0441\u043b\u0456\u0434\u0436\u0435\u043d\u043d\u044f \u043f\u043e\u043b\u044f\u0433\u0430\u0454 \u0443 \u043f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0436\u0435\u043d\u043d\u0456 \u0434\u043e\u0446\u0456\u043b\u044c\u043d\u043e\u0441\u0442\u0456 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f ChatGPT \u044f\u043a \u0456\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0443 \u0434\u043b\u044f \u0448\u0432\u0438\u0434\u043a\u043e\u0457 \u0440\u043e\u0437\u0440\u043e\u0431\u043a\u0438 \u043e\u0441\u0432\u0456\u0442\u043d\u0456\u0445, \u043a\u043e\u043c\u0435\u0440\u0446\u0456\u0439\u043d\u0438\u0445 \u0442\u0430 \u043f\u0440\u043e\u043c\u043e\u0446\u0456\u0439\u043d\u0438\u0445 \u0432\u0435\u0431\u0441\u0442\u043e\u0440\u0456\u043d\u043e\u043a.",
+          "relevance_score": 0.72214204,
+          "id": "https://openalex.org/W7151235741"
+        },
+        {
+          "title": "&lt;b&gt;Examining The Relationship Between Facebook Advertising and Consumer Buying Behavior Among Airtel Customers: A Case of Lusaka Central Business District&lt;/b&gt;",
+          "abstract": "This study examined the relationship between Facebook advertising and consumer buying behavior among Airtel customers in the Central Business District (CBD) of Lusaka, Zambia. As social media marketing continues to expand, telecommunication firms increasingly utilize platforms such as Facebook to promote products and engage consumers. However, empirical evidence on the effectiveness of Facebook advertising in influencing purchasing behavior within the Zambian telecommunications sector remains limited. Guided by a pragmatic research philosophy, the study adopted a mixed-methods approach, integrating both quantitative and qualitative techniques. Data were collected from 150 Airtel customers using structured questionnaires comprising closed- and open-ended questions. Quantitative data were analyzed using descriptive statistics, correlation, and regression analysis, while qualitative data were analyzed thematically to complement statistical findings. The results indicate that exposure to Airtel\u2019s Facebook advertisements is relatively high, with 49.3% of respondents reporting frequent exposure. Engagement levels were moderately positive (48%), suggesting that the advertisements capture consumer attention. However, their influence on purchasing behavior remains limited, with 39.3% of respondents reporting only slight influence and 17.3% indicating moderate influence. Regression analysis revealed a statistically significant but moderate relationship between Facebook advertising and consumer buying behavior (p &lt; 0.05). Furthermore, respondents expressed uncertainty regarding the effectiveness of advertisement targeting and personalization. The study concludes that while Facebook advertising is effective in enhancing brand awareness and engagement, its impact on actual purchasing decisions is moderate. It is therefore recommended that Airtel improve audience targeting and personalization, diversify advertising formats, enhance message relevance, and optimize the post-click user experience. This study contributes to the growing body of knowledge on social media marketing by providing empirical evidence from a developing economy context.",
+          "relevance_score": 0.63587666,
+          "id": "https://openalex.org/W7154172323"
+        },
+        {
+          "title": "The Impact of Fuel Subsidy Removal and Foreign Exchange Harmonization on SMEs in Nigeria",
+          "abstract": "This rapid systematic review synthesizes emerging evidence on the impact of Nigeria\u2019s 2023 dual economic reforms, fuel subsidy removal, and foreign exchange harmonization on Small and Medium Enterprises (SMEs). Employing a PRISMA-guided methodology, we analyzed 32 academic, institutional, and industry studies from 2015 to 2025. The findings reveal that the reforms have triggered hyperinflation, soaring operational costs, foreign exchange scarcity, and prohibitive borrowing rates, severely undermining SME profitability, production capacity, and survival rates. Sectoral analysis indicates disproportionate impacts on import-dependent manufacturing SMEs, while technology and service-oriented enterprises exhibit greater resilience. Despite short-term disruptions, the reforms also present long-term opportunities for efficiency, innovation, and foreign investment. The study proposes an integrated theoretical framework combining institutional theory, resource-based view, and Schumpeterian creative destruction to explain differential firm-level outcomes. It was concluded that evidence-based policy recommendations, including targeted FX windows, credit guarantees, digital grants, and localization support, are needed to mitigate adverse effects and foster SME sustainability in Nigeria\u2019s evolving macroeconomic landscape.",
+          "relevance_score": 0.42009622,
+          "id": "https://openalex.org/W7152428676"
+        },
+        {
+          "title": "Adopting Artificial Intelligence in Architectural Conceptual Design: A Systematic Bibliometric Analysis",
+          "abstract": "This article presents a systematic bibliometric analysis on academic research into Artificial Intelligence (AI) applications in Architectural Conceptual Design (ACD). Based on a curated selection of publications indexed in the Web of Science (WoS) and Scopus databases between 2010 and 2025, this article shows a study that maps the intellectual evolution, thematic composition, and methodological trends of the field. By using the software tool VOSviewer, this study generates a series of knowledge graphs, including Keyword Co-Occurrence and International Collaboration Networks. The findings from this study reveal a rapid acceleration in AI-related research focused on the conceptual design stage, highlighting its transformative potential for architectural practice. Through a critical analysis of bibliometric results, this study identifies dominant research emphases, emerging directions, and persistent frictions between academic approaches and industry adoption. This review article contributes to the theoretical consolidation of AI applications in ACD and provides a structured foundation for future ACD-related research and practice.",
+          "relevance_score": 0.34386167,
+          "id": "https://openalex.org/W7153330354"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.25
+    }
+  ]
+}

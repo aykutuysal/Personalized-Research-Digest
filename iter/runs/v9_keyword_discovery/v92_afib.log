@@ -1,0 +1,73 @@
+=== afib === Mon Apr 20 15:47:31 CEST 2026
+[discover v9.2 --use-angle-seeds]
+profile: profiles/afib.md
+angles:  profiles/afib.angles.json (8 angles, subject='Atrial fibrillation treatment')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=deepseek/deepseek-v3.2  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_keyword_discovery/afib_v92.json
+PLAN:      runs/v9_keyword_discovery/afib_v92.json.plan.json
+======================================================================
+  seeds:           13 (LLM=5 + angle=8, 0.000133829$)
+  vocabulary:      566 papers, 15 topics, 25 keywords
+  library:         12 queries (0.00106876$)
+  coverage gap:    none — all 8 angles covered on first build
+  validation:      {'good': 7, 'low': 3, 'zero': 2}
+  reformulated:    yes (3 replacements, $0.00032484)
+  TOTAL COST:      $0.001527
+  TOTAL LATENCY:   226.5s
+[discover rc=0]
+[score: parallel, abstract-aware]
+plan:    runs/v9_keyword_discovery/afib_v92.json.plan.json (prebuilt, 12 queries)
+profile: profiles/afib.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running 12 OpenAlex queries in parallel...
+  Q 5 [stroke prevention strategies            ] count=   54 healthy
+  Q 1 [catheter ablation techniques and outcome] count=  127 healthy
+  Q 7 [catheter ablation techniques and outcome] count=   19 low
+  Q 2 [anticoagulation choices (DOACs, warfarin] count=   24 low
+  Q 3 [rate vs rhythm control comparisons      ] count=  323 healthy
+  Q 4 [left atrial appendage closure / occlusio] count=   15 low
+  Q 8 [catheter ablation techniques and outcome] count=   62 healthy
+  Q 6 [randomized clinical trials and guideline] count=  123 healthy
+  Q 9 [randomized clinical trials and guideline] count=  158 healthy
+  Q12 [anticoagulation choices (DOACs, warfarin] count=    6 low
+  Q10 [rhythm control and antiarrhythmic drugs ] count=   16 low
+  Q11 [AFib screening, detection, monitoring (w] count=   15 low
+  OpenAlex stage took 1.3s
+[3/3] scoring hits via DeepSeek v3.2...
+  judge: 116 papers across 8 batches of ≤15, 5 workers
+    → submit batch 1/8 (15 papers)
+    → submit batch 2/8 (15 papers)
+    → submit batch 3/8 (15 papers)
+    → submit batch 4/8 (15 papers)
+    → submit batch 5/8 (15 papers)
+    → submit batch 6/8 (15 papers)
+    → submit batch 7/8 (15 papers)
+    → submit batch 8/8 (11 papers)
+    ← batch 1/8 done in 3.9s (got 15/15 labels) [1/8 complete]
+    ← batch 3/8 done in 4.1s (got 15/15 labels) [2/8 complete]
+    ← batch 4/8 done in 6.2s (got 15/15 labels) [3/8 complete]
+    ← batch 2/8 done in 9.8s (got 15/15 labels) [4/8 complete]
+    ← batch 5/8 done in 10.5s (got 15/15 labels) [5/8 complete]
+    ← batch 7/8 done in 6.7s (got 15/15 labels) [6/8 complete]
+    ← batch 6/8 done in 7.7s (got 15/15 labels) [7/8 complete]
+    ← batch 8/8 done in 5.6s (got 11/11 labels) [8/8 complete]
+  judge stage took 11.9s for 8 batches
+
+======================================================================
+SCORECARD: runs/v9_keyword_discovery/afib_v92.rescored.json
+======================================================================
+  queries:          12
+  bands:            zero=0 low=6 healthy=6 recall_safety=0 too_broad=0
+  frac healthy:     50%
+  mean precision:   51%
+  per-band prec:    {'zero': None, 'low': 0.6, 'healthy': 0.43, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+[score rc=0] done Mon Apr 20 15:51:30 CEST 2026

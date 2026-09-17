@@ -1,0 +1,588 @@
+{
+  "timestamp": "2026-04-16T12:07:43.294569+00:00",
+  "prompt_file": "runs/v9_keyword_discovery/marketing.json.plan.json",
+  "profile_file": "profiles/marketing.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "title_and_abstract.search",
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 3,
+    "low": 10,
+    "healthy": 2,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.13,
+  "frac_healthy_or_safety": 0.13,
+  "mean_precision": 0.47,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.46,
+    "healthy": 0.5,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "slot": 1,
+        "angle": "core",
+        "query": "scarcity urgency conversion",
+        "rationale": "Addresses scarcity cues affecting checkout. 'Conversion' is implied in user's angles, and 'urgency' is a related behavioral concept from extracted vocabulary."
+      },
+      {
+        "id": 2,
+        "angle_id": 2,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "pricing promotions consumer behavior",
+        "rationale": "Combines pricing and promotions (user's key angles) with 'Consumer behaviour' (53x), the most frequent keyword in extracted data."
+      },
+      {
+        "id": 3,
+        "angle_id": 3,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "social proof online advertising",
+        "rationale": "Intersects social proof cues (user angle) with 'Online advertising' (14x) from keywords. Targets digital context relevant to e-commerce/DTC."
+      },
+      {
+        "id": 4,
+        "angle_id": 4,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "brand loyalty repeat purchase",
+        "rationale": "Connects 'Brand loyalty' (5x) from keywords with repeat purchase behavior (user angle). Addresses retention, which is crucial for growth marketers."
+      },
+      {
+        "id": 5,
+        "angle_id": 5,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "personalization conversion optimization",
+        "rationale": "Combines 'Personalization' (7x) from keywords with conversion optimization (user angle). Relevant for e-commerce targeting and ad creative."
+      },
+      {
+        "id": 6,
+        "angle_id": 6,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "influencer marketing purchasing",
+        "rationale": "Adjacent to ad creative, using 'Influencer marketing' (6x) from keywords. Influencers are a modern ad channel with measurable effects on purchasing (32x)."
+      },
+      {
+        "id": 7,
+        "angle_id": 7,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "consumer packaging perceptions",
+        "rationale": "Adjacent to product naming/branding. 'Consumer Packaging Perceptions' appears as a topic (3x) in extracted data, relevant for DTC physical products."
+      },
+      {
+        "id": 8,
+        "angle_id": 8,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "digital marketing revenue",
+        "rationale": "Adjacent field connecting 'Digital marketing' (24x) and 'Revenue' (6x) from keywords. Provides bottom-line focus aligned with user's growth marketing role."
+      },
+      {
+        "id": 9,
+        "angle_id": 9,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "sustainability consumer behaviour",
+        "rationale": "Unexpected but present in data: 'Sustainability' (8x) and 'Environmental Sustainability in Business' (5x). May yield insights on modern consumer values affecting purchasing."
+      },
+      {
+        "id": 10,
+        "angle_id": 10,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "AI personalization marketing",
+        "rationale": "Serendipitous from 'AI in Service Interactions' (5x) and 'Artificial Intelligence' (6x) subfields. Could reveal cutting-edge ad creative or pricing tools."
+      },
+      {
+        "id": 11,
+        "angle_id": 11,
+        "slot": 1,
+        "angle": "core",
+        "query": "price endings consumer behavior",
+        "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus."
+      },
+      {
+        "id": 12,
+        "angle_id": 12,
+        "slot": 1,
+        "angle": "core",
+        "query": "discounts brand perception consumer behavior",
+        "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception."
+      },
+      {
+        "id": 13,
+        "angle_id": 13,
+        "slot": 1,
+        "angle": "core",
+        "query": "click-through rate online advertising",
+        "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context."
+      },
+      {
+        "id": 14,
+        "angle_id": 14,
+        "slot": 1,
+        "angle": "core",
+        "query": "product naming consumer behavior",
+        "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses."
+      },
+      {
+        "id": 15,
+        "angle_id": 15,
+        "slot": 1,
+        "angle": "core",
+        "query": "landing page optimization A/B testing digital marketing",
+        "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area."
+      }
+    ]
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "scarcity urgency conversion",
+      "angle": "core",
+      "rationale": "Addresses scarcity cues affecting checkout. 'Conversion' is implied in user's angles, and 'urgency' is a related behavioral concept from extracted vocabulary.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "CuO composite foam with sandwich architecture for enhanced solar evaporation and ionovoltaic electricity harvesting",
+          "relevance_score": 0.7908449,
+          "id": "https://openalex.org/W7153176546"
+        }
+      ],
+      "hit_labels": [
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 2,
+      "query": "pricing promotions consumer behavior",
+      "angle": "intersection",
+      "rationale": "Combines pricing and promotions (user's key angles) with 'Consumer behaviour' (53x), the most frequent keyword in extracted data.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Assessing the Effects of Marketing Strategies on Local Trade: A Case Study of Shoprite Zambia, Mufulira",
+          "relevance_score": 1.204603,
+          "id": "https://openalex.org/W7153238748"
+        },
+        {
+          "title": "Pengaruh Harga, Tempat, Produk, dan Promosi pada Sikap Pelanggan terhadap Minat Pembelian saat Pemilihan Restoran Makanan",
+          "relevance_score": 1.1676712,
+          "id": "https://openalex.org/W7153788667"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 3,
+      "query": "social proof online advertising",
+      "angle": "intersection",
+      "rationale": "Intersects social proof cues (user angle) with 'Online advertising' (14x) from keywords. Targets digital context relevant to e-commerce/DTC.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A PANORAMIC VIEW ON SOCIAL MEDIA MARKETING AND PURCHASE DECISIONS OF COLLEGE STUDENTS IN KOZHIKODE",
+          "relevance_score": 0.955568,
+          "id": "https://openalex.org/W7152625924"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 4,
+      "query": "brand loyalty repeat purchase",
+      "angle": "intersection",
+      "rationale": "Connects 'Brand loyalty' (5x) from keywords with repeat purchase behavior (user angle). Addresses retention, which is crucial for growth marketers.",
+      "openalex_count": 4,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Impact of Artificial Intelligence on Personalized Marketing: Enhancing Customer Engagement and Ethical Considerations",
+          "relevance_score": 1.7457447,
+          "id": "https://openalex.org/W7153463434"
+        },
+        {
+          "title": "MENDAPATKAN LOYALITAS PELANGGAN MELALUI GAMIFIKASI : A SYSTEMATIC LITERATURE REVIEW",
+          "relevance_score": 1.3947296,
+          "id": "https://openalex.org/W7152456303"
+        },
+        {
+          "title": "Omnichannel commerce and the modernization of small and medium jewelry Enterprises: Evidence from Ukraine and the United States",
+          "relevance_score": 1.0975145,
+          "id": "https://openalex.org/W7153637162"
+        },
+        {
+          "title": "Relationship Between Consumer Satisfaction and Usage, Market Trends, and Product Preferences Among the Lip Tint Users",
+          "relevance_score": 0.92531407,
+          "id": "https://openalex.org/W7154170704"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.62
+    },
+    {
+      "id": 5,
+      "query": "personalization conversion optimization",
+      "angle": "intersection",
+      "rationale": "Combines 'Personalization' (7x) from keywords with conversion optimization (user angle). Relevant for e-commerce targeting and ad creative.",
+      "openalex_count": 6,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A Study on Content Marketing Strategies for B2B Companies at Newmak Technology",
+          "relevance_score": 0.73880005,
+          "id": "https://openalex.org/W7152070192"
+        },
+        {
+          "title": "Dose Conversion Factors in Coronary Diagnostic and Therapeutic Interventions: The Good, the Bad, and the challenges of Dose Estimation",
+          "relevance_score": 0.73567635,
+          "id": "https://openalex.org/W7152394384"
+        },
+        {
+          "title": "MASS: Mesh-inellipse Aligned Deformable Surfel Splatting for Hand Reconstruction and Rendering from Egocentric Monocular Video",
+          "relevance_score": 0.6453494,
+          "id": "https://openalex.org/W7154427373"
+        },
+        {
+          "title": "High-Concurrency Orchestration in Distributed Incentive Engines: Patterns for Low-Latency Promotional Evaluation at Scale",
+          "relevance_score": 0.64256704,
+          "id": "https://openalex.org/W7152561339"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.38
+    },
+    {
+      "id": 6,
+      "query": "influencer marketing purchasing",
+      "angle": "adjacent",
+      "rationale": "Adjacent to ad creative, using 'Influencer marketing' (6x) from keywords. Influencers are a modern ad channel with measurable effects on purchasing (32x).",
+      "openalex_count": 92,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Influence of Digital Marketing on Purchase Intention with Brand Image as an Intervening Variable",
+          "relevance_score": 11.249467,
+          "id": "https://openalex.org/W7154087228"
+        },
+        {
+          "title": "Influence of Marketing Strategies on Customer Purchase Intentions: A Study with Special Reference to Ojin Bakes, Calicut",
+          "relevance_score": 9.993237,
+          "id": "https://openalex.org/W7153754800"
+        },
+        {
+          "title": "&lt;b&gt;Examining the Influence of Content Marketing on The Purchase Intentions of Domestic Tourism Among Graduate Business Students at The University of Zambia&lt;/b&gt;",
+          "relevance_score": 7.6156173,
+          "id": "https://openalex.org/W7153081453"
+        },
+        {
+          "title": "An Analytical Study of the Impact of Instagram Marketing on the Cosmetic Purchasing Choices of Young Adults in Amravati",
+          "relevance_score": 1.2863055,
+          "id": "https://openalex.org/W7153583426"
+        },
+        {
+          "title": "Digital Marketing on Purchasing Decisions: Exploring the Sustainable Marketing Dynamics",
+          "relevance_score": 1.2113365,
+          "id": "https://openalex.org/W7154177346"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 7,
+      "query": "consumer packaging perceptions",
+      "angle": "adjacent",
+      "rationale": "Adjacent to product naming/branding. 'Consumer Packaging Perceptions' appears as a topic (3x) in extracted data, relevant for DTC physical products.",
+      "openalex_count": 12,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Influence of Individual Multisensory Packaging Elements on Consumer Perception and Product Competitiveness",
+          "relevance_score": 11.324309,
+          "id": "https://openalex.org/W7152526840"
+        },
+        {
+          "title": "Connecting consumers to production processes: A new pathway to sustainable behaviour",
+          "relevance_score": 1.0060537,
+          "id": "https://openalex.org/W7154106235"
+        },
+        {
+          "title": "Awareness of nano-materials in food packaging and environmental discharge points: A comparative study of organized communities in Lagos State, Nigeria",
+          "relevance_score": 0.94177353,
+          "id": "https://openalex.org/W7152669364"
+        },
+        {
+          "title": "Influence of technological integration and design aesthetics on consumer engagement in digital marketing campaigns",
+          "relevance_score": 0.9113663,
+          "id": "https://openalex.org/W7150954008"
+        },
+        {
+          "title": "ADVERTISING AND SALES PROMOTION AT VI MOBILE NETWORK",
+          "relevance_score": 0.8868305,
+          "id": "https://openalex.org/W7150757174"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "NO",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 8,
+      "query": "digital marketing revenue",
+      "angle": "adjacent",
+      "rationale": "Adjacent field connecting 'Digital marketing' (24x) and 'Revenue' (6x) from keywords. Provides bottom-line focus aligned with user's growth marketing role.",
+      "openalex_count": 12,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "ROI Analysis of Meta Ads and LinkedIn Ads for Industrial Product Marketing- A Comparative Study at STM CNC",
+          "relevance_score": 1.1565205,
+          "id": "https://openalex.org/W7150992373"
+        },
+        {
+          "title": "Innovation of Marketing Model and the Path of Increasing Consumer Satisfaction of Rural Tourism in Chongqing Driven by Digital Economy",
+          "relevance_score": 1.1480017,
+          "id": "https://openalex.org/W7154303960"
+        },
+        {
+          "title": "A Study on Content Marketing Strategies for B2B Companies at Newmak Technology",
+          "relevance_score": 1.0712478,
+          "id": "https://openalex.org/W7152070192"
+        },
+        {
+          "title": "INNOVATIVE ADVERTISING FORMATS IN THE SYSTEM OF MARKETING COMMUNICATIONS OF HoReCa ENTERPRISES",
+          "relevance_score": 0.93398035,
+          "id": "https://openalex.org/W7152612022"
+        },
+        {
+          "title": "TRENDS IN THE DEVELOPMENT OF THE DIGITAL MARKETING MARKET IN UKRAINE UNDER MARTIAL LAW",
+          "relevance_score": 0.91213405,
+          "id": "https://openalex.org/W7152724361"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 9,
+      "query": "sustainability consumer behaviour",
+      "angle": "serendipity",
+      "rationale": "Unexpected but present in data: 'Sustainability' (8x) and 'Environmental Sustainability in Business' (5x). May yield insights on modern consumer values affecting purchasing.",
+      "openalex_count": 45,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "IMPACT OF CONSUMER BEHAVIOUR FACTORS ON SUSTAINABLE ONLINE PURCHASING DECISIONS",
+          "relevance_score": 11.278804,
+          "id": "https://openalex.org/W7152967516"
+        },
+        {
+          "title": "Connecting consumers to production processes: A new pathway to sustainable behaviour",
+          "relevance_score": 11.17613,
+          "id": "https://openalex.org/W7154106235"
+        },
+        {
+          "title": "A Study on Consumer Buying Behaviour Influencing the Purchase of Imported Skincare Brands with Reference to Clean Beauty and Sustainability Trends in Coimbatore City",
+          "relevance_score": 8.341989,
+          "id": "https://openalex.org/W7153477650"
+        },
+        {
+          "title": "DETERMINANTS OF CONSUMER AWARENESS AND PREFERENCE FOR ECO-FRIENDLY PRODUCTS: AN EMPIRICAL INVESTIGATION IN PUDUKKOTTAI DISTRICT",
+          "relevance_score": 1.8168097,
+          "id": "https://openalex.org/W7152370699"
+        },
+        {
+          "title": "Behavioural drivers of internet of things adoption in food consumption",
+          "relevance_score": 1.6721566,
+          "id": "https://openalex.org/W7154167893"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 10,
+      "query": "AI personalization marketing",
+      "angle": "serendipity",
+      "rationale": "Serendipitous from 'AI in Service Interactions' (5x) and 'Artificial Intelligence' (6x) subfields. Could reveal cutting-edge ad creative or pricing tools.",
+      "openalex_count": 23,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "AI-PERSONALIZED GREEN MARKETING: DRIVING ECO-CONSCIOUS CONSUMER BEHAVIOR IN REAL-TIME",
+          "relevance_score": 11.304434,
+          "id": "https://openalex.org/W7154035623"
+        },
+        {
+          "title": "AI-Enabled Personalization and Consumer Trust: An Exploration of the Ethical Considerations in the Modern Marketing Environment Utilizing Data",
+          "relevance_score": 10.564602,
+          "id": "https://openalex.org/W7154177205"
+        },
+        {
+          "title": "AI-Driven Personalization and Data-Centric Marketing in Indian FinTech: Empirical Evidence on Customer Satisfaction, Trust, and Engagement",
+          "relevance_score": 9.957501,
+          "id": "https://openalex.org/W7153821089"
+        },
+        {
+          "title": "Leveraging AI for Individualized Outreach in Enrollment Marketing: A Study on Boosting University Application Intentions",
+          "relevance_score": 1.2839684,
+          "id": "https://openalex.org/W7151347179"
+        },
+        {
+          "title": "AI DRIVEN AND DATA DRIVEN MARKETING STRATEGIES AS PREDICTORS OF BRAND ENGAGEMENT: THE MEDIATING ROLE OF CONSUMER PREFERENCES AND BEHAVIOUR IN THE UK E COMMERCE INDUSTRY",
+          "relevance_score": 1.254714,
+          "id": "https://openalex.org/W7153003391"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 11,
+      "query": "price endings consumer behavior",
+      "angle": "core",
+      "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "discounts brand perception consumer behavior",
+      "angle": "core",
+      "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "click-through rate online advertising",
+      "angle": "core",
+      "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Evaluation of the Online Media Advertising Cost Calculation System Using the Cost Per Click and Cost Per Mille Methods",
+          "relevance_score": 1.1860356,
+          "id": "https://openalex.org/W7151734899"
+        },
+        {
+          "title": "GST as a Game Changer for Creator Economy",
+          "relevance_score": 0.39266244,
+          "id": "https://openalex.org/W7153184536"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 14,
+      "query": "product naming consumer behavior",
+      "angle": "core",
+      "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Snake repellent safety and efficacy in Sub-Saharan Africa. What is the evidence?",
+          "relevance_score": 0.54484355,
+          "id": "https://openalex.org/W7153205837"
+        }
+      ],
+      "hit_labels": [
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 15,
+      "query": "landing page optimization A/B testing digital marketing",
+      "angle": "core",
+      "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    }
+  ]
+}

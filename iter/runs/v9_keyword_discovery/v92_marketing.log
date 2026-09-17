@@ -1,0 +1,73 @@
+=== marketing === Mon Apr 20 15:47:31 CEST 2026
+[discover v9.2 --use-angle-seeds]
+profile: profiles/marketing.md
+angles:  profiles/marketing.angles.json (8 angles, subject='Marketing science')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=deepseek/deepseek-v3.2  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_keyword_discovery/marketing_v92.json
+PLAN:      runs/v9_keyword_discovery/marketing_v92.json.plan.json
+======================================================================
+  seeds:           13 (LLM=7 + angle=6, 0.000137974$)
+  vocabulary:      598 papers, 15 topics, 25 keywords
+  library:         12 queries (0.002603$)
+  coverage gap:    none — all 8 angles covered on first build
+  validation:      {'good': 7, 'low': 5}
+  reformulated:    yes (5 replacements, $0.00037934)
+  TOTAL COST:      $0.00312
+  TOTAL LATENCY:   69.2s
+[discover rc=0]
+[score: parallel, abstract-aware]
+plan:    runs/v9_keyword_discovery/marketing_v92.json.plan.json (prebuilt, 12 queries)
+profile: profiles/marketing.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running 12 OpenAlex queries in parallel...
+  Q 2 [consumer psychology / behavioral finding] count=  271 healthy
+  Q 1 [product naming, branding, packaging     ] count=  408 healthy
+  Q 3 [loyalty, retention, repeat purchase beha] count=   95 healthy
+  Q 7 [loyalty, retention, repeat purchase beha] count=  253 healthy
+  Q 8 [pricing strategy (charm pricing, price e] count=  452 healthy
+  Q 4 [pricing strategy (charm pricing, price e] count= 1651 recall_safety
+  Q 6 [ad creative effectiveness and persuasion] count=   63 healthy
+  Q10 [ad creative effectiveness and persuasion] count=   84 healthy
+  Q 5 [discounts and promotions and their effec] count=  128 healthy
+  Q11 [scarcity, urgency, social proof cues    ] count=  102 healthy
+  Q 9 [discounts and promotions and their effec] count=   77 healthy
+  Q12 [landing page or checkout conversion opti] count=  412 healthy
+  OpenAlex stage took 1.3s
+[3/3] scoring hits via DeepSeek v3.2...
+  judge: 120 papers across 8 batches of ≤15, 5 workers
+    → submit batch 1/8 (15 papers)
+    → submit batch 2/8 (15 papers)
+    → submit batch 3/8 (15 papers)
+    → submit batch 4/8 (15 papers)
+    → submit batch 5/8 (15 papers)
+    → submit batch 6/8 (15 papers)
+    → submit batch 7/8 (15 papers)
+    → submit batch 8/8 (15 papers)
+    ← batch 3/8 done in 6.1s (got 15/15 labels) [1/8 complete]
+    ← batch 2/8 done in 6.7s (got 15/15 labels) [2/8 complete]
+    ← batch 5/8 done in 8.5s (got 15/15 labels) [3/8 complete]
+    ← batch 1/8 done in 10.5s (got 15/15 labels) [4/8 complete]
+    ← batch 4/8 done in 12.8s (got 15/15 labels) [5/8 complete]
+    ← batch 6/8 done in 10.8s (got 15/15 labels) [6/8 complete]
+    ← batch 7/8 done in 11.0s (got 15/15 labels) [7/8 complete]
+    ← batch 8/8 done in 12.6s (got 15/15 labels) [8/8 complete]
+  judge stage took 21.2s for 8 batches
+
+======================================================================
+SCORECARD: runs/v9_keyword_discovery/marketing_v92.rescored.json
+======================================================================
+  queries:          12
+  bands:            zero=0 low=0 healthy=11 recall_safety=1 too_broad=0
+  frac healthy:     92%
+  mean precision:   35%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.37, 'recall_safety': 0.05, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+[score rc=0] done Mon Apr 20 15:49:02 CEST 2026

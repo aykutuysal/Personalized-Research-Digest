@@ -1,0 +1,795 @@
+{
+  "timestamp": "2026-04-16T12:44:40.661943+00:00",
+  "prompt_file": "/home/aykut/dev/workspace/ResearchDigest/iter/runs/v8_rescored/adolescent_depression.plan.json",
+  "profile_file": "/home/aykut/dev/workspace/ResearchDigest/iter/profiles/adolescent_depression.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "search",
+  "num_queries": 16,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 2,
+    "low": 9,
+    "healthy": 4,
+    "recall_safety": 1,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.25,
+  "frac_healthy_or_safety": 0.31,
+  "mean_precision": 0.45,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.51,
+    "healthy": 0.35,
+    "recall_safety": 0.3,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Adolescent depression",
+    "queries": [
+      {
+        "id": 1,
+        "query": "(\"adolescent depression\" OR \"youth depression\" OR \"depressed adolescents\" OR \"teen depression\" OR \"depression in adolescents\" OR \"pediatric depression\" OR \"adolescent depressive symptoms\" OR \"adolescent major depression\") AND (therapy OR treatment OR psychotherapy OR intervention OR medication OR prevention)",
+        "angle": "Core subject - broad treatment landscape",
+        "rationale": "Captures the foundational literature on adolescent depression using a comprehensive phrase anchor paired with general intervention terms, ensuring high recall of treatment-focused papers."
+      },
+      {
+        "id": 2,
+        "query": "(\"cognitive behavioral therapy\" OR CBT OR \"behavioral activation\" OR BA) AND (\"adolescent depression\" OR \"youth depression\" OR \"depressed adolescents\")",
+        "angle": "Methods - CBT and behavioral variants",
+        "rationale": "Targets papers specifically evaluating CBT and its core behavioral components, which are central to the reader's clinical practice."
+      },
+      {
+        "id": 3,
+        "query": "(\"interpersonal psychotherapy\" OR IPT OR \"IPT-A\") AND (adolescent OR teen OR youth OR \"young people\")",
+        "angle": "Methods - Interpersonal Psychotherapy for Adolescents",
+        "rationale": "Focuses on the evidence base for IPT-A, a well-established manualized treatment for adolescent depression that the profile mentions."
+      },
+      {
+        "id": 4,
+        "query": "(\"mindfulness\" OR \"acceptance and commitment therapy\" OR ACT OR \"mindfulness-based cognitive therapy\" OR MBCT) AND (\"adolescent depression\" OR \"depressed youth\")",
+        "angle": "Methods - Mindfulness and acceptance-based approaches",
+        "rationale": "Covers the growing literature on mindfulness and third-wave CBT adaptations for adolescent depression."
+      },
+      {
+        "id": 5,
+        "query": "(\"family therapy\" OR \"family-based treatment\" OR \"attachment-based family therapy\" OR ABFT) AND (\"adolescent depression\" OR \"youth depression\")",
+        "angle": "Methods - Family-based interventions",
+        "rationale": "Queries for family-involved treatment models, which are crucial in adolescent mental health care."
+      },
+      {
+        "id": 6,
+        "query": "(\"digital intervention\" OR \"app-based\" OR \"mobile health\" OR mHealth OR \"internet-based\" OR \"computerized therapy\") AND (\"adolescent depression\" OR \"depressed youth\")",
+        "angle": "Tools/Artifacts - Digital and app-based interventions",
+        "rationale": "Searches for modern delivery methods and tools that expand treatment access, a key interest area."
+      },
+      {
+        "id": 7,
+        "query": "(SSRI OR \"selective serotonin reuptake inhibitor\" OR fluoxetine OR escitalopram OR sertraline) AND (\"adolescent depression\" OR \"pediatric depression\")",
+        "angle": "Methods - Psychopharmacology (SSRIs)",
+        "rationale": "Targets the evidence on first-line medication treatments, including safety and efficacy data relevant to clinical practice."
+      },
+      {
+        "id": 8,
+        "query": "(\"combination therapy\" OR \"medication and psychotherapy\" OR \"integrated treatment\") AND (\"adolescent depression\" OR \"youth depression\")",
+        "angle": "Methods - Combined treatment approaches",
+        "rationale": "Finds studies comparing or evaluating multimodal treatment, a critical practical consideration."
+      },
+      {
+        "id": 9,
+        "query": "(\"assessment\" OR \"screening\" OR \"measurement\" OR \"rating scale\") AND (\"adolescent depression\" OR \"depressive symptoms\") AND (validity OR reliability OR psychometric)",
+        "angle": "Evaluation - Assessment tools and psychometrics",
+        "rationale": "Focuses on the tools and instruments used to reliably assess depression in adolescents, separate from treatment papers."
+      },
+      {
+        "id": 10,
+        "query": "(\"suicide risk\" OR \"suicidal ideation\" OR \"self-harm\") AND (\"adolescent depression\" OR depressed) AND (screening OR assessment OR prevention)",
+        "angle": "Applied concerns - Suicide risk screening and management",
+        "rationale": "Captures the critical literature on risk assessment and prevention within the context of adolescent depression."
+      },
+      {
+        "id": 11,
+        "query": "(\"social media\" OR \"screen time\" OR \"digital media\" OR Instagram OR TikTok) AND (\"adolescent depression\" OR \"depressive symptoms\" OR \"mental health\")",
+        "angle": "Applied concerns - Social media and mental health links",
+        "rationale": "Addresses a major contemporary contextual factor influencing adolescent mental health that the profile explicitly mentions."
+      },
+      {
+        "id": 12,
+        "query": "(\"school-based\" OR \"universal prevention\" OR \"indicated prevention\" OR \"selective prevention\") AND (\"adolescent depression\" OR \"depressive symptoms\")",
+        "angle": "Applied concerns - School-based prevention programs",
+        "rationale": "Targets implementation science and public health approaches to depression prevention in educational settings."
+      },
+      {
+        "id": 13,
+        "query": "(\"randomized controlled trial\" OR RCT OR \"clinical trial\") AND (\"adolescent depression\" OR \"youth depression\")",
+        "angle": "Evaluation - RCTs (high-quality evidence)",
+        "rationale": "A recall-safety query to broadly capture the highest tier of treatment evidence, which the profile values."
+      },
+      {
+        "id": 14,
+        "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"adolescent depression\" OR \"pediatric depression\")",
+        "angle": "Evaluation - Meta-analyses and reviews",
+        "rationale": "A recall-safety query to capture synthesized evidence and effect sizes, another key interest for staying current."
+      },
+      {
+        "id": 15,
+        "query": "(\"comorbid\" OR \"co-occurring\" OR \"comorbidity\") AND (\"adolescent depression\" OR \"youth depression\") AND (anxiety)",
+        "angle": "Core subject - Depression with comorbid anxiety",
+        "rationale": "Specifically narrows the focus to the common clinical presentation the reader treats, filtering the broader depression literature."
+      },
+      {
+        "id": 16,
+        "query": "(\"implementation science\" OR \"dissemination\" OR \"effectiveness trial\" OR \"community settings\") AND (\"adolescent depression\" OR \"youth depression\")",
+        "angle": "Applied concerns - Implementation and real-world effectiveness",
+        "rationale": "Targets the bridge between research evidence and clinical practice, a growing area of importance."
+      }
+    ],
+    "coverage_notes": "The plan covers core treatment modalities (CBT, IPT-A, behavioral activation, mindfulness, family therapy, pharmacotherapy, combination), modern delivery (digital), key clinical concerns (assessment, suicide risk, comorbidity), and implementation contexts (school-based, real-world). It includes recall-safety queries for RCTs and meta-analyses. Angles deliberately skipped per profile: neuroimaging, biomarkers, pure developmental neuroscience, and adult-focused research without adolescent application. The plan assumes the reader's primary need is for clinically actionable research on interventions and assessment."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "(\"adolescent depression\" OR \"youth depression\" OR \"depressed adolescents\" OR \"teen depression\" OR \"depression in adolescents\" OR \"pediatric depression\" OR \"adolescent depressive symptoms\" OR \"adolescent major depression\") AND (therapy OR treatment OR psychotherapy OR intervention OR medication OR prevention)",
+      "angle": "Core subject - broad treatment landscape",
+      "rationale": "Captures the foundational literature on adolescent depression using a comprehensive phrase anchor paired with general intervention terms, ensuring high recall of treatment-focused papers.",
+      "openalex_count": 65,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "\u201cWho moved my heart brush?\u201d Realms of the Heart: A Human-AI Collaborative Gamified Adjuvant Treatment Application for Depressed Teens Based on Painting Therapy",
+          "abstract": "Painting therapy has become an important approach to the treatment of depression in adolescents. However, depressed adolescents face low self-confidence, low engagement, and self-absorption when undergoing painting therapy. Informed by need-finding investigations, We developed Realms of the Heart, a human-AI collaborative gamified complementary treatment system for depressed adolescents. Realms of the Heart includes two AI-driven strategies: the transformation of natural objects collected by teens\u2019 exploration into brushes, and the generation of sketches corresponding to natural objects by using brushes based on ControlNet. We conducted a randomized controlled trial. Participants were randomized into an experimental group and a control group. The results showed that Realms of the Heart increased users\u2019 motivation and significantly alleviated their level of depression. These findings not only shed light on the role of human-AI co-created painting therapy in the treatment of adolescent depression but also pave the way for more informed design strategies for art therapy.",
+          "relevance_score": 50.20143,
+          "id": "https://openalex.org/W7153735767"
+        },
+        {
+          "title": "Peer Mentor Training and Supervision for a Digital Adolescent Depression Treatment in South Africa and Uganda: Mixed Methods Evaluation",
+          "abstract": "Locally adapted training and supervision models can strengthen peer mentor capabilities to support digital interventions. Adequate supervisory capacity and incentive structures are critical to sustain engagement, retention, and fidelity. In settings with frequent network disruptions, periodic in-person contact between peer mentors and supervisors may enhance fidelity. Future research should examine how peer mentor fidelity influences user engagement and mental health outcomes.",
+          "relevance_score": 7.3594103,
+          "id": "https://openalex.org/W7152429002"
+        },
+        {
+          "title": "How physical activity and gender moderate the association between parental marital conflict and adolescent depression",
+          "abstract": "Adolescent depression is a public development crisis that needs to be paid attention to and addressed under the rapid development of the Internet. It is of great significance to investigate the associations among adolescent depression, family relationship and physical activity (PA) for promoting adolescent mental health. A total of 3990 valid questionnaires were obtained through self-reports from adolescents. Data were collected using measurement tools for adolescent depression, parental marital conflict (PMC), and PA, followed by statistical analysis. Adolescent depression and PMC was significantly positive correlation (\u03b2 = 0.315, p < 0.001) and PA is significantly negatively correlated (\u03b2 = - 0.093, p < 0.001). After introducing moderating variables, PMC is still a significant positive correlation and adolescent depression (\u03b2 = 0.303, p < 0.001). The study provides preliminary support for the association between PMC and adolescent depression, as well as the potential moderating roles of gender and PA in this association. These findings generate hypotheses for future research on the roles of PA and family relationships in adolescent depression, rather than providing direct evidence for prevention or intervention strategies.",
+          "relevance_score": 7.1037354,
+          "id": "https://openalex.org/W7151919775"
+        },
+        {
+          "title": "Gaslighting in parent-child relationships: Psychometric validation and longitudinal associations with depressive symptoms in Chinese samples",
+          "abstract": "",
+          "relevance_score": 6.825158,
+          "id": "https://openalex.org/W7152066086"
+        },
+        {
+          "title": "The relationship between Resolution of Marital Conflict and Adolescents\u2019 Depressive Symptoms: The mediating role of Mother-Adolescent Bonding",
+          "abstract": "",
+          "relevance_score": 6.6816673,
+          "id": "https://openalex.org/W7151423824"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 2,
+      "query": "(\"cognitive behavioral therapy\" OR CBT OR \"behavioral activation\" OR BA) AND (\"adolescent depression\" OR \"youth depression\" OR \"depressed adolescents\")",
+      "angle": "Methods - CBT and behavioral variants",
+      "rationale": "Targets papers specifically evaluating CBT and its core behavioral components, which are central to the reader's clinical practice.",
+      "openalex_count": 10,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 0.84707534,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Association Between Purpose in Life and Depression in Medical Undergraduates: A Cross-Sectional Study in a Thai Medical School",
+          "abstract": "Background: Although previous studies have shown that higher levels of life purpose are negatively associated with depressive symptom severity in various subpopulations in adults, limited data exist regarding undergraduates, especially medical students. Objectives: To examine the relationship between life purpose and depression while exploring other factors associated with depression among medical students. Methods: A cross-sectional survey was conducted at a medical school in Thailand, assessing depression and burnout using the Patient Health Questionnaire and the Maslach Burnout Inventory-Student Survey Thai version. Life purpose was measured with the 25-item short form of the Purpose in Life Scale for Thai Adolescents, where higher scores indicated a greater sense of life purpose. Results: Among 90 students surveyed, the prevalence of depression and burnout was 34.4% and 17.8%, respectively. The 3 most important life goals selected by the participants belonged to family, personal well-being, and professional success or advancement. Associated factors for depression included a history of psychiatric disorders (odds ratio [OR], 5.89; P = .015) and burnout (OR, 6.92; P = .005). A high level of life purpose was inversely associated with depression, which reduced odds by 78% (OR, 0.22; P = .011). Conclusions: This study identified several factors associated with depression and highlights the importance of life purpose, which was associated with lower odds of depressive symptoms among medical students.",
+          "relevance_score": 0.37744394,
+          "id": "https://openalex.org/W7151869051"
+        },
+        {
+          "title": "Trends in Youth Mental Health Among Patients in Family Medicine Practices: 2017\u20132023",
+          "abstract": "The impact of the pandemic on pediatric mental health was heterogeneous across demographic groups and mental health conditions. Older adolescent females experienced persistently high levels of diagnosed ADHD, anxiety, and mood disorders, although there are signs of reversion to prepandemic levels.",
+          "relevance_score": 0.34559804,
+          "id": "https://openalex.org/W7153911097"
+        },
+        {
+          "title": "Prenatal Maternal Inflammation Is Associated with Altered Offspring Mesolimbic White Matter Circuitry Observed in Late Midlife",
+          "abstract": "Abstract Background Exposure to prenatal maternal inflammation (PNMI) has been linked to neurodevelopmental alterations in human offspring. Preclinical studies suggest that PNMI disrupts reward circuitry, particularly within mesolimbic circuits. However, the effects of PNMI on mesolimbic circuits (i.e, ventral tegmental area (VTA) projections to the hippocampus (VTA-H) and limbic striatum (VTA-LS)) in humans are not yet known. Methods Data for PNMI biomarkers [interleukin (IL)-6, IL-8, IL-1 receptor antagonist (IL-1ra), soluble TNF receptor-II (sTNF-RII)] from first trimester (T1) and second trimester (T2) maternal sera, and offspring MRI brain scans in late midlife (aged 57\u201363 years), were available for 89 mother\u2013offspring dyads. Probabilistic tractography delineated bilateral VTA-H and VTA-LS tracts. Macrostructural tract measures were examined using hierarchical linear regressions. Microstructural integrity was assessed using neurite orientation dispersion and density imaging, and permutation-based cluster analyses. Results Higher T2 IL-1ra was associated with increased macrostructure (left VTA\u2013H tract), whereas higher T2 sTNF-RII was associated with reduced macrostructure (right VTA\u2013H and VTA\u2013LS tracts) and higher T2 IL-8 (bilateral VTA-LS tracts). Microstructurally, higher T2 IL-6 was associated with increased neurite density (distal cluster, right VTA\u2013H tract), while higher T1 IL-8 was associated with reduced neurite density (near the hippocampus in the left VTA\u2013H tract, near the VTA in bilateral VTA\u2013LS tracts). Conclusions PNMI was associated with altered mesolimbic reward circuitry in offspring. This suggests that prenatal inflammation may contribute to affective and motivational disorders in offspring via alterations in mesolimbic circuitry.",
+          "relevance_score": 0.3122273,
+          "id": "https://openalex.org/W7152414586"
+        },
+        {
+          "title": "Exploring the relationship between family support and eating behaviors among college students with subjective well-being as the central mediating variable",
+          "abstract": "Background and objective Family support is widely recognized as a critical social resource that significantly shapes individuals\u2019 mental health and lifestyle choices. However, the extent to which it indirectly influences eating behaviors through psychological mechanisms remains insufficiently understood. Although existing literature has highlighted the pivotal role of familial support in the formation of health-related behaviors, the underlying pathways through which this influence is exerted have not been systematically elucidated. The present study seeks to clarify the chain-mediating mechanism by which familial support affects university students\u2019 dietary habits via negative emotional states and subjective wellbeing. By doing so, this research aims to provide both theoretical insights and practical guidance for the development of psychological adjustment strategies and behavioral interventions. Methods A convenience sampling strategy was adopted to recruit 3,007 undergraduates in 2024 for a self-report survey, including 1,267 males and 1,740 females, with an average age of 19.03 years (SD = 1.176). The study applied a cross-sectional design and employed validated measurement tools, such as the Family support Scale, Anxiety Scale, Depression Scale, Subjective wellbeing Scale, and Healthy Eating Behaviors Scale. Correlational analyses were performed to assess the relationships among the core variables. Mediation effects were further examined using the PROCESS macro in SPSS to test the proposed pathways of the model. Results Family support demonstrated a negative correlation with anxiety ( r = \u22120.210) and depression ( r = \u22120.211), while showing positive associations with subjective wellbeing ( r = 0.250) and healthy eating behaviors ( r = 0.168). Anxiety was inversely related to both subjective wellbeing ( r = \u22120.378) and healthy eating ( r = \u22120.206), whereas depression was also negatively linked to subjective wellbeing ( r = \u22120.386) and healthy eating ( r = \u22120.210). Additionally, subjective wellbeing exhibited a positive correlation with healthy eating ( r = 0.185). Further analysis revealed a significant chain mediation effect of negative emotional states and subjective wellbeing in explaining the relationship between family support and healthy eating among university students. Furthermore, family support was significantly positively associated with eating behaviors ( \u03b2 = 0.610, p &amp;lt; 0.001), whereas anxiety ( \u03b2 = \u22120.344, p &amp;lt; 0.001), depression ( \u03b2 = \u22120.050, p &amp;lt; 0.001), and subjective wellbeing ( \u03b2 = 0.327, p &amp;lt; 0.001) were significantly negatively associated with eating behaviors. After the inclusion of mediating variables, this effect remained significant ( \u03b2 = 0.401, p &amp;lt; 0.001). Meanwhile, subjective wellbeing was significantly positively associated with eating behaviors ( \u03b2 = 0.185, p &amp;lt; 0.001). Finally, anxiety ( \u03b2 = \u22120.387, p &amp;lt; 0.001) and depression ( \u03b2 = \u22120.411, p &amp;lt; 0.001) were significantly negatively associated with subjective wellbeing, and both anxiety ( \u03b2 = \u22120.177, p &amp;lt; 0.001) and depression ( \u03b2 = \u22120.217, p &amp;lt; 0.001) showed negative associations with eating behaviors. Conclusion This study further elucidates the underlying mechanisms by which family support contributes to the enhancement of healthy eating behaviors among university students, specifically by identifying the indirect pathways mediated by negative emotional states. The findings demonstrate that anxiety and depression serve as significant mediators in the association between family support and eating behaviors. These results not only enrich the theoretical understanding of how social support influences health-related behaviors but also offer robust empirical evidence and strategic implications for universities aiming to integrate psychological wellbeing promotion with lifestyle interventions.",
+          "relevance_score": 0.30373925,
+          "id": "https://openalex.org/W7151620801"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 3,
+      "query": "(\"interpersonal psychotherapy\" OR IPT OR \"IPT-A\") AND (adolescent OR teen OR youth OR \"young people\")",
+      "angle": "Methods - Interpersonal Psychotherapy for Adolescents",
+      "rationale": "Focuses on the evidence base for IPT-A, a well-established manualized treatment for adolescent depression that the profile mentions.",
+      "openalex_count": 11,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Reframing Parental Identity: Transitions Toward Support for Transgender and Gender-Diverse Children in French-Speaking Belgium",
+          "abstract": "Introduction: Parental support is a key determinant of transgender and gender-diverse (TGD) youths\u2019 well-being, yet parents\u2019 own identity transformations remain largely overlooked. Parenting a TGD child often entails rethinking self-concept, continuity, and belonging within families shaped by cisnormative expectations. This study explores how parents in French-speaking Belgium reconstruct their identities and parenting roles as they accompany their child\u2019s transition. Drawing on Identity Process Theory (IPT) (Breakwell, 1986), it examines how parents experience identity threat, negotiate meaning, and rebuild coherence through emotional, relational, and social adaptation.Aims: The research aims to understand (1) how parents of TGD children make sense of their experiences, (2) what challenges and resources influence their ability to provide sustained support, and (3) how identity negotiation and reconstruction contribute to empowerment and resilience.Methods: Between May and December 2024, twenty-one parents (including five couples) of TGD adolescents and young adults aged 11\u201329 participated in semi-structured interviews. The data were analyzed using Interpretative Phenomenological Analysis, focusing on how parents construct meaning and articulate their identity trajectories. This approach, combined with a community-based participatory framework, ensured that interpretations remained contextually grounded and resonant with lived realities.Results: Parents\u2019 narratives reveal a dynamic identity process unfolding through three phases: (1) Navigating identity discovery, marked by grief, guilt, and confusion following disclosure; (2) Meaning-making and sense-giving, involving biographical reinterpretation and the integration of new understandings into existing identities; and (3) Role adjustment and advocacy, where parents actively support their child and engage in public advocacy. Across these stages, IPT\u2019s core principles, continuity, belonging, and self-efficacy, are repeatedly challenged and gradually restored. Emotional ambivalence, fear coexisting with love, pride, and uncertainty, remains a transversal dimension. Encounters with supportive professionals and peer networks facilitate positive identity reconstruction, transforming distress into agency.Conclusion: Parenting a TGD child is not only an act of care but a profound identity transition. When parents receive recognition and adequate support, processes of identity threat evolve toward adaptation and empowerment, echoing IPT\u2019s model of resilience. Strengthening family-based and community supports thus constitutes a vital axis of public health and social inclusion.",
+          "relevance_score": 4.7662315,
+          "id": "https://openalex.org/W7146977788"
+        },
+        {
+          "title": "MENTAL HEALTH FOR MARGINALIZED POPULATIONS IN NIGERIA: STRATEGIES FOR INCLUSIVE AND EQUITABLE CARE",
+          "abstract": "Mental health disparities among marginalized populations represent a pressing public health issue, particularly in low- and middle-income countries like Nigeria. This article systematically explores the intersection of marginalization and mental health, emphasizing the structural, cultural, and systemic factors that perpetuate inequities. It addresses marginalized groups, including internally displaced persons, individuals with disabilities, indigenous communities, and those in poverty, who face heightened risks of depression, anxiety, and other mental health challenges due to compounded stressors such as stigma, discrimination, violence, and socioeconomic exclusion. Despite the growing burden, access to mental health services in Nigeria remains severely limited, hindered by urban-centric infrastructure, inadequate funding, and pervasive cultural stigma contributing to underutilization and poor outcomes. The article identifies strategies for improvement, including integration into primary health care, task-shifting to non-specialist providers, culturally competent interventions, and community-based approaches. Case studies, such as the She Writes Woman initiative, mobile mental health units for displaced persons, and the Friendship Bench model, demonstrate the effectiveness of these strategies. Ultimately, the article argues that addressing mental health disparities is not merely a clinical priority but a social justice imperative requiring coordinated reforms in policy, service delivery, and community engagement to ensure equitable mental well-being for all.",
+          "relevance_score": 1.095891,
+          "id": "https://openalex.org/W7153798214"
+        },
+        {
+          "title": "Establishing the St. Paul AME Church\u2019s Community Youth Chaplain Ministry to Equip African American Youth to Manage Their Mental, Emotional, and Spiritual Health",
+          "abstract": "African American youth face a myriad of challenges that negatively impact their well-being. As such, this study explores the role of community youth chaplaincy interventions in helping African American youth manage their mental, emotional, and spiritual health. The study focused on training the trainers who will guide and support the young people. The training and self-application/intervention centered on building resilience, identity formation, addressing racial trauma, and nurturing spiritual growth through understanding that God created participants in His image and their identity is in Christ. Nine adult participants who are engaged in churches and activities within the African American community, contributed insights on the challenges and benefits of the community youth chaplaincy ministry. The researcher used a mixed-methods approach, with a primary emphasis on qualitative analysis. The qualitative analysis included questionnaires, journaling, daily devotions and activities, group discussions, and facilitator storytelling to capture participant experiences. The researcher identified recurring themes using thematic coding and interpretive synthesis in participant responses to the questionnaires. The research also included quantitative measures of resilience to provide supplemental data. The research results suggested that the chaplaincy ministry creates a space for youth to process their experiences, learn techniques to address mental, emotional, and spiritual challenges, and prepare youth ministry leaders. Limitations include the small number of participants and the narrow demographics. Future researchers could include a larger, diverse population of participants, widening the research's applicability. Overall, this study contributes to the body of literature that offers a framework for a faith-based, practical, youth chaplaincy model.",
+          "relevance_score": 0.8963639,
+          "id": "https://openalex.org/W7152353659"
+        },
+        {
+          "title": "The SAFE-study: comparative treatment effect, side effect and health evaluation of allopathic versus ayurvedic treatments for major depressive disorder: a naturalistic real-world study",
+          "abstract": "Background Major Depressive Disorder (MDD) is a prevalent mental health condition with diverse treatment modalities. There is an unmet need in the treatment of major psychiatric disorders such as depression and naturalistic treatment options which are desirable particularly for chronic and severe courses of mental illness. In addition, there is an evidence gap for naturalistic treatment options for depression. This study compares the treatment effects and side effects of allopathic and ayurvedic treatments for MDD within a real-world setting. Allopathic approaches typically involve antidepressants and psychotherapy, while ayurvedic treatments may encompass herbal remedies, panchakarma, manual therapies, dietary modifications, yoga, meditation and lifestyle interventions. Methods This six-month, naturalistic observational study will involve 105 adult participants (18\u201365 years) diagnosed with MDD according to DSM-5 criteria. Participants will be categorized to one of three groups: allopathic-only treatment (n=35), ayurvedic-only treatment (n=35), or a combination of both (n=35). Depressive symptom severity will be assessed as primary endpoint using primarily the MDRS, and secondarily HAMD and PHQ-9 scales at baseline, every 2 weeks until week 8, followed by monthly assessments until months 6. Secondary outcomes will exploratively include side effects (UKU, GASE, MARS), quality of life and daily functioning (WHOQoL-BREF, GAF, FAST) as well as general health measures (e.g. lab tests). Results The study will compare changes in primary and secondary outcome measures across the three treatment groups over time (baseline vs. week 8, month 3 and month 6) using appropriate statistical models for longitudinal data (e.g., repeated measures ANOVA, mixed-effects models. Conclusions This study will provide valuable real-world evidence on the comparative treatment effects and side effects of allopathic and ayurvedic treatments for MDD, informing clinical practice and future research directions in this area. Findings will contribute to a more nuanced understanding of treatment options for individuals with MDD.",
+          "relevance_score": 0.8208789,
+          "id": "https://openalex.org/W7153979189"
+        },
+        {
+          "title": "Validity and utility of Hierarchical Taxonomy of Psychopathology (HiTOP): III. Emotional dysfunction superspectrum.",
+          "abstract": "The Hierarchical Taxonomy of Psychopathology (HiTOP) is a quantitative nosological system that addresses shortcomings of traditional mental disorder diagnoses, including arbitrary boundaries between psychopathology and normality, frequent disorder co-occurrence, substantial heterogeneity within disorders, and diagnostic unreliability over time and across clinicians. This paper reviews evidence on the validity and utility of the internalizing and somatoform spectra of HiTOP, which together provide support for an emotional dysfunction superspectrum. These spectra are composed of homogeneous symptom and maladaptive trait dimensions currently subsumed within multiple diagnostic classes, including depressive, anxiety, trauma-related, eating, bipolar, and somatic symptom disorders, as well as sexual dysfunction and aspects of personality disorders. Dimensions falling within the emotional dysfunction superspectrum are broadly linked to individual differences in negative affect/neuroticism. Extensive evidence establishes that dimensions falling within the superspectrum share genetic diatheses, environmental risk factors, cognitive and affective difficulties, neural substrates and biomarkers, childhood temperamental antecedents, and treatment response. The structure of these validators mirrors the quantitative structure of the superspectrum, with some correlates more specific to internalizing or somatoform conditions, and others common to both, thereby underlining the hierarchical structure of the domain. Compared to traditional diagnoses, the internalizing and somatoform spectra demonstrated substantially improved utility: greater reliability, larger explanatory and predictive power, and greater clinical applicability. Validated measures are currently available to implement the HiTOP system in practice, which can make diagnostic classification more useful, both in research and in the clinic.",
+          "relevance_score": 0.8036214,
+          "id": "https://openalex.org/W7153177934"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.1
+    },
+    {
+      "id": 4,
+      "query": "(\"mindfulness\" OR \"acceptance and commitment therapy\" OR ACT OR \"mindfulness-based cognitive therapy\" OR MBCT) AND (\"adolescent depression\" OR \"depressed youth\")",
+      "angle": "Methods - Mindfulness and acceptance-based approaches",
+      "rationale": "Covers the growing literature on mindfulness and third-wave CBT adaptations for adolescent depression.",
+      "openalex_count": 12,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 0.96704847,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Association Between Purpose in Life and Depression in Medical Undergraduates: A Cross-Sectional Study in a Thai Medical School",
+          "abstract": "Background: Although previous studies have shown that higher levels of life purpose are negatively associated with depressive symptom severity in various subpopulations in adults, limited data exist regarding undergraduates, especially medical students. Objectives: To examine the relationship between life purpose and depression while exploring other factors associated with depression among medical students. Methods: A cross-sectional survey was conducted at a medical school in Thailand, assessing depression and burnout using the Patient Health Questionnaire and the Maslach Burnout Inventory-Student Survey Thai version. Life purpose was measured with the 25-item short form of the Purpose in Life Scale for Thai Adolescents, where higher scores indicated a greater sense of life purpose. Results: Among 90 students surveyed, the prevalence of depression and burnout was 34.4% and 17.8%, respectively. The 3 most important life goals selected by the participants belonged to family, personal well-being, and professional success or advancement. Associated factors for depression included a history of psychiatric disorders (odds ratio [OR], 5.89; P = .015) and burnout (OR, 6.92; P = .005). A high level of life purpose was inversely associated with depression, which reduced odds by 78% (OR, 0.22; P = .011). Conclusions: This study identified several factors associated with depression and highlights the importance of life purpose, which was associated with lower odds of depressive symptoms among medical students.",
+          "relevance_score": 0.50939286,
+          "id": "https://openalex.org/W7151869051"
+        },
+        {
+          "title": "Trends in Youth Mental Health Among Patients in Family Medicine Practices: 2017\u20132023",
+          "abstract": "The impact of the pandemic on pediatric mental health was heterogeneous across demographic groups and mental health conditions. Older adolescent females experienced persistently high levels of diagnosed ADHD, anxiety, and mood disorders, although there are signs of reversion to prepandemic levels.",
+          "relevance_score": 0.3236641,
+          "id": "https://openalex.org/W7153911097"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "abstract": "Background/Objectives: Research comprehensively analyzing the psychological characteristics and factors related to smartphone addiction in Korean children and adolescents at risk for depression remains scarce. This study utilized large-scale cohort data to examine the differences in psychological characteristics between an at-risk group for depression and a control group, and to identify the specific factors influencing smartphone addiction within the at-risk group. Methods: Data were obtained from the school-based cohort of internet and smartphone users conducted by the National Center for Mental Health (NCMH), involving a total of 2294 children and adolescents (1009 in the at-risk for depression group and 1285 in the control group). Assessment tools included the Children\u2019s Depression Inventory (CDI), State-Trait Anxiety Inventory for Children (STAIC/TAIC), Self-Esteem Scale (SES), Self-Control Scale, Aggression Questionnaire (K-AQ), School Bullying (SB) scale, and the Smartphone Addiction Scale-Short Form (SAS-SV). Results: Analysis of Covariance (ANCOVA) revealed that the at-risk group exhibited significantly higher levels of anxiety, aggression, involvement in school bullying, and smartphone addiction compared to the control group, while showing lower levels of self-esteem and self-control. Furthermore, multiple regression analysis indicated that higher anxiety and lower self-control were significant predictors of increased smartphone addiction levels. Conclusions: These findings support the Interaction of Person-Affect-Cognition-Execution (I-PACE) model, which posits that emotional vulnerability and deficits in executive functions lead to addictive behaviors. The results suggest that reducing anxiety and enhancing self-control are critical factors in the prevention of smartphone addiction among children and adolescents.",
+          "relevance_score": 0.31848365,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "The Dyadic Context of Preadolescent Girls\u2019 Depressive Symptoms: Elucidating The Role of Biobehavioral Synchrony",
+          "abstract": "Biobehavioral synchrony represents a dynamic interpersonal mechanism that influences parent and child depression risk via parent-child interactions, which may operate directly or in concert with depression-related impairments in parenting. We hypothesized that parent depressive symptoms and unsupportive emotion-related socialization behavior (ERSB) would negatively predict positive affect and physiological synchrony, and that these parent factors would moderate the effects of dyadic synchrony on daughters\u2019 depressive symptoms. Eighty parent (87.5% female)-daughter (Mchild age = 8.26 years, SDchild age = 1.51 years; 38.0% White) dyads participated in a 5-minute conflict discussion task, during which second-by-second estimates of parent unsupportive ERSB and parent and daughter affect and respiratory sinus arrhythmia (RSA) were obtained. Parent self-reported depressive symptoms and rated child behavior problems. Contrary to hypotheses, path models suggested that neither parent depressive symptoms nor unsupportive ERSB was associated with dyadic synchrony of positive affect or RSA. However, as expected, parent depressive symptoms and unsupportive ERSB moderated predictions of daughters\u2019 depression symptoms from dyadic synchrony. The nature of these interactive effects depended on the synchrony modality (i.e., positive affect, RSA) and parent factor under investigation. RSA synchrony during parent-daughter conflict discussion buffered against the adverse effects of parent depressive symptoms on daughters. Importantly, these patterns were specific to daughters\u2019 depressive symptoms rather than general dimensions of child psychopathology. These results underscore the centrality of multimodal, dynamic processes through which parent-daughter interactions may shape depression risk in daughters. Parents and their school-aged daughters vary in the extent to which they synchronize their positive affect and physiological functioning during a conflict discussion. Positive affect and physiological synchrony were not related, highlighting unique processes of biobehavioral synchrony. Further, both forms of synchrony modulated parent-related risk, but in different ways depending on the domain of synchrony and type of parent risk factor.",
+          "relevance_score": 0.28063205,
+          "id": "https://openalex.org/W7153224466"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 5,
+      "query": "(\"family therapy\" OR \"family-based treatment\" OR \"attachment-based family therapy\" OR ABFT) AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Methods - Family-based interventions",
+      "rationale": "Queries for family-involved treatment models, which are crucial in adolescent mental health care.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 6,
+      "query": "(\"digital intervention\" OR \"app-based\" OR \"mobile health\" OR mHealth OR \"internet-based\" OR \"computerized therapy\") AND (\"adolescent depression\" OR \"depressed youth\")",
+      "angle": "Tools/Artifacts - Digital and app-based interventions",
+      "rationale": "Searches for modern delivery methods and tools that expand treatment access, a key interest area.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 1.0299854,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Association Between Purpose in Life and Depression in Medical Undergraduates: A Cross-Sectional Study in a Thai Medical School",
+          "abstract": "Background: Although previous studies have shown that higher levels of life purpose are negatively associated with depressive symptom severity in various subpopulations in adults, limited data exist regarding undergraduates, especially medical students. Objectives: To examine the relationship between life purpose and depression while exploring other factors associated with depression among medical students. Methods: A cross-sectional survey was conducted at a medical school in Thailand, assessing depression and burnout using the Patient Health Questionnaire and the Maslach Burnout Inventory-Student Survey Thai version. Life purpose was measured with the 25-item short form of the Purpose in Life Scale for Thai Adolescents, where higher scores indicated a greater sense of life purpose. Results: Among 90 students surveyed, the prevalence of depression and burnout was 34.4% and 17.8%, respectively. The 3 most important life goals selected by the participants belonged to family, personal well-being, and professional success or advancement. Associated factors for depression included a history of psychiatric disorders (odds ratio [OR], 5.89; P = .015) and burnout (OR, 6.92; P = .005). A high level of life purpose was inversely associated with depression, which reduced odds by 78% (OR, 0.22; P = .011). Conclusions: This study identified several factors associated with depression and highlights the importance of life purpose, which was associated with lower odds of depressive symptoms among medical students.",
+          "relevance_score": 0.32183698,
+          "id": "https://openalex.org/W7151869051"
+        },
+        {
+          "title": "Chain mediation of rumination and negative coping styles in the relationship between fertility stress and psychological distress among Chinese infertile women: a cross-sectional study",
+          "abstract": "Background Infertility affects approximately 48.5 million couples worldwide, with infertile women experiencing significantly higher rates of psychological distress (27\u201340%) compared to the general population. While fertility stress has been identified as a primary contributor to psychological distress, the underlying mechanisms remain poorly understood. Objective This cross-sectional study examined the mediating roles of rumination and negative coping styles in the relationship between fertility stress and psychological distress among Chinese infertile women. We hypothesized that fertility stress would influence psychological distress through three indirect pathways: (1) rumination alone, (2) negative coping styles alone, and (3) a sequential chain from rumination to negative coping styles. Methods A total of 608 infertile women (mean age 33.5 \u00b1 4.8 years) were recruited from three tertiary hospitals in Heilongjiang Province, China. Participants completed standardized measures including the Fertility Problem Inventory (FPI), Event-Related Rumination Inventory (ERRI), Trait Coping Style Questionnaire (TCSQ), and the Chinese version of the Infertility Distress Scale (IDS). Chain mediation analysis was conducted using the PROCESS macro (Model 6) with 5,000 bootstrap samples. Results Psychological distress demonstrated strong positive correlations with fertility stress ( r = 0.43, p &amp;lt; 0.01), rumination ( r = 0.53, p &amp;lt; 0.01), and negative coping styles ( r = 0.49, p &amp;lt; 0.01). Chain mediation analysis revealed that the total effect of fertility stress on psychological distress was b = 0.20 (95% CI [0.16, 0.23]). The direct effect accounted for 45% of this relationship, while indirect effects accounted for 55%. Three significant mediation pathways were identified: through rumination alone (30% of total effect), through negative coping styles alone (20% of total effect), and through the sequential chain from rumination to negative coping styles (5% of total effect). Conclusion Fertility stress influences psychological distress in infertile women through direct and indirect pathways. A theoretically-derived sequential chain model suggests a potential vulnerability mechanism, though the cross-sectional design does not permit verification of causal temporal ordering. Longitudinal research is needed to confirm the hypothesized sequence. These findings suggest rumination may represent a key intervention target. However, given the cross-sectional design, further longitudinal and intervention research is needed to establish whether rumination-focused approaches effectively reduce psychological distress. Potential clinical implications should be considered preliminary and warrant testing through randomized controlled trials.",
+          "relevance_score": 0.28252348,
+          "id": "https://openalex.org/W7154091912"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.33
+    },
+    {
+      "id": 7,
+      "query": "(SSRI OR \"selective serotonin reuptake inhibitor\" OR fluoxetine OR escitalopram OR sertraline) AND (\"adolescent depression\" OR \"pediatric depression\")",
+      "angle": "Methods - Psychopharmacology (SSRIs)",
+      "rationale": "Targets the evidence on first-line medication treatments, including safety and efficacy data relevant to clinical practice.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "abstract": "The role of pharmacogenomics (PGx) for identifying individualized therapeutic approaches in patients with psychiatric disorders is a topic of intense debate in the literature, from clinical, pharmacoeconomic, ethical, educational, and theoretical perspectives. The objectives of this narrative review were (1) to synthesise the genetic evidence base for psychiatric PGx, with particular attention to the hierarchy between pharmacokinetics, pharmacodynamics and emerging epigenetic or polygenic markers; (2) to evaluate the clinical integration of pharmacogenomics in psychiatry, focusing on PGx-guided versus treatment-as-usual randomized trials, meta-analyses, economic evaluations and real-world implementation projects; (3) to analyse structural, educational and ethical challenges that condition the translation of genetic evidence into practice. Based on the reviewed primary and secondary reports, relevant data were found regarding antidepressant PGx, and less for antipsychotics and mood stabilizers. Pharmacoenomic data and structural, economic, and implementation barriers have also been explored, as well as educational and ethical challenges in the field of PGx implementation in psychiatry. In conclusion, psychiatric pharmacogenomics is placed at the intersection between relatively strong but narrow pharmacokinetic evidence, weaker and heterogeneous pharmacodynamic findings, and substantial implementation and ethical constraints. The most clinically actionable data concern CYP2D6 and CYP2C19 variants for certain antidepressants and, to a lesser extent, antipsychotics, which reliably predict serum levels and adverse effects and show modest associations with treatment response and remission.",
+          "relevance_score": 1.3185364,
+          "id": "https://openalex.org/W7151450270"
+        },
+        {
+          "title": "Insomnia Severity Predicts Suicide Attempts in Youth with depression: A 6-Month Prospective Cohort Study",
+          "abstract": "",
+          "relevance_score": 0.45807785,
+          "id": "https://openalex.org/W7151109420"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 8,
+      "query": "(\"combination therapy\" OR \"medication and psychotherapy\" OR \"integrated treatment\") AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Methods - Combined treatment approaches",
+      "rationale": "Finds studies comparing or evaluating multimodal treatment, a critical practical consideration.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "(\"assessment\" OR \"screening\" OR \"measurement\" OR \"rating scale\") AND (\"adolescent depression\" OR \"depressive symptoms\") AND (validity OR reliability OR psychometric)",
+      "angle": "Evaluation - Assessment tools and psychometrics",
+      "rationale": "Focuses on the tools and instruments used to reliably assess depression in adolescents, separate from treatment papers.",
+      "openalex_count": 392,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Psychometric Evidence of the Trichotillomania Dimensional Scale (TTM-D) in Adults From the General Population",
+          "abstract": "The aim of the present study was to analyse the psychometric properties of the Trichotillomania Dimensional Scale (TTM-D) in Peruvian adults. A total of 507 adults (66.7% women) participated, completing a sociodemographic questionnaire, the Frequency of Suicidal Ideation Inventory (FSII), the Patient Health Questionnaire-2 (PHQ-2), and the Generalized Anxiety Disorder-2 (GAD-2). Structural validity was examined using confirmatory factor analysis within a covariance-based structural equation modelling framework, and item functioning was analysed using a two-parameter item response theory (IRT) model. The TTM-D demonstrated adequate content validity, a unidimensional structure (CFI = .99, TLI = .99, RMSEA = .06 [90% CI: .032, .104], SRMR = .01), and good reliability (\u03c9 = .94, H = .98). Moreover, significant associations were observed with depressive symptoms, generalised anxiety, and suicidal ideation. Item 3 showed the highest discrimination and information, and the scale proved accurate at high levels of trichotillomania. In conclusion, the TTM-D exhibits suitable psychometric properties supporting the validity and reliability of score interpretation in the assessment of trichotillomania. Its use is recommended both in professional practice and in research with the general adult population.",
+          "relevance_score": 8.936436,
+          "id": "https://openalex.org/W7154070470"
+        },
+        {
+          "title": "The Portuguese version of the Peripartum Depression Scale (PDS-PT): a validation study in postpartum women",
+          "abstract": "The findings support the factor structure, high reliability, and moderate discriminant validity of the Portuguese version of the PDS as a comprehensive measure of depressive symptoms during the postpartum period. These results highlight the PDS-PT as a valuable tool for clinical assessment and research in postpartum mental health and support its use as a total index of postpartum depression as well as the use of its subscales.",
+          "relevance_score": 8.062637,
+          "id": "https://openalex.org/W7153295460"
+        },
+        {
+          "title": "How physical activity and gender moderate the association between parental marital conflict and adolescent depression",
+          "abstract": "Adolescent depression is a public development crisis that needs to be paid attention to and addressed under the rapid development of the Internet. It is of great significance to investigate the associations among adolescent depression, family relationship and physical activity (PA) for promoting adolescent mental health. A total of 3990 valid questionnaires were obtained through self-reports from adolescents. Data were collected using measurement tools for adolescent depression, parental marital conflict (PMC), and PA, followed by statistical analysis. Adolescent depression and PMC was significantly positive correlation (\u03b2 = 0.315, p < 0.001) and PA is significantly negatively correlated (\u03b2 = - 0.093, p < 0.001). After introducing moderating variables, PMC is still a significant positive correlation and adolescent depression (\u03b2 = 0.303, p < 0.001). The study provides preliminary support for the association between PMC and adolescent depression, as well as the potential moderating roles of gender and PA in this association. These findings generate hypotheses for future research on the roles of PA and family relationships in adolescent depression, rather than providing direct evidence for prevention or intervention strategies.",
+          "relevance_score": 6.865966,
+          "id": "https://openalex.org/W7151919775"
+        },
+        {
+          "title": "Chronic Pruritus as a Psychosomatic Phenomenon in Primary Cutaneous T-cell Lymphomas",
+          "abstract": "Introduction. Chronic pruritus (CP) is one of the symptoms of cutaneous T-cell lymphomas (CTCL), which significantly reduces the quality of life of patients. Aim: to identify the factors associated with CP and describe the phenotypes of CP in patients with CTCL to determine the factors associated with CP and describe the phenotypes of CP in patients with CTCL. Material and Methods. A total of 58 CTCL patients were examined. The assessment included psychiatric evaluation according to ICD-10 and psychometric instruments: the Eppendorf Itch Questionnaire, Beck Anxiety and Depression Inventories, Toronto Alexithymia Scale (TAS-26), and Symptom Checklist-90-R (SCL-90-R). Results . CP was found in 84.5 % of patients. CP severity correlated with lymphoma stage and depressive symptoms (p &lt; 0.05). Psychiatric disorders were diagnosed in 39.7 %, mainly affective and cognitive. Gender, age, and education had no effect on itch occurrence, whereas longer disease duration was observed in patients without CP. In 58.8 % of cases, CP was accompanied by pleasure during scratching, indicating ambivalent affective regulation. One-third of patients exhibited formication phenomena, and almost half showed social phobia associated with shame and self-stigmatization due to visible skin lesions. Conclusion. CP in CTCL patients is a dermatological and psychoneuroimmune phenomenon Treatment should include psychiatric evaluation, correction of depression and anxiety, and psychotherapeutic support.",
+          "relevance_score": 4.401602,
+          "id": "https://openalex.org/W7152596817"
+        },
+        {
+          "title": "Identity on trial: legitimacy-focused invalidation and social anxiety in bisexual and nonbinary people",
+          "abstract": "Minority stress models explain elevated mental health burden in LGBTQ+ populations by emphasizing cumulative stigma-related experiences (e.g., discrimination, victimization) and proximal processes such as expectations of rejection, concealment, and internalized stigma (Hatzenbuehler, 2009;Meyer, 2003). Microaggressions are one common interactional form these experiences can take (Nadal et al., 2011;Nadal, 2019). Recent subgroup research also suggests that social anxiety may be especially elevated in bisexual+ and transgender/nonbinary groups (Mahon et al., 2023;Wadsworth & Hayes-Skelton, 2015). Yet, minority stress is often treated as a broad risk factor for \"distress,\" which can obscure which common interactional experiences most directly recruit specific psychological mechanisms. This matters for social anxiety because it is maintained by identifiable cognitive-behavioral processes that can be measured and targeted.We argue that identity invalidation -being treated as \"not really\" one's stated sexual or gender identity -deserves focused attention for social anxiety in bisexual+ (bi+; i.e., bisexual, pansexual, and other non-monosexual identities) and nonbinary/gender-diverse people. This focus may be especially relevant given evidence that social anxiety is not distributed uniformly across sexual-and gender-identity subgroups. These identities are often stereotyped as ambiguous, transitional, or incoherent, making social recognition relatively fragile and routinely contested. However, invalidation may operate somewhat differently across groups. For bi+ people, invalidation often involves erasure and legitimacy challenges (e.g., \"pick a side,\" relabeling based on a current partner, gatekeeping about being \"queer enough\") (Feinstein et al., 2019), often in ways tied more to disclosure, relationship context, or others' interpretations of identity. For nonbinary and other gender-diverse people, invalidation often involves misrecognition and binary enforcement (Johnson et al., 2020;Johnson et al., 2024), including misgendering (McLemore, 2015), and may arise as a more immediate feature of everyday interactions through pronouns, names, forms of address, or judgments linked to gender expression (Arijs et al., 2023).Social anxiety is centrally organized around perceived social evaluation and is maintained by anticipatory threat, self-focused attention, safety behaviors, and pre-and post-event processing (Clark and Wells, 1995). More broadly, cognitive-behavioral models emphasize biased processing of social-evaluative information (Rapee and Heimberg, 1997). We propose that identity invalidation repeatedly recruits these same processes, but with a critical distinction from prototypical presentations of social anxiety disorder: in many settings the social threat is more realistic. When legitimacy is questioned, negative outcomes (loss of belonging, conflict, reduced access, safety concerns) may be more likely and more consequential. The point, then, is not simply exaggerated threat, but how repeated legitimacy threat may foster rigid self-monitoring, safety behaviors, and broader anticipatory anxiety over time. Minority stress helps explain why the threat exists; a social-anxiety framework helps explain how fear and avoidance may become maintained.In this Opinion, we conceptualize identity invalidation as a recurring legitimacy-focused social-evaluative trigger and outline a concise maintenance loop. The contribution is mechanism specificity: we map identity invalidation onto established social-anxiety maintenance processes, describe context-calibrated clinical targets that do not deny real-world risk, and propose measures and study designs to test the model.We define identity invalidation as recurrent misrecognition, erasure, or gatekeeping in which others deny or refuse to accept a person's stated identity, or force them into ill-fitting categories (Feinstein et al., 2019;Johnson et al., 2020;Johnson et al., 2024). It overlaps with sexual-orientation and gender-identity microaggressions and is often captured in microaggression frameworks, but we treat it as a legitimacy-focused subset of interactional minority stress (Nadal et al., 2011;Nadal, 2019). Invalidation can be discrete (e.g., misgendering; \"you're not really bi+\") or occur in predictable contexts where identity is assumed or policed (e.g., pronouns assumed; binary forms) (Feinstein et al., 2019;Johnson et al., 2020;McLemore, 2015).Two features make invalidation especially relevant for social anxiety. First, it is often mundane and recurrent in everyday interactions (Feinstein et al., 2019;Johnson et al., 2020;Nadal et al., 2011). Second, it targets legitimacy in the moment -\"Do you belong here as who you say you are?\" -and qualitative accounts describe rumination and self-doubt afterward, suggesting a direct route into maintenance processes (Feinstein et al., 2019;Johnson et al., 2020;Johnson et al., 2024).Invalidation varies in intensity and impact. Subtle forms include doubt-implying \"clarifications,\" partner-based relabeling, or treating bisexual+ or nonbinary identity as a phase (Feinstein et al., 2019;Johnson et al., 2020). More overt forms include explicit legitimacy challenges or refusal to use affirmed names/pronouns (Johnson et al., 2020;McLemore, 2015). At the severe end are hostile, coercive, or violent experiences -and chronic, intense invalidation -that can be conceptualized as traumatic invalidation (Ballard, 2024;Cardona et al., 2022). Across this continuum, repeated exposure may strengthen anticipatory threat and promote scrutiny-minimizing identity-management (e.g., concealment, avoidance, selfsilencing), while some report approach-oriented coping (e.g., advocacy, help-seeking) (Ballard, 2024;Maiolatesi et al., 2023;Pachankis, 2007).Invalidation is embedded in the broader minority stress system (Hatzenbuehler, 2009;Meyer, 2003). It can heighten stigma-specific rejection sensitivity, linked to social anxiety outcomes in sexual minority samples (Maiolatesi et al., 2023), and promote concealment and related strategies that reduce immediate scrutiny but can maintain fear when rigid or generalized (Pachankis, 2007). Invalidation may also amplify shame and post-event processing after interactions, interfacing with core maintenance processes in cognitive models of social anxiety (Cardona et al., 2022;Clark and Wells, 1995).We propose a concise loop that may be especially relevant when repeated invalidation shifts from context-specific vigilance to broader anticipatory anxiety: identity invalidation (or its perceived risk) increases legitimacy-threat expectations (being judged, misrecognized, or erased), which increase self-focused attention and identity-management safety behaviors. These responses increase post-event processing (rumination, self-criticism, shame), heighten future threat, and feed back into legitimacy-threat expectations (Figure 1). The loop should be strongest when invalidation is socially consequential (belonging, safety, access) and coping relies on monitoring/avoidance rather than flexible responding. The broad loop may be similar across groups, but the cues that trigger it and the most common identity-management strategies may differ (e.g., correction/pronoun management vs. concealment/selective disclosure).Invalidation (or risk) \u2192 legitimacy threat expectations. Repeated invalidation can raise both the perceived likelihood and cost of legitimacy-related negative evaluation (e.g., \"I'll be seen as incoherent,\" \"I'll lose belonging\"). Expectations can be triggered by policing cues (e.g., binary forms; groups with known invalidators) and may include vigilance about being misclassified, carried in part by stigma-specific rejection sensitivity and concealment-related threat processes (Maiolatesi et al., 2023;Pachankis, 2007).Threat expectations \u2192 self-focused attention. As in established models, perceived evaluation shifts attention inward (Clark and Wells, 1995;Rapee and Heimberg, 1997). Under invalidation-related threat, monitoring targets identity cues and impression management (how one is read as 'legitimate'), whether through gendered interactional cues or interpretations of disclosed identity, increasing cognitive load and reducing spontaneous engagement.Self-focused attention \u2192 identity-management safety behaviors. Strategies can function as safety behaviors when their primary aim is to reduce scrutiny: concealment, softening labels, avoiding correction, appeasing, pre-scripting, or over-explaining, with some strategies likely more common in certain invalidation contexts than others. They may be adaptive in unsafe settings, but become maintaining when generalized to relatively safe or ambiguous contexts: they reduce short-term threat while limiting corrective experiences and reinforcing the rule that safety depends on constant management (Clark and Wells, 1995;Pachankis, 2007). Concealment is also linked to social phobia symptoms in sexual minority young adults (Cohen et al., 2016).Safety behaviors \u2192 post-event processing \u2192 future threat. Post-event processing (replaying, self-criticism, shame) can strengthen future threat expectations (Clark and Wells, 1995). Rumination is prominent in daily life among transgender and gender diverse people, including themes involving safety concerns, interpersonal rejection, and gender as experienced through self and others (Puckett et al., 2022). Prospectively, shame contributes to sexualorientation disparities in social anxiety and mediates links between interpersonal stigma (e.g., family rejection, childhood bullying) and later social anxiety, supporting shame as a feedforward mechanism in this loop (Pachankis et al., 2024).A key boundary condition is realism. In many cases of social anxiety disorder, threat appraisals are biased upward: people may overestimate the likelihood or costs of negative evaluation and underestimate their ability to cope, especially when these expectations generalize across situations (Clark and Wells, 1995). In identity invalidation contexts, however, negative reactions can be more externally valid and more consequential, because legitimacy challenges are embedded in broader stigma processes and can carry concrete interpersonal, institutional, and sometimes safety-related costs (Meyer, 2003). For that reason, the present model is not intended to pathologize context-appropriate vigilance in stigmatizing environments.The proposed pathway becomes most relevant when vigilance becomes rigid, generalized, and impairing -for example, when identity-management strategies feel mandatory across relatively safe or ambiguous contexts, self-focused attention narrows engagement, or postevent rumination amplifies future threat. At that point, the issue is not only exposure to stigma, but the maintenance of fear, self-monitoring, safety behaviors, and avoidance over time.Accordingly, we view minority stress and social-anxiety models as complementary rather than competing accounts. Minority stress frameworks explain why invalidation-related threat is present and often realistic; the social-anxiety framework specifies one pathway through which repeated exposure may become psychologically maintained and clinically significant.Two implications follow. First, intervention should not rely primarily on disputing threat as exaggerated; doing so may be experienced as invalidating and may ignore real-world constraints. Second, under those conditions, the clinical target becomes the maintenance loop and its generalization: helping clients (a) flexibly calibrate identity-management strategies to the situation (e.g., when to correct, disclose, disengage, or seek support), (b) reduce rigid selfmonitoring and safety-behavior rules that spread beyond the original trigger, and (c) strengthen recovery after invalidation by reducing rumination and shame, reorienting attention, and returning to valued action.The goal of this conceptual framework is not to dispute stigma or prescribe disclosure, but to suggest how invalidation may function as a trigger that recruits social-anxiety maintainers and may point to possible intervention targets for building flexibility and recovery in contexts where clients have meaningful choice and relative safety (Hendricks and Testa, 2012). The recommendations below are therefore intended as hypothesis-generating clinical implications rather than empirically established treatment procedures.Formulation should also assess protective context (affirming relationships, supportive communities, and safer settings), because these resources can weaken the loop and help identify where practice and experiments are most appropriate. Therapeutic context should not be assumed to be affirming by default: therapist competence may help interrupt the loop, whereas subtle misrecognition, minimization of minority stress, or limited affirming competence with LGBTQ+ clients may inadvertently reproduce invalidation dynamics within treatment itself, with implications for training and supervision (Cruciani et al., 2024). The aim is not to reduce context-appropriate vigilance where risk is meaningful, but to identify when anticipation, selfmonitoring, safety behaviors, and post-event processing have become overly rigid, generalized, or impairing relative to the context. One possible formulation tool is an invalidation-triggered chain analysis. A brief map of a recent episode may help identify potential leverage points: trigger (invalidation or risk cue) \u2192 legitimacy-focused appraisal \u2192 self-monitoring \u2192 identity-management responses \u2192 postevent processing \u2192 next-situation anticipatory threat. This formulation can validate real-world risk while identifying mechanisms that may generalize beyond the original setting.Identity management may be clinically relevant to assess as safety behavior when it functions that way. A functional assessment may help clarify in which settings concealment or appeasement is protective, and in which settings it may narrow life and maintain fear. When these strategies primarily reduce short-term anxiety in relatively safe situations, one possible therapeutic task is to explore whether they function as optional rather than mandatory responses, with attention to how much \"safety\" actually depends on constant management. This stance aligns with minority-stress-informed affirmative CBT approaches that acknowledge stigma while targeting proximal processes (e.g., rejection sensitivity, concealment, internalized stigma) in randomized trials with sexual minority samples (Pachankis et al., 2015;Pachankis et al., 2022).Consent-based experiments may be one way to explore legitimacy threat and recovery. In principle, such experiments could be used to test invalidation-linked predictions (e.g., \"If I correct someone, I'll be rejected\"), chosen collaboratively and conducted in safer or ambiguous contexts. Potential learning targets might include tolerating ambiguity, practicing recovery after invalidation, and discovering when safety behaviors are not required to navigate or exit an interaction. Consistent with inhibitory learning approaches, one possible goal is greater flexibility under possible evaluation and learning under uncertainty, rather than certainty that negative outcomes will never occur (Craske et al., 2014).Prediction 1 (specificity). Legitimacy-focused invalidation predicts social anxiety beyond broad stigma exposure and beyond general internalizing. Measures indexing erasure, misrecognition, and gatekeeping should predict social anxiety severity beyond global discrimination/victimization and beyond depressive symptoms or generalized anxiety.Prediction 2 (mechanism). The association between invalidation and elevated social anxiety should be partly explained by anticipatory threat appraisals, self-focused attention, identity-management safety behaviors, and post-event processing, with stigma-specific rejection sensitivity contributing to threat appraisals (Clark and Wells, 1995;Maiolatesi et al., 2023;Rapee and Heimberg, 1997).Prediction 3 (context and dynamics). Context amplifies the loop, and intensive longitudinal designs reveal short-term feedback. In daily diary/EMA designs, invalidation should predict increases in identity-management behaviors and post-event processing, which should prospectively predict heightened anticipatory threat at subsequent assessments. Effects should be stronger in contexts with fewer affirming resources and higher perceived costs of visibility; a concrete proxy is living environment, where small-town/rural settings show higher social anxiety in TGNC samples and reduced buffering from social support (Kaplan et al., 2019). These dynamics may be observable dimensionally across elevated social anxiety, but should be especially consequential when they become generalized and impairing.Among bi+ and nonbinary/gender-diverse people, identity invalidation is a minority stress experience that, for many, functions as a frequent and often externally valid socialevaluative threat. We propose that it can contribute to the maintenance of elevated or clinically significant social anxiety when repeated legitimacy threat recruits well-established maintenance mechanisms: anticipatory threat appraisals, identity-focused self-monitoring, identitymanagement safety behaviors, and post-event processing. The practical contribution is that this mechanism-focused bridge makes the problem more actionable. It suggests concrete assessment targets (legitimacy-focused invalidation, identity-management safety behaviors, and post-event processing), proposes context-calibrated directions for intervention that do not deny real risk, and generates specific tests for longitudinal and experimental work. The model also implies that treatment context matters: affirming therapist competence may help disrupt the loop, whereas invalidating care may inadvertently reinforce it. If supported, this account can refine how minority stress is translated into mechanism-level models and treatment targets for social anxiety in bi+ and nonbinary/gender-diverse populations.Figure 1. Identity invalidation-social anxiety maintenance loop. Identity invalidation (or risk of it) increases legitimacy-threat expectations, which increase self-focused attention and identitymanagement safety behaviors. These responses increase post-event processing/shame, heighten future threat, and feed back into threat expectations. Lower affirmation/higher stakes are proposed to strengthen the loop.",
+          "relevance_score": 1.2474104,
+          "id": "https://openalex.org/W7152414839"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.1
+    },
+    {
+      "id": 10,
+      "query": "(\"suicide risk\" OR \"suicidal ideation\" OR \"self-harm\") AND (\"adolescent depression\" OR depressed) AND (screening OR assessment OR prevention)",
+      "angle": "Applied concerns - Suicide risk screening and management",
+      "rationale": "Captures the critical literature on risk assessment and prevention within the context of adolescent depression.",
+      "openalex_count": 49,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "AI as We Describe It: How Large Language Models and Their Applications in Health are Represented Across Channels of Public Discourse",
+          "abstract": "Representation shapes public attitudes and behaviors. With the recent advances and rapid adoption of LLMs, the way these systems are introduced will negotiate societal expectations for their role in high-stakes domains like health. Yet it remains unclear whether current narratives present a balanced view. We analyzed five prominent discourse channels (news, research press, YouTube, TikTok, and Reddit) over a two-year period on lexical style, informational content, and symbolic representation. Discussions were generally positive and episodic, with positivity increasing over time. Risk communication was unthorough and often reduced to information quality incidents, while explanations of LLMs\u2019 generative nature were rare. Compared with professional outlets, TikTok and Reddit highlighted wellbeing applications and showed greater variations in tone and anthropomorphism but little attention to risks. We discuss implications for public discourse as a diagnostic tool in identifying literacy and governance gaps, and for communication and design strategies to support more informed LLM engagement.",
+          "relevance_score": 2.0264814,
+          "id": "https://openalex.org/W4416018618"
+        },
+        {
+          "title": "Understanding Remote Mental Health Supporters' Help-Seeking in Online Communities",
+          "abstract": "Providing mental health support for loved ones across a geographic distance creates unique challenges for the remote caregivers, who sometimes turn to online communities for peer support. We qualitatively analyzed 522 Reddit threads to understand what drives remote caregivers' online help-seeking behaviors and the responses they receive from the community. Their purposes of posting included requesting guidance, expressing emotions, and seeking validation. Community responses included providing emotional support, suggesting informational strategies, and sharing personal experiences. While certain themes in posts (emotional toll, monitoring symptoms, and prioritizing caregiver well-being) are shared across remote and non-remote contexts, remote caregivers' posts surfaced nuanced experiences. For example, they often rely on digital cues, such as voice, to interpret care receivers' well-being while struggling with digital silence during crises. We discuss the need for supporting communication and information sharing between remote caregivers and receivers, care coordination for crisis management, and design recommendations for caregiver communities.",
+          "relevance_score": 1.636373,
+          "id": "https://openalex.org/W7128631410"
+        },
+        {
+          "title": "Editorial",
+          "abstract": "As the Editors of Mental Health and Social Inclusion, we continue to be impressed by the international nature of our submissions. In this issue, we have 10 papers from different countries. While there are four papers from India and two from the UK, we have a paper each from Pakistan, Bangladesh, Egypt, Jordan, China, Greece and the USA. This issue features nine empirical research papers, three case studies, one viewpoint paper and one literature review. Let\u2019s dive right in.Monaco based health psychologist Dr Freda Gonot-Schoupinsky contributes two papers to this issue. The first is another in her fascinating positive autoethnography series. This time she features Dr Evangelos Fradelos from Larissa in Greece. Dr Fradelos recounts how his mother was diagnosed with schizophrenia, which perhaps drew him towards working with people who had severe mental illness. His godmother Theano played a key role in his upbringing. He described her thus, \u201c[\u2026] although she had not seen the world, her heart could hold all of humanity\u201d. From his childhood reflections he moves onto talk about how he became a nurse. He notes that providing meaningful care to people, has the power to be therapeutic, for not only the one who receives it but also the one who gives it. He goes on to say that not only is \u201c[\u2026] nursing not just a profession, it is a way of being [\u2026] But above all it remains an act of love\u201d. This is a wonderful account from a remarkable nurse academic.Freda\u2019s second paper features Professor Corey Keyes. While there is less information in this account on Corey\u2019s upbringing, the little there is suggests it was very traumatic. Corey was the first academic to introduce the concepts of flourishing-languishing. He has experienced significant mental health problems himself, as well as having endured alcoholism. He advises, \u201cDo not walk alone with your mental illness, walk with others and talk about it [\u2026]\u201d He comments, \u201cSick care is necessary, but it is not health care. We need both\u201d. Entering a state of flourishing reduces the risk of developing mental health problems. Corey also offers some straight-talking about positive psychology, which he is clearly disenchanted with. While this account is very brief, it is nonetheless highly illuminating.Three papers look at mental health care in scheduled tribes in India, which represent 8.6% of the total population of the country. Treesa Pulickel and colleagues conducted a scoping review. They attempted to answer six questions with their review. The first looked at the prevalence of mental disorders and found high rates of depression, anxiety and substance use amongst tribal groups. The second considered where people get their information about mental health from. Traditional healers and faith leaders were often consulted. Mothers played a significant role in handing down information through the generations. They also looked at the main barriers to service access and found these to be geographical isolation, cultural beliefs, limited awareness, financial constraints and poor mental health infrastructure. They noted that if services worked with traditional healers, this could improve the identification of mental health problems. Cultural factors also advocated different approaches to dealing with mental health issues, as they explained such problems as being caused by evil spirits, black magic or past life sins. However, to evaluate some of these traditional approaches is very complex.Aswathi P. and Akanksha Rani reported that tribal women face disproportionate exposure to intimate partner violence (IPV). They attribute this to gender discrimination, poverty, geographical isolation and limited access to health care and legal services. In tribal majority states in India, IPV rates exceed 35%. In this first paper they report on a culturally grounded intervention model. As part of their research, they conducted some baseline quantitative screening exercises. In a sample of 82 tribal women in Wayanad, they found a prevalence rate of 78% for IPV and 44% for anxiety and depression. They then held in-depth interviews with survivors, as well as focus group discussions with social health activists and mental health professionals. They developed their intervention based on these consultations. They used community-based healing circles, where IPV survivors could gather in safe spaces. Group sessions were co-led by a mental health counsellor and a woman elder. They also involved the Oorumoopan (tribal leader), to give the intervention cultural legitimacy. They used creative approaches such as theatre, art and songs to get their messages across. Trauma-informed approaches were re-interpreted through body mapping, grounding rituals and visualisation. This approach is in stark contrast to the urban-centric biomedical models. In a second paper, Aswathi P. and Akanksha Rani suggest that mindfulness and art have long existed in tribal groups as ways of coping, storytelling and spiritual engagement. They advocate mindfulness-based art therapy. They believe that these cultural practices should be reclaimed as they must have always served as pathways for resilience, dignity and belonging. They claim, \u201cMindfulness and art are not novel interventions but ancient companions on the journey of healing\u201d.Studies involving university students feature regularly in the pages of Mental Health and Social Inclusion. While this is often linked to the incidence of mental health problems in university students, it is also the case that students are very accessible participants for academic researchers. Hence Professor Abdel-Khalek has recruited a huge sample of 5,729 Egyptian university students for his study of gender differences in personality. He used his Arabic version of the Big Five personality scales. Men came out as more extroverted, whereas women scored significantly higher on neuroticism, agreeableness and openness. There was no gender difference in conscientiousness. A second study by Abdul Muyeed and colleagues also of university students, looked at factors affecting levels of depression in Bangladesh. The authors received 689 valid questionnaires from four public universities. Binary logistic regression identified a number of variables as being associated with depression. These were female gender, a lack of sleep and a lack of extra-curricular activities. Being married was associated with lower odds of being depressed. Previous research on happiness suggest that it is the men who benefit most from marriage.Given the importance of social factors in mental illness, three papers have addressed this issue. Murad Younis and colleagues studied patients diagnosed with schizophrenia at two psychiatric hospitals in Amman, Jordan. Some 66 participants completed the Adverse Childhood Experiences Questionnaire, the Suicidal Ideation Questionnaire, and the Scale for the Assessment of Positive Symptoms in Schizophrenia. In terms of childhood adversity, age, hospital setting and educational level were the only factors associated with adversity. For suicidality, it was also age and education, along with the number of previous hospitalisations. Positive symptoms were not related to outcome. A second study by Anju Thakur and Rina Chaturvedi studied 1,280 adolescents from an orphanage in Shimla. They found poverty increases the likelihood of experiencing peer victimisation. Using structural equation modelling, the authors found that poverty and mental health, both good and bad, are mediated through self-esteem. A third study by Imran Shaikh and Kamaruzman Noordin, looked at \u201cTakaful\u201d products in Malaysia. They found that peoples\u2019 intention to buy \u201cTakaful\u201d products was influenced by their perception of social security.Mahvia Gull and colleagues looked at the application of Acceptance and Commitment Therapy (ACT), for people with substances use disorders in Pakistan. They interviewed clinical psychologists, their clients and a sample of carers. They concluded that ACT needs to be adapted and simplified for use in the Pakistani context. The researchers drew on the work of Naeem, who previously adapted CBT for the Pakistani population. This has led the researchers to CA-ACT, or Culturally Adapted ACT. This research also complements the work of Positive Psychology 3.0, which focusses more on local psychologies, and away from a purely North American derived perspective.The COVID-19 pandemic was the focus for a study by Madison Harding-White and her collaborators. As part of a larger investigation, they asked participants, \u201cDo you feel there were any positive aspects to the COVID-19 pandemic?\u201d Responses were broken down into three main categories. The first, \u201cpersonal life benefits\u201d, had two main areas, \u201cHaving more time for oneself\u201d (n = 55), and \u201cIncreased time with family and friends\u201d (n = 50). There were two main working life benefits, which were the introduction of remote working and educational benefits. The final less popular category was getting more benefits from nature (n = 7) and wider benefits for society (n = 14). The authors conclude that for at least this sample of participants the pandemic provided opportunities for \u201clife-crafting\u201d.The penultimate paper in this issue is from Elly Davey and the editor. Like thousands of young psychologists, Elly wanted to get a training place to become a clinical psychologist. In the paper, which is a collaborative autoethnographic account, Elly and Jerome describe their school education and their psychology degree courses. In addition, Elly describes how during her adolescence she was badly traumatised by a car accident, which led to her developing a non-epileptic attack disorder, now thankfully remitted. It was during her treatment for this at Great Ormond Street Hospital in London, that she was seen by clinical psychologists. She was determined that this would be her future career. Both stories finish a year after graduation, with neither author able to secure a clinical psychology training post. While many people with experience of mental health problems are frustrated by the quality of care they receive, it is a paradox that thousands of young psychologists are so keen to enter the mental health field.The final paper in this issue is from Qing Han and Chenyang Zhao from China. The paper is a review of the applications of AI in mental health related disciplines between 2013 and 2024. Some 1,989 studies were included in this review. In 2014, there was only 19 papers linked to AI in mental health. In 2024, there were 477 papers just in that one year. The three top countries were the USA, China and the UK. The three top universities were Harvard, followed by University College London and King\u2019s College London. AI can be used to improve clinical workflows, to standardise diagnostic practices, to develop chatbots and new therapeutic approaches. Modelling within electronic care records, may trigger early alerts for patients. It may also help predict who will require therapeutic interventions. We very much doubt that this paper will be the last paper we see on the potential of AI for the mental health field.",
+          "relevance_score": 1.5546044,
+          "id": "https://openalex.org/W7151377538"
+        },
+        {
+          "title": "Loneliness as an Interface Between Alzheimer's Disease and Suicidal Behaviour: A Systematic Review, Meta\u2010Analysis and Meta\u2010Analytic Factor Analysis",
+          "abstract": "Loneliness is an epidemic affecting mental health across all demographics. It is linked to mental disorders, such as anxiety and depression, and despair, highlighting a significant public health issue as persons feel more disconnected in a connected world. This study aims to investigate the relationship between loneliness, Alzheimer's disease and suicidal behaviour. This review was systematised in a dichotomous manner. Therefore, two systematic reviews were initially carried out following the PRISMA statement. The loneliness was understood as feeling lonely. One group searched for associations between loneliness and Alzheimer's disease and the other between loneliness and suicidal behaviour, with a consecutive meta-analysis. After that, it was searched for between the two groups to seek loneliness, such as an interface in meta-analytic factor analysis. Depression is the most studied and cited factor associated with loneliness as a link between Alzheimer's disease and suicide. Loneliness demonstrated association with Alzheimer's disease (OR = 1.89, 95% CI 1.57-2.28; p < 0.001); suicidal ideation (OR = 2.17, 95% CI 1.88-2.51; p < 0.001); suicidal planning (OR = 2.36, 95% CI 1.91-2.92; p < 0.001); suicide attempt (OR = 2.54, 95% CI 2.13-3.04; p < 0.001); and suicide (OR = 4.9, 95% CI 4.4-5.5; p < 0.001). Entrapment, hopelessness, insomnia and stress demonstrated significative correlation (r > 0.40; p < 0.001) with loneliness in the interface between AD and suicidal behaviour. Loneliness has been identified as a comorbid factor between AD and suicide. To prevent both AD and suicide, it is essential to monitor levels of stress, insomnia, feelings of entrapment and hopelessness. The triad of loneliness, hopelessness and insomnia seems to represent the greatest risk profile.",
+          "relevance_score": 1.3842185,
+          "id": "https://openalex.org/W7151603816"
+        },
+        {
+          "title": "Systemic Inflammatory Biomarkers and Non-Suicidal Self-Injury in Adolescents with Mental Disorders: A Threshold Effect Analysis",
+          "abstract": "",
+          "relevance_score": 1.3717672,
+          "id": "https://openalex.org/W7153982070"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 11,
+      "query": "(\"social media\" OR \"screen time\" OR \"digital media\" OR Instagram OR TikTok) AND (\"adolescent depression\" OR \"depressive symptoms\" OR \"mental health\")",
+      "angle": "Applied concerns - Social media and mental health links",
+      "rationale": "Addresses a major contemporary contextual factor influencing adolescent mental health that the profile explicitly mentions.",
+      "openalex_count": 572,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "Curating Digital Coping Ecologies: How Queer Emerging Adults Use Social Media to Support Their Mental Health",
+          "abstract": "Queer emerging adults (EAs) increasingly seek mental health support through digital technologies. While HCI has studied queer users\u2019 experiences online, less is known about how queer EAs use social media everyday to support their mental health. Therefore, we conducted a cross-sectional survey of queer EAs (ages 18-24, N = 313) in the United States, combining latent profile analysis and qualitative analysis. We examined how queer EAs employ various coping strategies to support their mental health. Our latent profile analysis revealed three distinct engagement profiles that combined support strategies differently. Our qualitative study examines how social media supported and hindered participants\u2019 coping goals. We contribute to HCI by (1) highlighting how queer EAs curate their coping strategies and social media platforms, (2) offering the perspective of digital coping ecologies, and (3) offering design considerations for supporting queer EAs\u2019 digital coping ecologies.",
+          "relevance_score": 60.120598,
+          "id": "https://openalex.org/W7154088439"
+        },
+        {
+          "title": "Mental Health Impacts of AI Companions: Triangulating Social Media Quasi-Experiments, User Perspectives, and Relational Lens",
+          "abstract": "AI-powered companion chatbots (AICCs) such as Replika are increasingly popular, offering empathetic interactions, yet their psychosocial impacts remain unclear. We examined how engaging with AICCs shaped wellbeing and how users perceived these experiences. First, we conducted a large-scale quasi-experimental study of longitudinal Reddit data, applying stratified propensity score matching and Difference-in-Differences regression. Findings revealed mixed effects\u2014greater grief expression and interpersonal focus, alongside increases in language about loneliness, depression, and suicidal ideation. Second, we complemented these results with 18 semi-structured interviews, which we thematically analyzed and contextualized using Knapp\u2019s relationship development model. We identified trajectories of initiation, escalation, and bonding, wherein AICCs provided emotional validation and social rehearsal but also carried risks of over-reliance and withdrawal. Triangulating across methods, we offer design implications for AI companions that scaffold healthy boundaries, support mindful engagement, support disclosure without dependency, and surface relationship stages\u2014maximizing psychosocial benefits while mitigating risks.",
+          "relevance_score": 43.561672,
+          "id": "https://openalex.org/W7127400060"
+        },
+        {
+          "title": "Laughing Through the Struggles: Understanding ADHD Experience and Community Engagement Through Memes and Comments on Instagram",
+          "abstract": "While public discourse often reduces Attention-Deficit Hyperactivity Disorder (ADHD) to stereotypes that overlook the invisible struggles of those who live with it, ADHD people are increasingly using social media to express their experiences on their own terms. On platforms like Instagram, memes have become a powerful and accessible medium for expressing everyday challenges through humor and relatability. This study analyzed 350 ADHD-related memes and over 28,000 associated comments to explore how ADHD was expressed and engaged with in online spaces, and consulted a neurodevelopmental science and clinical researcher. Findings show that memes depict behavioral inconsistencies, internal conflicts, and societal pressures, while comments reveal strong resonance, personal identification, and peer support, including informal self-diagnosis and shared experiences. By combining meme and comment analyses, this study contributes to digital mental health research by demonstrating how memes serve as an interactional mechanism for neurodivergent storytelling and identity formation and informing future platform design.",
+          "relevance_score": 22.923702,
+          "id": "https://openalex.org/W7154178307"
+        },
+        {
+          "title": "Expert-led Debunking of Health Misinformation on TikTok",
+          "abstract": "In this work, we empirically evaluated expert-led debunking of health misinformation on TikTok with n=420 survey and n=20 interview participants. Unlike fact-checkers, health professionals debunk misinformation non-anonymously through video-against-video formats (stitching/\u201dduetting\u201d), rather than using labels. We analyzed 5,161 such posts to select six misinformation and six debunking videos across three common topics \u2013 two general health, two mental health, and two nutrition \u2013 for statistical comparison. Participants exposed to debunking videos believed misinformation claims significantly less than those exposed to misinformation videos in all six conditions. Experts were seen as more credible than misinformation creators, except in one instance involving mental health. Thematic analysis showed that expert-led debunking succeeded because experts\u2019 videos aligned with the Debunking Handbook method for effective refutation. Experts\u2019 credibility is derived mainly from being perceived as non-typical influencers who maintain reputable TikTok personas by providing qualified medical evidence and advice.",
+          "relevance_score": 22.043716,
+          "id": "https://openalex.org/W7154121364"
+        },
+        {
+          "title": "The Impact of Social Media Use on Adolescent Mental Health",
+          "abstract": "Information and Communication Technology has developed extremely rapidly, especially for social media. Such development can lead to increased dependence on electronic devices influencing adolescent mental health. The purpose of the study was to analyze the relationship between social media usage and adolescent mental health in SMP Negeri 2 Jombang. In this study, the correlation analytic quantitative research design with the cross-sectional approach was utilized. There were 320 in total students, and 76 students were the sample by the cluster random sampling technique. Statistical tests were performed by Spearman's Rank. There were 57.9% students who experienced mild social media addiction. Simultaneously, 38.2% of students experienced mild depressive symptoms. The Spearman's Rank statistical test analysis findings revealed (\u03c1) = 0.000 &lt; (\u03b1) 0.05, which confirms that teen mental health is correlated with social media use. The value of r is 0.402, and the level of correlation is moderate. Social media use and teen health were related as the more frequently one used social media, the greater the possibilities that they would be affected by seeing others' success, bodies, and lifestyles and become possible stressors leading to depression or mental illnesses. Preventive and promotive measures were needed for the early detection of mental disorders in adolescents to avert more complex mental health problems.",
+          "relevance_score": 21.766563,
+          "id": "https://openalex.org/W7153718357"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 12,
+      "query": "(\"school-based\" OR \"universal prevention\" OR \"indicated prevention\" OR \"selective prevention\") AND (\"adolescent depression\" OR \"depressive symptoms\")",
+      "angle": "Applied concerns - School-based prevention programs",
+      "rationale": "Targets implementation science and public health approaches to depression prevention in educational settings.",
+      "openalex_count": 46,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Multidimensional School Climate and Mental Health Among Chinese Vocational High School Students: The Role of Personal Growth Initiative",
+          "abstract": "Vocational high school students represent a substantial yet understudied population in school-based mental health research. Drawing on positive psychology and bioecological theory, this study examined whether personal growth initiative (PGI) shows a statistical indirect effect with respect to the relationships between multidimensional school climate and mental health outcomes among Chinese vocational students. Participants were 14,006 students from 112 vocational high schools. Two-level path models simultaneously entered different climate dimensions to estimate their unique associations with PGI, depressive symptoms, and Subjective well-being (SWB) at the within- and between-school levels, controlling for gender and socioeconomic status. Within schools, Safety, Interpersonal Relationships, Rules and Norms/Career Development Support, and Teaching and Learning/Diversity were positively associated with PGI, which in turn was associated with lower depressive symptoms and higher SWB. Wald tests indicated that Safety showed the strongest overall association with depressive symptoms, whereas Interpersonal Relationships showed the strongest overall association with SWB. At the between-school level, school-average climate and school-average PGI were associated with both outcomes, although these findings should be interpreted cautiously given the limited between-school power and substantial overlap among aggregated climate indicators. Overall, the findings are consistent with PGI being an important student-level pathway linking school climate to mental health in vocational education.",
+          "relevance_score": 5.3701444,
+          "id": "https://openalex.org/W7153110012"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "abstract": "Background/Objectives: Research comprehensively analyzing the psychological characteristics and factors related to smartphone addiction in Korean children and adolescents at risk for depression remains scarce. This study utilized large-scale cohort data to examine the differences in psychological characteristics between an at-risk group for depression and a control group, and to identify the specific factors influencing smartphone addiction within the at-risk group. Methods: Data were obtained from the school-based cohort of internet and smartphone users conducted by the National Center for Mental Health (NCMH), involving a total of 2294 children and adolescents (1009 in the at-risk for depression group and 1285 in the control group). Assessment tools included the Children\u2019s Depression Inventory (CDI), State-Trait Anxiety Inventory for Children (STAIC/TAIC), Self-Esteem Scale (SES), Self-Control Scale, Aggression Questionnaire (K-AQ), School Bullying (SB) scale, and the Smartphone Addiction Scale-Short Form (SAS-SV). Results: Analysis of Covariance (ANCOVA) revealed that the at-risk group exhibited significantly higher levels of anxiety, aggression, involvement in school bullying, and smartphone addiction compared to the control group, while showing lower levels of self-esteem and self-control. Furthermore, multiple regression analysis indicated that higher anxiety and lower self-control were significant predictors of increased smartphone addiction levels. Conclusions: These findings support the Interaction of Person-Affect-Cognition-Execution (I-PACE) model, which posits that emotional vulnerability and deficits in executive functions lead to addictive behaviors. The results suggest that reducing anxiety and enhancing self-control are critical factors in the prevention of smartphone addiction among children and adolescents.",
+          "relevance_score": 0.6466742,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "Cumulative childhood trauma exposure and depressive and anxiety symptoms among Kenyan adolescents: A multilevel school-based study",
+          "abstract": "",
+          "relevance_score": 0.6143847,
+          "id": "https://openalex.org/W7151255133"
+        },
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 0.603581,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Mental health and help-seeking behaviour among secondary school adolescents in Nsukka, Nigeria: a cross-sectional survey",
+          "abstract": "Globally, depression and anxiety remain a public health concern among adolescents. Understanding the role of help-seeking behaviour in predicting the prevalence of depression and anxiety among adolescents is important for designing effective interventions. This study investigated the relationship between help-seeking behaviour and the prevalence of depression and anxiety among school adolescents in Nsukka, Nigeria. A descriptive cross-sectional study was conducted among randomly selected adolescents aged 10\u201319 from three secondary schools in Nsukka, Nigeria. The Patient Health Questionnaire-9 (PHQ-9), Generalized Anxiety Disorder 7-item (GAD-7) Scale, and General Help-seeking Questionnaire (GHSQ) were used for the data collection. Using stratified random sampling technique, 394 respondents were recruited for this study. All participants provided informed consent prior to the study initiation. The data obtained were analyzed using descriptive statistics, chi-square test, and multivariate logistic regression. The level of significance was set at p < 0.05. A total of 394 school adolescents participated in this study, yielding a response rate of 88.5%. Most students were female (n = 272, 69.0%) and aged 14\u201317 (n = 233, 59.1%). The prevalence of moderate to severe symptoms of depression and anxiety were 22.1% and 21.3%, respectively. The most frequent source of help for depression or anxiety among adolescents were the parents (n = 284, 72.1%). The indifferent attitude to help-seeking from friends (OR = 2.125, 95%CI = 1.243\u20133.635, p = 0.006), school counsellor (OR = 2.953, 95%CI = 1.334\u20136.537, p = 0.008), and religious leaders (OR = 2.037, 95%CI = 1.002\u20134.142, p = 0.038) were associated with a higher prevalence of depression. Similarly, being neutral or indifferent about seeking help from school counsellors (OR = 2.485, 95%CI = 1.160\u20135.320, p = 0.019) and religious leaders (OR = 2.171, 95%CI = 1.090\u20134.324, p = 0.027) were associated with higher odds of developing anxiety compared to those more likely to seek help from these sources. In this study, one in five adolescents has moderate to severe symptoms of depression and anxiety. Indifferent attitude to help-seeking from friends, school counsellors, and religious leaders were associated with higher prevalence of depression and anxiety among school adolescents. Therefore, school-based mental health education and literacy programs is recommended as a way of improving early detection and care for adolescents with psychological issues.",
+          "relevance_score": 0.5557471,
+          "id": "https://openalex.org/W7151280074"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 13,
+      "query": "(\"randomized controlled trial\" OR RCT OR \"clinical trial\") AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Evaluation - RCTs (high-quality evidence)",
+      "rationale": "A recall-safety query to broadly capture the highest tier of treatment evidence, which the profile values.",
+      "openalex_count": 14,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "\u201cWho moved my heart brush?\u201d Realms of the Heart: A Human-AI Collaborative Gamified Adjuvant Treatment Application for Depressed Teens Based on Painting Therapy",
+          "abstract": "Painting therapy has become an important approach to the treatment of depression in adolescents. However, depressed adolescents face low self-confidence, low engagement, and self-absorption when undergoing painting therapy. Informed by need-finding investigations, We developed Realms of the Heart, a human-AI collaborative gamified complementary treatment system for depressed adolescents. Realms of the Heart includes two AI-driven strategies: the transformation of natural objects collected by teens\u2019 exploration into brushes, and the generation of sketches corresponding to natural objects by using brushes based on ControlNet. We conducted a randomized controlled trial. Participants were randomized into an experimental group and a control group. The results showed that Realms of the Heart increased users\u2019 motivation and significantly alleviated their level of depression. These findings not only shed light on the role of human-AI co-created painting therapy in the treatment of adolescent depression but also pave the way for more informed design strategies for art therapy.",
+          "relevance_score": 21.818863,
+          "id": "https://openalex.org/W7153735767"
+        },
+        {
+          "title": "Clinical efficacy of intermittent theta burst stimulation in the acute phase of adolescent depression: study protocol of a double-blind, randomized controlled trial",
+          "abstract": "ChiCTR2500101152. Retrospectively registered on 21 April 2025.",
+          "relevance_score": 10.87611,
+          "id": "https://openalex.org/W7154048031"
+        },
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 0.6644687,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "abstract": "The role of pharmacogenomics (PGx) for identifying individualized therapeutic approaches in patients with psychiatric disorders is a topic of intense debate in the literature, from clinical, pharmacoeconomic, ethical, educational, and theoretical perspectives. The objectives of this narrative review were (1) to synthesise the genetic evidence base for psychiatric PGx, with particular attention to the hierarchy between pharmacokinetics, pharmacodynamics and emerging epigenetic or polygenic markers; (2) to evaluate the clinical integration of pharmacogenomics in psychiatry, focusing on PGx-guided versus treatment-as-usual randomized trials, meta-analyses, economic evaluations and real-world implementation projects; (3) to analyse structural, educational and ethical challenges that condition the translation of genetic evidence into practice. Based on the reviewed primary and secondary reports, relevant data were found regarding antidepressant PGx, and less for antipsychotics and mood stabilizers. Pharmacoenomic data and structural, economic, and implementation barriers have also been explored, as well as educational and ethical challenges in the field of PGx implementation in psychiatry. In conclusion, psychiatric pharmacogenomics is placed at the intersection between relatively strong but narrow pharmacokinetic evidence, weaker and heterogeneous pharmacodynamic findings, and substantial implementation and ethical constraints. The most clinically actionable data concern CYP2D6 and CYP2C19 variants for certain antidepressants and, to a lesser extent, antipsychotics, which reliably predict serum levels and adverse effects and show modest associations with treatment response and remission.",
+          "relevance_score": 0.6508827,
+          "id": "https://openalex.org/W7151450270"
+        },
+        {
+          "title": "Insomnia Severity Predicts Suicide Attempts in Youth with depression: A 6-Month Prospective Cohort Study",
+          "abstract": "",
+          "relevance_score": 0.62683165,
+          "id": "https://openalex.org/W7151109420"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 14,
+      "query": "(\"meta-analysis\" OR \"systematic review\") AND (\"adolescent depression\" OR \"pediatric depression\")",
+      "angle": "Evaluation - Meta-analyses and reviews",
+      "rationale": "A recall-safety query to capture synthesized evidence and effect sizes, another key interest for staying current.",
+      "openalex_count": 28,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The relationship between Resolution of Marital Conflict and Adolescents\u2019 Depressive Symptoms: The mediating role of Mother-Adolescent Bonding",
+          "abstract": "",
+          "relevance_score": 0.47903675,
+          "id": "https://openalex.org/W7151423824"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "abstract": "Background/Objectives: Research comprehensively analyzing the psychological characteristics and factors related to smartphone addiction in Korean children and adolescents at risk for depression remains scarce. This study utilized large-scale cohort data to examine the differences in psychological characteristics between an at-risk group for depression and a control group, and to identify the specific factors influencing smartphone addiction within the at-risk group. Methods: Data were obtained from the school-based cohort of internet and smartphone users conducted by the National Center for Mental Health (NCMH), involving a total of 2294 children and adolescents (1009 in the at-risk for depression group and 1285 in the control group). Assessment tools included the Children\u2019s Depression Inventory (CDI), State-Trait Anxiety Inventory for Children (STAIC/TAIC), Self-Esteem Scale (SES), Self-Control Scale, Aggression Questionnaire (K-AQ), School Bullying (SB) scale, and the Smartphone Addiction Scale-Short Form (SAS-SV). Results: Analysis of Covariance (ANCOVA) revealed that the at-risk group exhibited significantly higher levels of anxiety, aggression, involvement in school bullying, and smartphone addiction compared to the control group, while showing lower levels of self-esteem and self-control. Furthermore, multiple regression analysis indicated that higher anxiety and lower self-control were significant predictors of increased smartphone addiction levels. Conclusions: These findings support the Interaction of Person-Affect-Cognition-Execution (I-PACE) model, which posits that emotional vulnerability and deficits in executive functions lead to addictive behaviors. The results suggest that reducing anxiety and enhancing self-control are critical factors in the prevention of smartphone addiction among children and adolescents.",
+          "relevance_score": 0.45839664,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "Trends in Youth Mental Health Among Patients in Family Medicine Practices: 2017\u20132023",
+          "abstract": "The impact of the pandemic on pediatric mental health was heterogeneous across demographic groups and mental health conditions. Older adolescent females experienced persistently high levels of diagnosed ADHD, anxiety, and mood disorders, although there are signs of reversion to prepandemic levels.",
+          "relevance_score": 0.45517048,
+          "id": "https://openalex.org/W7153911097"
+        },
+        {
+          "title": "Longitudinal Associations Between Family Socioeconomic Status and Adolescent Depressive Symptom Trajectories in China: A Chain Multiple Mediation Model",
+          "abstract": "Although family socioeconomic status (SES) has been widely associated with adolescent depressive symptoms, less is known about how multidimensional SES shapes depressive symptom trajectories through family and individual mechanisms. Guided by the Family Stress Model, this study examined the associations between family SES and adolescents\u2019 depressive symptom trajectories and tested the mediating roles of maternal mental health, parenting practices, and adolescent self-esteem. Data were drawn from six waves of the China Family Panel Studies (2010\u20132020), including 2,245 children followed from early childhood into adolescence (Mage = 6.45 years, SD = 1.12; 54% female). Latent growth modeling was used to estimate the intercept and slope of depressive symptoms, and structural equation modeling was applied to test mediation pathways. Results showed that across all family SES indicators, there was an indirect effect on the intercept of adolescent depressive symptoms through the sequential mediation of maternal mental health, parenting style, and self-esteem. For the slope of depressive symptoms, all SES indicators exerted indirect effects via self-esteem. Additionally, parental occupational status showed an additional indirect effect on the slope through parenting style. Across all models, higher self-esteem predicted lower initial levels of depressive symptoms but was associated with steeper increases in symptoms over time. These findings highlight the dynamic family and individual processes linking socioeconomic disadvantage to adolescent depressive symptom development.",
+          "relevance_score": 0.44615096,
+          "id": "https://openalex.org/W7151335438"
+        },
+        {
+          "title": "Systemic Inflammatory Biomarkers and Non-Suicidal Self-Injury in Adolescents with Mental Disorders: A Threshold Effect Analysis",
+          "abstract": "",
+          "relevance_score": 0.44314268,
+          "id": "https://openalex.org/W7153982070"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 15,
+      "query": "(\"comorbid\" OR \"co-occurring\" OR \"comorbidity\") AND (\"adolescent depression\" OR \"youth depression\") AND (anxiety)",
+      "angle": "Core subject - Depression with comorbid anxiety",
+      "rationale": "Specifically narrows the focus to the common clinical presentation the reader treats, filtering the broader depression literature.",
+      "openalex_count": 7,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Insomnia Severity Predicts Suicide Attempts in Youth with depression: A 6-Month Prospective Cohort Study",
+          "abstract": "",
+          "relevance_score": 0.77706677,
+          "id": "https://openalex.org/W7151109420"
+        },
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "abstract": "Background/Objectives: Research comprehensively analyzing the psychological characteristics and factors related to smartphone addiction in Korean children and adolescents at risk for depression remains scarce. This study utilized large-scale cohort data to examine the differences in psychological characteristics between an at-risk group for depression and a control group, and to identify the specific factors influencing smartphone addiction within the at-risk group. Methods: Data were obtained from the school-based cohort of internet and smartphone users conducted by the National Center for Mental Health (NCMH), involving a total of 2294 children and adolescents (1009 in the at-risk for depression group and 1285 in the control group). Assessment tools included the Children\u2019s Depression Inventory (CDI), State-Trait Anxiety Inventory for Children (STAIC/TAIC), Self-Esteem Scale (SES), Self-Control Scale, Aggression Questionnaire (K-AQ), School Bullying (SB) scale, and the Smartphone Addiction Scale-Short Form (SAS-SV). Results: Analysis of Covariance (ANCOVA) revealed that the at-risk group exhibited significantly higher levels of anxiety, aggression, involvement in school bullying, and smartphone addiction compared to the control group, while showing lower levels of self-esteem and self-control. Furthermore, multiple regression analysis indicated that higher anxiety and lower self-control were significant predictors of increased smartphone addiction levels. Conclusions: These findings support the Interaction of Person-Affect-Cognition-Execution (I-PACE) model, which posits that emotional vulnerability and deficits in executive functions lead to addictive behaviors. The results suggest that reducing anxiety and enhancing self-control are critical factors in the prevention of smartphone addiction among children and adolescents.",
+          "relevance_score": 0.7420807,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "Mental health and help-seeking behaviour among secondary school adolescents in Nsukka, Nigeria: a cross-sectional survey",
+          "abstract": "Globally, depression and anxiety remain a public health concern among adolescents. Understanding the role of help-seeking behaviour in predicting the prevalence of depression and anxiety among adolescents is important for designing effective interventions. This study investigated the relationship between help-seeking behaviour and the prevalence of depression and anxiety among school adolescents in Nsukka, Nigeria. A descriptive cross-sectional study was conducted among randomly selected adolescents aged 10\u201319 from three secondary schools in Nsukka, Nigeria. The Patient Health Questionnaire-9 (PHQ-9), Generalized Anxiety Disorder 7-item (GAD-7) Scale, and General Help-seeking Questionnaire (GHSQ) were used for the data collection. Using stratified random sampling technique, 394 respondents were recruited for this study. All participants provided informed consent prior to the study initiation. The data obtained were analyzed using descriptive statistics, chi-square test, and multivariate logistic regression. The level of significance was set at p < 0.05. A total of 394 school adolescents participated in this study, yielding a response rate of 88.5%. Most students were female (n = 272, 69.0%) and aged 14\u201317 (n = 233, 59.1%). The prevalence of moderate to severe symptoms of depression and anxiety were 22.1% and 21.3%, respectively. The most frequent source of help for depression or anxiety among adolescents were the parents (n = 284, 72.1%). The indifferent attitude to help-seeking from friends (OR = 2.125, 95%CI = 1.243\u20133.635, p = 0.006), school counsellor (OR = 2.953, 95%CI = 1.334\u20136.537, p = 0.008), and religious leaders (OR = 2.037, 95%CI = 1.002\u20134.142, p = 0.038) were associated with a higher prevalence of depression. Similarly, being neutral or indifferent about seeking help from school counsellors (OR = 2.485, 95%CI = 1.160\u20135.320, p = 0.019) and religious leaders (OR = 2.171, 95%CI = 1.090\u20134.324, p = 0.027) were associated with higher odds of developing anxiety compared to those more likely to seek help from these sources. In this study, one in five adolescents has moderate to severe symptoms of depression and anxiety. Indifferent attitude to help-seeking from friends, school counsellors, and religious leaders were associated with higher prevalence of depression and anxiety among school adolescents. Therefore, school-based mental health education and literacy programs is recommended as a way of improving early detection and care for adolescents with psychological issues.",
+          "relevance_score": 0.5763186,
+          "id": "https://openalex.org/W7151280074"
+        },
+        {
+          "title": "Cumulative childhood trauma exposure and depressive and anxiety symptoms among Kenyan adolescents: A multilevel school-based study",
+          "abstract": "",
+          "relevance_score": 0.56136066,
+          "id": "https://openalex.org/W7151255133"
+        },
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "abstract": "The role of pharmacogenomics (PGx) for identifying individualized therapeutic approaches in patients with psychiatric disorders is a topic of intense debate in the literature, from clinical, pharmacoeconomic, ethical, educational, and theoretical perspectives. The objectives of this narrative review were (1) to synthesise the genetic evidence base for psychiatric PGx, with particular attention to the hierarchy between pharmacokinetics, pharmacodynamics and emerging epigenetic or polygenic markers; (2) to evaluate the clinical integration of pharmacogenomics in psychiatry, focusing on PGx-guided versus treatment-as-usual randomized trials, meta-analyses, economic evaluations and real-world implementation projects; (3) to analyse structural, educational and ethical challenges that condition the translation of genetic evidence into practice. Based on the reviewed primary and secondary reports, relevant data were found regarding antidepressant PGx, and less for antipsychotics and mood stabilizers. Pharmacoenomic data and structural, economic, and implementation barriers have also been explored, as well as educational and ethical challenges in the field of PGx implementation in psychiatry. In conclusion, psychiatric pharmacogenomics is placed at the intersection between relatively strong but narrow pharmacokinetic evidence, weaker and heterogeneous pharmacodynamic findings, and substantial implementation and ethical constraints. The most clinically actionable data concern CYP2D6 and CYP2C19 variants for certain antidepressants and, to a lesser extent, antipsychotics, which reliably predict serum levels and adverse effects and show modest associations with treatment response and remission.",
+          "relevance_score": 0.5013008,
+          "id": "https://openalex.org/W7151450270"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 16,
+      "query": "(\"implementation science\" OR \"dissemination\" OR \"effectiveness trial\" OR \"community settings\") AND (\"adolescent depression\" OR \"youth depression\")",
+      "angle": "Applied concerns - Implementation and real-world effectiveness",
+      "rationale": "Targets the bridge between research evidence and clinical practice, a growing area of importance.",
+      "openalex_count": 5,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Dyadic Context of Preadolescent Girls\u2019 Depressive Symptoms: Elucidating The Role of Biobehavioral Synchrony",
+          "abstract": "Biobehavioral synchrony represents a dynamic interpersonal mechanism that influences parent and child depression risk via parent-child interactions, which may operate directly or in concert with depression-related impairments in parenting. We hypothesized that parent depressive symptoms and unsupportive emotion-related socialization behavior (ERSB) would negatively predict positive affect and physiological synchrony, and that these parent factors would moderate the effects of dyadic synchrony on daughters\u2019 depressive symptoms. Eighty parent (87.5% female)-daughter (Mchild age = 8.26 years, SDchild age = 1.51 years; 38.0% White) dyads participated in a 5-minute conflict discussion task, during which second-by-second estimates of parent unsupportive ERSB and parent and daughter affect and respiratory sinus arrhythmia (RSA) were obtained. Parent self-reported depressive symptoms and rated child behavior problems. Contrary to hypotheses, path models suggested that neither parent depressive symptoms nor unsupportive ERSB was associated with dyadic synchrony of positive affect or RSA. However, as expected, parent depressive symptoms and unsupportive ERSB moderated predictions of daughters\u2019 depression symptoms from dyadic synchrony. The nature of these interactive effects depended on the synchrony modality (i.e., positive affect, RSA) and parent factor under investigation. RSA synchrony during parent-daughter conflict discussion buffered against the adverse effects of parent depressive symptoms on daughters. Importantly, these patterns were specific to daughters\u2019 depressive symptoms rather than general dimensions of child psychopathology. These results underscore the centrality of multimodal, dynamic processes through which parent-daughter interactions may shape depression risk in daughters. Parents and their school-aged daughters vary in the extent to which they synchronize their positive affect and physiological functioning during a conflict discussion. Positive affect and physiological synchrony were not related, highlighting unique processes of biobehavioral synchrony. Further, both forms of synchrony modulated parent-related risk, but in different ways depending on the domain of synchrony and type of parent risk factor.",
+          "relevance_score": 0.51309496,
+          "id": "https://openalex.org/W7153224466"
+        },
+        {
+          "title": "Associations between naturally occurring school engagement with public health units and adolescent mental health",
+          "abstract": "Based on these findings, school engagement with their local PHU may be associated with student anxiety and depression. However, more research over a longer time frame and with more detailed measures of PHU engagement is needed.",
+          "relevance_score": 0.4539897,
+          "id": "https://openalex.org/W7151892976"
+        },
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 0.37598515,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "Implementing Problem Management Plus (PM+) in Haiti: qualitative study",
+          "abstract": "PM+ appeared feasible in the Haitian context from an implementation perspective; however, its implementability depends on cultural adaptations, economic considerations and sustained support for facilitators. Addressing systemic barriers and integrating task-sharing interventions within existing health structures could enhance the long-term impact.",
+          "relevance_score": 0.32621735,
+          "id": "https://openalex.org/W7151576754"
+        },
+        {
+          "title": "Data-Driven Knowledge for Impact in Quality of Life Research",
+          "abstract": "This study presents a systematic review of methodological approaches published in Applied Research in Quality of Life (ARQOL) from 2006 onward, focusing on quantitative analyses and the methodological approaches used to assess quality of life (QoL) through social indicators and scale development. Sixty-five eligible articles containing keywords such as \u201cindex,\u201d \u201cscale,\u201d \u201cmeasurement,\u201d and \u201cquality of life\u201d were analyzed to trace methodological and thematic trends. ARQOL has become a pivotal venue for methodological, empirical, and conceptual advances in measuring QoL. Our results demonstrate that ARQOL\u2019s contributions are broadly distributed, with the most significant portion of articles in four areas: (1) health & aging (14%), (2) measurement development (16%), (3) work and organizations, and (4) macro and cross-national (each 11%). Methodologically, psychometric scale studies (37) and large-scale survey analyses (34) dominate, while global-level social indicator work (3) remains limited. A central focus of our study is the call for ARQOL research to move beyond national and regional boundaries. We argue that integrating social indicators can foster cross-national perspectives that acknowledge the social, cultural, and economic diversity shaping QoL worldwide. Nonetheless, over the past two decades, ARQOL articles have revealed increasing methodological sophistication (including composite indicator design, multilevel and structural modeling, and cross-cultural validation). We synthesize these developments in the IMPACT framework, highlighting the integrative measurement of multiple indicators and policy-relevant frameworks of ARQOL research that continue to shape the empirical science of QoL.",
+          "relevance_score": 0.22961316,
+          "id": "https://openalex.org/W7151385276"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.3
+    }
+  ]
+}

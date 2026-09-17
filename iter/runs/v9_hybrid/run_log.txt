@@ -1,0 +1,225 @@
+=== llm_agents === Thu Apr 16 15:18:32 CEST 2026
+  [discover w/ google/gemini-3.1-pro-preview on step 4]
+profile: profiles/llm_agents.md
+angles:  profiles/llm_agents.angles.json (8 angles, subject='LLM agents')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=google/gemini-3.1-pro-preview  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_hybrid/llm_agents.json
+PLAN:      runs/v9_hybrid/llm_agents.json.plan.json
+======================================================================
+  seeds:           5 (0.00012035$)
+  vocabulary:      250 papers, 15 topics, 25 keywords
+  library:         14 queries (0.051146$)
+  validation:      {'good': 8, 'low': 6}
+  reformulated:    yes (3 replacements, $0.000312943)
+  TOTAL COST:      $0.051579
+  TOTAL LATENCY:   222.2s
+    rc=0
+  [score: default search, abstract-aware]
+plan:    runs/v9_hybrid/llm_agents.json.plan.json (prebuilt, 14 queries)
+profile: profiles/llm_agents.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=  201 healthy
+  Q 2 [core                                    ] count=  593 recall_safety
+  Q 3 [core                                    ] count=   64 healthy
+  Q 4 [core                                    ] count=  204 healthy
+  Q 5 [intersection                            ] count=  225 healthy
+  Q 6 [intersection                            ] count=  355 healthy
+  Q 7 [intersection                            ] count=  114 healthy
+  Q 8 [intersection                            ] count=  193 healthy
+  Q 9 [adjacent                                ] count=  385 healthy
+  Q10 [adjacent                                ] count=  442 healthy
+  Q11 [adjacent                                ] count=  111 healthy
+  Q12 [core                                    ] count=   79 healthy
+  Q13 [serendipity                             ] count=  105 healthy
+  Q14 [serendipity                             ] count=  518 recall_safety
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: runs/v9_hybrid/llm_agents.rescored.json
+======================================================================
+  queries:          14
+  bands:            zero=0 low=0 healthy=12 recall_safety=2 too_broad=0
+  frac healthy:     86%
+  mean precision:   45%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.48, 'recall_safety': 0.25, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+    rc=0
+=== marketing === Thu Apr 16 15:24:12 CEST 2026
+  [discover w/ google/gemini-3.1-pro-preview on step 4]
+profile: profiles/marketing.md
+angles:  profiles/marketing.angles.json (8 angles, subject='Marketing science')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=google/gemini-3.1-pro-preview  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_hybrid/marketing.json
+PLAN:      runs/v9_hybrid/marketing.json.plan.json
+======================================================================
+  seeds:           5 (0.00014153$)
+  vocabulary:      123 papers, 15 topics, 25 keywords
+  library:         13 queries (0.038476$)
+  validation:      {'good': 6, 'low': 4, 'zero': 3}
+  reformulated:    yes (5 replacements, $0.000335)
+  TOTAL COST:      $0.038953
+  TOTAL LATENCY:   150.1s
+    rc=0
+  [score: default search, abstract-aware]
+plan:    runs/v9_hybrid/marketing.json.plan.json (prebuilt, 13 queries)
+profile: profiles/marketing.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=  302 healthy
+  Q 2 [core                                    ] count=  122 healthy
+  Q 3 [core                                    ] count=   65 healthy
+  Q 4 [intersection                            ] count=  223 healthy
+  Q 5 [intersection                            ] count=  156 healthy
+  Q 6 [adjacent                                ] count=  506 recall_safety
+  Q 7 [adjacent                                ] count=  532 recall_safety
+  Q 8 [serendipity                             ] count=   51 healthy
+  Q 9 [core                                    ] count=   54 healthy
+  Q10 [core                                    ] count=  272 healthy
+  Q11 [intersection                            ] count=   34 healthy
+  Q12 [intersection                            ] count=   66 healthy
+  Q13 [serendipity                             ] count=   29 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: runs/v9_hybrid/marketing.rescored.json
+======================================================================
+  queries:          13
+  bands:            zero=0 low=1 healthy=10 recall_safety=2 too_broad=0
+  frac healthy:     77%
+  mean precision:   48%
+  per-band prec:    {'zero': None, 'low': 0.3, 'healthy': 0.5, 'recall_safety': 0.45, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+    rc=0
+=== afib === Thu Apr 16 15:28:53 CEST 2026
+  [discover w/ google/gemini-3.1-pro-preview on step 4]
+profile: profiles/afib.md
+angles:  profiles/afib.angles.json (8 angles, subject='Atrial fibrillation treatment')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=google/gemini-3.1-pro-preview  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_hybrid/afib.json
+PLAN:      runs/v9_hybrid/afib.json.plan.json
+======================================================================
+  seeds:           5 (0.000161$)
+  vocabulary:      207 papers, 15 topics, 25 keywords
+  library:         13 queries (0.046892$)
+  validation:      {'good': 2, 'low': 7, 'zero': 4}
+  reformulated:    yes (6 replacements, $0.00039144)
+  TOTAL COST:      $0.047444
+  TOTAL LATENCY:   263.3s
+    rc=0
+  [score: default search, abstract-aware]
+plan:    runs/v9_hybrid/afib.json.plan.json (prebuilt, 13 queries)
+profile: profiles/afib.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=   50 healthy
+  Q 2 [core                                    ] count=  115 healthy
+  Q 3 [core                                    ] count=   31 healthy
+  Q 4 [intersection                            ] count=   54 healthy
+  Q 5 [intersection                            ] count=   12 low
+  Q6: ERROR The read operation timed out
+  Q 6 [adjacent                                ] count=   -1 error
+  Q 7 [serendipity                             ] count=   10 low
+  Q 8 [core                                    ] count=    6 low
+  Q 9 [core                                    ] count=   11 low
+  Q10 [intersection                            ] count=    7 low
+  Q11 [intersection                            ] count=   30 healthy
+  Q12 [adjacent                                ] count=   17 low
+  Q13 [serendipity                             ] count=    3 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: runs/v9_hybrid/afib.rescored.json
+======================================================================
+  queries:          13
+  bands:            zero=0 low=7 healthy=5 recall_safety=0 too_broad=0
+  frac healthy:     38%
+  mean precision:   57%
+  per-band prec:    {'zero': None, 'low': 0.51, 'healthy': 0.64, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+    rc=0
+=== adolescent_depression === Thu Apr 16 15:40:15 CEST 2026
+  [discover w/ google/gemini-3.1-pro-preview on step 4]
+profile: profiles/adolescent_depression.md
+angles:  profiles/adolescent_depression.angles.json (12 angles, subject='Adolescent depression')
+model:   default=deepseek/deepseek-v3.2  seed=deepseek/deepseek-v3.2  library=google/gemini-3.1-pro-preview  reformulate=deepseek/deepseek-v3.2
+window:  2026-04-06 to 2026-04-13 (vocab back 6mo)
+
+[discover] running 6-step pipeline...
+
+======================================================================
+DISCOVERY: runs/v9_hybrid/adolescent_depression.json
+PLAN:      runs/v9_hybrid/adolescent_depression.json.plan.json
+======================================================================
+  seeds:           5 (0.00014646$)
+  vocabulary:      160 papers, 15 topics, 25 keywords
+  library:         14 queries (0.044574$)
+  validation:      {'good': 6, 'low': 4, 'zero': 4}
+  reformulated:    yes (10 replacements, $0.00049958)
+  TOTAL COST:      $0.04522
+  TOTAL LATENCY:   106.3s
+    rc=0
+  [score: default search, abstract-aware]
+plan:    runs/v9_hybrid/adolescent_depression.json.plan.json (prebuilt, 14 queries)
+profile: profiles/adolescent_depression.md
+filter:  search
+dates:   2026-04-06 to 2026-04-13
+
+[2/3] running OpenAlex queries...
+  Q 1 [core                                    ] count=  356 healthy
+  Q 2 [core                                    ] count=  585 recall_safety
+  Q 3 [intersection                            ] count=   28 low
+  Q 4 [adjacent                                ] count=  171 healthy
+  Q5: ERROR The read operation timed out
+  Q 5 [core                                    ] count=   -1 error
+  Q 6 [core                                    ] count=   67 healthy
+  Q7: ERROR The read operation timed out
+  Q 7 [core                                    ] count=   -1 error
+  Q 8 [intersection                            ] count=  233 healthy
+  Q 9 [intersection                            ] count=  383 healthy
+  Q10 [intersection                            ] count=  264 healthy
+  Q11: ERROR The read operation timed out
+  Q11 [adjacent                                ] count=   -1 error
+  Q12 [adjacent                                ] count=    7 low
+  Q13: ERROR The read operation timed out
+  Q13 [serendipity                             ] count=   -1 error
+  Q14: ERROR The read operation timed out
+  Q14 [serendipity                             ] count=   -1 error
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: runs/v9_hybrid/adolescent_depression.rescored.json
+======================================================================
+  queries:          14
+  bands:            zero=0 low=2 healthy=6 recall_safety=1 too_broad=0
+  frac healthy:     43%
+  mean precision:   38%
+  per-band prec:    {'zero': None, 'low': 0.4, 'healthy': 0.38, 'recall_safety': 0.3, 'too_broad': None, 'error': None}
+  plan cost:        $0.0
+  PASSING:          no
+    rc=0
+=== ALL DONE in 1774s ===

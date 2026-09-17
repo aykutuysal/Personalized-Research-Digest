@@ -1,0 +1,277 @@
+{
+  "timestamp": "2026-04-13T10:14:08.609169+00:00",
+  "prompt_file": "iter/prompts/v0_original.md",
+  "profile_file": "iter/profiles/afib.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.00118754,
+  "plan_elapsed_s": 62.0,
+  "num_queries": 14,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 14
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Atrial fibrillation treatment",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"atrial fibrillation\" AND (\"catheter ablation\" OR \"pulmonary vein isolation\") AND (\"randomized trial\" OR \"registry\" OR \"outcomes\")",
+        "angle": "Core ablation techniques and outcomes",
+        "rationale": "Catches major clinical studies on the primary interventional rhythm control strategy."
+      },
+      {
+        "id": 2,
+        "query": "\"atrial fibrillation\" AND (\"direct oral anticoagulant\" OR DOAC OR \"apixaban\" OR \"rivaroxaban\" OR \"dabigatran\" OR \"edoxaban\") AND (\"stroke prevention\" OR \"bleeding risk\")",
+        "angle": "Anticoagulation management and safety",
+        "rationale": "Targets the critical balance of stroke prevention versus bleeding with modern DOACs."
+      },
+      {
+        "id": 3,
+        "query": "\"atrial fibrillation\" AND (\"rate control\" OR \"rhythm control\") AND (\"randomized trial\" OR \"meta-analysis\" OR \"systematic review\")",
+        "angle": "Rate vs rhythm control debate",
+        "rationale": "Focuses on high-level evidence comparing the two fundamental management strategies."
+      },
+      {
+        "id": 4,
+        "query": "\"atrial fibrillation\" AND (\"left atrial appendage closure\" OR \"WATCHMAN\" OR \"LAAO\") AND (\"clinical trial\" OR \"registry\" OR \"outcomes\")",
+        "angle": "Left atrial appendage occlusion",
+        "rationale": "Captures evidence on this non-pharmacologic stroke prevention option for selected patients."
+      },
+      {
+        "id": 5,
+        "query": "\"atrial fibrillation\" AND (\"guideline\" OR \"consensus statement\" OR \"position paper\") AND (ACC OR AHA OR ESC OR HRS)",
+        "angle": "Guideline and consensus updates",
+        "rationale": "Directly targets practice-informing documents from major cardiology societies."
+      },
+      {
+        "id": 6,
+        "query": "\"atrial fibrillation\" AND (\"cryoballoon ablation\" OR \"radiofrequency ablation\") AND (\"efficacy\" OR \"safety\" OR \"comparative\")",
+        "angle": "Ablation technology comparisons",
+        "rationale": "Focuses on studies comparing specific ablation modalities relevant to device selection."
+      },
+      {
+        "id": 7,
+        "query": "\"atrial fibrillation\" AND (\"early rhythm control\" OR \"first-line ablation\")",
+        "angle": "Evolving timing/indications for rhythm control",
+        "rationale": "Catches recent trial data challenging traditional treatment sequencing."
+      },
+      {
+        "id": 8,
+        "query": "\"atrial fibrillation\" AND (\"peri-procedural\" OR \"periprocedural\") AND (\"anticoagulation\" OR \"DOAC\")",
+        "angle": "Peri-procedural anticoagulation management",
+        "rationale": "Targets a key practical concern for ablation and cardioversion procedures."
+      },
+      {
+        "id": 9,
+        "query": "\"atrial fibrillation\" AND (\"heart failure\" OR \"HFpEF\" OR \"HFrEF\") AND (\"treatment\" OR \"management\")",
+        "angle": "AFib in heart failure co-management",
+        "rationale": "Addresses a critical and common comorbidity with specific management implications."
+      },
+      {
+        "id": 10,
+        "query": "\"atrial fibrillation\" AND (\"recurrence\" OR \"redo ablation\") AND (\"prediction\" OR \"risk factors\")",
+        "angle": "Ablation failure and recurrence",
+        "rationale": "Focuses on understanding and predicting procedural outcomes from a clinical perspective."
+      },
+      {
+        "id": 11,
+        "query": "\"atrial fibrillation\" AND (\"screening\" OR \"opportunistic screening\") AND (\"randomized trial\" OR \"clinical trial\")",
+        "angle": "Screening and early detection evidence",
+        "rationale": "Captures recent trial data on the clinical impact of systematic AFib detection."
+      },
+      {
+        "id": 12,
+        "query": "\"atrial fibrillation\" AND (\"hybrid ablation\" OR \"convergent procedure\" OR \"surgical ablation\")",
+        "angle": "Advanced/hybrid ablation approaches",
+        "rationale": "Targets evidence on complex or combined procedures for difficult cases."
+      },
+      {
+        "id": 13,
+        "query": "\"atrial fibrillation\" AND (\"renal impairment\" OR \"CKD\" OR \"dialysis\") AND (\"anticoagulation\" OR \"DOAC\")",
+        "angle": "AFib management in renal disease",
+        "rationale": "Addresses a high-risk subgroup with specific dosing and safety considerations."
+      },
+      {
+        "id": 14,
+        "query": "\"atrial fibrillation\" AND (\"pulsed field ablation\" OR \"PFA\")",
+        "angle": "Emerging ablation technology",
+        "rationale": "Captures the latest clinical data on this novel, potentially disruptive energy source."
+      }
+    ],
+    "coverage_notes": "The plan focuses on high-impact clinical evidence (trials, registries, guidelines, reviews) across the practitioner's stated interests: ablation techniques/outcomes, anticoagulation, rate/rhythm control, LAA closure, and stroke prevention. It deliberately excludes angles like basic science, genetics, and pure health economics. Queries are scoped with AND constraints (e.g., 'AND (randomized trial OR registry)') to maintain clinical relevance and precision for a busy electrophysiologist."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"atrial fibrillation\" AND (\"catheter ablation\" OR \"pulmonary vein isolation\") AND (\"randomized trial\" OR \"registry\" OR \"outcomes\")",
+      "angle": "Core ablation techniques and outcomes",
+      "rationale": "Catches major clinical studies on the primary interventional rhythm control strategy.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 2,
+      "query": "\"atrial fibrillation\" AND (\"direct oral anticoagulant\" OR DOAC OR \"apixaban\" OR \"rivaroxaban\" OR \"dabigatran\" OR \"edoxaban\") AND (\"stroke prevention\" OR \"bleeding risk\")",
+      "angle": "Anticoagulation management and safety",
+      "rationale": "Targets the critical balance of stroke prevention versus bleeding with modern DOACs.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 3,
+      "query": "\"atrial fibrillation\" AND (\"rate control\" OR \"rhythm control\") AND (\"randomized trial\" OR \"meta-analysis\" OR \"systematic review\")",
+      "angle": "Rate vs rhythm control debate",
+      "rationale": "Focuses on high-level evidence comparing the two fundamental management strategies.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 4,
+      "query": "\"atrial fibrillation\" AND (\"left atrial appendage closure\" OR \"WATCHMAN\" OR \"LAAO\") AND (\"clinical trial\" OR \"registry\" OR \"outcomes\")",
+      "angle": "Left atrial appendage occlusion",
+      "rationale": "Captures evidence on this non-pharmacologic stroke prevention option for selected patients.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 5,
+      "query": "\"atrial fibrillation\" AND (\"guideline\" OR \"consensus statement\" OR \"position paper\") AND (ACC OR AHA OR ESC OR HRS)",
+      "angle": "Guideline and consensus updates",
+      "rationale": "Directly targets practice-informing documents from major cardiology societies.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 6,
+      "query": "\"atrial fibrillation\" AND (\"cryoballoon ablation\" OR \"radiofrequency ablation\") AND (\"efficacy\" OR \"safety\" OR \"comparative\")",
+      "angle": "Ablation technology comparisons",
+      "rationale": "Focuses on studies comparing specific ablation modalities relevant to device selection.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 7,
+      "query": "\"atrial fibrillation\" AND (\"early rhythm control\" OR \"first-line ablation\")",
+      "angle": "Evolving timing/indications for rhythm control",
+      "rationale": "Catches recent trial data challenging traditional treatment sequencing.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 8,
+      "query": "\"atrial fibrillation\" AND (\"peri-procedural\" OR \"periprocedural\") AND (\"anticoagulation\" OR \"DOAC\")",
+      "angle": "Peri-procedural anticoagulation management",
+      "rationale": "Targets a key practical concern for ablation and cardioversion procedures.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "\"atrial fibrillation\" AND (\"heart failure\" OR \"HFpEF\" OR \"HFrEF\") AND (\"treatment\" OR \"management\")",
+      "angle": "AFib in heart failure co-management",
+      "rationale": "Addresses a critical and common comorbidity with specific management implications.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 10,
+      "query": "\"atrial fibrillation\" AND (\"recurrence\" OR \"redo ablation\") AND (\"prediction\" OR \"risk factors\")",
+      "angle": "Ablation failure and recurrence",
+      "rationale": "Focuses on understanding and predicting procedural outcomes from a clinical perspective.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 11,
+      "query": "\"atrial fibrillation\" AND (\"screening\" OR \"opportunistic screening\") AND (\"randomized trial\" OR \"clinical trial\")",
+      "angle": "Screening and early detection evidence",
+      "rationale": "Captures recent trial data on the clinical impact of systematic AFib detection.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "\"atrial fibrillation\" AND (\"hybrid ablation\" OR \"convergent procedure\" OR \"surgical ablation\")",
+      "angle": "Advanced/hybrid ablation approaches",
+      "rationale": "Targets evidence on complex or combined procedures for difficult cases.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "\"atrial fibrillation\" AND (\"renal impairment\" OR \"CKD\" OR \"dialysis\") AND (\"anticoagulation\" OR \"DOAC\")",
+      "angle": "AFib management in renal disease",
+      "rationale": "Addresses a high-risk subgroup with specific dosing and safety considerations.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 14,
+      "query": "\"atrial fibrillation\" AND (\"pulsed field ablation\" OR \"PFA\")",
+      "angle": "Emerging ablation technology",
+      "rationale": "Captures the latest clinical data on this novel, potentially disruptive energy source.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    }
+  ]
+}

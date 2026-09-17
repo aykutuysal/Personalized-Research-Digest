@@ -1,0 +1,654 @@
+{
+  "timestamp": "2026-04-13T11:05:42.044995+00:00",
+  "prompt_file": "iter/prompts/v7_slotfilled.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.00130936,
+  "plan_elapsed_s": 98.9,
+  "num_queries": 16,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 2,
+    "low": 14,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0.62,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.62,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries_per_angle": 2,
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+        "slot": 1,
+        "query": "\"charm pricing\" AND (\"consumer\" OR \"shopper\" OR \"purchase\")",
+        "rationale": "Catches papers directly testing the classic 9-ending price effect on consumer behavior."
+      },
+      {
+        "id": 2,
+        "angle_id": 1,
+        "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+        "slot": 2,
+        "query": "(\"price ending\" OR \"price point\" OR \"price perception\") AND (\"experiment\" OR \"field study\") AND (ecommerce OR \"direct-to-consumer\" OR \"online retail\")",
+        "rationale": "Broadens to general price perception research with an e-commerce/experimental focus, covering non-charm-specific findings."
+      },
+      {
+        "id": 3,
+        "angle_id": 2,
+        "angle": "discounts and promotions and their effect on brand",
+        "slot": 1,
+        "query": "\"discount\" AND (\"brand equity\" OR \"brand perception\" OR \"brand image\") AND (consumer OR shopper)",
+        "rationale": "Targets research directly examining the negative or positive brand consequences of promotional discounts."
+      },
+      {
+        "id": 4,
+        "angle_id": 2,
+        "angle": "discounts and promotions and their effect on brand",
+        "slot": 2,
+        "query": "(\"price promotion\" OR \"sales promotion\") AND (\"perceived quality\" OR \"reference price\" OR \"deal proneness\") AND NOT (\"supply chain\" OR \"inventory\")",
+        "rationale": "Uses broader promotion terminology to find studies on underlying quality perceptions and deal effects, scoped to consumer research."
+      },
+      {
+        "id": 5,
+        "angle_id": 3,
+        "angle": "ad creative effectiveness and persuasion",
+        "slot": 1,
+        "query": "\"ad creative\" AND (\"click-through rate\" OR \"conversion rate\" OR \"ad recall\") AND (\"online advertising\" OR \"digital ad\")",
+        "rationale": "Anchors on the specific phrase 'ad creative' combined with key performance metrics in digital contexts."
+      },
+      {
+        "id": 6,
+        "angle_id": 3,
+        "angle": "ad creative effectiveness and persuasion",
+        "slot": 2,
+        "query": "(\"advertisement\" OR \"advertising\") AND (\"visual\" OR \"message\" OR \"emotional\") AND (effectiveness OR persuasion) AND (ecommerce OR \"direct response\")",
+        "rationale": "A broader search for advertising effectiveness studies focusing on executional elements (visual/message) in commercial contexts."
+      },
+      {
+        "id": 7,
+        "angle_id": 4,
+        "angle": "product naming, branding, packaging",
+        "slot": 1,
+        "query": "\"product name\" AND (\"consumer evaluation\" OR \"purchase intention\") AND (experiment OR \"choice experiment\")",
+        "rationale": "Focuses on experimental research testing how different product names influence consumer judgments and choices."
+      },
+      {
+        "id": 8,
+        "angle_id": 4,
+        "angle": "product naming, branding, packaging",
+        "slot": 2,
+        "query": "(\"brand name\" OR \"packaging design\") AND (perception OR choice) AND (\"fast-moving consumer goods\" OR FMCG OR CPG)",
+        "rationale": "Broadens to include brand name and packaging design effects, scoped to tangible consumer goods categories relevant to DTC."
+      },
+      {
+        "id": 9,
+        "angle_id": 5,
+        "angle": "scarcity, urgency, social proof cues",
+        "slot": 1,
+        "query": "(\"scarcity appeal\" OR \"limited quantity\") AND (\"online purchase\" OR \"website\") AND (experiment OR \"field experiment\")",
+        "rationale": "Targets scarcity-specific interventions tested in online shopping environments with experimental methods."
+      },
+      {
+        "id": 10,
+        "angle_id": 5,
+        "angle": "scarcity, urgency, social proof cues",
+        "slot": 2,
+        "query": "(\"social proof\" OR \"urgency\" OR \"fear of missing out\") AND (ecommerce OR \"online retail\") AND (\"consumer behavior\" OR \"conversion\")",
+        "rationale": "Captures research on related social influence and urgency cues, using broader terminology but anchored to e-commerce outcomes."
+      },
+      {
+        "id": 11,
+        "angle_id": 6,
+        "angle": "landing page or checkout conversion optimization",
+        "slot": 1,
+        "query": "\"landing page\" AND (\"A/B test\" OR \"multivariate test\" OR \"conversion rate optimization\")",
+        "rationale": "Directly targets the testing methodology and outcome metric for landing page optimization."
+      },
+      {
+        "id": 12,
+        "angle_id": 6,
+        "angle": "landing page or checkout conversion optimization",
+        "slot": 2,
+        "query": "(\"checkout process\" OR \"shopping cart\") AND (abandonment OR friction) AND (\"user experience\" OR UX) AND ecommerce",
+        "rationale": "Focuses on the checkout stage, searching for research on reducing abandonment and friction through UX improvements."
+      },
+      {
+        "id": 13,
+        "angle_id": 7,
+        "angle": "consumer psychology / behavioral findings on purchasing",
+        "slot": 1,
+        "query": "\"nudge\" AND (purchase OR consumption) AND (\"field experiment\" OR \"randomized controlled trial\")",
+        "rationale": "Anchors on the specific 'nudge' concept applied to purchasing, demanding field experimental evidence."
+      },
+      {
+        "id": 14,
+        "angle_id": 7,
+        "angle": "consumer psychology / behavioral findings on purchasing",
+        "slot": 2,
+        "query": "(\"mental accounting\" OR \"default effect\" OR \"endowment effect\") AND (shopping OR \"consumer choice\")",
+        "rationale": "Targets other key behavioral economics concepts proven to influence shopping decisions, using broader search terms."
+      },
+      {
+        "id": 15,
+        "angle_id": 8,
+        "angle": "loyalty, retention, repeat purchase behavior",
+        "slot": 1,
+        "query": "\"customer retention\" AND (ecommerce OR \"subscription\" OR DTC) AND (predictors OR drivers)",
+        "rationale": "Focuses on the retention outcome specifically in relevant business models, looking for empirical drivers."
+      },
+      {
+        "id": 16,
+        "angle_id": 8,
+        "angle": "loyalty, retention, repeat purchase behavior",
+        "slot": 2,
+        "query": "(\"repeat purchase\" OR \"repurchase intention\") AND (loyalty OR satisfaction) AND (\"online shopping\")",
+        "rationale": "Uses the behavioral outcome (repeat purchase) and its psychological antecedents, scoped to online shopping."
+      }
+    ],
+    "coverage_notes": "Plan pairs a tight, phrase-anchored query with a broader, synonym-based query for each angle, all scoped to consumer/e-commerce contexts and empirical findings. Angle 7 (consumer psychology) was hardest, as its concepts are broad; focused on specific, proven behavioral effects with purchase applications."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"charm pricing\" AND (\"consumer\" OR \"shopper\" OR \"purchase\")",
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "rationale": "Catches papers directly testing the classic 9-ending price effect on consumer behavior.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+          "relevance_score": 8.73799,
+          "id": "https://openalex.org/W7152936304"
+        }
+      ],
+      "hit_labels": [
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 2,
+      "query": "(\"price ending\" OR \"price point\" OR \"price perception\") AND (\"experiment\" OR \"field study\") AND (ecommerce OR \"direct-to-consumer\" OR \"online retail\")",
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "rationale": "Broadens to general price perception research with an e-commerce/experimental focus, covering non-charm-specific findings.",
+      "openalex_count": 3,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Satisfaction as an Experience Engine in Promotion-Intensive Marketplaces: The Roles of Platform-Mediated Relationship Infrastructure and Price Fairness in Repurchase Intention (Shopee, Indonesia)",
+          "relevance_score": 0.40279502,
+          "id": "https://openalex.org/W7152101615"
+        },
+        {
+          "title": "Implementing a CYP2C19-guided approach for prescribing dual antiplatelet therapy in acute coronary syndrome for patients undergoing percutaneous coronary intervention: a cost-effectiveness analysis",
+          "relevance_score": 0.24729893,
+          "id": "https://openalex.org/W7152596118"
+        },
+        {
+          "title": "Regulation to Reinforce the Evidentiary-Science Base of U.S. Medicine in the Age of \"Omics\"",
+          "relevance_score": 0.12400168,
+          "id": "https://openalex.org/W7153169975"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.17
+    },
+    {
+      "id": 3,
+      "query": "\"discount\" AND (\"brand equity\" OR \"brand perception\" OR \"brand image\") AND (consumer OR shopper)",
+      "angle": "discounts and promotions and their effect on brand",
+      "rationale": "Targets research directly examining the negative or positive brand consequences of promotional discounts.",
+      "openalex_count": 19,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Integrated Brand Analysis and Strategy\u2014Strategic Decision Guidelines for Brand Positioning and Market Strategy",
+          "relevance_score": 1.0216137,
+          "id": "https://openalex.org/W7151773066"
+        },
+        {
+          "title": "The Influence of E-wom, Brand Image, and Price on Erigo's Purchase Decision on the Shopee Application",
+          "relevance_score": 1.0004197,
+          "id": "https://openalex.org/W7151819364"
+        },
+        {
+          "title": "Changing Food Consumption Patterns: A Study of Quick-Service",
+          "relevance_score": 0.78371555,
+          "id": "https://openalex.org/W7151902725"
+        },
+        {
+          "title": "Assessing the Effects of Marketing Strategies on Local Trade: A Case Study of Shoprite Zambia, Mufulira",
+          "relevance_score": 0.71159565,
+          "id": "https://openalex.org/W7153238748"
+        },
+        {
+          "title": "The Influence of Price and Online Customer Reviews on Fashion Purchase Decisions with Product Quality as a Mediating Variable on TikTok Shop",
+          "relevance_score": 0.660548,
+          "id": "https://openalex.org/W7151848178"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 4,
+      "query": "(\"price promotion\" OR \"sales promotion\") AND (\"perceived quality\" OR \"reference price\" OR \"deal proneness\") AND NOT (\"supply chain\" OR \"inventory\")",
+      "angle": "discounts and promotions and their effect on brand",
+      "rationale": "Uses broader promotion terminology to find studies on underlying quality perceptions and deal effects, scoped to consumer research.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Influence of Product Quality and Promotional Activities on Consumer Purchase Intention on the TikTok Shop Platform",
+          "relevance_score": 0.3427211,
+          "id": "https://openalex.org/W7152467506"
+        },
+        {
+          "title": "Fidelizaci\u00f3n de clientes en TikTok: construcci\u00f3n y validaci\u00f3n de un instrumento psicom\u00e9trico",
+          "relevance_score": 0.31498423,
+          "id": "https://openalex.org/W7153342278"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.75
+    },
+    {
+      "id": 5,
+      "query": "\"ad creative\" AND (\"click-through rate\" OR \"conversion rate\" OR \"ad recall\") AND (\"online advertising\" OR \"digital ad\")",
+      "angle": "ad creative effectiveness and persuasion",
+      "rationale": "Anchors on the specific phrase 'ad creative' combined with key performance metrics in digital contexts.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Generating Clicks: Display Advertising Within Social Media",
+          "relevance_score": 0.6274059,
+          "id": "https://openalex.org/W7152940265"
+        },
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 0.52310663,
+          "id": "https://openalex.org/W7153528954"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 6,
+      "query": "(\"advertisement\" OR \"advertising\") AND (\"visual\" OR \"message\" OR \"emotional\") AND (effectiveness OR persuasion) AND (ecommerce OR \"direct response\")",
+      "angle": "ad creative effectiveness and persuasion",
+      "rationale": "A broader search for advertising effectiveness studies focusing on executional elements (visual/message) in commercial contexts.",
+      "openalex_count": 11,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Mapping the Challenges of HCI: An Application and Evaluation of ChatGPT for Mining Insights at Scale",
+          "relevance_score": 2.911463,
+          "id": "https://openalex.org/W4380187116"
+        },
+        {
+          "title": "Web engineering for the evaluation of large complex web systems: methodologies in web metrics",
+          "relevance_score": 1.0214369,
+          "id": "https://openalex.org/W2767728468"
+        },
+        {
+          "title": "Perceived corporate and peer surveillance on the Internet",
+          "relevance_score": 0.88372755,
+          "id": "https://openalex.org/W7153964338"
+        },
+        {
+          "title": "Building Brand Trust Through Influencers: The Mediating Role of Consumer Engagement",
+          "relevance_score": 0.8447876,
+          "id": "https://openalex.org/W7151847502"
+        },
+        {
+          "title": "AI DRIVEN AND DATA DRIVEN MARKETING STRATEGIES AS PREDICTORS OF BRAND ENGAGEMENT: THE MEDIATING ROLE OF CONSUMER PREFERENCES AND BEHAVIOUR IN THE UK E COMMERCE INDUSTRY",
+          "relevance_score": 0.7570257,
+          "id": "https://openalex.org/W7153003391"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 7,
+      "query": "\"product name\" AND (\"consumer evaluation\" OR \"purchase intention\") AND (experiment OR \"choice experiment\")",
+      "angle": "product naming, branding, packaging",
+      "rationale": "Focuses on experimental research testing how different product names influence consumer judgments and choices.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 8,
+      "query": "(\"brand name\" OR \"packaging design\") AND (perception OR choice) AND (\"fast-moving consumer goods\" OR FMCG OR CPG)",
+      "angle": "product naming, branding, packaging",
+      "rationale": "Broadens to include brand name and packaging design effects, scoped to tangible consumer goods categories relevant to DTC.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Linking sustainability to consumer brand engagement in omnichannel communication of luxury fashion brands",
+          "relevance_score": 0.43759137,
+          "id": "https://openalex.org/W7152650117"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 9,
+      "query": "(\"scarcity appeal\" OR \"limited quantity\") AND (\"online purchase\" OR \"website\") AND (experiment OR \"field experiment\")",
+      "angle": "scarcity, urgency, social proof cues",
+      "rationale": "Targets scarcity-specific interventions tested in online shopping environments with experimental methods.",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Towards AI-Native Software Engineering (SE 3.0): A Vision and a Challenge Roadmap",
+          "relevance_score": 0.813197,
+          "id": "https://openalex.org/W4403344603"
+        }
+      ],
+      "hit_labels": [
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 10,
+      "query": "(\"social proof\" OR \"urgency\" OR \"fear of missing out\") AND (ecommerce OR \"online retail\") AND (\"consumer behavior\" OR \"conversion\")",
+      "angle": "scarcity, urgency, social proof cues",
+      "rationale": "Captures research on related social influence and urgency cues, using broader terminology but anchored to e-commerce outcomes.",
+      "openalex_count": 6,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "From Impulse To Regret: The Psychological Toll Of Parasocial-Driven Purchases And Algorithmic Amplification Among Gen Z",
+          "relevance_score": 0.66434574,
+          "id": "https://openalex.org/W7151553403"
+        },
+        {
+          "title": "The Effect of Digital Marketing Strategy, Brand Awareness, and Customer Satisfaction on Shopee Customer Loyalty in Batam with Customer Engagement as a Mediator",
+          "relevance_score": 0.66050833,
+          "id": "https://openalex.org/W7153135492"
+        },
+        {
+          "title": "Digital marketing\u2019s targets: cyberloafing and impulsive buying",
+          "relevance_score": 0.57254803,
+          "id": "https://openalex.org/W7153384196"
+        },
+        {
+          "title": "Affinity of Gen Z and Gen Y towards DTC brands: Role of online review and ratings and recommendation",
+          "relevance_score": 0.56626743,
+          "id": "https://openalex.org/W7152584363"
+        },
+        {
+          "title": "The Effect of Influencer Authenticity on Purchase Intention Mediated by Trust Transfer in Increasing Ventela Brand Consumers",
+          "relevance_score": 0.48565906,
+          "id": "https://openalex.org/W7151545237"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 11,
+      "query": "\"landing page\" AND (\"A/B test\" OR \"multivariate test\" OR \"conversion rate optimization\")",
+      "angle": "landing page or checkout conversion optimization",
+      "rationale": "Directly targets the testing methodology and outcome metric for landing page optimization.",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "\u0406\u041d\u0422\u0415\u041b\u0415\u041a\u0422\u0423\u0410\u041b\u042c\u041d\u0410 \u0410\u0412\u0422\u041e\u041c\u0410\u0422\u0418\u0417\u0410\u0426\u0406\u042f \u0412\u0415\u0411\u0420\u041e\u0417\u0420\u041e\u0411\u041a\u0418: \u0421\u0422\u0412\u041e\u0420\u0415\u041d\u041d\u042f \u041b\u0415\u041d\u0414\u0418\u041d\u0413 \u0421\u0422\u041e\u0420\u0406\u041d\u041e\u041a \u0406\u0417 \u0412\u0418\u041a\u041e\u0420\u0418\u0421\u0422\u0410\u041d\u041d\u042f\u041c \u0413\u0415\u041d\u0415\u0420\u0410\u0422\u0418\u0412\u041d\u041e\u0407 \u041c\u041e\u0412\u041d\u041e\u0407 \u041c\u041e\u0414\u0415\u041b\u0406 CHATGPT",
+          "relevance_score": 0.58387625,
+          "id": "https://openalex.org/W7151235741"
+        },
+        {
+          "title": "Perancangan Ulang UI/UX Website DNA Indonesia Menggunakan Metode Design Thinking (Studi Kasus: PT. Digital Niaga Aksesindo)",
+          "relevance_score": 0.23492227,
+          "id": "https://openalex.org/W7152683665"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 12,
+      "query": "(\"checkout process\" OR \"shopping cart\") AND (abandonment OR friction) AND (\"user experience\" OR UX) AND ecommerce",
+      "angle": "landing page or checkout conversion optimization",
+      "rationale": "Focuses on the checkout stage, searching for research on reducing abandonment and friction through UX improvements.",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "\"nudge\" AND (purchase OR consumption) AND (\"field experiment\" OR \"randomized controlled trial\")",
+      "angle": "consumer psychology / behavioral findings on purchasing",
+      "rationale": "Anchors on the specific 'nudge' concept applied to purchasing, demanding field experimental evidence.",
+      "openalex_count": 12,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Promoting healthier food purchases via social media: the role of polls and their visual features",
+          "relevance_score": 0.605279,
+          "id": "https://openalex.org/W7153032948"
+        },
+        {
+          "title": "Behavioural constraints in energy technology uptake: evidence from real-purchase offers in rural Rwanda and Senegal",
+          "relevance_score": 0.60023475,
+          "id": "https://openalex.org/W7151315966"
+        },
+        {
+          "title": "21st century Nobel laureates: economic reflections on contemporary challenges",
+          "relevance_score": 0.48644394,
+          "id": "https://openalex.org/W7153767048"
+        },
+        {
+          "title": "The relationship between health literacy, food literacy, and dietary choices\u2014a systematic review",
+          "relevance_score": 0.43555364,
+          "id": "https://openalex.org/W7151770546"
+        },
+        {
+          "title": "A bibliographic mapping analysis unraveling the progression of pro-environmental behavior in tourism research",
+          "relevance_score": 0.42945123,
+          "id": "https://openalex.org/W7151942840"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 14,
+      "query": "(\"mental accounting\" OR \"default effect\" OR \"endowment effect\") AND (shopping OR \"consumer choice\")",
+      "angle": "consumer psychology / behavioral findings on purchasing",
+      "rationale": "Targets other key behavioral economics concepts proven to influence shopping decisions, using broader search terms.",
+      "openalex_count": 5,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Personality, Culture and the Pain of Payment: Cross-national Differences",
+          "relevance_score": 3.6606107,
+          "id": "https://openalex.org/W7151802037"
+        },
+        {
+          "title": "The Psychology of Spending in Cashless Societies",
+          "relevance_score": 0.31340557,
+          "id": "https://openalex.org/W7153454291"
+        },
+        {
+          "title": "A Federated Digital Twin Framework for Consumer Wellbeing Systems",
+          "relevance_score": 0.28704172,
+          "id": "https://openalex.org/W7152628853"
+        },
+        {
+          "title": "21st century Nobel laureates: economic reflections on contemporary challenges",
+          "relevance_score": 0.25236568,
+          "id": "https://openalex.org/W7153767048"
+        },
+        {
+          "title": "Factors influencing customers to switch mobile brands",
+          "relevance_score": 0.119878694,
+          "id": "https://openalex.org/W7153674567"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 15,
+      "query": "\"customer retention\" AND (ecommerce OR \"subscription\" OR DTC) AND (predictors OR drivers)",
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "rationale": "Focuses on the retention outcome specifically in relevant business models, looking for empirical drivers.",
+      "openalex_count": 12,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "AI-Driven Customer Churn Prediction and Retention Optimization: A Multi-Layer Decision Intelligence System",
+          "relevance_score": 4.8622603,
+          "id": "https://openalex.org/W7153742308"
+        },
+        {
+          "title": "Multi-domain subscriber churn prediction using ANN",
+          "relevance_score": 0.7502876,
+          "id": "https://openalex.org/W7153628000"
+        },
+        {
+          "title": "Explaining and predicting consumer decision-making in E-commerce using an intelligent hybrid framework for impulsive and planned purchase behavior",
+          "relevance_score": 0.7311553,
+          "id": "https://openalex.org/W7153606973"
+        },
+        {
+          "title": "The Effect of Digital Marketing Strategy, Brand Awareness, and Customer Satisfaction on Shopee Customer Loyalty in Batam with Customer Engagement as a Mediator",
+          "relevance_score": 0.69490373,
+          "id": "https://openalex.org/W7153135492"
+        },
+        {
+          "title": "INFLUENCE OF E-COMMERCE ON THE PERFORMANCE OF SMEs IN ABIA AND IMO STATES",
+          "relevance_score": 0.641646,
+          "id": "https://openalex.org/W7151229743"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 16,
+      "query": "(\"repeat purchase\" OR \"repurchase intention\") AND (loyalty OR satisfaction) AND (\"online shopping\")",
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "rationale": "Uses the behavioral outcome (repeat purchase) and its psychological antecedents, scoped to online shopping.",
+      "openalex_count": 11,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Impact of Sales Promotion Techniques on Customer Responses in E-Commerce Platforms",
+          "relevance_score": 9.22237,
+          "id": "https://openalex.org/W7152460797"
+        },
+        {
+          "title": "A strategic perspective on determinants of e-repurchase intention in online shopping",
+          "relevance_score": 1.3702457,
+          "id": "https://openalex.org/W7151551617"
+        },
+        {
+          "title": "Satisfaction as an Experience Engine in Promotion-Intensive Marketplaces: The Roles of Platform-Mediated Relationship Infrastructure and Price Fairness in Repurchase Intention (Shopee, Indonesia)",
+          "relevance_score": 1.2979107,
+          "id": "https://openalex.org/W7152101615"
+        },
+        {
+          "title": "A FACTOR INFLUENCING THE REPURCHASE INTENTION ON TIKTOK FOR BABY BOTTLES",
+          "relevance_score": 1.2154309,
+          "id": "https://openalex.org/W7151913439"
+        },
+        {
+          "title": "The Antecedents of Online Travel Satisfaction and Loyalty (Literature Review)",
+          "relevance_score": 1.1815634,
+          "id": "https://openalex.org/W7150953495"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.8
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "catheter ablation heart failure outcomes",
+      "rationale": "Connects ablation techniques with important comorbidity. 'Heart failure' appears 22x in keywords, and user cares about clinical outcomes."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "atrial fibrillation ablation recurrence predictors",
+      "rationale": "Addresses practical clinical concern about ablation success. 'Recurrence' appears in sample titles, 'predictors' inferred from user's outcome focus."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "heart failure preserved ejection fraction ablation",
+      "rationale": "Targets specific patient subgroup mentioned in sample titles (HFpEF). Combines comorbidity management with ablation outcomes."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "intracardiac echocardiography ablation safety",
+      "rationale": "Draws from biomedical engineering/imaging techniques that improve ablation procedures. 'Intracardiac echocardiography' appears in sample titles."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "obstructive sleep apnea atrial fibrillation",
+      "rationale": "Connects common comorbidity with AFib management. 'Obstructive Sleep Apnea Research' appears 1x in topics, clinically relevant association."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "machine learning risk prediction ablation",
+      "rationale": "Leverages emerging computational methods for clinical risk assessment. 'Explainable machine learning' appears in sample titles for tamponade prediction."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "wearable monitoring atrial fibrillation detection",
+      "rationale": "Addresses user's interest in AFib screening/detection. Draws from 'wearables' in confirmed angles and detection/monitoring focus."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "inflammatory biomarkers atrial fibrillation prognosis",
+      "rationale": "Uses 'Inflammatory Biomarkers in Disease Prognosis' from topics (1x). Could yield insights on AFib progression or treatment response."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "core",
+      "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+      "rationale": "Replaced 'pulsed field ablation atrial fibrillation' (4 results) with broader 'pulsed field ablation atrial fibrillation randomized controlled trial' to capture more relevant studies while maintaining specificity with trial evidence."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "core",
+      "query": "left atrial appendage occlusion stroke prevention",
+      "rationale": "Replaced 'left atrial appendage occlusion stroke' (1 result) with 'left atrial appendage occlusion stroke prevention' to broaden scope while maintaining focus on preventive applications."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "core",
+      "query": "DOAC bleeding risk atrial fibrillation",
+      "rationale": "Replaced 'DOAC anticoagulation bleeding risk' (4 results) with 'DOAC bleeding risk atrial fibrillation' to use more common terminology and add disease context for better recall."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "core",
+      "query": "rate control rhythm control atrial fibrillation trial",
+      "rationale": "Replaced 'rate rhythm control randomized trial' (4 results) with 'rate control rhythm control atrial fibrillation trial' to include full phrases and disease context for better matching."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "radiofrequency ablation atrial fibrillation pulmonary vein",
+      "rationale": "Replaced 'radiofrequency ablation pulmonary vein isolation' (ZERO) with 'radiofrequency ablation atrial fibrillation pulmonary vein' to use more common terminology and remove restrictive 'isolation' term."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "antithrombotic therapy catheter ablation atrial fibrillation",
+      "rationale": "Replaced 'antithrombotic therapy catheter ablation' (ZERO) with 'antithrombotic therapy catheter ablation atrial fibrillation' to add essential disease context missing from original query."
+    },
+    {
+      "id": 15,
+      "angle_id": 15,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "frailty atrial fibrillation older adults",
+      "rationale": "Replaced 'frailty older adults atrial fibrillation' (ZERO) with 'frailty atrial fibrillation older adults' to reorder terms for better phrase matching and use vocabulary from extracted topics."
+    },
+    {
+      "id": 16,
+      "angle_id": 16,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "renal denervation atrial fibrillation",
+      "rationale": "Replaced 'renal sympathetic denervation atrial fibrillation' (ZERO) with 'renal denervation atrial fibrillation' to use broader, more commonly used terminology while maintaining the core concept."
+    }
+  ]
+}

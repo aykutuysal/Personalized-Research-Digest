@@ -1,0 +1,131 @@
+{
+  "subject": "AI agents",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "Agent monitoring and observability",
+      "query": "agent monitoring anomaly detection",
+      "rationale": "Directly serves the user's explicit mention of monitoring for AI agents. Uses vocabulary 'anomaly detection' (8x) from extracted data, focusing on practical implementation patterns for identifying agent failures.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "Agent monitoring and observability",
+      "query": "agent observability workflow",
+      "rationale": "Serves agent monitoring angle with applied focus. Combines 'observability' (angle term) with 'workflow' (22x) from vocabulary, targeting practical implementation insights for monitoring pipelines.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "Tool-use and function-calling agents",
+      "query": "tool use agents executable",
+      "rationale": "Core tool-use angle with practical implementation focus. Uses 'executable' (10x) from vocabulary, targeting technical details about how agents actually execute tools/functions.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "Tool-use and function-calling agents",
+      "query": "function calling agents modular design",
+      "rationale": "Serves tool-use angle with architecture insights. Uses 'modular design' (11x) from vocabulary, focusing on practical patterns for building maintainable function-calling systems.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "Multi-agent systems and collaboration",
+      "query": "multi agent systems orchestration",
+      "rationale": "Core multi-agent collaboration angle. Uses 'orchestration' (16x) from vocabulary, targeting practical techniques for coordinating agent teams - directly relevant to software engineer building agents.",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "Multi-agent systems and collaboration",
+      "query": "multi agent systems scalability",
+      "rationale": "Serves multi-agent angle with performance focus. Uses 'scalability' (15x) from vocabulary, addressing practical concerns when deploying collaborative agent systems at scale.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "Reasoning and planning architectures (e.g., ReAct, Chain-of-Thought, Tree-of-Thoughts)",
+      "query": "agent reasoning cognitive architecture",
+      "rationale": "Core reasoning/planning angle. Uses 'cognitive architecture' (17x) and 'cognition' (27x) from vocabulary, targeting technical implementations of ReAct/ToT-style reasoning systems.",
+      "dimension": "core"
+    },
+    {
+      "id": 8,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "Retrieval-Augmented Generation (RAG) for agents",
+      "query": "RAG agents inference",
+      "rationale": "Core RAG-for-agents angle. Uses 'inference' (10x) from vocabulary, focusing on practical performance considerations when combining retrieval with agent decision-making.",
+      "dimension": "core"
+    },
+    {
+      "id": 9,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "Agent benchmarking and evaluation",
+      "query": "agent evaluation testbed",
+      "rationale": "Core benchmarking angle with applied focus. Uses 'testbed' (7x) from vocabulary, targeting practical evaluation frameworks and metrics that software engineers can implement.",
+      "dimension": "core"
+    },
+    {
+      "id": 10,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "Memory and state management for long-running agents",
+      "query": "agent memory state management",
+      "rationale": "Core memory/state angle. Uses vocabulary terms 'state' (implied in state management) and 'management' (from data context), targeting technical architectures for persistent agents.",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "Cost and latency optimization for agent loops",
+      "query": "agent latency optimization",
+      "rationale": "Core cost/latency angle. Uses 'latency' (angle term) with 'optimization' (implied), focusing on practical techniques to speed up agent loops - directly relevant to production deployments.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "Human-in-the-loop and agent delegation",
+      "query": "human loop agent delegation",
+      "rationale": "Core human-in-the-loop angle. Uses 'delegation' (angle term) with 'human loop' (variation of vocabulary's 'workflow' context), targeting practical patterns for human-agent collaboration.",
+      "dimension": "core"
+    },
+    {
+      "id": 13,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "Code-generation and software-development agents",
+      "query": "code generation agents automation",
+      "rationale": "Core code-generation angle. Uses 'automation' (7x) from vocabulary, focusing on practical software development agents that automate coding tasks - perfect for software engineer user.",
+      "dimension": "core"
+    },
+    {
+      "id": 14,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "Agent monitoring and observability",
+      "query": "agent monitoring accountability",
+      "rationale": "Serves monitoring angle through adjacent trust/security perspective. Uses 'accountability' (7x) from vocabulary, providing implementation insights for audit trails and responsibility tracking in agent systems.",
+      "dimension": "adjacent"
+    }
+  ]
+}

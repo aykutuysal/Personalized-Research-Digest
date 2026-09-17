@@ -1,0 +1,149 @@
+{
+  "subject": "Adolescent depression",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "CBT and CBT variants for adolescent depression",
+      "query": "adolescent depression cognitive behavioral therapy",
+      "rationale": "Directly targets CBT for adolescent depression using vocabulary from extracted data ('Cognitive behavioral therapy' appears 38x, 'adolescent depression' is central to user's practice). This core query should yield relevant RCTs and meta-analyses.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "mindfulness and acceptance-based therapies",
+      "query": "mindfulness adolescents depression",
+      "rationale": "Targets mindfulness-based interventions for adolescent depression using extracted vocabulary ('Mindfulness' appears 48x, 'Mindfulness and Compassion Interventions' appears 44x). Serves user's interest in mindfulness-based approaches.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "family-based or attachment-based treatments",
+      "query": "family-based treatment adolescent depression",
+      "rationale": "Directly addresses family-based treatments for adolescent depression using extracted vocabulary ('family-based' from seed queries, 'Attachment and Relationship Dynamics' appears 14x). Aligns with user's clinical focus.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "assessment tools and screening instruments",
+      "query": "depression assessment tools adolescents",
+      "rationale": "Targets assessment tools for adolescent depression using extracted vocabulary ('assessment tools' from seed queries, 'Major depressive disorder' appears 32x). Serves user's need for practical assessment instruments.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "social media and adolescent mental health",
+      "query": "social media adolescent mental health",
+      "rationale": "Focuses on social media's impact on adolescent mental health using extracted vocabulary ('Social media' appears 52x, 'Impact of Technology on Adolescents' appears 16x). Addresses user's interest in this contemporary issue.",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "school-based prevention or intervention",
+      "query": "school-based depression prevention adolescents",
+      "rationale": "Targets school-based prevention for adolescent depression using extracted vocabulary ('school-based prevention' from seed queries, 'Education' appears 16x). Serves user's interest in prevention approaches.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "comorbid anxiety with depression",
+      "query": "CBT anxiety adolescents depression",
+      "rationale": "Combines CBT with comorbid anxiety focus for adolescent depression, using extracted vocabulary ('Cognitive behavioral therapy' 38x, 'Anxiety' 112x). Serves angle 12 while intersecting with angle 1.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 8,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "digital, app-based, telehealth interventions",
+      "query": "telehealth adolescent depression",
+      "rationale": "Specifically targets telehealth interventions for adolescent depression, using vocabulary from sample titles and user's stated interest. Complements digital/app-based focus.",
+      "dimension": "core"
+    },
+    {
+      "id": 9,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "CBT and CBT variants for adolescent depression",
+      "query": "randomized controlled trial adolescent depression",
+      "rationale": "Focuses on RCT evidence for adolescent depression treatments using extracted vocabulary ('Randomized controlled trial' appears 67x). Supports all treatment angles with high-quality evidence, tagged with principal angle 1.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 10,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "interpersonal psychotherapy (IPT-A)",
+      "query": "interpersonal psychotherapy adolescent depression",
+      "rationale": "Replaced 'adolescents' with 'adolescent' to align with common terminology in the dataset, using the exact keyword 'interpersonal psychotherapy' which appears 29 times.",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "behavioral activation",
+      "query": "behavioral activation adolescent depression",
+      "rationale": "Kept original terms as they are specific therapeutic approaches; 'adolescent depression' is a core focus area in the extracted topics.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "digital, app-based, telehealth interventions",
+      "query": "digital mental health interventions adolescent depression",
+      "rationale": "Replaced 'digital interventions' with 'digital mental health interventions' from the high-frequency topic list (49x) to match OpenAlex vocabulary.",
+      "dimension": "core"
+    },
+    {
+      "id": 13,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "psychopharmacology (SSRIs, combination therapy, safety)",
+      "query": "SSRI adolescent depression safety",
+      "rationale": "Kept original query; 'adolescent depression' and 'safety' are relevant, and pharmacology is a listed subfield (16x).",
+      "dimension": "core"
+    },
+    {
+      "id": 14,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "suicide risk screening and prevention",
+      "query": "suicide prevention adolescent depression",
+      "rationale": "Replaced 'adolescents' with 'adolescent' for consistency; 'suicide prevention' is a high-frequency keyword (79x) and topic.",
+      "dimension": "core"
+    },
+    {
+      "id": 15,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "comorbid anxiety with depression",
+      "query": "adolescent depression comorbid anxiety",
+      "rationale": "Kept original query; 'comorbid anxiety' uses 'comorbidity' keyword (32x) and 'anxiety' keyword (112x), both highly relevant.",
+      "dimension": "core"
+    },
+    {
+      "id": 16,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "family-based or attachment-based treatments",
+      "query": "attachment adolescent depression",
+      "rationale": "Kept original query; 'attachment' is a listed topic (14x) and aligns with 'attachment and relationship dynamics' from the extracted vocabulary.",
+      "dimension": "adjacent"
+    }
+  ]
+}

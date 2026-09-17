@@ -1,0 +1,695 @@
+{
+  "subject": "Marketing science",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "deepseek/deepseek-v3.2",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "pricing psychology",
+      "discount effects brand",
+      "ad creative conversion",
+      "product naming research",
+      "scarcity cues purchasing"
+    ],
+    "raw_results": [
+      {
+        "seed": "pricing psychology",
+        "count": 251
+      },
+      {
+        "seed": "discount effects brand",
+        "count": 33
+      },
+      {
+        "seed": "ad creative conversion",
+        "count": 14
+      },
+      {
+        "seed": "product naming research",
+        "count": 719
+      },
+      {
+        "seed": "scarcity cues purchasing",
+        "count": 30
+      }
+    ],
+    "cost": 0.00014,
+    "latency_s": 11.0
+  },
+  "vocabulary": {
+    "total_papers": 177,
+    "topics": [
+      [
+        "Consumer Retail Behavior Studies",
+        14
+      ],
+      [
+        "Consumer Market Behavior and Pricing",
+        14
+      ],
+      [
+        "Consumer Behavior in Brand Consumption and Identification",
+        13
+      ],
+      [
+        "Innovations and Analysis in Business and Education",
+        10
+      ],
+      [
+        "Digital Marketing and Social Media",
+        9
+      ],
+      [
+        "Collaboration in agile enterprises",
+        6
+      ],
+      [
+        "Supply Chain and Inventory Management",
+        5
+      ],
+      [
+        "Blockchain Technology Applications and Security",
+        4
+      ],
+      [
+        "Consumer Packaging Perceptions and Trends",
+        4
+      ],
+      [
+        "Earthquake and Disaster Impact Studies",
+        4
+      ],
+      [
+        "Decision-Making and Behavioral Economics",
+        3
+      ],
+      [
+        "Technology Adoption and User Behaviour",
+        3
+      ],
+      [
+        "Wine Industry and Tourism",
+        3
+      ],
+      [
+        "AI in Service Interactions",
+        3
+      ],
+      [
+        "Behavioral Health and Interventions",
+        3
+      ]
+    ],
+    "subfields": [
+      [
+        "Marketing",
+        49
+      ],
+      [
+        "Sociology and Political Science",
+        14
+      ],
+      [
+        "Management Science and Operations Research",
+        14
+      ],
+      [
+        "Management of Technology and Innovation",
+        7
+      ],
+      [
+        "Economics and Econometrics",
+        5
+      ],
+      [
+        "Management Information Systems",
+        5
+      ],
+      [
+        "Strategy and Management",
+        4
+      ],
+      [
+        "Information Systems",
+        4
+      ],
+      [
+        "Artificial Intelligence",
+        4
+      ],
+      [
+        "Transportation",
+        4
+      ]
+    ],
+    "fields": [
+      [
+        "Business, Management and Accounting",
+        71
+      ],
+      [
+        "Social Sciences",
+        23
+      ],
+      [
+        "Decision Sciences",
+        21
+      ],
+      [
+        "Computer Science",
+        9
+      ],
+      [
+        "Economics, Econometrics and Finance",
+        8
+      ]
+    ],
+    "keywords": [
+      [
+        "Consumer behaviour",
+        50
+      ],
+      [
+        "Purchasing",
+        28
+      ],
+      [
+        "Perception",
+        27
+      ],
+      [
+        "Scarcity",
+        20
+      ],
+      [
+        "Sustainability",
+        16
+      ],
+      [
+        "Social media",
+        16
+      ],
+      [
+        "New product development",
+        14
+      ],
+      [
+        "Supply chain",
+        12
+      ],
+      [
+        "Original equipment manufacturer",
+        12
+      ],
+      [
+        "Cognition",
+        11
+      ],
+      [
+        "Empirical research",
+        9
+      ],
+      [
+        "Pricing strategies",
+        8
+      ],
+      [
+        "Consumer choice",
+        7
+      ],
+      [
+        "Dynamic pricing",
+        7
+      ],
+      [
+        "Regret",
+        7
+      ],
+      [
+        "Revenue",
+        7
+      ],
+      [
+        "Competitive advantage",
+        7
+      ],
+      [
+        "Digital marketing",
+        7
+      ],
+      [
+        "Publishing",
+        7
+      ],
+      [
+        "Behavioral economics",
+        6
+      ],
+      [
+        "Qualitative research",
+        6
+      ],
+      [
+        "Personalization",
+        6
+      ],
+      [
+        "Financial market",
+        5
+      ],
+      [
+        "Customer engagement",
+        5
+      ],
+      [
+        "Tourism",
+        5
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        33
+      ],
+      [
+        "SSRN Electronic Journal",
+        10
+      ],
+      [
+        "Open MIND",
+        6
+      ],
+      [
+        "Advances in Economics Management and Political Sciences",
+        3
+      ],
+      [
+        "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+        3
+      ],
+      [
+        "Sustainability",
+        2
+      ],
+      [
+        "International Journal of Versatile Research and Analysis",
+        2
+      ],
+      [
+        "Figshare",
+        2
+      ],
+      [
+        "International Journal For Multidisciplinary Research",
+        2
+      ],
+      [
+        "Journal of innovation and development",
+        2
+      ]
+    ],
+    "sample_titles": [
+      "Contemporary Business Theory: Psychology as the Foundation of Pricing and Consumer Choice",
+      "Dynamic pricing strategies based on Consumers\u2019 psychology during product-harm crises",
+      "The Psychology of Free: How Zero Prices Trick Our Brains",
+      "Behavioral Finance: Understanding Investor Psychology and Its Impact on Stock Price",
+      "The Psychology Behind the Pricing: How Choice Architecture Targets \u00a369 as the Modal Purchase",
+      "Why People Choose Expensive over Cheap: The Psychology of Price and Quality \u2014 A Qualitative Study of Indian Consumers",
+      "The Psychology of Fee Disclosure: How Drip Pricing Violates Fairness Norms and Undermines Consumer Trust in E-Commerce Checkout Interfaces",
+      "The Influence of Investor Sentiment on the South African Property Market: A Comparative Assessment of JSE Indices",
+      "Consumer price perception under math anxiety: the effects of price levels and bundle framing",
+      "Exploring Continuance Usage Behavior of Autonomous Ride-Hailing Vehicles: An Integrated SEM and fsQCA Approach from Wuhan, China",
+      "Using prediction markets and forecasting surveys to predict 28 replication outcomes of classic articles in social psychology and judgement and decision making",
+      "Coordination Mechanism Between Electric Vehicles and Air Conditioning Loads Based on Price Guidance",
+      "Devising AI-Based Customer Engagement to Foster Positive Attitude Towards Green Purchase Intentions",
+      "What Drives Pet Food Choices? A Systematic Literature Review",
+      "Exploring key factors influencing urban air transport Acceptance: A trust and Risk-Embedded UTAUT2 framework"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "promotions consumer choice",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Covers promotions aspect with extracted keyword 'consumer choice'. Examines how promotional tactics influence purchasing decisions and brand evaluation."
+      },
+      {
+        "query": "persuasion consumer behaviour",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Addresses persuasion in ad creative with extracted keyword 'consumer behaviour'. Examines psychological mechanisms behind effective ad persuasion."
+      },
+      {
+        "query": "packaging consumer choice",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Addresses packaging aspect of branding with extracted keyword 'consumer choice'. Examines how packaging design influences purchasing decisions."
+      },
+      {
+        "query": "social proof consumer behaviour",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Addresses social proof cues using extracted keyword 'consumer behaviour'. Examines how social influence cues impact purchasing decisions."
+      },
+      {
+        "query": "behavioral economics purchasing",
+        "angle_id": 7,
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Addresses consumer psychology/behavioral findings angle using extracted keyword 'behavioral economics' and 'purchasing'. Targets user's interest in nudges that move conversion."
+      },
+      {
+        "query": "pricing strategies consumer behaviour perception",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'charm pricing' with broader 'pricing strategies' and added 'perception' from vocabulary to capture psychological pricing effects on consumer behavior."
+      },
+      {
+        "query": "price endings consumer behaviour",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Simplified to 'price endings' and combined with high-frequency 'consumer behaviour' from vocabulary instead of less common 'perception'."
+      },
+      {
+        "query": "discounts brand perception consumer behaviour",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer behaviour' from vocabulary to broaden the low-result query while maintaining focus on discounts and brand perception."
+      },
+      {
+        "query": "advertising creative consumer purchasing behaviour",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'ad creative' with 'advertising creative' and added 'consumer purchasing behaviour' from vocabulary to capture ad impact on buying decisions."
+      },
+      {
+        "query": "product naming consumer perception behaviour",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'behaviour' to broaden the low-result query while maintaining focus on product naming and consumer perception."
+      },
+      {
+        "query": "scarcity consumer purchasing behaviour",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer purchasing behaviour' from vocabulary to broaden the low-result query while maintaining scarcity focus."
+      },
+      {
+        "query": "checkout conversion consumer purchasing behaviour",
+        "angle_id": 6,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'consumer' alone with 'consumer purchasing behaviour' from vocabulary to better capture checkout conversion research."
+      },
+      {
+        "query": "loyalty programs repeat purchase consumer behaviour",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'retention behavior' with 'consumer behaviour' from vocabulary and specified 'loyalty programs' to capture repeat purchase mechanisms."
+      }
+    ],
+    "cost": 0.00258609,
+    "latency_s": 17.0
+  },
+  "validation": [
+    {
+      "query": "promotions consumer choice",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "persuasion consumer behaviour",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "packaging consumer choice",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "social proof consumer behaviour",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "behavioral economics purchasing",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "pricing strategies consumer behaviour perception",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "price endings consumer behaviour",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "discounts brand perception consumer behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "advertising creative consumer purchasing behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "product naming consumer perception behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "scarcity consumer purchasing behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "checkout conversion consumer purchasing behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "loyalty programs repeat purchase consumer behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "fill_missing": {
+    "queries": [
+      {
+        "query": "loyalty repeat purchase retention behavior",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Directly addresses the missing angle on loyalty, retention, and repeat purchase behavior using vocabulary from the extracted data (consumer behaviour, purchasing). Focuses on empirical findings about what drives repeat purchases rather than theoretical frameworks."
+      }
+    ],
+    "cost": 0.000599,
+    "latency": 6.5,
+    "raw": "```json\n{\n  \"queries\": [\n    {\n      \"query\": \"loyalty repeat purchase retention behavior\",\n      \"angle_id\": 8,\n      \"dimension\": \"core\",\n      \"priority\": \"every_cycle\",\n      \"rationale\": \"Directly addresses the missing angle on loyalty, retention, and repeat purchase behavior using vocabulary from the extracted data (consumer behaviour, purchasing). Focuses on empirical findings about what drives repeat purchases rather than theoretical frameworks.\"\n    }\n  ]\n}\n```",
+    "missing_before": [
+      8
+    ],
+    "missing_after": []
+  },
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "charm pricing consumer behaviour",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "price endings perception",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "discounts brand perception",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 3,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "ad creative purchasing",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "product naming consumer perception",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 1,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "scarcity purchasing",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 3,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "checkout conversion consumer",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "loyalty repeat purchase retention behavior",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "pricing strategies consumer behaviour perception",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'charm pricing' with broader 'pricing strategies' and added 'perception' from vocabulary to capture psychological pricing effects on consumer behavior."
+      },
+      {
+        "query": "price endings consumer behaviour",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Simplified to 'price endings' and combined with high-frequency 'consumer behaviour' from vocabulary instead of less common 'perception'."
+      },
+      {
+        "query": "discounts brand perception consumer behaviour",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer behaviour' from vocabulary to broaden the low-result query while maintaining focus on discounts and brand perception."
+      },
+      {
+        "query": "advertising creative consumer purchasing behaviour",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'ad creative' with 'advertising creative' and added 'consumer purchasing behaviour' from vocabulary to capture ad impact on buying decisions."
+      },
+      {
+        "query": "product naming consumer perception behaviour",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'behaviour' to broaden the low-result query while maintaining focus on product naming and consumer perception."
+      },
+      {
+        "query": "scarcity consumer purchasing behaviour",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer purchasing behaviour' from vocabulary to broaden the low-result query while maintaining scarcity focus."
+      },
+      {
+        "query": "checkout conversion consumer purchasing behaviour",
+        "angle_id": 6,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'consumer' alone with 'consumer purchasing behaviour' from vocabulary to better capture checkout conversion research."
+      },
+      {
+        "query": "loyalty programs repeat purchase consumer behaviour",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'retention behavior' with 'consumer behaviour' from vocabulary and specified 'loyalty programs' to capture repeat purchase mechanisms."
+      }
+    ],
+    "cost": 0.0005001,
+    "latency_s": 48.1
+  },
+  "costs": {
+    "seed_usd": 0.00014,
+    "library_usd": 0.00258609,
+    "fill_missing_usd": 0.000599,
+    "reformulate_usd": 0.0005001,
+    "total_usd": 0.003825
+  },
+  "total_latency_s": 171.5
+}

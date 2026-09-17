@@ -1,0 +1,149 @@
+{
+  "subject": "Adolescent depression",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "mindfulness and acceptance-based therapies",
+      "query": "adolescent depression mindfulness intervention",
+      "rationale": "Focuses on mindfulness-based therapies, supported by topics ('Mindfulness and Compassion Interventions') and keywords ('Mindfulness').",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "family-based or attachment-based treatments",
+      "query": "family-based adolescent depression treatment",
+      "rationale": "Targets family-based treatments, using vocabulary from topics ('Child and Adolescent Psychosocial and Emotional Development') and keywords ('Psychological intervention').",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "assessment tools and screening instruments",
+      "query": "adolescent depression assessment tools",
+      "rationale": "Targets assessment tools and screening instruments, using vocabulary from keywords ('Psychological intervention', 'Major depressive disorder').",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "social media and adolescent mental health",
+      "query": "social media adolescent mental health",
+      "rationale": "Covers social media and mental health links, using vocabulary from topics ('Impact of Technology on Adolescents') and keywords ('Social media').",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "school-based prevention or intervention",
+      "query": "school-based depression prevention adolescents",
+      "rationale": "Targets school-based prevention/intervention, using vocabulary from topics ('Student Stress and Coping') and keywords ('Psychological intervention').",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "comorbid anxiety with depression",
+      "query": "adolescent depression anxiety comorbidity",
+      "rationale": "Directly addresses comorbid anxiety with depression, a key clinical concern. Vocabulary includes 'Anxiety' and 'Comorbidity'.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "comorbid anxiety with depression",
+      "query": "CBT adolescent anxiety depression",
+      "rationale": "Combines CBT (angle 1) with comorbid anxiety (angle 12), targeting the user's interest in CBT for teens with both conditions. Uses keywords 'Cognitive behavioral therapy', 'Anxiety', 'Depression'.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 8,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "comorbid anxiety with depression",
+      "query": "mindfulness adolescent anxiety depression",
+      "rationale": "Intersects mindfulness (angle 4) with comorbid anxiety (angle 12), addressing anxiety-depression comorbidity with acceptance-based approaches. Vocabulary includes 'Mindfulness', 'Anxiety', 'Depression'.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 9,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "school-based prevention or intervention",
+      "query": "suicide prevention school-based adolescents",
+      "rationale": "Intersects suicide prevention (angle 9) with school-based (angle 11), targeting suicide risk screening in educational settings. Vocabulary includes 'Suicide prevention', 'School-based'.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 10,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "CBT and CBT variants for adolescent depression",
+      "query": "cognitive behavioral therapy adolescent depression",
+      "rationale": "Reformulated to use 'adolescent depression' as a phrase and 'cognitive behavioral therapy' as a standard term, matching extracted vocabulary (Cognitive behavioral therapy appears 34x).",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "interpersonal psychotherapy (IPT-A)",
+      "query": "interpersonal psychotherapy adolescent depression",
+      "rationale": "Kept original phrasing but added 'adolescent depression' as a phrase to match vocabulary from 'Child and Adolescent Psychosocial and Emotional Development' topic.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "behavioral activation",
+      "query": "behavioral activation adolescent depression",
+      "rationale": "Reformulated to use 'adolescent depression' as a phrase and 'behavioral activation' as a psychological intervention term, aligning with 'Psychological intervention' keyword (168x).",
+      "dimension": "core"
+    },
+    {
+      "id": 13,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "digital, app-based, telehealth interventions",
+      "query": "digital mental health interventions adolescent depression",
+      "rationale": "Replaced 'digital interventions' with 'digital mental health interventions' from extracted topics (31x) and added 'adolescent depression' for specificity.",
+      "dimension": "core"
+    },
+    {
+      "id": 14,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "psychopharmacology (SSRIs, combination therapy, safety)",
+      "query": "SSRIs adolescent depression safety",
+      "rationale": "Kept original terms but added 'adolescent depression' as a phrase to match vocabulary from 'Treatment of Major Depression' topic (6x).",
+      "dimension": "core"
+    },
+    {
+      "id": 15,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "suicide risk screening and prevention",
+      "query": "suicide risk screening adolescents",
+      "rationale": "Reformulated to use 'suicide risk screening' and 'adolescents' as terms, aligning with 'Suicide prevention' keyword (70x) and 'Suicide and Self-Harm Studies' topic (49x).",
+      "dimension": "core"
+    },
+    {
+      "id": 16,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "digital, app-based, telehealth interventions",
+      "query": "telehealth adolescent depression cognitive behavioral therapy",
+      "rationale": "Reformulated to use 'telehealth' with 'adolescent depression' and 'cognitive behavioral therapy' as phrases, matching vocabulary from 'Digital Mental Health Interventions' topic (31x) and 'Cognitive behavioral therapy' keyword (34x).",
+      "dimension": "intersection"
+    }
+  ]
+}

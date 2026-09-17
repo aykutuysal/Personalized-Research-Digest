@@ -183,7 +183,7 @@ Single email input. Pre-filled from auth if available; editable otherwise. Same 
 
 **Summary card.** Cream-green block beneath the sections. Small-caps lead *"So that's"* then a Playfair 17px human-readable sentence with green italic accents:
 
-> Your first issue lands **Tuesday, April 28 at 9:00 AM**, in **aykutuysal@gmail.com**. Then every Tuesday for **$149 a year**, until you change it.
+> Your first issue lands **Tuesday, April 28 at 9:00 AM**, in **you@example.com**. Then every Tuesday for **$149 a year**, until you change it.
 
 All three accent spans are live-computed from current selections (next delivery date from cadence + day + time, email from the input, price from the active plan). Below the summary, a dashed-bordered payment slot: *"● Payment details collected on the next step. Cancel anytime, no questions."* This is the hook for Stripe later.
 

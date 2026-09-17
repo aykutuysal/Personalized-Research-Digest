@@ -1,0 +1,646 @@
+{
+  "subject": "Marketing science",
+  "model": "deepseek/deepseek-v3.2",
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "charm pricing",
+      "discount brand effect",
+      "ad creative conversion",
+      "product naming",
+      "scarcity checkout",
+      "landing page optimization",
+      "consumer psychology purchasing"
+    ],
+    "raw_results": [
+      {
+        "seed": "charm pricing",
+        "count": 14
+      },
+      {
+        "seed": "discount brand effect",
+        "count": 31
+      },
+      {
+        "seed": "ad creative conversion",
+        "count": 14
+      },
+      {
+        "seed": "product naming",
+        "count": 1954
+      },
+      {
+        "seed": "scarcity checkout",
+        "count": 6
+      },
+      {
+        "seed": "landing page optimization",
+        "count": 26
+      },
+      {
+        "seed": "consumer psychology purchasing",
+        "count": 272
+      }
+    ],
+    "cost": 0.00032946,
+    "latency_s": 1.7
+  },
+  "vocabulary": {
+    "total_papers": 191,
+    "topics": [
+      [
+        "Innovations and Analysis in Business and Education",
+        14
+      ],
+      [
+        "Digital Marketing and Social Media",
+        13
+      ],
+      [
+        "Consumer Behavior in Brand Consumption and Identification",
+        11
+      ],
+      [
+        "Consumer Retail Behavior Studies",
+        10
+      ],
+      [
+        "Consumer Market Behavior and Pricing",
+        6
+      ],
+      [
+        "Technology Adoption and User Behaviour",
+        6
+      ],
+      [
+        "Environmental Sustainability in Business",
+        5
+      ],
+      [
+        "Consumer Behavior and Marketing Influence",
+        5
+      ],
+      [
+        "AI in Service Interactions",
+        5
+      ],
+      [
+        "Medical and Biological Sciences",
+        4
+      ],
+      [
+        "Color perception and design",
+        4
+      ],
+      [
+        "Health, Technology, Consumer Behavior",
+        3
+      ],
+      [
+        "Halal products and consumer behavior",
+        3
+      ],
+      [
+        "Consumer Packaging Perceptions and Trends",
+        3
+      ],
+      [
+        "Crafts, Textile, and Design",
+        2
+      ]
+    ],
+    "subfields": [
+      [
+        "Marketing",
+        44
+      ],
+      [
+        "Sociology and Political Science",
+        19
+      ],
+      [
+        "Management Science and Operations Research",
+        16
+      ],
+      [
+        "Artificial Intelligence",
+        6
+      ],
+      [
+        "Information Systems and Management",
+        6
+      ],
+      [
+        "Social Psychology",
+        5
+      ],
+      [
+        "General Health Professions",
+        4
+      ],
+      [
+        "Health Information Management",
+        4
+      ],
+      [
+        "Food Science",
+        4
+      ],
+      [
+        "Anatomy",
+        4
+      ]
+    ],
+    "fields": [
+      [
+        "Business, Management and Accounting",
+        52
+      ],
+      [
+        "Social Sciences",
+        25
+      ],
+      [
+        "Decision Sciences",
+        22
+      ],
+      [
+        "Computer Science",
+        15
+      ],
+      [
+        "Medicine",
+        11
+      ]
+    ],
+    "keywords": [
+      [
+        "Consumer behaviour",
+        53
+      ],
+      [
+        "Purchasing",
+        32
+      ],
+      [
+        "Social media",
+        24
+      ],
+      [
+        "Digital marketing",
+        24
+      ],
+      [
+        "Perception",
+        20
+      ],
+      [
+        "Online advertising",
+        14
+      ],
+      [
+        "Search engine optimization",
+        10
+      ],
+      [
+        "Click-through rate",
+        9
+      ],
+      [
+        "Sustainability",
+        8
+      ],
+      [
+        "Digital media",
+        8
+      ],
+      [
+        "Personalization",
+        7
+      ],
+      [
+        "Revenue",
+        6
+      ],
+      [
+        "Structural equation modeling",
+        6
+      ],
+      [
+        "Brand awareness",
+        6
+      ],
+      [
+        "Marketing strategy",
+        6
+      ],
+      [
+        "Influencer marketing",
+        6
+      ],
+      [
+        "Advertising campaign",
+        6
+      ],
+      [
+        "Opportunity cost",
+        6
+      ],
+      [
+        "Content marketing",
+        6
+      ],
+      [
+        "Empirical research",
+        6
+      ],
+      [
+        "Marketing research",
+        6
+      ],
+      [
+        "Brand management",
+        5
+      ],
+      [
+        "Brand loyalty",
+        5
+      ],
+      [
+        "Descriptive statistics",
+        5
+      ],
+      [
+        "Customer engagement",
+        5
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        44
+      ],
+      [
+        "Open MIND",
+        6
+      ],
+      [
+        "SSRN Electronic Journal",
+        5
+      ],
+      [
+        "The Journal of English and Germanic Philology",
+        3
+      ],
+      [
+        "Finance & Economics",
+        3
+      ],
+      [
+        "International Journal For Multidisciplinary Research",
+        3
+      ],
+      [
+        "Journal Research of Social Science Economics and Management",
+        2
+      ],
+      [
+        "Jurnal Mahasiswa Entrepreneurship (JME)",
+        2
+      ],
+      [
+        "Journal of Research in Interactive Marketing",
+        2
+      ],
+      [
+        "Journal of theoretical and applied electronic commerce research",
+        2
+      ]
+    ],
+    "sample_titles": [
+      "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+      "Pricing Strategies and Consumer Price Sensitivity in E-Commerce: Evidence From U.S. Online Retailers, 2022-2025",
+      "Determinants of Customer Eco\u2010Friendly Goods Consumption in the Hospitality and Tourism Industry",
+      "Evaluating function availability and user satisfaction with nutrition apps: user-generated content analysis and text mining study",
+      "Overview of Handicrafts Home Christmas Collection",
+      "Overview of Handicrafts Home Christmas Collection",
+      "Health and the Body in Early Medieval England",
+      "Smart Guide to KL Sentral Premium Social Guide Services",
+      "Smart Guide to KL Sentral Premium Social Guide Services",
+      "Two Charlotte Perkins Gilman Essays New to Scholarship",
+      "How to Optimize Your Experience with Food Delivery Apps",
+      "How to Optimize Your Experience with Food Delivery Apps",
+      "Revitalization project Briedeler Nonnengarten: Scientific background, context in the face of vineyard decline at the Mosel and specific soil vitalization",
+      "The Crime of <i>Wulf and Eadwacer</i>",
+      "The Effect of Store Name, Brand Name and Price Discounts on Customer Evaluations and Purchase Intentions in Kathmandu Valley"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "scarcity urgency conversion",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Addresses scarcity cues affecting checkout. 'Conversion' is implied in user's angles, and 'urgency' is a related behavioral concept from extracted vocabulary."
+      },
+      {
+        "query": "pricing promotions consumer behavior",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Combines pricing and promotions (user's key angles) with 'Consumer behaviour' (53x), the most frequent keyword in extracted data."
+      },
+      {
+        "query": "social proof online advertising",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Intersects social proof cues (user angle) with 'Online advertising' (14x) from keywords. Targets digital context relevant to e-commerce/DTC."
+      },
+      {
+        "query": "brand loyalty repeat purchase",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Connects 'Brand loyalty' (5x) from keywords with repeat purchase behavior (user angle). Addresses retention, which is crucial for growth marketers."
+      },
+      {
+        "query": "personalization conversion optimization",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Combines 'Personalization' (7x) from keywords with conversion optimization (user angle). Relevant for e-commerce targeting and ad creative."
+      },
+      {
+        "query": "influencer marketing purchasing",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent to ad creative, using 'Influencer marketing' (6x) from keywords. Influencers are a modern ad channel with measurable effects on purchasing (32x)."
+      },
+      {
+        "query": "consumer packaging perceptions",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent to product naming/branding. 'Consumer Packaging Perceptions' appears as a topic (3x) in extracted data, relevant for DTC physical products."
+      },
+      {
+        "query": "digital marketing revenue",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent field connecting 'Digital marketing' (24x) and 'Revenue' (6x) from keywords. Provides bottom-line focus aligned with user's growth marketing role."
+      },
+      {
+        "query": "sustainability consumer behaviour",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Unexpected but present in data: 'Sustainability' (8x) and 'Environmental Sustainability in Business' (5x). May yield insights on modern consumer values affecting purchasing."
+      },
+      {
+        "query": "AI personalization marketing",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Serendipitous from 'AI in Service Interactions' (5x) and 'Artificial Intelligence' (6x) subfields. Could reveal cutting-edge ad creative or pricing tools."
+      },
+      {
+        "query": "price endings consumer behavior",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus."
+      },
+      {
+        "query": "discounts brand perception consumer behavior",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception."
+      },
+      {
+        "query": "click-through rate online advertising",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context."
+      },
+      {
+        "query": "product naming consumer behavior",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses."
+      },
+      {
+        "query": "landing page optimization A/B testing digital marketing",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area."
+      }
+    ],
+    "cost": 0.0008627,
+    "latency_s": 36.9
+  },
+  "validation": [
+    {
+      "query": "scarcity urgency conversion",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "pricing promotions consumer behavior",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "social proof online advertising",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "brand loyalty repeat purchase",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "personalization conversion optimization",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 6,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "influencer marketing purchasing",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 92,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "consumer packaging perceptions",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 12,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "digital marketing revenue",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 12,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "sustainability consumer behaviour",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 45,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "AI personalization marketing",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 23,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "price endings consumer behavior",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "discounts brand perception consumer behavior",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "click-through rate online advertising",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "product naming consumer behavior",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "landing page optimization A/B testing digital marketing",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "charm pricing price endings",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "discounts brand perception",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 3,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "ad creative click-through rate",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "product naming purchase intentions",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "landing page optimization A/B testing",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "price endings consumer behavior",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'charm pricing' with broader 'price endings' and added 'consumer behavior' from vocabulary to align with user's consumer behavior focus."
+      },
+      {
+        "query": "discounts brand perception consumer behavior",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Added 'consumer behavior' from vocabulary to broaden the low-result query while maintaining the core concept of discounts affecting brand perception."
+      },
+      {
+        "query": "click-through rate online advertising",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'ad creative' with 'online advertising' from vocabulary while keeping 'click-through rate' to match the digital marketing context."
+      },
+      {
+        "query": "product naming consumer behavior",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'purchase intentions' with broader 'consumer behavior' from vocabulary to capture naming effects on general consumer responses."
+      },
+      {
+        "query": "landing page optimization A/B testing digital marketing",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Added 'digital marketing' from vocabulary to contextualize the technical terms within the user's marketing focus area."
+      }
+    ],
+    "cost": 0.000345834,
+    "latency_s": 12.1
+  },
+  "costs": {
+    "seed_usd": 0.00032946,
+    "library_usd": 0.0008627,
+    "reformulate_usd": 0.000345834,
+    "total_usd": 0.001538
+  },
+  "total_latency_s": 96.0
+}

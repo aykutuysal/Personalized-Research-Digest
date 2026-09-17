@@ -1,0 +1,117 @@
+{
+  "subject": "LLM agents",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent architecture modular",
+      "rationale": "User wants practical engineering patterns. 'Architecture' (45x) and 'modular design' (12x) appeared frequently in the metadata, narrowing down the massive 'agent architectures' seed to specific engineering frameworks."
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent scalability deployment",
+      "rationale": "Directly addresses the SWE user's goal of moving side projects to production, utilizing the high-frequency keywords 'Scalability' (15x) and 'Software deployment' (12x)."
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent benchmark testbed",
+      "rationale": "The seed 'agent evaluation' was too broad (40k results). Using 'benchmark' and 'testbed' (6x) focuses on practical, reproducible evaluation frameworks for testing agent capabilities."
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "core",
+      "query": "LLM agent thought management",
+      "rationale": "Captures memory and planning techniques. 'Thought management' comes directly from a title about long-horizon, goal-driven agents, filtering out generic RAG papers."
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "collaborative LLM agents software",
+      "rationale": "Combines multi-agent systems with software engineering. 'Collaborative LLM agents' and 'software' (6x) target tools that write code or manage SWE tasks, highly relevant to the user's profession."
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "LLM cognitive architecture task",
+      "rationale": "Combines reasoning with framework design. 'Cognitive architecture' (10x) and 'Task analysis' (6x) filter for structured approaches to agent planning and execution."
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "LLM agent adversarial security",
+      "rationale": "Intersects agents with safety/guardrails. Uses 'Adversarial system' (7x) and 'security' from the extracted titles to find robust agent designs against prompt injection or malicious tool use."
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "intersection",
+      "query": "LLM agents social simulation",
+      "rationale": "Intersects multi-agent orchestration with sociology (10x). 'Social simulation' surfaces emergent behaviors in agent populations, providing insights into multi-agent dynamics."
+    },
+    {
+      "id": 9,
+      "angle_id": 9,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "LLM agent executable tool",
+      "rationale": "Refines the broad 'tool use' seed by leveraging the keyword 'Executable' (9x) to find agents that write and run code or interact directly with system environments."
+    },
+    {
+      "id": 10,
+      "angle_id": 10,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "LLM agent interpretability correctness",
+      "rationale": "Connects XAI (10x) to agent evaluation. 'Interpretability' (6x) and 'Correctness' (6x) are crucial for a SWE wanting to debug, observe, and trust agent outputs in production."
+    },
+    {
+      "id": 11,
+      "angle_id": 11,
+      "slot": 1,
+      "angle": "adjacent",
+      "query": "embodied LLM agents robotics",
+      "rationale": "Draws from 'Reinforcement Learning in Robotics' (9x) and 'Embodied LLM Agents'. Physical agent research often pioneers planning and memory architectures later used in software agents."
+    },
+    {
+      "id": 12,
+      "angle_id": 12,
+      "slot": 1,
+      "angle": "core",
+      "query": "workflow provenance multi-agent system",
+      "rationale": "Replaced 'LLM agent' with 'multi-agent system' from vocabulary and kept 'workflow' which appears frequently. This broadens the overly specific 'LLM agent workflow provenance' while maintaining the core workflow/provenance concept in multi-agent contexts."
+    },
+    {
+      "id": 13,
+      "angle_id": 13,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "dynamic reputation multi-agent system",
+      "rationale": "Replaced 'LLM agent' with 'multi-agent system' from vocabulary while keeping 'dynamic reputation'. This uses the most relevant vocabulary term (multi-agent system) while preserving the reputation concept that was missing from the vocabulary."
+    },
+    {
+      "id": 14,
+      "angle_id": 14,
+      "slot": 1,
+      "angle": "serendipity",
+      "query": "geographic information systems multi-agent",
+      "rationale": "Replaced 'LLM agents' with 'multi-agent' and used 'geographic information systems' directly from the topics list. This pairs two established vocabulary terms (GIS and multi-agent) that both appear in the extracted data."
+    }
+  ]
+}

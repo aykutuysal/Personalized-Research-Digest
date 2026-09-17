@@ -1,0 +1,935 @@
+{
+  "timestamp": "2026-04-16T12:48:37.184158+00:00",
+  "prompt_file": "runs/v9_keyword_discovery/adolescent_depression.json.plan.json",
+  "profile_file": "profiles/adolescent_depression.md",
+  "plan_model": "prebuilt",
+  "plan_cost_usd": 0.0,
+  "plan_elapsed_s": 0.0,
+  "openalex_filter": "search",
+  "num_queries": 16,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 1,
+    "healthy": 15,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 0.94,
+  "frac_healthy_or_safety": 0.94,
+  "mean_precision": 0.23,
+  "per_band_precision": {
+    "zero": null,
+    "low": 0.0,
+    "healthy": 0.25,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Adolescent depression",
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "slot": 1,
+        "angle": "core",
+        "query": "social media adolescent mental health",
+        "rationale": "Addresses user's interest in social-media-and-mental-health links. 'Social media' appears frequently (41x) in vocabulary, and seed query yielded 237 results, suggesting active research area."
+      },
+      {
+        "id": 2,
+        "angle_id": 2,
+        "slot": 1,
+        "angle": "core",
+        "query": "school-based adolescent depression intervention",
+        "rationale": "Targets user's interest in school-based prevention/intervention. Vocabulary includes 'Student Stress and Coping' topic and 'Education' subfield evidence."
+      },
+      {
+        "id": 3,
+        "angle_id": 3,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "adolescent depression anxiety comorbidity treatment",
+        "rationale": "Combines user's focus on comorbid anxiety with depression treatment. 'Anxiety' appears frequently (45x) in vocabulary, and user treats teens with both conditions."
+      },
+      {
+        "id": 4,
+        "angle_id": 4,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "digital adolescent depression intervention",
+        "rationale": "Combines digital interventions with adolescent depression focus. 'Digital Mental Health Interventions' appears as topic (13x) in vocabulary, matching user's interest in app-based approaches."
+      },
+      {
+        "id": 5,
+        "angle_id": 5,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "family-based adolescent depression therapy",
+        "rationale": "Addresses user's interest in family-based treatments for adolescent depression. Vocabulary includes 'Child and Adolescent Psychosocial and Emotional Development' topic (15x)."
+      },
+      {
+        "id": 6,
+        "angle_id": 6,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "adolescent depression assessment tools",
+        "rationale": "Targets user's interest in assessment tools. Vocabulary includes 'Clinical Psychology' subfield (67x) and 'Psychological intervention' keyword (47x), suggesting assessment research exists."
+      },
+      {
+        "id": 7,
+        "angle_id": 7,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "adolescent sleep depression review",
+        "rationale": "Adjacent to user's interests; 'Sleep and related disorders' appears as topic (4x) in vocabulary, and sample titles show sleep-depression connections in adolescents."
+      },
+      {
+        "id": 8,
+        "angle_id": 8,
+        "slot": 1,
+        "angle": "adjacent",
+        "query": "adolescent trauma depression intervention",
+        "rationale": "Adjacent field; 'Posttraumatic Stress Disorder Research' appears as topic (2x) and sample titles include trauma-focused interventions for adolescents."
+      },
+      {
+        "id": 9,
+        "angle_id": 9,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "adolescent ADHD depression treatment",
+        "rationale": "Unexpected connection from vocabulary: 'Attention Deficit Hyperactivity Disorder' appears as topic (5x). Could yield insights on comorbid conditions user encounters."
+      },
+      {
+        "id": 10,
+        "angle_id": 10,
+        "slot": 1,
+        "angle": "core",
+        "query": "cognitive behavioral therapy adolescent depression randomized controlled trial",
+        "rationale": "Replaced 'CBT' with full term 'cognitive behavioral therapy' from keywords, kept other terms to maintain specificity for evidence-based interventions."
+      },
+      {
+        "id": 11,
+        "angle_id": 11,
+        "slot": 1,
+        "angle": "core",
+        "query": "interpersonal psychotherapy adolescent depression",
+        "rationale": "Replaced 'IPT-A' with broader 'interpersonal psychotherapy' to match OpenAlex vocabulary while maintaining focus on adolescent depression treatment."
+      },
+      {
+        "id": 12,
+        "angle_id": 12,
+        "slot": 1,
+        "angle": "core",
+        "query": "SSRIs adolescent depression safety pharmacology",
+        "rationale": "Added 'pharmacology' from subfields to qualify the safety focus and provide context for medication-related research."
+      },
+      {
+        "id": 13,
+        "angle_id": 13,
+        "slot": 1,
+        "angle": "core",
+        "query": "suicide prevention adolescent mental health screening",
+        "rationale": "Replaced 'adolescent suicide' with broader 'adolescent mental health' and kept 'suicide prevention' from keywords to capture screening studies."
+      },
+      {
+        "id": 14,
+        "angle_id": 14,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "mindfulness adolescent mental health randomized controlled trial",
+        "rationale": "Replaced 'depression' with broader 'mental health' from keywords while maintaining 'randomized controlled trial' for methodological rigor."
+      },
+      {
+        "id": 15,
+        "angle_id": 15,
+        "slot": 1,
+        "angle": "intersection",
+        "query": "behavioral activation depression adolescent",
+        "rationale": "Simplified to core terms without additional qualifiers, using 'depression' and 'adolescent' which appear in extracted vocabulary."
+      },
+      {
+        "id": 16,
+        "angle_id": 16,
+        "slot": 1,
+        "angle": "serendipity",
+        "query": "writing mental health adolescent",
+        "rationale": "Replaced 'writing adolescent mental health' with natural phrase order using 'mental health' from keywords and 'adolescent' from context."
+      }
+    ]
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "social media adolescent mental health",
+      "angle": "core",
+      "rationale": "Addresses user's interest in social-media-and-mental-health links. 'Social media' appears frequently (41x) in vocabulary, and seed query yielded 237 results, suggesting active research area.",
+      "openalex_count": 416,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Impact of Social Media Use on Adolescent Mental Health",
+          "abstract": "Information and Communication Technology has developed extremely rapidly, especially for social media. Such development can lead to increased dependence on electronic devices influencing adolescent mental health. The purpose of the study was to analyze the relationship between social media usage and adolescent mental health in SMP Negeri 2 Jombang. In this study, the correlation analytic quantitative research design with the cross-sectional approach was utilized. There were 320 in total students, and 76 students were the sample by the cluster random sampling technique. Statistical tests were performed by Spearman's Rank. There were 57.9% students who experienced mild social media addiction. Simultaneously, 38.2% of students experienced mild depressive symptoms. The Spearman's Rank statistical test analysis findings revealed (\u03c1) = 0.000 &lt; (\u03b1) 0.05, which confirms that teen mental health is correlated with social media use. The value of r is 0.402, and the level of correlation is moderate. Social media use and teen health were related as the more frequently one used social media, the greater the possibilities that they would be affected by seeing others' success, bodies, and lifestyles and become possible stressors leading to depression or mental illnesses. Preventive and promotive measures were needed for the early detection of mental disorders in adolescents to avert more complex mental health problems.",
+          "relevance_score": 29.339453,
+          "id": "https://openalex.org/W7153718357"
+        },
+        {
+          "title": "The Role of Social Comparison in the Relationship Between Social Media Use and Adolescent Mental Health",
+          "abstract": "Against the backdrop of the growing prevalence of social media, adolescents are confronted with psychological distress such as anxiety, depression, and diminished self-esteem in the course of their engagement with social media. This paper explores the role of social comparison in the association between social media use and adolescent mental health from the perspectives of social psychology and media psychology. Drawing on the Uses and Gratifications Theory (UGT), Cultivation Theory, and Social Comparison Theory (SCT), this paper investigates the impact of social comparison on the motivational, cognitive, and emotional dimensions of adolescents. Social comparison, as discussed in this paper, can potentially facilitate self-improvement through an incentive effect; however, it may also exacerbate psychological distress under the influence of idealized content and algorithmic reinforcement. This paper provides theoretical implications for comprehending the psychological impacts of social media and for the development of adolescent media literacy.",
+          "relevance_score": 26.356497,
+          "id": "https://openalex.org/W7151398278"
+        },
+        {
+          "title": "Why Three Studies by Vuorre and Przybylski Should Not Be Used to Assess the Impact of Social Media on Adolescent Mental Health",
+          "abstract": "The relationship between adolescent social media use and mental health is a topic of ongoing debate, and there is substantial diversity in the conclusions reached by researchers. In this commentary, we examine three articles by Matti Vuorre and Andrew Przybylski often cited as evidence that social media is not harmful to adolescents. We identify one conceptual issue (relying on blending together groups and technologies while dismissing consistent evidence of harms when those groups and technologies are unblended) and three methodological issues (e.g., Meta\u2019s involvement in the research design of one study) that reduce their relevance to questions about social media\u2019s effects on adolescent mental health. Suggestions for better approaches to studying such effects are provided.",
+          "relevance_score": 22.321512,
+          "id": "https://openalex.org/W7153635271"
+        },
+        {
+          "title": "Support System Networks: How Support Systems Shape Problematic Social Media Use, Mental Health, and Substance Use in Czech Adolescents",
+          "abstract": "Background: Problematic social media use (PSMU) has become a critical public health issue, with adolescents being one of the most engaged demographic. However, little is known about how distinct social support systems shape the associations between PSMU, mental health, and substance use. Objective: The first objective was to compare how support systems (peer, classmate, teacher, family, and self) shape the associations between PSMU, mental health, and substance use. The second objective was to explore which support systems are most influential for boys and girls. Methodology: A representative sample of 5,487 Czech adolescents (50.88% boys, mean age = 15.48, SD = 0.53) was used for the analysis from the 2022 Health Behaviour in School-aged Children study. A network analysis based on undirected Mixed Graphical Models was used to examine the associations. Separate networks for each support system, stratified by gender, were estimated and compared. Results: Teacher and classmate support modulated the associations in boys, while peer support was more influential for girls. Family support influenced both networks, though its function varied between genders. Self-support functioned as a bridge symptom in both genders, connecting PSMU with mental health and well-being, particularly in girls. In boys, classmate and family support made the association between PSMU and heated tobacco use as well as irritability non-significant, whereas in girls, peer and family support modulated the links between PSMU and well-being. Conclusion: The findings highlight the gender-specific nature of support systems and underscore the need for more nuanced approaches when facilitating external and internal support in adolescents.",
+          "relevance_score": 19.725979,
+          "id": "https://openalex.org/W7151570736"
+        },
+        {
+          "title": "The Cross\u2010Sectional and Longitudinal Associations Between Social Media and Mental Health Among a Large Sample of Adolescents, Inclusive of Transgender/Gender\u2010Diverse Adolescents",
+          "abstract": "Among Canadian adolescents, SM time was associated with poorer mental health outcomes both cross-sectionally and over 1 year.",
+          "relevance_score": 16.886206,
+          "id": "https://openalex.org/W7151777486"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 2,
+      "query": "school-based adolescent depression intervention",
+      "angle": "core",
+      "rationale": "Targets user's interest in school-based prevention/intervention. Vocabulary includes 'Student Stress and Coping' topic and 'Education' subfield evidence.",
+      "openalex_count": 360,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Mental health and help-seeking behaviour among secondary school adolescents in Nsukka, Nigeria: a cross-sectional survey",
+          "abstract": "Globally, depression and anxiety remain a public health concern among adolescents. Understanding the role of help-seeking behaviour in predicting the prevalence of depression and anxiety among adolescents is important for designing effective interventions. This study investigated the relationship between help-seeking behaviour and the prevalence of depression and anxiety among school adolescents in Nsukka, Nigeria. A descriptive cross-sectional study was conducted among randomly selected adolescents aged 10\u201319 from three secondary schools in Nsukka, Nigeria. The Patient Health Questionnaire-9 (PHQ-9), Generalized Anxiety Disorder 7-item (GAD-7) Scale, and General Help-seeking Questionnaire (GHSQ) were used for the data collection. Using stratified random sampling technique, 394 respondents were recruited for this study. All participants provided informed consent prior to the study initiation. The data obtained were analyzed using descriptive statistics, chi-square test, and multivariate logistic regression. The level of significance was set at p < 0.05. A total of 394 school adolescents participated in this study, yielding a response rate of 88.5%. Most students were female (n = 272, 69.0%) and aged 14\u201317 (n = 233, 59.1%). The prevalence of moderate to severe symptoms of depression and anxiety were 22.1% and 21.3%, respectively. The most frequent source of help for depression or anxiety among adolescents were the parents (n = 284, 72.1%). The indifferent attitude to help-seeking from friends (OR = 2.125, 95%CI = 1.243\u20133.635, p = 0.006), school counsellor (OR = 2.953, 95%CI = 1.334\u20136.537, p = 0.008), and religious leaders (OR = 2.037, 95%CI = 1.002\u20134.142, p = 0.038) were associated with a higher prevalence of depression. Similarly, being neutral or indifferent about seeking help from school counsellors (OR = 2.485, 95%CI = 1.160\u20135.320, p = 0.019) and religious leaders (OR = 2.171, 95%CI = 1.090\u20134.324, p = 0.027) were associated with higher odds of developing anxiety compared to those more likely to seek help from these sources. In this study, one in five adolescents has moderate to severe symptoms of depression and anxiety. Indifferent attitude to help-seeking from friends, school counsellors, and religious leaders were associated with higher prevalence of depression and anxiety among school adolescents. Therefore, school-based mental health education and literacy programs is recommended as a way of improving early detection and care for adolescents with psychological issues.",
+          "relevance_score": 4.7877617,
+          "id": "https://openalex.org/W7151280074"
+        },
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "abstract": "This study aims to develop a manualized multi-family group therapy (MFGT) program for adolescents with depressive school refusal and to evaluate its effectiveness through a randomized controlled trial. By comparing MFGT with group cognitive behavioral therapy (GCBT), the study seeks to examine the relative efficacy of MFGT in improving school refusal behaviors and depressive symptoms, to assess the stability of treatment effects during follow-up, and to explore potential mechanisms underlying behavioral change. This study is designed as a single-center, single-blind, randomized controlled non-inferiority trial. A total of 138 adolescents aged 12-19 years who meet DSM-5 criteria for depressive disorders and Berg\u2019s criteria for school refusal will be randomly assigned in a 1:1 ratio to either the MFGT plus treatment-as-usual (TAU) group or the GCBT plus TAU group. Both interventions consist of eight group sessions delivered over four weeks. Primary outcomes include school attendance rate and clinician-rated depressive symptoms assessed using the Hamilton Depression Rating Scale. Secondary and intermediate outcomes include self-reported depressive and anxiety symptoms, school refusal maintaining factors, school-related self-efficacy, family functioning, and parent\u2013adolescent communication. Assessments will be conducted at baseline, post-treatment, and at 1- and 3-month follow-up. This study will be the first randomized controlled trial to evaluate a standardized and manualized MFGT protocol specifically developed for adolescents with depressive school refusal. By adopting a family-based and scalable intervention model, the study is expected to provide evidence for an effective and resource-efficient treatment approach that addresses both individual psychopathology and family dynamics. The findings may contribute to improving school attendance and mental health outcomes in adolescents and inform clinical practice and public mental health strategies in settings with limited mental health resources. Chinese Clinical Trial Registry (ChiCTR2500100225). Registered, 2025.",
+          "relevance_score": 3.7750258,
+          "id": "https://openalex.org/W7153462697"
+        },
+        {
+          "title": "The Application of Human-Computer Interaction in Alleviating Appearance Anxiety Among Adolescents",
+          "abstract": "In the digital era of pervasive social media, adolescents' appearance anxiety is rising steadily. Repeated exposure to idealized appearance content and objectifying online assessments complicates body image development and imposes psychological pressure. Consequently, this intensified focus on digital self-presentation often translates into a diminished sense of self-worth and an increased risk of developing long-term psychological maladjustment. Studies link appearance anxiety to reduced self-worth, social avoidance, depression, and higher eating disorder risk. However, most interventions remain conventional psychological counseling, neglecting the potential of digital technology. This HCI-focused case study explores technology-assisted interventions for adolescents, integrating Social Comparison, Objectification, and Cognitive Behavioral Theory to propose an individual, school, and family-level HCI-based model. Research shows AI chatbots, virtual appearance browsers, and media-literacy interactive systems can alleviate anxiety by altering self-objectification and appearance-based social comparison, with intervention effects mediated by individual differences like appearance perfectionism and body appreciation. To enhance objectivity, EEG is used to measure neural responses to appearance-related stimuli pre- and post-intervention, providing physiological evidence for HCI-based interventions.",
+          "relevance_score": 3.7127671,
+          "id": "https://openalex.org/W7151482393"
+        },
+        {
+          "title": "Adolescence and Sexuality: The involvement of cognitive and emotional processes in the development of Gender Identity and Gender Dysphoria",
+          "abstract": "This thesis, titled \"Adolescence and Sexuality: The involvement of cognitive and emotional processes in the development of Gender Identity and Gender Dysphoria\", constitutes a systematic, critical, and wide-ranging investigation into the complex architecture of identity during the delicate phase of adolescent transition. The work deliberately departs from a monodisciplinary or reductionist view to embrace a markedly multidisciplinary methodology, deemed essential for decoding the multifaceted and layered nature of human experience in contemporary times. The research architecture is constructed by synergistically and dialectically intertwining biological evidence from neuroscience, structural and critical paradigms of sociology, intercultural perspectives of anthropology, the normative requirements of professional ethics, and the educational practices of pedagogy. The value of this work is solidly supported by an extensive bibliographic review, rigorously updated to international publications of the 2024-2025 period. This methodological choice ensures a discussion perfectly aligned with both the most recent global nosological changes and the latest empirical evidence regarding mental health in developmental age. The analysis begins in the first chapter with a detailed exploration of the radical physical, cognitive, and emotional transformations that mark the onset of puberty and adolescence. In this section, the contribution of neuroscience plays a central role in explaining the biological mechanisms underlying behavior: the asynchronous maturation between the limbic system (the seat of emotional reactivity and reward-seeking) and the prefrontal cortex (the seat of executive functions and inhibitory control) is analyzed. This shift is presented not as a simple physiological event, but as the biological engine of a profound restructuring of self-perception and emotional vulnerability. In parallel, cognitive psychology investigates how the acquisition of hypothetical-deductive reasoning and meta-cognitive abilities allow adolescents to formulate abstract, fluid, and complex identity schemas. However, the thesis overcomes the risk of biological determinism by integrating the lens of cultural anthropology: the dominant Eurocentric perspective is critiqued, demonstrating\u2014through the comparison of various ethnographic models of sexual socialization\u2014how binary Western definitions of \"gender\" are historically determined, limited, and non-universal constructs. Additionally, sociology and social psychology analyzes the pervasive and structuring role of peers, social networks and parental expectations, identified as powerful agents of socialization that mediate, reinforce, or sometimes counter hegemonic gender norms in contemporary society. The second chapter shifts the focus to the clinical and diagnostic dimension, addressing the theme of Gender Dysphoria through a rigorous technical and epistemological comparison between the DSM-5-TR (APA) and the ICD-11 (WHO). Here, the research documents and historicizes the fundamental transition from a pathologizing view of diversity to a perspective based on \"sexual health\" and the non-stigmatizing concept of gender incongruence . The multidisciplinary approach allows for a reinterpretation of psychological suffering not as an endogenous symptom or an individual dysfunction, but as an adaptive response to hostile environmental variables, utilizing the socio-clinical model of Minority Stress. This theoretical framework, supported by extensive statistical data, unequivocally highlights how the high rates of anxiety, depression, and suicidal ideation in the gender-diverse population are not intrinsic to identity, but the direct result of stigma, interpersonal prejudice, and systemic discrimination. Through the application of Cognitive Appraisal Theory, the thesis further explores how adolescents cognitively evaluate these challenges (\"stressors\"), emphasizing the crucial role of psychological resilience and perceived social support as indispensable protective factors for well-being. The third chapter, of an applied and deontological nature, examines the ethical challenges of the profession in light of the most recent WPATH SOC-8 international standards of care and the Gender-Affirming Care approach. A substantial and innovative part of this section is dedicated to a factual analysis of the impact of conservative political institutions and religious institutions on global public health. Treating the subject not as political opinion but as scientific evidence based on the social determinants of health, the thesis analyzes how restrictive rhetoric, moral panic, and rigid religious dogmas act as environmental pathogenic factors. The examined scientific literature demonstrates that in sociopolitical contexts characterized by legislation hostile to gender identity and strong religious conservatism, there is a measurable increase in \"distal stressors\" (institutional rejection, legal barriers to accessing care, internalized moral stigma). These environmental variables statistically correlate with a dramatic worsening of mental health parameters (exponential increase in suicide risk, social isolation, and school dropout) among LGBTQIA+ adolescents. The analysis confirms that the lack of secularism in healthcare institutions and the politicization of bodies constitute objective risk factors for the psychophysical development of minors. Ultimately, the work programmatically extends into the fields of critical pedagogy and school and educational psychology, proposing a series of concrete primary prevention strategies that go beyond the traditional clinical setting. Supported by the evidence reported in the third chapter, the thesis argues for the urgent and no longer postponable necessity of implementing inclusive sexual, affective, and relational education programs. These interventions should not be understood as mere transfers of biological notions, but as pedagogical tools capable of acting upstream on socialization processes, with the goal of radically deconstructing gender stereotypes and systemic prejudices that fuel the phenomena of bullying and social exclusion. Through a constant and rigorous dialogue between behavioral sciences, social sciences, and bioethics, the thesis offers mental health professionals, educators, and researchers a \"macro-level\" intervention model. This approach recognizes that the effectiveness of psychological practice cannot be limited to the aseptic environment of the therapy room but must necessarily integrate a strong ethical and deontological awareness that drives the practitioner to act as an agent of change within the social, cultural, and institutional context. In line with international standards of care, the research highlights how the psychophysical well-being of the adolescent directly depends on the creation of \"validating\" school and family environments, capable of neutralizing the deleterious effects of the environmental stressors and restrictive ideological dogmas analyzed throughout the work. The conclusion of the thesis therefore reaffirms the professional's duty to actively promote protective policies that guarantee human dignity and the inalienable right to self-determination. Only through a synergy between inclusive education, affirmative clinical support, and structural reforms of growth contexts will it be possible to ensure that every adolescent\u2014regardless of their gender identity\u2014experiences a harmonious development protected from every form of violence or institutional stigmatization.",
+          "relevance_score": 2.1500714,
+          "id": "https://openalex.org/W7154338923"
+        },
+        {
+          "title": "Teen Vigilance: Navigating Risky Social Interactions on Discord",
+          "abstract": "Teenagers are avid users of Discord, a fast-growing platform for synchronous communication where they often interact with strangers. Because Discord combines private DMs, semi-private voice channels, and public servers in one place, it creates a hybrid environment that can produce complex\u2014and underexplored\u2014safety risks for teenagers. Drawing on 16 interviews with teenage Discord users, this study examines their strategies for navigating risky social interactions in the platform. Our findings reveal that when teenagers encounter risks during social interactions, they exercise vigilance by evaluating suspicious interactions before forming friendships, using safety tools, and engaging in controlled risk-taking to safeguard their privacy and security. At the community level, they mitigate risks through selective participation in servers, a practice supported by vigilant governance structures. We discuss how vigilance enables teenagers to act during risky encounters to protect themselves, advancing understanding of teenagers\u2019 agency in risk navigation and informing teen-centered designs for safer online environments.",
+          "relevance_score": 1.524214,
+          "id": "https://openalex.org/W7133520662"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 3,
+      "query": "adolescent depression anxiety comorbidity treatment",
+      "angle": "intersection",
+      "rationale": "Combines user's focus on comorbid anxiety with depression treatment. 'Anxiety' appears frequently (45x) in vocabulary, and user treats teens with both conditions.",
+      "openalex_count": 150,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys",
+          "abstract": "Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years. While prior patient-centered studies have examined the capabilities and experience of LLM-based tools in specific health-related tasks such as information-seeking, diagnosis, or decision-supporting, the inherently longitudinal nature of healthcare in real-world practice has been underexplored. This paper presents a four-week diary study with 25 patients to examine LLMs' roles across healthcare-seeking trajectories. Our analysis reveals that patients integrate LLMs not just as simple decision-support tools, but as dynamic companions that scaffold their journey across behavioral, informational, emotional, and cognitive levels. Meanwhile, patients actively assign diverse socio-technical meanings to LLMs, altering the traditional dynamics of agency, trust, and power in patient-provider relationships. Drawing from these findings, we conceptualize future LLMs as a longitudinal boundary companion that continuously mediates between patients and clinicians throughout longitudinal healthcare-seeking trajectories.",
+          "relevance_score": 1.670125,
+          "id": "https://openalex.org/W7129328976"
+        },
+        {
+          "title": "Human-centered Perspectives on a Clinical Decision Support System for Intensive Outpatient Veteran PTSD Care",
+          "abstract": "Psychotherapy delivery relies on a negotiation between patient self-reports and clinical intuition. Growing evidence for technological support of psychotherapy suggests opportunities to aid the mediation of this tension. To explore this prospect, we designed a prototype of a clinical decision support system (CDSS) for treating veterans with post-traumatic stress disorder in a Prolonged Exposure (PE) therapy intensive outpatient program. We conducted a two-phase interview study to collect perspectives from practicing PE clinicians and former PE patients who are United States veterans. Our analysis distills opportunities for a CDSS (e.g., offering homework review at a glance, aiding patient conceptualization) and larger challenges related to context and deployment (e.g., navigating Veterans Affairs). By reframing our findings through three human-centered perspectives (distributed cognition, situated learning, infrastructural inversion), we highlight the complexities of designing a CDSS for psychotherapists in this context and offer theory-aligned design considerations.",
+          "relevance_score": 1.6392882,
+          "id": "https://openalex.org/W7133811727"
+        },
+        {
+          "title": "Advancing Equitable Inpatient Psychiatric Access for Children With Autism Spectrum Disorder",
+          "abstract": "J\u2019s first appointment at our community clinic was conducted with the lights off. He was an affectionate middle schooler with autism spectrum disorder (ASD), epilepsy, and type 1 diabetes mellitus, and we adjusted the lighting to increase his ability to self-regulate so that a physical examination could be completed. J\u2019s family moved to Massachusetts to be closer to our hospital because of his medical complexity yet still struggled with traveling to outpatient visits, resulting in discontinuity of care. Even with support from school, primary care, and subspecialists, physically aggressive behaviors, including hitting or kicking toward others, still led to emergency department (ED) visits, ED boarding, and inpatient psychiatric admissions to ensure safety for J and those around him. For patients like J, neurodevelopmental units are often the sole inpatient option. However, at the times J needed it the most, a bed was never available, and the wait for a neurodevelopmental unit bed to become available was weeks long. His family was left to manage his crises without the level of care and treatment recommended and sought by his medical teams.The most recent Centers for Disease Control and Prevention data reported that 1 in 31 children in the United States have a diagnosis of ASD.1 In Massachusetts alone, there are over 28 000 children with a diagnosis of ASD\u2014enough to fill 388 school buses.2 Nationwide, the pediatric behavioral health crisis has grown so dire that the American Academy of Pediatrics, the American Academy of Child and Adolescent Psychiatry, and the Children\u2019s Hospital Association declared a national state of emergency in children\u2019s mental health in 2021.3 Furthermore, a lack of practitioners, unequal distribution of existing practitioners, inconsistent practitioner training, and the growing rates of behavioral health disorders in children have led to a gap between pediatric behavioral health diagnoses and delivered care.4\u20138 As might be expected, emergency service use for behavioral health diagnoses9\u201311 and overall wait times have since worsened, especially in the pediatric population.12,13Autistic children are at higher risk for numerous conditions, particularly behavioral health disorders,14,15 and for presenting to the ED with psychiatric complaints such as conduct symptoms, anxiety, mood disorders, suicidal ideation or attempt, or intentional self-injurious behavior.16 Children with ASD are 6 times more likely to utilize inpatient psychiatric care and to accrue more cumulative inpatient days at higher cost than nonautistic children or children with intellectual disability.17,18 Risk factors for psychiatric hospitalization include mood disorders, sleep disorders, single-parent homes, diagnoses of obsessive compulsive disorder or depression, and aggression.19,20 Autistic children often require treatment in specialized inpatient units called neurodevelopmental units. However, there are only approximately 20 neurodevelopmental units in the United States,17 leaving many autistic children without definitive specialized care during a behavioral health crisis.Equitable access to practitioners and accommodations is essential for autistic children to receive the same standard of preventive care as their neurotypical peers. However, limitations in care for children with ASD continue to present significant barriers to the delivery of inclusive, high-quality care including availability of specialized inpatient units, inequities in funding, trained staff, staffing ratios, and geographic distribution in inpatient units, and gaps in community-based services.21 This feature will review current structural challenges in the existing system and potential opportunities to improve care and outcomes for autistic children.Caring for patients with ASD in primary care has become a common occurrence and often requires creative adaptations to prevent overstimulation, address changes in routine, and reduce anxiety. However, pediatric trainees and interprofessional practitioners continue to report discomfort and inconsistent training around best practices for managing both the outpatient and inpatient care of autistic children.4,22\u201325Although primary care and community supports are critical, inpatient psychiatric care can be necessary to stabilize acute emotional and behavioral crises and maintain safety for autistic children and those around them. Typical inpatient psychiatric units, however, often deny admission to patients with ASD and/or comorbid medical complexity, as these units are not designed for the unique needs of children with ASD and often are limited in their ability to manage medical comorbidity.For these patients, placement in specialized neurodevelopmental units is often the only viable option. Few rigorous studies evaluating the care of autistic children in the inpatient and outpatient settings exist, as recently demonstrated in a review of the literature with limited inpatient or ED studies and small sample sizes.26According to the Children\u2019s Hospital Association, 41% of children\u2019s hospitals nationally experienced a shortage of child and adolescent psychiatrists in 2024.27 At the federal level, behavioral health\u2013related spending represented only about 0.2% of an approximately $6.4 trillion United States federal budget for 2023.28\u201330 At the institutional level, large inequities have been found between neurodevelopmental units funded by public insurance versus those by commercial sources; commercially funded units had longer average lengths of stay, raising concerns regarding whether care delivery differs based on funding source.15A general inpatient psychiatric unit requires trained practitioners and staff who can care specifically for individuals experiencing symptoms related to psychiatric diagnoses; these units may be locked and able to provide limited medical care.15,31,32 The interventions on an inpatient psychiatric unit are brief, requiring communication and insight that may not be appropriate to target the needs of children with ASD.33,34 For example, inpatient psychiatric units typically utilize verbal psychotherapeutic strategies, group therapy, and schedules, which may all be counterintuitive and less productive for autistic children specifically.35 Furthermore, research has demonstrated that specialized units provide more effective care than general inpatient psychiatric units for children with ASD, intellectual disability, or developmental delay.34Neurodevelopmental units are even more specialized, with higher staff ratios and additional practitioners such as child psychologists, psychiatrists, board-certified behavior analysts, speech therapists, and occupational therapists who are trained to work with autistic children.15,32 These units are based in applied behavioral analysis (ABA) principles36 using evidence-based approaches to define target behaviors, investigate their root causes, address perpetuating factors, and teach replacement behaviors and skills, which can be continued on an outpatient basis.17 Studies have shown that these specialized inpatient units are effective in treating behavioral symptoms,37 decreasing polypharmacy,35 and decreasing repeat ED presentations.33From an institutional perspective, staffing a neurodevelopmental unit can be difficult due to the unit\u2019s high acuity,15 with staff injury rates from patient assaults reaching 3 times those of other psychiatric units.38,39 Additional challenges include higher levels of burnout, stigma, and institutional or provider reluctance to work with this population.15,36,38,40,41 Furthermore, crucial neurodevelopmental unit direct care staff positions are typically not well compensated, leading to difficulty with both recruiting and maintaining staff levels.40Fewer than 10 neurodevelopmental units existed about 15 years ago, and the geographic distribution of these units was uneven, predominantly in the Northeast.15 This number has now approximately doubled, showing increased recognition of the need for these units.17 Although the state of Massachusetts has a large number of health care professionals and medical centers, there remains an inequity in access to both inpatient child and adolescent psychiatric and neurodevelopmental unit beds. An online search for inpatient child and adolescent psychiatric units within Massachusetts returned 14 institutions with over 300 beds. Of those, only 4 specifically mention accepting children with ASD, and there are currently only 2 pediatric neurodevelopmental units operating across the state.The reality is that the demand for neurodevelopmental unit beds remains extraordinary, but there are fewer than 300 beds nationwide.17 The results are extended ED stays, repeated ineffective stays in units not designed for this population, or lack of access to necessary stabilization.42While neurodevelopmental unit availability for acute crisis stabilization remains critically important, unit availability is only one piece of what should be a broader system of care for children with ASD. Sustained progress hinges on access to community-based services, such as school- or home-based supports, family training, ABA, Developmental, Individual-Differences, Relationship-Based/Floor Time (DIRFloortime), or cognitive behavioral therapy (CBT). These services address needs directly in the environments where children and families spend most of their time, but families continue to report limited availability and variable quality.21 Additionally, billing data has demonstrated that longitudinal outpatient service delivery for greater than 7 weeks decreases overall psychiatric hospitalizations.43Increased training is needed for specialized practitioners caring for children with ASD, such as primary care pediatricians, psychiatrists, and psychologists. Additionally, this training should be thoughtfully incorporated into pediatric residency programs as the expanded Accreditation Council for Graduate Medical Education ambulatory and mental health requirements are implemented for the next generation of pediatric practitioners.44A multilevel system of care, including neurodevelopmental units, partial hospitalization programs, and intensive outpatient programs, should be supported by regulating agencies, practitioners, payers, and relevant government bodies. Robust lower levels of care can be effective in stabilizing or preventing less acute crises while avoiding the cost and disruption of a neurodevelopmental unit hospitalization. At all levels, staff should be recruited and trained with emphasis on this population\u2019s unique needs and provided with additional supervision and resources to support retention to ensure continuity of units.Institutions should recognize the unique needs of this population, pursue policy and contractual arrangements with state Medicaid offices to support opening of neurodevelopmental units, and engage in contracting work with commercial insurers to support reimbursement rates that match the intensity of the staffing required to provide quality care.States should partner in de-identified Medicaid data collection to further explore and understand cost and outcome inequities, as this aggregate data can help elucidate differential access and service utilization that may be impacting care.Community-based therapeutic options such as ABA, DIRFloortime, and CBT should be affordable and readily accessible for autistic children. In the current system, requirements differ widely by state and insurer, leading to confusion and logistical barriers for families and services, particularly as many ABA agencies work in multiple states. There should be advocacy to align approval requirements for services such as ABA, possibly at the federal level. Furthermore, many services have long waiting lists, and families report variable service quality; therefore, guidelines should exist to ensure high-quality, standardized practices for these services. Explorative work should also be conducted to determine how best to match therapeutic options with individual patient needs to more efficiently allocate supports.As primary care professionals, our job is to keep all children we care for healthy and at home, where they can thrive. However, our current health care system is not adequately prepared to address the needs of a growing population of autistic children, especially those with co-occurring behavioral health conditions. To ensure effective support, we must develop comprehensive, integrated care systems tailored to varying levels of need. Increased, sustained community support is needed to decrease inpatient psychiatric and neurodevelopmental unit admissions for autistic children. In the meantime, safety must be prioritized through increased availability of neurodevelopmental units and robust support for unit staff. Meaningful and urgent investment in the continuum of care for children with ASD, including community and inpatient behavioral health care, is imperative to address this population\u2019s needs.The authors would like to thank Mr Joshua Greenberg for his support of this project and manuscript, and J\u2019s family for allowing us to share his story.",
+          "relevance_score": 1.2141067,
+          "id": "https://openalex.org/W7151574246"
+        },
+        {
+          "title": "Validity and utility of Hierarchical Taxonomy of Psychopathology (HiTOP): III. Emotional dysfunction superspectrum.",
+          "abstract": "The Hierarchical Taxonomy of Psychopathology (HiTOP) is a quantitative nosological system that addresses shortcomings of traditional mental disorder diagnoses, including arbitrary boundaries between psychopathology and normality, frequent disorder co-occurrence, substantial heterogeneity within disorders, and diagnostic unreliability over time and across clinicians. This paper reviews evidence on the validity and utility of the internalizing and somatoform spectra of HiTOP, which together provide support for an emotional dysfunction superspectrum. These spectra are composed of homogeneous symptom and maladaptive trait dimensions currently subsumed within multiple diagnostic classes, including depressive, anxiety, trauma-related, eating, bipolar, and somatic symptom disorders, as well as sexual dysfunction and aspects of personality disorders. Dimensions falling within the emotional dysfunction superspectrum are broadly linked to individual differences in negative affect/neuroticism. Extensive evidence establishes that dimensions falling within the superspectrum share genetic diatheses, environmental risk factors, cognitive and affective difficulties, neural substrates and biomarkers, childhood temperamental antecedents, and treatment response. The structure of these validators mirrors the quantitative structure of the superspectrum, with some correlates more specific to internalizing or somatoform conditions, and others common to both, thereby underlining the hierarchical structure of the domain. Compared to traditional diagnoses, the internalizing and somatoform spectra demonstrated substantially improved utility: greater reliability, larger explanatory and predictive power, and greater clinical applicability. Validated measures are currently available to implement the HiTOP system in practice, which can make diagnostic classification more useful, both in research and in the clinic.",
+          "relevance_score": 0.67539555,
+          "id": "https://openalex.org/W7153177934"
+        },
+        {
+          "title": "Exploring which symptom should be targeted first in the comorbidity of anxiety and depression among adolescents with nomophobia: insight from a simulation network analysis",
+          "abstract": "Objectives To identify central and bridge symptoms linking anxiety and depression and to determine intervention\u2010priority symptoms using simulation in Chinese college students with nomophobia. Methods A cross-sectional online survey recruited 1, 638 college students in China who met at least mild criteria for nomophobia. Depressive and anxiety symptoms were assessed with the Patient Health Questionnaire-9 (PHQ-9) and Generalized Anxiety Disorder-7 (GAD-7). Ising networks were estimated for depression, anxiety, and their comorbidity. Expected influence and bridge expected influence were computed, and accuracy and stability were examined via nonparametric and case-dropping bootstraps. Network Intervention simulated analysis, symptom-specific alleviating and aggravating interventions to rank targets. Results Motor agitation/retardation (PHQ-8) and restlessness (GAD-5) were the most central symptoms in the depression and anxiety networks and remained central in the comorbidity network. Irritability (GAD-6) and feeling afraid (GAD-7) showed the highest bridge centrality, linking anxiety with depressive symptoms. NIRA indicated that reducing fatigue/low energy (PHQ-4) and excessive worry (GAD-3) would yield the largest decreases in overall network activation, whereas activating suicidal ideation (PHQ-9) and restlessness (GAD-5) would most strongly aggravate the network. Bootstrap results supported acceptable accuracy and stability (e.g., EI CS-C \u2248.67 for depression;.60 for anxiety; bridge EI CS-C \u2248.44 in the comorbidity network). Conclusions Symptom-level analysis highlights actionable leverage points in nomophobia-related comorbidity. Longitudinal and experimental studies are warranted to confirm causal pathways and validate network-informed treatment sequencing.",
+          "relevance_score": 0.6607836,
+          "id": "https://openalex.org/W7154074432"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 4,
+      "query": "digital adolescent depression intervention",
+      "angle": "intersection",
+      "rationale": "Combines digital interventions with adolescent depression focus. 'Digital Mental Health Interventions' appears as topic (13x) in vocabulary, matching user's interest in app-based approaches.",
+      "openalex_count": 201,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Application of Human-Computer Interaction in Alleviating Appearance Anxiety Among Adolescents",
+          "abstract": "In the digital era of pervasive social media, adolescents' appearance anxiety is rising steadily. Repeated exposure to idealized appearance content and objectifying online assessments complicates body image development and imposes psychological pressure. Consequently, this intensified focus on digital self-presentation often translates into a diminished sense of self-worth and an increased risk of developing long-term psychological maladjustment. Studies link appearance anxiety to reduced self-worth, social avoidance, depression, and higher eating disorder risk. However, most interventions remain conventional psychological counseling, neglecting the potential of digital technology. This HCI-focused case study explores technology-assisted interventions for adolescents, integrating Social Comparison, Objectification, and Cognitive Behavioral Theory to propose an individual, school, and family-level HCI-based model. Research shows AI chatbots, virtual appearance browsers, and media-literacy interactive systems can alleviate anxiety by altering self-objectification and appearance-based social comparison, with intervention effects mediated by individual differences like appearance perfectionism and body appreciation. To enhance objectivity, EEG is used to measure neural responses to appearance-related stimuli pre- and post-intervention, providing physiological evidence for HCI-based interventions.",
+          "relevance_score": 3.6376305,
+          "id": "https://openalex.org/W7151482393"
+        },
+        {
+          "title": "Losing Sleep over Likes:\u00a0The Role of Bedtime Procrastination and Self-control in the Link Between Problematic Social Media Use with Depression, and Anxiety",
+          "abstract": "",
+          "relevance_score": 2.7861152,
+          "id": "https://openalex.org/W7154079403"
+        },
+        {
+          "title": "Breaking Negative Cycles: A Reflection-to-Action System for Adaptive Change",
+          "abstract": "Breaking negative mental health cycles, including rumination and recurring regrets, requires reflection that translates awareness into behavioral change. Grounded in the Transtheoretical Model (TTM) and Gross\u2019s Emotion Regulation (ER) Process Model, we examine how Technologies Supporting Self-Reflection (TSR) bridge reflection and action. In a 15-day in-the-wild study (N = 20), participants used a voice-based journaling system to capture regrets and wishes and engaged in WhatIf-Planning, a novel structured reflection module integrating counterfactual thinking with if\u2013then planning. Participants were randomized to either a free-form condition or a Gross-guided condition, which maps the five processes of Gross\u2019s ER model into explicit journaling prompts. We contribute: (1) a unified reflection-to-action TSR system that operationalizes the Preparation stage of TTM to bridge Contemplation and Action, and (2) triangulated empirical evidence from an in-the-wild journaling study that first operationalizes Gross\u2019s Process Model, revealing effects on coping flexibility and emotion regulation in daily life. Results show significant pre\u2013post improvements in coping flexibility, indicating adaptive self-regulation across conditions, with the Gross-guided group generating more counterfactual alternatives, articulating concrete if\u2013then action plans, and implementing more plans for self-driven change.",
+          "relevance_score": 1.5938677,
+          "id": "https://openalex.org/W7153508710"
+        },
+        {
+          "title": "Teen Vigilance: Navigating Risky Social Interactions on Discord",
+          "abstract": "Teenagers are avid users of Discord, a fast-growing platform for synchronous communication where they often interact with strangers. Because Discord combines private DMs, semi-private voice channels, and public servers in one place, it creates a hybrid environment that can produce complex\u2014and underexplored\u2014safety risks for teenagers. Drawing on 16 interviews with teenage Discord users, this study examines their strategies for navigating risky social interactions in the platform. Our findings reveal that when teenagers encounter risks during social interactions, they exercise vigilance by evaluating suspicious interactions before forming friendships, using safety tools, and engaging in controlled risk-taking to safeguard their privacy and security. At the community level, they mitigate risks through selective participation in servers, a practice supported by vigilant governance structures. We discuss how vigilance enables teenagers to act during risky encounters to protect themselves, advancing understanding of teenagers\u2019 agency in risk navigation and informing teen-centered designs for safer online environments.",
+          "relevance_score": 1.5742354,
+          "id": "https://openalex.org/W7133520662"
+        },
+        {
+          "title": "Unraveling Entangled Feeds: Rethinking Social Media Design to Enhance User Well-being",
+          "abstract": "Social media platforms have rapidly adopted algorithmic curation with little consideration for the potential harm to users' mental well-being. We present findings from design workshops with 21 participants diagnosed with mental illness about their interactions with social media platforms. We find that users develop cause-and-effect explanations, or folk theories, to understand their experiences with algorithmic curation. These folk theories highlight a breakdown in algorithmic design that we explain using the framework of entanglement, a phenomenon where there is a disconnect between users' actions and platform outcomes on an emotional level. Participants' designs to address entanglement and mitigate harms centered on contextualizing their engagement and restoring explicit user control on social media. The conceptualization of entanglement and the resulting design recommendations have implications for social computing and recommender systems research, particularly in evaluating and designing social media platforms that support users' mental well-being.",
+          "relevance_score": 1.5356097,
+          "id": "https://openalex.org/W7130361023"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.3
+    },
+    {
+      "id": 5,
+      "query": "family-based adolescent depression therapy",
+      "angle": "intersection",
+      "rationale": "Addresses user's interest in family-based treatments for adolescent depression. Vocabulary includes 'Child and Adolescent Psychosocial and Emotional Development' topic (15x).",
+      "openalex_count": 222,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "abstract": "This study aims to develop a manualized multi-family group therapy (MFGT) program for adolescents with depressive school refusal and to evaluate its effectiveness through a randomized controlled trial. By comparing MFGT with group cognitive behavioral therapy (GCBT), the study seeks to examine the relative efficacy of MFGT in improving school refusal behaviors and depressive symptoms, to assess the stability of treatment effects during follow-up, and to explore potential mechanisms underlying behavioral change. This study is designed as a single-center, single-blind, randomized controlled non-inferiority trial. A total of 138 adolescents aged 12-19 years who meet DSM-5 criteria for depressive disorders and Berg\u2019s criteria for school refusal will be randomly assigned in a 1:1 ratio to either the MFGT plus treatment-as-usual (TAU) group or the GCBT plus TAU group. Both interventions consist of eight group sessions delivered over four weeks. Primary outcomes include school attendance rate and clinician-rated depressive symptoms assessed using the Hamilton Depression Rating Scale. Secondary and intermediate outcomes include self-reported depressive and anxiety symptoms, school refusal maintaining factors, school-related self-efficacy, family functioning, and parent\u2013adolescent communication. Assessments will be conducted at baseline, post-treatment, and at 1- and 3-month follow-up. This study will be the first randomized controlled trial to evaluate a standardized and manualized MFGT protocol specifically developed for adolescents with depressive school refusal. By adopting a family-based and scalable intervention model, the study is expected to provide evidence for an effective and resource-efficient treatment approach that addresses both individual psychopathology and family dynamics. The findings may contribute to improving school attendance and mental health outcomes in adolescents and inform clinical practice and public mental health strategies in settings with limited mental health resources. Chinese Clinical Trial Registry (ChiCTR2500100225). Registered, 2025.",
+          "relevance_score": 3.503803,
+          "id": "https://openalex.org/W7153462697"
+        },
+        {
+          "title": "Adolescence and Sexuality: The involvement of cognitive and emotional processes in the development of Gender Identity and Gender Dysphoria",
+          "abstract": "This thesis, titled \"Adolescence and Sexuality: The involvement of cognitive and emotional processes in the development of Gender Identity and Gender Dysphoria\", constitutes a systematic, critical, and wide-ranging investigation into the complex architecture of identity during the delicate phase of adolescent transition. The work deliberately departs from a monodisciplinary or reductionist view to embrace a markedly multidisciplinary methodology, deemed essential for decoding the multifaceted and layered nature of human experience in contemporary times. The research architecture is constructed by synergistically and dialectically intertwining biological evidence from neuroscience, structural and critical paradigms of sociology, intercultural perspectives of anthropology, the normative requirements of professional ethics, and the educational practices of pedagogy. The value of this work is solidly supported by an extensive bibliographic review, rigorously updated to international publications of the 2024-2025 period. This methodological choice ensures a discussion perfectly aligned with both the most recent global nosological changes and the latest empirical evidence regarding mental health in developmental age. The analysis begins in the first chapter with a detailed exploration of the radical physical, cognitive, and emotional transformations that mark the onset of puberty and adolescence. In this section, the contribution of neuroscience plays a central role in explaining the biological mechanisms underlying behavior: the asynchronous maturation between the limbic system (the seat of emotional reactivity and reward-seeking) and the prefrontal cortex (the seat of executive functions and inhibitory control) is analyzed. This shift is presented not as a simple physiological event, but as the biological engine of a profound restructuring of self-perception and emotional vulnerability. In parallel, cognitive psychology investigates how the acquisition of hypothetical-deductive reasoning and meta-cognitive abilities allow adolescents to formulate abstract, fluid, and complex identity schemas. However, the thesis overcomes the risk of biological determinism by integrating the lens of cultural anthropology: the dominant Eurocentric perspective is critiqued, demonstrating\u2014through the comparison of various ethnographic models of sexual socialization\u2014how binary Western definitions of \"gender\" are historically determined, limited, and non-universal constructs. Additionally, sociology and social psychology analyzes the pervasive and structuring role of peers, social networks and parental expectations, identified as powerful agents of socialization that mediate, reinforce, or sometimes counter hegemonic gender norms in contemporary society. The second chapter shifts the focus to the clinical and diagnostic dimension, addressing the theme of Gender Dysphoria through a rigorous technical and epistemological comparison between the DSM-5-TR (APA) and the ICD-11 (WHO). Here, the research documents and historicizes the fundamental transition from a pathologizing view of diversity to a perspective based on \"sexual health\" and the non-stigmatizing concept of gender incongruence . The multidisciplinary approach allows for a reinterpretation of psychological suffering not as an endogenous symptom or an individual dysfunction, but as an adaptive response to hostile environmental variables, utilizing the socio-clinical model of Minority Stress. This theoretical framework, supported by extensive statistical data, unequivocally highlights how the high rates of anxiety, depression, and suicidal ideation in the gender-diverse population are not intrinsic to identity, but the direct result of stigma, interpersonal prejudice, and systemic discrimination. Through the application of Cognitive Appraisal Theory, the thesis further explores how adolescents cognitively evaluate these challenges (\"stressors\"), emphasizing the crucial role of psychological resilience and perceived social support as indispensable protective factors for well-being. The third chapter, of an applied and deontological nature, examines the ethical challenges of the profession in light of the most recent WPATH SOC-8 international standards of care and the Gender-Affirming Care approach. A substantial and innovative part of this section is dedicated to a factual analysis of the impact of conservative political institutions and religious institutions on global public health. Treating the subject not as political opinion but as scientific evidence based on the social determinants of health, the thesis analyzes how restrictive rhetoric, moral panic, and rigid religious dogmas act as environmental pathogenic factors. The examined scientific literature demonstrates that in sociopolitical contexts characterized by legislation hostile to gender identity and strong religious conservatism, there is a measurable increase in \"distal stressors\" (institutional rejection, legal barriers to accessing care, internalized moral stigma). These environmental variables statistically correlate with a dramatic worsening of mental health parameters (exponential increase in suicide risk, social isolation, and school dropout) among LGBTQIA+ adolescents. The analysis confirms that the lack of secularism in healthcare institutions and the politicization of bodies constitute objective risk factors for the psychophysical development of minors. Ultimately, the work programmatically extends into the fields of critical pedagogy and school and educational psychology, proposing a series of concrete primary prevention strategies that go beyond the traditional clinical setting. Supported by the evidence reported in the third chapter, the thesis argues for the urgent and no longer postponable necessity of implementing inclusive sexual, affective, and relational education programs. These interventions should not be understood as mere transfers of biological notions, but as pedagogical tools capable of acting upstream on socialization processes, with the goal of radically deconstructing gender stereotypes and systemic prejudices that fuel the phenomena of bullying and social exclusion. Through a constant and rigorous dialogue between behavioral sciences, social sciences, and bioethics, the thesis offers mental health professionals, educators, and researchers a \"macro-level\" intervention model. This approach recognizes that the effectiveness of psychological practice cannot be limited to the aseptic environment of the therapy room but must necessarily integrate a strong ethical and deontological awareness that drives the practitioner to act as an agent of change within the social, cultural, and institutional context. In line with international standards of care, the research highlights how the psychophysical well-being of the adolescent directly depends on the creation of \"validating\" school and family environments, capable of neutralizing the deleterious effects of the environmental stressors and restrictive ideological dogmas analyzed throughout the work. The conclusion of the thesis therefore reaffirms the professional's duty to actively promote protective policies that guarantee human dignity and the inalienable right to self-determination. Only through a synergy between inclusive education, affirmative clinical support, and structural reforms of growth contexts will it be possible to ensure that every adolescent\u2014regardless of their gender identity\u2014experiences a harmonious development protected from every form of violence or institutional stigmatization.",
+          "relevance_score": 1.718718,
+          "id": "https://openalex.org/W7154338923"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 1.6356139,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Advancing Equitable Inpatient Psychiatric Access for Children With Autism Spectrum Disorder",
+          "abstract": "J\u2019s first appointment at our community clinic was conducted with the lights off. He was an affectionate middle schooler with autism spectrum disorder (ASD), epilepsy, and type 1 diabetes mellitus, and we adjusted the lighting to increase his ability to self-regulate so that a physical examination could be completed. J\u2019s family moved to Massachusetts to be closer to our hospital because of his medical complexity yet still struggled with traveling to outpatient visits, resulting in discontinuity of care. Even with support from school, primary care, and subspecialists, physically aggressive behaviors, including hitting or kicking toward others, still led to emergency department (ED) visits, ED boarding, and inpatient psychiatric admissions to ensure safety for J and those around him. For patients like J, neurodevelopmental units are often the sole inpatient option. However, at the times J needed it the most, a bed was never available, and the wait for a neurodevelopmental unit bed to become available was weeks long. His family was left to manage his crises without the level of care and treatment recommended and sought by his medical teams.The most recent Centers for Disease Control and Prevention data reported that 1 in 31 children in the United States have a diagnosis of ASD.1 In Massachusetts alone, there are over 28 000 children with a diagnosis of ASD\u2014enough to fill 388 school buses.2 Nationwide, the pediatric behavioral health crisis has grown so dire that the American Academy of Pediatrics, the American Academy of Child and Adolescent Psychiatry, and the Children\u2019s Hospital Association declared a national state of emergency in children\u2019s mental health in 2021.3 Furthermore, a lack of practitioners, unequal distribution of existing practitioners, inconsistent practitioner training, and the growing rates of behavioral health disorders in children have led to a gap between pediatric behavioral health diagnoses and delivered care.4\u20138 As might be expected, emergency service use for behavioral health diagnoses9\u201311 and overall wait times have since worsened, especially in the pediatric population.12,13Autistic children are at higher risk for numerous conditions, particularly behavioral health disorders,14,15 and for presenting to the ED with psychiatric complaints such as conduct symptoms, anxiety, mood disorders, suicidal ideation or attempt, or intentional self-injurious behavior.16 Children with ASD are 6 times more likely to utilize inpatient psychiatric care and to accrue more cumulative inpatient days at higher cost than nonautistic children or children with intellectual disability.17,18 Risk factors for psychiatric hospitalization include mood disorders, sleep disorders, single-parent homes, diagnoses of obsessive compulsive disorder or depression, and aggression.19,20 Autistic children often require treatment in specialized inpatient units called neurodevelopmental units. However, there are only approximately 20 neurodevelopmental units in the United States,17 leaving many autistic children without definitive specialized care during a behavioral health crisis.Equitable access to practitioners and accommodations is essential for autistic children to receive the same standard of preventive care as their neurotypical peers. However, limitations in care for children with ASD continue to present significant barriers to the delivery of inclusive, high-quality care including availability of specialized inpatient units, inequities in funding, trained staff, staffing ratios, and geographic distribution in inpatient units, and gaps in community-based services.21 This feature will review current structural challenges in the existing system and potential opportunities to improve care and outcomes for autistic children.Caring for patients with ASD in primary care has become a common occurrence and often requires creative adaptations to prevent overstimulation, address changes in routine, and reduce anxiety. However, pediatric trainees and interprofessional practitioners continue to report discomfort and inconsistent training around best practices for managing both the outpatient and inpatient care of autistic children.4,22\u201325Although primary care and community supports are critical, inpatient psychiatric care can be necessary to stabilize acute emotional and behavioral crises and maintain safety for autistic children and those around them. Typical inpatient psychiatric units, however, often deny admission to patients with ASD and/or comorbid medical complexity, as these units are not designed for the unique needs of children with ASD and often are limited in their ability to manage medical comorbidity.For these patients, placement in specialized neurodevelopmental units is often the only viable option. Few rigorous studies evaluating the care of autistic children in the inpatient and outpatient settings exist, as recently demonstrated in a review of the literature with limited inpatient or ED studies and small sample sizes.26According to the Children\u2019s Hospital Association, 41% of children\u2019s hospitals nationally experienced a shortage of child and adolescent psychiatrists in 2024.27 At the federal level, behavioral health\u2013related spending represented only about 0.2% of an approximately $6.4 trillion United States federal budget for 2023.28\u201330 At the institutional level, large inequities have been found between neurodevelopmental units funded by public insurance versus those by commercial sources; commercially funded units had longer average lengths of stay, raising concerns regarding whether care delivery differs based on funding source.15A general inpatient psychiatric unit requires trained practitioners and staff who can care specifically for individuals experiencing symptoms related to psychiatric diagnoses; these units may be locked and able to provide limited medical care.15,31,32 The interventions on an inpatient psychiatric unit are brief, requiring communication and insight that may not be appropriate to target the needs of children with ASD.33,34 For example, inpatient psychiatric units typically utilize verbal psychotherapeutic strategies, group therapy, and schedules, which may all be counterintuitive and less productive for autistic children specifically.35 Furthermore, research has demonstrated that specialized units provide more effective care than general inpatient psychiatric units for children with ASD, intellectual disability, or developmental delay.34Neurodevelopmental units are even more specialized, with higher staff ratios and additional practitioners such as child psychologists, psychiatrists, board-certified behavior analysts, speech therapists, and occupational therapists who are trained to work with autistic children.15,32 These units are based in applied behavioral analysis (ABA) principles36 using evidence-based approaches to define target behaviors, investigate their root causes, address perpetuating factors, and teach replacement behaviors and skills, which can be continued on an outpatient basis.17 Studies have shown that these specialized inpatient units are effective in treating behavioral symptoms,37 decreasing polypharmacy,35 and decreasing repeat ED presentations.33From an institutional perspective, staffing a neurodevelopmental unit can be difficult due to the unit\u2019s high acuity,15 with staff injury rates from patient assaults reaching 3 times those of other psychiatric units.38,39 Additional challenges include higher levels of burnout, stigma, and institutional or provider reluctance to work with this population.15,36,38,40,41 Furthermore, crucial neurodevelopmental unit direct care staff positions are typically not well compensated, leading to difficulty with both recruiting and maintaining staff levels.40Fewer than 10 neurodevelopmental units existed about 15 years ago, and the geographic distribution of these units was uneven, predominantly in the Northeast.15 This number has now approximately doubled, showing increased recognition of the need for these units.17 Although the state of Massachusetts has a large number of health care professionals and medical centers, there remains an inequity in access to both inpatient child and adolescent psychiatric and neurodevelopmental unit beds. An online search for inpatient child and adolescent psychiatric units within Massachusetts returned 14 institutions with over 300 beds. Of those, only 4 specifically mention accepting children with ASD, and there are currently only 2 pediatric neurodevelopmental units operating across the state.The reality is that the demand for neurodevelopmental unit beds remains extraordinary, but there are fewer than 300 beds nationwide.17 The results are extended ED stays, repeated ineffective stays in units not designed for this population, or lack of access to necessary stabilization.42While neurodevelopmental unit availability for acute crisis stabilization remains critically important, unit availability is only one piece of what should be a broader system of care for children with ASD. Sustained progress hinges on access to community-based services, such as school- or home-based supports, family training, ABA, Developmental, Individual-Differences, Relationship-Based/Floor Time (DIRFloortime), or cognitive behavioral therapy (CBT). These services address needs directly in the environments where children and families spend most of their time, but families continue to report limited availability and variable quality.21 Additionally, billing data has demonstrated that longitudinal outpatient service delivery for greater than 7 weeks decreases overall psychiatric hospitalizations.43Increased training is needed for specialized practitioners caring for children with ASD, such as primary care pediatricians, psychiatrists, and psychologists. Additionally, this training should be thoughtfully incorporated into pediatric residency programs as the expanded Accreditation Council for Graduate Medical Education ambulatory and mental health requirements are implemented for the next generation of pediatric practitioners.44A multilevel system of care, including neurodevelopmental units, partial hospitalization programs, and intensive outpatient programs, should be supported by regulating agencies, practitioners, payers, and relevant government bodies. Robust lower levels of care can be effective in stabilizing or preventing less acute crises while avoiding the cost and disruption of a neurodevelopmental unit hospitalization. At all levels, staff should be recruited and trained with emphasis on this population\u2019s unique needs and provided with additional supervision and resources to support retention to ensure continuity of units.Institutions should recognize the unique needs of this population, pursue policy and contractual arrangements with state Medicaid offices to support opening of neurodevelopmental units, and engage in contracting work with commercial insurers to support reimbursement rates that match the intensity of the staffing required to provide quality care.States should partner in de-identified Medicaid data collection to further explore and understand cost and outcome inequities, as this aggregate data can help elucidate differential access and service utilization that may be impacting care.Community-based therapeutic options such as ABA, DIRFloortime, and CBT should be affordable and readily accessible for autistic children. In the current system, requirements differ widely by state and insurer, leading to confusion and logistical barriers for families and services, particularly as many ABA agencies work in multiple states. There should be advocacy to align approval requirements for services such as ABA, possibly at the federal level. Furthermore, many services have long waiting lists, and families report variable service quality; therefore, guidelines should exist to ensure high-quality, standardized practices for these services. Explorative work should also be conducted to determine how best to match therapeutic options with individual patient needs to more efficiently allocate supports.As primary care professionals, our job is to keep all children we care for healthy and at home, where they can thrive. However, our current health care system is not adequately prepared to address the needs of a growing population of autistic children, especially those with co-occurring behavioral health conditions. To ensure effective support, we must develop comprehensive, integrated care systems tailored to varying levels of need. Increased, sustained community support is needed to decrease inpatient psychiatric and neurodevelopmental unit admissions for autistic children. In the meantime, safety must be prioritized through increased availability of neurodevelopmental units and robust support for unit staff. Meaningful and urgent investment in the continuum of care for children with ASD, including community and inpatient behavioral health care, is imperative to address this population\u2019s needs.The authors would like to thank Mr Joshua Greenberg for his support of this project and manuscript, and J\u2019s family for allowing us to share his story.",
+          "relevance_score": 1.6083773,
+          "id": "https://openalex.org/W7151574246"
+        },
+        {
+          "title": "Understanding Remote Mental Health Supporters' Help-Seeking in Online Communities",
+          "abstract": "Providing mental health support for loved ones across a geographic distance creates unique challenges for the remote caregivers, who sometimes turn to online communities for peer support. We qualitatively analyzed 522 Reddit threads to understand what drives remote caregivers' online help-seeking behaviors and the responses they receive from the community. Their purposes of posting included requesting guidance, expressing emotions, and seeking validation. Community responses included providing emotional support, suggesting informational strategies, and sharing personal experiences. While certain themes in posts (emotional toll, monitoring symptoms, and prioritizing caregiver well-being) are shared across remote and non-remote contexts, remote caregivers' posts surfaced nuanced experiences. For example, they often rely on digital cues, such as voice, to interpret care receivers' well-being while struggling with digital silence during crises. We discuss the need for supporting communication and information sharing between remote caregivers and receivers, care coordination for crisis management, and design recommendations for caregiver communities.",
+          "relevance_score": 1.4673293,
+          "id": "https://openalex.org/W7128631410"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 6,
+      "query": "adolescent depression assessment tools",
+      "angle": "adjacent",
+      "rationale": "Targets user's interest in assessment tools. Vocabulary includes 'Clinical Psychology' subfield (67x) and 'Psychological intervention' keyword (47x), suggesting assessment research exists.",
+      "openalex_count": 360,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "The Effects of Anxiety and Self-Control on Smartphone Addiction Among Children and Adolescents at Risk for Depression",
+          "abstract": "Background/Objectives: Research comprehensively analyzing the psychological characteristics and factors related to smartphone addiction in Korean children and adolescents at risk for depression remains scarce. This study utilized large-scale cohort data to examine the differences in psychological characteristics between an at-risk group for depression and a control group, and to identify the specific factors influencing smartphone addiction within the at-risk group. Methods: Data were obtained from the school-based cohort of internet and smartphone users conducted by the National Center for Mental Health (NCMH), involving a total of 2294 children and adolescents (1009 in the at-risk for depression group and 1285 in the control group). Assessment tools included the Children\u2019s Depression Inventory (CDI), State-Trait Anxiety Inventory for Children (STAIC/TAIC), Self-Esteem Scale (SES), Self-Control Scale, Aggression Questionnaire (K-AQ), School Bullying (SB) scale, and the Smartphone Addiction Scale-Short Form (SAS-SV). Results: Analysis of Covariance (ANCOVA) revealed that the at-risk group exhibited significantly higher levels of anxiety, aggression, involvement in school bullying, and smartphone addiction compared to the control group, while showing lower levels of self-esteem and self-control. Furthermore, multiple regression analysis indicated that higher anxiety and lower self-control were significant predictors of increased smartphone addiction levels. Conclusions: These findings support the Interaction of Person-Affect-Cognition-Execution (I-PACE) model, which posits that emotional vulnerability and deficits in executive functions lead to addictive behaviors. The results suggest that reducing anxiety and enhancing self-control are critical factors in the prevention of smartphone addiction among children and adolescents.",
+          "relevance_score": 3.546908,
+          "id": "https://openalex.org/W7152559689"
+        },
+        {
+          "title": "Screening Emotions in Adolescents Receiving Care at the Hospital for mild Traumatic Brain Injury (SEARCH-mTBI): protocol for a multicenter observational study",
+          "abstract": "Mild traumatic brain injury (mTBI) is a common pediatric condition with growing recognition of its impact on mental health. While most children recover within weeks of the injury, a subset experience persistent emotional symptoms, including anxiety and depression. Early identification of youth at risk for adverse mental health outcomes is essential for timely intervention. Our primary study objective is to develop a robust clinical prediction tool to identify children at risk for adverse mental health outcomes after mTBI. We will conduct a multicenter prospective observational cohort study enrolling patients aged 11\u201317 years who present to the emergency department (ED) with mTBI within 3 days from injury. We will enroll consecutive patients into separate derivation and validation cohorts using different enrolling sites. Baseline data, including pre-injury mental health status, and clinical variables will be collected from patients, caregivers, and ED clinicians. We will collect validated measures during the acute period (1 to 2 weeks), 1-month, and 3-months post-injury including: the Generalized Anxiety Disorder-7 (GAD-7), Patient Health Questionnaire-8 (PHQ-8), Pediatric Quality of Life Inventory (PedsQL), Rivermead Post-Concussion Symptoms Questionnaire, and the Strengths and Difficulties Questionnaire (SDQ). Our primary outcome is a composite measure of clinically significant new or worsening in anxiety or depression at 1 or 3 months. Secondary outcomes include persistent post-concussive symptoms, reduced quality of life, and new behavioral or emotional difficulties. We will analyze associations between baseline factors and outcomes to derive and validate a clinical prediction tool. Our study will provide a comprehensive assessment of mental health and other outcomes following mTBI in adolescents and identify predisposing factors for adverse outcomes. Our findings will contribute to the development of a clinical prediction tool to support early identification and referral for at-risk youth. Study results may inform post-injury care pathways and targeted interventions aimed at improving long-term recovery. ClinicalTrials.gov Identifier: NCT06370520. Registered March 20, 2024. The study protocol has been approved by the Institutional Review Boards at all participating sites.",
+          "relevance_score": 2.360017,
+          "id": "https://openalex.org/W7151064401"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 1.3588316,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Breaking Negative Cycles: A Reflection-to-Action System for Adaptive Change",
+          "abstract": "Breaking negative mental health cycles, including rumination and recurring regrets, requires reflection that translates awareness into behavioral change. Grounded in the Transtheoretical Model (TTM) and Gross\u2019s Emotion Regulation (ER) Process Model, we examine how Technologies Supporting Self-Reflection (TSR) bridge reflection and action. In a 15-day in-the-wild study (N = 20), participants used a voice-based journaling system to capture regrets and wishes and engaged in WhatIf-Planning, a novel structured reflection module integrating counterfactual thinking with if\u2013then planning. Participants were randomized to either a free-form condition or a Gross-guided condition, which maps the five processes of Gross\u2019s ER model into explicit journaling prompts. We contribute: (1) a unified reflection-to-action TSR system that operationalizes the Preparation stage of TTM to bridge Contemplation and Action, and (2) triangulated empirical evidence from an in-the-wild journaling study that first operationalizes Gross\u2019s Process Model, revealing effects on coping flexibility and emotion regulation in daily life. Results show significant pre\u2013post improvements in coping flexibility, indicating adaptive self-regulation across conditions, with the Gross-guided group generating more counterfactual alternatives, articulating concrete if\u2013then action plans, and implementing more plans for self-driven change.",
+          "relevance_score": 1.2937196,
+          "id": "https://openalex.org/W7153508710"
+        },
+        {
+          "title": "Teen Vigilance: Navigating Risky Social Interactions on Discord",
+          "abstract": "Teenagers are avid users of Discord, a fast-growing platform for synchronous communication where they often interact with strangers. Because Discord combines private DMs, semi-private voice channels, and public servers in one place, it creates a hybrid environment that can produce complex\u2014and underexplored\u2014safety risks for teenagers. Drawing on 16 interviews with teenage Discord users, this study examines their strategies for navigating risky social interactions in the platform. Our findings reveal that when teenagers encounter risks during social interactions, they exercise vigilance by evaluating suspicious interactions before forming friendships, using safety tools, and engaging in controlled risk-taking to safeguard their privacy and security. At the community level, they mitigate risks through selective participation in servers, a practice supported by vigilant governance structures. We discuss how vigilance enables teenagers to act during risky encounters to protect themselves, advancing understanding of teenagers\u2019 agency in risk navigation and informing teen-centered designs for safer online environments.",
+          "relevance_score": 1.2612865,
+          "id": "https://openalex.org/W7133520662"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 7,
+      "query": "adolescent sleep depression review",
+      "angle": "adjacent",
+      "rationale": "Adjacent to user's interests; 'Sleep and related disorders' appears as topic (4x) in vocabulary, and sample titles show sleep-depression connections in adolescents.",
+      "openalex_count": 260,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Prevalence and risk factors of sleep disturbances among adolescents with non-suicidal self-injury: a systematic review and meta-analysis",
+          "abstract": "To estimate the pooled prevalence of sleep disturbances and identify associated risk factor among adolescent with non-suicidal self-injury (NSSI). A systematic search of PubMed, Web of Science, Embase, PsycINFO, CNKI, and SinoMed was conducted up to March 2026. Eligible studies included adolescents aged 11\u201319 years with NSSI that reported the prevalence or risk factors of sleep disturbances. Cross-sectional and longitudinal studies were included. Two reviewers independently conducted study selection, data extraction, and quality assessment. Pooled estimates were calculated using random-effects models. A total of 23 studies were included in the review. The pooled prevalence of sleep disturbances across 13 studies was 41% (95%CI: 39%\u201344%; I\u00b2= 76.8%). Overall, 11 risk factors were identified across 15 studies, of which four factors were eligible for meta-analysis, including female sex, depression, emotional neglect, and externalizing problems. Significant associations were observed for depression (OR = 1.05, 95%CI: 1.03\u20131.07; I\u00b2= 69.1%) and female sex (OR = 1.74, 95%CI: 1.31\u20132.18; I\u00b2= 78.8%), whereas emotional neglect and externalizing problems were not significantly associated with sleep disturbances. Sleep disturbances are highly prevalent among adolescents engaging in NSSI, particularly among females and those with depression. These findings underscore the need for routine sleep assessment within adolescent mental health screening. Nurses can play a key role in early identification, sleep-health education, and timely referral, supporting nurse-led models of early detection and prevention.",
+          "relevance_score": 4.255217,
+          "id": "https://openalex.org/W7151032589"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 1.6058217,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Understanding Remote Mental Health Supporters' Help-Seeking in Online Communities",
+          "abstract": "Providing mental health support for loved ones across a geographic distance creates unique challenges for the remote caregivers, who sometimes turn to online communities for peer support. We qualitatively analyzed 522 Reddit threads to understand what drives remote caregivers' online help-seeking behaviors and the responses they receive from the community. Their purposes of posting included requesting guidance, expressing emotions, and seeking validation. Community responses included providing emotional support, suggesting informational strategies, and sharing personal experiences. While certain themes in posts (emotional toll, monitoring symptoms, and prioritizing caregiver well-being) are shared across remote and non-remote contexts, remote caregivers' posts surfaced nuanced experiences. For example, they often rely on digital cues, such as voice, to interpret care receivers' well-being while struggling with digital silence during crises. We discuss the need for supporting communication and information sharing between remote caregivers and receivers, care coordination for crisis management, and design recommendations for caregiver communities.",
+          "relevance_score": 1.2005612,
+          "id": "https://openalex.org/W7128631410"
+        },
+        {
+          "title": "Editorial",
+          "abstract": "As the Editors of Mental Health and Social Inclusion, we continue to be impressed by the international nature of our submissions. In this issue, we have 10 papers from different countries. While there are four papers from India and two from the UK, we have a paper each from Pakistan, Bangladesh, Egypt, Jordan, China, Greece and the USA. This issue features nine empirical research papers, three case studies, one viewpoint paper and one literature review. Let\u2019s dive right in.Monaco based health psychologist Dr Freda Gonot-Schoupinsky contributes two papers to this issue. The first is another in her fascinating positive autoethnography series. This time she features Dr Evangelos Fradelos from Larissa in Greece. Dr Fradelos recounts how his mother was diagnosed with schizophrenia, which perhaps drew him towards working with people who had severe mental illness. His godmother Theano played a key role in his upbringing. He described her thus, \u201c[\u2026] although she had not seen the world, her heart could hold all of humanity\u201d. From his childhood reflections he moves onto talk about how he became a nurse. He notes that providing meaningful care to people, has the power to be therapeutic, for not only the one who receives it but also the one who gives it. He goes on to say that not only is \u201c[\u2026] nursing not just a profession, it is a way of being [\u2026] But above all it remains an act of love\u201d. This is a wonderful account from a remarkable nurse academic.Freda\u2019s second paper features Professor Corey Keyes. While there is less information in this account on Corey\u2019s upbringing, the little there is suggests it was very traumatic. Corey was the first academic to introduce the concepts of flourishing-languishing. He has experienced significant mental health problems himself, as well as having endured alcoholism. He advises, \u201cDo not walk alone with your mental illness, walk with others and talk about it [\u2026]\u201d He comments, \u201cSick care is necessary, but it is not health care. We need both\u201d. Entering a state of flourishing reduces the risk of developing mental health problems. Corey also offers some straight-talking about positive psychology, which he is clearly disenchanted with. While this account is very brief, it is nonetheless highly illuminating.Three papers look at mental health care in scheduled tribes in India, which represent 8.6% of the total population of the country. Treesa Pulickel and colleagues conducted a scoping review. They attempted to answer six questions with their review. The first looked at the prevalence of mental disorders and found high rates of depression, anxiety and substance use amongst tribal groups. The second considered where people get their information about mental health from. Traditional healers and faith leaders were often consulted. Mothers played a significant role in handing down information through the generations. They also looked at the main barriers to service access and found these to be geographical isolation, cultural beliefs, limited awareness, financial constraints and poor mental health infrastructure. They noted that if services worked with traditional healers, this could improve the identification of mental health problems. Cultural factors also advocated different approaches to dealing with mental health issues, as they explained such problems as being caused by evil spirits, black magic or past life sins. However, to evaluate some of these traditional approaches is very complex.Aswathi P. and Akanksha Rani reported that tribal women face disproportionate exposure to intimate partner violence (IPV). They attribute this to gender discrimination, poverty, geographical isolation and limited access to health care and legal services. In tribal majority states in India, IPV rates exceed 35%. In this first paper they report on a culturally grounded intervention model. As part of their research, they conducted some baseline quantitative screening exercises. In a sample of 82 tribal women in Wayanad, they found a prevalence rate of 78% for IPV and 44% for anxiety and depression. They then held in-depth interviews with survivors, as well as focus group discussions with social health activists and mental health professionals. They developed their intervention based on these consultations. They used community-based healing circles, where IPV survivors could gather in safe spaces. Group sessions were co-led by a mental health counsellor and a woman elder. They also involved the Oorumoopan (tribal leader), to give the intervention cultural legitimacy. They used creative approaches such as theatre, art and songs to get their messages across. Trauma-informed approaches were re-interpreted through body mapping, grounding rituals and visualisation. This approach is in stark contrast to the urban-centric biomedical models. In a second paper, Aswathi P. and Akanksha Rani suggest that mindfulness and art have long existed in tribal groups as ways of coping, storytelling and spiritual engagement. They advocate mindfulness-based art therapy. They believe that these cultural practices should be reclaimed as they must have always served as pathways for resilience, dignity and belonging. They claim, \u201cMindfulness and art are not novel interventions but ancient companions on the journey of healing\u201d.Studies involving university students feature regularly in the pages of Mental Health and Social Inclusion. While this is often linked to the incidence of mental health problems in university students, it is also the case that students are very accessible participants for academic researchers. Hence Professor Abdel-Khalek has recruited a huge sample of 5,729 Egyptian university students for his study of gender differences in personality. He used his Arabic version of the Big Five personality scales. Men came out as more extroverted, whereas women scored significantly higher on neuroticism, agreeableness and openness. There was no gender difference in conscientiousness. A second study by Abdul Muyeed and colleagues also of university students, looked at factors affecting levels of depression in Bangladesh. The authors received 689 valid questionnaires from four public universities. Binary logistic regression identified a number of variables as being associated with depression. These were female gender, a lack of sleep and a lack of extra-curricular activities. Being married was associated with lower odds of being depressed. Previous research on happiness suggest that it is the men who benefit most from marriage.Given the importance of social factors in mental illness, three papers have addressed this issue. Murad Younis and colleagues studied patients diagnosed with schizophrenia at two psychiatric hospitals in Amman, Jordan. Some 66 participants completed the Adverse Childhood Experiences Questionnaire, the Suicidal Ideation Questionnaire, and the Scale for the Assessment of Positive Symptoms in Schizophrenia. In terms of childhood adversity, age, hospital setting and educational level were the only factors associated with adversity. For suicidality, it was also age and education, along with the number of previous hospitalisations. Positive symptoms were not related to outcome. A second study by Anju Thakur and Rina Chaturvedi studied 1,280 adolescents from an orphanage in Shimla. They found poverty increases the likelihood of experiencing peer victimisation. Using structural equation modelling, the authors found that poverty and mental health, both good and bad, are mediated through self-esteem. A third study by Imran Shaikh and Kamaruzman Noordin, looked at \u201cTakaful\u201d products in Malaysia. They found that peoples\u2019 intention to buy \u201cTakaful\u201d products was influenced by their perception of social security.Mahvia Gull and colleagues looked at the application of Acceptance and Commitment Therapy (ACT), for people with substances use disorders in Pakistan. They interviewed clinical psychologists, their clients and a sample of carers. They concluded that ACT needs to be adapted and simplified for use in the Pakistani context. The researchers drew on the work of Naeem, who previously adapted CBT for the Pakistani population. This has led the researchers to CA-ACT, or Culturally Adapted ACT. This research also complements the work of Positive Psychology 3.0, which focusses more on local psychologies, and away from a purely North American derived perspective.The COVID-19 pandemic was the focus for a study by Madison Harding-White and her collaborators. As part of a larger investigation, they asked participants, \u201cDo you feel there were any positive aspects to the COVID-19 pandemic?\u201d Responses were broken down into three main categories. The first, \u201cpersonal life benefits\u201d, had two main areas, \u201cHaving more time for oneself\u201d (n = 55), and \u201cIncreased time with family and friends\u201d (n = 50). There were two main working life benefits, which were the introduction of remote working and educational benefits. The final less popular category was getting more benefits from nature (n = 7) and wider benefits for society (n = 14). The authors conclude that for at least this sample of participants the pandemic provided opportunities for \u201clife-crafting\u201d.The penultimate paper in this issue is from Elly Davey and the editor. Like thousands of young psychologists, Elly wanted to get a training place to become a clinical psychologist. In the paper, which is a collaborative autoethnographic account, Elly and Jerome describe their school education and their psychology degree courses. In addition, Elly describes how during her adolescence she was badly traumatised by a car accident, which led to her developing a non-epileptic attack disorder, now thankfully remitted. It was during her treatment for this at Great Ormond Street Hospital in London, that she was seen by clinical psychologists. She was determined that this would be her future career. Both stories finish a year after graduation, with neither author able to secure a clinical psychology training post. While many people with experience of mental health problems are frustrated by the quality of care they receive, it is a paradox that thousands of young psychologists are so keen to enter the mental health field.The final paper in this issue is from Qing Han and Chenyang Zhao from China. The paper is a review of the applications of AI in mental health related disciplines between 2013 and 2024. Some 1,989 studies were included in this review. In 2014, there was only 19 papers linked to AI in mental health. In 2024, there were 477 papers just in that one year. The three top countries were the USA, China and the UK. The three top universities were Harvard, followed by University College London and King\u2019s College London. AI can be used to improve clinical workflows, to standardise diagnostic practices, to develop chatbots and new therapeutic approaches. Modelling within electronic care records, may trigger early alerts for patients. It may also help predict who will require therapeutic interventions. We very much doubt that this paper will be the last paper we see on the potential of AI for the mental health field.",
+          "relevance_score": 1.1807185,
+          "id": "https://openalex.org/W7151377538"
+        },
+        {
+          "title": "More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys",
+          "abstract": "Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years. While prior patient-centered studies have examined the capabilities and experience of LLM-based tools in specific health-related tasks such as information-seeking, diagnosis, or decision-supporting, the inherently longitudinal nature of healthcare in real-world practice has been underexplored. This paper presents a four-week diary study with 25 patients to examine LLMs' roles across healthcare-seeking trajectories. Our analysis reveals that patients integrate LLMs not just as simple decision-support tools, but as dynamic companions that scaffold their journey across behavioral, informational, emotional, and cognitive levels. Meanwhile, patients actively assign diverse socio-technical meanings to LLMs, altering the traditional dynamics of agency, trust, and power in patient-provider relationships. Drawing from these findings, we conceptualize future LLMs as a longitudinal boundary companion that continuously mediates between patients and clinicians throughout longitudinal healthcare-seeking trajectories.",
+          "relevance_score": 1.0891514,
+          "id": "https://openalex.org/W7129328976"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.1
+    },
+    {
+      "id": 8,
+      "query": "adolescent trauma depression intervention",
+      "angle": "adjacent",
+      "rationale": "Adjacent field; 'Posttraumatic Stress Disorder Research' appears as topic (2x) and sample titles include trauma-focused interventions for adolescents.",
+      "openalex_count": 191,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Identifying Risk Profiles in War-Affected Children and Adolescents: Implications for Trauma-Informed Care",
+          "abstract": "Children and adolescents with war-related experiences do not constitute a homogeneous group in terms of psychological symptoms. In practice, this means that a one-size-fits-all approach to diagnosis and intervention is insufficient. Instead, profiling individual symptom patterns, considering factors like age, specific trauma exposures, living situations, and even engagement in hobbies, is essential for guiding trauma-informed care. The results have significant clinical implications for designing individualized, culturally sensitive psychological interventions, ensuring that support is specifically matched to the unique needs of each child or adolescent, rather than relying on broad diagnostic categories. For instance, interventions for younger children with higher depression may focus on emotional support, while older adolescents with higher PTSD may require targeted support for complex trauma.",
+          "relevance_score": 4.6082153,
+          "id": "https://openalex.org/W7151432666"
+        },
+        {
+          "title": "Coping Strategies, ACEs, and Mental Health Among Adolescents with Child Welfare Involvement",
+          "abstract": "Adolescents involved in the child welfare system face disproportionate mental health risks, yet our understanding of how coping strategies function within this population remains limited. This cross-sectional study examined how various coping strategies relate to mental health functioning among 245 adolescents with child welfare involvement and whether these relationships were moderated by adverse childhood experiences (ACEs). Using a modified version of the Children\u2019s Coping Strategies Checklist and the Trauma Symptom Checklist for Children, hierarchical regression analyses revealed both direct associations and significant moderation effects. Direct effects showed that positive cognitive restructuring was associated with lower anxiety, depression, and posttraumatic stress symptoms, and problem-focused coping was related to fewer anger symptoms. Additionally, avoidance and distraction coping were associated with higher symptoms across multiple mental health concerns. However, simple slopes analyses revealed that ACEs altered these associations. Problem-focused coping showed negative associations with anger, dissociation, and sexual concerns at high ACE levels but not at mean or low ACE levels, and avoidance coping was positively associated with anxiety and depression at high and mean ACEs levels but not at low ACE level. Two strategies typically associated with fewer mental health problems showed a different pattern at high ACE levels (while showing no association at mean or low ACE levels): support-seeking was associated with increased anger symptoms and cognitive restructuring with increased sexual concerns. These findings highlight the context-dependent nature of coping and mental health associations and underscore the need for trauma-informed interventions that consider both adversity exposure and the development of coping skills tailored to adversity levels and available resources.",
+          "relevance_score": 3.867814,
+          "id": "https://openalex.org/W7154080417"
+        },
+        {
+          "title": "Human-centered Perspectives on a Clinical Decision Support System for Intensive Outpatient Veteran PTSD Care",
+          "abstract": "Psychotherapy delivery relies on a negotiation between patient self-reports and clinical intuition. Growing evidence for technological support of psychotherapy suggests opportunities to aid the mediation of this tension. To explore this prospect, we designed a prototype of a clinical decision support system (CDSS) for treating veterans with post-traumatic stress disorder in a Prolonged Exposure (PE) therapy intensive outpatient program. We conducted a two-phase interview study to collect perspectives from practicing PE clinicians and former PE patients who are United States veterans. Our analysis distills opportunities for a CDSS (e.g., offering homework review at a glance, aiding patient conceptualization) and larger challenges related to context and deployment (e.g., navigating Veterans Affairs). By reframing our findings through three human-centered perspectives (distributed cognition, situated learning, infrastructural inversion), we highlight the complexities of designing a CDSS for psychotherapists in this context and offer theory-aligned design considerations.",
+          "relevance_score": 1.632673,
+          "id": "https://openalex.org/W7133811727"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 1.5449915,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "From Vulnerable to Resilient: Examining Parent and Teen Perceptions on How to Respond to Unwanted Cybergrooming Advances",
+          "abstract": "Cybergrooming is a form of online abuse that threatens teens\u2019 mental health and physical safety. Yet, most prior work has focused on detecting perpetrators\u2019 behaviors, leaving a limited understanding of how teens might respond to such unwanted advances. To address this gap, we conducted an online survey with 74 participants\u201451 parents and 23 teens\u2014who responded to simulated cybergrooming scenarios in two ways: responses that they think would make teens more vulnerable or resilient to unwanted sexual advances. Through a mixed-methods analysis, we identified four types of vulnerable responses (encouraging escalation, accepting an advance, displaying vulnerability, and negating risk concern) and four types of protective strategies (setting boundaries, directly declining, signaling risk awareness, and leveraging avoidance techniques). As the cybergrooming risk escalated, both vulnerable responses and protective strategies showed a corresponding progression. This study contributes a teen-centered understanding of cybergrooming, a labeled dataset, and a stage-based taxonomy of perceived protective strategies, while offering implications for educational programs and sociotechnical interventions.",
+          "relevance_score": 1.3635298,
+          "id": "https://openalex.org/W7126231144"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.1
+    },
+    {
+      "id": 9,
+      "query": "adolescent ADHD depression treatment",
+      "angle": "serendipity",
+      "rationale": "Unexpected connection from vocabulary: 'Attention Deficit Hyperactivity Disorder' appears as topic (5x). Could yield insights on comorbid conditions user encounters.",
+      "openalex_count": 58,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Psychiatric predictors of first-onset suicidal thoughts and behaviors throughout preadolescence: longitudinal associations in a US population-based study",
+          "abstract": "Rates of suicidal thoughts and behaviors are increasing among preadolescent children, yet there is a paucity of longitudinal research among this developmental group. This study evaluated prospective associations between current and lifetime psychiatric disorders and first-onset suicidal ideation (SI), first-onset suicide attempts (SA), and the transition from SI to SA over the course of preadolescence, and estimated the prevalence of psychiatric treatment utilization among preadolescents with SI and SA. Data were drawn from the Adolescent Brain Cognitive Development study. Preadolescents ages 9-10 from 21 sites across the country completed follow-up assessments every 12 months. The sample was restricted to preadolescents under age 13 at their two-year follow-up (n = 9940). In multivariate models, current major depressive disorder (MDD OR = 2.14, [95% CI = 1.10-4.15]), obsessive-compulsive disorder (OCD OR = 1.42, 95%CI = [1.12-1.81]), attention-deficit/hyperactivity disorder (ADHD OR = 1.88, [95%CI = 1.49-2.36]), and binge eating disorder (BED OR = 2.42 [95% CI = 1.25-4.72]) were most robustly predictive of first-onset SI. Only lifetime depression predicted first-onset SA (OR = 2.52, [OR = 1.58-4.00]). No disorders predicted the transition from SI to SA. Rates of psychiatric treatment utilization were 29.38% and 53.91% for first-onset SI and SA, respectively. Based on their small effect sizes, MDD, OCD, ADHD and BED may offer modest value in ascertaining risk for SI. Clinicians and researchers may benefit from looking beyond psychiatric disorders to understand risk for SA. Many preadolescents with SI and SA do not present in psychiatric care settings. Widespread risk screenings in other settings (e.g., primary care) may facilitate early detection and reduce the treatment gap for children at risk for SI and SA.",
+          "relevance_score": 3.5167751,
+          "id": "https://openalex.org/W7151024233"
+        },
+        {
+          "title": "Unraveling Entangled Feeds: Rethinking Social Media Design to Enhance User Well-being",
+          "abstract": "Social media platforms have rapidly adopted algorithmic curation with little consideration for the potential harm to users' mental well-being. We present findings from design workshops with 21 participants diagnosed with mental illness about their interactions with social media platforms. We find that users develop cause-and-effect explanations, or folk theories, to understand their experiences with algorithmic curation. These folk theories highlight a breakdown in algorithmic design that we explain using the framework of entanglement, a phenomenon where there is a disconnect between users' actions and platform outcomes on an emotional level. Participants' designs to address entanglement and mitigate harms centered on contextualizing their engagement and restoring explicit user control on social media. The conceptualization of entanglement and the resulting design recommendations have implications for social computing and recommender systems research, particularly in evaluating and designing social media platforms that support users' mental well-being.",
+          "relevance_score": 1.6556103,
+          "id": "https://openalex.org/W7130361023"
+        },
+        {
+          "title": "Teen Vigilance: Navigating Risky Social Interactions on Discord",
+          "abstract": "Teenagers are avid users of Discord, a fast-growing platform for synchronous communication where they often interact with strangers. Because Discord combines private DMs, semi-private voice channels, and public servers in one place, it creates a hybrid environment that can produce complex\u2014and underexplored\u2014safety risks for teenagers. Drawing on 16 interviews with teenage Discord users, this study examines their strategies for navigating risky social interactions in the platform. Our findings reveal that when teenagers encounter risks during social interactions, they exercise vigilance by evaluating suspicious interactions before forming friendships, using safety tools, and engaging in controlled risk-taking to safeguard their privacy and security. At the community level, they mitigate risks through selective participation in servers, a practice supported by vigilant governance structures. We discuss how vigilance enables teenagers to act during risky encounters to protect themselves, advancing understanding of teenagers\u2019 agency in risk navigation and informing teen-centered designs for safer online environments.",
+          "relevance_score": 1.4142983,
+          "id": "https://openalex.org/W7133520662"
+        },
+        {
+          "title": "Trends in Youth Mental Health Among Patients in Family Medicine Practices: 2017\u20132023",
+          "abstract": "The impact of the pandemic on pediatric mental health was heterogeneous across demographic groups and mental health conditions. Older adolescent females experienced persistently high levels of diagnosed ADHD, anxiety, and mood disorders, although there are signs of reversion to prepandemic levels.",
+          "relevance_score": 0.6152691,
+          "id": "https://openalex.org/W7153911097"
+        },
+        {
+          "title": "Adverse neighborhood conditions show larger and more consistent associations with diagnosed mental health outcomes among U.S. children and adolescents: a cross-sectional analysis of the National Survey of Children's Health, 2018 to 2019",
+          "abstract": "",
+          "relevance_score": 0.61484456,
+          "id": "https://openalex.org/W7151334349"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "NO",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.4
+    },
+    {
+      "id": 10,
+      "query": "cognitive behavioral therapy adolescent depression randomized controlled trial",
+      "angle": "core",
+      "rationale": "Replaced 'CBT' with full term 'cognitive behavioral therapy' from keywords, kept other terms to maintain specificity for evidence-based interventions.",
+      "openalex_count": 136,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Effectiveness of multi-family group therapy for school refusal in adolescents with depressive disorders: study protocol for a randomized controlled trial",
+          "abstract": "This study aims to develop a manualized multi-family group therapy (MFGT) program for adolescents with depressive school refusal and to evaluate its effectiveness through a randomized controlled trial. By comparing MFGT with group cognitive behavioral therapy (GCBT), the study seeks to examine the relative efficacy of MFGT in improving school refusal behaviors and depressive symptoms, to assess the stability of treatment effects during follow-up, and to explore potential mechanisms underlying behavioral change. This study is designed as a single-center, single-blind, randomized controlled non-inferiority trial. A total of 138 adolescents aged 12-19 years who meet DSM-5 criteria for depressive disorders and Berg\u2019s criteria for school refusal will be randomly assigned in a 1:1 ratio to either the MFGT plus treatment-as-usual (TAU) group or the GCBT plus TAU group. Both interventions consist of eight group sessions delivered over four weeks. Primary outcomes include school attendance rate and clinician-rated depressive symptoms assessed using the Hamilton Depression Rating Scale. Secondary and intermediate outcomes include self-reported depressive and anxiety symptoms, school refusal maintaining factors, school-related self-efficacy, family functioning, and parent\u2013adolescent communication. Assessments will be conducted at baseline, post-treatment, and at 1- and 3-month follow-up. This study will be the first randomized controlled trial to evaluate a standardized and manualized MFGT protocol specifically developed for adolescents with depressive school refusal. By adopting a family-based and scalable intervention model, the study is expected to provide evidence for an effective and resource-efficient treatment approach that addresses both individual psychopathology and family dynamics. The findings may contribute to improving school attendance and mental health outcomes in adolescents and inform clinical practice and public mental health strategies in settings with limited mental health resources. Chinese Clinical Trial Registry (ChiCTR2500100225). Registered, 2025.",
+          "relevance_score": 5.891837,
+          "id": "https://openalex.org/W7153462697"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 2.6917326,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Human-centered Perspectives on a Clinical Decision Support System for Intensive Outpatient Veteran PTSD Care",
+          "abstract": "Psychotherapy delivery relies on a negotiation between patient self-reports and clinical intuition. Growing evidence for technological support of psychotherapy suggests opportunities to aid the mediation of this tension. To explore this prospect, we designed a prototype of a clinical decision support system (CDSS) for treating veterans with post-traumatic stress disorder in a Prolonged Exposure (PE) therapy intensive outpatient program. We conducted a two-phase interview study to collect perspectives from practicing PE clinicians and former PE patients who are United States veterans. Our analysis distills opportunities for a CDSS (e.g., offering homework review at a glance, aiding patient conceptualization) and larger challenges related to context and deployment (e.g., navigating Veterans Affairs). By reframing our findings through three human-centered perspectives (distributed cognition, situated learning, infrastructural inversion), we highlight the complexities of designing a CDSS for psychotherapists in this context and offer theory-aligned design considerations.",
+          "relevance_score": 2.477831,
+          "id": "https://openalex.org/W7133811727"
+        },
+        {
+          "title": "More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys",
+          "abstract": "Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years. While prior patient-centered studies have examined the capabilities and experience of LLM-based tools in specific health-related tasks such as information-seeking, diagnosis, or decision-supporting, the inherently longitudinal nature of healthcare in real-world practice has been underexplored. This paper presents a four-week diary study with 25 patients to examine LLMs' roles across healthcare-seeking trajectories. Our analysis reveals that patients integrate LLMs not just as simple decision-support tools, but as dynamic companions that scaffold their journey across behavioral, informational, emotional, and cognitive levels. Meanwhile, patients actively assign diverse socio-technical meanings to LLMs, altering the traditional dynamics of agency, trust, and power in patient-provider relationships. Drawing from these findings, we conceptualize future LLMs as a longitudinal boundary companion that continuously mediates between patients and clinicians throughout longitudinal healthcare-seeking trajectories.",
+          "relevance_score": 1.9965922,
+          "id": "https://openalex.org/W7129328976"
+        },
+        {
+          "title": "Reflective Motion and a Physical Canvas: Exploring Embodied Journaling in Virtual Reality",
+          "abstract": "In traditional journaling practices, authors express and process their thoughts by writing them down. We propose a somaesthetic-inspired alternative that uses the human body, rather than written words, as the medium of expression. We coin this embodied journaling, as people\u2019s isolated body movements and spoken words become the canvas of reflection. We implemented embodied journaling in virtual reality and conducted a within-subject user study (N = 20) to explore the emergent behaviours from the process, comparing its expressive and reflective qualities to those of written journaling. When writing-based norms and affordances were absent, we found that participants defaulted towards unfiltered emotional expression, often forgoing words altogether. Rather, subconscious body motion and paralinguistic acoustic qualities unveiled deeper, sometimes hidden feelings, prompting reflection that happens after emotional expression rather than during it. We discuss both the capabilities and pitfalls of embodied journaling, ultimately challenging the idea that reflection culminates in linguistic reasoning.",
+          "relevance_score": 1.9811568,
+          "id": "https://openalex.org/W7125494911"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 11,
+      "query": "interpersonal psychotherapy adolescent depression",
+      "angle": "core",
+      "rationale": "Replaced 'IPT-A' with broader 'interpersonal psychotherapy' to match OpenAlex vocabulary while maintaining focus on adolescent depression treatment.",
+      "openalex_count": 61,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Human-centered Perspectives on a Clinical Decision Support System for Intensive Outpatient Veteran PTSD Care",
+          "abstract": "Psychotherapy delivery relies on a negotiation between patient self-reports and clinical intuition. Growing evidence for technological support of psychotherapy suggests opportunities to aid the mediation of this tension. To explore this prospect, we designed a prototype of a clinical decision support system (CDSS) for treating veterans with post-traumatic stress disorder in a Prolonged Exposure (PE) therapy intensive outpatient program. We conducted a two-phase interview study to collect perspectives from practicing PE clinicians and former PE patients who are United States veterans. Our analysis distills opportunities for a CDSS (e.g., offering homework review at a glance, aiding patient conceptualization) and larger challenges related to context and deployment (e.g., navigating Veterans Affairs). By reframing our findings through three human-centered perspectives (distributed cognition, situated learning, infrastructural inversion), we highlight the complexities of designing a CDSS for psychotherapists in this context and offer theory-aligned design considerations.",
+          "relevance_score": 2.1798713,
+          "id": "https://openalex.org/W7133811727"
+        },
+        {
+          "title": "Teen Vigilance: Navigating Risky Social Interactions on Discord",
+          "abstract": "Teenagers are avid users of Discord, a fast-growing platform for synchronous communication where they often interact with strangers. Because Discord combines private DMs, semi-private voice channels, and public servers in one place, it creates a hybrid environment that can produce complex\u2014and underexplored\u2014safety risks for teenagers. Drawing on 16 interviews with teenage Discord users, this study examines their strategies for navigating risky social interactions in the platform. Our findings reveal that when teenagers encounter risks during social interactions, they exercise vigilance by evaluating suspicious interactions before forming friendships, using safety tools, and engaging in controlled risk-taking to safeguard their privacy and security. At the community level, they mitigate risks through selective participation in servers, a practice supported by vigilant governance structures. We discuss how vigilance enables teenagers to act during risky encounters to protect themselves, advancing understanding of teenagers\u2019 agency in risk navigation and informing teen-centered designs for safer online environments.",
+          "relevance_score": 1.9534128,
+          "id": "https://openalex.org/W7133520662"
+        },
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 1.9182754,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Understanding Remote Mental Health Supporters' Help-Seeking in Online Communities",
+          "abstract": "Providing mental health support for loved ones across a geographic distance creates unique challenges for the remote caregivers, who sometimes turn to online communities for peer support. We qualitatively analyzed 522 Reddit threads to understand what drives remote caregivers' online help-seeking behaviors and the responses they receive from the community. Their purposes of posting included requesting guidance, expressing emotions, and seeking validation. Community responses included providing emotional support, suggesting informational strategies, and sharing personal experiences. While certain themes in posts (emotional toll, monitoring symptoms, and prioritizing caregiver well-being) are shared across remote and non-remote contexts, remote caregivers' posts surfaced nuanced experiences. For example, they often rely on digital cues, such as voice, to interpret care receivers' well-being while struggling with digital silence during crises. We discuss the need for supporting communication and information sharing between remote caregivers and receivers, care coordination for crisis management, and design recommendations for caregiver communities.",
+          "relevance_score": 1.5975184,
+          "id": "https://openalex.org/W7128631410"
+        },
+        {
+          "title": "K\u0131sa s\u00fcreli bili\u015fsel terapiye kimler uygun? Poliklini\u011fe ba\u015fvuran ki\u015filerin terap\u00f6tik ittifak, i\u00e7g\u00f6r\u00fc ve ki\u015filik \u00f6zelliklerine g\u00f6re incelenmesi",
+          "abstract": "Bili\u015fsel terapi, psikolojik sa\u011fl\u0131k alan\u0131 profesyonelleri taraf\u0131ndan yayg\u0131n bir \u015fekilde kullan\u0131lan terapi y\u00f6ntemlerinden biridir. Bu terapi yakla\u015f\u0131m\u0131n\u0131n yayg\u0131n bir bi\u00e7imde kullan\u0131lmas\u0131, kimlerin bu m\u00fcdahale i\u00e7in daha uygun oldu\u011funu belirlemenin \u00f6nemini de art\u0131rmaktad\u0131r. Bu kapsamda mevcut ara\u015ft\u0131rma, terap\u00f6tik ittifak\u0131n, i\u00e7g\u00f6r\u00fcn\u00fcn ve ki\u015filik \u00f6zelliklerinin k\u0131sa s\u00fcreli bili\u015fsel terapiye (KSBT) uygunlu\u011fu nas\u0131l farkl\u0131la\u015ft\u0131rd\u0131\u011f\u0131n\u0131 incelemektedir. Ara\u015ft\u0131rman\u0131n kat\u0131l\u0131mc\u0131lar\u0131, bir devlet hastanesine ayaktan ba\u015fvuran ve \u00e7al\u0131\u015fmaya kat\u0131lmaya g\u00f6n\u00fcll\u00fc olan 83 ki\u015fiden olu\u015fmaktad\u0131r. Ya\u015flar\u0131 22-62 aras\u0131nda de\u011fi\u015fen (Ort. = 34.5, SS = 11.99) kat\u0131l\u0131mc\u0131lar\u0131n b\u00fcy\u00fck bir \u00e7o\u011funlu\u011fu kad\u0131nlardan olu\u015fmaktad\u0131r (%93). Veriler K\u0131sa S\u00fcreli Bili\u015fsel Terapiye Uygunluk \u00d6l\u00e7e\u011fi, \u0130\u00e7g\u00f6r\u00fc \u00d6l\u00e7e\u011fi, Terap\u00f6tik \u0130ttifak \u00d6l\u00e7e\u011fi K\u0131sa Formu ve B\u00fcy\u00fck Be\u015f-50-Tr Ki\u015filik Testi arac\u0131l\u0131\u011f\u0131yla toplanm\u0131\u015ft\u0131r. Ara\u015ft\u0131rmada kat\u0131l\u0131mc\u0131lar\u0131n olu\u015fturdu\u011fu k\u00fcmeleri incelemek i\u00e7in latent profil analizinden (LPA) faydalan\u0131lm\u0131\u015ft\u0131r. Analiz sonucunda, kat\u0131l\u0131mc\u0131lar\u0131n be\u015f fakt\u00f6r ki\u015filik \u00f6zellikleri, i\u00e7g\u00f6r\u00fc d\u00fczeyleri ve terap\u00f6tik ittifak alg\u0131lar\u0131 a\u00e7\u0131s\u0131ndan \u201cd\u00fc\u015f\u00fck ortalama\u201d ve \u201cy\u00fcksek ortalama\u201d olmak \u00fczere iki k\u00fcmeli bir yap\u0131 olu\u015fturdu\u011fu bulunmu\u015ftur. Yap\u0131lan MANOVA analizi sonucunda ortaya \u00e7\u0131kan iki grubun ilgili de\u011fi\u015fkenlerin tamam\u0131nda istatistiksel olarak anlaml\u0131 bir bi\u00e7imde farkl\u0131la\u015ft\u0131\u011f\u0131 g\u00f6zlemlenmi\u015ftir. LPA\u2019ya g\u00f6re olu\u015fan iki grubun KSBT\u2019ye uygunlu\u011fu farkl\u0131la\u015ft\u0131r\u0131p farkl\u0131la\u015ft\u0131rmad\u0131\u011f\u0131n\u0131 incelemek amac\u0131yla ba\u011f\u0131ms\u0131z \u00f6rneklemler i\u00e7in t-test analizi kullan\u0131lm\u0131\u015ft\u0131r. Analiz sonucuna g\u00f6re, y\u00fcksek ortalamalara sahip grubun d\u00fc\u015f\u00fck gruba g\u00f6re KSBT\u2019ye daha uygun oldu\u011fu bulunmu\u015ftur. Bu bulgu, KSBT\u2019ye uygunlukta dan\u0131\u015fan \u00f6zelliklerinin dikkate al\u0131nmas\u0131n\u0131n \u00f6nemini ortaya koymaktad\u0131r. Ayr\u0131ca bili\u015fsel terapiye uygunlu\u011fu etkileyen fakt\u00f6rlerin incelenmesinin, kaynaklar\u0131n verimli kullan\u0131lmas\u0131na ve ki\u015filerin do\u011fru tedaviye y\u00f6nlendirilmesine katk\u0131 sa\u011flayaca\u011f\u0131 d\u00fc\u015f\u00fcn\u00fclmektedir.",
+          "relevance_score": 0.68341005,
+          "id": "https://openalex.org/W7151924898"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 12,
+      "query": "SSRIs adolescent depression safety pharmacology",
+      "angle": "core",
+      "rationale": "Added 'pharmacology' from subfields to qualify the safety focus and provide context for medication-related research.",
+      "openalex_count": 14,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Selective Serotonin Reuptake Inhibitors and Serotonin Norepinephrine Reuptake Inhibitors and Body Mass Index in Patients on Long Term Treatment: A Cross-Sectional Comparative Study",
+          "abstract": "Background: Selective Serotonin Reuptake Inhibitors (SSRIs) and Serotonin Norepinephrine Reuptake Inhibitors (SNRIs) are the most commonly prescribed antidepressants but changes in body weight (BW) is a concern with the chronic use of antidepressant. We observed the effect of SSRIs and SNRIs on BW and body mass index (BMI) in patients on long-term therapy while avoiding the other confounding factors. Objectives: To assess and compare the changes in BW and BMI in patients on monotherapy with either SSRIs (escitalopram, sertraline or fluoxetine) or SNRIs (duloxetine, venlafaxine or desvenlafaxine). Methods: In a cross-sectional, hospital-based, comparative study, the patients on monotherapy with- sertraline, fluoxetine, escitalopram, venlafaxine, desvenlafaxine or duloxetine for a period of \u2265 24 weeks were evaluated for the changes in their BW and BMI. In patients showing a change in weight, causality assessment was done by Naranjo\u2019s algorithm and severity assessment by modified Hartwig and Siegel scale. Results and Conclusion: Fifty-eight patients were included (SSRIs = 30; SNRIs = 28). Escitalopram and sertraline were associated with increases in BW and BMI, whereas fluoxetine, duloxetine, venlafaxine, and desvenlafaxine showed reductions. Median weight gain with escitalopram and sertraline was 2.0 kg (IQR 1.5) and 2.0 kg (IQR 1.0), respectively. Fluoxetine showed mean reductions of 1.20 \u00b1 1.32 kg in BW and 0.44 \u00b1 0.50 kg/m\u00b2 in BMI. Statistically significant changes were observed with SSRIs but not with SNRIs. Between-group analysis demonstrated significantly greater weight gain with SSRIs compared with weight reduction with SNRIs (p &lt; 0.001). All changes were classified as probable and mild. As weight changes remained &lt;5% of baseline BW over \u226524 weeks, they may not be considered clinically meaningful. These findings suggest that SSRIs and SNRIs have a relatively favourable weight profile in patients without significant comorbidities or concomitant medications.",
+          "relevance_score": 0.80605793,
+          "id": "https://openalex.org/W7151452484"
+        },
+        {
+          "title": "Treating Soldier-Athletes: A Narrative Review of Psychiatric Disorder Management While Optimizing Physical and Mental Performance in US Army Soldiers",
+          "abstract": "The United States (US) Military has a unique population with distinctive demands, including physical and cognitive requirements that require them to function as what the authors term the \"soldier-athletes.\" This article consists of a review and subsequent commentary regarding psychiatric management of service members through this proposed perspective of the \"soldier-athletes.\" The authors utilize their combined experience as army psychiatrists in a narrative review of this population's risk and propose treatment strategies that focus on prevention, holistic assessment, and intentional clinical decisions within evidence-based practices and guidelines that take into account unique variables of this population and prioritize cognitive and physical well-being, of course, after the overarching goals of stabilization and safety. While the focus is on the \"soldier-athletes,\" the authors propose that treatment strategies reviewed and discussed are logically expanded to the population at large, given the strong bidirectional relationship between mental health and physical and cognitive wellness. The authors first focus on a review of treatment considerations within different disorder categories, followed by individual interventions that warrant specific discussion. This article reflects the views of the authors only and not those of the US Army, US government, or any other organization.",
+          "relevance_score": 0.7316254,
+          "id": "https://openalex.org/W7153199542"
+        },
+        {
+          "title": "Placental and fetal consequences of maternal selective serotonin reuptake inhibitor use: current evidence and unresolved questions",
+          "abstract": "Serotonin is a neurotransmitter critical for mood regulation, neurodevelopment, and diverse organ functions. It is synthesized from tryptophan through tightly regulated enzymatic pathways that maintain homeostasis, particularly during pregnancy. Selective serotonin reuptake inhibitors (SSRIs) are commonly prescribed across age groups to manage depression, anxiety, and other mental health conditions, with treatment tailored to individual needs. During pregnancy, SSRIs are widely prescribed or maintained to manage maternal health. Despite decades of research on SSRIs and pregnancy, there continues to be conflicting conclusions with some studies reporting beneficial effects on maternal and fetal health and outcomes, while others suggest potential risks. This review aimed to identify overall trends and evolution of our understanding of SSRI use and pregnancies from studies published from 1983\u20132025, including comparisons between placental roles of two major model organisms: mice and humans, serotonin biology, pharmacological properties, and prescription mechanisms of SSRIs, and the impact of SSRI use during pregnancy and the continued gaps in current research. Despite extensive research, there is a significant gap in understanding the safety and effects of SSRI use specifically in advanced maternal age pregnancies, as the age of first-time mothers continues to shift past 30 years old, highlighting a critical area for future research and clinical guidance.",
+          "relevance_score": 0.72077674,
+          "id": "https://openalex.org/W7153263725"
+        },
+        {
+          "title": "Psychiatric pharmacogenomics: from genetic evidence to clinical integration \u2013 structural, educational, and ethical challenges",
+          "abstract": "The role of pharmacogenomics (PGx) for identifying individualized therapeutic approaches in patients with psychiatric disorders is a topic of intense debate in the literature, from clinical, pharmacoeconomic, ethical, educational, and theoretical perspectives. The objectives of this narrative review were (1) to synthesise the genetic evidence base for psychiatric PGx, with particular attention to the hierarchy between pharmacokinetics, pharmacodynamics and emerging epigenetic or polygenic markers; (2) to evaluate the clinical integration of pharmacogenomics in psychiatry, focusing on PGx-guided versus treatment-as-usual randomized trials, meta-analyses, economic evaluations and real-world implementation projects; (3) to analyse structural, educational and ethical challenges that condition the translation of genetic evidence into practice. Based on the reviewed primary and secondary reports, relevant data were found regarding antidepressant PGx, and less for antipsychotics and mood stabilizers. Pharmacoenomic data and structural, economic, and implementation barriers have also been explored, as well as educational and ethical challenges in the field of PGx implementation in psychiatry. In conclusion, psychiatric pharmacogenomics is placed at the intersection between relatively strong but narrow pharmacokinetic evidence, weaker and heterogeneous pharmacodynamic findings, and substantial implementation and ethical constraints. The most clinically actionable data concern CYP2D6 and CYP2C19 variants for certain antidepressants and, to a lesser extent, antipsychotics, which reliably predict serum levels and adverse effects and show modest associations with treatment response and remission.",
+          "relevance_score": 0.70410234,
+          "id": "https://openalex.org/W7151450270"
+        },
+        {
+          "title": "Potential antidepressant properties of aminophylline in male mice exposed to chronic restraint stress",
+          "abstract": "The study provides the first evidence of the antidepressant activity of aminophylline in a validated model of depression, prompting further clinical investigation into its therapeutic potential. Moreover, molecular and biochemical analyses are warranted to validate its precise mechanism of action.",
+          "relevance_score": 0.6330087,
+          "id": "https://openalex.org/W7151397647"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 13,
+      "query": "suicide prevention adolescent mental health screening",
+      "angle": "core",
+      "rationale": "Replaced 'adolescent suicide' with broader 'adolescent mental health' and kept 'suicide prevention' from keywords to capture screening studies.",
+      "openalex_count": 66,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Characterizing Scam-Driven Human Trafficking Across Chinese Borders and Online Community Responses on RedNote",
+          "abstract": "A new form of human trafficking has emerged across Chinese borders, where individuals are lured to Southeast Asia with fraudulent job offers and then coerced into operating online scams. Despite its massive economic and human toll, this scam-driven trafficking remains underexplored in academic research. Through qualitative analysis of 158 RedNote posts, we examined how Chinese online communities respond to this threat. Our findings reveal that perpetrators exploit cultural ties to recruit victims for cybercriminal roles within self-sustaining compounds, using sophisticated manipulation tactics. Survivors face serious reintegration barriers, including family rejection, as the cultural values that enable trafficking also hinder their recovery. While communities present protective strategies, efforts are complicated by doubts about the reliability of support and cross-border coordination. We discuss key implications for prevention, platform governance, and international cooperation against scam-driven trafficking. Warning: This paper contains descriptions of physical, psychological, and sexual abuse.",
+          "relevance_score": 1.3209696,
+          "id": "https://openalex.org/W7143791168"
+        },
+        {
+          "title": "Psychiatric predictors of first-onset suicidal thoughts and behaviors throughout preadolescence: longitudinal associations in a US population-based study",
+          "abstract": "Rates of suicidal thoughts and behaviors are increasing among preadolescent children, yet there is a paucity of longitudinal research among this developmental group. This study evaluated prospective associations between current and lifetime psychiatric disorders and first-onset suicidal ideation (SI), first-onset suicide attempts (SA), and the transition from SI to SA over the course of preadolescence, and estimated the prevalence of psychiatric treatment utilization among preadolescents with SI and SA. Data were drawn from the Adolescent Brain Cognitive Development study. Preadolescents ages 9-10 from 21 sites across the country completed follow-up assessments every 12 months. The sample was restricted to preadolescents under age 13 at their two-year follow-up (n = 9940). In multivariate models, current major depressive disorder (MDD OR = 2.14, [95% CI = 1.10-4.15]), obsessive-compulsive disorder (OCD OR = 1.42, 95%CI = [1.12-1.81]), attention-deficit/hyperactivity disorder (ADHD OR = 1.88, [95%CI = 1.49-2.36]), and binge eating disorder (BED OR = 2.42 [95% CI = 1.25-4.72]) were most robustly predictive of first-onset SI. Only lifetime depression predicted first-onset SA (OR = 2.52, [OR = 1.58-4.00]). No disorders predicted the transition from SI to SA. Rates of psychiatric treatment utilization were 29.38% and 53.91% for first-onset SI and SA, respectively. Based on their small effect sizes, MDD, OCD, ADHD and BED may offer modest value in ascertaining risk for SI. Clinicians and researchers may benefit from looking beyond psychiatric disorders to understand risk for SA. Many preadolescents with SI and SA do not present in psychiatric care settings. Widespread risk screenings in other settings (e.g., primary care) may facilitate early detection and reduce the treatment gap for children at risk for SI and SA.",
+          "relevance_score": 0.7592074,
+          "id": "https://openalex.org/W7151024233"
+        },
+        {
+          "title": "Exploring Suicide Prevention Gatekeeper Interventions for Schools: A Scoping Review",
+          "abstract": "ABSTRACT Background Among teenagers and young adults, suicide represents a significant public health challenge. Schools are critical for suicide prevention due to the significant time adolescents spend there. Gatekeeper training (GKT) has shown promise in increasing awareness and knowledge, but its implementation\u2011relevant characteristics and contextual fit in school settings require further investigation. Aim The aim of this review was to describe the programs, identify essential functions, implementation challenges and reported outcomes for gatekeeper training interventions for teaching staff implemented in schools, providing a comprehensive overview. Methods The Preferred Reporting Items for Systematic Reviews and Meta\u2010analysis Extension for Scoping Reviews (PRISMA\u2010ScR) was followed. To structure extraction of intervention characteristics, we applied the Usable Innovation Framework, and to interpret reported outcomes we drew on the behavioral science framework COM\u2011B model, which conceptualizes behavior as shaped by capability, opportunity, and motivation. Results This scoping review examined 39 articles (describing 37 studies) on suicide prevention gatekeeper interventions in schools for adolescents aged 10\u201325. Seven categories of GKT were identified. The review found that while GKT generally increased knowledge, its impact on actual intervention behavior varied. Time constraints and resource limitations were significant barriers to implementation. Conclusion Gatekeeper training was consistently associated with improvements in staff capability and motivation, though findings should be interpreted cautiously. To enhance real\u2010world impact, future research should standardize outcome measures, address contextual barriers, and employ rigorous designs with embedded process evaluations to strengthen sustainability.",
+          "relevance_score": 0.7565949,
+          "id": "https://openalex.org/W7151395257"
+        },
+        {
+          "title": "Trends in Youth Mental Health Among Patients in Family Medicine Practices: 2017\u20132023",
+          "abstract": "The impact of the pandemic on pediatric mental health was heterogeneous across demographic groups and mental health conditions. Older adolescent females experienced persistently high levels of diagnosed ADHD, anxiety, and mood disorders, although there are signs of reversion to prepandemic levels.",
+          "relevance_score": 0.75476015,
+          "id": "https://openalex.org/W7153911097"
+        },
+        {
+          "title": "Preparing Social Work Students to Recognize and Respond to Risks of Firearm Violence",
+          "abstract": "Firearm violence in the United States is increasing and is a major cause of death for many demographic groups, especially Black Americans. Policy attempts to reduce deaths and injuries face difficult hurdles, including legislatures and courts that place primacy on the Second Amendment to the Constitution. Thus, clinicians across disciplines are encouraged to engage in prevention practice across diverse contexts. Evidence suggests that few social workers have been prepared to recognize and respond to the risks of gun violence amongst their clients beyond a few specific practice contexts. This article lays out a framework for the education of social work students on essential aspects of firearm violence: the nature of violence, misunderstandings of the connections to mental illness, recognizing risks, engaging with clients on mitigating those risks, and understanding key policy debates that affect practicing social workers. This article seeks to spark conversations about the need to educate social work students on this topic, including curricular developments related to the Council on Social Work 2022 Educational Policy and Accreditation Standards.",
+          "relevance_score": 0.73641926,
+          "id": "https://openalex.org/W7152737984"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "YES",
+        "YES",
+        "PARTIAL",
+        "NO"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 14,
+      "query": "mindfulness adolescent mental health randomized controlled trial",
+      "angle": "intersection",
+      "rationale": "Replaced 'depression' with broader 'mental health' from keywords while maintaining 'randomized controlled trial' for methodological rigor.",
+      "openalex_count": 79,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 2.0944252,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Reflective Motion and a Physical Canvas: Exploring Embodied Journaling in Virtual Reality",
+          "abstract": "In traditional journaling practices, authors express and process their thoughts by writing them down. We propose a somaesthetic-inspired alternative that uses the human body, rather than written words, as the medium of expression. We coin this embodied journaling, as people\u2019s isolated body movements and spoken words become the canvas of reflection. We implemented embodied journaling in virtual reality and conducted a within-subject user study (N = 20) to explore the emergent behaviours from the process, comparing its expressive and reflective qualities to those of written journaling. When writing-based norms and affordances were absent, we found that participants defaulted towards unfiltered emotional expression, often forgoing words altogether. Rather, subconscious body motion and paralinguistic acoustic qualities unveiled deeper, sometimes hidden feelings, prompting reflection that happens after emotional expression rather than during it. We discuss both the capabilities and pitfalls of embodied journaling, ultimately challenging the idea that reflection culminates in linguistic reasoning.",
+          "relevance_score": 2.070141,
+          "id": "https://openalex.org/W7125494911"
+        },
+        {
+          "title": "Designing for all youth: a scoping review of equity and participation in mental health apps",
+          "abstract": "Mental health apps are effective for young people, but uptake remains low, especially for minoritized youth. This scoping review of 114 studies examines youth and stakeholders\u2019 participation and diversity, equity, and inclusion (DEI) considerations in publications on smartphone applications for youth (10 to 25 years) for depression, anxiety, and/or suicidal ideation. Our narrative synthesis reveals limited youth participation: more than half of the studies do not include youth in app development, with limited details about the extent of involvement. DEI considerations remain overlooked: factors such as cultural adaptation, literacy, disability, internet access, and privacy are each reported by less than 20% of studies. Reporting on ethnic/racial and sociodemographic characteristics was inconsistent, with an overrepresentation of university populations. Considering participation and DEI factors when designing, testing, and implementing youth mental health apps is crucial to enhance their relevance, reach, and adoption. We provide recommendations for equitable youth-tailored mental health app development and implementation.",
+          "relevance_score": 0.758141,
+          "id": "https://openalex.org/W7152061374"
+        },
+        {
+          "title": "The Influence of Mindfulness-Enhanced Resistance Training Program on the Subjective Well-Being of Female College Students: A Randomized Controlled Trial",
+          "abstract": "This study evaluates the effects of a 30-week mindfulness-enhanced resistance training (MRT) program on the physical and mental health of female college students and explores whether changes in self-esteem or mindfulness mediate the relationship between MRT and subjective well-being. Sixty-four healthy female college students were randomly assigned to either the MRT or resistance training (RT) group. Both groups participated in 90 min weekly sessions for 30 weeks. A 2 \u00d7 2 mixed-design ANOVA analyzed the intervention\u2019s effects on physical health, mindfulness, self-esteem, and subjective well-being. PROCESS macro (Model 4) tested mediation effects. MRT and RT significantly improved physical health, with MRT showing superior improvements in waist-to-hip ratio, flexibility, and vital capacity. Only MRT improved mindfulness, self-esteem, and subjective well-being. Self-esteem changes fully mediated the relationship between MRT and subjective well-being. MRT as a comprehensive mind\u2013body intervention significantly enhanced the physical health and subjective well-being of female college students, outperforming resistance training. Improvements in self-esteem mediated the relationship between MRT and increased subjective well-being. MRT can serve as an effective approach to promote the physical and mental health of female college students.",
+          "relevance_score": 0.7434184,
+          "id": "https://openalex.org/W7152101631"
+        },
+        {
+          "title": "Gender differences in the influence of app-based mindfulness meditation on emotion regulation: a randomised controlled trial",
+          "abstract": "This study investigated whether gender moderates the effects of online mindfulness-based interventions (MBIs) on mental health outcomes in non-clinical populations. Specifically, we explored gender-related patterns in emotion regulation and cognitive flexibility. Data were obtained from a randomised controlled trial employing a crossover design in 2022 and 2023. Three hundred Japanese workers employed for at least 20 h weekly were randomly allocated to either an intervention or a waitlist group. The participants engaged in a four-week, app-based MBI involving daily guided practices, including brief breathing and body-scan meditations, with either loving-kindness or open-monitoring components. Perceived stress, anger, psychological flexibility, self-esteem, and emotion regulation were assessed at baseline and immediately after the four-week intervention or waitlist period. Interaction analyses between groups and gender revealed significant effects for cognitive flexibility (p = 0.023, partial \u03b72 = 0.018) and angry reaction (p = 0.007, partial \u03b72 = 0.025), although these findings did not survive correction for multiple testing. Exploratory simple slope analyses showed women showed greater cognitive flexibility (p = 0.034, Cohen\u2019s d = 0.36) and reduced angry reactions (p < 0.001, Cohen\u2019s d = \u22120.56), whereas men showed no significant changes in either variable (p = 0.202, Cohen\u2019s d = -0.29 and p = 0.350, Cohen\u2019s d = 0.22, respectively). This study tentatively suggests that brief online MBIs in preventive contexts may be associated with greater improvements in cognitive flexibility, with exploratory patterns indicating possible gender-related heterogeneity. However, these gender-related patterns should be interpreted cautiously. Considering individual differences, including gender, may help guide future preregistered personalisation research of digital psychological interventions.",
+          "relevance_score": 0.7372606,
+          "id": "https://openalex.org/W7150833321"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "YES",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 15,
+      "query": "behavioral activation depression adolescent",
+      "angle": "intersection",
+      "rationale": "Simplified to core terms without additional qualifiers, using 'depression' and 'adolescent' which appear in extracted vocabulary.",
+      "openalex_count": 179,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "CACA guidelines for music-based interventions in oncology",
+          "abstract": "Abstract As growing evidence from basic research and applied research has supported the use of music as a means of mental healing and rehabilitation, spanning its mechanisms, neural correlates, and its clinical application, the systematic use of music as a complementary and alternative intervention is gaining recognition in China within fields such as mental health, special education, rehabilitation, and oncology. These guidelines review the latest research on the application of music-based interventions in oncology, synthesizing current practices. With the aim of ensuring the accessibility and efficacy of these music-based interventions for cancer patients and their families, the paper places a particular focus on defining different intervention categories, providing recommendations for their application, outlining standard procedures, and establishing a hierarchical framework for music-based interventions in oncology.",
+          "relevance_score": 1.3469448,
+          "id": "https://openalex.org/W7152673806"
+        },
+        {
+          "title": "Human-centered Perspectives on a Clinical Decision Support System for Intensive Outpatient Veteran PTSD Care",
+          "abstract": "Psychotherapy delivery relies on a negotiation between patient self-reports and clinical intuition. Growing evidence for technological support of psychotherapy suggests opportunities to aid the mediation of this tension. To explore this prospect, we designed a prototype of a clinical decision support system (CDSS) for treating veterans with post-traumatic stress disorder in a Prolonged Exposure (PE) therapy intensive outpatient program. We conducted a two-phase interview study to collect perspectives from practicing PE clinicians and former PE patients who are United States veterans. Our analysis distills opportunities for a CDSS (e.g., offering homework review at a glance, aiding patient conceptualization) and larger challenges related to context and deployment (e.g., navigating Veterans Affairs). By reframing our findings through three human-centered perspectives (distributed cognition, situated learning, infrastructural inversion), we highlight the complexities of designing a CDSS for psychotherapists in this context and offer theory-aligned design considerations.",
+          "relevance_score": 1.2221087,
+          "id": "https://openalex.org/W7133811727"
+        },
+        {
+          "title": "Does My Chatbot Have an Agenda? Understanding Human and AI Agency in Human-Human-like Chatbot Interaction",
+          "abstract": "As AI chatbots shift from tools to companions, critical questions arise: who controls the conversation in human\u2013AI chatrooms? This paper explores perceived human and AI agency in sustained conversation. We report a month-long longitudinal study with 22 adults who chatted with \u201cDay\u201d, an LLM companion we built, followed by a semi-structured interview with post-hoc elicitation of notable moments, cross-participant chat reviews, and a \u2018strategy reveal\u2019 disclosing \u201cDay\u2019s\u201d goal for each conversation. We discover agency manifests as an emergent, shared experience: as participants set boundaries and the AI steered intentions, control was co-constructed turn-by-turn. We introduce a 3-by-4 framework mapping actors (Human, AI, Hybrid) by their action (Intention, Execution, Adaptation, Delimitation), modulated by individual and environmental factors. We argue for translucent design (transparency-on-demand) and provide implications for agency self-aware conversational agents.",
+          "relevance_score": 0.96227825,
+          "id": "https://openalex.org/W7127184626"
+        },
+        {
+          "title": "Understanding Nature Engagement Experiences of Blind People",
+          "abstract": "Nature plays a crucial role in human health and well-being, but little is known about how blind people experience and relate to it. We conducted a survey of nature relatedness with blind (N=20) and sighted (N=20) participants, along with in-depth interviews with 16 blind participants, to examine how blind people engage with nature and the factors shaping this engagement. Our survey results revealed lower levels of nature relatedness among blind participants compared to sighted peers. Our interview study further highlighted: 1) current practices and challenges of nature engagement, 2) attitudes and values that shape engagement, and 3) expectations for assistive technologies that support safe and meaningful engagement. We also provide design implications to guide future technologies that support nature engagement for blind people. Overall, our findings illustrate how blind people experience nature beyond vision and lay a foundation for technologies that support inclusive nature engagement.",
+          "relevance_score": 0.7300931,
+          "id": "https://openalex.org/W7130722718"
+        },
+        {
+          "title": "Research progress of schema therapy for adolescents",
+          "abstract": "Adolescence is a vital time in human development, marked by fast physiological and mental changes that render teenagers more vulnerable to psychological suffering. With the growing frequency of mental health concerns among adolescents, the question of how to effectively intervene and help them in dealing with these challenges has emerged as a critical topic in the field of psychotherapy. Schema therapy, originally proposed by Young in the 1990s as an integrative psychotherapy approach, was initially developed for the treatment of chronic psychological disorders, particularly personality disorders. However, as schema therapy has evolved, its scope of application has gradually expanded, and numerous studies and clinical practices have begun to explore its use in adolescent populations. This paper focuses on schema therapy for adolescents, evaluating and summarizing important literature from 2000 to 2025 to inform future research and clinical practice.",
+          "relevance_score": 0.43747023,
+          "id": "https://openalex.org/W7154178837"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "?",
+        "YES"
+      ],
+      "precision": 0.2
+    },
+    {
+      "id": 16,
+      "query": "writing mental health adolescent",
+      "angle": "serendipity",
+      "rationale": "Replaced 'writing adolescent mental health' with natural phrase order using 'mental health' from keywords and 'adolescent' from context.",
+      "openalex_count": 292,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "\"Chasing Shadows\": Understanding Personal Data Externalization and Self-Tracking for Neurodivergent Individuals",
+          "abstract": "We examine how neurodivergent individuals experience creating, interacting with, and reflecting on personal data about masking. Although self-tracking is often framed as enabling self-insight, this is rarely our experience as neurodivergent individuals and researchers. To better understand this disconnect, we conducted a two-phase qualitative study. First, a workshop where six participants with autism and/or ADHD crafted visual representations of masking experiences. Then, three participants continued by designing and using personalized self-tracking focused on unmasking over two weeks. Using reflexive thematic analysis of activities and interviews, we find that self-tracking imposes substantial interpretive and emotional demands, shaped by context-dependencies that challenge assumptions in self-tracking. We also find that facilitated sharing of experiences might validate emotional responses and support reflection. We identify three emotional dimensions that shape engagement with personal data in a working model of emotion in self-tracking, and discuss implications for designing self-tracking and reflective practices that incorporate peer support and better account for context and emotional labor.",
+          "relevance_score": 1.5217612,
+          "id": "https://openalex.org/W7140714194"
+        },
+        {
+          "title": "Breaking Negative Cycles: A Reflection-to-Action System for Adaptive Change",
+          "abstract": "Breaking negative mental health cycles, including rumination and recurring regrets, requires reflection that translates awareness into behavioral change. Grounded in the Transtheoretical Model (TTM) and Gross\u2019s Emotion Regulation (ER) Process Model, we examine how Technologies Supporting Self-Reflection (TSR) bridge reflection and action. In a 15-day in-the-wild study (N = 20), participants used a voice-based journaling system to capture regrets and wishes and engaged in WhatIf-Planning, a novel structured reflection module integrating counterfactual thinking with if\u2013then planning. Participants were randomized to either a free-form condition or a Gross-guided condition, which maps the five processes of Gross\u2019s ER model into explicit journaling prompts. We contribute: (1) a unified reflection-to-action TSR system that operationalizes the Preparation stage of TTM to bridge Contemplation and Action, and (2) triangulated empirical evidence from an in-the-wild journaling study that first operationalizes Gross\u2019s Process Model, revealing effects on coping flexibility and emotion regulation in daily life. Results show significant pre\u2013post improvements in coping flexibility, indicating adaptive self-regulation across conditions, with the Gross-guided group generating more counterfactual alternatives, articulating concrete if\u2013then action plans, and implementing more plans for self-driven change.",
+          "relevance_score": 1.4461503,
+          "id": "https://openalex.org/W7153508710"
+        },
+        {
+          "title": "Negotiating Digital Identities with AI Companions: Motivations, Strategies, and Emotional Outcomes",
+          "abstract": "AI companions enable deep emotional relationships by engaging a user\u2019s sense of identity, but they also pose risks like unhealthy emotional dependence. Mitigating these risks requires first understanding the underlying process of identity construction and negotiation with AI companions. Focusing on Character.AI (C.AI), a popular AI companion, we conducted an LLM-assisted thematic analysis of 22,374 online discussions on its subreddit. Using Identity Negotiation Theory as an analytical lens, we identified a three-stage process: 1) five user motivations; 2) an identity negotiation process involving three communication expectations and four identity co-construction strategies; and 3) three emotional outcomes. Our findings surface the identity work users perform as both performers and directors to co-construct identities in negotiation with C.AI. This process takes place within a socio-emotional sandbox where users can experiment with social roles and express emotions without non-human partners. Finally, we offer design implications for emotionally supporting users while mitigating the risks.",
+          "relevance_score": 1.3675977,
+          "id": "https://openalex.org/W7141391593"
+        },
+        {
+          "title": "More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys",
+          "abstract": "Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years. While prior patient-centered studies have examined the capabilities and experience of LLM-based tools in specific health-related tasks such as information-seeking, diagnosis, or decision-supporting, the inherently longitudinal nature of healthcare in real-world practice has been underexplored. This paper presents a four-week diary study with 25 patients to examine LLMs' roles across healthcare-seeking trajectories. Our analysis reveals that patients integrate LLMs not just as simple decision-support tools, but as dynamic companions that scaffold their journey across behavioral, informational, emotional, and cognitive levels. Meanwhile, patients actively assign diverse socio-technical meanings to LLMs, altering the traditional dynamics of agency, trust, and power in patient-provider relationships. Drawing from these findings, we conceptualize future LLMs as a longitudinal boundary companion that continuously mediates between patients and clinicians throughout longitudinal healthcare-seeking trajectories.",
+          "relevance_score": 1.3476449,
+          "id": "https://openalex.org/W7129328976"
+        },
+        {
+          "title": "Unraveling Entangled Feeds: Rethinking Social Media Design to Enhance User Well-being",
+          "abstract": "Social media platforms have rapidly adopted algorithmic curation with little consideration for the potential harm to users' mental well-being. We present findings from design workshops with 21 participants diagnosed with mental illness about their interactions with social media platforms. We find that users develop cause-and-effect explanations, or folk theories, to understand their experiences with algorithmic curation. These folk theories highlight a breakdown in algorithmic design that we explain using the framework of entanglement, a phenomenon where there is a disconnect between users' actions and platform outcomes on an emotional level. Participants' designs to address entanglement and mitigate harms centered on contextualizing their engagement and restoring explicit user control on social media. The conceptualization of entanglement and the resulting design recommendations have implications for social computing and recommender systems research, particularly in evaluating and designing social media platforms that support users' mental well-being.",
+          "relevance_score": 1.2991623,
+          "id": "https://openalex.org/W7130361023"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.1
+    }
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "timestamp": "2026-04-13T11:43:15.447311+00:00",
+  "prompt_file": "iter/prompts/v7_slotfilled.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "angles_file": "iter/profiles/marketing.angles.json",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "pass1_cost_usd": 0.000914247,
+  "diagnostic_cost_usd": 0.00103818,
+  "n_pass1_queries": 16,
+  "n_backfill_queries": 5,
+  "angle_diagnoses": [
+    {
+      "angle_id": 1,
+      "status": "marginal",
+      "reason": "Only 2 YES papers across queries, many PARTIAL/NO hits on generic price perception"
+    },
+    {
+      "angle_id": 2,
+      "status": "marginal",
+      "reason": "Only 2 YES papers across queries, many hits on general promotion effects not brand damage specifically"
+    },
+    {
+      "angle_id": 3,
+      "status": "covered",
+      "reason": "3 YES papers on ad creative and effectiveness"
+    },
+    {
+      "angle_id": 4,
+      "status": "wrong-corpus",
+      "reason": "Many hits but most are off-topic (SARMs, snake repellent, plant-based meat); only 2 YES papers on packaging/navigation, not product naming"
+    },
+    {
+      "angle_id": 5,
+      "status": "covered",
+      "reason": "At least 3 YES papers on scarcity/FOMO and social proof"
+    },
+    {
+      "angle_id": 6,
+      "status": "marginal",
+      "reason": "Only 2 YES papers, many hits on technical web development/AI not conversion optimization"
+    },
+    {
+      "angle_id": 7,
+      "status": "covered",
+      "reason": "4 YES papers on nudges and behavioral findings"
+    },
+    {
+      "angle_id": 8,
+      "status": "marginal",
+      "reason": "Only 2 YES papers, many hits on general marketing not specific retention mechanics"
+    }
+  ],
+  "union_total": 65,
+  "union_yes": 20,
+  "union_partial": 20,
+  "union_precision": 0.462,
+  "plan": {
+    "subject": "Marketing science",
+    "queries_per_angle": 2,
+    "queries": [
+      {
+        "id": 1,
+        "angle_id": 1,
+        "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+        "slot": 1,
+        "query": "\"charm pricing\" AND (\"consumer\" OR \"customer\" OR \"shopper\")",
+        "rationale": "Catches high-precision papers specifically testing the $9.99 effect on purchase behavior."
+      },
+      {
+        "id": 2,
+        "angle_id": 1,
+        "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+        "slot": 2,
+        "query": "(\"price endings\" OR \"price perception\" OR \"price fairness\" OR \"odd pricing\") AND (\"online\" OR \"e-commerce\" OR \"digital\")",
+        "rationale": "Covers broader studies on price digit effects and perceived value beyond the specific term 'charm pricing'."
+      },
+      {
+        "id": 3,
+        "angle_id": 2,
+        "angle": "discounts and promotions and their effect on brand",
+        "slot": 1,
+        "query": "\"discount\" AND (\"brand perception\" OR \"brand equity\" OR \"brand loyalty\")",
+        "rationale": "Finds papers directly investigating how promotional discounts impact brand-related metrics."
+      },
+      {
+        "id": 4,
+        "angle_id": 2,
+        "angle": "discounts and promotions and their effect on brand",
+        "slot": 2,
+        "query": "(\"price promotion\" OR \"sales promotion\" OR \"coupon\") AND (\"brand dilution\" OR \"brand trust\" OR \"brand damage\")",
+        "rationale": "Uses synonyms for discounts and brand harm to catch papers discussing negative long-term effects."
+      },
+      {
+        "id": 5,
+        "angle_id": 3,
+        "angle": "ad creative effectiveness and persuasion",
+        "slot": 1,
+        "query": "\"ad creative\" AND (\"conversion\" OR \"click-through\" OR \"purchase intent\")",
+        "rationale": "Targets papers measuring the direct impact of advertising creative elements on conversion metrics."
+      },
+      {
+        "id": 6,
+        "angle_id": 3,
+        "angle": "ad creative effectiveness and persuasion",
+        "slot": 2,
+        "query": "(\"advertising effectiveness\" OR \"ad persuasion\" OR \"creative testing\") AND (\"digital ads\" OR \"social media ads\")",
+        "rationale": "Broadens the search to studies on ad persuasion in digital contexts, not limited to the phrase 'ad creative'."
+      },
+      {
+        "id": 7,
+        "angle_id": 4,
+        "angle": "product naming, branding, packaging",
+        "slot": 1,
+        "query": "\"product naming\" AND (\"choice\" OR \"sales\" OR \"preference\")",
+        "rationale": "Focuses on studies specifically testing how product name variations affect consumer choice and sales."
+      },
+      {
+        "id": 8,
+        "angle_id": 4,
+        "angle": "product naming, branding, packaging",
+        "slot": 2,
+        "query": "(\"brand name\" OR \"packaging design\" OR \"label design\") AND (\"purchase\" OR \"consumer response\")",
+        "rationale": "Covers research on branding and packaging elements and their measurable impact on purchase behavior."
+      },
+      {
+        "id": 9,
+        "angle_id": 5,
+        "angle": "scarcity, urgency, social proof cues",
+        "slot": 1,
+        "query": "\"scarcity\" AND (\"online purchase\" OR \"e-commerce\" OR \"checkout\")",
+        "rationale": "Anchors the search to scarcity cues applied specifically in digital shopping and checkout contexts."
+      },
+      {
+        "id": 10,
+        "angle_id": 5,
+        "angle": "scarcity, urgency, social proof cues",
+        "slot": 2,
+        "query": "(\"social proof\" OR \"urgency\" OR \"limited availability\") AND (\"conversion\" OR \"sales\" OR \"click\")",
+        "rationale": "Uses synonyms for scarcity/urgency/social proof and ties them to measurable conversion outcomes."
+      },
+      {
+        "id": 11,
+        "angle_id": 6,
+        "angle": "landing page or checkout conversion optimization",
+        "slot": 1,
+        "query": "\"landing page\" AND (\"conversion rate\" OR \"optimization\" OR \"A/B test\")",
+        "rationale": "Finds papers specifically about landing page design and its tested impact on conversion rates."
+      },
+      {
+        "id": 12,
+        "angle_id": 6,
+        "angle": "landing page or checkout conversion optimization",
+        "slot": 2,
+        "query": "(\"checkout process\" OR \"payment page\" OR \"shopping cart\") AND (\"abandonment\" OR \"completion\" OR \"optimization\")",
+        "rationale": "Targets research on the checkout stage, focusing on reducing abandonment or increasing completion."
+      },
+      {
+        "id": 13,
+        "angle_id": 7,
+        "angle": "consumer psychology / behavioral findings on purchasing",
+        "slot": 1,
+        "query": "\"nudge\" AND (\"purchase\" OR \"online shopping\" OR \"e-commerce\")",
+        "rationale": "Captures studies applying specific behavioral nudges to influence purchasing decisions in digital contexts."
+      },
+      {
+        "id": 14,
+        "angle_id": 7,
+        "angle": "consumer psychology / behavioral findings on purchasing",
+        "slot": 2,
+        "query": "(\"decision heuristic\" OR \"cognitive bias\" OR \"mental shortcut\") AND (\"buying\" OR \"consumer choice\")",
+        "rationale": "Broadens the search to cognitive biases and heuristics that affect buying choices, beyond the term 'nudge'."
+      },
+      {
+        "id": 15,
+        "angle_id": 8,
+        "angle": "loyalty, retention, repeat purchase behavior",
+        "slot": 1,
+        "query": "\"repeat purchase\" AND (\"online\" OR \"e-commerce\" OR \"subscription\")",
+        "rationale": "Finds papers specifically measuring repeat purchase behavior in digital or subscription business models."
+      },
+      {
+        "id": 16,
+        "angle_id": 8,
+        "angle": "loyalty, retention, repeat purchase behavior",
+        "slot": 2,
+        "query": "(\"customer retention\" OR \"loyalty program\") AND (\"profit\" OR \"revenue\" OR \"CLV\")",
+        "rationale": "Covers studies on loyalty programs and retention strategies linked to financial outcomes like profit or CLV."
+      }
+    ],
+    "coverage_notes": "Each angle is covered with a tight phrase anchor (slot 1) and a broader synonym fallback (slot 2), all scoped to consumer/e-commerce contexts. Angle 7 (consumer psychology) was hardest to phrase without drifting into generic psychology; focused on purchasing-specific applications of nudges and biases."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "slot": 1,
+      "query": "\"charm pricing\" AND (\"consumer\" OR \"customer\" OR \"shopper\")",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Charm Pricing in Real Estate: Impact by price segment and market conditions",
+          "relevance_score": 7.122122,
+          "id": "https://openalex.org/W7152936304"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES"
+      ]
+    },
+    {
+      "id": 2,
+      "angle_id": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "slot": 2,
+      "query": "(\"price endings\" OR \"price perception\" OR \"price fairness\" OR \"odd pricing\") AND (\"online\" OR \"e-commerce\" OR \"digital\")",
+      "openalex_count": 22,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Influence of E-Service Quality and Price Fairness on E-Loyalty through E-Satisfaction among Shopee Sellers",
+          "relevance_score": 6.8318505,
+          "id": "https://openalex.org/W7152066225"
+        },
+        {
+          "title": "FROM \"BROWSING\" TO \"PURCHASING\": BARRIERS AND ENHANCEMENT STRATEGIES FOR CONSUMERS' PURCHASE INTENTION IN INTANGIBLE CULTURAL HERITAGE E-COMMERCE",
+          "relevance_score": 5.9504676,
+          "id": "https://openalex.org/W7151502571"
+        },
+        {
+          "title": "Satisfaction as an Experience Engine in Promotion-Intensive Marketplaces: The Roles of Platform-Mediated Relationship Infrastructure and Price Fairness in Repurchase Intention (Shopee, Indonesia)",
+          "relevance_score": 5.450159,
+          "id": "https://openalex.org/W7152101615"
+        },
+        {
+          "title": "Determinants of Customer Satisfaction and Repurchase Intention on Meesho: Evidence from Indian E-Commerce Consumers",
+          "relevance_score": 5.1153703,
+          "id": "https://openalex.org/W7151853440"
+        },
+        {
+          "title": "The product category role in the perceived price fairness of multichannel price differentiation strategies",
+          "relevance_score": 4.7219434,
+          "id": "https://openalex.org/W7153254945"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ]
+    },
+    {
+      "id": 3,
+      "angle_id": 2,
+      "angle": "discounts and promotions and their effect on brand",
+      "slot": 1,
+      "query": "\"discount\" AND (\"brand perception\" OR \"brand equity\" OR \"brand loyalty\")",
+      "openalex_count": 15,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Key Factors Influencing Consumer Buying Behaviour of Fashion Shoppers on Social Media Platforms",
+          "relevance_score": 4.7829494,
+          "id": "https://openalex.org/W7150963016"
+        },
+        {
+          "title": "IMPACT OF CONSUMER BEHAVIOUR FACTORS ON SUSTAINABLE ONLINE PURCHASING DECISIONS",
+          "relevance_score": 3.6569014,
+          "id": "https://openalex.org/W7152967516"
+        },
+        {
+          "title": "Changing Food Consumption Patterns: A Study of Quick-Service",
+          "relevance_score": 0.8557283,
+          "id": "https://openalex.org/W7151902725"
+        },
+        {
+          "title": "Integrated Brand Analysis and Strategy\u2014Strategic Decision Guidelines for Brand Positioning and Market Strategy",
+          "relevance_score": 0.7915391,
+          "id": "https://openalex.org/W7151773066"
+        },
+        {
+          "title": "EFFECT OF PROMOTIONAL STRATEGIES ON LOTTERY PRODUCTS SALES IN NIGERIA",
+          "relevance_score": 0.6509221,
+          "id": "https://openalex.org/W7151499357"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ]
+    },
+    {
+      "id": 4,
+      "angle_id": 2,
+      "angle": "discounts and promotions and their effect on brand",
+      "slot": 2,
+      "query": "(\"price promotion\" OR \"sales promotion\" OR \"coupon\") AND (\"brand dilution\" OR \"brand trust\" OR \"brand damage\")",
+      "openalex_count": 6,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Assessing the Effects of Marketing Strategies on Local Trade: A Case Study of Shoprite Zambia, Mufulira",
+          "relevance_score": 0.51351684,
+          "id": "https://openalex.org/W7153238748"
+        },
+        {
+          "title": "How Religious Communication Shapes Islamic Sales Promotion Strategies? A Systemic Literature Review",
+          "relevance_score": 0.47612023,
+          "id": "https://openalex.org/W7152702926"
+        },
+        {
+          "title": "Fidelizaci\u00f3n de clientes en TikTok: construcci\u00f3n y validaci\u00f3n de un instrumento psicom\u00e9trico",
+          "relevance_score": 0.4377736,
+          "id": "https://openalex.org/W7153342278"
+        },
+        {
+          "title": "The Influence of Product Quality and Promotional Activities on Consumer Purchase Intention on the TikTok Shop Platform",
+          "relevance_score": 0.4351905,
+          "id": "https://openalex.org/W7152467506"
+        },
+        {
+          "title": "Contextualizing the privacy paradox\u2014a risk\u2013benefit analysis of generation z\u2019s adoption intentions toward AI-based virtual try-on",
+          "relevance_score": 0.3444584,
+          "id": "https://openalex.org/W7153223619"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "NO",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "PARTIAL"
+      ]
+    },
+    {
+      "id": 5,
+      "angle_id": 3,
+      "angle": "ad creative effectiveness and persuasion",
+      "slot": 1,
+      "query": "\"ad creative\" AND (\"conversion\" OR \"click-through\" OR \"purchase intent\")",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 0.40955558,
+          "id": "https://openalex.org/W7153528954"
+        },
+        {
+          "title": "Generating Clicks: Display Advertising Within Social Media",
+          "relevance_score": 0.35386217,
+          "id": "https://openalex.org/W7152940265"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES",
+        "YES"
+      ]
+    },
+    {
+      "id": 6,
+      "angle_id": 3,
+      "angle": "ad creative effectiveness and persuasion",
+      "slot": 2,
+      "query": "(\"advertising effectiveness\" OR \"ad persuasion\" OR \"creative testing\") AND (\"digital ads\" OR \"social media ads\")",
+      "openalex_count": 2,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Generating Clicks: Display Advertising Within Social Media",
+          "relevance_score": 0.5699794,
+          "id": "https://openalex.org/W7152940265"
+        },
+        {
+          "title": "The Effectiveness of CTV Advertising on Brand Equity and Consumer Engagement",
+          "relevance_score": 0.4684903,
+          "id": "https://openalex.org/W7151479680"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES",
+        "YES"
+      ]
+    },
+    {
+      "id": 7,
+      "angle_id": 4,
+      "angle": "product naming, branding, packaging",
+      "slot": 1,
+      "query": "\"product naming\" AND (\"choice\" OR \"sales\" OR \"preference\")",
+      "openalex_count": 14,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Best SARMs for Strength and Performance: Top Choices for Athletes and Bodybuilders",
+          "relevance_score": 3.270338,
+          "id": "https://openalex.org/W7151939058"
+        },
+        {
+          "title": "Healthy breakfast perceptions: comparing private labels and national brands",
+          "relevance_score": 2.4243994,
+          "id": "https://openalex.org/W7152528138"
+        },
+        {
+          "title": "Snake repellent safety and efficacy in Sub-Saharan Africa. What is the evidence?",
+          "relevance_score": 0.89366984,
+          "id": "https://openalex.org/W7153205837"
+        },
+        {
+          "title": "Evidence for the common or usual name for plant-based food products",
+          "relevance_score": 0.40559387,
+          "id": "https://openalex.org/W7152491688"
+        },
+        {
+          "title": "Plant-based meat substitutes on the German market: a characterization based on declared nutrient contents, Nutri-Score, organic and vegan labeling, and use of iodized salt",
+          "relevance_score": 0.37159657,
+          "id": "https://openalex.org/W7151825864"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "NO",
+        "NO",
+        "NO"
+      ]
+    },
+    {
+      "id": 8,
+      "angle_id": 4,
+      "angle": "product naming, branding, packaging",
+      "slot": 2,
+      "query": "(\"brand name\" OR \"packaging design\" OR \"label design\") AND (\"purchase\" OR \"consumer response\")",
+      "openalex_count": 27,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Research on the visual influence of rice wine packaging design based on eye tracking technology",
+          "relevance_score": 3.7436152,
+          "id": "https://openalex.org/W7151915347"
+        },
+        {
+          "title": "Navigation bar design effects on consumer visual processing",
+          "relevance_score": 0.35556155,
+          "id": "https://openalex.org/W7153426875"
+        },
+        {
+          "title": "BrandSense: Machine Learning Framework for Context-Aware Brand Name Analysis and Prediction",
+          "relevance_score": 0.33700067,
+          "id": "https://openalex.org/W7153098710"
+        },
+        {
+          "title": "gaa",
+          "relevance_score": 0.30816358,
+          "id": "https://openalex.org/W7153572550"
+        },
+        {
+          "title": "Linking sustainability to consumer brand engagement in omnichannel communication of luxury fashion brands",
+          "relevance_score": 0.28552708,
+          "id": "https://openalex.org/W7152650117"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "YES",
+        "NO",
+        "PARTIAL"
+      ]
+    },
+    {
+      "id": 9,
+      "angle_id": 5,
+      "angle": "scarcity, urgency, social proof cues",
+      "slot": 1,
+      "query": "\"scarcity\" AND (\"online purchase\" OR \"e-commerce\" OR \"checkout\")",
+      "openalex_count": 42,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "A Study on the Impact of Fear of Missing Out (FOMO) on Impulsive Buying Behaviour of Consumers During the Festive Season (August\u2013November) in the Indian Retail and E-Commerce Industry",
+          "relevance_score": 4.312507,
+          "id": "https://openalex.org/W7153251664"
+        },
+        {
+          "title": "A CASE STUDY ON TALENT ACQUISITION IN RETAIL AND E COMMERCE INDUSTRY",
+          "relevance_score": 4.149985,
+          "id": "https://openalex.org/W7153347147"
+        },
+        {
+          "title": "The Psychology of Spending in Cashless Societies",
+          "relevance_score": 0.7762921,
+          "id": "https://openalex.org/W7153454291"
+        },
+        {
+          "title": "Web engineering for the evaluation of large complex web systems: methodologies in web metrics",
+          "relevance_score": 0.71305966,
+          "id": "https://openalex.org/W2767728468"
+        },
+        {
+          "title": "Digital Promotion Strategy for Bastoh Brand New Product in Increasing Sales During the Ramadan Period",
+          "relevance_score": 0.39064276,
+          "id": "https://openalex.org/W7153304055"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES",
+        "NO",
+        "YES",
+        "NO",
+        "PARTIAL"
+      ]
+    },
+    {
+      "id": 10,
+      "angle_id": 5,
+      "angle": "scarcity, urgency, social proof cues",
+      "slot": 2,
+      "query": "(\"social proof\" OR \"urgency\" OR \"limited availability\") AND (\"conversion\" OR \"sales\" OR \"click\")",
+      "openalex_count": 566,
+      "breadth_band": "recall_safety",
+      "hits": [
+        {
+          "title": "Robotic Versus Laparoscopic Cholecystectomy: Operative Time and Conversion in Urgent Cases",
+          "relevance_score": 12.812134,
+          "id": "https://openalex.org/W7151909535"
+        },
+        {
+          "title": "Digital Promotion Strategy for Bastoh Brand New Product in Increasing Sales During the Ramadan Period",
+          "relevance_score": 4.5137753,
+          "id": "https://openalex.org/W7153304055"
+        },
+        {
+          "title": "Upcycling cellulose and keratin wastes into high-performance robust, silky, and reusable hybrid textile yarns",
+          "relevance_score": 3.4429069,
+          "id": "https://openalex.org/W7152128838"
+        },
+        {
+          "title": "A Study on the Impact of Fear of Missing Out (FOMO) on Impulsive Buying Behaviour of Consumers During the Festive Season (August\u2013November) in the Indian Retail and E-Commerce Industry",
+          "relevance_score": 3.3379183,
+          "id": "https://openalex.org/W7153251664"
+        },
+        {
+          "title": "<scp>ROS</scp> \u2010responsive robust hydrogels based on thiol\u2010ene click chemistry for enhancing the healing of infected wounds",
+          "relevance_score": 3.0780616,
+          "id": "https://openalex.org/W7152368639"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "NO",
+        "YES",
+        "NO"
+      ]
+    },
+    {
+      "id": 11,
+      "angle_id": 6,
+      "angle": "landing page or checkout conversion optimization",
+      "slot": 1,
+      "query": "\"landing page\" AND (\"conversion rate\" OR \"optimization\" OR \"A/B test\")",
+      "openalex_count": 17,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "\u0406\u041d\u0422\u0415\u041b\u0415\u041a\u0422\u0423\u0410\u041b\u042c\u041d\u0410 \u0410\u0412\u0422\u041e\u041c\u0410\u0422\u0418\u0417\u0410\u0426\u0406\u042f \u0412\u0415\u0411\u0420\u041e\u0417\u0420\u041e\u0411\u041a\u0418: \u0421\u0422\u0412\u041e\u0420\u0415\u041d\u041d\u042f \u041b\u0415\u041d\u0414\u0418\u041d\u0413 \u0421\u0422\u041e\u0420\u0406\u041d\u041e\u041a \u0406\u0417 \u0412\u0418\u041a\u041e\u0420\u0418\u0421\u0422\u0410\u041d\u041d\u042f\u041c \u0413\u0415\u041d\u0415\u0420\u0410\u0422\u0418\u0412\u041d\u041e\u0407 \u041c\u041e\u0412\u041d\u041e\u0407 \u041c\u041e\u0414\u0415\u041b\u0406 CHATGPT",
+          "relevance_score": 0.5910213,
+          "id": "https://openalex.org/W7151235741"
+        },
+        {
+          "title": "RaiseTogether: A Smart Web-Based Event Management and Fundraising Platform for College",
+          "relevance_score": 0.45057017,
+          "id": "https://openalex.org/W7152588875"
+        },
+        {
+          "title": "Hyper Web AI: A Natural Language Processing Based AI-Powered Web Code Generator",
+          "relevance_score": 0.37767947,
+          "id": "https://openalex.org/W7152635711"
+        },
+        {
+          "title": "Best Buy: An AI\u2013Based Multi\u2013Platform Price and Sentiment Analysis Assistant",
+          "relevance_score": 0.3673365,
+          "id": "https://openalex.org/W7151890832"
+        },
+        {
+          "title": "Federated Learning Driven DDoS Detection in SDN Environment using Contrastive Learning",
+          "relevance_score": 0.34419736,
+          "id": "https://openalex.org/W7153290587"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "NO",
+        "YES",
+        "NO"
+      ]
+    },
+    {
+      "id": 12,
+      "angle_id": 6,
+      "angle": "landing page or checkout conversion optimization",
+      "slot": 2,
+      "query": "(\"checkout process\" OR \"payment page\" OR \"shopping cart\") AND (\"abandonment\" OR \"completion\" OR \"optimization\")",
+      "openalex_count": 9,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "E-Commerce Cart Prediction Using Multi-Task Learning with BI-LSTM and Graph Neural Networks",
+          "relevance_score": 5.582493,
+          "id": "https://openalex.org/W7152370739"
+        },
+        {
+          "title": "A Web Based Honeypot System Framework to Capture and Mitigate Cyber Attacks",
+          "relevance_score": 0.5509588,
+          "id": "https://openalex.org/W7153459292"
+        },
+        {
+          "title": "Enhancing Retail Checkout Efficiency Through a Hybrid YOLOv8-Based Grocery Detection and Billing System",
+          "relevance_score": 0.40747905,
+          "id": "https://openalex.org/W7151081140"
+        },
+        {
+          "title": "The Use of Artificial Intelligence for Personalized Advertising and Marketing.",
+          "relevance_score": 0.40535098,
+          "id": "https://openalex.org/W7153528954"
+        },
+        {
+          "title": "KnowU-Bench: Towards Interactive, Proactive, and Personalized Mobile Agent Evaluation",
+          "relevance_score": 0.3422868,
+          "id": "https://openalex.org/W7153670154"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ]
+    },
+    {
+      "id": 13,
+      "angle_id": 7,
+      "angle": "consumer psychology / behavioral findings on purchasing",
+      "slot": 1,
+      "query": "\"nudge\" AND (\"purchase\" OR \"online shopping\" OR \"e-commerce\")",
+      "openalex_count": 41,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Supermarket Loyalty Card Data for Delivering and Evaluating Dietary Interventions: A Narrative Review",
+          "relevance_score": 3.9278505,
+          "id": "https://openalex.org/W7152498122"
+        },
+        {
+          "title": "Promoting healthier food purchases via social media: the role of polls and their visual features",
+          "relevance_score": 0.66025233,
+          "id": "https://openalex.org/W7153032948"
+        },
+        {
+          "title": "Digital marketing\u2019s targets: cyberloafing and impulsive buying",
+          "relevance_score": 0.65516245,
+          "id": "https://openalex.org/W7153384196"
+        },
+        {
+          "title": "BRIDGING PERCEIVED QUALITY, INFLUENCERS AND IMPULSE PURCHASES: A CONCEPTUAL PAPER",
+          "relevance_score": 0.5610439,
+          "id": "https://openalex.org/W7150937912"
+        },
+        {
+          "title": "The Psychology of Spending in Cashless Societies",
+          "relevance_score": 0.55552065,
+          "id": "https://openalex.org/W7153454291"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "NO",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ]
+    },
+    {
+      "id": 14,
+      "angle_id": 7,
+      "angle": "consumer psychology / behavioral findings on purchasing",
+      "slot": 2,
+      "query": "(\"decision heuristic\" OR \"cognitive bias\" OR \"mental shortcut\") AND (\"buying\" OR \"consumer choice\")",
+      "openalex_count": 16,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "A Study of Behavioral Biases and Portfolio Choices Among Retail Investors in India",
+          "relevance_score": 3.9108021,
+          "id": "https://openalex.org/W7152040062"
+        },
+        {
+          "title": "Overconfidence Bias in Everyday Decision-Making: A Literature Review",
+          "relevance_score": 0.6952074,
+          "id": "https://openalex.org/W7153559723"
+        },
+        {
+          "title": "Digital marketing\u2019s targets: cyberloafing and impulsive buying",
+          "relevance_score": 0.29748622,
+          "id": "https://openalex.org/W7153384196"
+        },
+        {
+          "title": "Social Engineering in Blockchain: A Taxonomy and Analysis of Attack Vectors",
+          "relevance_score": 0.29616117,
+          "id": "https://openalex.org/W7153677492"
+        },
+        {
+          "title": "Mobile Phone Interaction and Impulse Buying in Indian Grocery Chains: An S-O-R Perspective on Emotional and Situational Factors",
+          "relevance_score": 0.28350824,
+          "id": "https://openalex.org/W7152544697"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "NO",
+        "PARTIAL",
+        "YES",
+        "NO",
+        "YES"
+      ]
+    },
+    {
+      "id": 15,
+      "angle_id": 8,
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "slot": 1,
+      "query": "\"repeat purchase\" AND (\"online\" OR \"e-commerce\" OR \"subscription\")",
+      "openalex_count": 32,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Impact of Sales Promotion Techniques on Customer Responses in E-Commerce Platforms",
+          "relevance_score": 8.313793,
+          "id": "https://openalex.org/W7152460797"
+        },
+        {
+          "title": "A FACTOR INFLUENCING THE REPURCHASE INTENTION ON TIKTOK FOR BABY BOTTLES",
+          "relevance_score": 3.7923121,
+          "id": "https://openalex.org/W7151913439"
+        },
+        {
+          "title": "A strategic perspective on determinants of e-repurchase intention in online shopping",
+          "relevance_score": 0.49918512,
+          "id": "https://openalex.org/W7151551617"
+        },
+        {
+          "title": "The Effect of Digital Marketing Strategy, Brand Awareness, and Customer Satisfaction on Shopee Customer Loyalty in Batam with Customer Engagement as a Mediator",
+          "relevance_score": 0.47754332,
+          "id": "https://openalex.org/W7153135492"
+        },
+        {
+          "title": "Omnichannel commerce and the modernization of small and medium jewelry Enterprises: Evidence from Ukraine and the United States",
+          "relevance_score": 0.47705546,
+          "id": "https://openalex.org/W7153637162"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "PARTIAL",
+        "PARTIAL"
+      ]
+    },
+    {
+      "id": 16,
+      "angle_id": 8,
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "slot": 2,
+      "query": "(\"customer retention\" OR \"loyalty program\") AND (\"profit\" OR \"revenue\" OR \"CLV\")",
+      "openalex_count": 45,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "INNOVATIVE ADVERTISING FORMATS IN THE SYSTEM OF MARKETING COMMUNICATIONS OF HoReCa ENTERPRISES",
+          "relevance_score": 5.710373,
+          "id": "https://openalex.org/W7152612022"
+        },
+        {
+          "title": "TRENDS IN THE DEVELOPMENT OF THE DIGITAL MARKETING MARKET IN UKRAINE UNDER MARTIAL LAW",
+          "relevance_score": 5.126586,
+          "id": "https://openalex.org/W7152724361"
+        },
+        {
+          "title": "The Effect of Seasonal Marketing Campaigns on Health Drinks",
+          "relevance_score": 4.4227166,
+          "id": "https://openalex.org/W7151536216"
+        },
+        {
+          "title": "Customer Churn Prediction for Subscription Businesses Using Machine Learning",
+          "relevance_score": 4.272605,
+          "id": "https://openalex.org/W7153536686"
+        },
+        {
+          "title": "Impact of customer retention strategies on profitability of pawnshops in Calapan city",
+          "relevance_score": 3.8281488,
+          "id": "https://openalex.org/W7152428153"
+        }
+      ],
+      "source": "pass1",
+      "hit_labels": [
+        "NO",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "NO"
+      ]
+    },
+    {
+      "id": 17,
+      "angle_id": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "slot": "backfill",
+      "query": "(\"odd pricing\" OR \"just-below pricing\" OR \"left-digit effect\") AND (\"willingness to pay\" OR \"purchase likelihood\" OR \"sales lift\")",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "source": "backfill",
+      "rationale": "Specific pricing psychology terms to avoid generic price perception noise",
+      "hit_labels": []
+    },
+    {
+      "id": 18,
+      "angle_id": 2,
+      "angle": "discounts and promotions and their effect on brand",
+      "slot": "backfill",
+      "query": "(\"deep discount\" OR \"everyday low price\" OR \"high-low pricing\") AND (\"brand prestige\" OR \"perceived quality\" OR \"luxury brand\")",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "source": "backfill",
+      "rationale": "Anchor on specific discount strategies known to affect brand perception",
+      "hit_labels": []
+    },
+    {
+      "id": 19,
+      "angle_id": 4,
+      "angle": "product naming, branding, packaging",
+      "slot": "backfill",
+      "query": "(\"phonetic symbolism\" OR \"sound symbolism\" OR \"brand name fluency\") AND (\"product evaluation\" OR \"purchase intention\")",
+      "openalex_count": 0,
+      "breadth_band": "zero",
+      "hits": [],
+      "source": "backfill",
+      "rationale": "Specific cognitive mechanisms in naming research to avoid generic packaging hits",
+      "hit_labels": []
+    },
+    {
+      "id": 20,
+      "angle_id": 6,
+      "angle": "landing page or checkout conversion optimization",
+      "slot": "backfill",
+      "query": "(\"page load time\" OR \"mobile optimization\" OR \"form fields\") AND (\"conversion rate\" OR \"checkout abandonment\")",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "RaiseTogether: A Smart Web-Based Event Management and Fundraising Platform for College",
+          "relevance_score": 0.15852195,
+          "id": "https://openalex.org/W7152588875"
+        }
+      ],
+      "source": "backfill",
+      "rationale": "Specific technical factors in landing page optimization, avoiding AI/web dev noise",
+      "hit_labels": [
+        "NO"
+      ]
+    },
+    {
+      "id": 21,
+      "angle_id": 8,
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "slot": "backfill",
+      "query": "(\"win-back campaign\" OR \"reactivation email\" OR \"dormant customer\") AND (\"repeat purchase\" OR \"customer lifetime value\")",
+      "openalex_count": 1,
+      "breadth_band": "low",
+      "hits": [
+        {
+          "title": "Self-Supervised Customer Representation Learning for Segmentation and Next-Purchase Prediction on UCI Online Retail",
+          "relevance_score": 0.31614685,
+          "id": "https://openalex.org/W7151764371"
+        }
+      ],
+      "source": "backfill",
+      "rationale": "Specific retention tactics rather than general loyalty program mentions",
+      "hit_labels": [
+        "PARTIAL"
+      ]
+    }
+  ]
+}

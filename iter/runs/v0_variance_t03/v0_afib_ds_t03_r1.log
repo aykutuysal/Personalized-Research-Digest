@@ -1,0 +1,33 @@
+prompt:  iter/prompts/v0_original.md
+profile: iter/profiles/afib.md
+model:   deepseek/deepseek-v3.2
+dates:   2026-04-06 to 2026-04-13
+
+[1/3] generating plan... 33.2s, 14 queries, $0.00339472
+[2/3] running OpenAlex queries...
+  Q 1 [Core treatment strategy debate          ] count=   13 low
+  Q 2 [Catheter ablation techniques and results] count=   25 low
+  Q 3 [Anticoagulation drug choices            ] count=   33 healthy
+  Q 4 [Anticoagulation safety and risk manageme] count=   28 low
+  Q 5 [Left atrial appendage occlusion devices ] count=    7 low
+  Q 6 [Guideline-driven stroke prevention      ] count=   13 low
+  Q 7 [Recent pivotal trial results on timing  ] count=    5 low
+  Q 8 [Ablation technology comparison          ] count=    5 low
+  Q 9 [Peri-procedural anticoagulation manageme] count=   32 healthy
+  Q10 [Intersection with heart failure manageme] count=   84 healthy
+  Q11 [Pharmacologic rhythm control agents     ] count=   28 low
+  Q12 [Detection and management of asymptomatic] count=    0 zero
+  Q13 [Long-term ablation outcomes and failures] count=   19 low
+  Q14 [Management in renal dysfunction         ] count=   10 low
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: iter/runs/v0_variance_t03/v0_afib_ds_t03_r1.json
+======================================================================
+  queries:          14
+  bands:            zero=1 low=10 healthy=3 recall_safety=0 too_broad=0
+  frac healthy:     21%
+  mean precision:   58%
+  per-band prec:    {'zero': None, 'low': 0.61, 'healthy': 0.47, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.00339472
+  PASSING:          no

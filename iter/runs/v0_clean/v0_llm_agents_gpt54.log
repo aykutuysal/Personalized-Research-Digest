@@ -1,0 +1,34 @@
+prompt:  iter/prompts/v0_original.md
+profile: iter/profiles/llm_agents.md
+model:   openai/gpt-5.4
+dates:   2026-04-06 to 2026-04-13
+
+[1/3] generating plan... 24.5s, 15 queries, $0.025765
+[2/3] running OpenAlex queries...
+  Q 1 [core subject                            ] count=  471 healthy
+  Q 2 [autonomy framing                        ] count=  154 healthy
+  Q 3 [agent workflows                         ] count=  225 healthy
+  Q 4 [multi-agent systems                     ] count=  495 healthy
+  Q 5 [tool use                                ] count=  322 healthy
+  Q 6 [planning and decomposition              ] count=  728 recall_safety
+  Q 7 [memory architectures                    ] count= 1257 recall_safety
+  Q 8 [self-improvement loops                  ] count=  306 healthy
+  Q 9 [retrieval-augmented agents              ] count=  259 healthy
+  Q10 [software engineering agents             ] count=   76 healthy
+  Q11 [evaluation and benchmarks               ] count= 5385 too_broad
+  Q12 [failure modes and safety                ] count=  347 healthy
+  Q13 [interactive environment agents          ] count=   70 healthy
+  Q14 [robotics and embodied agents            ] count=  368 healthy
+  Q15 [agent optimization and alignment        ] count=  305 healthy
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: iter/runs/v0_clean/v0_llm_agents_gpt54.json
+======================================================================
+  queries:          15
+  bands:            zero=0 low=0 healthy=12 recall_safety=2 too_broad=1
+  frac healthy:     80%
+  mean precision:   71%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.68, 'recall_safety': 0.85, 'too_broad': 0.7, 'error': None}
+  plan cost:        $0.025765
+  PASSING:          YES

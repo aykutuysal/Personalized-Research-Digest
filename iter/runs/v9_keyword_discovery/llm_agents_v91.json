@@ -1,0 +1,595 @@
+{
+  "subject": "LLM agents",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "deepseek/deepseek-v3.2",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "LLM agent architectures",
+      "agent tool use",
+      "multi-agent systems",
+      "agent memory systems",
+      "agent evaluation benchmarks"
+    ],
+    "raw_results": [
+      {
+        "seed": "LLM agent architectures",
+        "count": 3812
+      },
+      {
+        "seed": "agent tool use",
+        "count": 8213
+      },
+      {
+        "seed": "multi-agent systems",
+        "count": 16197
+      },
+      {
+        "seed": "agent memory systems",
+        "count": 3652
+      },
+      {
+        "seed": "agent evaluation benchmarks",
+        "count": 5456
+      }
+    ],
+    "cost": 0.00011646,
+    "latency_s": 11.0
+  },
+  "vocabulary": {
+    "total_papers": 250,
+    "topics": [
+      [
+        "Multi-Agent Systems and Negotiation",
+        35
+      ],
+      [
+        "Multimodal Machine Learning Applications",
+        19
+      ],
+      [
+        "Topic Modeling",
+        17
+      ],
+      [
+        "Ethics and Social Impacts of AI",
+        11
+      ],
+      [
+        "Adversarial Robustness in Machine Learning",
+        9
+      ],
+      [
+        "Security and Verification in Computing",
+        8
+      ],
+      [
+        "Scientific Computing and Data Management",
+        7
+      ],
+      [
+        "Reinforcement Learning in Robotics",
+        7
+      ],
+      [
+        "Ferroelectric and Negative Capacitance Devices",
+        7
+      ],
+      [
+        "Information Retrieval and Search Behavior",
+        6
+      ],
+      [
+        "Explainable Artificial Intelligence (XAI)",
+        5
+      ],
+      [
+        "Access Control and Trust",
+        5
+      ],
+      [
+        "Language and cultural evolution",
+        5
+      ],
+      [
+        "Distributed Control Multi-Agent Systems",
+        5
+      ],
+      [
+        "Geographic Information Systems Studies",
+        4
+      ]
+    ],
+    "subfields": [
+      [
+        "Artificial Intelligence",
+        106
+      ],
+      [
+        "Computer Vision and Pattern Recognition",
+        23
+      ],
+      [
+        "Information Systems",
+        15
+      ],
+      [
+        "Computer Networks and Communications",
+        13
+      ],
+      [
+        "Safety Research",
+        11
+      ],
+      [
+        "Information Systems and Management",
+        9
+      ],
+      [
+        "Sociology and Political Science",
+        9
+      ],
+      [
+        "Electrical and Electronic Engineering",
+        7
+      ],
+      [
+        "Management Information Systems",
+        6
+      ],
+      [
+        "Computational Theory and Mathematics",
+        6
+      ]
+    ],
+    "fields": [
+      [
+        "Computer Science",
+        171
+      ],
+      [
+        "Social Sciences",
+        30
+      ],
+      [
+        "Engineering",
+        16
+      ],
+      [
+        "Decision Sciences",
+        13
+      ],
+      [
+        "Business, Management and Accounting",
+        8
+      ]
+    ],
+    "keywords": [
+      [
+        "Architecture",
+        38
+      ],
+      [
+        "Workflow",
+        26
+      ],
+      [
+        "Software deployment",
+        23
+      ],
+      [
+        "Benchmarking",
+        21
+      ],
+      [
+        "Scalability",
+        18
+      ],
+      [
+        "Cognition",
+        17
+      ],
+      [
+        "Reinforcement learning",
+        17
+      ],
+      [
+        "Limiting",
+        15
+      ],
+      [
+        "Memory management",
+        15
+      ],
+      [
+        "Software",
+        14
+      ],
+      [
+        "Executable",
+        14
+      ],
+      [
+        "Verifiable secret sharing",
+        14
+      ],
+      [
+        "Semantic memory",
+        12
+      ],
+      [
+        "Corporate governance",
+        12
+      ],
+      [
+        "Cognitive architecture",
+        11
+      ],
+      [
+        "Audit",
+        11
+      ],
+      [
+        "Memory model",
+        10
+      ],
+      [
+        "Empirical research",
+        10
+      ],
+      [
+        "Bounded function",
+        9
+      ],
+      [
+        "Graph",
+        9
+      ],
+      [
+        "Modular design",
+        8
+      ],
+      [
+        "Adaptive memory",
+        8
+      ],
+      [
+        "Memory map",
+        8
+      ],
+      [
+        "Multi-agent system",
+        7
+      ],
+      [
+        "Decision support system",
+        7
+      ]
+    ],
+    "journals": [
+      [
+        "arXiv (Cornell University)",
+        54
+      ],
+      [
+        "ArXiv.org",
+        45
+      ],
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        43
+      ],
+      [
+        "Open MIND",
+        25
+      ],
+      [
+        "Preprints.org",
+        4
+      ],
+      [
+        "Big Earth Data",
+        2
+      ],
+      [
+        "Smart Agricultural Technology",
+        2
+      ],
+      [
+        "Proceedings of the AAAI Conference on Artificial Intelligence",
+        2
+      ],
+      [
+        "Artificial Intelligence Review",
+        2
+      ],
+      [
+        "SSRN Electronic Journal",
+        2
+      ]
+    ],
+    "sample_titles": [
+      "LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Design of Multi Active/Passive Core-Agent Architectures",
+      "Automatic Scaling Mechanism for LLM Multi-Agent Systems: Peristaltic Channel Architecture with Autonomous Decentralization",
+      "LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology",
+      "GeoJSON agents: a multi-agent LLM architecture for geospatial analysis\u2014function calling vs. code generation",
+      "Explainable zero-shot trading using multi-agent LLM architecture: A backtested approach for Bitcoin price",
+      "Human-Like Remembering and Forgetting in LLM Agents: An ACT-R-Inspired Memory Architecture",
+      "Agentic, Multimodal Large Language Model (LLM) with behavioural parameters and self-iterative capabilities for conversational architectural design processes",
+      "An agent-Based service architecture for smart greenhouses: Telemetry analytics and decision support with RAG-grounded LLM agents",
+      "Beyond GeneGPT: A Multi-Agent Architecture with Open-Source LLMs for Enhanced Genomic Question Answering",
+      "DAS-OS: An Operating System Approach to LLM Agent Architecture",
+      "DAS-OS: An Operating System Approach to LLM Agent Architecture",
+      "The Model Context Protocol in LLM Agent Architectures: The Clean Agent Architecture Pattern",
+      "Hybrid AI and LLM-Enabled Agent-Based Real-Time Decision Support Architecture for Industrial Batch Processes: A Clean-in-Place Case Study",
+      "Hybrid AI and LLM-Enabled Agent-Based Real-Time Decision Support Architecture for Industrial Batch Processes: A Clean-in-Place Case Study",
+      "DataGov-Factory: An Empirical Evaluation of Managed vs. Custom LLM Agent Architectures for Financial Data Governance"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "LLM agent architecture modular design",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Directly addresses new agent architectures using vocabulary 'Architecture' (38x) and 'Modular design' (8x) from extracted data. Targets engineering-grounded architectural patterns relevant to a software engineer building agents."
+      },
+      {
+        "query": "agent tool use executable",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Addresses tool use and function calling with vocabulary 'Executable' (14x) from extracted data. Targets practical implementation of tool execution in agents, relevant for engineering-focused development."
+      },
+      {
+        "query": "multi-agent system orchestration workflow",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Addresses multi-agent systems and orchestration using vocabulary 'Multi-agent system' (7x) and 'Workflow' (26x) from extracted data. Targets practical coordination patterns for multi-agent architectures."
+      },
+      {
+        "query": "agent benchmarking evaluation empirical",
+        "angle_id": 6,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Covers evaluation and benchmarks using vocabulary 'Benchmarking' (21x) and 'Empirical research' (10x) from extracted data. Focuses on practical testing and measurement of agent capabilities."
+      },
+      {
+        "query": "agent software deployment scalability",
+        "angle_id": 7,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Addresses production engineering patterns using vocabulary 'Software deployment' (23x) and 'Scalability' (18x) from extracted data. Directly relevant to deployment and operational concerns for a software engineer."
+      },
+      {
+        "query": "agent cognitive architecture memory",
+        "angle_id": 2,
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Combines planning/reasoning (angle 2) with memory systems (angle 4) using vocabulary 'Cognitive architecture' (11x) and 'Memory' terms. Serves angle 2 by exploring how memory enhances reasoning, based on extracted cognitive architecture papers."
+      },
+      {
+        "query": "multi-agent decision support system",
+        "angle_id": 5,
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "rationale": "Serves multi-agent systems (angle 5) through adjacent field of decision support systems, using vocabulary 'Decision support system' (7x) from extracted data. Relevant for practical orchestration applications in business/management contexts."
+      },
+      {
+        "query": "agent reinforcement learning tool",
+        "angle_id": 3,
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Combines tool use (angle 3) with reinforcement learning techniques using vocabulary 'Reinforcement learning' (17x) from extracted data. Serves angle 3 by exploring how RL enhances tool learning and function calling."
+      },
+      {
+        "query": "LLM agent workflow provenance",
+        "angle_id": 7,
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Serves production engineering patterns (angle 7) through adjacent topic of workflow provenance, referenced in sample titles. Addresses observability and traceability in agent deployments for engineering-focused users."
+      },
+      {
+        "query": "cognitive architecture reasoning multi-agent system",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent planning reasoning cognition' with vocabulary terms: 'cognitive architecture' (from keywords), 'reasoning' (kept), and 'multi-agent system' (from topics). This broadens from specific 'planning' while maintaining the cognition/agent angle."
+      },
+      {
+        "query": "memory management semantic memory cognitive architecture",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent memory management semantic' with 'memory management' (kept from keywords), 'semantic memory' (from keywords), and 'cognitive architecture' (from keywords). This focuses on memory systems without requiring 'agent' specificity."
+      },
+      {
+        "query": "audit safety artificial intelligence ethics",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent safety audit guardrails' with 'audit' (kept from keywords), 'safety' (kept), 'artificial intelligence' (from subfields), and 'ethics' (from topics). This broadens from specific 'guardrails' to the broader AI safety/ethics context."
+      }
+    ],
+    "cost": 0.00101433,
+    "latency_s": 100.8
+  },
+  "validation": [
+    {
+      "query": "LLM agent architecture modular design",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent tool use executable",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 48,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "multi-agent system orchestration workflow",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 30,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent benchmarking evaluation empirical",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 25,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent software deployment scalability",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 23,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent cognitive architecture memory",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 53,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "multi-agent decision support system",
+      "dimension": "adjacent",
+      "priority": "rotate_biweekly",
+      "last_run_count": 60,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "agent reinforcement learning tool",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 53,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "LLM agent workflow provenance",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "cognitive architecture reasoning multi-agent system",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 18,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "memory management semantic memory cognitive architecture",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "audit safety artificial intelligence ethics",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "fill_missing": {
+    "queries": [],
+    "cost": 0.0,
+    "latency": 0.0,
+    "raw": "",
+    "missing_before": [],
+    "missing_after": []
+  },
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "agent planning reasoning cognition",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 2,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "agent memory management semantic",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "agent safety audit guardrails",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 2,
+        "status": "low",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "cognitive architecture reasoning multi-agent system",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent planning reasoning cognition' with vocabulary terms: 'cognitive architecture' (from keywords), 'reasoning' (kept), and 'multi-agent system' (from topics). This broadens from specific 'planning' while maintaining the cognition/agent angle."
+      },
+      {
+        "query": "memory management semantic memory cognitive architecture",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent memory management semantic' with 'memory management' (kept from keywords), 'semantic memory' (from keywords), and 'cognitive architecture' (from keywords). This focuses on memory systems without requiring 'agent' specificity."
+      },
+      {
+        "query": "audit safety artificial intelligence ethics",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'agent safety audit guardrails' with 'audit' (kept from keywords), 'safety' (kept), 'artificial intelligence' (from subfields), and 'ethics' (from topics). This broadens from specific 'guardrails' to the broader AI safety/ethics context."
+      }
+    ],
+    "cost": 0.00058,
+    "latency_s": 16.6
+  },
+  "costs": {
+    "seed_usd": 0.00011646,
+    "library_usd": 0.00101433,
+    "fill_missing_usd": 0.0,
+    "reformulate_usd": 0.00058,
+    "total_usd": 0.001711
+  },
+  "total_latency_s": 204.4
+}

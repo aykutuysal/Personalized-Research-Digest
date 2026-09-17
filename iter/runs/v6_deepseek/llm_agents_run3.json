@@ -1,0 +1,774 @@
+{
+  "timestamp": "2026-04-13T01:45:14.220432+00:00",
+  "prompt_file": "iter/prompts/v6_recall_quota.md",
+  "profile_file": "iter/profiles/llm_agents.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": null,
+  "plan_elapsed_s": 29.1,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 15,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 0
+  },
+  "frac_healthy": 1.0,
+  "frac_healthy_or_safety": 1.0,
+  "mean_precision": 0.69,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": 0.69,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "LLM agents",
+    "queries": [
+      {
+        "id": 1,
+        "query": "(\"LLM agent\" OR \"language model agent\" OR \"autonomous agent\") AND (architecture OR framework OR system)",
+        "angle": "Core agent architectures & systems",
+        "rationale": "Catches papers proposing new agent system designs and architectural patterns, which is the reader's primary engineering focus."
+      },
+      {
+        "id": 2,
+        "query": "(\"LLM agent\" OR \"language model agent\") AND (tool OR \"function calling\" OR \"API calling\")",
+        "angle": "Tool use and external API integration",
+        "rationale": "Targets a key practical capability for building useful agents, focusing on how agents interact with external tools and APIs."
+      },
+      {
+        "id": 3,
+        "query": "(\"LLM agent\" OR \"autonomous agent\") AND (planning OR \"task decomposition\" OR \"hierarchical planning\")",
+        "angle": "Planning and task decomposition techniques",
+        "rationale": "Focuses on how agents break down and reason about complex tasks, a core research area with direct engineering implications."
+      },
+      {
+        "id": 4,
+        "query": "(\"LLM agent\" OR \"language model agent\") AND (memory OR \"long-term memory\" OR \"episodic memory\")",
+        "angle": "Agent memory mechanisms",
+        "rationale": "Captures research on how agents maintain, retrieve, and use context over time, a critical component for practical applications."
+      },
+      {
+        "id": 5,
+        "query": "(\"LLM agent\" OR \"autonomous agent\") AND (evaluation OR benchmark OR \"agent benchmark\")",
+        "angle": "Evaluation frameworks and benchmarks",
+        "rationale": "Targets papers on how to measure agent performance, which the reader needs to assess new techniques and architectures."
+      },
+      {
+        "id": 6,
+        "query": "(\"LLM agent\" OR \"language model agent\") AND (multi-agent OR \"agent collaboration\" OR \"swarm\")",
+        "angle": "Multi-agent systems and collaboration",
+        "rationale": "Focuses on systems where multiple agents interact, a growing area with distinct architectural and coordination challenges."
+      },
+      {
+        "id": 7,
+        "query": "(\"LLM agent\" OR \"autonomous agent\") AND (reasoning OR \"chain of thought\" OR CoT OR \"self-reflection\")",
+        "angle": "Reasoning and reflection techniques",
+        "rationale": "Catches advances in agent reasoning processes like chain-of-thought and self-critique, which improve agent reliability."
+      },
+      {
+        "id": 8,
+        "query": "(\"LLM agent\" OR \"language model agent\") AND (deployment OR \"production\" OR scaling OR latency)",
+        "angle": "Deployment and operational concerns",
+        "rationale": "Targets the engineering-grounded work on making agents robust, scalable, and efficient in real-world settings."
+      },
+      {
+        "id": 9,
+        "query": "(\"LLM agent\" OR \"autonomous agent\") AND (code OR programming OR \"software engineering\")",
+        "angle": "Agents for code and software tasks",
+        "rationale": "Focuses on a highly relevant application domain for a software engineer, where agents generate, debug, or manipulate code."
+      },
+      {
+        "id": 10,
+        "query": "(\"LLM agent\" OR \"language model agent\") AND (retrieval OR \"retrieval-augmented generation\" OR RAG)",
+        "angle": "Retrieval-augmented agents",
+        "rationale": "Captures the intersection of agents with RAG techniques, a common pattern for grounding agents in external knowledge."
+      },
+      {
+        "id": 11,
+        "query": "(\"LLM agent\" OR \"autonomous agent\") AND (reinforcement OR \"reinforcement learning\" OR RL OR \"RLHF\")",
+        "angle": "Reinforcement learning for agents",
+        "rationale": "Targets research on using RL to train or improve agents, a major technique for enhancing agent capabilities."
+      },
+      {
+        "id": 12,
+        "query": "(\"LLM agent\" OR \"language model agent\") AND (hallucination OR reliability OR safety OR robustness)",
+        "angle": "Failure modes and robustness",
+        "rationale": "Focuses on known problems like hallucination and safety, which the reader must understand to build reliable systems."
+      },
+      {
+        "id": 13,
+        "query": "(\"LLM agent\" OR \"autonomous agent\") AND (embodiment OR robot OR \"physical world\")",
+        "angle": "Embodied and robotic agents",
+        "rationale": "Captures a distinct subspecialty where agents interact with the physical world, presenting unique architectural challenges."
+      },
+      {
+        "id": 14,
+        "query": "\"LLM agent\" AND (performance OR evaluation OR deployment)",
+        "angle": "Broad core-subject & outcomes",
+        "rationale": "A recall-safety query using the most common phrasing paired with generic outcome terms to catch papers missed by narrower queries."
+      },
+      {
+        "id": 15,
+        "query": "(\"LLM agent\" OR \"language model agent\" OR \"autonomous agent\") AND (application OR use case OR case study)",
+        "angle": "Applied case studies",
+        "rationale": "Another recall-safety query targeting papers that describe practical agent applications, which often use varied vocabulary."
+      }
+    ],
+    "coverage_notes": "The plan focuses on engineering-relevant angles: architectures, tool use, planning, memory, evaluation, deployment, and specific applications like coding. It includes two recall-safety queries (ids 14, 15) to ensure sufficient corpus size. Based on the profile's mild preference for engineering over theory, pure cognitive science or philosophical agent theory is excluded. The plan assumes the reader is interested in the full technical stack, from low-level reasoning techniques to high-level system design."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "(\"LLM agent\" OR \"language model agent\" OR \"autonomous agent\") AND (architecture OR framework OR system)",
+      "angle": "Core agent architectures & systems",
+      "rationale": "Catches papers proposing new agent system designs and architectural patterns, which is the reader's primary engineering focus.",
+      "openalex_count": 359,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 23.855898,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Agent Brain and Trust Architecture: Enabling Persistent, Token-Efficient, and Verifiable Autonomous Agents",
+          "relevance_score": 14.15457,
+          "id": "https://openalex.org/W7152120997"
+        },
+        {
+          "title": "Guided Behavioral Evolution for LLM Agents: A Three-Generation Framework for Behavioral Continuity",
+          "relevance_score": 13.237941,
+          "id": "https://openalex.org/W7151009104"
+        },
+        {
+          "title": "Skill Genome: Agent Genetics and Capability Inheritance in Persistent Autonomous Agent Systems",
+          "relevance_score": 12.149406,
+          "id": "https://openalex.org/W7151979280"
+        },
+        {
+          "title": "From Dialogue Systems to Autonomous Agents: A Modeling Framework for Ethical Generative AI in Healthcare",
+          "relevance_score": 11.302877,
+          "id": "https://openalex.org/W7152708725"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 2,
+      "query": "(\"LLM agent\" OR \"language model agent\") AND (tool OR \"function calling\" OR \"API calling\")",
+      "angle": "Tool use and external API integration",
+      "rationale": "Targets a key practical capability for building useful agents, focusing on how agents interact with external tools and APIs.",
+      "openalex_count": 126,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Your LLM Agent Can Leak Your Data: Data Exfiltration via Backdoored Tool Use",
+          "relevance_score": 14.999155,
+          "id": "https://openalex.org/W7152934316"
+        },
+        {
+          "title": "We Need Strong Preconditions For Using Simulations In Policy",
+          "relevance_score": 5.173753,
+          "id": "https://openalex.org/W7153671861"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "relevance_score": 5.0327573,
+          "id": "https://openalex.org/W7153480434"
+        },
+        {
+          "title": "FLARE: Agentic Coverage-Guided Fuzzing for LLM-Based Multi-Agent Systems",
+          "relevance_score": 4.9045615,
+          "id": "https://openalex.org/W7152933523"
+        },
+        {
+          "title": "Self-Evolving Context Layers: Implicit Learning from Agent Behavior in Code Knowledge Graphs",
+          "relevance_score": 4.6106033,
+          "id": "https://openalex.org/W7152006624"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 3,
+      "query": "(\"LLM agent\" OR \"autonomous agent\") AND (planning OR \"task decomposition\" OR \"hierarchical planning\")",
+      "angle": "Planning and task decomposition techniques",
+      "rationale": "Focuses on how agents break down and reason about complex tasks, a core research area with direct engineering implications.",
+      "openalex_count": 122,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Multi-Agent Collaborative Filtering: Orchestrating Users and Items for Agentic Recommendations",
+          "relevance_score": 6.7085695,
+          "id": "https://openalex.org/W7152489995"
+        },
+        {
+          "title": "Uncertainty-Guided Latent Diagnostic Trajectory Learning for Sequential Clinical Diagnosis",
+          "relevance_score": 5.57281,
+          "id": "https://openalex.org/W7152933739"
+        },
+        {
+          "title": "MIMIC-Py: An Extensible Tool for Personality-Driven Automated Game Testing with Large Language Models",
+          "relevance_score": 4.6074133,
+          "id": "https://openalex.org/W7153208616"
+        },
+        {
+          "title": "LLM-Based Multi-Agent Support for Strategic Business Planning",
+          "relevance_score": 3.7304087,
+          "id": "https://openalex.org/W7153339017"
+        },
+        {
+          "title": "SkillX: Automatically Constructing Skill Knowledge Bases for Agents",
+          "relevance_score": 3.584743,
+          "id": "https://openalex.org/W7152331204"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "NO",
+        "PARTIAL",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.5
+    },
+    {
+      "id": 4,
+      "query": "(\"LLM agent\" OR \"language model agent\") AND (memory OR \"long-term memory\" OR \"episodic memory\")",
+      "angle": "Agent memory mechanisms",
+      "rationale": "Captures research on how agents maintain, retrieve, and use context over time, a critical component for practical applications.",
+      "openalex_count": 91,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 21.79462,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Lightweight LLM Agent Memory with Small Language Models",
+          "relevance_score": 18.54676,
+          "id": "https://openalex.org/W7153671864"
+        },
+        {
+          "title": "Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering",
+          "relevance_score": 14.242565,
+          "id": "https://openalex.org/W7153671265"
+        },
+        {
+          "title": "Springdrift: An Auditable Persistent Runtime for LLM Agents with Case-Based Memory, Normative Safety, and Ambient Self-Perception",
+          "relevance_score": 12.390367,
+          "id": "https://openalex.org/W7151445429"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "relevance_score": 7.820261,
+          "id": "https://openalex.org/W7151519476"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "YES"
+      ],
+      "precision": 1.0
+    },
+    {
+      "id": 5,
+      "query": "(\"LLM agent\" OR \"autonomous agent\") AND (evaluation OR benchmark OR \"agent benchmark\")",
+      "angle": "Evaluation frameworks and benchmarks",
+      "rationale": "Targets papers on how to measure agent performance, which the reader needs to assess new techniques and architectures.",
+      "openalex_count": 255,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 20.347527,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents",
+          "relevance_score": 16.8922,
+          "id": "https://openalex.org/W7152934488"
+        },
+        {
+          "title": "MolClaw: An Autonomous Agent with Hierarchical Skills for Drug Molecule Evaluation, Screening, and Optimization",
+          "relevance_score": 12.652212,
+          "id": "https://openalex.org/W7150799157"
+        },
+        {
+          "title": "DataGov-Factory: An Empirical Evaluation of Managed vs. Custom LLM Agent Architectures for Financial Data Governance",
+          "relevance_score": 8.304592,
+          "id": "https://openalex.org/W7153460721"
+        },
+        {
+          "title": "Large Language Model\u2013Based Agents for Automated Research Reproducibility: An Exploratory Evaluation Study in Alzheimer\u2019s Disease (Preprint)",
+          "relevance_score": 6.132065,
+          "id": "https://openalex.org/W7152364812"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 6,
+      "query": "(\"LLM agent\" OR \"language model agent\") AND (multi-agent OR \"agent collaboration\" OR \"swarm\")",
+      "angle": "Multi-agent systems and collaboration",
+      "rationale": "Focuses on systems where multiple agents interact, a growing area with distinct architectural and coordination challenges.",
+      "openalex_count": 170,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 26.361027,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Convergent Multi-Paradigm Detection of LLM Agent Behavioral Failure Modes",
+          "relevance_score": 18.354383,
+          "id": "https://openalex.org/W7152210590"
+        },
+        {
+          "title": "LLM Agent-guided Stochastic Control of Multi-layer and Multi-track Laser Powder Bed Fusion Process",
+          "relevance_score": 16.711481,
+          "id": "https://openalex.org/W7151275071"
+        },
+        {
+          "title": "EMSDialog: Synthetic Multi-person Emergency Medical Service Dialogue Generation from Electronic Patient Care Reports via Multi-LLM Agents",
+          "relevance_score": 10.417475,
+          "id": "https://openalex.org/W7153296122"
+        },
+        {
+          "title": "SuperLocalMemory V3.3: The Living Brain \u2014 Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+          "relevance_score": 9.782988,
+          "id": "https://openalex.org/W7151068250"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "PARTIAL",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 7,
+      "query": "(\"LLM agent\" OR \"autonomous agent\") AND (reasoning OR \"chain of thought\" OR CoT OR \"self-reflection\")",
+      "angle": "Reasoning and reflection techniques",
+      "rationale": "Catches advances in agent reasoning processes like chain-of-thought and self-critique, which improve agent reliability.",
+      "openalex_count": 172,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "NatBDI: Combining BDI Reasoning and Natural Language Inference for Autonomous Agents",
+          "relevance_score": 16.386627,
+          "id": "https://openalex.org/W7153273052"
+        },
+        {
+          "title": "Verify Before You Commit: Towards Faithful Reasoning in LLM Agents via Self-Auditing",
+          "relevance_score": 15.278419,
+          "id": "https://openalex.org/W7153671878"
+        },
+        {
+          "title": "The Ballad of LLM Agents: Philosophical Reasoning for Chemistry",
+          "relevance_score": 14.1151495,
+          "id": "https://openalex.org/W7151916370"
+        },
+        {
+          "title": "Stop Fixating on Prompts: Reasoning Hijacking and Constraint Tightening for Red-Teaming LLM Agents",
+          "relevance_score": 11.300775,
+          "id": "https://openalex.org/W7152933533"
+        },
+        {
+          "title": "TOOLCAD: Exploring Tool-Using Large Language Models in Text-to-CAD Generation with Reinforcement Learning",
+          "relevance_score": 8.306479,
+          "id": "https://openalex.org/W7153330883"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "NO",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 8,
+      "query": "(\"LLM agent\" OR \"language model agent\") AND (deployment OR \"production\" OR scaling OR latency)",
+      "angle": "Deployment and operational concerns",
+      "rationale": "Targets the engineering-grounded work on making agents robust, scalable, and efficient in real-world settings.",
+      "openalex_count": 159,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 27.340961,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "A Scalable Framework for Street Interface Morphology Assessment via Automated Multimodal Large Language Model Agents",
+          "relevance_score": 9.135224,
+          "id": "https://openalex.org/W7151792935"
+        },
+        {
+          "title": "Title: Enhancing Diagnostic Accuracy and Explainability of Large Language Model Agents in Production Incident Triage through Retrieval-Augmented Generation",
+          "relevance_score": 8.196908,
+          "id": "https://openalex.org/W7153452482"
+        },
+        {
+          "title": "We Need Strong Preconditions For Using Simulations In Policy",
+          "relevance_score": 6.6909485,
+          "id": "https://openalex.org/W7153379016"
+        },
+        {
+          "title": "Your LLM Agent Can Leak Your Data: Data Exfiltration via Backdoored Tool Use",
+          "relevance_score": 6.1252747,
+          "id": "https://openalex.org/W7152934316"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "NO",
+        "YES",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.6
+    },
+    {
+      "id": 9,
+      "query": "(\"LLM agent\" OR \"autonomous agent\") AND (code OR programming OR \"software engineering\")",
+      "angle": "Agents for code and software tasks",
+      "rationale": "Focuses on a highly relevant application domain for a software engineer, where agents generate, debug, or manipulate code.",
+      "openalex_count": 189,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Program Analysis Guided LLM Agent for Proof-of-Concept Generation",
+          "relevance_score": 10.585917,
+          "id": "https://openalex.org/W7153670711"
+        },
+        {
+          "title": "Development of an Autonomous Agent for Iterative Code Generation and Automated Debugging",
+          "relevance_score": 10.580468,
+          "id": "https://openalex.org/W7153609558"
+        },
+        {
+          "title": "Large Language Model\u2013Based Agents for Automated Research Reproducibility: An Exploratory Evaluation Study in Alzheimer\u2019s Disease (Preprint)",
+          "relevance_score": 6.478589,
+          "id": "https://openalex.org/W7152364812"
+        },
+        {
+          "title": "FLARE: Agentic Coverage-Guided Fuzzing for LLM-Based Multi-Agent Systems",
+          "relevance_score": 5.284023,
+          "id": "https://openalex.org/W7152933523"
+        },
+        {
+          "title": "Hierarchical Reinforcement Learning with Augmented Step-Level Transitions for LLM Agents",
+          "relevance_score": 5.278793,
+          "id": "https://openalex.org/W7152933352"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 10,
+      "query": "(\"LLM agent\" OR \"language model agent\") AND (retrieval OR \"retrieval-augmented generation\" OR RAG)",
+      "angle": "Retrieval-augmented agents",
+      "rationale": "Captures the intersection of agents with RAG techniques, a common pattern for grounding agents in external knowledge.",
+      "openalex_count": 97,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 29.527533,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "Title: Enhancing Diagnostic Accuracy and Explainability of Large Language Model Agents in Production Incident Triage through Retrieval-Augmented Generation",
+          "relevance_score": 17.298798,
+          "id": "https://openalex.org/W7153452482"
+        },
+        {
+          "title": "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation",
+          "relevance_score": 15.656606,
+          "id": "https://openalex.org/W7150828341"
+        },
+        {
+          "title": "MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents",
+          "relevance_score": 10.163216,
+          "id": "https://openalex.org/W7151378852"
+        },
+        {
+          "title": "Learning to Edit Knowledge via Instruction-based Chain-of-Thought Prompting",
+          "relevance_score": 9.359025,
+          "id": "https://openalex.org/W7152933551"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "YES",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.9
+    },
+    {
+      "id": 11,
+      "query": "(\"LLM agent\" OR \"autonomous agent\") AND (reinforcement OR \"reinforcement learning\" OR RL OR \"RLHF\")",
+      "angle": "Reinforcement learning for agents",
+      "rationale": "Targets research on using RL to train or improve agents, a major technique for enhancing agent capabilities.",
+      "openalex_count": 109,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Hierarchical Reinforcement Learning with Augmented Step-Level Transitions for LLM Agents",
+          "relevance_score": 25.972363,
+          "id": "https://openalex.org/W7152933352"
+        },
+        {
+          "title": "From Prompting to Autonomous Intelligence: A White Paper on the Phases of AI Learning, Technologies, and Methodologies.",
+          "relevance_score": 10.009351,
+          "id": "https://openalex.org/W7153480635"
+        },
+        {
+          "title": "Beyond Observability: The Case for Belief State Forensics in Autonomous LLM Agents",
+          "relevance_score": 8.443939,
+          "id": "https://openalex.org/W7151486777"
+        },
+        {
+          "title": "AgentGL: Towards Agentic Graph Learning with LLMs via Reinforcement Learning",
+          "relevance_score": 8.2653885,
+          "id": "https://openalex.org/W7151868415"
+        },
+        {
+          "title": "Strategic Persuasion with Trait-Conditioned Multi-Agent Systems for Iterative Legal Argumentation",
+          "relevance_score": 7.8679237,
+          "id": "https://openalex.org/W7153670372"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "YES",
+        "PARTIAL"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 12,
+      "query": "(\"LLM agent\" OR \"language model agent\") AND (hallucination OR reliability OR safety OR robustness)",
+      "angle": "Failure modes and robustness",
+      "rationale": "Focuses on known problems like hallucination and safety, which the reader must understand to build reliable systems.",
+      "openalex_count": 118,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Springdrift: An Auditable Persistent Runtime for LLM Agents with Case-Based Memory, Normative Safety, and Ambient Self-Perception",
+          "relevance_score": 11.51522,
+          "id": "https://openalex.org/W7152331426"
+        },
+        {
+          "title": "AgentDR: Dynamic Recommendation with Implicit Item-Item Relations via LLM-based Agents",
+          "relevance_score": 4.8417077,
+          "id": "https://openalex.org/W4414977855"
+        },
+        {
+          "title": "Joint Knowledge Base Completion and Question Answering by Combining Large Language Models and Small Language Models",
+          "relevance_score": 4.786731,
+          "id": "https://openalex.org/W7152933391"
+        },
+        {
+          "title": "Social Dynamics as Critical Vulnerabilities that Undermine Objective Decision-Making in LLM Collectives",
+          "relevance_score": 4.6156526,
+          "id": "https://openalex.org/W7152934531"
+        },
+        {
+          "title": "AgentPRM: Process Reward Models for LLM Agents via Step-Wise Promise and Progress",
+          "relevance_score": 4.551605,
+          "id": "https://openalex.org/W4416190659"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "PARTIAL",
+        "YES",
+        "YES"
+      ],
+      "precision": 0.8
+    },
+    {
+      "id": 13,
+      "query": "(\"LLM agent\" OR \"autonomous agent\") AND (embodiment OR robot OR \"physical world\")",
+      "angle": "Embodied and robotic agents",
+      "rationale": "Captures a distinct subspecialty where agents interact with the physical world, presenting unique architectural challenges.",
+      "openalex_count": 50,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "CONVERGING Poster 1 | Discover the project",
+          "relevance_score": 4.936945,
+          "id": "https://openalex.org/W7151269835"
+        },
+        {
+          "title": "Rectified Schr\u00f6dinger Bridge Matching for Few-Step Visual Navigation",
+          "relevance_score": 3.1417646,
+          "id": "https://openalex.org/W7152934058"
+        },
+        {
+          "title": "Congestion-Aware Multi-Agent Path Planning for Smart Healthcare",
+          "relevance_score": 3.1401496,
+          "id": "https://openalex.org/W7152576302"
+        },
+        {
+          "title": "CritBench: A Framework for Evaluating Cybersecurity Capabilities of Large Language Models in IEC 61850 Digital Substation Environments",
+          "relevance_score": 0.62639356,
+          "id": "https://openalex.org/W7152933852"
+        },
+        {
+          "title": "Beyond Tools and Persons: Who Are They? Classifying Robots and AI Agents for Proportional Governance",
+          "relevance_score": 0.6118606,
+          "id": "https://openalex.org/W7152933782"
+        }
+      ],
+      "hit_labels": [
+        "NO",
+        "NO",
+        "NO",
+        "NO",
+        "NO"
+      ],
+      "precision": 0.0
+    },
+    {
+      "id": 14,
+      "query": "\"LLM agent\" AND (performance OR evaluation OR deployment)",
+      "angle": "Broad core-subject & outcomes",
+      "rationale": "A recall-safety query using the most common phrasing paired with generic outcome terms to catch papers missed by narrower queries.",
+      "openalex_count": 168,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "From Static Scores to Cognitive Retrieval: A Comparative Evaluation of Memory Prioritization Algorithms for LLM Multi-Agent Systems",
+          "relevance_score": 27.534101,
+          "id": "https://openalex.org/W7150166984"
+        },
+        {
+          "title": "DataGov-Factory: An Empirical Evaluation of Managed vs. Custom LLM Agent Architectures for Financial Data Governance",
+          "relevance_score": 8.285251,
+          "id": "https://openalex.org/W7153460721"
+        },
+        {
+          "title": "Your LLM Agent Can Leak Your Data: Data Exfiltration via Backdoored Tool Use",
+          "relevance_score": 6.121593,
+          "id": "https://openalex.org/W7152934316"
+        },
+        {
+          "title": "We Need Strong Preconditions For Using Simulations In Policy",
+          "relevance_score": 5.5923233,
+          "id": "https://openalex.org/W7153671861"
+        },
+        {
+          "title": "ClawsBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces",
+          "relevance_score": 5.1146846,
+          "id": "https://openalex.org/W7151854062"
+        }
+      ],
+      "hit_labels": [
+        "YES",
+        "PARTIAL",
+        "YES",
+        "NO",
+        "YES"
+      ],
+      "precision": 0.7
+    },
+    {
+      "id": 15,
+      "query": "(\"LLM agent\" OR \"language model agent\" OR \"autonomous agent\") AND (application OR use case OR case study)",
+      "angle": "Applied case studies",
+      "rationale": "Another recall-safety query targeting papers that describe practical agent applications, which often use varied vocabulary.",
+      "openalex_count": 193,
+      "breadth_band": "healthy",
+      "hits": [
+        {
+          "title": "Large Language Model\u2013Based Agents for Automated Research Reproducibility: An Exploratory Evaluation Study in Alzheimer\u2019s Disease (Preprint)",
+          "relevance_score": 6.526973,
+          "id": "https://openalex.org/W7152364812"
+        },
+        {
+          "title": "Springdrift: An Auditable Persistent Runtime for LLM Agents with Case-Based Memory, Normative Safety, and Ambient Self-Perception",
+          "relevance_score": 5.918002,
+          "id": "https://openalex.org/W7152331426"
+        },
+        {
+          "title": "Uncertainty-Guided Latent Diagnostic Trajectory Learning for Sequential Clinical Diagnosis",
+          "relevance_score": 4.689501,
+          "id": "https://openalex.org/W7152933739"
+        },
+        {
+          "title": "Unified System State: Diagnostic Metrics for System Health",
+          "relevance_score": 4.257818,
+          "id": "https://openalex.org/W7151817339"
+        },
+        {
+          "title": "From Prompting to Autonomous Intelligence: A White Paper on the Phases of AI Learning, Technologies, and Methodologies.",
+          "relevance_score": 4.043979,
+          "id": "https://openalex.org/W7153176635"
+        }
+      ],
+      "hit_labels": [
+        "PARTIAL",
+        "YES",
+        "NO",
+        "NO",
+        "PARTIAL"
+      ],
+      "precision": 0.4
+    }
+  ]
+}

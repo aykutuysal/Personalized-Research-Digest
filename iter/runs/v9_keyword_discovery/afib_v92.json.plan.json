@@ -1,0 +1,113 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "catheter ablation techniques and outcomes",
+      "query": "catheter ablation outcomes",
+      "rationale": "Serves angle 2 (catheter ablation techniques and outcomes) with high-frequency terms ('catheter ablation' 119x, 'ablation' 115x). Focuses on clinical outcomes relevant to an electrophysiologist's practice.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "anticoagulation choices (DOACs, warfarin, bleeding risk)",
+      "query": "DOAC anticoagulation bleeding risk",
+      "rationale": "Covers angle 3 (anticoagulation choices) using specific vocabulary ('DOAC' from seed queries, 'anticoagulant' 36x, 'bleeding risk' from user profile). Addresses the user's interest in DOAC choices and bleeding complications.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "rate vs rhythm control comparisons",
+      "query": "rate rhythm control trials",
+      "rationale": "Directly serves angle 4 (rate vs rhythm control comparisons) with terms from vocabulary ('rhythm' 74x, 'rate' implied) and seed queries ('rate rhythm' 1615 results). Targets the user's interest in clinical debates and trial evidence.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "left atrial appendage closure / occlusion",
+      "query": "left atrial appendage occlusion",
+      "rationale": "Addresses angle 5 (left atrial appendage closure/occlusion) using high-frequency vocabulary ('left atrial appendage occlusion' 30x, 'appendage' 55x). Directly relevant to the user's stroke prevention focus.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "stroke prevention strategies",
+      "query": "stroke prevention anticoagulation",
+      "rationale": "Serves angle 6 (stroke prevention strategies) by intersecting with anticoagulation (angle 3). Uses vocabulary from seed queries ('AFib stroke prevention') and extracted terms ('anticoagulant' 36x). Targets the user's clinical focus on stroke prevention.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 6,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "randomized clinical trials and guideline updates",
+      "query": "randomized controlled trial atrial fibrillation",
+      "rationale": "Directly covers angle 7 (randomized clinical trials) with high-frequency terms ('randomized controlled trial' 108x, 'atrial fibrillation' 311x). Meets the user's need for trial results and guideline updates.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "catheter ablation techniques and outcomes",
+      "query": "pulsed field ablation atrial fibrillation",
+      "rationale": "Serves angle 2 (catheter ablation techniques) with specific emerging technique from sample titles ('pulsed field ablation'). Targets the user's interest in new ablation technologies and outcomes.",
+      "dimension": "core"
+    },
+    {
+      "id": 8,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "catheter ablation techniques and outcomes",
+      "query": "heart failure atrial fibrillation ablation",
+      "rationale": "Serves angle 2 (catheter ablation outcomes) by incorporating adjacent topic 'heart failure' (47x in vocabulary). Relevant to the user's clinical population with comorbidities, based on sample titles mentioning HFpEF/HFrEF.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 9,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "randomized clinical trials and guideline updates",
+      "query": "guidelines atrial fibrillation management",
+      "rationale": "Addresses angle 7 (guideline updates) using vocabulary from user profile and extracted topics ('Atrial Fibrillation Management and Outcomes' 285x). Directly meets the user's need for current clinical guidance.",
+      "dimension": "core"
+    },
+    {
+      "id": 10,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "rhythm control and antiarrhythmic drugs",
+      "query": "rhythm control atrial fibrillation antiarrhythmic drugs",
+      "rationale": "Replaced 'rhythm control' with 'rhythm' and added 'atrial fibrillation' from keywords to broaden the search while maintaining focus on antiarrhythmic drugs for AFib management.",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "AFib screening, detection, monitoring (wearables, ECG)",
+      "query": "atrial fibrillation screening ECG monitoring",
+      "rationale": "Replaced 'AFib' with full term 'atrial fibrillation' from keywords and kept 'ECG monitoring' which appears in topics, ensuring the query aligns with vocabulary.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "anticoagulation choices (DOACs, warfarin, bleeding risk)",
+      "query": "anticoagulant therapy catheter ablation atrial fibrillation",
+      "rationale": "Replaced 'antithrombotic' with 'anticoagulant' from keywords and added 'atrial fibrillation' to create a specific intersection between anticoagulation and ablation procedures.",
+      "dimension": "intersection"
+    }
+  ]
+}

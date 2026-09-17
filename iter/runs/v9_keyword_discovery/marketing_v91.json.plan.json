@@ -1,0 +1,122 @@
+{
+  "subject": "Marketing science",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "discounts and promotions and their effect on brand",
+      "query": "promotions consumer choice",
+      "rationale": "Covers promotions aspect with extracted keyword 'consumer choice'. Examines how promotional tactics influence purchasing decisions and brand evaluation.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "ad creative effectiveness and persuasion",
+      "query": "persuasion consumer behaviour",
+      "rationale": "Addresses persuasion in ad creative with extracted keyword 'consumer behaviour'. Examines psychological mechanisms behind effective ad persuasion.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "product naming, branding, packaging",
+      "query": "packaging consumer choice",
+      "rationale": "Addresses packaging aspect of branding with extracted keyword 'consumer choice'. Examines how packaging design influences purchasing decisions.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "scarcity, urgency, social proof cues",
+      "query": "social proof consumer behaviour",
+      "rationale": "Addresses social proof cues using extracted keyword 'consumer behaviour'. Examines how social influence cues impact purchasing decisions.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "consumer psychology / behavioral findings on purchasing",
+      "query": "behavioral economics purchasing",
+      "rationale": "Addresses consumer psychology/behavioral findings angle using extracted keyword 'behavioral economics' and 'purchasing'. Targets user's interest in nudges that move conversion.",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "query": "pricing strategies consumer behaviour perception",
+      "rationale": "Replaced 'charm pricing' with broader 'pricing strategies' and added 'perception' from vocabulary to capture psychological pricing effects on consumer behavior.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "pricing strategy (charm pricing, price endings, perceived value)",
+      "query": "price endings consumer behaviour",
+      "rationale": "Simplified to 'price endings' and combined with high-frequency 'consumer behaviour' from vocabulary instead of less common 'perception'.",
+      "dimension": "core"
+    },
+    {
+      "id": 8,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "discounts and promotions and their effect on brand",
+      "query": "discounts brand perception consumer behaviour",
+      "rationale": "Added 'consumer behaviour' from vocabulary to broaden the low-result query while maintaining focus on discounts and brand perception.",
+      "dimension": "core"
+    },
+    {
+      "id": 9,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "ad creative effectiveness and persuasion",
+      "query": "advertising creative consumer purchasing behaviour",
+      "rationale": "Replaced 'ad creative' with 'advertising creative' and added 'consumer purchasing behaviour' from vocabulary to capture ad impact on buying decisions.",
+      "dimension": "core"
+    },
+    {
+      "id": 10,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "product naming, branding, packaging",
+      "query": "product naming consumer perception behaviour",
+      "rationale": "Added 'behaviour' to broaden the low-result query while maintaining focus on product naming and consumer perception.",
+      "dimension": "core"
+    },
+    {
+      "id": 11,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "scarcity, urgency, social proof cues",
+      "query": "scarcity consumer purchasing behaviour",
+      "rationale": "Added 'consumer purchasing behaviour' from vocabulary to broaden the low-result query while maintaining scarcity focus.",
+      "dimension": "core"
+    },
+    {
+      "id": 12,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "landing page or checkout conversion optimization",
+      "query": "checkout conversion consumer purchasing behaviour",
+      "rationale": "Replaced 'consumer' alone with 'consumer purchasing behaviour' from vocabulary to better capture checkout conversion research.",
+      "dimension": "core"
+    },
+    {
+      "id": 13,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "loyalty, retention, repeat purchase behavior",
+      "query": "loyalty programs repeat purchase consumer behaviour",
+      "rationale": "Replaced 'retention behavior' with 'consumer behaviour' from vocabulary and specified 'loyalty programs' to capture repeat purchase mechanisms.",
+      "dimension": "core"
+    }
+  ]
+}

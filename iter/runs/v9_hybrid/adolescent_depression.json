@@ -1,0 +1,697 @@
+{
+  "subject": "Adolescent depression",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "google/gemini-3.1-pro-preview",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "adolescent depression CBT",
+      "teen suicide screening",
+      "social media mental health",
+      "school based prevention depression",
+      "SSRI adolescent safety"
+    ],
+    "raw_results": [
+      {
+        "seed": "adolescent depression CBT",
+        "count": 64
+      },
+      {
+        "seed": "teen suicide screening",
+        "count": 2
+      },
+      {
+        "seed": "social media mental health",
+        "count": 2452
+      },
+      {
+        "seed": "school based prevention depression",
+        "count": 119
+      },
+      {
+        "seed": "SSRI adolescent safety",
+        "count": 8
+      }
+    ],
+    "cost": 0.00014646,
+    "latency_s": 3.6
+  },
+  "vocabulary": {
+    "total_papers": 160,
+    "topics": [
+      [
+        "Impact of Technology on Adolescents",
+        37
+      ],
+      [
+        "Child and Adolescent Psychosocial and Emotional Development",
+        20
+      ],
+      [
+        "Mental Health via Writing",
+        13
+      ],
+      [
+        "Digital Mental Health Interventions",
+        12
+      ],
+      [
+        "Suicide and Self-Harm Studies",
+        10
+      ],
+      [
+        "Student Stress and Coping",
+        4
+      ],
+      [
+        "LGBTQ Health, Identity, and Policy",
+        4
+      ],
+      [
+        "Bullying, Victimization, and Aggression",
+        4
+      ],
+      [
+        "Mindfulness and Compassion Interventions",
+        4
+      ],
+      [
+        "Sleep and related disorders",
+        3
+      ],
+      [
+        "Youth Substance Use and School Attendance",
+        2
+      ],
+      [
+        "Posttraumatic Stress Disorder Research",
+        2
+      ],
+      [
+        "Attention Deficit Hyperactivity Disorder",
+        2
+      ],
+      [
+        "Jewish Identity and Society",
+        2
+      ],
+      [
+        "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
+        2
+      ]
+    ],
+    "subfields": [
+      [
+        "Clinical Psychology",
+        45
+      ],
+      [
+        "Sociology and Political Science",
+        38
+      ],
+      [
+        "Social Psychology",
+        23
+      ],
+      [
+        "Applied Psychology",
+        12
+      ],
+      [
+        "Experimental and Cognitive Psychology",
+        6
+      ],
+      [
+        "Education",
+        4
+      ],
+      [
+        "Psychiatry and Mental health",
+        4
+      ],
+      [
+        "Developmental and Educational Psychology",
+        4
+      ],
+      [
+        "Pharmacology",
+        3
+      ],
+      [
+        "Demography",
+        2
+      ]
+    ],
+    "fields": [
+      [
+        "Psychology",
+        90
+      ],
+      [
+        "Social Sciences",
+        46
+      ],
+      [
+        "Medicine",
+        11
+      ],
+      [
+        "Health Professions",
+        4
+      ],
+      [
+        "Biochemistry, Genetics and Molecular Biology",
+        2
+      ]
+    ],
+    "keywords": [
+      [
+        "Mental health",
+        100
+      ],
+      [
+        "Psychological intervention",
+        57
+      ],
+      [
+        "Social media",
+        49
+      ],
+      [
+        "Anxiety",
+        42
+      ],
+      [
+        "Cognitive behavioral therapy",
+        21
+      ],
+      [
+        "Suicide prevention",
+        19
+      ],
+      [
+        "Cognition",
+        18
+      ],
+      [
+        "Poison control",
+        18
+      ],
+      [
+        "Randomized controlled trial",
+        17
+      ],
+      [
+        "Psychosocial",
+        15
+      ],
+      [
+        "Social support",
+        13
+      ],
+      [
+        "Digital media",
+        13
+      ],
+      [
+        "MEDLINE",
+        11
+      ],
+      [
+        "Social anxiety",
+        11
+      ],
+      [
+        "Addiction",
+        11
+      ],
+      [
+        "The Internet",
+        11
+      ],
+      [
+        "Cognitive therapy",
+        10
+      ],
+      [
+        "Public health",
+        10
+      ],
+      [
+        "Distress",
+        10
+      ],
+      [
+        "Major depressive disorder",
+        9
+      ],
+      [
+        "Interpersonal communication",
+        9
+      ],
+      [
+        "Suicidal ideation",
+        8
+      ],
+      [
+        "Mood",
+        7
+      ],
+      [
+        "Injury prevention",
+        7
+      ],
+      [
+        "Population",
+        6
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        18
+      ],
+      [
+        "BMC Psychiatry",
+        3
+      ],
+      [
+        "Healthcare",
+        3
+      ],
+      [
+        "Journal of Child & Adolescent Trauma",
+        2
+      ],
+      [
+        "Lecture Notes in Education Psychology and Public Media",
+        2
+      ],
+      [
+        "Cureus",
+        2
+      ],
+      [
+        "Current Psychology",
+        2
+      ],
+      [
+        "The Canadian Journal of Psychiatry",
+        2
+      ],
+      [
+        "Lecture notes in networks and systems",
+        2
+      ],
+      [
+        "International Journal For Multidisciplinary Research",
+        2
+      ]
+    ],
+    "sample_titles": [
+      "Integrating Design Thinking and CBT for Mobile Telemedicine Depression Recovery Therapy for Adolescents and Women",
+      "Effectiveness of School-Based Cognitive Behavioural Therapy (CBT) in Reducing Adolescent Depression and Anxiety: A Systematic Review",
+      "Using web-based CBT-I to improve sleep to prevent depression and anxiety in adolescents at high risk: a randomized controlled trial protocol",
+      "Evaluation and treatment of sleep disorders in adolescents with depression; a scoping review",
+      "Early Intervention and Disorder-specific Group Cognitive Behavioral Therapy for Socially Anxious Adolescents",
+      "Virtual reality therapy for adolescent depression: a prospective observational study",
+      "Speech-Based Depression Recognition in Hikikomori Patients Undergoing Cognitive Behavioral Therapy",
+      "Beyond the Pain: A Critical Examination of the Psychopathological and Neuropsychological Dimensions of Primary Headaches in Pediatric Populations",
+      "Healing the Invisible Wounds: A Narrative Review of Trauma-Focused Interventions for War-Affected Children and Adolescents",
+      "The Efficacy of Transdiagnostic Cognitive Behavioral Therapy Compared to a Waitlist Control for Emotional Disorders in Adolescents: A Meta-Analysis of Randomized Controlled Trials",
+      "Gender Differences in Cognitive Behavioral Therapy Outcomes for Adolescents With ADHD: Examining the Impact of Internalizing Symptoms",
+      "How do talking therapy or counselling assist with issues related to parenting style impacting adolescents suffering from anxiety, low mood, and depression?",
+      "How do talking therapy or counselling assist with issues related to parenting style impacting adolescents suffering from anxiety, low mood, and depression?",
+      "Studi Kasus: Gangguan Afektif Bipolar Kini Depresi Disertai Anxietas Pada Anak Dengan Komorbiditas Ibu Gangguan Afektif",
+      "Development and Effectiveness of Humanities-Based Cognitive Behavior Therapy for Adolescents With Problematic Gaming Behavior"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "digital mental health intervention adolescent",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Captures the user's interest in app-based/telehealth treatments using the exact extracted topic 'Digital Mental Health Interventions' (12x)."
+      },
+      {
+        "query": "school based psychological intervention adolescent",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Targets the user's interest in school-based prevention. Combines 'school based' from titles with the highly frequent keyword 'Psychological intervention' (57x)."
+      },
+      {
+        "query": "sleep disorders adolescent depression cbt",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Combines CBT interventions with 'Sleep and related disorders' (extracted topic) which frequently co-occurs with adolescent depression in the sample titles."
+      },
+      {
+        "query": "trauma focused intervention adolescent depression",
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "rationale": "Draws from the extracted 'Trauma-Focused Interventions' title vocabulary. While PTSD wasn't explicitly requested, trauma is highly adjacent to adolescent depression and offers applicable clinical insights."
+      },
+      {
+        "query": "cognitive behavioral therapy adolescent depression",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'adolescent cognitive behavioral therapy depression' by removing the restrictive ordering and using terms from vocabulary (Cognitive behavioral therapy, adolescent, depression)."
+      },
+      {
+        "query": "suicide prevention adolescent screening",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'adolescent suicide prevention screening' by reordering to use vocabulary terms (suicide prevention, adolescent, screening) and removing restrictive phrasing."
+      },
+      {
+        "query": "major depressive disorder adolescent antidepressant",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'ssri' with broader term 'antidepressant' from pharmacology subfield to capture more results while maintaining focus on medication treatment."
+      },
+      {
+        "query": "social media adolescent depression",
+        "dimension": "intersection",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'major depressive disorder' with broader 'depression' from keywords and simplified to focus on social media impact on adolescent depression."
+      },
+      {
+        "query": "cognitive behavioral therapy adolescent",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Removed 'transdiagnostic' which was too specific and used vocabulary terms (cognitive behavioral therapy, adolescent) to broaden search."
+      },
+      {
+        "query": "parenting adolescent depression anxiety",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'parenting style' with broader 'parenting' and used vocabulary terms (adolescent, depression, anxiety) to capture more results."
+      },
+      {
+        "query": "bullying adolescent psychological intervention",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'victimization' with broader 'bullying' from topics and used vocabulary terms (adolescent, psychological intervention)."
+      },
+      {
+        "query": "lgbtq adolescent suicide intervention",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'suicidal ideation' with broader 'suicide' from topics and used vocabulary terms (lgbtq, adolescent, intervention)."
+      },
+      {
+        "query": "virtual reality adolescent depression",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'virtual reality therapy' with 'virtual reality' to broaden search while maintaining focus on adolescent depression applications."
+      },
+      {
+        "query": "mindfulness adolescent distress",
+        "dimension": "serendipity",
+        "priority": "rotate_biweekly",
+        "rationale": "Removed 'compassion intervention' which was too specific and used vocabulary terms (mindfulness, adolescent, distress) to capture broader mindfulness interventions."
+      }
+    ],
+    "cost": 0.044574,
+    "latency_s": 28.2
+  },
+  "validation": [
+    {
+      "query": "digital mental health intervention adolescent",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 12,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "school based psychological intervention adolescent",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 8,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "sleep disorders adolescent depression cbt",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "trauma focused intervention adolescent depression",
+      "dimension": "adjacent",
+      "priority": "rotate_biweekly",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "cognitive behavioral therapy adolescent depression",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "suicide prevention adolescent screening",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "major depressive disorder adolescent antidepressant",
+      "dimension": "core",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "social media adolescent depression",
+      "dimension": "intersection",
+      "priority": "every_cycle",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "cognitive behavioral therapy adolescent",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 6,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "parenting adolescent depression anxiety",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 15,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "bullying adolescent psychological intervention",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "lgbtq adolescent suicide intervention",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "virtual reality adolescent depression",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "mindfulness adolescent distress",
+      "dimension": "serendipity",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "adolescent cognitive behavioral therapy depression",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "adolescent suicide prevention screening",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "major depressive disorder adolescent ssri",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "social media adolescent major depressive disorder",
+        "dimension": "intersection",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "transdiagnostic cognitive behavioral therapy adolescent",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "parenting style adolescent depression anxiety",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "bullying victimization adolescent psychological intervention",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "lgbtq adolescent suicidal ideation intervention",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "virtual reality therapy adolescent depression",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "mindfulness compassion intervention adolescent distress",
+        "dimension": "serendipity",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "cognitive behavioral therapy adolescent depression",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'adolescent cognitive behavioral therapy depression' by removing the restrictive ordering and using terms from vocabulary (Cognitive behavioral therapy, adolescent, depression)."
+      },
+      {
+        "query": "suicide prevention adolescent screening",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'adolescent suicide prevention screening' by reordering to use vocabulary terms (suicide prevention, adolescent, screening) and removing restrictive phrasing."
+      },
+      {
+        "query": "major depressive disorder adolescent antidepressant",
+        "dimension": "core",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'ssri' with broader term 'antidepressant' from pharmacology subfield to capture more results while maintaining focus on medication treatment."
+      },
+      {
+        "query": "social media adolescent depression",
+        "dimension": "intersection",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'major depressive disorder' with broader 'depression' from keywords and simplified to focus on social media impact on adolescent depression."
+      },
+      {
+        "query": "cognitive behavioral therapy adolescent",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Removed 'transdiagnostic' which was too specific and used vocabulary terms (cognitive behavioral therapy, adolescent) to broaden search."
+      },
+      {
+        "query": "parenting adolescent depression anxiety",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'parenting style' with broader 'parenting' and used vocabulary terms (adolescent, depression, anxiety) to capture more results."
+      },
+      {
+        "query": "bullying adolescent psychological intervention",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'victimization' with broader 'bullying' from topics and used vocabulary terms (adolescent, psychological intervention)."
+      },
+      {
+        "query": "lgbtq adolescent suicide intervention",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'suicidal ideation' with broader 'suicide' from topics and used vocabulary terms (lgbtq, adolescent, intervention)."
+      },
+      {
+        "query": "virtual reality adolescent depression",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'virtual reality therapy' with 'virtual reality' to broaden search while maintaining focus on adolescent depression applications."
+      },
+      {
+        "query": "mindfulness adolescent distress",
+        "dimension": "serendipity",
+        "priority": "rotate_biweekly",
+        "rationale": "Removed 'compassion intervention' which was too specific and used vocabulary terms (mindfulness, adolescent, distress) to capture broader mindfulness interventions."
+      }
+    ],
+    "cost": 0.00049958,
+    "latency_s": 31.4
+  },
+  "costs": {
+    "seed_usd": 0.00014646,
+    "library_usd": 0.044574,
+    "reformulate_usd": 0.00049958,
+    "total_usd": 0.04522
+  },
+  "total_latency_s": 106.3
+}

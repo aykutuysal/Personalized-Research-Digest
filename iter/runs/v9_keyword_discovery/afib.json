@@ -1,0 +1,692 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "model": "deepseek/deepseek-v3.2",
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "atrial fibrillation ablation",
+      "DOAC anticoagulation atrial fibrillation",
+      "rate rhythm control trials",
+      "left atrial appendage closure",
+      "AFib stroke prevention"
+    ],
+    "raw_results": [
+      {
+        "seed": "atrial fibrillation ablation",
+        "count": 1435
+      },
+      {
+        "seed": "DOAC anticoagulation atrial fibrillation",
+        "count": 129
+      },
+      {
+        "seed": "rate rhythm control trials",
+        "count": 106
+      },
+      {
+        "seed": "left atrial appendage closure",
+        "count": 207
+      },
+      {
+        "seed": "AFib stroke prevention",
+        "count": 7
+      }
+    ],
+    "cost": 0.00013024,
+    "latency_s": 3.4
+  },
+  "vocabulary": {
+    "total_papers": 207,
+    "topics": [
+      [
+        "Atrial Fibrillation Management and Outcomes",
+        167
+      ],
+      [
+        "Acute Ischemic Stroke Management",
+        4
+      ],
+      [
+        "Cardiac Arrest and Resuscitation",
+        3
+      ],
+      [
+        "Liver Disease and Transplantation",
+        2
+      ],
+      [
+        "Frailty in Older Adults",
+        2
+      ],
+      [
+        "Cardiac Ischemia and Reperfusion",
+        2
+      ],
+      [
+        "Inflammatory Biomarkers in Disease Prognosis",
+        1
+      ],
+      [
+        "Obstructive Sleep Apnea Research",
+        1
+      ],
+      [
+        "Heparin-Induced Thrombocytopenia and Thrombosis",
+        1
+      ],
+      [
+        "Alcohol Consumption and Health Effects",
+        1
+      ],
+      [
+        "Cerebrovascular and Carotid Artery Diseases",
+        1
+      ],
+      [
+        "Intracerebral and Subarachnoid Hemorrhage Research",
+        1
+      ],
+      [
+        "Circadian rhythm and melatonin",
+        1
+      ],
+      [
+        "Methane Hydrates and Related Phenomena",
+        1
+      ],
+      [
+        "Visual perception and processing mechanisms",
+        1
+      ]
+    ],
+    "subfields": [
+      [
+        "Cardiology and Cardiovascular Medicine",
+        170
+      ],
+      [
+        "Epidemiology",
+        5
+      ],
+      [
+        "Pathology and Forensic Medicine",
+        3
+      ],
+      [
+        "Emergency Medicine",
+        3
+      ],
+      [
+        "Oncology",
+        2
+      ],
+      [
+        "Physiology",
+        2
+      ],
+      [
+        "Hepatology",
+        2
+      ],
+      [
+        "Cognitive Neuroscience",
+        2
+      ],
+      [
+        "Geriatrics and Gerontology",
+        2
+      ],
+      [
+        "Biomedical Engineering",
+        2
+      ]
+    ],
+    "fields": [
+      [
+        "Medicine",
+        197
+      ],
+      [
+        "Neuroscience",
+        3
+      ],
+      [
+        "Engineering",
+        2
+      ],
+      [
+        "Biochemistry, Genetics and Molecular Biology",
+        2
+      ],
+      [
+        "Environmental Science",
+        1
+      ]
+    ],
+    "keywords": [
+      [
+        "Atrial fibrillation",
+        173
+      ],
+      [
+        "Ablation",
+        56
+      ],
+      [
+        "Catheter ablation",
+        54
+      ],
+      [
+        "Randomized controlled trial",
+        46
+      ],
+      [
+        "Appendage",
+        36
+      ],
+      [
+        "Atrial Appendage",
+        30
+      ],
+      [
+        "Heart failure",
+        22
+      ],
+      [
+        "Ablation of atrial fibrillation",
+        21
+      ],
+      [
+        "Warfarin",
+        19
+      ],
+      [
+        "Percutaneous",
+        18
+      ],
+      [
+        "Sinus rhythm",
+        16
+      ],
+      [
+        "Left atrial appendage occlusion",
+        15
+      ],
+      [
+        "Clinical trial",
+        14
+      ],
+      [
+        "Heart Rhythm",
+        13
+      ],
+      [
+        "Rivaroxaban",
+        13
+      ],
+      [
+        "Thrombus",
+        12
+      ],
+      [
+        "Pulmonary vein",
+        11
+      ],
+      [
+        "Management of atrial fibrillation",
+        11
+      ],
+      [
+        "MEDLINE",
+        11
+      ],
+      [
+        "Major bleeding",
+        11
+      ],
+      [
+        "Observational study",
+        11
+      ],
+      [
+        "Cardiac arrhythmia",
+        10
+      ],
+      [
+        "Complication",
+        10
+      ],
+      [
+        "Adverse effect",
+        10
+      ],
+      [
+        "Radiofrequency ablation",
+        9
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        16
+      ],
+      [
+        "Circulation",
+        13
+      ],
+      [
+        "European Heart Journal",
+        11
+      ],
+      [
+        "Heart Rhythm",
+        7
+      ],
+      [
+        "Journal of Clinical Medicine",
+        6
+      ],
+      [
+        "Stroke",
+        6
+      ],
+      [
+        "EP Europace",
+        5
+      ],
+      [
+        "New England Journal of Medicine",
+        5
+      ],
+      [
+        "JACC. Clinical electrophysiology",
+        4
+      ],
+      [
+        "JACC Asia",
+        4
+      ]
+    ],
+    "sample_titles": [
+      "Pulsed field ablation for atrial fibrillation ablation: a European Heart Rhythm Association survey",
+      "Nightmare after atrial fibrillation ablation",
+      "Controversy: pulsed field ablation is the standard technique for all the candidates for atrial fibrillation ablation",
+      "Impact of Timing of Atrial Fibrillation Ablation on AF Recurrence and Clinical Outcomes in Patients With HFpEF and HFrEF",
+      "Hybrid Atrial Fibrillation Ablation: A Decade-Long Single-Center Experience",
+      "Safety and efficacy of intracardiac echocardiography in atrial fibrillation ablation: a meta-analysis",
+      "Evaluating catheter usage for atrial fibrillation ablation: improving rates of efficacy and safety",
+      "Antithrombotic Therapy after Successful Catheter Ablation for Atrial Fibrillation",
+      "Efficacy and safety of operator-directed, nurse-administered propofol sedation in atrial fibrillation ablation",
+      "Role of Non\u2013Pulmonary Vein Triggers in Outcomes of First-Time Atrial Fibrillation Ablation",
+      "Hemodynamic Echocardiographic Parameters in the Early Post-Atrial Fibrillation Ablation Period as Predictors of Recurrence",
+      "Explainable machine learning for risk prediction of acute cardiac tamponade during atrial fibrillation ablation",
+      "The Clinical Utility of <scp>3D</scp> Electroanatomical Mapping for Atrial Fibrillation Ablation by Pulsed Field Ablation",
+      "Optimising the atrial fibrillation ablation pathway using vascular closure devices: effects on length of stay, procedure time and outcomes",
+      "Ultrasound-Based Renal Sympathetic Denervation as Adjunctive Upstream Therapy During Atrial Fibrillation Ablation"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "catheter ablation heart failure outcomes",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Connects ablation techniques with important comorbidity. 'Heart failure' appears 22x in keywords, and user cares about clinical outcomes."
+      },
+      {
+        "query": "atrial fibrillation ablation recurrence predictors",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Addresses practical clinical concern about ablation success. 'Recurrence' appears in sample titles, 'predictors' inferred from user's outcome focus."
+      },
+      {
+        "query": "heart failure preserved ejection fraction ablation",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Targets specific patient subgroup mentioned in sample titles (HFpEF). Combines comorbidity management with ablation outcomes."
+      },
+      {
+        "query": "intracardiac echocardiography ablation safety",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Draws from biomedical engineering/imaging techniques that improve ablation procedures. 'Intracardiac echocardiography' appears in sample titles."
+      },
+      {
+        "query": "obstructive sleep apnea atrial fibrillation",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Connects common comorbidity with AFib management. 'Obstructive Sleep Apnea Research' appears 1x in topics, clinically relevant association."
+      },
+      {
+        "query": "machine learning risk prediction ablation",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Leverages emerging computational methods for clinical risk assessment. 'Explainable machine learning' appears in sample titles for tamponade prediction."
+      },
+      {
+        "query": "wearable monitoring atrial fibrillation detection",
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "rationale": "Addresses user's interest in AFib screening/detection. Draws from 'wearables' in confirmed angles and detection/monitoring focus."
+      },
+      {
+        "query": "inflammatory biomarkers atrial fibrillation prognosis",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Uses 'Inflammatory Biomarkers in Disease Prognosis' from topics (1x). Could yield insights on AFib progression or treatment response."
+      },
+      {
+        "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'pulsed field ablation atrial fibrillation' (4 results) with broader 'pulsed field ablation atrial fibrillation randomized controlled trial' to capture more relevant studies while maintaining specificity with trial evidence."
+      },
+      {
+        "query": "left atrial appendage occlusion stroke prevention",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'left atrial appendage occlusion stroke' (1 result) with 'left atrial appendage occlusion stroke prevention' to broaden scope while maintaining focus on preventive applications."
+      },
+      {
+        "query": "DOAC bleeding risk atrial fibrillation",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'DOAC anticoagulation bleeding risk' (4 results) with 'DOAC bleeding risk atrial fibrillation' to use more common terminology and add disease context for better recall."
+      },
+      {
+        "query": "rate control rhythm control atrial fibrillation trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'rate rhythm control randomized trial' (4 results) with 'rate control rhythm control atrial fibrillation trial' to include full phrases and disease context for better matching."
+      },
+      {
+        "query": "radiofrequency ablation atrial fibrillation pulmonary vein",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'radiofrequency ablation pulmonary vein isolation' (ZERO) with 'radiofrequency ablation atrial fibrillation pulmonary vein' to use more common terminology and remove restrictive 'isolation' term."
+      },
+      {
+        "query": "antithrombotic therapy catheter ablation atrial fibrillation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'antithrombotic therapy catheter ablation' (ZERO) with 'antithrombotic therapy catheter ablation atrial fibrillation' to add essential disease context missing from original query."
+      },
+      {
+        "query": "frailty atrial fibrillation older adults",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'frailty older adults atrial fibrillation' (ZERO) with 'frailty atrial fibrillation older adults' to reorder terms for better phrase matching and use vocabulary from extracted topics."
+      },
+      {
+        "query": "renal denervation atrial fibrillation",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'renal sympathetic denervation atrial fibrillation' (ZERO) with 'renal denervation atrial fibrillation' to use broader, more commonly used terminology while maintaining the core concept."
+      }
+    ],
+    "cost": 0.00097454,
+    "latency_s": 140.4
+  },
+  "validation": [
+    {
+      "query": "catheter ablation heart failure outcomes",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "atrial fibrillation ablation recurrence predictors",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "heart failure preserved ejection fraction ablation",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "intracardiac echocardiography ablation safety",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "obstructive sleep apnea atrial fibrillation",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "machine learning risk prediction ablation",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 13,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "wearable monitoring atrial fibrillation detection",
+      "dimension": "adjacent",
+      "priority": "rotate_biweekly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "inflammatory biomarkers atrial fibrillation prognosis",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "left atrial appendage occlusion stroke prevention",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "DOAC bleeding risk atrial fibrillation",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "rate control rhythm control atrial fibrillation trial",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "radiofrequency ablation atrial fibrillation pulmonary vein",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "antithrombotic therapy catheter ablation atrial fibrillation",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "frailty atrial fibrillation older adults",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "renal denervation atrial fibrillation",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "pulsed field ablation atrial fibrillation",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "left atrial appendage occlusion stroke",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 1,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "DOAC anticoagulation bleeding risk",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "rate rhythm control randomized trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "radiofrequency ablation pulmonary vein isolation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "antithrombotic therapy catheter ablation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "frailty older adults atrial fibrillation",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "renal sympathetic denervation atrial fibrillation",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'pulsed field ablation atrial fibrillation' (4 results) with broader 'pulsed field ablation atrial fibrillation randomized controlled trial' to capture more relevant studies while maintaining specificity with trial evidence."
+      },
+      {
+        "query": "left atrial appendage occlusion stroke prevention",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'left atrial appendage occlusion stroke' (1 result) with 'left atrial appendage occlusion stroke prevention' to broaden scope while maintaining focus on preventive applications."
+      },
+      {
+        "query": "DOAC bleeding risk atrial fibrillation",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'DOAC anticoagulation bleeding risk' (4 results) with 'DOAC bleeding risk atrial fibrillation' to use more common terminology and add disease context for better recall."
+      },
+      {
+        "query": "rate control rhythm control atrial fibrillation trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'rate rhythm control randomized trial' (4 results) with 'rate control rhythm control atrial fibrillation trial' to include full phrases and disease context for better matching."
+      },
+      {
+        "query": "radiofrequency ablation atrial fibrillation pulmonary vein",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'radiofrequency ablation pulmonary vein isolation' (ZERO) with 'radiofrequency ablation atrial fibrillation pulmonary vein' to use more common terminology and remove restrictive 'isolation' term."
+      },
+      {
+        "query": "antithrombotic therapy catheter ablation atrial fibrillation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Replaced 'antithrombotic therapy catheter ablation' (ZERO) with 'antithrombotic therapy catheter ablation atrial fibrillation' to add essential disease context missing from original query."
+      },
+      {
+        "query": "frailty atrial fibrillation older adults",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'frailty older adults atrial fibrillation' (ZERO) with 'frailty atrial fibrillation older adults' to reorder terms for better phrase matching and use vocabulary from extracted topics."
+      },
+      {
+        "query": "renal denervation atrial fibrillation",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Replaced 'renal sympathetic denervation atrial fibrillation' (ZERO) with 'renal denervation atrial fibrillation' to use broader, more commonly used terminology while maintaining the core concept."
+      }
+    ],
+    "cost": 0.00050955,
+    "latency_s": 27.5
+  },
+  "costs": {
+    "seed_usd": 0.00013024,
+    "library_usd": 0.00097454,
+    "reformulate_usd": 0.00050955,
+    "total_usd": 0.001614
+  },
+  "total_latency_s": 249.6
+}

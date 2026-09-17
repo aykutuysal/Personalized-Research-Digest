@@ -1,0 +1,19 @@
+{
+  "subject": "AI agents",
+  "queries_per_angle": 2,
+  "query_budget": 16,
+  "min_per_angle": 1,
+  "max_per_angle": 3,
+  "angles": [
+    "Agent monitoring and observability",
+    "Tool-use and function-calling agents",
+    "Multi-agent systems and collaboration",
+    "Reasoning and planning architectures (e.g., ReAct, Chain-of-Thought, Tree-of-Thoughts)",
+    "Retrieval-Augmented Generation (RAG) for agents",
+    "Agent benchmarking and evaluation",
+    "Memory and state management for long-running agents",
+    "Cost and latency optimization for agent loops",
+    "Human-in-the-loop and agent delegation",
+    "Code-generation and software-development agents"
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "timestamp": "2026-04-13T10:23:59.498381+00:00",
+  "prompt_file": "iter/prompts/v0_original.md",
+  "profile_file": "iter/profiles/marketing.md",
+  "plan_model": "deepseek/deepseek-v3.2",
+  "plan_cost_usd": 0.00123018,
+  "plan_elapsed_s": 345.8,
+  "num_queries": 15,
+  "from_date": "2026-04-06",
+  "to_date": "2026-04-13",
+  "bands": {
+    "zero": 0,
+    "low": 0,
+    "healthy": 0,
+    "recall_safety": 0,
+    "too_broad": 0,
+    "error": 15
+  },
+  "frac_healthy": 0.0,
+  "frac_healthy_or_safety": 0.0,
+  "mean_precision": 0,
+  "per_band_precision": {
+    "zero": null,
+    "low": null,
+    "healthy": null,
+    "recall_safety": null,
+    "too_broad": null,
+    "error": null
+  },
+  "passing": false,
+  "plan": {
+    "subject": "Marketing science",
+    "queries": [
+      {
+        "id": 1,
+        "query": "\"charm pricing\" OR \"odd pricing\" OR \"psychological pricing\" OR \"price ending\"",
+        "angle": "Core subject - Price perception mechanics",
+        "rationale": "Catches empirical studies on the effectiveness of specific price points like $9.99 versus round numbers."
+      },
+      {
+        "id": 2,
+        "query": "(\"price promotion\" OR \"discount\" OR \"sale\") AND (\"brand perception\" OR \"brand equity\" OR \"brand damage\")",
+        "angle": "Applied/real-world concerns - Promotional strategy trade-offs",
+        "rationale": "Targets research quantifying when and how discounts negatively impact brand value versus driving short-term sales."
+      },
+      {
+        "id": 3,
+        "query": "(\"ad creative\" OR \"advertisement\" OR \"advertising\") AND (\"conversion\" OR \"click-through\" OR \"purchase intent\") AND (\"A/B test\" OR \"experiment\" OR \"field study\")",
+        "angle": "Evaluation/evidence standards - Ad creative testing",
+        "rationale": "Focuses on experimental findings about which visual, textual, or emotional elements in ads demonstrably improve performance metrics."
+      },
+      {
+        "id": 4,
+        "query": "(\"product naming\" OR \"brand name\") AND (\"consumer preference\" OR \"memorability\" OR \"perceived quality\")",
+        "angle": "Applied/real-world concerns - Nomenclature effectiveness",
+        "rationale": "Finds studies testing how different naming conventions (descriptive, abstract, phonetic) influence consumer evaluation and choice."
+      },
+      {
+        "id": 5,
+        "query": "(\"scarcity\" OR \"limited quantity\" OR \"limited time\") AND (\"purchase behavior\" OR \"conversion\" OR \"urgency\")",
+        "angle": "Methods/techniques - Scarcity and urgency cues",
+        "rationale": "Captures research on the causal impact of scarcity messages (e.g., 'only 3 left') on checkout rates and purchase acceleration."
+      },
+      {
+        "id": 6,
+        "query": "\"nudge\" AND (\"e-commerce\" OR \"online shopping\" OR \"checkout\")",
+        "angle": "Methods/techniques - Behavioral interventions in digital commerce",
+        "rationale": "Targets applied behavioral science interventions (defaults, social proof, framing) tested specifically in online retail environments."
+      },
+      {
+        "id": 7,
+        "query": "(\"landing page\" OR \"website\") AND (\"optimization\" OR \"conversion rate\") AND (\"experiment\" OR \"A/B testing\")",
+        "angle": "Applied/real-world concerns - Page optimization evidence",
+        "rationale": "Finds field experiments testing layout, copy, imagery, and form design elements that directly increase on-site conversion."
+      },
+      {
+        "id": 8,
+        "query": "(\"pricing test\" OR \"price experiment\") AND (\"willingness to pay\" OR \"elasticity\")",
+        "angle": "Evaluation/evidence standards - Pricing experimentation",
+        "rationale": "Catches methodological papers and results from real-world pricing experiments that quantify demand curves and optimal price points."
+      },
+      {
+        "id": 9,
+        "query": "(\"social proof\" OR \"testimonial\" OR \"review\") AND (\"conversion\" OR \"sales\")",
+        "angle": "Methods/techniques - Social influence levers",
+        "rationale": "Targets empirical evidence on the sales impact of customer reviews, ratings, testimonials, and user-generated content."
+      },
+      {
+        "id": 10,
+        "query": "(\"free shipping\" OR \"shipping fee\") AND (\"purchase decision\" OR \"cart abandonment\")",
+        "angle": "Applied/real-world concerns - Fulfillment pricing psychology",
+        "rationale": "Finds studies testing how the presentation and structure of shipping costs affect conversion and average order value."
+      },
+      {
+        "id": 11,
+        "query": "(\"visual attention\" OR \"eye tracking\") AND (\"advertisement\" OR \"packaging\" OR \"website\")",
+        "angle": "Methods/techniques - Attention measurement",
+        "rationale": "Captures research using biometric or tracking methods to identify what visually grabs consumer attention and drives subsequent action."
+      },
+      {
+        "id": 12,
+        "query": "(\"price framing\" OR \"partitioned pricing\" OR \"drip pricing\") AND (\"perceived cost\" OR \"transaction utility\")",
+        "angle": "Core subject - Price presentation and perception",
+        "rationale": "Targets studies on how breaking down prices (e.g., product + fee) versus bundling affects perceived value and purchase likelihood."
+      },
+      {
+        "id": 13,
+        "query": "(\"personalization\" OR \"recommendation\") AND (\"e-commerce\" OR \"retail\") AND (\"revenue\" OR \"lift\")",
+        "angle": "Tools/artifacts - Personalization effectiveness",
+        "rationale": "Finds quantified results from field tests on the sales impact of personalized product recommendations, emails, or offers."
+      },
+      {
+        "id": 14,
+        "query": "(\"loss aversion\" OR \"endowment effect\") AND (\"marketing\" OR \"promotion\")",
+        "angle": "Methods/techniques - Prospect theory applications",
+        "rationale": "Captures applied research testing marketing tactics (free trials, money-back guarantees) built on loss-aversion principles."
+      },
+      {
+        "id": 15,
+        "query": "(\"color\" OR \"imagery\" OR \"font\") AND (\"marketing\" OR \"advertising\") AND (\"response\" OR \"preference\")",
+        "angle": "Applied/real-world concerns - Design element testing",
+        "rationale": "Targets experimental studies isolating the effect of specific aesthetic design choices on consumer response and choice."
+      }
+    ],
+    "coverage_notes": "Plan focuses on angles of direct tactical relevance to a DTC growth marketer: price presentation, promotion effects, on-page conversion levers, and evidence-based creative/design choices. It emphasizes queries that return experimental or field-study results (using terms like 'A/B test', 'experiment', 'field study'). Angles deliberately skipped include brand theory, advertising history, media planning, and corporate strategy, as per the profile's preference for actionable, numerical findings over frameworks or jargon."
+  },
+  "query_results": [
+    {
+      "id": 1,
+      "query": "\"charm pricing\" OR \"odd pricing\" OR \"psychological pricing\" OR \"price ending\"",
+      "angle": "Core subject - Price perception mechanics",
+      "rationale": "Catches empirical studies on the effectiveness of specific price points like $9.99 versus round numbers.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 2,
+      "query": "(\"price promotion\" OR \"discount\" OR \"sale\") AND (\"brand perception\" OR \"brand equity\" OR \"brand damage\")",
+      "angle": "Applied/real-world concerns - Promotional strategy trade-offs",
+      "rationale": "Targets research quantifying when and how discounts negatively impact brand value versus driving short-term sales.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 3,
+      "query": "(\"ad creative\" OR \"advertisement\" OR \"advertising\") AND (\"conversion\" OR \"click-through\" OR \"purchase intent\") AND (\"A/B test\" OR \"experiment\" OR \"field study\")",
+      "angle": "Evaluation/evidence standards - Ad creative testing",
+      "rationale": "Focuses on experimental findings about which visual, textual, or emotional elements in ads demonstrably improve performance metrics.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 4,
+      "query": "(\"product naming\" OR \"brand name\") AND (\"consumer preference\" OR \"memorability\" OR \"perceived quality\")",
+      "angle": "Applied/real-world concerns - Nomenclature effectiveness",
+      "rationale": "Finds studies testing how different naming conventions (descriptive, abstract, phonetic) influence consumer evaluation and choice.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 5,
+      "query": "(\"scarcity\" OR \"limited quantity\" OR \"limited time\") AND (\"purchase behavior\" OR \"conversion\" OR \"urgency\")",
+      "angle": "Methods/techniques - Scarcity and urgency cues",
+      "rationale": "Captures research on the causal impact of scarcity messages (e.g., 'only 3 left') on checkout rates and purchase acceleration.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 6,
+      "query": "\"nudge\" AND (\"e-commerce\" OR \"online shopping\" OR \"checkout\")",
+      "angle": "Methods/techniques - Behavioral interventions in digital commerce",
+      "rationale": "Targets applied behavioral science interventions (defaults, social proof, framing) tested specifically in online retail environments.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 7,
+      "query": "(\"landing page\" OR \"website\") AND (\"optimization\" OR \"conversion rate\") AND (\"experiment\" OR \"A/B testing\")",
+      "angle": "Applied/real-world concerns - Page optimization evidence",
+      "rationale": "Finds field experiments testing layout, copy, imagery, and form design elements that directly increase on-site conversion.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 8,
+      "query": "(\"pricing test\" OR \"price experiment\") AND (\"willingness to pay\" OR \"elasticity\")",
+      "angle": "Evaluation/evidence standards - Pricing experimentation",
+      "rationale": "Catches methodological papers and results from real-world pricing experiments that quantify demand curves and optimal price points.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 9,
+      "query": "(\"social proof\" OR \"testimonial\" OR \"review\") AND (\"conversion\" OR \"sales\")",
+      "angle": "Methods/techniques - Social influence levers",
+      "rationale": "Targets empirical evidence on the sales impact of customer reviews, ratings, testimonials, and user-generated content.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 10,
+      "query": "(\"free shipping\" OR \"shipping fee\") AND (\"purchase decision\" OR \"cart abandonment\")",
+      "angle": "Applied/real-world concerns - Fulfillment pricing psychology",
+      "rationale": "Finds studies testing how the presentation and structure of shipping costs affect conversion and average order value.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 11,
+      "query": "(\"visual attention\" OR \"eye tracking\") AND (\"advertisement\" OR \"packaging\" OR \"website\")",
+      "angle": "Methods/techniques - Attention measurement",
+      "rationale": "Captures research using biometric or tracking methods to identify what visually grabs consumer attention and drives subsequent action.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 12,
+      "query": "(\"price framing\" OR \"partitioned pricing\" OR \"drip pricing\") AND (\"perceived cost\" OR \"transaction utility\")",
+      "angle": "Core subject - Price presentation and perception",
+      "rationale": "Targets studies on how breaking down prices (e.g., product + fee) versus bundling affects perceived value and purchase likelihood.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 13,
+      "query": "(\"personalization\" OR \"recommendation\") AND (\"e-commerce\" OR \"retail\") AND (\"revenue\" OR \"lift\")",
+      "angle": "Tools/artifacts - Personalization effectiveness",
+      "rationale": "Finds quantified results from field tests on the sales impact of personalized product recommendations, emails, or offers.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 14,
+      "query": "(\"loss aversion\" OR \"endowment effect\") AND (\"marketing\" OR \"promotion\")",
+      "angle": "Methods/techniques - Prospect theory applications",
+      "rationale": "Captures applied research testing marketing tactics (free trials, money-back guarantees) built on loss-aversion principles.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    },
+    {
+      "id": 15,
+      "query": "(\"color\" OR \"imagery\" OR \"font\") AND (\"marketing\" OR \"advertising\") AND (\"response\" OR \"preference\")",
+      "angle": "Applied/real-world concerns - Design element testing",
+      "rationale": "Targets experimental studies isolating the effect of specific aesthetic design choices on consumer response and choice.",
+      "openalex_count": -1,
+      "breadth_band": "error",
+      "hits": [],
+      "hit_labels": [],
+      "precision": null
+    }
+  ]
+}

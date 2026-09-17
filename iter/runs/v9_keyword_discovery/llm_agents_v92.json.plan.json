@@ -1,0 +1,113 @@
+{
+  "subject": "LLM agents",
+  "queries": [
+    {
+      "id": 1,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "new agent architectures or frameworks",
+      "query": "LLM agent architecture modular",
+      "rationale": "Directly targets new agent architectures using vocabulary 'Architecture' (51x) and 'Modular design' (23x) from extracted data. 'LLM agent' narrows scope from generic 'agent architectures' (16,786 results) to focus on language model agents, aligning with user's engineering focus on practical implementations.",
+      "dimension": "core"
+    },
+    {
+      "id": 2,
+      "angle_id": 2,
+      "slot": 1,
+      "angle": "planning, reasoning, or chain-of-thought techniques",
+      "query": "agent planning reasoning system",
+      "rationale": "Covers planning and reasoning techniques using vocabulary 'Reasoning system' (11x) and 'AI-based Problem Solving and Planning' (15x). Combines 'planning' and 'reasoning' to target the angle while adding 'system' to focus on engineered approaches rather than pure theory, matching user's practical interests.",
+      "dimension": "core"
+    },
+    {
+      "id": 3,
+      "angle_id": 3,
+      "slot": 1,
+      "angle": "tool use and function calling",
+      "query": "LLM tool use function",
+      "rationale": "Addresses tool use and function calling with 'tool use' from seed queries and 'function' as implied by function calling. 'LLM' narrows from generic 'tool use' (201,592 results) to language model agents. Uses vocabulary 'Language model' (14x) to stay grounded in extracted data.",
+      "dimension": "core"
+    },
+    {
+      "id": 4,
+      "angle_id": 4,
+      "slot": 1,
+      "angle": "memory systems and retrieval (RAG / long-term memory)",
+      "query": "agent memory management RAG",
+      "rationale": "Targets memory systems and retrieval using vocabulary 'Memory management' (15x) and explicit 'RAG' from sample titles. Combines core memory concepts with RAG as a specific technique, serving user's need for practical memory implementations in agents.",
+      "dimension": "core"
+    },
+    {
+      "id": 5,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "multi-agent systems and orchestration",
+      "query": "multi-agent system orchestration",
+      "rationale": "Covers multi-agent systems and orchestration using vocabulary 'Multi-agent system' (17x) and 'Multi-Agent Systems and Negotiation' (29x). Adds 'orchestration' to focus on coordination mechanisms rather than just existence of multiple agents, aligning with user's architectural interests.",
+      "dimension": "core"
+    },
+    {
+      "id": 6,
+      "angle_id": 6,
+      "slot": 1,
+      "angle": "evaluation, benchmarks, or agent capability tests",
+      "query": "agent benchmarking evaluation",
+      "rationale": "Addresses evaluation and benchmarks using vocabulary 'Benchmarking' (31x) and 'agent evaluation' from seed queries. Combines 'agent' with both 'benchmarking' and 'evaluation' to capture comprehensive testing approaches while staying within reasonable result counts.",
+      "dimension": "core"
+    },
+    {
+      "id": 7,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "production engineering patterns (deployment, observability, cost)",
+      "query": "LLM agent deployment scalability",
+      "rationale": "Targets production engineering patterns using vocabulary 'Software deployment' (19x) and 'Scalability' (25x). Focuses on deployment and scalability as key practical concerns for engineers building production agents, directly serving user's engineering background.",
+      "dimension": "core"
+    },
+    {
+      "id": 8,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "safety, alignment, or guardrails for agents",
+      "query": "agent safety adversarial robustness",
+      "rationale": "Covers safety and guardrails using vocabulary 'Adversarial Robustness in Machine Learning' (39x) and 'Adversarial system' (23x). Connects safety to adversarial robustness as a concrete technical approach, aligning with user's mild preference for engineering-grounded work.",
+      "dimension": "core"
+    },
+    {
+      "id": 9,
+      "angle_id": 1,
+      "slot": 1,
+      "angle": "new agent architectures or frameworks",
+      "query": "cognitive architecture agent",
+      "rationale": "Serves angle 1 (architectures) through adjacent field of cognitive architectures, using vocabulary 'Cognitive architecture' (13x) and 'Cognition' (25x). Provides architectural insights from cognitive science that could inform LLM agent design, expanding scope while staying relevant.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 10,
+      "angle_id": 7,
+      "slot": 1,
+      "angle": "production engineering patterns (deployment, observability, cost)",
+      "query": "LLM agent workflow",
+      "rationale": "Serves angle 7 (production patterns) through workflow management, using vocabulary 'Workflow' (16x). Addresses practical orchestration and process management in agent systems, relevant to engineering deployment and observability concerns.",
+      "dimension": "adjacent"
+    },
+    {
+      "id": 11,
+      "angle_id": 5,
+      "slot": 1,
+      "angle": "multi-agent systems and orchestration",
+      "query": "multi-agent reinforcement learning",
+      "rationale": "Intersection of multi-agent systems (angle 5) and planning/reasoning techniques (implied by reinforcement learning). Uses vocabulary 'Reinforcement learning' (28x) and 'Multi-agent system' (17x). Covers learning-based coordination approaches in multi-agent settings, serving user's interest in practical techniques.",
+      "dimension": "intersection"
+    },
+    {
+      "id": 12,
+      "angle_id": 8,
+      "slot": 1,
+      "angle": "safety, alignment, or guardrails for agents",
+      "query": "explainable AI agent",
+      "rationale": "Serves angle 8 (safety/guardrails) through adjacent field of explainable AI, using vocabulary 'Explainable Artificial Intelligence (XAI)' (6x). Addresses transparency and interpretability as safety-related concerns for agents, providing engineering-relevant safety approaches.",
+      "dimension": "adjacent"
+    }
+  ]
+}

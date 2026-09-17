@@ -1,0 +1,683 @@
+{
+  "subject": "Marketing science",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "deepseek/deepseek-v3.2",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-22",
+  "seeds": {
+    "queries": [
+      "pricing strategy",
+      "discounts brand effect",
+      "ad creative conversion",
+      "product naming",
+      "scarcity cues",
+      "checkout optimization",
+      "consumer psychology purchasing",
+      "discounts promotions",
+      "ad creative",
+      "scarcity urgency",
+      "landing page",
+      "consumer psychology",
+      "loyalty retention"
+    ],
+    "llm_seeds": [
+      "pricing strategy",
+      "discounts brand effect",
+      "ad creative conversion",
+      "product naming",
+      "scarcity cues",
+      "checkout optimization",
+      "consumer psychology purchasing"
+    ],
+    "angle_seeds": [
+      "discounts promotions",
+      "ad creative",
+      "scarcity urgency",
+      "landing page",
+      "consumer psychology",
+      "loyalty retention"
+    ],
+    "use_angle_seeds": true,
+    "raw_results": [
+      {
+        "seed": "pricing strategy",
+        "count": 11338
+      },
+      {
+        "seed": "discounts brand effect",
+        "count": 31
+      },
+      {
+        "seed": "ad creative conversion",
+        "count": 17
+      },
+      {
+        "seed": "product naming",
+        "count": 1990
+      },
+      {
+        "seed": "scarcity cues",
+        "count": 302
+      },
+      {
+        "seed": "checkout optimization",
+        "count": 133
+      },
+      {
+        "seed": "consumer psychology purchasing",
+        "count": 270
+      },
+      {
+        "seed": "discounts promotions",
+        "count": 701
+      },
+      {
+        "seed": "ad creative",
+        "count": 224
+      },
+      {
+        "seed": "scarcity urgency",
+        "count": 874
+      },
+      {
+        "seed": "landing page",
+        "count": 228
+      },
+      {
+        "seed": "consumer psychology",
+        "count": 884
+      },
+      {
+        "seed": "loyalty retention",
+        "count": 868
+      }
+    ],
+    "cost": 0.000137974,
+    "latency_s": 2.8
+  },
+  "vocabulary": {
+    "total_papers": 598,
+    "topics": [
+      [
+        "Consumer Retail Behavior Studies",
+        38
+      ],
+      [
+        "Consumer Behavior in Brand Consumption and Identification",
+        30
+      ],
+      [
+        "Consumer Market Behavior and Pricing",
+        28
+      ],
+      [
+        "Consumer Behavior and Marketing Influence",
+        19
+      ],
+      [
+        "Digital Marketing and Social Media",
+        18
+      ],
+      [
+        "AI in Service Interactions",
+        18
+      ],
+      [
+        "Customer Service Quality and Loyalty",
+        17
+      ],
+      [
+        "Innovations and Analysis in Business and Education",
+        16
+      ],
+      [
+        "Technology Adoption and User Behaviour",
+        16
+      ],
+      [
+        "Artificial Intelligence in Healthcare and Education",
+        13
+      ],
+      [
+        "Research Data Management Practices",
+        11
+      ],
+      [
+        "Customer churn and segmentation",
+        10
+      ],
+      [
+        "Supply Chain and Inventory Management",
+        9
+      ],
+      [
+        "Environmental Sustainability in Business",
+        8
+      ],
+      [
+        "Multimodal Machine Learning Applications",
+        7
+      ]
+    ],
+    "subfields": [
+      [
+        "Marketing",
+        145
+      ],
+      [
+        "Sociology and Political Science",
+        29
+      ],
+      [
+        "Information Systems",
+        26
+      ],
+      [
+        "Artificial Intelligence",
+        25
+      ],
+      [
+        "Organizational Behavior and Human Resource Management",
+        24
+      ],
+      [
+        "Management Science and Operations Research",
+        22
+      ],
+      [
+        "Information Systems and Management",
+        18
+      ],
+      [
+        "Social Psychology",
+        14
+      ],
+      [
+        "Management Information Systems",
+        13
+      ],
+      [
+        "Strategy and Management",
+        13
+      ]
+    ],
+    "fields": [
+      [
+        "Business, Management and Accounting",
+        208
+      ],
+      [
+        "Computer Science",
+        82
+      ],
+      [
+        "Social Sciences",
+        55
+      ],
+      [
+        "Decision Sciences",
+        41
+      ],
+      [
+        "Medicine",
+        39
+      ]
+    ],
+    "keywords": [
+      [
+        "Consumer behaviour",
+        138
+      ],
+      [
+        "Purchasing",
+        74
+      ],
+      [
+        "Scarcity",
+        53
+      ],
+      [
+        "Social media",
+        48
+      ],
+      [
+        "Perception",
+        46
+      ],
+      [
+        "Loyalty",
+        45
+      ],
+      [
+        "Pricing strategies",
+        37
+      ],
+      [
+        "Digital marketing",
+        32
+      ],
+      [
+        "Loyalty business model",
+        31
+      ],
+      [
+        "Customer retention",
+        30
+      ],
+      [
+        "Dynamic pricing",
+        26
+      ],
+      [
+        "Empirical research",
+        25
+      ],
+      [
+        "Workflow",
+        25
+      ],
+      [
+        "Cognition",
+        24
+      ],
+      [
+        "Sustainability",
+        23
+      ],
+      [
+        "Structural equation modeling",
+        21
+      ],
+      [
+        "Customer satisfaction",
+        19
+      ],
+      [
+        "Customer advocacy",
+        17
+      ],
+      [
+        "Competitive advantage",
+        16
+      ],
+      [
+        "Descriptive statistics",
+        16
+      ],
+      [
+        "Productivity",
+        15
+      ],
+      [
+        "Sales promotion",
+        14
+      ],
+      [
+        "Brand loyalty",
+        14
+      ],
+      [
+        "Personalization",
+        13
+      ],
+      [
+        "Online advertising",
+        13
+      ]
+    ],
+    "journals": [
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        116
+      ],
+      [
+        "Open MIND",
+        20
+      ],
+      [
+        "SSRN Electronic Journal",
+        11
+      ],
+      [
+        "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+        8
+      ],
+      [
+        "Advances in Economics Management and Political Sciences",
+        7
+      ],
+      [
+        "International Journal For Multidisciplinary Research",
+        6
+      ],
+      [
+        "Finance & Economics",
+        5
+      ],
+      [
+        "Journal of innovation and development",
+        5
+      ],
+      [
+        "Journal of theoretical and applied electronic commerce research",
+        4
+      ],
+      [
+        "arXiv (Cornell University)",
+        4
+      ]
+    ],
+    "sample_titles": [
+      "Activity-Based Costing in Determining Competitive Pricing Strategies",
+      "Usage-based or subscription-based? A study on service pricing strategies of internet of vehicles platforms",
+      "Optimal pricing strategy for advance selling through group buying",
+      "Integrating big data and AI for dynamic pricing strategies in e-commerce marketing and product management",
+      "Sliding doors: Alitalia\u2013ITA transition impact on pricing strategies",
+      "Two-period competition between traditional and online supply chains with strategic customers and different pricing strategies",
+      "Information Misreporting Behavior and Optimal Pricing Strategy in Dual-Channel Supply Chain Under Different Dominant Power Structures",
+      "The impact of e-cigarette taxation: a systematic review and meta-analysis on usage, pricing strategies, and public health implications",
+      "EPformer: Unlocking day-ahead electricity price forecasting accuracy using the time\u2013frequency domain feature learning strategy considering renewable energy",
+      "Dynamic pricing and advertising strategy for a perishable product with an expiration date under a price ceiling constraint",
+      "Urban Greening Strategies and Ecosystem Services: The Differential Impact of Street-Level Greening Structures on Housing Prices",
+      "Pricing Strategy",
+      "The Influence of Pricing Strategies on Society vs. Society Shaping Pricing Strategies",
+      "Modeling two-level interval and multi-objectives approach for energy optimization in the smart electrical grid with uncertainty of power prices and demand side management strategies",
+      "Transfer pricing and tax avoidance strategy: The role of foreign ownership"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "product naming branding",
+        "angle_id": 4,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Direct coverage of product naming/branding angle using user's exact phrase 'product naming' and extracted term 'branding'. Focuses on practical evidence for naming decisions in e-commerce/DTC context."
+      },
+      {
+        "query": "consumer psychology purchasing",
+        "angle_id": 7,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Core query for consumer psychology angle, combining 'consumer psychology' (user term) with 'purchasing' (74x in vocabulary). Targets behavioral findings with numbers that explain why purchases happen."
+      },
+      {
+        "query": "loyalty repeat purchase",
+        "angle_id": 8,
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Serves loyalty/retention angle with 'loyalty' (45x in vocabulary) and 'repeat purchase' (user's interest in retention behavior). Focuses on evidence about what drives repeat buying in e-commerce contexts."
+      },
+      {
+        "query": "dynamic pricing strategies",
+        "angle_id": 1,
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent query serving pricing strategy angle with 'dynamic pricing' (26x in vocabulary) from e-commerce/tech contexts. Provides evidence on algorithmic pricing approaches relevant to DTC brands."
+      },
+      {
+        "query": "sales promotion brand effect",
+        "angle_id": 2,
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent query for discounts/promotions angle using 'sales promotion' (14x in vocabulary) to explore promotional tactics beyond discounts. Addresses brand effects with empirical research vocabulary."
+      },
+      {
+        "query": "online advertising conversion",
+        "angle_id": 3,
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "Adjacent query serving ad creative angle through 'online advertising' (13x in vocabulary) in digital contexts. Targets conversion evidence specific to digital ad formats the user likely employs."
+      },
+      {
+        "query": "customer retention behavior",
+        "angle_id": 8,
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Intersection query combining loyalty/retention angle (8) with consumer psychology angle (7) via 'customer retention' (30x in vocabulary) and 'behavior'. Addresses the psychological drivers of repeat purchase with empirical findings."
+      },
+      {
+        "query": "pricing strategies consumer perception",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'charm pricing' with broader 'pricing strategies' from keywords and added 'consumer perception' to maintain the value perception angle using vocabulary that appears in the corpus."
+      },
+      {
+        "query": "brand loyalty customer retention",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'discounts' with 'customer retention' from keywords to broaden while maintaining the loyalty focus, using terms that appear frequently in the extracted vocabulary."
+      },
+      {
+        "query": "digital marketing persuasion",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'ad creative' with 'digital marketing' from topics/keywords to use vocabulary that exists in the corpus while keeping the persuasion angle."
+      },
+      {
+        "query": "scarcity consumer behaviour",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'social proof' with broader 'consumer behaviour' from keywords to loosen the query while maintaining the scarcity angle, using high-frequency vocabulary."
+      },
+      {
+        "query": "purchasing consumer behaviour",
+        "angle_id": 6,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'checkout conversion optimization' with 'purchasing' and 'consumer behaviour' from keywords to capture the conversion angle using vocabulary that appears extensively in the corpus."
+      }
+    ],
+    "cost": 0.002603,
+    "latency_s": 11.4
+  },
+  "validation": [
+    {
+      "query": "product naming branding",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 12,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "consumer psychology purchasing",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "loyalty repeat purchase",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 12,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "dynamic pricing strategies",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 58,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "sales promotion brand effect",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "online advertising conversion",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "customer retention behavior",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 13,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "pricing strategies consumer perception",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 11,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "brand loyalty customer retention",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "digital marketing persuasion",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "scarcity consumer behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "purchasing consumer behaviour",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 63,
+      "status": "good",
+      "error": null
+    }
+  ],
+  "fill_missing": {
+    "queries": [],
+    "cost": 0.0,
+    "latency": 0.0,
+    "raw": "",
+    "missing_before": [],
+    "missing_after": []
+  },
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "charm pricing perceived value",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "discounts brand loyalty",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "ad creative persuasion",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "scarcity social proof",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 1,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "checkout conversion optimization",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "pricing strategies consumer perception",
+        "angle_id": 1,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'charm pricing' with broader 'pricing strategies' from keywords and added 'consumer perception' to maintain the value perception angle using vocabulary that appears in the corpus."
+      },
+      {
+        "query": "brand loyalty customer retention",
+        "angle_id": 2,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'discounts' with 'customer retention' from keywords to broaden while maintaining the loyalty focus, using terms that appear frequently in the extracted vocabulary."
+      },
+      {
+        "query": "digital marketing persuasion",
+        "angle_id": 3,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'ad creative' with 'digital marketing' from topics/keywords to use vocabulary that exists in the corpus while keeping the persuasion angle."
+      },
+      {
+        "query": "scarcity consumer behaviour",
+        "angle_id": 5,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'social proof' with broader 'consumer behaviour' from keywords to loosen the query while maintaining the scarcity angle, using high-frequency vocabulary."
+      },
+      {
+        "query": "purchasing consumer behaviour",
+        "angle_id": 6,
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Replaced 'checkout conversion optimization' with 'purchasing' and 'consumer behaviour' from keywords to capture the conversion angle using vocabulary that appears extensively in the corpus."
+      }
+    ],
+    "cost": 0.00037934,
+    "latency_s": 12.1
+  },
+  "costs": {
+    "seed_usd": 0.000137974,
+    "library_usd": 0.002603,
+    "fill_missing_usd": 0.0,
+    "reformulate_usd": 0.00037934,
+    "total_usd": 0.00312
+  },
+  "total_latency_s": 69.2
+}

@@ -1,0 +1,34 @@
+prompt:  iter/prompts/v0_original.md
+profile: iter/profiles/llm_agents.md
+model:   deepseek/deepseek-v3.2
+dates:   2026-04-06 to 2026-04-13
+
+[1/3] generating plan... 26.9s, 15 queries, $0.00085482
+[2/3] running OpenAlex queries...
+  Q 1 [Core subject - engineering implementatio] count=  311 healthy
+  Q 2 [Core subject - tool use & external inter] count=   46 healthy
+  Q 3 [Core subject - autonomous operation     ] count=  145 healthy
+  Q 4 [Subspecialty - multi-agent systems      ] count=  139 healthy
+  Q 5 [Methods - reasoning & improvement techni] count=  115 healthy
+  Q 6 [Methods - planning & decomposition      ] count=  197 healthy
+  Q 7 [Methods - memory architectures          ] count=  172 healthy
+  Q 8 [Evaluation - benchmarks & testing       ] count= 1216 recall_safety
+  Q 9 [Subspecialty - software engineering appl] count=   90 healthy
+  Q10 [Methods - knowledge retrieval & groundin] count=  177 healthy
+  Q11 [Methods - learning from feedback        ] count=  149 healthy
+  Q12 [Applied - operational concerns          ] count=  312 healthy
+  Q13 [Applied - performance & optimization    ] count=  236 healthy
+  Q14 [Critiques - failure modes & robustness  ] count=  206 healthy
+  Q15 [Adjacent field - physical interaction   ] count=  876 recall_safety
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: iter/runs/v0_variance_t03/v0_llm_agents_ds_t03_r1.json
+======================================================================
+  queries:          15
+  bands:            zero=0 low=0 healthy=13 recall_safety=2 too_broad=0
+  frac healthy:     87%
+  mean precision:   73%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.75, 'recall_safety': 0.55, 'too_broad': None, 'error': None}
+  plan cost:        $0.00085482
+  PASSING:          YES

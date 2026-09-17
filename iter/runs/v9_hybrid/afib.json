@@ -1,0 +1,627 @@
+{
+  "subject": "Atrial fibrillation treatment",
+  "model": "deepseek/deepseek-v3.2",
+  "models": {
+    "seed": "deepseek/deepseek-v3.2",
+    "library": "google/gemini-3.1-pro-preview",
+    "reformulate": "deepseek/deepseek-v3.2"
+  },
+  "scoring_window": {
+    "from": "2026-04-06",
+    "to": "2026-04-13"
+  },
+  "vocab_window_from": "2025-10-18",
+  "seeds": {
+    "queries": [
+      "atrial fibrillation ablation",
+      "DOAC anticoagulation",
+      "rhythm control trials",
+      "left atrial appendage closure",
+      "AFib stroke prevention"
+    ],
+    "raw_results": [
+      {
+        "seed": "atrial fibrillation ablation",
+        "count": 1438
+      },
+      {
+        "seed": "DOAC anticoagulation",
+        "count": 312
+      },
+      {
+        "seed": "rhythm control trials",
+        "count": 296
+      },
+      {
+        "seed": "left atrial appendage closure",
+        "count": 208
+      },
+      {
+        "seed": "AFib stroke prevention",
+        "count": 7
+      }
+    ],
+    "cost": 0.000161,
+    "latency_s": 2.8
+  },
+  "vocabulary": {
+    "total_papers": 207,
+    "topics": [
+      [
+        "Atrial Fibrillation Management and Outcomes",
+        149
+      ],
+      [
+        "Liver Disease and Transplantation",
+        4
+      ],
+      [
+        "Venous Thromboembolism Diagnosis and Management",
+        4
+      ],
+      [
+        "Circadian rhythm and melatonin",
+        3
+      ],
+      [
+        "Dietary Effects on Health",
+        3
+      ],
+      [
+        "Intracranial Aneurysms: Treatment and Complications",
+        2
+      ],
+      [
+        "Cardiac Valve Diseases and Treatments",
+        2
+      ],
+      [
+        "Mobile Health and mHealth Applications",
+        2
+      ],
+      [
+        "Genetic Neurodegenerative Diseases",
+        2
+      ],
+      [
+        "Sleep and related disorders",
+        2
+      ],
+      [
+        "Inflammatory Biomarkers in Disease Prognosis",
+        1
+      ],
+      [
+        "Obstructive Sleep Apnea Research",
+        1
+      ],
+      [
+        "Myeloproliferative Neoplasms: Diagnosis and Treatment",
+        1
+      ],
+      [
+        "Pulmonary Hypertension Research and Treatments",
+        1
+      ],
+      [
+        "Pharmacovigilance and Adverse Drug Reactions",
+        1
+      ]
+    ],
+    "subfields": [
+      [
+        "Cardiology and Cardiovascular Medicine",
+        155
+      ],
+      [
+        "Neurology",
+        6
+      ],
+      [
+        "Physiology",
+        4
+      ],
+      [
+        "Hepatology",
+        4
+      ],
+      [
+        "Internal Medicine",
+        4
+      ],
+      [
+        "General Health Professions",
+        3
+      ],
+      [
+        "Endocrine and Autonomic Systems",
+        3
+      ],
+      [
+        "Genetics",
+        2
+      ],
+      [
+        "Complementary and alternative medicine",
+        2
+      ],
+      [
+        "Cellular and Molecular Neuroscience",
+        2
+      ]
+    ],
+    "fields": [
+      [
+        "Medicine",
+        189
+      ],
+      [
+        "Neuroscience",
+        7
+      ],
+      [
+        "Health Professions",
+        5
+      ],
+      [
+        "Psychology",
+        3
+      ],
+      [
+        "Pharmacology, Toxicology and Pharmaceutics",
+        1
+      ]
+    ],
+    "keywords": [
+      [
+        "Atrial fibrillation",
+        142
+      ],
+      [
+        "Ablation",
+        51
+      ],
+      [
+        "Catheter ablation",
+        50
+      ],
+      [
+        "Randomized controlled trial",
+        36
+      ],
+      [
+        "Appendage",
+        35
+      ],
+      [
+        "Atrial Appendage",
+        29
+      ],
+      [
+        "Rivaroxaban",
+        19
+      ],
+      [
+        "Ablation of atrial fibrillation",
+        18
+      ],
+      [
+        "Clinical trial",
+        18
+      ],
+      [
+        "MEDLINE",
+        17
+      ],
+      [
+        "Anticoagulant",
+        17
+      ],
+      [
+        "Warfarin",
+        17
+      ],
+      [
+        "Thrombus",
+        16
+      ],
+      [
+        "Percutaneous",
+        15
+      ],
+      [
+        "Left atrial appendage occlusion",
+        13
+      ],
+      [
+        "Rhythm",
+        13
+      ],
+      [
+        "Heart failure",
+        12
+      ],
+      [
+        "Sinus rhythm",
+        12
+      ],
+      [
+        "Pulmonary vein",
+        11
+      ],
+      [
+        "Complication",
+        11
+      ],
+      [
+        "Major bleeding",
+        10
+      ],
+      [
+        "Circadian rhythm",
+        10
+      ],
+      [
+        "Heart Rhythm",
+        9
+      ],
+      [
+        "Radiofrequency ablation",
+        9
+      ],
+      [
+        "Antithrombotic",
+        9
+      ]
+    ],
+    "journals": [
+      [
+        "Heart Rhythm",
+        8
+      ],
+      [
+        "Zenodo (CERN European Organization for Nuclear Research)",
+        8
+      ],
+      [
+        "European Heart Journal",
+        7
+      ],
+      [
+        "EP Europace",
+        6
+      ],
+      [
+        "Circulation",
+        6
+      ],
+      [
+        "New England Journal of Medicine",
+        5
+      ],
+      [
+        "JACC. Clinical electrophysiology",
+        4
+      ],
+      [
+        "JACC Asia",
+        4
+      ],
+      [
+        "Journal of Clinical Medicine",
+        4
+      ],
+      [
+        "Open MIND",
+        4
+      ]
+    ],
+    "sample_titles": [
+      "Pulsed field ablation for atrial fibrillation ablation: a European Heart Rhythm Association survey",
+      "Nightmare after atrial fibrillation ablation",
+      "Controversy: pulsed field ablation is the standard technique for all the candidates for atrial fibrillation ablation",
+      "Impact of Timing of Atrial Fibrillation Ablation on AF Recurrence and Clinical Outcomes in Patients With HFpEF and HFrEF",
+      "Hybrid Atrial Fibrillation Ablation: A Decade-Long Single-Center Experience",
+      "Safety and efficacy of intracardiac echocardiography in atrial fibrillation ablation: a meta-analysis",
+      "Antithrombotic Therapy after Successful Catheter Ablation for Atrial Fibrillation",
+      "Evaluating catheter usage for atrial fibrillation ablation: improving rates of efficacy and safety",
+      "Efficacy and safety of operator-directed, nurse-administered propofol sedation in atrial fibrillation ablation",
+      "Role of Non\u2013Pulmonary Vein Triggers in Outcomes of First-Time Atrial Fibrillation Ablation",
+      "Hemodynamic Echocardiographic Parameters in the Early Post-Atrial Fibrillation Ablation Period as Predictors of Recurrence",
+      "Explainable machine learning for risk prediction of acute cardiac tamponade during atrial fibrillation ablation",
+      "The Clinical Utility of <scp>3D</scp> Electroanatomical Mapping for Atrial Fibrillation Ablation by Pulsed Field Ablation",
+      "Optimising the atrial fibrillation ablation pathway using vascular closure devices: effects on length of stay, procedure time and outcomes",
+      "Adjunctive superior vena cava isolation to pulmonary vein isolation in atrial fibrillation ablation: A systematic review and meta-analysis of randomized trials"
+    ]
+  },
+  "library": {
+    "queries": [
+      {
+        "query": "atrial fibrillation major bleeding",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Matches the user's focus on DOAC choices and bleeding risk. 'Major bleeding' is a frequent keyword (10x) that filters out general AFib noise."
+      },
+      {
+        "query": "atrial fibrillation randomized controlled trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "The user explicitly wants RCTs for bottom-line clinical takeaways. 'Randomized controlled trial' is a top keyword (36x)."
+      },
+      {
+        "query": "catheter ablation pulmonary vein",
+        "dimension": "core",
+        "priority": "rotate_biweekly",
+        "rationale": "Captures core EP procedures and techniques. 'Catheter ablation' (50x) and 'Pulmonary vein' (11x) are highly frequent keywords."
+      },
+      {
+        "query": "atrial fibrillation ablation heart failure",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Intersects AFib treatment with major comorbidities (HFrEF/HFpEF seen in titles). 'Heart failure' is a frequent keyword (12x)."
+      },
+      {
+        "query": "left atrial appendage thrombus",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Intersects LAA management with stroke prevention. 'Appendage' (35x) and 'Thrombus' (16x) are highly prevalent keywords."
+      },
+      {
+        "query": "atrial fibrillation obstructive sleep apnea",
+        "dimension": "adjacent",
+        "priority": "rotate_monthly",
+        "rationale": "'Obstructive Sleep Apnea Research' appeared as a topic. Treating OSA is highly relevant to rhythm control and AFib recurrence, providing actionable clinical insights."
+      },
+      {
+        "query": "intracardiac echocardiography atrial fibrillation",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Found in sample titles. Highlights advanced imaging techniques during ablation procedures, offering niche but highly practical clinical value for an EP."
+      },
+      {
+        "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Original had 4 results. Added 'randomized controlled trial' from keywords to focus on high-evidence studies while maintaining specificity."
+      },
+      {
+        "query": "left atrial appendage occlusion atrial fibrillation",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Original had 4 results. Added 'atrial fibrillation' from keywords to broaden context while staying relevant to the user's cardiovascular focus."
+      },
+      {
+        "query": "antithrombotic atrial fibrillation ablation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Original had zero results. Replaced 'catheter ablation' with broader 'ablation' from keywords and added 'atrial fibrillation' to align with user's main topic."
+      },
+      {
+        "query": "catheter ablation complication bleeding",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Original had zero results. Replaced 'tamponade' with broader 'bleeding' from keywords ('major bleeding') while keeping the complication focus."
+      },
+      {
+        "query": "mobile health atrial fibrillation",
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "rationale": "Original had zero results. Simplified to 'mobile health' from topics and paired with 'atrial fibrillation' from keywords to match user's cardiovascular context."
+      },
+      {
+        "query": "anticoagulant intracranial aneurysm treatment",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Original had zero results. Added 'treatment' from topics ('Intracranial Aneurysms: Treatment and Complications') to broaden scope while maintaining aneurysm focus."
+      }
+    ],
+    "cost": 0.046892,
+    "latency_s": 42.2
+  },
+  "validation": [
+    {
+      "query": "atrial fibrillation major bleeding",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 5,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "atrial fibrillation randomized controlled trial",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 7,
+      "status": "good",
+      "error": null
+    },
+    {
+      "query": "catheter ablation pulmonary vein",
+      "dimension": "core",
+      "priority": "rotate_biweekly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "atrial fibrillation ablation heart failure",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 4,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "left atrial appendage thrombus",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 3,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "atrial fibrillation obstructive sleep apnea",
+      "dimension": "adjacent",
+      "priority": "rotate_monthly",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "intracardiac echocardiography atrial fibrillation",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "left atrial appendage occlusion atrial fibrillation",
+      "dimension": "core",
+      "priority": "every_cycle",
+      "last_run_count": 2,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "antithrombotic atrial fibrillation ablation",
+      "dimension": "intersection",
+      "priority": "rotate_biweekly",
+      "last_run_count": 1,
+      "status": "low",
+      "error": null
+    },
+    {
+      "query": "catheter ablation complication bleeding",
+      "dimension": "intersection",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "mobile health atrial fibrillation",
+      "dimension": "adjacent",
+      "priority": "rotate_biweekly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    },
+    {
+      "query": "anticoagulant intracranial aneurysm treatment",
+      "dimension": "serendipity",
+      "priority": "rotate_monthly",
+      "last_run_count": 0,
+      "status": "zero",
+      "error": null
+    }
+  ],
+  "reformulate": {
+    "ran": true,
+    "failures_input": [
+      {
+        "query": "pulsed field ablation atrial fibrillation",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "left atrial appendage occlusion",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "last_run_count": 4,
+        "status": "low",
+        "error": null
+      },
+      {
+        "query": "antithrombotic therapy catheter ablation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "catheter ablation complication tamponade",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "atrial fibrillation mobile health",
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      },
+      {
+        "query": "anticoagulant intracranial aneurysm",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "last_run_count": 0,
+        "status": "zero",
+        "error": null
+      }
+    ],
+    "queries": [
+      {
+        "query": "pulsed field ablation atrial fibrillation randomized controlled trial",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Original had 4 results. Added 'randomized controlled trial' from keywords to focus on high-evidence studies while maintaining specificity."
+      },
+      {
+        "query": "left atrial appendage occlusion atrial fibrillation",
+        "dimension": "core",
+        "priority": "every_cycle",
+        "rationale": "Original had 4 results. Added 'atrial fibrillation' from keywords to broaden context while staying relevant to the user's cardiovascular focus."
+      },
+      {
+        "query": "antithrombotic atrial fibrillation ablation",
+        "dimension": "intersection",
+        "priority": "rotate_biweekly",
+        "rationale": "Original had zero results. Replaced 'catheter ablation' with broader 'ablation' from keywords and added 'atrial fibrillation' to align with user's main topic."
+      },
+      {
+        "query": "catheter ablation complication bleeding",
+        "dimension": "intersection",
+        "priority": "rotate_monthly",
+        "rationale": "Original had zero results. Replaced 'tamponade' with broader 'bleeding' from keywords ('major bleeding') while keeping the complication focus."
+      },
+      {
+        "query": "mobile health atrial fibrillation",
+        "dimension": "adjacent",
+        "priority": "rotate_biweekly",
+        "rationale": "Original had zero results. Simplified to 'mobile health' from topics and paired with 'atrial fibrillation' from keywords to match user's cardiovascular context."
+      },
+      {
+        "query": "anticoagulant intracranial aneurysm treatment",
+        "dimension": "serendipity",
+        "priority": "rotate_monthly",
+        "rationale": "Original had zero results. Added 'treatment' from topics ('Intracranial Aneurysms: Treatment and Complications') to broaden scope while maintaining aneurysm focus."
+      }
+    ],
+    "cost": 0.00039144,
+    "latency_s": 16.0
+  },
+  "costs": {
+    "seed_usd": 0.000161,
+    "library_usd": 0.046892,
+    "reformulate_usd": 0.00039144,
+    "total_usd": 0.047444
+  },
+  "total_latency_s": 263.3
+}

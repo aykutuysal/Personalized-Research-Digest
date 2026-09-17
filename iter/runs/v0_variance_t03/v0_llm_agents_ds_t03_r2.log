@@ -1,0 +1,40 @@
+prompt:  iter/prompts/v0_original.md
+profile: iter/profiles/llm_agents.md
+model:   deepseek/deepseek-v3.2
+dates:   2026-04-06 to 2026-04-13
+
+[1/3] generating plan... 37.5s, 15 queries, $None
+[2/3] running OpenAlex queries...
+  Q 1 [Core subject - engineering implementatio] count=  311 healthy
+  Q 2 [Core subject - tool use and external int] count=   46 healthy
+  Q 3 [Core subject - autonomous operation     ] count=  145 healthy
+  Q 4 [Methods - multi-agent systems           ] count=  491 healthy
+  Q 5 [Methods - workflow orchestration        ] count=  111 healthy
+  Q 6 [Methods - reasoning and improvement tech] count=  120 healthy
+  Q 7 [Methods - planning and decomposition    ] count=  234 healthy
+  Q 8 [Methods - memory and context management ] count=  172 healthy
+  Q 9 [Evaluation - agent performance measureme] count=  406 healthy
+  Q10: ERROR HTTP Error 429: Too Many Requests
+  Q10 [Subspecialty intersection - software eng] count=   -1 error
+  Q11: ERROR HTTP Error 429: Too Many Requests
+  Q11 [Subspecialty intersection - web/UI inter] count=   -1 error
+  Q12: ERROR HTTP Error 429: Too Many Requests
+  Q12 [Methods - knowledge retrieval integratio] count=   -1 error
+  Q13: ERROR HTTP Error 429: Too Many Requests
+  Q13 [Methods - learning from feedback        ] count=   -1 error
+  Q14: ERROR HTTP Error 429: Too Many Requests
+  Q14 [Applied concerns - performance and cost ] count=   -1 error
+  Q15: ERROR HTTP Error 429: Too Many Requests
+  Q15 [Critiques - reliability and truthfulness] count=   -1 error
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: iter/runs/v0_variance_t03/v0_llm_agents_ds_t03_r2.json
+======================================================================
+  queries:          15
+  bands:            zero=0 low=0 healthy=9 recall_safety=0 too_broad=0
+  frac healthy:     60%
+  mean precision:   71%
+  per-band prec:    {'zero': None, 'low': None, 'healthy': 0.71, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $None
+  PASSING:          YES

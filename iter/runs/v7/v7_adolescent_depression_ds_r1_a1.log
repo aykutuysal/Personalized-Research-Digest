@@ -1,0 +1,43 @@
+prompt:  iter/prompts/v7_slotfilled.md
+profile: iter/profiles/adolescent_depression.md
+model:   deepseek/deepseek-v3.2
+dates:   2026-04-06 to 2026-04-13
+
+[1/3] generating plan... 362.2s, 24 queries, $0.00158074
+[2/3] running OpenAlex queries...
+  Q 1 [CBT and CBT variants for adolescent depr] count=   55 healthy
+  Q 2 [CBT and CBT variants for adolescent depr] count=   86 healthy
+  Q 3 [interpersonal psychotherapy (IPT-A)     ] count=    1 low
+  Q 4 [interpersonal psychotherapy (IPT-A)     ] count=    4 low
+  Q 5 [behavioral activation                   ] count=   11 low
+  Q 6 [behavioral activation                   ] count=   14 low
+  Q 7 [mindfulness and acceptance-based therapi] count=  268 healthy
+  Q 8 [mindfulness and acceptance-based therapi] count=   34 healthy
+  Q 9 [family-based or attachment-based treatme] count=    8 low
+  Q10 [family-based or attachment-based treatme] count=   17 low
+  Q11 [digital, app-based, telehealth intervent] count=   29 low
+  Q12 [digital, app-based, telehealth intervent] count=   38 healthy
+  Q13 [psychopharmacology (SSRIs, combination t] count=   22 low
+  Q14 [psychopharmacology (SSRIs, combination t] count=  116 healthy
+  Q15 [assessment tools and screening instrumen] count=  428 healthy
+  Q16 [assessment tools and screening instrumen] count=   61 healthy
+  Q17 [suicide risk screening and prevention   ] count=   25 low
+  Q18 [suicide risk screening and prevention   ] count=   89 healthy
+  Q19 [social media and adolescent mental healt] count=  142 healthy
+  Q20 [social media and adolescent mental healt] count=   82 healthy
+  Q21 [school-based prevention or intervention ] count=   72 healthy
+  Q22 [school-based prevention or intervention ] count=    6 low
+  Q23 [comorbid anxiety with depression        ] count=  139 healthy
+  Q24 [comorbid anxiety with depression        ] count=  448 healthy
+[3/3] scoring hits via DeepSeek v3.2...
+
+======================================================================
+SCORECARD: iter/runs/v7/v7_adolescent_depression_ds_r1.json
+======================================================================
+  queries:          24
+  bands:            zero=0 low=10 healthy=14 recall_safety=0 too_broad=0
+  frac healthy:     58%
+  mean precision:   39%
+  per-band prec:    {'zero': None, 'low': 0.33, 'healthy': 0.44, 'recall_safety': None, 'too_broad': None, 'error': None}
+  plan cost:        $0.00158074
+  PASSING:          no
