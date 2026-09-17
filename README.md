@@ -84,8 +84,8 @@ These are enforced in code and prompts, and they are the reason the output stays
 **Requirements:** Node 20.9+, an [OpenRouter](https://openrouter.ai) API key, and an email address for the [OpenAlex polite pool](https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication#the-polite-pool).
 
 ```bash
-git clone https://github.com/aykutuysal/researchdigest.git
-cd researchdigest
+git clone https://github.com/aykutuysal/Personalized-Research-Digest.git
+cd Personalized-Research-Digest
 npm install
 cp .env.local.example .env.local   # then fill in the two required values
 npm run dev
