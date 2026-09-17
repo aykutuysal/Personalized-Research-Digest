@@ -33,7 +33,7 @@ The digest is written from a **research plan** you own and can edit at any time:
 
 Research moves faster than any one person can read. Topic feeds respond by widening the net, which buries you, or by narrowing it to a keyword, which misses the specific angles you actually care about.
 
-The bet here is that the quality ceiling is set at **onboarding**, not at retrieval. If the system knows that you are a mechanism-focused researcher who skips framework papers, it can build search queries in your field's real vocabulary, drop the noise, and write the issue for you rather than at you. A prior prototype built on OpenAlex topic IDs and prompt-time keyword extraction proved too coarse; an [8-version iteration study](iter/ITERATION_LOG.md) across 4 reader profiles found the architecture that replaced it. This repo is that rewrite.
+The bet here is that the quality ceiling is set at **onboarding**, not at retrieval. If the system knows that you are a mechanism-focused researcher who skips framework papers, it can build search queries in your field's real vocabulary, drop the noise, and write the issue for you rather than at you. A prior prototype built on OpenAlex topic IDs and prompt-time keyword extraction proved too coarse; an 8-version iteration study across 4 reader profiles found the architecture that replaced it. This repo is that rewrite.
 
 ## How it works
 
@@ -126,7 +126,7 @@ The curator is the one stage that defaults to a premium model, [for measured rea
 
 Most of the design here came out of measurement rather than intuition, and the artifacts are in the repo so you can check the reasoning or rerun it.
 
-**[`iter/`](iter/ITERATION_LOG.md) — the query-planner iteration study.** 8 prompt versions scored across 4 reader profiles chosen to stress different vocabulary regimes: LLM agents (rich vocabulary), marketing (heavy polysemy), atrial fibrillation (clinical), adolescent depression (narrow compound subject). Total spend: ~$1.94. Frozen Python, kept as reference data. What it settled:
+**The query-planner iteration study.** 8 prompt versions scored across 4 reader profiles chosen to stress different vocabulary regimes: LLM agents (rich vocabulary), marketing (heavy polysemy), atrial fibrillation (clinical), adolescent depression (narrow compound subject). Total spend: ~$1.94. The harness was throwaway Python and is not published, but the findings are what the current pipeline is built on:
 
 - Widening a query's anchor to a broader field is catastrophic when that field out-publishes the narrow subject. Marketing went from 56% to 13% healthy queries on this change alone.
 - Phrase-only anchors work for rich-vocabulary fields and starve recall for compound subjects. There is no single query pattern that works everywhere, which is why the planner selects a pattern by subject type.
@@ -162,7 +162,6 @@ src/
 prompts/        System prompts, loaded from disk at request time and cached
 test/           Vitest; live-API experiments are env-gated
 experiments/    Model sweeps and prompt A/Bs, with outputs
-iter/           Frozen iteration study. Reference data, not importable code
 docs/           Brief, PRD, design specs, implementation notes
 ```
 
